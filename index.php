@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <h1>Welcome to  Bone Marrow Transplant Management System!</h1>
+    <h1>Welcome to Sri Lankan Bone Marrow Transplant Management System!</h1>
 </body>
 </html>
 
