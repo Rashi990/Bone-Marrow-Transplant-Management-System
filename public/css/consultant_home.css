@@ -41,13 +41,15 @@
 .tabs{
   width: 100%;
   height: 580px;
-  padding-left: 30px;
   flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .options{
   display:flex;
-  width: 80%;
+  width: 60%;
   height: 50px;
   margin: 10px 0;
   align-items: center;
@@ -57,12 +59,27 @@
   font-size: 24px;
 }
 
+.empty-box{
+  width: 100%;
+  height: 300px;
+}
+
 .logout{
   display: flex;
-  width: 100%;
+  width: 50%;
   flex-direction: row;
-  padding: 0 55px;
-  padding-top: 210px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /*padding-top: 210px;*/
+  margin-bottom: 30PX;
+  border: 1PX SOLID #FFF;
+  cursor: pointer;
+}
+
+.logout:hover{
+  opacity: .7;
+  background: #6495ED;
 }
 
 .material-symbols-rounded{
@@ -141,10 +158,10 @@ a{
 .hi:hover{
   opacity: .7;
   padding: 15px;
+  color: #308C83;
   border-radius: 15px;
 }
 
 .options:hover{
   background: #D7F0ED;
-  color: #308C83;
 }
