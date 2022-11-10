@@ -2,9 +2,29 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Consultant Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/consultant_login.css">
   </head>
   <body>
-    
+    <div class="hero">
+      <div class="image">
+
+      </div>
+      <div class="form-box">
+        <div class="heading">
+          <h1 class="title">Login</h1>
+        </div>
+        <form id="login" class="input-group" action="consultant_home.html" method="post">
+          <label class="input-label">User Name</label>
+          <input type="text" class="input-field" placeholder="Enter Your User Name" required>
+          <label class="input-label">Password</label>
+          <input type="password" class="input-field" placeholder="Enter Your Password" required>
+          <input type="checkbox" class="check-box"><span>Remeber me</span>
+          <button type="submit" class="submit-btn">Login</button>
+          <span id="ca">Don't have an account? <a href="consultant_create_account.html">Create account</a></span>
+          <span id="cp">© 2022 SLBMTMS. All rights reserved.</span>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
