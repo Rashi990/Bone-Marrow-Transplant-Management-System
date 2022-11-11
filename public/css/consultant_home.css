@@ -51,9 +51,10 @@
   display:flex;
   width: 60%;
   height: 50px;
-  margin: 10px 0;
+  margin: 15px 0;
   align-items: center;
   justify-content: center;
+  background: #777;
   color: #fff;
   border-radius: 15px;
   font-size: 24px;
