@@ -59,6 +59,30 @@
   font-size: 24px;
 }
 
+.hi:hover{
+  opacity: .7;
+  padding: 15px;
+  color: #308C83;
+  border-radius: 15px;
+}
+
+.options:hover{
+  background: #D7F0ED;
+}
+
+.options_selected{
+  display:flex;
+  width: 60%;
+  height: 50px;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #308C83;
+  border-radius: 15px;
+  font-size: 24px;
+}
+
 .empty-box{
   width: 100%;
   height: 300px;
@@ -152,15 +176,4 @@ a{
 
 .pp{
   margin: auto;
-}
-
-.hi:hover{
-  opacity: .7;
-  padding: 15px;
-  color: #308C83;
-  border-radius: 15px;
-}
-
-.options:hover{
-  background: #D7F0ED;
 }
