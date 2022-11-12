@@ -48,6 +48,7 @@ h3{
   width: 100%;
   height: 100%;
   display: flex;
+  background: #989;
 }
 
 h2{
@@ -79,34 +80,5 @@ h2{
   align-items:center;
   justify-content: center;
   text-align: center;
-}
-
-#session{
-  margin: 20px;
-  display: flex;
-}
-
-.image{
-  width: 400px;
-  height: 400px;
-  background: #fee;
-}
-
-.box:hover{
-  opacity: .5;
-}
-
-.box{
-  background:#6495ED;
-  width: 400px;
-  height: 450px;
-}
-
-.text{
-  width: 400px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  background: #445678;
 }

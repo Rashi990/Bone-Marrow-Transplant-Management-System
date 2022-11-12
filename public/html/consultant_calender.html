@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Consultant Home Page</title>
-    <link rel="stylesheet" type="text/css" href="../css/consultant_calender.css">
+    <link rel="stylesheet" type="text/css" href="../css/consultant_calender.css?v=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   </head>
@@ -12,24 +12,38 @@
       <div class="top">
         <div class="left">
           <div class="logo">
-            Logo
+            <h1>Logo</h1>
           </div>
           <div class="tabs">
-            <div class="options">
-              <span class="option_names"><a class="hi" href="consultant_appointments.html">Appointments</a></span>
-            </div>
-            <div class="options">
-              <span class="option_names"><a class="hi" href="consultant_reports.html">Reports</a></span>
-            </div>
+
+            <a class="hi" href="consultant_appointments.html">
+              <div class="options">
+                <span class="option_name">Appointments</span>
+              </div>
+            </a>
+
+            <a class="hi" href="consultant_reports.html">
+              <div class="options">
+                <span class="option_name">Reports</span>
+              </div>
+            </a>
+
             <div class="options_selected">
-              <span class="option_names">Calender</span>
+              <span class="options_selected_name">Calender</span>
             </div>
-            <div class="options">
-              <span class="option_names"><a class="hi" href="consultant_patient.html">Patient</a></span>
-            </div>
-            <div class="options">
-              <span class="option_names"><a class="hi" href="consultant_donor.html">Donor</a></span>
-            </div>
+
+            <a class="hi" href="consultant_patient.html">
+              <div class="options">
+                <span class="option_names">Patient</span>
+              </div>
+            </a>
+
+            <a class="hi" href="consultant_donor.html">
+              <div class="options">
+                <span class="option_names">Donor</span>
+              </div>
+            </a>
+
             <div class="logout">
               <span class="material-symbols-rounded">
                 arrow_back

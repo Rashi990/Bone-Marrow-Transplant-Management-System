@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.hero{
+  height: 100%;
+  width: 100%;
+  background:#fff;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.top{
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.empty{
+  height: 100px;
+  width: 1307px;
+  display: flex;
+  background: #fee;
+}
+
+.profile{
+  width: 400px;
+  height: 100px;
+  background: #ffe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-symbols-outlined{
+  margin: 10px;
+  color: #000;
+}
+
+h3{
+  color: #000;
+}
+
+h2{
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.bottom{
+  background-color: #006296;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bottom-input{
+  width: 50%;
+  justify-content: center;
+  text-align:center;
+  color: #fff;
+}
+
+.rbottom{
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items:center;
+  justify-content: center;
+  text-align: center;
+  background: #445678;
+}
+
+.middle{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  background: #006296;
+}
+
+.form{
+  position: absolute;
+  top: 51.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 400px;
+  height: 580px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px;
+}
+
+label{
+  transform: translateY(40px);
+  font-size: 14px;
+  width: 80%;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 40px;
+  background: #308C83;
+  color: #fff;
+}
+
+.form input{
+  width: 80%;
+  transform: translateY(40px);
+  border: 1px solid #308C83;
+  display: block;
+  height: 30px;
+  width: 74.5%;
+  padding-left: 20px;
+  margin: 0 0 15px 40px;
+}
+
+input:focus{
+  outline: none;
+}
+
+.form input[type="submit"]{
+  background: #308C83;
+  color: #fff;
+  font-size: 18px;
+  width: 50%;
+  left: 15%;
+  position: absolute;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+::placeholder{
+  position: relative;
+  left: 5px;
+  text-align: justify;
+}
+
+.title{
+  transform: translate(0,30px);
+  text-align: center;
+}
+
+.title p{
+  color: #308C83;
+  font-size: 24px;
+  font-weight: 900;
+}
