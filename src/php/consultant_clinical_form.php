@@ -2,16 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Patient Clinical Reports</title>
-    <link rel="stylesheet" type="text/css" href="../css/consultant_patient_clinical.css">
+    <title>Patient Clinical Form</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_clinical_form.css?v=2">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   </head>
+
   <body>
     <div class="hero">
       <div class="top">
           <div class="empty">
-            <h2>Patient Clinical Details</h2>
+            <h2>Patient Clinical Form</h2>
           </div>
           <div class="profile">
             <a href="consultant_notifications.html">
@@ -54,49 +55,52 @@
             </a>
           </div>
       </div>
+
       <div class="middle">
-        <div class="rbottom">
-
-          <div id="session">
-            <a  class="box" href="consultant_patient_details.html">
-              <div class="links-container">
-                <div class="image">
-                  <img class="image" src="../images/hla.jpg" alt="Hla Reports">
-                </div>
-                <div class="text">
-                  <h3>View Patient Details</h3>
-                </div>
-              </div>
-            </a>
+        <?php
+          require('consultant_connection.php');
+          if (isset($_POST['Add Record'])) {
+            $p_id=$_POST['p_id'];
+            $date=$_POST['date'];
+            $drug=$_POST['drug'];
+            $dose=$_POST['dose'];
+            $route=$_POST['route'];
+            $freq=$_POST['freq'];
+            if (!empty($_POST['p_id'] && !empty($_POST['date']) && !empty($_POST['drug']) && !empty($_POST['dose']) && !empty($_POST['route']) && !empty($_POST['freq']))) {
+              $p=crud::conect()->prepare('INSERT INTO patient_clinical_reports(patient_id,date,drug_name,dosage,route,frequency) VALUES(:p,:da,:dn,:do,:r,:f)');
+              $p->bindValue(':p',$p_id);
+              $p->bindValue(':da',$date);
+              $p->bindValue(':dn',$drug);
+              $p->bindValue(':do',$dose);
+              $p->bindValue(':r',$route);
+              $p->bindValue(':f',$freq);
+              $p->execute();
+              echo "Successfully added!";
+            }
+          }
+        ?>
+        <div class="form">
+          <div class="title">
+            <p>Clinical Form</p>
           </div>
-
-          <div id="session">
-            <a class="box" href="../../src/php/consultant_patient_clinical_manage_html.php">
-              <div class="links-container">
-                <div class="image">
-                  <img class="image" src="../images/clinical.jpg" alt="Clinical Reports">
-                </div>
-                <div class="text">
-                  <h3>Manage Patient Clinical Reports</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div id="session">
-            <a class="box" href="consultant_calender.html">
-              <div class="links-container">
-                <div class="image">
-                  <img class="image" src="../images/history.jpg" alt="">
-                </div>
-                <div class="text">
-                  <h3>View Calender</h3>
-                </div>
-              </div>
-            </a>
-          </div>
+          <form class="" action="" method="post">
+            <label class="lbl">Patient ID</label>
+            <input type="text" name="p_id" placeholder="Enter Patient ID">
+            <label class="lbl">Date</label>
+            <input type="date" name="date" placeholder="Choose Date">
+            <label class="lbl">Drug Name</label>
+            <input type="text" name="drug" placeholder="Choose Drug Name">
+            <label class="lbl">Dosage</label>
+            <input type="text" name="dose" placeholder="Choose Dosage">
+            <label class="lbl">Route</label>
+            <input type="text" name="route" placeholder="Choose Route">
+            <label class="lbl">Frequency</label>
+            <input type="text" name="freq" placeholder="Choose Frequency">
+            <input type="submit" name="Add Record" value="Add Record">
+          </form>
         </div>
       </div>
+
       <div class="bottom">
         <div class="bottom-input">
           <span>© 2022 SLBMTMS. All rights reserved.</span>

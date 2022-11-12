@@ -37,47 +37,9 @@
   margin-bottom: 10px;
 }
 
-.tabs{
-  width: 100%;
-  height: 580px;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-}
-
-.options{
-  display:flex;
-  width: 60%;
-  height: 50px;
-  margin: 10px 0;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  border-radius: 15px;
-  font-size: 24px;
-}
-
 .empty-box{
   width: 100%;
   height: 300px;
-}
-
-.logout{
-  display: flex;
-  width: 50%;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  border: 1PX SOLID #FFF;
-  cursor: pointer;
-  margin-top: 200px;
-}
-
-.logout:hover{
-  opacity: .7;
-  background: #6495ED;
 }
 
 .material-symbols-rounded{
@@ -153,49 +115,42 @@ a{
   margin: auto;
 }
 
-.hi:hover{
-  opacity: .7;
-  padding: 15px;
-  color: #308C83;
-  border-radius: 15px;
-}
-
-.options:hover{
-  background: #D7F0ED;
-}
-
-.options_selected{
-  display:flex;
-  width: 60%;
-  height: 50px;
-  margin: 10px 0;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  color: #308C83;
-  border-radius: 15px;
-  font-size: 24px;
-}
-
 /*Consultant's Patient Page Css*/
 .rbottom{
   display: flex;
+  flex-direction: column;
+  /*width: 100%;
+  height: auto;
+  align-items:center;
+  justify-content: center;
+  text-align: center;*/
+}
+
+.scroll{
+  overflow-y: scroll;
   width: 100%;
-  height: 100%;
+  height: auto;
   align-items:center;
   justify-content: center;
   text-align: center;
 }
 
 .box:hover{
-  opacity: .7;
+  opacity: .5;
 }
 
 .box{
-  background: #777;
+  background:#6495ED;
   width: 400px;
   height: 450px;
+}
+
+#session{
+  background: #777;
+  width: 1350px;
+  height: 450px;
   margin: 20px;
+  display: flex;
 }
 
 
@@ -216,4 +171,58 @@ a{
 
 h3{
   font-size: 22px;
+}
+
+/*changes*/
+.tabs{
+  width: 100%;
+  height: 580px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.options_selected_name{
+  display:flex;
+  width: 300px;
+  height: 50px;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #308C83;
+  font-size: 24px;
+}
+
+.options{
+  display:flex;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+.options:hover{
+  opacity: .7;
+}
+
+.logout{
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  border: 1PX SOLID #FFF;
+  cursor: pointer;
+  margin-top: 120px;
+}
+
+.logout:hover{
+  opacity: .5;
 }

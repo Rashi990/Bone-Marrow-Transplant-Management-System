@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Patient Clinical Reports</title>
-    <link rel="stylesheet" type="text/css" href="../css/consultant_patient_clinical.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient_clinical_manage.css?v=2">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   </head>
@@ -11,7 +11,7 @@
     <div class="hero">
       <div class="top">
           <div class="empty">
-            <h2>Patient Clinical Details</h2>
+            <h2>Patient Clinical Records</h2>
           </div>
           <div class="profile">
             <a href="consultant_notifications.html">
@@ -54,49 +54,17 @@
             </a>
           </div>
       </div>
+
       <div class="middle">
-        <div class="rbottom">
-
-          <div id="session">
-            <a  class="box" href="consultant_patient_details.html">
-              <div class="links-container">
-                <div class="image">
-                  <img class="image" src="../images/hla.jpg" alt="Hla Reports">
-                </div>
-                <div class="text">
-                  <h3>View Patient Details</h3>
-                </div>
-              </div>
-            </a>
+        <a href="consultant_clinical_form.php">
+          <div class="mid-top">
+            <button type="button" class="add">Add</button>
           </div>
-
-          <div id="session">
-            <a class="box" href="../../src/php/consultant_patient_clinical_manage_html.php">
-              <div class="links-container">
-                <div class="image">
-                  <img class="image" src="../images/clinical.jpg" alt="Clinical Reports">
-                </div>
-                <div class="text">
-                  <h3>Manage Patient Clinical Reports</h3>
-                </div>
-              </div>
-            </a>
+          <div class="mid-bottom">            
           </div>
-
-          <div id="session">
-            <a class="box" href="consultant_calender.html">
-              <div class="links-container">
-                <div class="image">
-                  <img class="image" src="../images/history.jpg" alt="">
-                </div>
-                <div class="text">
-                  <h3>View Calender</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
+        </a>
       </div>
+
       <div class="bottom">
         <div class="bottom-input">
           <span>© 2022 SLBMTMS. All rights reserved.</span>
