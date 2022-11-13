@@ -60,7 +60,7 @@
           <div class="mid-top">
             <button type="button" class="add">Add</button>
           </div>
-          <div class="mid-bottom">            
+          <div class="mid-bottom">
           </div>
         </a>
       </div>

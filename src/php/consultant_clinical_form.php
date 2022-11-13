@@ -89,13 +89,124 @@
             <label class="lbl">Date</label>
             <input type="date" name="date" placeholder="Choose Date">
             <label class="lbl">Drug Name</label>
-            <input type="text" name="drug" placeholder="Choose Drug Name">
+            <select class="select" name="drug" placeholder="Choose Drug Name">
+              <option selected="selected" disabled="disabled">Choose drug name</option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
             <label class="lbl">Dosage</label>
-            <input type="text" name="dose" placeholder="Choose Dosage">
+            <select class="select" name="dose">
+              <option selected="selected" disabled="disabled">Choose dosage</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+            </select>
             <label class="lbl">Route</label>
-            <input type="text" name="route" placeholder="Choose Route">
+            <select class="select" name="route" placeholder="Choose Route">
+              <option selected="selected" disabled="disabled">Choose route</option>
+              <option>one time a day</option>
+              <option>two times a day</option>
+              <option>three times a day</option>
+              <option>op4</option>
+              <option>op05</option>
+            </select>
             <label class="lbl">Frequency</label>
-            <input type="text" name="freq" placeholder="Choose Frequency">
+            <select class="select" name="freq" placeholder="Choose Frequency">
+              <option selected="selected" disabled="disabled">Choose frequency</option>
+              <option>1 day</option>
+              <option>2 days</option>
+              <option>3 days</option>
+              <option>4 days</option>
+              <option>5 days</option>
+              <option>6 days</option>
+              <option>7 days</option>
+              <option>8 days</option>
+              <option>9 days</option>
+              <option>10 days</option>
+              <option>11 days</option>
+              <option>12 days</option>
+              <option>13 days</option>
+              <option>2 weeks</option>
+              <option>3 weeks</option>
+              <option>4 weeks</option>
+            </select>
             <input type="submit" name="Add Record" value="Add Record">
           </form>
         </div>
