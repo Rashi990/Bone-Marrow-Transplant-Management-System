@@ -1,0 +1,167 @@
+/*common for all*/
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.hero{
+  height: 100%;
+  width: 100%;
+  background:#fff;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.top{
+  width: 100%;
+  display: flex;
+}
+
+.left{
+  width: 281px;
+  height: 692px;
+  position: relative;
+  background: #308C83;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height: 100px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.empty-box{
+  width: 100%;
+  height: 300px;
+}
+
+.material-symbols-rounded{
+  float: right;
+  color: #fff;
+}
+
+a{
+  width: 50%;
+  text-decoration:none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.right{
+  width: 1406px;
+  height: 692px;
+  position: relative;
+  background:#fff;
+  display: flex;
+}
+
+.bottom{
+  background-color: #006296;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bottom-input{
+  width: 50%;
+  justify-content: center;
+  text-align:center;
+  color: #fff;
+}
+
+.rtop{
+  width: 1425.5px;
+  height: 100px;
+  display: flex;
+}
+
+.empty{
+  width: 1025.5px;
+  height: 100px;
+}
+
+.profile{
+  width: 400px;
+  height: 100px;
+  background: #ffe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-symbols-outlined{
+  margin: 10px;
+  color: #000;
+}
+
+.greet{
+  margin: auto;
+  width: 100px;
+}
+
+.pp{
+  margin: auto;
+}
+
+/*changes*/
+.tabs{
+  width: 100%;
+  height: 580px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.options_selected_name{
+  display:flex;
+  width: 300px;
+  height: 50px;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #308C83;
+  font-size: 24px;
+}
+
+.options{
+  display:flex;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+.options:hover{
+  opacity: .7;
+}
+
+.logout{
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  border: 1PX SOLID #FFF;
+  cursor: pointer;
+  margin-top: 120px;
+}
+
+.logout:hover{
+  opacity: .5;
+}
