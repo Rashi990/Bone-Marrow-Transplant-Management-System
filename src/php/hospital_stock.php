@@ -4,5 +4,5 @@
 <?php require_once('../../config/connection.php');?>
 
 
-<?php include('../../public/html/hospital_dashboard.html'); ?>
+<?php include('../../public/html/hospital_stock.html'); ?>
 <?php require_once('hospital_footer.php'); ?>
