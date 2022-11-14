@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <h1>Welcome to  Bone Marrow Transplant Management System!</h1>
+    <h1>Welcome to Sri Lankan Bone Marrow Transplant Management System!</h1>
+    <button type="button" name="button"><a href="src/php/consultant_index.php">Login</a></button>
 </body>
 </html>
 
