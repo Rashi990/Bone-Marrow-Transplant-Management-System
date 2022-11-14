@@ -1,0 +1,1 @@
+<?php include('../../public/html/hospital_navbar.html'); ?>
