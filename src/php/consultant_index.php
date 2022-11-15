@@ -25,7 +25,7 @@
             <input type="checkbox" class="check-box"><span class="rem">Remeber me</span>
           </div>
           <button type="submit" class="submit-btn">Login</button>
-          <span class="te">Don't have an account? <a href="consultant_create_account.php">Create account</a></span>
+          <!--<span class="te">Don't have an account? <a href="consultant_create_account.php">Create account</a></span>-->
           <span class="cr">© 2022 SLBMTMS. All rights reserved.</span>
         </form>
       </div>

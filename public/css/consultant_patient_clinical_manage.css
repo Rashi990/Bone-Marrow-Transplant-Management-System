@@ -1,3 +1,4 @@
+/*common for all*/
 *{
   margin: 0;
   padding: 0;
@@ -13,57 +14,15 @@
   flex-direction: column;
 }
 
-.top{
-  width: 100%;
-  height: 100px;
-  display: flex;
-}
-
-.empty{
-  height: 100px;
-  width: 1307px;
-  display: flex;
-  background: #fee;
-}
-
-.profile{
-  width: 400px;
-  height: 100px;
-  background: #ffe;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.material-symbols-outlined{
-  margin: 10px;
-  color: #000;
-}
-
-h3{
-  color: #000;
-}
-
-.middle{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background: #989;
-}
-
-h2{
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  margin-left: 50px;
-}
-
 .bottom{
+  position: absolute;
+  bottom: 0;
   background-color: #006296;
-  height: 100px;
+  height: 60px;
   width: 100%;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .bottom-input{
@@ -71,6 +30,81 @@ h2{
   justify-content: center;
   text-align:center;
   color: #fff;
+  font-size: 14px;
+}
+
+.top{
+  width: 100%;
+  display: flex;
+}
+
+.rtop{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.profile .material-symbols-outlined{
+  color: gray;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.profile .material-symbols-outlined:hover{
+  background-color: #ff9;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;
+}
+
+.greet{
+  width: 120px;
+}
+
+.greet-text{
+  color: #000;
+  text-align:center;
+}
+
+abbr{
+  text-decoration: none;
+  margin: 5px;
+}
+
+/*Changes*/
+.empty{
+  width: 100%;
+  height: 100px;
+}
+
+.empty h1{
+  position: absolute;
+  left: 50px;
+  top: 5%;
+}
+
+.middle{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+h2{
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
 }
 
 .rbottom{
@@ -80,5 +114,82 @@ h2{
   align-items:center;
   justify-content: center;
   text-align: center;
-  background: #445678;
+}
+
+.add{
+  background: #006296;
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 300px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.add:hover{
+  opacity: .7;
+}
+
+#adds{
+  text-decoration: none;
+  color: white;
+}
+
+.mid-top{
+  display: flex;
+  width:100%;
+}
+
+.mid-bottom{
+  width: 100%;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  color: #308C83;
+  font-family: monospace;
+  font-size: 25px;
+  text-align: center;
+}
+
+th{
+  background: #308C83;
+  color: white;
+  height: 60px;
+}
+
+tr{
+  height: 50px;
+}
+
+tr:nth-child(even){
+  background: #DBFFFC;
+  color: #308C83;
+}
+
+#btn-update{
+  background: green;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px;
+  margin: 0 10px;
+}
+
+#btn-delete{
+  background: red;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px;
+  margin: 0 10px;
 }
