@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../../public/images/login_ch2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 85vh;
+}
+
+.top{
+    top: 0;
+    position: fixed;
+    background-color: #006296;
+    width: 100%;
+    height: 90px; 
+}
+
+.logo{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.type{
+    margin: 110px auto;  
+    width: 500px;
+    height: 400px;
+    background-color:  #090909;
+    border: 1px solid #006296;
+    border-radius: 10px;
+}
+
+.type h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #006296;
+    text-align: center;
+}
+
+.tp{
+    width: 180px;
+    height: 100px;
+    background-color: #5c7c8e;
+    margin: 10px 0 10px 30px;
+    padding: 10px;
+    border: 1px solid #006296;
+    border-radius: 10px;
+    display: flex;
+    float: left;
+}
+
+.type a{
+    text-decoration: none;
+    color: #090909;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 30px;
+}
+
+.tp:hover{
+    background-color: #006296;
+    cursor: pointer;
+}
+
+.tp a:hover{
+    color: #ffffff;
+    font-weight: bold;
+}
