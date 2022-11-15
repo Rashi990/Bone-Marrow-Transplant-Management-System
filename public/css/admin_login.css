@@ -48,11 +48,7 @@ a:hover{
     align-items: center;
 }
 .left{
-<<<<<<< Updated upstream
-    background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(pexels-elina-sazonova-1914770.jpg);
-=======
     background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(../images/login1.jpg);
->>>>>>> Stashed changes
     background-size:cover;
 
 }
