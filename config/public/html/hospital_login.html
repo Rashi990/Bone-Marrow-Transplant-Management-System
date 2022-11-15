@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_login.css?v=1"> 
+    <title>Login-Hospital</title>
+</head> 
+
+<body>
+
+    <div class="login-hospital">
+        <form method="post" action="../../src/php/hospital_login.php">
+
+            <h1>System Login</h1>
+
+        <p>
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter Username">
+        </p>
+
+        <p>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="password">
+        </p>
+        
+        <p>
+           <input type="checkbox" name="remember me"> Remember Me <a href="forgot_password.html">Forgot Password</a>
+        </p>   
+
+        <p>
+           <button type="submit" name="submit">Sign In</button>
+        </p>
+
+        </form>
+    </div>
+
+</body>
+</html>

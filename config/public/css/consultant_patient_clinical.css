@@ -1,0 +1,146 @@
+/*common for all*/
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.hero{
+  height: 100%;
+  width: 100%;
+  background:#fff;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom{
+  position: absolute;
+  bottom: 0;
+  background-color: #006296;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bottom-input{
+  width: 50%;
+  justify-content: center;
+  text-align:center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.top{
+  width: 100%;
+  display: flex;
+}
+
+.rtop{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.profile .material-symbols-outlined{
+  color: gray;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.profile .material-symbols-outlined:hover{
+  background-color: #ff9;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;
+}
+
+.greet{
+  width: 120px;
+}
+
+.greet-text{
+  color: #000;
+  text-align:center;
+}
+
+abbr{
+  text-decoration: none;
+  margin: 5px;
+}
+
+/*Changes*/
+.empty{
+  width: 100%;
+  height: 100px;
+}
+
+.empty h1{
+  position: absolute;
+  left: 50px;
+  top: 5%;
+}
+
+.middle{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.text h3{
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.rbottom{
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items:center;
+  justify-content: center;
+  text-align: center;
+}
+
+#session{
+  margin: 5px;
+  display: flex;
+}
+
+.image{
+  width: 550px;
+  height: 450px;
+  background: #fee;
+}
+
+.box:hover{
+  opacity: .5;
+}
+
+.box{
+  margin-top: 50px;
+  background:#308C83;
+  text-decoration: none;
+  width: 550px;
+  height: 500px;
+}
+
+.text{
+  width: 550px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
