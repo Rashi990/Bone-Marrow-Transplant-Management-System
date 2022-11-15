@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
 :root{
     font-size: 100%;
@@ -111,6 +112,7 @@ form input[type="password"]{
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
     border-radius: 12px;
 }
+
 label{
     display: block;
     margin-bottom: 0.5rem;
@@ -124,11 +126,17 @@ label{
 .input-container.password {
     position: relative;
 }
-.input-container .password i{
+.input-container.password i.icon{
     position: absolute;
-    top: 42px;
+    top: 50px;
     right: 16px;
 }
+.input-container.password i.showhidepw{
+    position: absolute;
+    top: 50px;
+    right: 16px;
+}
+
 .input-container .cta{
     display: flex;
     flex-direction: row;
