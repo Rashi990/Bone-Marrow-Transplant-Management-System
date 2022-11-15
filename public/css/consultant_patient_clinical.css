@@ -38,14 +38,6 @@
   display: flex;
 }
 
-.right{
-  width: 1406px;
-  height: 692px;
-  position: relative;
-  background:#fff;
-  display: flex;
-}
-
 .rtop{
   width: 100%;
   height: 100px;
