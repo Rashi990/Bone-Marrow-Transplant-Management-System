@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Patient Clinical Form</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_clinical_form.css?v=2">
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_clinical_form.css?v=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   </head>
@@ -15,21 +15,21 @@
             <h2>Patient Clinical Form</h2>
           </div>
           <div class="profile">
-            <a href="consultant_notifications.html">
+            <a href="../../public/html/consultant_notifications.html">
               <div class="icon">
                 <span class="material-symbols-outlined" style="font-size:42px;">
                   notifications
                 </span>
               </div>
             </a>
-            <a href="consultant_messages.html">
+            <a href="../../public/html/consultant_messages.html">
               <div class="icon">
                 <span class="material-symbols-outlined" style="font-size:42px;">
                   message
                 </span>
               </div>
             </a>
-            <a href="consultant_home.html">
+            <a href="../../public/html/consultant_home.html">
               <div class="icon">
                 <span class="material-symbols-outlined" style="font-size:42px;">
                   home
@@ -46,7 +46,7 @@
               <div class="greet">
                 <h3 class="greet-text">Hi,User</h3>
               </div>
-            <a href="consultant_profile.html">
+            <a href="../../public/html/consultant_profile.html">
               <div class="pp">
                 <span class="material-symbols-outlined" style="font-size:60px;">
                   account_circle
@@ -57,33 +57,11 @@
       </div>
 
       <div class="middle">
-        <?php
-          require('consultant_connection.php');
-          if (isset($_POST['Add Record'])) {
-            $p_id=$_POST['p_id'];
-            $date=$_POST['date'];
-            $drug=$_POST['drug'];
-            $dose=$_POST['dose'];
-            $route=$_POST['route'];
-            $freq=$_POST['freq'];
-            if (!empty($_POST['p_id'] && !empty($_POST['date']) && !empty($_POST['drug']) && !empty($_POST['dose']) && !empty($_POST['route']) && !empty($_POST['freq']))) {
-              $p=crud::conect()->prepare('INSERT INTO patient_clinical_reports(patient_id,date,drug_name,dosage,route,frequency) VALUES(:p,:da,:dn,:do,:r,:f)');
-              $p->bindValue(':p',$p_id);
-              $p->bindValue(':da',$date);
-              $p->bindValue(':dn',$drug);
-              $p->bindValue(':do',$dose);
-              $p->bindValue(':r',$route);
-              $p->bindValue(':f',$freq);
-              $p->execute();
-              echo "Successfully added!";
-            }
-          }
-        ?>
         <div class="form">
-          <div class="title">
-            <p>Clinical Form</p>
-          </div>
           <form class="" action="" method="post">
+            <div class="title">
+              <p>Clinical Form</p>
+            </div>
             <label class="lbl">Patient ID</label>
             <input type="text" name="p_id" placeholder="Enter Patient ID">
             <label class="lbl">Date</label>
@@ -91,64 +69,27 @@
             <label class="lbl">Drug Name</label>
             <select class="select" name="drug" placeholder="Choose Drug Name">
               <option selected="selected" disabled="disabled">Choose drug name</option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-            </select>
+              <option>Amino Acids</option>
+              <option>Amoxapine</option>
+              <option>Amoxicillin</option>
+              <option>Ampicillin</option>
+              <option>Aspirin</option>
+              <option>Azithromycin</option>
+              <option>Cetirizine</option>
+              <option>Dexamethasone</option>
+              <option>Flagyl</option>
+              <option>Fluconazole</option>
+              <option>Insulin</option>
+              <option>Lactulose</option>
+              <option>Magnesium sulfate</option>
+              <option>Metformin hydrochloride</option>
+              <option>Omeprazole</option>
+              <option>Panadeine</option>
+              <option>Vermox</option>
+              <option>Vitamin-A</option>
+              <option>Vitamin-C</option>
+              <option>Vitamin-K1</option>
+              </select>
             <label class="lbl">Dosage</label>
             <select class="select" name="dose">
               <option selected="selected" disabled="disabled">Choose dosage</option>
@@ -184,8 +125,11 @@
               <option>one time a day</option>
               <option>two times a day</option>
               <option>three times a day</option>
-              <option>op4</option>
-              <option>op05</option>
+              <option>four times a day</option>
+              <option>1mg per hour</option>
+              <option>10mg per hour</option>
+              <option>50mg per day</option>
+              <option>100mg per day</option>
             </select>
             <label class="lbl">Frequency</label>
             <select class="select" name="freq" placeholder="Choose Frequency">
@@ -196,18 +140,48 @@
               <option>4 days</option>
               <option>5 days</option>
               <option>6 days</option>
-              <option>7 days</option>
+              <option>1 week</option>
               <option>8 days</option>
               <option>9 days</option>
               <option>10 days</option>
               <option>11 days</option>
               <option>12 days</option>
-              <option>13 days</option>
               <option>2 weeks</option>
               <option>3 weeks</option>
-              <option>4 weeks</option>
+              <option>1 month</option>
+              <option>1 month and 2 weeks</option>
+              <option>2 month</option>
+              <option>3 month</option>
+              <option>24 hours</option>
+              <option>48 hours</option>
+              <option>72 hours</option>
             </select>
-            <input type="submit" name="Add Record" value="Add Record">
+            <div class="btns">
+              <button type="submit" name="submit">Add Records</button>
+              <button type="button" name="button"><a id="butt" href="consultant_patient_clinical_manage_html.php">View Records</a></button>
+            </div>
+            <?php
+              require('consultant_connection.php');
+              if (isset($_POST['submit'])) {
+                $p_id=$_POST['p_id'];
+                $date=$_POST['date'];
+                $drug=$_POST['drug'];
+                $dose=$_POST['dose'];
+                $route=$_POST['route'];
+                $freq=$_POST['freq'];
+                if (!empty($_POST['p_id'] && !empty($_POST['date']) && !empty($_POST['drug']) && !empty($_POST['dose']) && !empty($_POST['route']) && !empty($_POST['freq']))) {
+                  $p=crud::conect()->prepare('INSERT INTO patient_clinical_reports(patient_id,date,drug_name,dosage,route,frequency) VALUES(:p,:da,:dn,:do,:r,:f)');
+                  $p->bindValue(':p',$p_id);
+                  $p->bindValue(':da',$date);
+                  $p->bindValue(':dn',$drug);
+                  $p->bindValue(':do',$dose);
+                  $p->bindValue(':r',$route);
+                  $p->bindValue(':f',$freq);
+                  $p->execute();
+                  echo "<script>alert('Record Successfullt Added!');</script>";
+                }
+              }
+            ?>
           </form>
         </div>
       </div>
