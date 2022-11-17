@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Consultant Login</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_index.css?v=1">
+    <title>Clinician Login</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/clinician_index.css?v=1">
   </head>
   <body>
     <div class="hero">
@@ -14,7 +14,7 @@
           <div class="heading">
             <h1 class="title">Login</h1>
           </div>
-          <form class="login" action="consultant_login.php" method="post">
+          <form class="login" action="clinician_login.php" method="post">
             <?php if (isset($_GET['error'])) {?>
             <p class="error"><?php echo ($_GET['error']); ?></p>
             <?php } ?>
