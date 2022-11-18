@@ -27,7 +27,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 
             <a class="hi" href="consultant_appointments.php">Appointments</a>
             <a class="hi" href="consultant_reports.php">Reports</a>
-            <a class="hi" href="consultant_calender.php">Calender</a>
+            <a class="hi" href="consultant_calendar.php">Calendar</a>
             <a class="hi" href="consultant_patient.php">Patient</a>
             <a class="hi" href="consultant_donor.php">Donor</a>
 
