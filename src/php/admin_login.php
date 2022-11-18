@@ -61,3 +61,8 @@ else {
   header("Location: admin_index.php");
   exit();
 }
+
+else {
+  header("Location: admin_index.php");
+  exit();
+}
