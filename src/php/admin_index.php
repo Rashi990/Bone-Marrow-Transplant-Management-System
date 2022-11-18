@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
     <head>
@@ -19,20 +19,22 @@
                 </section>
             </div>
             <div class="right">
-                <form action="../../src/php/admin_login.php">
-                   
+                <form action="admin_login.php" method="post">
                     <section class="copy">
                         <h2>Welcome Back</h2>
                         <p>Welcome back! Please enter your details.</p>
                     </section> 
                     <div class="login-container"> 
+                    <?php if (isset($_GET['error'])) {?>
+            <p class="error"><?php echo ($_GET['error']); ?></p>
+            <?php } ?>
                         <div class="input-container name">
                             <label for="fname">Username</label>
-                            <input type="text" name="username" minlength="4" placeholder="Enter your username" required >
+                            <input type="text" name="username" minlength="4" placeholder="Enter your username" >
                         </div>
                         <div class="input-container password">
                             <label for="password">Password</label>
-                            <input type="password" name="password" placeholder="********" required>
+                            <input type="password" name="password" placeholder="********">
                             <i class='bx bx-hide icon'></i>
                             <i class='bx bxs-show showhidepw'></i>
                         </div>
@@ -57,6 +59,6 @@
             </div>
          </div>
     </body>
-</html> -->
+</html>
 
 
