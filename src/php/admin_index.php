@@ -1,11 +1,11 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login page</title>
-       <link rel="stylesheet" href="../css/admin_login.css">
+       <link rel="stylesheet" type="text/css" href="../../public/css/admin_login.css">
        <link rel="preconnect" href="https://fonts.googleapis.com">
        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500;1,700&display=swap" rel="stylesheet">
@@ -19,26 +19,22 @@
                 </section>
             </div>
             <div class="right">
-                <form action="../../src/php/admin_login.php">
-                   
-                <form>
+                <form action="admin_login.php" method="post">
                     <section class="copy">
                         <h2>Welcome Back</h2>
                         <p>Welcome back! Please enter your details.</p>
                     </section> 
                     <div class="login-container"> 
-                        
-                        <?php if (isset($_GET['error'])) {?>
-                            <p class="error"><?php echo ($_GET['error']); ?></p>
-                            <?php } ?>
-
+                    <?php if (isset($_GET['error'])) {?>
+            <p class="error"><?php echo ($_GET['error']); ?></p>
+            <?php } ?>
                         <div class="input-container name">
                             <label for="fname">Username</label>
-                            <input type="text"  minlength="4" placeholder="Enter your username" required >
+                            <input type="text" name="username" minlength="4" placeholder="Enter your username" >
                         </div>
                         <div class="input-container password">
                             <label for="password">Password</label>
-                            <input type="password"  placeholder="********" required>
+                            <input type="password" name="password" placeholder="********">
                             <i class='bx bx-hide icon'></i>
                             <i class='bx bxs-show showhidepw'></i>
                         </div>
@@ -63,6 +59,6 @@
             </div>
          </div>
     </body>
-</html> -->
+</html>
 
 
