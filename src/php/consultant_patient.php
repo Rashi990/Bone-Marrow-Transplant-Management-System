@@ -8,7 +8,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Consultant Home Page</title>
+    <title>Consultant Patient Page</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -23,8 +23,8 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 
             <a class="hi" href="consultant_appointments.php">Appointments</a>
             <a class="hi" href="consultant_reports.php">Reports</a>
-            <a class="hi" href="consultant_calender.php">Calender</a>
-            <a class="hi-selected" href="consultant_patient.html">Patient</a>
+            <a class="hi" href="consultant_calendar.php">Calendar</a>
+            <a class="hi-selected">Patient</a>
             <a class="hi" href="consultant_donor.php">Donor</a>
 
             <div class="logout">
@@ -42,7 +42,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
         <div class="right">
           <div class="rtop">
             <div class="empty">
-              <h1>Patient</h1>
+              <p>Patient</p>
             </div>
             <div class="profile">
               <abbr title="notifications"><a href="../../public/html/consultant_notifications.html">
@@ -78,14 +78,10 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               </a></abbr>
             </div>
           </div>
-
-          <div class="scroll">
-
-            <div class="rbottom">
-
-              <div id="session">
+          <div class="rbottom">
+            <div class="session">
                 <a  class="box" href="../../public/html/consultant_patient_hla.html">
-                  <div class="links-container">
+                  <div class="box">
                     <div class="image">
                       <img class="image" src="../../public/images/hla.jpg" alt="Hla Reports">
                     </div>
@@ -101,9 +97,8 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                   <button type="button" name="button">Read More</button>
                 </div>
-              </div>
-
-              <div id="session">
+            </div>
+            <div class="session">
                 <a class="box" href="consultant_patient_clinical.php">
                   <div class="links-container">
                     <div class="image">
@@ -122,8 +117,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                   <button type="button" name="button">Read More</button>
                 </div>
               </div>
-
-              <div id="session">
+            <div class="session">
                 <a class="box" href="../../public/html/consultant_patient_history.html">
                   <div class="links-container">
                     <div class="image">
@@ -142,18 +136,13 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                   <button type="button" name="button">Read More</button>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
-
-      <!--Bottom Part-->
       <div class="bottom">
-
         <div class="bottom-input">
           <span>© 2022 SLBMTMS. All rights reserved.</span>
         </div>
-
         <div class="bottom-input">
           <span>Terms and conditions</span>
         </div>
@@ -161,6 +150,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
     </div>
   </body>
 </html>
+}
 
 <?php
 }
