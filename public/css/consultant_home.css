@@ -14,6 +14,12 @@
   bottom: 0;
 }
 
+@media (max-width: 700px) {
+  .hero .top .bottom{
+    flex-direction: column;
+  }
+}
+
 .top{
   position: absolute;
   top: 0;
@@ -32,6 +38,7 @@
   background-color: white;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items:space-between;
   position: absolute;
@@ -56,6 +63,7 @@
   position: relative;
   background: #308C83;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   text-align: left;
   align-items: center;
@@ -110,7 +118,7 @@
 }
 
 .rtop{
-  flex: 15%;
+  flex: 10%;
   display: flex;
   justify-content: space-between;
 }
@@ -161,7 +169,7 @@ abbr{
 }
 
 .rbottom{
-  flex: 85%;
+  flex: 90%;
   overflow-y: scroll;
   position:relative;
   top: 0;
@@ -363,4 +371,10 @@ a{
 .but2 a:hover{
   color: #61f;
   border-bottom: 4px solid #63e;
+}
+
+@media{
+  .right, .cases .read-m{
+    flex-direction: column;
+  }
 }
