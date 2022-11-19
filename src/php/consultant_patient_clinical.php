@@ -67,7 +67,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
           </a>
         </div>
         <div id="session">
-          <a class="box" href="../../src/php/consultant_patient_clinical_manage_php">
+          <a class="box" href="../../src/php/consultant_patient_clinical_manage.php">
             <div class="links-container">
               <div class="image">
                 <img class="image" src="../../public/images/clinical.jpg" alt="Clinical Reports">
