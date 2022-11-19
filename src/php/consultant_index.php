@@ -14,9 +14,11 @@
           <h1 class="title">Login</h1>
         </div>
         <form class="login" action="consultant_login.php" method="post">
-          <?php if (isset($_GET['error'])) {?>
+          
+        <?php if (isset($_GET['error'])) {?>
           <p class="error"><?php echo ($_GET['error']); ?></p>
           <?php } ?>
+          
           <label class="input-label">User Name</label>
           <input type="text" class="input-field" name="username" placeholder="Enter Your User Name">
           <label class="input-label">Password</label>

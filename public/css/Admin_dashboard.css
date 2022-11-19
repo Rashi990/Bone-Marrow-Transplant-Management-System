@@ -71,6 +71,17 @@ width: 100%;
     font-size: 18px;
  }
  
+ @media screen and (min-width:900px) {
+    .split-screen{
+        flex-direction: row;
+        height: 100vh;
+    }
+    .left, .right{
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+}
 
 
 
