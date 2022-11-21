@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login As a Donor</title>
-    <link rel="stylesheet" href="donor_login.css">
+    <link rel="stylesheet" href="../css/donor_login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
     <!--Container-->
@@ -17,6 +16,7 @@
         <div class="left">
 
           <!--heading-->
+          
         <div class="head">
             <h2>Welcome Back</h2>
             
@@ -39,8 +39,8 @@
                   <label class ="un" >
                     Username
                   </label>
-                      <div class="ui">
-                        <input type="text" placeholder="Enter your Username">
+                      <div class="unm">
+                        <input type="text" placeholder="Enter your Username" required>
                       </div>
                       <br>
                       <label class="pw">
@@ -48,12 +48,12 @@
                       </label>
 
                       <div class="ui">
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" required>
                       </div>
                       <br> 
                       <br>
-                      <label for="" class="remeber">
-                        <input type="checkbox">
+                      <label for="" class="remember">
+                        <input type="checkbox" class="rmb">
                         <span>Remember me</span>
                       </label>
                       <label for="" class="forgot">
@@ -62,9 +62,11 @@
                       <br>
                       <br>
                       <br>
-                      <button class="signin">
-                        <a href="SignIn.html">Sign In</a>
+                      
+                      <button class="sign">
+                        <a href="SignIn.html"><span class="sg">Sign In</span></a>
                       </button>
+                    
                 </form>
                 <br>
                 <br>
@@ -73,15 +75,22 @@
                     <p>Don't have an account?<a href="SignIn.html">Create Account</a></p>
                 </div>
 
-                <div class="bttm"><p>© 2022 SLBMTMS. All rights reserved. </p>                                          
-            </div>
+                
+                <footer>
+                  <div class="bttm">
+                    <p>&copy;2022 SLBMTMS.All rights reserved.</p>                                         
+              </div>
+  
+                </footer>
 
+             
         </div>
         </div>
 
         <div class="right">
-          <img src="../donor_login.png" alt="you give a smile for someone">
+          <img src="../images/donor_login.png" alt="you give a smile for someone">
         </div>
+    
 
     </div>
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donor Request Form</title>
-    <link rel="stylesheet" href="donor_request.css">
+    <link rel="stylesheet" href="../css/donor_request.css">
 
 </head>
 <body>
@@ -20,30 +20,29 @@
                         First Name
                     </label>
                     <div class="fn">
-                    <input type="text" placeholder="Enter your first name">
+                    <input type="text" placeholder="Enter your first name" required>
                     </div>
                     <br>
                     <label class="lname">
                         Last Name
                     </label>
                     <div class="ln">
-                        <input type="text" placeholder="Enter your last name">
+                        <input type="text" placeholder="Enter your last name" required>
                     </div>
                     <br>
                     <label class="dob">
                         Date of Birth
                     </label>
                     <div class="date">
-                        <input type="text" placeholder="DD" class="dt">
-                        <input type="text" placeholder="MM" class="mn">
-                        <input type="text" placeholder="YYYY" class="yr">
+                        <input type="date" placeholder="" class="dt" required>
+                        
                     </div>
                     <br>
                     <label class="mail">
                         Email  Address
                     </label>
                     <div class="eml">
-                        <input type="email" placeholder="Enter your email address">
+                        <input type="email" placeholder="Enter your email address" required>
 
                     </div>
                     <br>
@@ -51,7 +50,7 @@
                         Telephone Number
                     </label>
                     <div class="tpn">
-                        <input type="text" placeholder="Enter your telephone number">
+                        <input type="tel" placeholder="Enter your telephone number" required>
 
                     </div>
                     <br>
@@ -60,7 +59,7 @@
                         Address
                     </label>
                     <div class="adrs">
-                        <input type="text" placeholder="Enter your address">
+                        <input type="text" placeholder="Enter your address" required>
 
                     </div>
                     <br>
@@ -69,7 +68,7 @@
                     </label>
                     <div class="cty">
 
-                        <input type="text" placeholder="Enter your nearest city">
+                        <input type="text" placeholder="Enter your nearest city" required>
 
                     </div>
                     <br>
@@ -77,9 +76,9 @@
                         Gender
                     </label>
                     <div class="rdio">
-                        <input type="radio" id="female" name="gender" value="Female">
+                        <input type="radio" id="female" name="gender" value="Female" required>
                         <label for="female">Female</label><br>
-                        <input type="radio" id="male" name="gender" value="Male">
+                        <input type="radio" id="male" name="gender" value="Male" required>
                         <label for="male">Male</label>
 
                     </div>
@@ -89,7 +88,7 @@
                         Height
                     </label>
                     <div class="hgt">
-                        <input type="text" placeholder="">
+                        <input type="number" placeholder="">
 
                     </div>
 
