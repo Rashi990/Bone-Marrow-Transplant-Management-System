@@ -1,48 +1,43 @@
 *{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
-.hero{
-  height: 100%;
-  width: 100%;
-  position:absolute;
+  box-sizing: border-box;
 }
 
 .form-div{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 100%;
   position: absolute;
   top: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.form-box{
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .image{
-  display: block;
-  width: 100%;
-  height: 100%;
+  flex: 70%;
+  background-color: #f1f1f1;
+  padding: 20px;
   background-image: url(../images/th.jpg);
   background-position: center;
   background-size: cover;
 }
 
+.form-box{
+  flex: 30%;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:space-between;
+}
+
 .heading{
-  position: absolute;
-  top: 20px;
   width: 320px;
   margin: 35px auto;
   box-shadow: 0 0 20px 9px #B0E0E6;
   border-radius: 30px;
+  text-align: center;
 }
 
 .title{
@@ -58,49 +53,32 @@
 }
 
 .input-field{
-  width: 500px;
+  display: flex;
+  width: 100%;
   margin: 15px 0;
   border-top: 0;
   border-left: 0;
   border-right: 0;
   border-bottom: 1px solid #999;
-  outline: none;
-  background: transparent;
   font-size: 20px;
 }
 
 .submit-btn{
   width: 45%;
-  padding: 10px 30px;
   cursor: pointer;
   display: block;
   background: #ADD8E6;
-  margin: auto;
   border-color: #006296;
+  margin: auto;
   outline: none;
   border-radius: 30px;
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
 }
 
 .submit-btn:hover{
   opacity: .7;
-}
-
-.remember-me{
-  display: flex;
-  margin: 20px 0;
-}
-
-.check-box{
-  flex-direction: row;
-  text-align: left;
-  margin-right: 5px;
-}
-
-.rem{
-  color: #777;
-  font-size: 18px;
 }
 
 .cr{
