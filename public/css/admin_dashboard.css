@@ -4,11 +4,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    min-height: 100vh;
-    width: 100%;
-    background: #F7FFFF;
+@media screen and (min-width:900px) {
+    body{
+        min-height: 100vh;
+        width: 100%;
+        background: #F7FFFF;
+    }
 }
+
 .sidebar{
     position: fixed;
     height: 100%;
@@ -71,17 +74,6 @@ width: 100%;
     font-size: 18px;
  }
  
- @media screen and (min-width:900px) {
-    .split-screen{
-        flex-direction: row;
-        height: 100vh;
-    }
-    .left, .right{
-        display: flex;
-        width: 50%;
-        height: auto;
-    }
-}
 
 
 
