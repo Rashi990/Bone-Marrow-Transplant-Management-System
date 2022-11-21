@@ -22,7 +22,6 @@
           <label class="input-label">Password</label>
           <input type="password" class="input-field" name="password" placeholder="Enter Your Password">
           <button type="submit" class="submit-btn">Login</button>
-          <!--<span class="te">Don't have an account? <a href="consultant_create_account.php">Create account</a></span>-->
           <span class="cr">© 2022 SLBMTMS. All rights reserved.</span>
         </form>
       </div>
