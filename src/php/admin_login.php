@@ -42,10 +42,10 @@ if (isset($_POST['username']) && isset($_POST['password']))
 
       if ($row['user_name'] === $uname && $row['password'] === $pass)
       {
-        // $_SESSION['user_name'] = $row['user_name'];
-        // $_SESSION['admin_id'] = $row['admin_id'];
-        // $_SESSION['consultant_name'] = $row['consultant_name'];
-        header("Location: Admin_dashboard.php");
+         $_SESSION['user_name'] = $row['user_name'];
+         $_SESSION['admin_id'] = $row['admin_id'];
+         $_SESSION['consultant_name'] = $row['consultant_name'];
+        header("Location: admin_dashboard.php");
         exit();
       }
       else

@@ -31,6 +31,9 @@ include "../../config/connection.php";
       </th><th class="table-head">
       Hospital Address
       </th>
+      <th class="table-head">
+      Operation
+      </th>
         </tr>
         </thead>
        <tbody>
@@ -50,7 +53,11 @@ include "../../config/connection.php";
         <td>'.$name. '</td>
         <td>'.$email. '</td>
         <td>'.$tele. '</td>
-        <td>'.$address. '</td>      
+        <td>'.$address. '</td>  
+        <td><a href="admin_addhospital.php"><button class="update-btn"> + Add Hospital
+        </button></a>
+        <a href="admin_addhospital.php"><button class="delete-btn"> + Add Hospital
+       </button></a></td>   
     </tr>';
 
             }
