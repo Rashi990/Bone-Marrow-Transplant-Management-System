@@ -38,6 +38,52 @@
     cursor: pointer;
     color:white;
 }
+.update-btn{
+    background-color: #F7FFFF;
+    display: block;
+    width:100px;
+    color:#006296;
+    font-weight: 700;
+    border:2px solid #006296;
+    margin: 2rem 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+}
+.update-btn:hover{
+    background: #2c4893;
+    cursor: pointer;
+    color:white;
+}
+.delete-btn{
+    background-color: #F7FFFF;
+    display: block;
+    width:100px;
+    color:#006296;
+    font-weight: 700;
+    border:2px solid #006296;
+    margin: 2rem 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+}
+.delete-btn:hover{
+    background: #2c4893;
+    cursor: pointer;
+    color:white;
+}
 a{
     text-decoration: none;
     color: #006296;
