@@ -1,1 +1,1 @@
-<?php include('../../public/html/footer.html'); ?>
+<?php include('../../public/html/admin_footer.html'); ?>
