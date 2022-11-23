@@ -10,7 +10,7 @@ include "../../config/connection.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewhospital.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewhospital.css?n=1">
 </head>
 <body>
 <a href="admin_addhospital.php"><button class="create-btn"> + Add Hospital
@@ -31,7 +31,7 @@ include "../../config/connection.php";
       </th><th class="table-head">
       Hospital Address
       </th>
-      <th class="table-head">
+      <th colspan="2" class="table-head">
       Operation
       </th>
         </tr>
@@ -54,9 +54,9 @@ include "../../config/connection.php";
         <td>'.$email. '</td>
         <td>'.$tele. '</td>
         <td>'.$address. '</td>  
-        <td><a href="admin_addhospital.php"><button class="update-btn"> + Add Hospital
-        </button></a>
-        <a href="admin_addhospital.php"><button class="delete-btn"> + Add Hospital
+        <td><a href="admin_addhospital.php?"><button class="update-btn"> edit
+        </button></a></td>
+        <td><a href="admin_deletehospital.php? deleteid='.$id.'"><button class="delete-btn" > delete
        </button></a></td>   
     </tr>';
 
