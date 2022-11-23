@@ -9,7 +9,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
   <head>
     <meta charset="utf-8">
     <title>Clinician Home Page</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/clinician_home.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../../public/css/clinician_home.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -64,7 +64,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
                 </div>
               </a></abbr>
                 <abbr title="Welcome!"><div class="greet">
-                  <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+                  <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['clinician_name'];?></h3>
                 </div></abbr>
               <abbr title="Profile"><a href="../../public/html/consultant_profile.html">
                 <div class="pp">
@@ -78,13 +78,13 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
           <div class="rbottom">
             <div class="banner2">
               <div class="phara2">
-                <p>This is a phara. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <p class="p2">This is a phara. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
                 <button type="button" name="button">Read More</button>
               </div>
             </div>
             <div class="cases">
-              <a href="">
+
               <div class="case">
                 <div class="name">
                   <span class="material-symbols-rounded">
@@ -94,11 +94,15 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
                   Sources
                 </div>
                 <div class="descript">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Clinicians can select from three hematopoietic cell sources for patients in need of transplantation—bone marrow, peripheral blood stem cells (PBSC), and umbilical cord blood. Physicians can often select the hematopoietic cells based on a patient's characteristics, disease, and disease status.
                 </div>
+                <a href="">
+                  <div class="button">
+                    <button type="button" name="button">Read More</button>
+                  </div>
+                </a>
               </div>
-              </a>
-              <a href="">
+
               <div class="case">
                 <div class="name">
                   <span class="material-symbols-rounded">
@@ -108,11 +112,15 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
                   Matching
                 </div>
                 <div class="descript">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Multiple pre and post-transplant factors can impact transplant outcomes. The degree of human leukocyte antigen(HLA) matching between the transplant recipient and the hematopoietic cell graft has a significant impact the outcomes of related and unrelated donor hematopoietic cell transplantation(HCT).
                 </div>
+                <a href="">
+                  <div class="button">
+                    <button type="button" name="button">Read More</button>
+                  </div>
+                </a>
               </div>
-              </a>
-              <a href="">
+
               <div class="case">
                 <div class="name">
                   <span class="material-symbols-rounded">
@@ -122,14 +130,19 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
                   Search Process
                 </div>
                 <div class="descript">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Clinicians can search the Sri Lanka Bone Marrow Transplant Management System for an unrelated donor or cord blood unit on behalf of their patients needing hematopoietic cell transplantation (HCT). We provide access to more than a million potential donors and nearly 1,000 cord blood units in Sri Lanka.
                 </div>
+                <a href="">
+                  <div class="button">
+                    <button type="button" name="button">Read More</button>
+                  </div>
                 </a>
               </div>
+
             </div>
             <div class="banner">
               <div class="phara">
-                <p>This is a phara. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <p class="p2">This is a phara. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
                 <button type="button" name="button">Read More</button>
               </div>
