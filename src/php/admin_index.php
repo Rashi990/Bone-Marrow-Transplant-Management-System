@@ -30,7 +30,7 @@
             <?php } ?>
                         <div class="input-container name">
                             <label for="fname">Username</label>
-                            <input type="text" name="username" minlength="4" placeholder="Enter your username" >
+                            <input type="text" name="username" minlength="4" placeholder="Enter your username">
                         </div>
                         <div class="input-container password">
                             <label for="password">Password</label>
