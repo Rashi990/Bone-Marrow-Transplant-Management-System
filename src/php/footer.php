@@ -1,1 +1,0 @@
-<?php include('../../public/html/footer.html'); ?>

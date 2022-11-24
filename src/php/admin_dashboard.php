@@ -1,8 +1,12 @@
+<?php   require_once('../../config/connection.php');?>
+<?php
+session_start();
+if (isset($_SESSION['user_name']))
+   {
+?>
 
-<?php session_start();?>
-
-<?php require_once('../../config/connection.php');?>
-
-<?php include('../../public/html/admin_dashboard.html'); ?>
-
-<?php require_once('footer.php'); ?>
+<?php  include('../../public/html/admin_dashboard.html'); ?>
+    <?php require_once('admin_footer.php');?>
+<?php
+   }
+   ?>
