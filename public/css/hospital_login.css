@@ -32,8 +32,7 @@ body{
     font-size: 16px;
 }
 
-.login-hospital input[type="text"],
-.login-hospital input[type="password"]{
+.login-hospital input[type="text"],[type="password"]{
     width: 90%;
     color: #fff;
     background: transparent;
@@ -45,33 +44,46 @@ body{
     font-weight: bold;
 }
 
-.login-hospital a{
-    padding-left: 18px;
-    text-decoration: none;
-    color: rgb(122, 189, 206);
+.bottom{
+    float: left;
+    display: flex;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*
+.rem{
+    padding-right: 10px;
+    color: rgb(165, 242, 252);
     font-size: 16px;
-    font-weight: bold;
+}
+*/
+
+.reset{
+    padding-left: 10px;
+    text-decoration: none;
+    color: rgb(175, 242, 251);
 }
 
-.login-hospital a:hover{
-    color: rgb(40, 232, 229);
+.reset:hover{
+    color: rgb(98, 239, 185);
 }
 
-.login-hospital button{
-    margin-left: 70px;
+.login_btn{
+    margin-left: 100px;
     margin-bottom: 20px;
-    padding: 5px;
-    height: 40px;
-    width: 100px;
+    padding: 10px 20px;
     background: rgb(56, 200, 188);
-    color: rgb(24, 23, 23);
+    color: black;
+    text-decoration: none;
     border-radius: 15px;
     font-size: 16px;
     font-weight: bold;
 }
 
-.login-hospital button:hover{
-    background: rgb(36, 117, 107);
+.login_btn:hover{
+    background: rgb(11, 37, 125);
     cursor: pointer;
-    color: rgb(255, 252, 252);
+    color: #fff;
 }
