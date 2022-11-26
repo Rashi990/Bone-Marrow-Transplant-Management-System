@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_clinicians.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_clinicians.css?v=2">
     <title>Hospital-Clinicians</title>
 </head>
 <body>
 
     <div class="clinicians">
         <h1>Clinicians</h1>
-        <span><a href="../../src/php/hospital_clinicians.php">+Add New</a></span>
-
+        
         <table class="clinician_list">
             <tr>
                 <th>Clinician Name</th>
                 <th>Email</th>
                 <th>Telehpone No</th>
                 <th>Address</th>
+                <th colspan="3"><a class="new" href="../../src/php/hospital_add_clinicians.php">+Add New</a></th>
             </tr>
+
+            <?php echo $clinician_list; ?>
+            
         </table>
 
     </div>
