@@ -1,59 +1,76 @@
+<?php
+session_start();
+if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
+{
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Patient Clinical Form</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_clinical_form.css?v=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_clinical_form.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
     <div class="hero">
-      <div class="top">
-          <div class="empty">
-            <h2>Patient Clinical Form</h2>
-          </div>
-          <div class="profile">
+      <div class="rtop">
+        <div class="empty">
+          <p>Patient Clinical Details</p>
+        </div>
+        <div class="profile">
+          <abbr title="notifications">
             <a href="../../public/html/consultant_notifications.html">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
+                <span class="material-icons">
                   notifications
                 </span>
               </div>
             </a>
+          </abbr>
+          <abbr title="messages">
             <a href="../../public/html/consultant_messages.html">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
-                  message
+                <span class="material-icons">
+                  chat_bubble
                 </span>
               </div>
             </a>
-            <a href="../../public/html/consultant_home.html">
+          </abbr>
+          <abbr title="Home">
+            <a href="consultant_home.php">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
+                <span class="material-icons">
                   home
                 </span>
               </div>
             </a>
-            <a href="../../src/php/consultant_index.php">
+          </abbr>
+          <abbr title="Logout">
+            <a href="consultant_login.php">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
+                <span class="material-icons">
                   logout
                 </span>
               </div>
             </a>
-              <div class="greet">
-                <h3 class="greet-text">Hi,User</h3>
-              </div>
+          </abbr>
+          <abbr title="Welcome!">
+            <div class="greet">
+              <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+            </div>
+          </abbr>
+          <abbr title="Profile">
             <a href="../../public/html/consultant_profile.html">
               <div class="pp">
-                <span class="material-symbols-outlined" style="font-size:60px;">
+                <span class="material-icons">
                   account_circle
                 </span>
               </div>
             </a>
-          </div>
+          </abbr>
+        </div>
       </div>
 
       <div class="middle">
@@ -158,7 +175,7 @@
             </select>
             <div class="btns">
               <button type="submit" name="submit">Add Records</button>
-              <button type="button" name="button"><a id="butt" href="consultant_patient_clinical_manage_html.php">View Records</a></button>
+              <button type="button" name="button"><a id="butt" href="consultant_patient_clinical_manage.php">View Records</a></button>
             </div>
             <?php
               require('consultant_connection.php');
@@ -197,3 +214,7 @@
     </div>
   </body>
 </html>
+
+<?php
+}
+?>
