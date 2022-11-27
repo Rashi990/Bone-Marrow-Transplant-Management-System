@@ -9,10 +9,10 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
   <head>
     <meta charset="utf-8">
     <title>Consultant Home Page</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_home.css?v=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_home.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="../../public/js/consultant_disease.js">
 
     </script>
@@ -49,30 +49,38 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               <p>Sri Lanakan Bone Marrow Transplant Management System</p>
             </div>
             <div class="profile">
-              <abbr title="notifications"><a href="../../public/html/consultant_notifications.html">
-                <div class="icon">
-                  <span class="material-symbols-outlined" style="font-size:35px;">
-                    notifications
-                  </span>
-                </div>
-              </a></abbr>
-              <abbr title="messages"><a href="../../public/html/consultant_messages.html">
-                <div class="icon">
-                  <span class="material-symbols-outlined" style="font-size:35px;">
-                    message
-                  </span>
-                </div>
-              </a></abbr>
-                <abbr title="Welcome!"><div class="greet">
+              <abbr title="Notifications">
+                <a href="../../public/html/consultant_notifications.html">
+                  <div class="icon">
+                    <span class="material-icons">
+                      notifications
+                    </span>
+                  </div>
+                </a>
+              </abbr>
+              <abbr title="Messages">
+                <a href="../../public/html/consultant_messages.html">
+                  <div class="icon">
+                    <span class="material-icons">
+                      chat_bubble
+                    </span>
+                  </div>
+                </a>
+              </abbr>
+              <abbr title="Welcome!">
+                <div class="greet">
                   <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
-                </div></abbr>
-              <abbr title="Profile"><a href="../../public/html/consultant_profile.html">
-                <div class="pp">
-                  <span class="material-symbols-outlined" style="font-size:35px;">
-                    account_circle
-                  </span>
                 </div>
-              </a></abbr>
+              </abbr>
+              <abbr title="Profile">
+                <a href="../../public/html/consultant_profile.html">
+                  <div class="pp">
+                    <span class="material-icons">
+                      account_circle
+                    </span>
+                  </div>
+                </a>
+              </abbr>
             </div>
           </div>
           <div class="rbottom">
