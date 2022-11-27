@@ -1,3 +1,4 @@
+<?php require_once('hospital_navbar.php'); ?>
 <?php
 require_once('../../config/connection.php');
 session_start();
