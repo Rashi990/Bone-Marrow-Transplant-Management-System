@@ -1,62 +1,44 @@
 *{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 .hero{
-  height: 100%;
-  width: 100%;
-  background:#fff;
-  position:absolute;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  flex: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.top{
-  width: 100%;
-  height: 100px;
-  display: flex;
-}
-
-.empty{
-  height: 100px;
-  width: 1307px;
-  display: flex;
-  background: #fee;
-}
-
-.profile{
-  width: 400px;
-  height: 100px;
-  background: #ffe;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.material-symbols-outlined{
-  margin: 10px;
-  color: #000;
-}
-
-h3{
-  color: #000;
-}
-
-h2{
-  font-size: 25px;
+.middle{
   display: flex;
   align-items: center;
-  margin-left: 50px;
+  position: absolute;
+  top: 50px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  background: #006296;
 }
 
 .bottom{
-  background-color: #006296;
-  height: 100px;
-  width: 100%;
+  height: 60px;
+  flex: 10%;
+  background-color: white;
+  padding: 20px;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items:space-between;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #006296;
+  width: 100%;
 }
 
 .bottom-input{
@@ -64,41 +46,91 @@ h2{
   justify-content: center;
   text-align:center;
   color: #fff;
+  font-size: 14px;
+}
+
+.profile{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-right: 20px;
+}
+
+abbr{
+  text-decoration: none;
+}
+
+.greet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.greet-text{
+  text-align:center;
+  font-size: 16px;
+  color: gray;
+}
+
+.profile .material-icons{
+  color: gray;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.profile .material-icons:hover{
+  color: black;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;
+}
+
+.rtop{
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty{
+  flex: 70%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.empty p{
+  text-align: justify;
+  font-size: 20px;
+  color:#888;
+  font-weight:bolder;
 }
 
 .rbottom{
   display: flex;
-  width: 100%;
-  height: auto;
+  flex: 100%;
   align-items:center;
   justify-content: center;
   text-align: center;
   background: #445678;
 }
 
-.middle{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  box-sizing: border-box;
-  background: #006296;
-}
-
 .form{
   position: absolute;
   top: 52%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -52%);
   background: #fff;
   width: 400px;
-  height: 600px;
+  height: 550px;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 10px;
 }
 
 .title{
-  transform: translate(0,10px);
+  transform: translate(0,0);
   text-align: center;
 }
 
@@ -109,10 +141,10 @@ h2{
 }
 
 label{
-  transform: translateY(20px);
+  transform: translateY(0);
   font-size: 14px;
   width: 80%;
-  height: 25px;
+  height: 20px;
   display: flex;
   align-items: center;
   margin: 0 0 0 40px;
@@ -121,13 +153,13 @@ label{
 }
 
 .form input{
-  transform: translateY(20px);
+  transform: translateY(0);
   border: 1px solid #308C83;
   display: block;
-  height: 30px;
-  width: 69.5%;
+  height: 25px;
+  width: 80%;
   padding: 0 20px;
-  margin: 0 0 15px 40px;
+  margin: 0 0 10px 40px;
 }
 
 input:focus{
@@ -135,11 +167,11 @@ input:focus{
 }
 
 .select{
-  transform: translateY(20px);
+  transform: translateY(0);
   width: 80%;
-  height: 30px;
+  height: 25px;
   padding-left: 20px;
-  margin: 0 0 15px 40px;
+  margin: 0 0 10px 40px;
 }
 
 .select:focus option:first-of-type {
@@ -149,16 +181,16 @@ input:focus{
 button{
   background: #308C83;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   width: 35%;
-  height: 40px;
+  height: 35px;
   cursor: pointer;
   border: none;
   margin: 0 10px;
 }
 
 .btns{
-  transform: translateY(20px);
+  transform: translateY(0);
   display: flex;
   align-items: center;
   justify-content: center;
