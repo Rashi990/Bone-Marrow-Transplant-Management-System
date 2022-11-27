@@ -1,8 +1,14 @@
 <?php
+require_once('admin_dashboard.php');
+?>
+<?php
 session_start();
+
 include "../../config/connection.php";
+ 
 ?>
 
+<?php require_once('admin_footer.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +19,14 @@ include "../../config/connection.php";
     <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewhospital.css?n=1">
 </head>
 <body>
-<a href="admin_addhospital.php"><button class="create-btn"> + Add Hospital
+    
+    
+<div class="right">
+
+    <a href="admin_addhospital.php"><button class="create-btn"> + Add Hospital
        </button></a>
 
-       <table class=" table">
+  <table class=" table">
         <thead>
         <tr>
         <th class="table-head">
@@ -68,5 +78,8 @@ include "../../config/connection.php";
        </tbody>
       
        </table>
+    </div>
+    
+        
 </body>
 </html>
