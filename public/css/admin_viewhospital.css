@@ -14,6 +14,12 @@
     
     }
 }
+.right{
+    display: grid;
+    padding-left: 300px;
+
+}
+
 
 .create-btn{
     background-color: #F7FFFF;
@@ -65,9 +71,9 @@
     background-color: #F7FFFF;
     display: block;
     width:60px;
-    color:#006296;
+    color:#FF0404;
     font-weight: 700;
-    border:2px solid #006296;
+    border:2px solid #FF0404;
     margin: 2rem 2rem;
     padding-left: 0;
     padding-right: 0;
@@ -80,11 +86,42 @@
 
 }
 .delete-btn:hover{
-    background: #2c4893;
+    background: #FF0404;
     cursor: pointer;
     color:white;
 }
 a{
     text-decoration: none;
     color: #006296;
+}
+.table{
+    align-items: center;
+    border-collapse: collapse;
+    color: #006296;
+    margin: 25px 0;
+    font-size: 0.9em;
+    width:100%;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    padding: 5px 5px;
+}
+.table th,
+.table td {
+    padding: 6px 7px;
+}
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
 }
