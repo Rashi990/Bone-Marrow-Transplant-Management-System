@@ -25,7 +25,9 @@ if(isset($_POST['submit']) )
   $result = mysqli_query($connection,$sql);
 
   if($result) {
-    echo "successfully Added ";
+    
+    header("Location: admin_viewhospital.php");
+   
   }
   else{
     die(mysqli_error($connection));
@@ -34,3 +36,4 @@ if(isset($_POST['submit']) )
 }
 ?>
 
+ <?php require_once('admin_footer.php');?>
