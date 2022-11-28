@@ -109,8 +109,45 @@
     color: black;
 }
 
+.profile{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-right: 20px;
+}
+
+abbr{
+  text-decoration: none;
+}
+
+.greet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.greet-text{
+  text-align:center;
+  font-size: 16px;
+  color: gray;
+}
+
+.profile .material-icons{
+  color: gray;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.profile .material-icons:hover{
+  color: black;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;
+}
+
 .rtop{
-  flex: 15%;
+  height: 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -123,41 +160,11 @@
   margin-left: 20px;
 }
 
-.profile{
-  flex: 30%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-abbr{
-  text-decoration: none;
-  margin: 5px;
-}
-
-.greet{
-  width: 120px;
-}
-
-.greet-text{
-  color: #000;
-  text-align:center;
-}
-
-.profile .material-symbols-outlined{
-  color: gray;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.profile .material-symbols-outlined:hover{
-  background-color: #ff9;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  border-bottom: none;
+.empty p{
+  text-align: justify;
+  font-size: 20px;
+  color:#888;
+  font-weight:bolder;
 }
 
 .rbottom{
@@ -215,6 +222,11 @@ button:hover{
   color: #0066CC;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
 .read-m{
   width: 100%;
   height: 700px;
@@ -224,14 +236,13 @@ button:hover{
 }
 
 .read{
-  height: 450px;
-  width: 400px;
+  flex:50%;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 50px;
+  margin: 55px;
   padding: 50px;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
@@ -266,6 +277,7 @@ button:hover{
 }
 
 .but1{
+  height: 100px;
   display: flex;
   justify-content:center;
   align-items: center;
@@ -273,6 +285,7 @@ button:hover{
 }
 
 .but1 a{
+  height: 25px;
   color: #63e;
 }
 
@@ -282,7 +295,7 @@ button:hover{
 }
 
 .but2{
-  height: 50px;
+  height: 100px;
   display: flex;
   justify-content:center;
   align-items: center;
@@ -290,6 +303,7 @@ button:hover{
 }
 
 .but2 a{
+  height: 25px;
   color: #63e;
 }
 
@@ -311,12 +325,17 @@ button:hover{
 @media (max-width:1050px) {
   .rtop{
     flex-direction: column;
+    height: auto;
+    align-items: center;
   }
 }
 
 @media (max-width:1050px) {
-  .banner{
-    margin: 30px;
+  .empty p{
+    flex:70%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -330,8 +349,8 @@ button:hover{
 @media (max-width:1050px) {
   .read-m{
     flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 }
 
@@ -341,14 +360,5 @@ button:hover{
     width: 350px;
     padding: 10px;
     margin: 10px;
-  }
-}
-
-@media (max-width:1050px) {
-  .empty p{
-    flex:100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
 }

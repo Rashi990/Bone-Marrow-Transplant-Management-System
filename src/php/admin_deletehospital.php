@@ -9,7 +9,7 @@ if(isset($_GET['deleteid'])){
     $sql="DELETE from `hospital` WHERE Hospital_id='$id'";
     $result=mysqli_query($connection,$sql);
     if($result){
-       echo "<script>('Record Successfully Deleted');</script>";
+       echo" <script> </script>";
        header("Location: admin_viewhospital.php");
     }
     else{
