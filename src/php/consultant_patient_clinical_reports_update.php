@@ -177,7 +177,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
             </select>
             <div class="btns">
               <button type="submit" name="submit">Update Records</button>
-              <button type="button" name="button"><a id="butt" href="consultant_patient_clinical_manage.php">View Records</a></button>
+              <button type="button" name="button"><a href="consultant_patient_clinical_manage.php">View Records</a></button>
             </div>
             <?php
               require('consultant_connection.php');

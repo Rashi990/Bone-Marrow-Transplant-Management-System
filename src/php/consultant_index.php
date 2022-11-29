@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Consultant Login</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_index.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_index.css">
   </head>
   <body>
     <div class="form-div">
@@ -21,6 +21,7 @@
           <input type="text" class="input-field" name="username" placeholder="Enter Your User Name">
           <label class="input-label">Password</label>
           <input type="password" class="input-field" name="password" placeholder="Enter Your Password">
+          <a class="fp" href="forgot_password.php">Forgot Password?</a>
           <button type="submit" class="submit-btn">Login</button>
           <span class="cr">© 2022 SLBMTMS. All rights reserved.</span>
         </form>

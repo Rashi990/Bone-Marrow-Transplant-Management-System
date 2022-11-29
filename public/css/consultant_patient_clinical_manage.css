@@ -131,7 +131,7 @@ h2{
   text-align: center;
 }
 
-.add{
+/*.add{
   background: #006296;
   border: none;
   color: white;
@@ -147,11 +147,26 @@ h2{
 
 .add:hover{
   opacity: .7;
-}
+}*/
 
-#adds{
+#adds button{
   text-decoration: none;
   color: white;
+  cursor: pointer;
+  background: #006296;
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 300px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#adds:hover{
+  opacity: .7;
 }
 
 .mid-top{
