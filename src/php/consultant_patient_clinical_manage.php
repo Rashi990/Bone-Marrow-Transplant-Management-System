@@ -9,7 +9,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
   <head>
     <meta charset="utf-8">
     <title>Patient Clinical Reports</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient_clinical_manage.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient_clinical_manage.css?v=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
@@ -76,7 +76,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
       <div class="middle">
           <div class="mid-top">
             <a id="adds" href="consultant_clinical_form.php">
-              <button class="add" type="button" class="add">+ Add New Clinical Record</button>
+              <button type="button" class="add">+ Add New Clinical Record</button>
             </a>
           </div>
           <div class="mid-bottom">
