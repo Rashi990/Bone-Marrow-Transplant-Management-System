@@ -2,6 +2,7 @@
 session_start();
 if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 {
+include "../../config/connection.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
   <head>
     <meta charset="utf-8">
     <title>Patient Clinical Reports</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient_clinical_manage.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient_clinical_manage.css?v=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
@@ -74,11 +75,9 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
         </div>
       </div>
       <div class="middle">
-          <div class="mid-top">
-            <a id="adds" href="consultant_clinical_form.php">
-              <button class="add" type="button" class="add">+ Add New Clinical Record</button>
-            </a>
-          </div>
+          <button class="add" type="button" name="button">
+            <a href="consultant_clinical_form.php">+ Add New Clinical Record</a>
+          </button>
           <div class="mid-bottom">
               <table>
                 <tr>
@@ -92,44 +91,41 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                   <th colspan="2">Action</th>
                 </tr>
                 <?php
-
-                $conn = mysqli_connect("localhost","root","","bone_marrow_transplant_management_system");
-                $sql = "SELECT patient_cr_id,patient_id,date,drug_name,dosage,route,frequency FROM patient_clinical_reports";
-                $result = mysqli_query($conn,$sql);
-
-                if (mysqli_num_rows($result)>0) {
-                  foreach ($result as $record) {
-                    echo "
-                    <tr>
-                      <td>".$record['patient_cr_id']."</td>
-                      <td>".$record['patient_id']."</td>
-                      <td>".$record['date']."</td>
-                      <td>".$record['drug_name']."</td>
-                      <td>".$record['dosage']."</td>
-                      <td>".$record['route']."</td>
-                      <td>".$record['frequency']."</td>
-                      <td>
-                        <a id='btn-update' href='consultant_patient_clinical_reports_update.php'>Update</a>
-                        <a action='delete' id='btn-delete' href='consultant_patient_clinical_manage_html.php?patient_report_id=".$record['patient_cr_id']."&action=delete'>Delete</a>
-                      </td>
-                    </tr>
-                    ";
-                    $conn = mysqli_connect("localhost","root","","bone_marrow_transplant_management_system");
-                    if (isset($_GET['action']) && $_GET['action'] == 'delete') {
-                      if (isset($_GET['patient_cr_id'])) {
-                        $id = $_GET['patient_cr_id'];
-                        $query = "DELETE FROM patient_clinical_reports WHERE patient_cr_id='$id'";
-                        $delete = mysqli_query($conn,$query);
-                        if($delete==1){
-                            echo "Record Successfullt Deleteded!";
+                    $sql="SELECT * FROM patient_clinical_reports";
+                    $result=mysqli_query($connection,$sql);
+                    if($result){
+                        while($row=mysqli_fetch_assoc($result)){
+                            $patient_cr_id=$row['patient_cr_id'];
+                            $patient_id=$row['patient_id'];
+                            $date=$row['date'];
+                            $drug_name=$row['drug_name'];
+                            $dosage=$row['dosage'];
+                            $route=$row['route'];
+                            $frequency=$row['frequency'];
+                            echo '
+                              <th>'.$patient_cr_id.'</th>
+                              <td>'.$patient_id.'</td>
+                              <td>'.$date.'</td>
+                              <td>'.$drug_name.'</td>
+                              <td>'.$dosage.'</td>
+                              <td>'.$route.'</td>
+                              <td>'.$frequency.'</td>
+                              <th>
+                                <button id="btn-update" class="btn btn-primary">
+                                  <a href="consultant_patient_clinical_reports_update.php?update-id='.$patient_cr_id.'" class="text-light">
+                                    Update
+                                  </a>
+                                </button>
+                                <button id="btn-delete" class="btn btn-danger">
+                                  <a href="consultant_patient_clinical_reports_delete.php?delete-id='.$patient_cr_id.'" class="text-light">
+                                    Delete
+                                  </a>
+                                </button>
+                              </th>
+                            </tr>
+                            ';
                         }
-                        else{
-                            echo "<script>alert('Something Went Wrong!');</script>";
-                        }
-                      }
                     }
-                  }
-                }
                 ?>
               </table>
           </div>

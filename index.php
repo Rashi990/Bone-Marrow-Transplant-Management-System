@@ -11,10 +11,7 @@
 </head>
 
 <body>
-    <h1>Welcome to Sri Lankan Bone Marrow Transplant Management System!</h1>
-   
     <?php header("Location: src/php/home.php"); ?>
-
 </body>
 </html>
 

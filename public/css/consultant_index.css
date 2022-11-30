@@ -69,7 +69,7 @@
   display: block;
   background: #ADD8E6;
   border-color: #006296;
-  margin: auto;
+  margin: 20px auto;
   outline: none;
   border-radius: 30px;
   font-size: 30px;
@@ -101,5 +101,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 25px;
+}
+
+.fp{
+  text-decoration: none;
+  color: #00c0E6;
   font-size: 25px;
 }
