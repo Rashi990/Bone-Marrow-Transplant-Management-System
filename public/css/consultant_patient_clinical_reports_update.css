@@ -141,10 +141,10 @@ abbr{
 }
 
 label{
-  transform: translateY(0);
+  transform: translateY(22%);
   font-size: 14px;
   width: 80%;
-  height: 20px;
+  height: 23px;
   display: flex;
   align-items: center;
   margin: 0 0 0 40px;
@@ -153,10 +153,10 @@ label{
 }
 
 .form input{
-  transform: translateY(0);
+  transform: translateY(20%);
   border: 1px solid #308C83;
   display: block;
-  height: 25px;
+  height: 27px;
   width: 80%;
   padding: 0 20px;
   margin: 0 0 10px 40px;
@@ -167,9 +167,9 @@ input:focus{
 }
 
 .select{
-  transform: translateY(0);
+  transform: translateY(20%);
   width: 80%;
-  height: 25px;
+  height: 27px;
   padding-left: 20px;
   margin: 0 0 10px 40px;
 }
@@ -190,7 +190,7 @@ button{
 }
 
 .btns{
-  transform: translateY(0);
+  transform: translateY(20%);
   display: flex;
   align-items: center;
   justify-content: center;

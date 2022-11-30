@@ -20,7 +20,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 50px;
   display: flex;
   align-items:space-between;
   overflow: hidden;
@@ -109,11 +109,11 @@ abbr{
 }
 
 .middle{
-  flex: 100%;
   display: flex;
   flex-direction: column;
   padding: 30px;
   margin-top: 20px;
+  overflow: hidden;
 }
 
 h2{
@@ -131,55 +131,45 @@ h2{
   text-align: center;
 }
 
-/*.add{
-  background: #006296;
-  border: none;
-  color: white;
-  font-size: 24px;
-  width: 300px;
-  height: 70px;
+.add{
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
+  width: 20%;
+  font-size: 20px;
+  margin: 20px;
+  margin-left: 20px;
   cursor: pointer;
-  margin-bottom: 10px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  background: green;
+  position: absolute;
+  top: 40px;
 }
 
-.add:hover{
-  opacity: .7;
-}*/
+.add a{
+  display: flex;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
 
-#adds button{
+a{
   text-decoration: none;
   color: white;
-  cursor: pointer;
-  background: #006296;
-  border: none;
-  color: white;
-  font-size: 24px;
-  width: 300px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-#adds:hover{
-  opacity: .7;
-}
-
-.mid-top{
-  display: flex;
-  width:100%;
 }
 
 .mid-bottom{
-  width: 100%;
-  width: 100%;
-  height: 100%;
   overflow-y: scroll;
-  overflow: hidden;
+  position: absolute;
+  top: 130px;
+  bottom: 70px;
+  left: 50px;
+  right: 50px;
 }
 
 table{
@@ -207,12 +197,14 @@ tr:nth-child(even){
 }
 
 #btn-update{
-  background: green;
+  background: blue;
   color: white;
   text-decoration: none;
   font-size: 20px;
   padding: 8px;
   margin: 0 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 #btn-delete{
@@ -222,4 +214,6 @@ tr:nth-child(even){
   font-size: 20px;
   padding: 8px;
   margin: 0 10px;
+  border: none;
+  border-radius: 5px;
 }

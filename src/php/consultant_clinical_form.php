@@ -2,6 +2,26 @@
 session_start();
 if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 {
+  include '../../config/connection.php';
+
+  if(isset($_POST['submit'])){
+    $patient_id=$_POST['patient_id'];
+    $date=$_POST['date'];
+    $drug_name=$_POST['drug_name'];
+    $dosage=$_POST['dosage'];
+    $route=$_POST['route'];
+    $frequency=$_POST['frequency'];
+
+      $sql="INSERT INTO patient_clinical_reports(patient_id,date,drug_name,dosage,route,frequency) VALUES($patient_id,'$date','$drug_name','$dosage','$route','$frequency')";
+      $result=mysqli_query($connection,$sql);
+      if($result){
+          //echo "Data inserted successfully";
+          header('location:consultant_patient_clinical_manage.php');
+      }
+      else{
+          die(mysqli_error($connection));
+      }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -80,11 +100,11 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               <p>Clinical Form</p>
             </div>
             <label class="lbl">Patient ID</label>
-            <input type="text" name="p_id" placeholder="Enter Patient ID">
+            <input type="text" name="patient_id" placeholder="Enter Patient ID">
             <label class="lbl">Date</label>
             <input type="date" name="date" placeholder="Choose Date">
             <label class="lbl">Drug Name</label>
-            <select class="select" name="drug" placeholder="Choose Drug Name">
+            <select class="select" name="drug_name" placeholder="Choose Drug Name">
               <option selected="selected" disabled="disabled">Choose drug name</option>
               <option>Amino Acids</option>
               <option>Amoxapine</option>
@@ -108,7 +128,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               <option>Vitamin-K1</option>
               </select>
             <label class="lbl">Dosage</label>
-            <select class="select" name="dose">
+            <select class="select" name="dosage">
               <option selected="selected" disabled="disabled">Choose dosage</option>
               <option>01</option>
               <option>02</option>
@@ -149,7 +169,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               <option>100mg per day</option>
             </select>
             <label class="lbl">Frequency</label>
-            <select class="select" name="freq" placeholder="Choose Frequency">
+            <select class="select" name="frequency" placeholder="Choose Frequency">
               <option selected="selected" disabled="disabled">Choose frequency</option>
               <option>1 day</option>
               <option>2 days</option>
@@ -177,28 +197,6 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               <button type="submit" name="submit">Add Records</button>
               <button type="button" name="button"><a id="butt" href="consultant_patient_clinical_manage.php">View Records</a></button>
             </div>
-            <?php
-              require('consultant_connection.php');
-              if (isset($_POST['submit'])) {
-                $p_id=$_POST['p_id'];
-                $date=$_POST['date'];
-                $drug=$_POST['drug'];
-                $dose=$_POST['dose'];
-                $route=$_POST['route'];
-                $freq=$_POST['freq'];
-                if (!empty($_POST['p_id'] && !empty($_POST['date']) && !empty($_POST['drug']) && !empty($_POST['dose']) && !empty($_POST['route']) && !empty($_POST['freq']))) {
-                  $p=crud::conect()->prepare('INSERT INTO patient_clinical_reports(patient_id,date,drug_name,dosage,route,frequency) VALUES(:p,:da,:dn,:do,:r,:f)');
-                  $p->bindValue(':p',$p_id);
-                  $p->bindValue(':da',$date);
-                  $p->bindValue(':dn',$drug);
-                  $p->bindValue(':do',$dose);
-                  $p->bindValue(':r',$route);
-                  $p->bindValue(':f',$freq);
-                  $p->execute();
-                  echo "<script>alert('Record Successfullt Added!');</script>";
-                }
-              }
-            ?>
           </form>
         </div>
       </div>
