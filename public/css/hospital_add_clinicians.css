@@ -58,16 +58,16 @@ form.add_clinician_form input[type="text"],[type="email"],[type="password"]{
     font-weight: bold;
     margin-top: 20px;
     margin: 10px auto;
-    padding: 10px;
+    padding: 20px;
     border: 1px solid #181919;
     border-radius: 10px;
 }
 
-a{
-    position: fixed;
-    top: 0;
+.err a{
+    position: relative;
     padding: 10px;
-    background-color: #2638d5;
+    float: right;
+    background-color: #111963;
     color: #F7FFFF;
     font-weight: bold;
     text-decoration: none;
@@ -79,9 +79,9 @@ a{
     transition: 0.5s;
 }
 
-a:hover{
+.err a:hover{
     background-color: #000000;
-    color: #73dcdc;
+    color: #ff2a2a;
 }
 
 .back_btn{
