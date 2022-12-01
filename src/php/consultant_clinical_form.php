@@ -1,59 +1,96 @@
+<?php
+session_start();
+if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
+{
+  include '../../config/connection.php';
+
+  if(isset($_POST['submit'])){
+    $patient_id=$_POST['patient_id'];
+    $date=$_POST['date'];
+    $drug_name=$_POST['drug_name'];
+    $dosage=$_POST['dosage'];
+    $route=$_POST['route'];
+    $frequency=$_POST['frequency'];
+
+      $sql="INSERT INTO patient_clinical_reports(patient_id,date,drug_name,dosage,route,frequency) VALUES($patient_id,'$date','$drug_name','$dosage','$route','$frequency')";
+      $result=mysqli_query($connection,$sql);
+      if($result){
+          //echo "Data inserted successfully";
+          header('location:consultant_patient_clinical_manage.php');
+      }
+      else{
+          die(mysqli_error($connection));
+      }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Patient Clinical Form</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_clinical_form.css?v=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_clinical_form.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
     <div class="hero">
-      <div class="top">
-          <div class="empty">
-            <h2>Patient Clinical Form</h2>
-          </div>
-          <div class="profile">
+      <div class="rtop">
+        <div class="empty">
+          <p>Patient Clinical Details</p>
+        </div>
+        <div class="profile">
+          <abbr title="notifications">
             <a href="../../public/html/consultant_notifications.html">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
+                <span class="material-icons">
                   notifications
                 </span>
               </div>
             </a>
+          </abbr>
+          <abbr title="messages">
             <a href="../../public/html/consultant_messages.html">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
-                  message
+                <span class="material-icons">
+                  chat_bubble
                 </span>
               </div>
             </a>
-            <a href="../../public/html/consultant_home.html">
+          </abbr>
+          <abbr title="Home">
+            <a href="consultant_home.php">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
+                <span class="material-icons">
                   home
                 </span>
               </div>
             </a>
-            <a href="../../src/php/consultant_index.php">
+          </abbr>
+          <abbr title="Logout">
+            <a href="consultant_login.php">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
+                <span class="material-icons">
                   logout
                 </span>
               </div>
             </a>
-              <div class="greet">
-                <h3 class="greet-text">Hi,User</h3>
-              </div>
+          </abbr>
+          <abbr title="Welcome!">
+            <div class="greet">
+              <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+            </div>
+          </abbr>
+          <abbr title="Profile">
             <a href="../../public/html/consultant_profile.html">
               <div class="pp">
-                <span class="material-symbols-outlined" style="font-size:60px;">
+                <span class="material-icons">
                   account_circle
                 </span>
               </div>
             </a>
-          </div>
+          </abbr>
+        </div>
       </div>
 
       <div class="middle">
@@ -63,11 +100,11 @@
               <p>Clinical Form</p>
             </div>
             <label class="lbl">Patient ID</label>
-            <input type="text" name="p_id" placeholder="Enter Patient ID">
+            <input type="text" name="patient_id" placeholder="Enter Patient ID">
             <label class="lbl">Date</label>
             <input type="date" name="date" placeholder="Choose Date">
             <label class="lbl">Drug Name</label>
-            <select class="select" name="drug" placeholder="Choose Drug Name">
+            <select class="select" name="drug_name" placeholder="Choose Drug Name">
               <option selected="selected" disabled="disabled">Choose drug name</option>
               <option>Amino Acids</option>
               <option>Amoxapine</option>
@@ -91,7 +128,7 @@
               <option>Vitamin-K1</option>
               </select>
             <label class="lbl">Dosage</label>
-            <select class="select" name="dose">
+            <select class="select" name="dosage">
               <option selected="selected" disabled="disabled">Choose dosage</option>
               <option>01</option>
               <option>02</option>
@@ -132,7 +169,7 @@
               <option>100mg per day</option>
             </select>
             <label class="lbl">Frequency</label>
-            <select class="select" name="freq" placeholder="Choose Frequency">
+            <select class="select" name="frequency" placeholder="Choose Frequency">
               <option selected="selected" disabled="disabled">Choose frequency</option>
               <option>1 day</option>
               <option>2 days</option>
@@ -158,30 +195,8 @@
             </select>
             <div class="btns">
               <button type="submit" name="submit">Add Records</button>
-              <button type="button" name="button"><a id="butt" href="consultant_patient_clinical_manage_html.php">View Records</a></button>
+              <button type="button" name="button"><a id="butt" href="consultant_patient_clinical_manage.php">View Records</a></button>
             </div>
-            <?php
-              require('consultant_connection.php');
-              if (isset($_POST['submit'])) {
-                $p_id=$_POST['p_id'];
-                $date=$_POST['date'];
-                $drug=$_POST['drug'];
-                $dose=$_POST['dose'];
-                $route=$_POST['route'];
-                $freq=$_POST['freq'];
-                if (!empty($_POST['p_id'] && !empty($_POST['date']) && !empty($_POST['drug']) && !empty($_POST['dose']) && !empty($_POST['route']) && !empty($_POST['freq']))) {
-                  $p=crud::conect()->prepare('INSERT INTO patient_clinical_reports(patient_id,date,drug_name,dosage,route,frequency) VALUES(:p,:da,:dn,:do,:r,:f)');
-                  $p->bindValue(':p',$p_id);
-                  $p->bindValue(':da',$date);
-                  $p->bindValue(':dn',$drug);
-                  $p->bindValue(':do',$dose);
-                  $p->bindValue(':r',$route);
-                  $p->bindValue(':f',$freq);
-                  $p->execute();
-                  echo "<script>alert('Record Successfullt Added!');</script>";
-                }
-              }
-            ?>
           </form>
         </div>
       </div>
@@ -197,3 +212,7 @@
     </div>
   </body>
 </html>
+
+<?php
+}
+?>

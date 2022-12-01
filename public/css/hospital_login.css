@@ -87,3 +87,14 @@ body{
     cursor: pointer;
     color: #fff;
 }
+
+.check_login{
+    background-color: black;
+    color: #fff;
+}
+
+.errors{
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+}

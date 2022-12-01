@@ -1,69 +1,26 @@
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #F7FFFF;
 }
 
-.clinicians{
+.clinician_list{
     position: absolute;
-    margin-left: 300px;
-    margin-top: 60px;
-    width: 1150px;
-}
-
-.clinicians h1{
-    margin-bottom: 20px;
-    font-size: 40px;
-    color: #006296;
-}
-
-
-table.clinician_list{
-    width: 100%;
-    border-collapse: collapse;   
-}
-
-.clinicians .new{
-    background-color: #006296;
-    color: #eff2f3;
-    margin-right: 20px;
-    padding: 10px 60px;
-    text-align: center;
-    float: right;
-    border: 1px solid #131414;
-    border-radius: 10px;
-    text-decoration: none;
-}
-
-table.clinician_list th{
-    padding: 10px;
-    font-weight: bold;
-    text-align: left;
-    background-color: #5ccbbe;
-    color: #006296;
-}
-
-table.clinician_list td{
-    background-color: #D7F0ED;
-    color: #006296;
-    padding: 10px;
-}
-
-table.clinician_list td a{
+    margin-left: 800px;
+    margin-top: 200px;
     width: 150px;
-    height: 40px;
-    padding: 5px 10px;
-    background: #eff2f3;
-    background-color: #10992c;
-    color: #eff2f3;
-    border: 1px solid #131414;
-    border-radius: 10px;
+    height: 20px;
+    background-color: #1a4ec6 ;
+    color: #ededed;
     text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #0c0d0d;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.5s;
 }
 
-table.clinician_list th, table.clinician_list td{
-    border-bottom: 1px solid #131414;
-    margin-top: 5px;
-   
+.clinician_list:hover{
+    background-color: #180848;
+    color: aqua;
 }
-

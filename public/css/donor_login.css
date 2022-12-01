@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.head h2{
+
+
+/* Welcome back */
+
+position: absolute;
+width: 30%;
+height: 10%;
+left: 170px;
+top: 70px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 51px;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #030303;
+}
+
+.head h4{
+
+
+
+
+position: absolute;
+width: 32%;
+height: 30%;
+left: 170px;
+top: 131.26px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #636364;
+
+}
+
+.un{
+
+
+    /* Username */
+
+position: absolute;
+width: 112px;
+height: 29px;
+left: 181px;
+top: 214px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #181818;
+
+
+}
+
+.unm{
+    /* Rectangle 3 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 418.33px;
+height: 55.04px;
+left: 182.38px;
+top: 251.15px;
+
+border: 1px solid rgba(0, 0, 0, 0.25);
+filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+border-radius: 12px;
+
+}
+
+
+.pw{
+
+    /* Password Form */
+
+position: absolute;
+width: 112.24px;
+height: 26.2px;
+left: 181px;
+top: 356px;
+
+
+
+/* Password */
+
+position: absolute;
+width: 112.24px;
+height: 26.2px;
+left: 181px;
+top: 356px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #181818;
+
+
+}
+
+.ui{
+    /* Rectangle 3 */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 418.33px;
+height: 55.04px;
+left: 182px;
+top: 391px;
+
+border: 1px solid rgba(0, 0, 0, 0.25);
+filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+border-radius: 12px;
+
+}
+
+.rmb{
+    /* unchecked */
+
+position: absolute;
+width: 15px;
+height: 15px;
+left: 185px;
+top: 525px;
+
+
+
+/* unchecked */
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: rgba(0, 0, 0, 0.25);
+
+}
+
+
+.remember{
+    /* Remember me */
+
+position: absolute;
+width: 131px;
+height: 19px;
+left: 208px;
+top: 521px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #181818;
+
+
+}
+.forgot{
+    /* Forgot password */
+
+position: absolute;
+width: 153px;
+height: 19px;
+left: 447px;
+top: 520px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #181818;
+
+
+}
+
+.sign{
+
+
+    /* Sign in Button */
+
+position: absolute;
+width: 419px;
+height: 55.13px;
+left: 181px;
+top: 634px;
+}
+
+
+
+.sg{
+
+
+/* Sign in */
+
+position: absolute;
+left: 37.47%;
+right: 37.05%;
+top: 23.25%;
+bottom: 23.49%;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 36px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #006296;
+
+
+}
+
+
+.newacc{
+    /* Don’t have an account? create account */
+
+position: absolute;
+width: 303px;
+height: 15px;
+left: 239px;
+top: 782px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #595959;
+
+
+}
+
+
+.bttm p{
+    /* © 2022 SLBMTMS. All rights reserved. */
+
+position: absolute;
+left: 17.85%;
+right: 64.44%;
+top: 89.45%;
+bottom: 8.79%;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+
+color: #595959;
+
+
+}
+
+
+.right{
+
+
+position: absolute;
+width: 678px;
+height: 1030px;
+left: 762px;
+top: -6px;
+
+background: url(../images/donor_login.png);
+}
