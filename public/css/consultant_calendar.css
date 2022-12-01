@@ -299,7 +299,7 @@ abbr{
 
 .pm-date{
   color: #999;
-  width: 70px;
+  width: 50px;
   height: 50px;
   border: none;
   margin: 2px;
@@ -318,7 +318,7 @@ abbr{
 }
 
 .date{
-  width: 70px;
+  width: 50px;
   height: 50px;
   background: #308C83;
   color: white;
@@ -329,6 +329,27 @@ abbr{
   border-radius: 50px;
 }
 
+.e-date{
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #308C83;
+  border-radius: 50px;
+}
+
+.e-day{
+  font-size: 20px;
+  color: #fff;
+}
+
+.e-events{
+  display: flex;
+}
+
 .date:hover{
   cursor: pointer;
   opacity: .7;
@@ -336,7 +357,7 @@ abbr{
 
 .um-date{
   color: #D8D8D8;
-  width: 70px;
+  width: 50px;
   height: 50px;
   border: none;
   margin: 2px;
@@ -354,17 +375,20 @@ abbr{
 }
 
 .date-selected{
-  width: 70px;
+  width: 50px;
   height: 50px;
   margin: 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: #fff;
+  border-radius: 50px;
+  border: 1px solid #308C83;
 }
 
 .s-day{
-  font-size: 30px;
+  font-size: 25px;
   color: #308C83;
 }
 
@@ -372,9 +396,9 @@ abbr{
   display: flex;
 }
 
-#yellow{
+#orange{
   font-size: 10px;
-  color: yellow;
+  color: orange;
 }
 
 #red{
@@ -428,7 +452,7 @@ abbr{
   margin: 0;
 }
 
-.event-yellow{
+.event-orange{
   height: 100px;
   color: #006296;
   background: white;
@@ -438,7 +462,7 @@ abbr{
   flex-direction:column;
 }
 
-.event-yellow .dd{
+.event-orange .dd{
   margin-left: 20px;
 }
 
@@ -474,9 +498,9 @@ abbr{
   font-size: 15px;
 }
 
-.event-yellow .material-icons{
+.event-orange .material-icons{
   font-size: 20px;
-  color: yellow;
+  color: orange;
 }
 
 .event-red .material-icons{
