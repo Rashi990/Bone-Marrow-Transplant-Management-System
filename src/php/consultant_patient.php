@@ -11,7 +11,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
     <title>Consultant Patient Page</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <div class="hero">
@@ -45,97 +45,86 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               <p>Patient</p>
             </div>
             <div class="profile">
-              <abbr title="notifications"><a href="../../public/html/consultant_notifications.html">
-                <div class="icon">
-                  <span class="material-symbols-outlined" style="font-size:35px;">
-                    notifications
-                  </span>
-                </div>
-              </a></abbr>
-              <abbr title="messages"><a href="../../public/html/consultant_messages.html">
-                <div class="icon">
-                  <span class="material-symbols-outlined" style="font-size:35px;">
-                    message
-                  </span>
-                </div>
-              </a></abbr>
-              <abbr title="messages"><a href="consultant_home.php">
-                <div class="icon">
-                  <span class="material-symbols-outlined" style="font-size:35px;">
-                    home
-                  </span>
-                </div>
-              </a></abbr>
-                <abbr title="Welcome!"><div class="greet">
+              <abbr title="notifications">
+                <a href="../../public/html/consultant_notifications.html">
+                  <div class="icon">
+                    <span class="material-icons">
+                      notifications
+                    </span>
+                  </div>
+                </a>
+              </abbr>
+              <abbr title="messages">
+                <a href="../../public/html/consultant_messages.html">
+                  <div class="icon">
+                    <span class="material-icons">
+                      chat_bubble
+                    </span>
+                  </div>
+                </a>
+              </abbr>
+              <abbr title="Home">
+                <a href="consultant_home.php">
+                  <div class="icon">
+                    <span class="material-icons">
+                      home
+                    </span>
+                  </div>
+                </a>
+              </abbr>
+              <abbr title="Welcome!">
+                <div class="greet">
                   <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
-                </div></abbr>
-              <abbr title="Profile"><a href="../../public/html/consultant_profile.html">
-                <div class="pp">
-                  <span class="material-symbols-outlined" style="font-size:35px;">
-                    account_circle
-                  </span>
                 </div>
-              </a></abbr>
+              </abbr>
+              <abbr title="Profile">
+                <a href="../../public/html/consultant_profile.html">
+                  <div class="pp">
+                    <span class="material-icons">
+                      account_circle
+                    </span>
+                  </div>
+                </a>
+              </abbr>
             </div>
           </div>
           <div class="rbottom">
-            <div class="session">
-                <a  class="box" href="../../public/html/consultant_patient_hla.html">
-                  <div class="box">
-                    <div class="image">
-                      <img class="image" src="../../public/images/hla.jpg" alt="Hla Reports">
-                    </div>
-                    <div class="text">
-                      <h3>View Patient HLA Reports</h3>
-                    </div>
+            <div id="session">
+              <a  class="box" href="consultant_patient_details.php">
+                <div class="links-container">
+                  <div class="image">
+                    <img class="image" src="../../public/images/pat.jpg" alt="Hla Reports">
                   </div>
-                </a>
-                <div class="description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <button type="button" name="button">Read More</button>
+                  <div class="text">
+                    <h3>View Patient Details</h3>
+                  </div>
                 </div>
+              </a>
             </div>
-            <div class="session">
-                <a class="box" href="consultant_patient_clinical.php">
-                  <div class="links-container">
-                    <div class="image">
-                      <img class="image" src="../../public/images/clinical.jpg" alt="Clinical Reports">
-                    </div>
-                    <div class="text">
-                      <h3>Manage Patient Clinical Reports</h3>
-                    </div>
+            <div id="session">
+              <a class="box" href="../../src/php/consultant_patient_clinical_manage.php">
+                <div class="links-container">
+                  <div class="image">
+                    <img class="image" src="../../public/images/clinical.jpg" alt="Clinical Reports">
                   </div>
-                </a>
-                <div class="description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <button type="button" name="button">Read More</button>
-                </div>
-              </div>
-            <div class="session">
-                <a class="box" href="../../public/html/consultant_patient_history.html">
-                  <div class="links-container">
-                    <div class="image">
-                      <img class="image" src="../../public/images/history.jpg" alt="">
-                    </div>
-                    <div class="text">
-                      <h3>View Patient History</h3>
-                    </div>
+                  <div class="text">
+                    <h3>Manage Patient Clinical Reports</h3>
                   </div>
-                </a>
-                <div class="description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <button type="button" name="button">Read More</button>
                 </div>
-              </div>
+              </a>
+            </div>
+            <div id="session">
+              <a class="box" href="consultant_calendar.php">
+                <div class="links-container">
+                  <div class="image">
+                    <img class="image" src="../../public/images/cal.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <h3>View Calender</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>

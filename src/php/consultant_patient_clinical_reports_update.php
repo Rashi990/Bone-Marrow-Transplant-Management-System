@@ -1,59 +1,114 @@
+<?php
+session_start();
+if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
+{
+include '../../config/connection.php';
+
+$patient_cr_id=$_GET['update-id'];
+
+$sql2="SELECT * FROM patient_clinical_reports WHERE patient_cr_id=$patient_cr_id";
+$result2=mysqli_query($connection,$sql2);
+if( $result2){
+  while($rows = mysqli_fetch_assoc($result2)){
+    $patient_cr_id=$rows['patient_cr_id'];
+    $patient_id=$rows['patient_id'];
+    $date=$rows['date'];
+    $drug_name=$rows['drug_name'];
+    $dosage=$rows['dosage'];
+    $route=$rows['route'];
+    $frequency=$rows['frequency'];
+  }
+}
+else{
+  die(mysqli_error($connection));
+}
+if(isset($_POST['submit'])){
+  $patient_id=$_POST['patient_id'];
+  $date=$_POST['date'];
+  $drug_name=$_POST['drug_name'];
+  $dosage=$_POST['dosage'];
+  $route=$_POST['route'];
+  $frequency=$_POST['frequency'];
+
+    $sql="UPDATE patient_clinical_reports SET patient_cr_id=$patient_cr_id, patient_id=$patient_id, date='$date', drug_name='$drug_name', dosage='$dosage', route='$route', frequency='$frequency' WHERE patient_cr_id=$patient_cr_id";
+    $result=mysqli_query($connection,$sql);
+    if($result){
+        //echo "Data updated successfully";
+        header('location:consultant_patient_clinical_manage.php');
+    }
+    else{
+        die(mysqli_error($connection));
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Update Patient Clinical Records</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient_clinical_reports_update.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
     <div class="hero">
-      <div class="top">
-          <div class="empty">
-            <h2>Update Patient Clinical Records</h2>
-          </div>
-          <div class="profile">
+      <div class="rtop">
+        <div class="empty">
+          <p>Patient Clinical Details</p>
+        </div>
+        <div class="profile">
+          <abbr title="notifications">
             <a href="../../public/html/consultant_notifications.html">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
+                <span class="material-icons">
                   notifications
                 </span>
               </div>
             </a>
+          </abbr>
+          <abbr title="messages">
             <a href="../../public/html/consultant_messages.html">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
-                  message
+                <span class="material-icons">
+                  chat_bubble
                 </span>
               </div>
             </a>
-            <a href="../../public/html/consultant_home.html">
+          </abbr>
+          <abbr title="Home">
+            <a href="consultant_home.php">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
+                <span class="material-icons">
                   home
                 </span>
               </div>
             </a>
-            <a href="../../src/php/consultant_index.php">
+          </abbr>
+          <abbr title="Logout">
+            <a href="consultant_login.php">
               <div class="icon">
-                <span class="material-symbols-outlined" style="font-size:42px;">
+                <span class="material-icons">
                   logout
                 </span>
               </div>
             </a>
-              <div class="greet">
-                <h3 class="greet-text">Hi,User</h3>
-              </div>
+          </abbr>
+          <abbr title="Welcome!">
+            <div class="greet">
+              <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+            </div>
+          </abbr>
+          <abbr title="Profile">
             <a href="../../public/html/consultant_profile.html">
               <div class="pp">
-                <span class="material-symbols-outlined" style="font-size:60px;">
+                <span class="material-icons">
                   account_circle
                 </span>
               </div>
             </a>
-          </div>
+          </abbr>
+        </div>
       </div>
 
       <div class="middle">
@@ -62,15 +117,13 @@
             <div class="title">
               <p>Clinical Update Form</p>
             </div>
-            <label class="lbl">Patient Clinical Report ID</label>
-            <input type="text" name="p_cr_id" placeholder="Enter Patient Clinical Report ID">
             <label class="lbl">Patient ID</label>
-            <input type="text" name="p_id" placeholder="Enter Patient ID">
+            <input type="text" name="patient_id" value=<?php echo $patient_id ?> placeholder="Enter Patient ID" autocomplete="off">
             <label class="lbl">Date</label>
-            <input type="date" name="date" placeholder="Choose Date">
+            <input type="date" name="date" value=<?php echo $date ?> placeholder="Choose Date" autocomplete="off">
             <label class="lbl">Drug Name</label>
-            <select class="select" name="drug" placeholder="Choose Drug Name">
-              <option selected="selected" disabled="disabled">Choose drug name</option>
+            <select class="select" name="drug_name" placeholder="Choose Drug Name" autocomplete="off">
+              <option selected="selected"><?php echo $drug_name ?></option>
               <option>Amino Acids</option>
               <option>Amoxapine</option>
               <option>Amoxicillin</option>
@@ -93,8 +146,8 @@
               <option>Vitamin-K1</option>
               </select>
             <label class="lbl">Dosage</label>
-            <select class="select" name="dose">
-              <option selected="selected" disabled="disabled">Choose dosage</option>
+            <select class="select" name="dosage" autocomplete="off">
+              <option selected="selected"><?php echo $dosage ?></option>
               <option>01</option>
               <option>02</option>
               <option>03</option>
@@ -122,8 +175,8 @@
               <option>25</option>
             </select>
             <label class="lbl">Route</label>
-            <select class="select" name="route" placeholder="Choose Route">
-              <option selected="selected" disabled="disabled">Choose route</option>
+            <select class="select" name="route" placeholder="Choose Route" autocomplete="off">
+              <option selected="selected"><?php echo $route ?></option>
               <option>one time a day</option>
               <option>two times a day</option>
               <option>three times a day</option>
@@ -134,8 +187,8 @@
               <option>100mg per day</option>
             </select>
             <label class="lbl">Frequency</label>
-            <select class="select" name="freq" placeholder="Choose Frequency">
-              <option selected="selected" disabled="disabled">Choose frequency</option>
+            <select class="select" name="frequency" placeholder="Choose Frequency" autocomplete="off">
+              <option selected="selected"><?php echo $frequency ?></option>
               <option>1 day</option>
               <option>2 days</option>
               <option>3 days</option>
@@ -160,34 +213,8 @@
             </select>
             <div class="btns">
               <button type="submit" name="submit">Update Records</button>
-              <button type="button" name="button"><a id="butt" href="consultant_patient_clinical_manage_html.php">View Records</a></button>
+              <button type="button" name="button"><a href="consultant_patient_clinical_manage.php">View Records</a></button>
             </div>
-            <?php
-              require('consultant_connection.php');
-              if (isset($_POST['submit'])) {
-                $p_cr_id=$_POST['p_cr_id'];
-                $p_id=$_POST['p_id'];
-                $date=$_POST['date'];
-                $drug=$_POST['drug'];
-                $dose=$_POST['dose'];
-                $route=$_POST['route'];
-                $freq=$_POST['freq'];
-                if (isset($_GET['patient_cr_id'])) {
-                  if (!empty($_POST['p_id']) && !empty($_POST['date']) && !empty($_POST['drug']) && !empty($_POST['dose']) && !empty($_POST['route']) && !empty($_POST['freq'])) {
-                    $p=crud::conect()->prepare("UPDATE patient_clinical_reports SET patient_cr_id='pcr', patient_id='p', date='da', drug_name='dn', dosage='do', route='r', frequency='f' WHERE patient_cr_id == '$p_cr_id'");
-                    $p->bindValue(':pcr',$p_cr_id);
-                    $p->bindValue(':p',$p_id);
-                    $p->bindValue(':da',$date);
-                    $p->bindValue(':dn',$drug);
-                    $p->bindValue(':do',$dose);
-                    $p->bindValue(':r',$route);
-                    $p->bindValue(':f',$freq);
-                    $p->execute();
-                    echo "<script>alert('Record Successfullt Updateded!');</script>";
-                  }
-                }
-              }
-            ?>
           </form>
         </div>
       </div>
@@ -203,3 +230,7 @@
     </div>
   </body>
 </html>
+
+<?php
+}
+?>

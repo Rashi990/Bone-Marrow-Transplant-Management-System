@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2022 at 06:42 AM
+-- Generation Time: Nov 29, 2022 at 06:00 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -20,6 +20,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `bone_marrow_transplant_management_system`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bloodbank_reports`
+--
+
+CREATE TABLE `bloodbank_reports` (
+  `report_bid` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -44,10 +56,16 @@ CREATE TABLE `bloodbank_stock` (
 CREATE TABLE `blood_bank` (
   `admin_id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `hospital_availability` varchar(255) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blood_bank`
+--
+
+INSERT INTO `blood_bank` (`admin_id`, `email`, `user_name`, `password`) VALUES
+(1, 'admin', 'admin', '112233');
 
 -- --------------------------------------------------------
 
@@ -66,22 +84,6 @@ CREATE TABLE `campaign` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `clinical_reports`
---
-
-CREATE TABLE `clinical_reports` (
-  `cr_id` int(11) NOT NULL,
-  `patient_id` int(11) DEFAULT NULL,
-  `donor_id` int(11) DEFAULT NULL,
-  `date` date NOT NULL,
-  `disease` varchar(255) NOT NULL,
-  `medicine` varchar(255) NOT NULL,
-  `dose` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `clinician`
 --
 
@@ -89,11 +91,26 @@ CREATE TABLE `clinician` (
   `clinician_id` int(11) NOT NULL,
   `clinician_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `telephone_no` int(10) NOT NULL,
+  `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
   `user_name` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `clinician`
+--
+
+INSERT INTO `clinician` (`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `user_name`, `password`, `hospital_id`) VALUES
+(1, 'Thilini De Mel', '9898.thilini@gmail.com', '0772440643', 'No.2/61, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', 'thili_99', '120899', 1),
+(2, 'Nisal', 'nis@gmail.com', '0115555448', 'Flower Road, Kandy', 'nisal', '440000', 2),
+(3, 'Ashi', 'ash@gamil.com', '0112997222', '77/A, Galle Road, Colombo', 'ashi', '668899', 2),
+(4, 'Dinu', 'di@gmail.com', '0112996666', '44/97, Silver Street , Matara', 'dinu77', '997755', 1),
+(6, 'Hashi', 'hashi@gmail.com', '0112467999', '55/99, Baker Street, Colombo', 'hashi88', '8899jj', 1),
+(7, 'Mashi', 'mashi@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', 'mashi66', '888999', 1),
+(8, 'Samantha', 'sam@gmail.com', '0778866111', '44/2,Mahawa Road,Galle', 'sam778', '666555', 2),
+(9, 'Fathima', 'fa@gmail.com', '0778866000', '44/9,Matara Road, Matara', 'fathima66', 'fa33333', 2);
 
 -- --------------------------------------------------------
 
@@ -105,11 +122,23 @@ CREATE TABLE `consultant` (
   `consultant_id` int(11) NOT NULL,
   `consultant_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `telephone_no` int(10) NOT NULL,
+  `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
+  `image` mediumblob NOT NULL,
   `user_name` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `consultant`
+--
+
+INSERT INTO `consultant` (`consultant_id`, `consultant_name`, `email`, `telephone_no`, `address`, `image`, `user_name`, `password`, `hospital_id`) VALUES
+(1, 'Thilini De Mel', '9898.thilini@gmail.com', '772440643', 'No.61/2, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', '', 'thili_99', '120899', 1),
+(2, 'Malsha Samadhika', 'malsha@gmail.com', '771234567', 'No.235, Kandy Road, Kegalle', '', 'salma_99', '1234', 1),
+(3, 'Rashini Lakshika', 'rash@gmail.com', '712589634', 'No.24/3, Park Road, Galle', '', 'rash_99', '1111', 2),
+(4, 'Subodhinie', 'subo@gmail.com', '759865472', 'No.33, Upper Lake Road, Colombo 07', '', 'subo_99', '3333', 3);
 
 -- --------------------------------------------------------
 
@@ -125,17 +154,62 @@ CREATE TABLE `donor` (
   `address` varchar(255) NOT NULL,
   `date_of dirth` date NOT NULL,
   `gender` varchar(255) NOT NULL,
-  `id_number` int(12) NOT NULL,
+  `id_number` text NOT NULL,
   `marital_state` varchar(255) NOT NULL,
+  `image` mediumblob NOT NULL,
   `blood_group` varchar(255) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `donor`
+--
+
+INSERT INTO `donor` (`donor_id`, `donor_name`, `telephone_no`, `email`, `address`, `date_of dirth`, `gender`, `id_number`, `marital_state`, `image`, `blood_group`, `user_name`, `password`) VALUES
+(1, 'Warami Nethunya', 762531489, 'wara@gmail.com', 'No.258, Gregory lake road, Nuwaraeliya', '2000-11-15', 'Female', '200015326923', 'Unmarried', '', 'B-', 'wara_00', '987'),
+(2, 'Nelsan Bandara', 115632489, 'nelson@gmail.com', '-', '1986-11-18', 'Male', '198612395633', 'Married', '', 'B+', 'nel123', '123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `donor_clinical_reports`
+--
+
+CREATE TABLE `donor_clinical_reports` (
+  `donor_cr_id` int(11) NOT NULL,
+  `donor_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `drug_name` varchar(255) NOT NULL,
+  `dosage` int(2) NOT NULL,
+  `route` varchar(255) NOT NULL,
+  `frequency` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `donor_hla_details`
+--
+
+CREATE TABLE `donor_hla_details` (
+  `dh_id` int(11) NOT NULL,
+  `donor_id` int(11) NOT NULL,
   `hla_antigen` varchar(255) NOT NULL,
   `hla_allele_family` varchar(255) NOT NULL,
   `hla_2nd_type` varchar(255) NOT NULL,
   `hla_3rd_type` varchar(255) NOT NULL,
   `hla_4th_type` varchar(255) NOT NULL,
-  `user_name` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `hla_5th_type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `donor_hla_details`
+--
+
+INSERT INTO `donor_hla_details` (`dh_id`, `donor_id`, `hla_antigen`, `hla_allele_family`, `hla_2nd_type`, `hla_3rd_type`, `hla_4th_type`, `hla_5th_type`) VALUES
+(1, 1, 'HLA-A', '02', '101', '01', '02', 'N'),
+(2, 2, 'HLA-B', '08', '01', '01', '01', 'L');
 
 -- --------------------------------------------------------
 
@@ -159,11 +233,35 @@ CREATE TABLE `hospital` (
   `hospital_id` int(11) NOT NULL,
   `hospital_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `telephone_no` int(10) NOT NULL,
+  `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
   `date_availability` varchar(255) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hospital`
+--
+
+INSERT INTO `hospital` (`hospital_id`, `hospital_name`, `email`, `telephone_no`, `address`, `date_availability`, `user_name`, `password`) VALUES
+(1, 'Apeksha Hospital', 'apeksha@gmail.com', '0112467448', 'New road, Maharagama', '2022/06/10', 'apeksha', '123456'),
+(2, 'Karapitiya Hospital', 'karapitiya@gmail.com', '0112992222', '66/5, Kaluwella Road, Galle', '2022/07/10', 'karapitiya', '222444'),
+(3, 'Mahaweli Hospital', ' maha@gmail.com', '0112233444', 'Panideniya Road, Kandy', '2022/06/14', 'maha22', 'ma4466'),
+(5, 'Ninewells', ' ninewells@gamil.com', ' 011223377', '44/9,Colombo Road,Colombo', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hospital_reports`
+--
+
+CREATE TABLE `hospital_reports` (
+  `report_hid` int(11) NOT NULL,
+  `repo_name` varchar(100) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL,
+  `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -209,10 +307,74 @@ CREATE TABLE `patient` (
   `address` varchar(255) NOT NULL,
   `date_of_birth` date NOT NULL,
   `gender` varchar(255) NOT NULL,
-  `id_number` int(12) NOT NULL,
+  `id_number` text NOT NULL,
   `marital_state` varchar(255) NOT NULL,
-  `blood_group` varchar(255) NOT NULL
+  `blood_group` varchar(255) NOT NULL,
+  `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `patient`
+--
+
+INSERT INTO `patient` (`patient_id`, `patient_name`, `email`, `telephone_no`, `address`, `date_of_birth`, `gender`, `id_number`, `marital_state`, `blood_group`, `hospital_id`) VALUES
+(1, 'Malki Nethusha', 'malki.12@gmail.com', 753264189, 'No.23, Hetti Vidiya, Colombo 07', '1996-11-14', 'Female', '199612547893', 'Unmarried', 'B+', 1),
+(2, 'Mallika Kumari', '-', 522236589, 'No.29, Malwaththa Road, Kandana', '1951-08-15', 'Female', '51125878923', 'Married', 'AB-', 1),
+(3, 'Kamal Jayathilake', 'kamal@gmail.com', 715236489, 'No.25, Park Road, Walimada', '1973-12-21', 'Male', '197312547693', 'Married', 'O-', 2),
+(4, 'Amali Bhagya', 'ama_b98@gmail.com', 752369852, 'No.63, Chapel Road, Nugegoda', '1998-06-16', 'Female', '199823651492', 'Unmarried', 'A+', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patient_clinical_reports`
+--
+
+CREATE TABLE `patient_clinical_reports` (
+  `patient_cr_id` int(11) NOT NULL,
+  `patient_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `drug_name` varchar(255) NOT NULL,
+  `dosage` int(11) NOT NULL,
+  `route` varchar(255) NOT NULL,
+  `frequency` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `patient_clinical_reports`
+--
+
+INSERT INTO `patient_clinical_reports` (`patient_cr_id`, `patient_id`, `date`, `drug_name`, `dosage`, `route`, `frequency`) VALUES
+(12, 3, '2022-01-21', 'Amoxapine', 12, 'two times a day', '6 days'),
+(13, 4, '2022-02-14', 'Aspirin', 9, 'three times a day', '3 days'),
+(14, 3, '2022-11-02', 'Aspirin', 12, 'one time a day', '1 month'),
+(15, 1, '2022-05-12', 'Dexamethasone', 14, 'two times a day', '1 week'),
+(16, 4, '2022-03-17', 'Omeprazole', 14, 'two times a day', '1 week'),
+(17, 3, '2022-11-25', 'Aspirin', 4, 'three times a day', '8 days');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patient_hla_details`
+--
+
+CREATE TABLE `patient_hla_details` (
+  `ph_id` int(11) NOT NULL,
+  `patient_id` int(11) NOT NULL,
+  `hla_antigen` varchar(255) NOT NULL,
+  `hla_allele_family` varchar(255) NOT NULL,
+  `hla_2nd_type` varchar(255) NOT NULL,
+  `hla_3rd_type` varchar(255) NOT NULL,
+  `hla_4th_type` varchar(255) NOT NULL,
+  `hla_5th_type` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `patient_hla_details`
+--
+
+INSERT INTO `patient_hla_details` (`ph_id`, `patient_id`, `hla_antigen`, `hla_allele_family`, `hla_2nd_type`, `hla_3rd_type`, `hla_4th_type`, `hla_5th_type`) VALUES
+(1, 1, 'HLA-C', '24', '02', '01', '02', 'S'),
+(2, 2, 'HLA-A', '44', '02', '01', '02', 'A');
 
 -- --------------------------------------------------------
 
@@ -230,22 +392,10 @@ CREATE TABLE `pending_donor` (
   `gender` varchar(255) NOT NULL,
   `id_number` int(12) NOT NULL,
   `marital_state` varchar(255) NOT NULL,
+  `image` mediumblob NOT NULL,
   `blood_group` varchar(255) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sample_details`
---
-
-CREATE TABLE `sample_details` (
-  `sample_id` int(11) NOT NULL,
-  `sample_date` date NOT NULL,
-  `sample_time` time NOT NULL,
-  `dep_time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -305,6 +455,12 @@ CREATE TABLE `user` (
 --
 
 --
+-- Indexes for table `bloodbank_reports`
+--
+ALTER TABLE `bloodbank_reports`
+  ADD PRIMARY KEY (`report_bid`);
+
+--
 -- Indexes for table `bloodbank_stock`
 --
 ALTER TABLE `bloodbank_stock`
@@ -323,22 +479,18 @@ ALTER TABLE `campaign`
   ADD PRIMARY KEY (`camp_id`);
 
 --
--- Indexes for table `clinical_reports`
---
-ALTER TABLE `clinical_reports`
-  ADD PRIMARY KEY (`cr_id`);
-
---
 -- Indexes for table `clinician`
 --
 ALTER TABLE `clinician`
-  ADD PRIMARY KEY (`clinician_id`);
+  ADD PRIMARY KEY (`clinician_id`),
+  ADD KEY `Test` (`hospital_id`);
 
 --
 -- Indexes for table `consultant`
 --
 ALTER TABLE `consultant`
-  ADD PRIMARY KEY (`consultant_id`);
+  ADD PRIMARY KEY (`consultant_id`),
+  ADD KEY `Test1` (`hospital_id`);
 
 --
 -- Indexes for table `donor`
@@ -347,10 +499,30 @@ ALTER TABLE `donor`
   ADD PRIMARY KEY (`donor_id`);
 
 --
+-- Indexes for table `donor_clinical_reports`
+--
+ALTER TABLE `donor_clinical_reports`
+  ADD PRIMARY KEY (`donor_cr_id`);
+
+--
+-- Indexes for table `donor_hla_details`
+--
+ALTER TABLE `donor_hla_details`
+  ADD PRIMARY KEY (`dh_id`),
+  ADD KEY `test4` (`donor_id`);
+
+--
 -- Indexes for table `hospital`
 --
 ALTER TABLE `hospital`
   ADD PRIMARY KEY (`hospital_id`);
+
+--
+-- Indexes for table `hospital_reports`
+--
+ALTER TABLE `hospital_reports`
+  ADD PRIMARY KEY (`report_hid`),
+  ADD KEY `Test2` (`hospital_id`);
 
 --
 -- Indexes for table `hospital_stock`
@@ -368,19 +540,27 @@ ALTER TABLE `match_details`
 -- Indexes for table `patient`
 --
 ALTER TABLE `patient`
-  ADD PRIMARY KEY (`patient_id`);
+  ADD PRIMARY KEY (`patient_id`),
+  ADD KEY `Test3` (`hospital_id`);
+
+--
+-- Indexes for table `patient_clinical_reports`
+--
+ALTER TABLE `patient_clinical_reports`
+  ADD PRIMARY KEY (`patient_cr_id`);
+
+--
+-- Indexes for table `patient_hla_details`
+--
+ALTER TABLE `patient_hla_details`
+  ADD PRIMARY KEY (`ph_id`),
+  ADD KEY `test5` (`patient_id`);
 
 --
 -- Indexes for table `pending_donor`
 --
 ALTER TABLE `pending_donor`
   ADD PRIMARY KEY (`pending_donor_id`);
-
---
--- Indexes for table `sample_details`
---
-ALTER TABLE `sample_details`
-  ADD PRIMARY KEY (`sample_id`);
 
 --
 -- Indexes for table `session`
@@ -411,6 +591,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `bloodbank_reports`
+--
+ALTER TABLE `bloodbank_reports`
+  MODIFY `report_bid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `bloodbank_stock`
 --
 ALTER TABLE `bloodbank_stock`
@@ -420,7 +606,7 @@ ALTER TABLE `bloodbank_stock`
 -- AUTO_INCREMENT for table `blood_bank`
 --
 ALTER TABLE `blood_bank`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `campaign`
@@ -429,34 +615,46 @@ ALTER TABLE `campaign`
   MODIFY `camp_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `clinical_reports`
---
-ALTER TABLE `clinical_reports`
-  MODIFY `cr_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `clinician`
 --
 ALTER TABLE `clinician`
-  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `consultant`
 --
 ALTER TABLE `consultant`
-  MODIFY `consultant_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `consultant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `donor`
 --
 ALTER TABLE `donor`
-  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `donor_clinical_reports`
+--
+ALTER TABLE `donor_clinical_reports`
+  MODIFY `donor_cr_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `donor_hla_details`
+--
+ALTER TABLE `donor_hla_details`
+  MODIFY `dh_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `hospital`
 --
 ALTER TABLE `hospital`
-  MODIFY `hospital_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `hospital_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `hospital_reports`
+--
+ALTER TABLE `hospital_reports`
+  MODIFY `report_hid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `hospital_stock`
@@ -474,19 +672,25 @@ ALTER TABLE `match_details`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patient_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `patient_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `patient_clinical_reports`
+--
+ALTER TABLE `patient_clinical_reports`
+  MODIFY `patient_cr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `patient_hla_details`
+--
+ALTER TABLE `patient_hla_details`
+  MODIFY `ph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pending_donor`
 --
 ALTER TABLE `pending_donor`
   MODIFY `pending_donor_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `sample_details`
---
-ALTER TABLE `sample_details`
-  MODIFY `sample_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `session`
@@ -505,6 +709,46 @@ ALTER TABLE `testing`
 --
 ALTER TABLE `transplant_request`
   MODIFY `transplant_request_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `clinician`
+--
+ALTER TABLE `clinician`
+  ADD CONSTRAINT `Test` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`);
+
+--
+-- Constraints for table `consultant`
+--
+ALTER TABLE `consultant`
+  ADD CONSTRAINT `Test1` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `donor_hla_details`
+--
+ALTER TABLE `donor_hla_details`
+  ADD CONSTRAINT `test4` FOREIGN KEY (`donor_id`) REFERENCES `donor` (`donor_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `hospital_reports`
+--
+ALTER TABLE `hospital_reports`
+  ADD CONSTRAINT `Test2` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `patient`
+--
+ALTER TABLE `patient`
+  ADD CONSTRAINT `Test3` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`);
+
+--
+-- Constraints for table `patient_hla_details`
+--
+ALTER TABLE `patient_hla_details`
+  ADD CONSTRAINT `test5` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
