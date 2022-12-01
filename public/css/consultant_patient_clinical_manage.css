@@ -149,6 +149,10 @@ h2{
   top: 40px;
 }
 
+.add:hover{
+  opacity: .7;
+}
+
 .add a{
   display: flex;
   height: 50px;
@@ -216,4 +220,12 @@ tr:nth-child(even){
   margin: 0 10px;
   border: none;
   border-radius: 5px;
+}
+
+#btn-update:hover{
+  opacity: .7;
+}
+
+#btn-delete:hover{
+  opacity: .7;
 }
