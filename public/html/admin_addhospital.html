@@ -6,34 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
 	<title>Add Hospital</title>
-    <link rel="stylesheet"  href="../../public/css/admin_addhospital.css">
+    <link rel="stylesheet"  href="../../public/css/admin_addhospital.css?n=1">
 </head>
 <body>
-<div class="container">
-    <center>
-<form action="admin_addhospital.php" method="post">
-    
-    <section class="copy">
-        <h2>Add Hospital</h2>
-    </section> 
-  
-            <label for="ID">Hospital ID</label>
-            <input type="text" name="ID"  placeholder="Enter Hospital ID" >
-            <label for="hname">Hospital Name</label>
-            <input type="text" name="hname" placeholder="Enter Hospital Name">
-            <label for="email">Hospital Email</label>
-            <input type="email" name="email" placeholder="Enter Hospital Email" >
-            <label for="telephone">Telephone No</label>
-            <input type="tel" name="tel" placeholder="Enter telephone number">
-            <label for="address">Hospital Address</label>
-            <input type="text" name="address" placeholder="Enter Hospital Address">
-
- 
    
-    <button class="create-btn" name="submit" type="submit"> Create</button>
+<div class="container">
+ <div class="form_content">
+    <form class="form_form"action="admin_addhospital.php" method="post">
+    
+        <section class="copy">
+            <h2>Add Hospital</h2>
+        </section> 
+      
+                <label for="ID">Hospital ID</label>
+                <input type="text" name="ID"  placeholder="Enter Hospital ID" >
+                <label for="hname">Hospital Name</label>
+                <input type="text" name="hname" placeholder="Enter Hospital Name">
+                <label for="email">Hospital Email</label>
+                <input type="email" name="email" placeholder="Enter Hospital Email" >
+                <label for="telephone">Telephone No</label>
+                <input type="tel" name="tel" placeholder="Enter telephone number">
+                <label for="address">Hospital Address</label>
+                <input type="text" name="address" placeholder="Enter Hospital Address">
+    
+     
        
-</form>   
-</center>         
+        <button class="create-btn" name="submit" type="submit"> Create</button>
+           
+    </form>  
+ </div>
+         
                 </div>
 	
 </body>

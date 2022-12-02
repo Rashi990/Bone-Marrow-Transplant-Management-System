@@ -15,8 +15,7 @@
 }
 
 .top{
-  flex: 10%;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -109,123 +108,27 @@ abbr{
 }
 
 .middle{
+  flex: 85%;
+  width: 100%;
+  background: linear-gradient(45deg,#6ac1c5,#bda5ff);
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-h2{
-  font-size: 35px;
-  display: flex;
-  align-items: center;
-  margin-left: 30px;
-}
-
-.rbottom{
-  display: flex;
-  flex: 100%;
-  align-items:center;
-  justify-content: center;
-  text-align: center;
-}
-
-.add{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 20%;
-  font-size: 20px;
-  margin: 20px;
-  margin-left: 20px;
-  cursor: pointer;
-  padding: 20px;
-  border: none;
-  border-radius: 5px;
-  background: green;
-  position: absolute;
-  top: 40px;
-}
-
-.add:hover{
-  opacity: .7;
-}
-
-.add a{
-  display: flex;
-  height: 50px;
-  width: 100%;
-  cursor: pointer;
-  justify-content: center;
   align-items: center;
 }
 
-a{
-  text-decoration: none;
-  color: white;
+.new-hero{
+  display: flex;
+  justify-content: center;
 }
 
-.mid-bottom{
-  overflow-y: scroll;
-  position: absolute;
-  top: 130px;
-  bottom: 70px;
-  left: 50px;
-  right: 50px;
-}
-
-table{
-  border-collapse: collapse;
-  width: 100%;
-  color: #308C83;
-  font-family: monospace;
-  font-size: 25px;
-  text-align: center;
-}
-
-th{
+#details{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 10%;
+  left: 0;
+  width: 1000px;
+  height: 500px;
+  padding-bottom: 10px;
   background: #308C83;
-  color: white;
-  height: 60px;
-}
-
-tr{
-  height: 50px;
-}
-
-tr:nth-child(even){
-  background: #DBFFFC;
-  color: #308C83;
-}
-
-#btn-update{
-  background: blue;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 8px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 5px;
-}
-
-#btn-delete{
-  background: red;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  padding: 8px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 5px;
-}
-
-#btn-update:hover{
-  opacity: .7;
-}
-
-#btn-delete:hover{
-  opacity: .7;
 }
