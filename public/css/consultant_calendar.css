@@ -341,6 +341,11 @@ abbr{
   border-radius: 50px;
 }
 
+.e-date:hover{
+  cursor: pointer;
+  opacity: .7;
+}
+
 .e-day{
   font-size: 20px;
   color: #fff;
