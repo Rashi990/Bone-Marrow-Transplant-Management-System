@@ -21,7 +21,7 @@ if($clinicians){
         $clinician_list .= "<td>{$clinician['clinician_name']}</td>";
         $clinician_list .= "<td>{$clinician['telephone_no']}</td>";
         $clinician_list .= "<td>{$clinician['address']}</td>";
-        $clinician_list .= "<td><a href=\"hospital_update_clinicians.php?clinician_id = {$clinician['clinician_id']}\">View</a></td>";
+        $clinician_list .= "<td><a href=\"hospital_view_clinicians.php?clinician_id = {$clinician['clinician_id']}\">View</a></td>";
         $clinician_list .= "<td><a href=\"hospital_update_clinicians.php?clinician_id = {$clinician['clinician_id']}\">Edit</a></td>";
         $clinician_list .= "<td><a href=\"hospital_delete_clinicians.php?clinician_id = {$clinician['clinician_id']}\">Delete</a></td>";
         $clinician_list .= "</tr>";
