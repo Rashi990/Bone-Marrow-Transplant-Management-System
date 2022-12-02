@@ -15,31 +15,31 @@ include "../../config/connection.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewhospital.css?v=1">
+    <title>View Donor</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewhospital.css?">
 </head>
 <body>
     
     
 <div class="right">
+    <a href="admin_adddonor.php" class="create-btn"> + Add Donor </a>
 
-    <a href="admin_addhospital.php" class="create-btn"> + Add Hospital
-       </a>
+    
 
-  <table class=" table">
+  <table class="table">
         <thead>
         <tr>
         <th class="table-head">
-      Hospital ID
+      Donor ID
       </th>
       <th class="table-head">
-      Hospital Name
+      Donor Name
       </th><th class="table-head">
-      Hospital Email
+      Donor Blood Group
       </th><th class="table-head">
-      Hospital Telephone No.
+      Donor Telephone No.
       </th><th class="table-head">
-      Hospital Address
+      Donor Address
       </th>
       <th colspan="2" class="table-head">
       Operation
@@ -49,25 +49,25 @@ include "../../config/connection.php";
        <tbody>
 
         <?php 
-        $sql="select * from `hospital`";
+        $sql="select * from `donor`";
         $result=mysqli_query($connection,$sql);
         if($result){
             while($row=mysqli_fetch_assoc($result)){
-                $id=$row['hospital_id'];
-                $name=$row['hospital_name'];
-                $email=$row['email'];
+                $id=$row['donor_id'];
+                $name=$row['donor_name'];
+                $blood=$row['blood_group'];
                 $tele=$row['telephone_no'];
                 $address=$row['address'];
              echo '<tr>
         <td>'.$id. '</td>
         <td>'.$name. '</td>
-        <td>'.$email. '</td>
+        <td>'.$blood. '</td>
         <td>'.$tele. '</td>
         <td>'.$address. '</td>  
-        <td><a href="admin_addhospital.php?" class="update-btn"> edit
-        </a></td>
-        <td><a href="admin_deletehospital.php? deleteid='.$id.'" class="delete-btn" > delete
-       </a></td>   
+        <td><a href="admin_adddonor.php?" class="update-btn"> edit
+        </a></button></td>
+        <td><a href="admin_deletedonor.php? deleteid='.$id.'"><button class="delete-btn" > delete
+       </button></a></td>   
     </tr>';
 
             }
