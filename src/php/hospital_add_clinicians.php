@@ -57,6 +57,7 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
             echo '<div class="err">';
             echo '<a href="hospital_add_clinicians.php">OK</a>';
             foreach($errors as $error){
+                $error = str_replace("_", " ", $error);
                 echo $error;
                 echo '</br><br>';
             }
