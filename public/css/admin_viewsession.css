@@ -5,10 +5,14 @@
     font-family: 'Poppins', sans-serif;
 }
 @media screen and (min-width:900px) {
-.body{
-    margin-top: 50px;
+body{
+  
         background: #F7FFFF;
     }
+}
+.container{
+    margin-left: 250px;
+    
 }
 main{
     
