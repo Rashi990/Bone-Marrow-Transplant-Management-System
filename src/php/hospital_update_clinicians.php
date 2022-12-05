@@ -17,31 +17,31 @@ $c_password = '';
 */
 
     if(isset($_GET['clinician_id'])){
-        $cID = mysqli_real_escape_string($connection, $_GET['clinician_id']);
-        $query = "SELECT * FROM clinician WHERE clinician_id = {$cID} LIMIT 1";
+        $clinician_id = mysqli_real_escape_string($connection, $_GET['clinician_id']);
+        $sql2 = "SELECT * FROM clinician WHERE clinician_id = {$clinician_id} LIMIT 1";
 
-        $result_set = mysqli_query($connection, $query);
+        $result_set = mysqli_query($connection, $sql2);
 
         if($result_set){
             if(mysqli_num_rows($result_set) == 1 ){
                 //user found
-                $result = mysqli_fetch_assoc($result_set);
-                $cID = $result['clinician_id'];
-                $clinician_name = $result['clinician_name'];
-                $c_email = $result['email'];
-                $tele = $result['telephone_no'];
-                $address = $result['address'];
-                $c_username = $result['user_name'];
-                $c_password = $result['password'];
+                $result1 = mysqli_fetch_assoc($result_set);
+                $clinician_id = $result1['clinician_id'];
+                $clinician_name = $result1['clinician_name'];
+                $c_email = $result1['email'];
+                $tele = $result1['telephone_no'];
+                $address = $result1['address'];
+                $c_username = $result1['user_name'];
+                $c_password = $result1['password'];
             }
             else{
                 //user not found
-                header("Location: hospital_clinician_list.php?err=user_not_found") ;
+                header("Location: hospital_clinician_list.php") ;
             }
         }
         else{
             //query unsuccessful
-            header("Location: hospital_clinician_list.php?err=query_failed") ;   
+            header("Location: hospital_clinician_list.php") ;   
         }
     }
 
@@ -52,7 +52,7 @@ $c_password = '';
    
     if(isset($_POST['submit'])){
     
-        $cID = $_POST['clinician_id'];
+        $clinician_id = $_POST['clinician_id'];
         $clinician_name = $_POST['clinician_name'];
         $c_email = $_POST['email'];
         $tele = $_POST['telephone_no'];
@@ -136,7 +136,7 @@ $c_password = '';
                 </body>
                 </html>
 
+
+
 ?>
-
-
 <?php include('../../public/html/hospital_update_clinicians.html'); ?>
