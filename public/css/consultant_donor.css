@@ -179,30 +179,30 @@ abbr{
 
 .rbottom{
   flex: 85%;
-  overflow-y: scroll;
   position:relative;
   top: 0;
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.session{
+#session{
+  flex: 33.3%;
   margin: 10px;
-  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .box{
-  flex: 50%;
-  height: 350px;
+  flex: 100%;
+  height: 400px;
   width: 300px;
-  background:#006296;
+  background:#308C83;
   text-decoration: none;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -211,65 +211,54 @@ abbr{
 }
 
 .image{
+  flex:80%;
   height: 300px;
-  width: 300px;
+  width: 350px;
 }
 
 .text{
+  flex: 20%;
   height: 50px;
+  width: 100%;
   display: flex;
+  color: white;
+  font-size: 20px;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  align-items: center;
-}
-
-.description{
-  flex: 50%;
-  padding: 10px 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.text h3{
-  color: #ffffff;
-  font-size: 22px;
-}
-
-.description button{
-  width: 200px;
-  height: 40px;
-  margin: 10px;
-  font-size: 20px;
-  background: #308C83;
-  color: white;
-  border: none;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.description button:hover{
-  background: #8AD2CB;
-  color: #256660;
-}
-
-.description p{
-  font-size: 16px;
-  text-align: justify;
 }
 
 @media (max-width:1050px) {
-  .rbottom{
-    flex-direction: column;
-  }
   .rtop{
     flex-direction: column;
-    align-items: center;
     height: auto;
+    align-items: center;
   }
-  .description{
-    padding: 10px;
+  .rbottom{
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 400px;
+  }
+  .empty p{
+    flex:80%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #session{
+    flex-direction: column;
+  }
+  .box{
+    width: 300px;
+    height: 220px;
+    background:#006296;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .image{
+    flex:100%;
+    width: 300px;
+    height: 200px;
   }
 }
