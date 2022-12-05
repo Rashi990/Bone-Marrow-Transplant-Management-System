@@ -5,8 +5,8 @@ body{
 
 .clinician_list{
     position: absolute;
-    margin-left: 800px;
     margin-top: 200px;
+    margin-left: 1300px;
     width: 150px;
     height: 20px;
     background-color: #1a4ec6 ;

@@ -5,14 +5,15 @@ body{
     display: flex;
 }
 
-.nav{
+.nav1{
+  position: fixed;
   width: 100%;
-  height: 70px;
+  height: 80px;
   background-color: #006296;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo{
@@ -20,27 +21,64 @@ body{
   margin-right: 20px;
 }
 
-.site{
-  flex: 80%;
-  display: flex;
-  justify-content: left;
+.nav1 h1{
+  font-size: 28px;
   color: white;
 }
 
-.site h1{
-  font-family: cursive;
-}
-
-button{
-  width: 100px;
-  height: 40px;
-  font-size: 20px;
-  background: #72C2DF;
-  border: none;
-  border-radius: 5px;
-}
-
-button a{
+.login{
+  float: right;
+  background-color: #FFFFFF;
+  border: 1px solid #308C83;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 10px 20px;
   text-decoration: none;
-  color: white;
+  color: #006296;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.login:hover{
+  color: #0b0b0b;
+  background-color: #5fe4d7;
+}
+
+.nav2{
+  top: 90px;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: #308C83;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu{
+  padding: 5px 20px;
+  margin: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.5s;
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+}
+
+.menu:hover{
+  color: #308C83;
+  background-color: #FFFFFF;
+}
+
+.banner1{
+  width: 100%;
+}
+
+.img1{
+  width: 100%;
+  height: 70vh;
+  z-index: -1;
 }
