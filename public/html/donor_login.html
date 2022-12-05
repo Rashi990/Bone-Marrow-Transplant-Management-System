@@ -31,16 +31,16 @@
             <div class="frms">
 
                 <!--Login In form-->
-                <form action="" class="logfrm" method="">
+                <form action="../../src/php/donor_login.php" class="logfrm" method="post">
 
                  <div class="inpt">
-
+ 
                   <label class ="un" >
                     Username
                   </label>
                     <br>
 
-                        <input type="text" placeholder="Enter your Username" class="unm"required>
+                        <input type="text" placeholder="Enter your Username here" name="username" class="unm"required>
                   
 
                       <br>
@@ -54,7 +54,7 @@
                       <br>
 
                      
-                        <input type="password" placeholder="Enter your Password" class="unm" required>
+                        <input type="password" placeholder="Enter your Password here" name="password" class="unm" required>
                         </div>
 
                         <div class="selct">
@@ -64,9 +64,9 @@
                       <br>
                       <br>
 
-                      <label for="" class="remember">
+                      <label for="re-check" class="remember">
                         
-                        <input type="checkbox" class="rmb">
+                        <input type="checkbox" class="rmb" name="re-check" id="re-check">
                         Remember me
                       </label>
 
@@ -81,7 +81,7 @@
                       <br>
                       <br>
                       
-                        <a href="index.html"> <button class="login">
+                        <a href="index.html"> <button class="login" name="login-btn" id="login-btn">
                           <span class="lg">Log In</span>
                       </button></a>
                     
