@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.content{
+    width: 100%;
+}
+
+.img{
+    width: 100%;
+    height: 50vh;
+}
