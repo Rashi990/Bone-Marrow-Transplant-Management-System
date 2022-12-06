@@ -46,6 +46,7 @@ body{
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
+    transition: 0.2s;
 }
 
 .side-navbar a:hover{
@@ -56,4 +57,5 @@ body{
 .side-navbar p a:hover{
     background-color: #81efe4;
     color: black;
+    transition: 0.2s;
 }

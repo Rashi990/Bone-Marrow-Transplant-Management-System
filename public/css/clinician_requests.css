@@ -109,8 +109,55 @@
     color: black;
 }
 
+.left .hi-selected{
+    padding: 15px;
+    display: block;
+    color: #308C83;
+    background: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-right: 20px;
+}
+
+abbr{
+  text-decoration: none;
+}
+
+.greet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.greet-text{
+  text-align:center;
+  font-size: 16px;
+  color: gray;
+}
+
+.profile .material-icons{
+  color: gray;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.profile .material-icons:hover{
+  color: black;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: none;
+}
+
 .rtop{
-  flex: 15%;
+  height: 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -123,62 +170,21 @@
   margin-left: 20px;
 }
 
-.profile{
-  flex: 30%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-abbr{
-  text-decoration: none;
-  margin: 5px;
-}
-
-.greet{
-  width: 120px;
-}
-
-.greet-text{
-  color: #000;
-  text-align:center;
-}
-
-.profile .material-symbols-outlined{
-  color: gray;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.profile .material-symbols-outlined:hover{
-  background-color: #ff9;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  border-bottom: none;
+.empty p{
+  text-align: justify;
+  font-size: 20px;
+  color:#888;
+  font-weight:bolder;
 }
 
 .rbottom{
   flex: 85%;
-  overflow-y: scroll;
-  position:relative;
-  top: 0;
-  right: 0;
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.left .hi-selected{
-    padding: 15px;
-    display: block;
-    color: #308C83;
-    background: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
+  overflow-y: scroll;
 }
 
 table{
@@ -205,20 +211,42 @@ tr:nth-child(even){
   color: #308C83;
 }
 
-#view{
+tr:nth-child(odd){
+  color:#308C83;
+  background: #CFF5E0;
+}
+
+#btn-view{
   background: green;
   color: white;
   text-decoration: none;
   font-size: 20px;
-  padding: 8px;
+  padding: 5px;
   margin: 0 10px;
+  border: none;
+  border-radius: 5px;
 }
 
-#match{
+#btn-match{
   background: blue;
   color: white;
   text-decoration: none;
   font-size: 20px;
-  padding: 8px;
+  padding: 5px;
   margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#btn-view:hover{
+  opacity: .7;
+}
+
+#btn-match:hover{
+  opacity: .7;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }

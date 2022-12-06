@@ -2,10 +2,12 @@
 require_once('admin_dashboard.php');
 ?>
 <?php
+require_once('../../config/connection.php');
 session_start();
-
-include "../../config/connection.php";
- 
+if (!(isset($_SESSION['user_name'])  ))
+{
+    header("Location:admin_login.php");
+}
 ?>
 
 <?php require_once('admin_footer.php');?>
@@ -16,15 +18,15 @@ include "../../config/connection.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewhospital.css?n=1">
+    <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewhospital.css?v=1">
 </head>
 <body>
     
     
 <div class="right">
 
-    <a href="admin_addhospital.php"><button class="create-btn"> + Add Hospital
-       </button></a>
+    <a href="admin_addhospital.php" class="create-btn"> + Add Hospital
+       </a>
 
   <table class=" table">
         <thead>
@@ -64,10 +66,10 @@ include "../../config/connection.php";
         <td>'.$email. '</td>
         <td>'.$tele. '</td>
         <td>'.$address. '</td>  
-        <td><a href="admin_addhospital.php?"><button class="update-btn"> edit
-        </button></a></td>
-        <td><a href="admin_deletehospital.php? deleteid='.$id.'"><button class="delete-btn" > delete
-       </button></a></td>   
+        <td><a href="admin_addhospital.php?" class="update-btn"> edit
+        </a></td>
+        <td><a href="admin_deletehospital.php? deleteid='.$id.'" class="delete-btn" > delete
+       </a></td>   
     </tr>';
 
             }
