@@ -5,16 +5,16 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
 {
     header("Location:hospital_login.php");
 }
-
-$errors = array();
 /*
+$errors = array();
+
 $clinician_name = '' ;
 $c_email = '';
 $tele = '';
 $address = '';
 $c_username = '';
 $c_password = '';
-*/
+
 
     if(isset($_GET['clinician_id'])){
         $clinician_id = mysqli_real_escape_string($connection, $_GET['clinician_id']);
@@ -120,6 +120,7 @@ $c_password = '';
     }
 
 }
+*/
 
  ?>
                 <!DOCTYPE html>
