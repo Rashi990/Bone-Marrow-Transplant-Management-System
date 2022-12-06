@@ -8,8 +8,8 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Consultant Donor Page</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_donor.css?v=1">
+    <title>Consultant Patient Page</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
@@ -29,7 +29,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 
             <div class="logout">
               <abbr title="Logout">
-                <a class="hi" href="home.php">
+                <a class="hi" href="consultant_login.php">
                   <span class="material-symbols-rounded">
                     logout
                   </span>
@@ -89,63 +89,42 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
             </div>
           </div>
           <div class="rbottom">
-            <div class="session">
-                <a  class="box" href="../../public/html/consultant_donor_hla.html">
-                  <div class="box">
-                    <div class="image">
-                      <img class="image" src="../../public/images/hla.jpg" alt="Hla Reports">
-                    </div>
-                    <div class="text">
-                      <h3>View Donor HLA Reports</h3>
-                    </div>
+            <div id="session">
+              <a  class="box" href="consultant_donor_details.php">
+                <div class="links-container">
+                  <div class="image">
+                    <img class="image" src="../../public/images/pat.jpg" alt="Hla Reports">
                   </div>
-                </a>
-                <div class="description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <button type="button" name="button">Read More</button>
+                  <div class="text">
+                    <h3>View Donor Details</h3>
+                  </div>
                 </div>
+              </a>
             </div>
-            <div class="session">
-                <a class="box" href="consultant_donor_clinical.php">
-                  <div class="links-container">
-                    <div class="image">
-                      <img class="image" src="../../public/images/clinical.jpg" alt="Clinical Reports">
-                    </div>
-                    <div class="text">
-                      <h3>Manage Donor Clinical Reports</h3>
-                    </div>
+            <div id="session">
+              <a class="box" href="../../src/php/consultant_donor_clinical_manage.php">
+                <div class="links-container">
+                  <div class="image">
+                    <img class="image" src="../../public/images/clinical.jpg" alt="Clinical Reports">
                   </div>
-                </a>
-                <div class="description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <button type="button" name="button">Read More</button>
-                </div>
-              </div>
-            <div class="session">
-                <a class="box" href="../../public/html/consultant_donor_history.html">
-                  <div class="links-container">
-                    <div class="image">
-                      <img class="image" src="../../public/images/history.jpg" alt="">
-                    </div>
-                    <div class="text">
-                      <h3>View Donor History</h3>
-                    </div>
+                  <div class="text">
+                    <h3>Manage Donor Clinical Reports</h3>
                   </div>
-                </a>
-                <div class="description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <button type="button" name="button">Read More</button>
                 </div>
-              </div>
+              </a>
+            </div>
+            <div id="session">
+              <a class="box" href="consultant_calendar.php">
+                <div class="links-container">
+                  <div class="image">
+                    <img class="image" src="../../public/images/cal.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <h3>View Calender</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
