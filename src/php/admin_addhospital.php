@@ -4,7 +4,7 @@ session_start();
 include "../../config/connection.php";
 
 require_once("../../public/html/admin_addhospital.html"); 
-require("admin_footer.php");
+
 if(isset($_POST['submit']) )
 {
 
@@ -21,6 +21,8 @@ if(isset($_POST['submit']) )
   $email = validate($_POST['email']); 
   $tel = validate($_POST['tel']); 
   $address = validate($_POST['address']); 
+  $username = validate($_POST['username']); 
+  $password = validate($_POST['password']); 
 
   if (empty($hID))
   {
@@ -48,9 +50,23 @@ if(isset($_POST['submit']) )
     
     echo "<script type='text/javascript'>alert('Address is required!');</script>";
     exit();
-  }
+  
 
-  $sql="INSERT INTO `hospital`(hospital_id, hospital_name, email, telephone_no, address) VALUES ('$hID','$hname',' $email',' $tel','$address')";
+}if (empty($username))
+{
+  
+  echo "<script type='text/javascript'>alert('Username is required!');</script>";
+  exit();
+
+}if (empty($password))
+{
+  
+  echo "<script type='text/javascript'>alert('Password is required!');</script>";
+  exit();
+}
+
+
+  $sql="INSERT INTO `hospital`(hospital_id, hospital_name, email, telephone_no, address,user_name,password) VALUES ('$hID','$hname',' $email',' $tel','$address','$username','$password')";
   $result = mysqli_query($connection,$sql);
 
   if($result) {
