@@ -27,7 +27,7 @@ body{
 .head{
     
     margin-left: 20%;
-    margin-top: 6%;
+    margin-top: 2%;
     width: 100%;
     height: 100%;
     color: #030303;
@@ -40,31 +40,21 @@ body{
     font-size: 34px;
     line-height: 51px;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
+    text-transform:capitalize;
     
     
 
 
 }
 
-.head h4{
-    text-align: justify;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: #414142;
-    
 
-}
 
 .frms{
     margin-left: 30%;
     width: 100%;
 }
 
-.un{
+.flp{ 
     font-weight: 500;
     font-size:20px;
     line-height: 30px;
@@ -75,7 +65,7 @@ body{
     
 }
 
-.unm{
+.np{
     text-align: justify;
     padding-left: 2%;
     color: #636364;
@@ -85,42 +75,39 @@ body{
     word-spacing: 6px;
     box-sizing: border-box;
     width: 80%;
-    height: 55.04px;
+    height: 40px;
     border: 2px solid rgba(61, 3, 3, 0.25);
     border-radius: 10px;
     filter: drop-shadow(0px 3px 15px rgba(119, 118, 118, 0.25));
 
 }
 
-.remember{
-    margin-right: 30%;
-    text-align: justify;
-    color: #636364;
-    font-weight: 500;
-    
+.inpt p{
+
+position: absolute;
+left: 175px;
+top: 62%;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 22px;
+letter-spacing: 0.03em;
+
+color: rgba(89, 89, 89, 0.5);
+
+
 }
 
 
-.forgot{
-    margin-left: 5%;
-    font-weight: 500;
-    width: 100%;
-}
-.forgot a:hover{
-color:  rgb(105, 125, 69);}
 
-.forgot a{
-    color: rgb(44, 123, 226);
-}
 
-.login{
+.create{
     position: absolute;
     width: 50%;
     height:10%;
     left:45%;
-    top: 70%;
+    top: 81%;
     margin-bottom: 30%;
-    margin-top: 0%;
     border-radius: 10px;
     border: 2px  rgba(61, 3, 3, 0.25);
     background-color: #3f475b3c;
@@ -132,32 +119,17 @@ color:  rgb(105, 125, 69);}
 
 }
 
-.lg{
+.ct{
     color:#636364;
     font-size: 22.5px;
 
 }
 
-.login:hover{
-    background-color: rgb(203, 214, 183);
+.create:hover{
+    background-color: rgb(242, 202, 134);
 }
 
 
-.newacc{
-    position: absolute;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 21px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: #595959;
-    margin-left: 12.5%;
-    
-}
-
-.newacc a:hover{
-    color:  rgb(105, 125, 69);
-}
 .bttm{
    position: absolute;
    font-weight: 400;
@@ -166,24 +138,18 @@ color:  rgb(105, 125, 69);}
    text-align: center;
    color: #595959;
    margin-left: 21%;
+   top: 98%;
 
 
 }
 
 .right img{
     position: absolute;
-    margin-left: 60%;
-    width: 40%;
+    margin-left: 50%;
+    width: 50%;
     height: 100%;
 }
     
-@media(max-width:800px){
-    .container{
-        flex-direction: column;
-        align-items: center;
-        
-    }
-}
 /* CSS 
 .button-17 {
   align-items: center;
