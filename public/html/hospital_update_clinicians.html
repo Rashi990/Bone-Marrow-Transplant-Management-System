@@ -18,8 +18,6 @@
 
         <form action="../../src/php/hospital_update_clinicians.php" method="post" class="add_clinician_form">
 
-            <h1><label><?php echo $clinician_name;?></label></h1>
-
             <p>
                 <label for="">ID</label>
                 <input type="text" name="clinician_id">
@@ -27,12 +25,12 @@
 
             <div>
                 <label for="">Name</label>
-                <input type="text" name="clinician_name" value="<?php echo $clinician_name;?>" >
+                <input type="text" name="clinician_name" >
             </div>
 
             <p>
                 <label for="">Email</label>
-                <input type="email" name="email" value="<?php echo $c_email;?>">
+                <input type="email" name="email">
             </p>
 
             <p>
