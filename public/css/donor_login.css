@@ -177,6 +177,13 @@ color:  rgb(105, 125, 69);}
     height: 100%;
 }
     
+@media(max-width:800px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
 /* CSS 
 .button-17 {
   align-items: center;
