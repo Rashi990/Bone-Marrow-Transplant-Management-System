@@ -210,6 +210,19 @@ border: 1px solid var(--primary-blue);
     cursor: pointer;
     color:white;
 }
+.error{
+    background: #f2dede;
+    color: #a94442;
+    width: 85%;
+    height: 40px;
+    padding: 10px 0;
+    border-radius: 15px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  }
 
 @media screen and (min-width:900px) {
     .split-screen{

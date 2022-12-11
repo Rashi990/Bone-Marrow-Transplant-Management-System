@@ -21,7 +21,8 @@
 }
 
 
-.create-btn{
+a.create-btn{
+    text-align: center;
     background-color: #F7FFFF;
     display: block;
     width:200px;
@@ -39,8 +40,8 @@
     letter-spacing: 0.5px;
 
 }
-.create-btn:hover{
-    background: #2c4893;
+a.create-btn:hover{
+    background: #006296;
     cursor: pointer;
     color:white;
 }
@@ -60,14 +61,16 @@
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-align: center;
 
 }
 .update-btn:hover{
-    background: #2c4893;
+    background: #006296;
     cursor: pointer;
     color:white;
 }
 .delete-btn{
+    text-align: center;
     background-color: #F7FFFF;
     display: block;
     width:60px;

@@ -46,6 +46,7 @@ form input[type="tel"]
     border-radius: 12px;
 }
 .container{
+    justify-content: space-between;
     background: #D7F0ED;
     width: 50%;
     margin: auto; 
@@ -57,6 +58,7 @@ form input[type="tel"]
 }
 
 label{
+    
     display: block;
     margin-bottom: 0.5rem;
     font-size: 0.85rem;
