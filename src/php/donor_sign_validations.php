@@ -1,21 +1,4 @@
 <?php
-//--Functions to validate inputs--
-
-
-//Check if register inputs are empty
-
-function inputsEmptyRegister($fname, $lname, $email, $mobile, $pass ,$re_pass ){
-    $value = true;
-    if(empty($fname)||empty($lname)||empty($email)||empty($mobile)||empty($pass)||empty($re_pass)){
-        $value = true;
-
-    }
-    else{
-        $value = false;
-    }
-    return $value;
-}
-
 
 // Check if login inputs are empty
 function inputsEmptyLogin($email, $pass){
@@ -26,6 +9,37 @@ function inputsEmptyLogin($email, $pass){
     }
     return $value;
 }
+//Check if login username is invalid
+
+function usernameInvalid($username){
+    
+    if(!preg_match("/^.{4,}$/",$username)){
+        $value = true;
+    }
+    else{
+        $value = false;
+    }
+    return $value;
+}
+
+
+//--Functions to validate inputs--
+
+
+//Check if register inputs are empty
+
+function inputsEmptyRegister($fname, $lname, $email, $mobile, $pass ,$re_pass ){
+    
+    if(empty($fname)||empty($lname)||empty($email)||empty($mobile)||empty($pass)||empty($re_pass)){
+        $value = true;
+
+    }
+    else{
+        $value = false;
+    }
+    return $value;
+}
+
 
 
 //Check if names are invalid
@@ -74,7 +88,7 @@ function mobileInvalid($mobile){
 //Check if password is invalid
 function passwordInvalid($pass){
   
-    if(!preg_match("/^.{5,}$/",$pass)){
+    if(!preg_match("/^.{2,}$/",$pass)){
         $value = true;
     }
     else{
@@ -105,7 +119,7 @@ function emailOrMobileAvailable($connection, $email, $mobile){
     $stmt = mysqli_stmt_init($connection);
     //Bind the statement with the query and check errors
     if(mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ./donor_index.php?err=failedstmt");
+        header("location: donor_signup_index.php?err=failedstmt");
         exit();
     } 
     else {
