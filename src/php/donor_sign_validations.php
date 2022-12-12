@@ -11,9 +11,9 @@ function inputsEmptyLogin($email, $pass){
 }
 //Check if login username is invalid
 
-function usernameInvalid($username){
+function usernameInvalid($user_name){
     
-    if(!preg_match("/^.{4,}$/",$username)){
+    if(!preg_match("/^.{4,}$/",$user_name)){
         $value = true;
     }
     else{
