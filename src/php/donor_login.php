@@ -1,8 +1,9 @@
 <?php
     // --Add dbh file--
-    require_once "./config/connection.php";
+     require_once('../../config/connection.php');
+
     // --Add validation file--
-    require_once "./donor_sign_validations.php";
+    require_once "../../donor_sign_validations.php";
     
     // If user clicks the login button
     if(isset($_POST["login-btn"])){
