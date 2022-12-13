@@ -45,7 +45,7 @@ function inputsEmptyRegister($fname, $lname, $email, $pass ,$re_pass){
 //Check if names are invalid
 function nameInvalid($fname){
 
-    if(!preg_match("/^[a-zA-Z]+$/",$fname)){ 
+    if(!preg_match("/^[a-zA-Z\s]+$/",$fname)){ 
         $value = true;
 
     }
@@ -119,7 +119,7 @@ function emailAvailable($connection, $email){
     $stmt = mysqli_stmt_init($connection);
     //Bind the statement with the query and check errors
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: donor_signup_index.php?err=failedstmt");
+        header("location: donor_signup_index.php?error=failedstmt");
         exit();
     } 
     else {

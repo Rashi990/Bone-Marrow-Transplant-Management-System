@@ -26,12 +26,16 @@
         <br>
         <br>
        
-
             <!-- Form Section-->
             <div class="frms">
 
                 <!--Login In form-->
                 <form action="../../src/php/donor_login.php" class="logfrm" method="post">
+                <?php if (isset($_GET['error'])) {?>
+            <p class="error"><?php echo ($_GET['error']); ?></p>
+            <?php } ?>
+       
+
 
                  <div class="inpt">
  

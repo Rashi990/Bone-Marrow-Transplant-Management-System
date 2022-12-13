@@ -14,13 +14,15 @@
 
         // Input validation
         if(inputsEmptyLogin($user_name, $pass)){
-            header("location: donor_login_index.php?err=empty_inputs");
+            
+            header("location: donor_login_index.php?error=Please enter Username and Password");
+        exit();
         }
         else if(usernameInvalid($user_name)){
-            header("location: donor_login_index.php?err=invalid_username");
+            header("location: donor_login_index.php?error=Invalid Username");
         }
         else if(passwordInvalid($pass)){
-            header("location: donor_login_index.php?err=invalid_password");
+            header("location: donor_login_index.php?error=Invalid Password");
         }
         else{
             // If all inputs are error free
@@ -41,7 +43,7 @@ function loginUser($connection, $user_name, $pass)
     $stmt = mysqli_stmt_init($connection);
     // Bind the statement with the query and check errors
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: donor_login_index.php?err=failedstmt");
+        header("location: donor_login_index.php?error=failedstmt");
     } else {
         // Bind data with the statement
         mysqli_stmt_bind_param($stmt, "s", $user_name);
@@ -61,11 +63,11 @@ function loginUser($connection, $user_name, $pass)
                 header("Location: donor_home.php");
                 exit();
             } else {
-                header("location: donor_login_index.php?err=loginfailedpasswrd");
+                header("location: donor_login_index.php?error=Incorrect Password");
                 exit();
             }
         } else {
-            header("location: donor_login_index.php?err=loginfailedusername");
+            header("location: donor_login_index.php?error=Incorrect Username");
             exit();
         }
     }

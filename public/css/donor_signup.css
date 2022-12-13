@@ -53,6 +53,20 @@ body{
     margin-left: 30%;
     width: 100%;
 }
+.error{
+    background: #f2dede;
+    color: #a94442;
+    width: 50%;
+    height: 40px;
+    padding: 10px 0;
+    border-radius: 15px;
+    margin-left:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+
+}
 
 .flp{ 
     font-weight: 500;
