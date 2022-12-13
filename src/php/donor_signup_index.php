@@ -37,20 +37,20 @@
                 <div class="inpt">
     
                     <label class ="flp" >
-                        First Name
+                        Full Name
                     </label>
                         <br>
     
-                            <input type="text" placeholder="Enter your First Name here" name="fname" class="np">
+                            <input type="text" placeholder="Enter your Full Name here" name="fname" class="np">
                         <br>
                         <br>
 
                     <label class ="flp" >
-                            Last Name
+                            Username
                     </label>
                         <br>
         
-                            <input type="text" placeholder="Enter your Last Name here" name="lname" class="np">
+                            <input type="text" placeholder="Enter a Username here" name="username" class="np">
                           
                         <br>
                         <br>

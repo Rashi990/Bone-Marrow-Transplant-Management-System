@@ -11,9 +11,8 @@ require_once "../../src/php/donor_sign_validations.php";
 if (isset($_POST["create-btn"])) {
     //Get form input data
     $fname = $_POST["fname"];
-    $lname = $_POST["lname"];
+    $user_name = $_POST["username"];
     $email = $_POST["email"];
-    $mobile = $_POST["mobile"];
     $pass = $_POST["pass"];
     $re_pass = $_POST["re_pass"];
 
@@ -22,23 +21,31 @@ if (isset($_POST["create-btn"])) {
 
 
     //Input validation
-    if (inputsEmptyRegister($fname, $lname, $email, $mobile,$pass, $re_pass)) {
+    if (inputsEmptyRegister($fname,$user_name,$email,$pass,$re_pass)) {
         header("location:donor_signup_index.php?err=empty_inputs");
-    } else if (nameInvalid($fname, $lname)) {
+    } else if (nameInvalid($fname)) {
         header("location: donor_signup_index.php?err=invalid_name");
-    } else if (emailInvalid($email)) {
+    } else if(usernameInvalid($user_name)){
+        header("location: donor_signup_index.php?err=username_already_exists");
+    }
+    
+    
+    else if (emailInvalid($email)) {
         header("location: donor_signup_index.php?err=invalid_email");
-    } else if (mobileInvalid($mobile)) {
+    }
+    /* else if (mobileInvalid($mobile)) {
         header("location: donor_signup_index.php?err=invalid_mobile");
-    } else if (passwordInvalid($pass)) {
+    }*/ else if (passwordInvalid($pass)) {
         header("location: donor_signup_index.php?err=invalid_password");
     } else if (passNotMatch($pass, $re_pass)) {
         header("location: donor_signup_index.php?err=different_password");
-    } else if (emailOrMobileAvailable($connection, $email, $mobile)) {
-        header("location: donor_signup_index.php?err=available_emailormobile");
-    } else {
+    } else if (emailAvailable($connection, $email)) {
+        header("location: donor_signup_index.php?err=available_email");
+    }
+     else {
         //If all inputs are error free
-        registerNewUser($connection, $fname, $lname, $email, $mobile, $pass, $re_pass);
+       registerNewUser($connection, $fname, $user_name, $email,$pass);
+        
     }
 }
 else{
@@ -48,9 +55,9 @@ else{
 }
 
 //Function for register a new user
-function registerNewUser($connection, $fname, $lname, $email,$mobile, $pass, $re_pass){
+function registerNewUser($connection, $fname, $user_name, $email,$pass){
     //Query
-    $sql = "INSERT INTO donor (first_name,last_name,email,telephone_no,password) VALUES (?,?,?,?,?); ";
+    $sql = "INSERT INTO donor (full_name,user_name,email,password) VALUES (?,?,?,?); ";
        //Initialize the prepared statement 
        $stmt = mysqli_stmt_init($connection);
        //Bind the statement with the query and check errors
@@ -60,14 +67,15 @@ function registerNewUser($connection, $fname, $lname, $email,$mobile, $pass, $re
        } 
        else {
            //Bind data with the statement
-           mysqli_stmt_bind_param($stmt, "sssis", $fname,$lname,$email, $mobile,$pass);
+           mysqli_stmt_bind_param($stmt, "ssss", $fname,$user_name,$email,$pass);
            //Execute the statement
            mysqli_stmt_execute($stmt);
            //close the statement
         mysqli_stmt_close($stmt);
-        header("location: donor_signup_index.php?err=noerrors");
+        header("location: donor_signup_index.php?successfully added");
         
     }
+
 
 }
 
