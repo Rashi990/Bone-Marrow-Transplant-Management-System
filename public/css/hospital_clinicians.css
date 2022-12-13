@@ -1,26 +1,90 @@
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #F7FFFF;
 }
 
-.clinician_list{
+.clinicians{
     position: absolute;
-    margin-top: 80px;
-    margin-left: 1300px;
-    width: 150px;
-    height: 20px;
-    background-color: #1a4ec6 ;
-    color: #ededed;
-    text-decoration: none;
-    text-align: center;
+    margin-left: 240px;
+    margin-top: 60px;
+    background-color: #dfdfdf;
     padding: 10px;
-    border: 1px solid #0c0d0d;
+    width: 80%;
+    height: 80vh;
+    border: none;
     border-radius: 20px;
-    font-weight: bold;
+}
+
+.clinicians h1{
+    margin: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
+}
+
+
+table.clinician_list{
+    margin: 20px;
+    padding: 10px;
+    width: 96%;
+    border-collapse: collapse;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.clinicians .new{
+    background-color: #14208f;
+    color: #eff2f3;
+    margin-right: 20px;
+    padding: 10px 40px;
+    float: right;
+    border-radius: 10px;
+    text-decoration: none;
     transition: 0.5s;
 }
 
-.clinician_list:hover{
-    background-color: #180848;
-    color: aqua;
+.clinicians .new:hover{
+    background-color: #0b1034;
+    color: #5ccbbe;
 }
+
+table.clinician_list th{
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+    background-color: #186868;
+    color: #ebe7e7;
+}
+
+table.clinician_list td{
+    padding: 10px;
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+}
+
+table.clinician_list tr:nth-child(even){
+    background-color: #9bcdc8;
+}
+
+table.clinician_list td a{
+    width: 150px;
+    height: 40px;
+    padding: 5px 10px;
+    background: #eff2f3;
+    background-color: #10992c;
+    color: #0d0c0c;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+table.clinician_list td a:hover{
+    background-color: #0e5f1a;
+    color: #bde4e0;
+}
+
+

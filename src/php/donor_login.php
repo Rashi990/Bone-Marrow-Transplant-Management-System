@@ -1,3 +1,4 @@
+
 <?php
     // --Add dbh file--
     require_once "../../config/connection.php";
@@ -70,6 +71,7 @@ function loginUser($connection, $user_name, $pass)
     }
     // Close the statement
     mysqli_stmt_close($stmt);
-
-
 }
+
+
+
