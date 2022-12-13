@@ -1,97 +1,79 @@
+
 <?php
     // --Add dbh file--
-     require_once('../../config/connection.php');
-
+    require_once "../../config/connection.php";
     // --Add validation file--
-    require_once "../../donor_sign_validations.php";
+    require_once "../php/donor_sign_validations.php";
     
     // If user clicks the login button
     if(isset($_POST["login-btn"])){
         // Get form input data
-        $email = $_POST["email"];
+        $user_name = $_POST["username"];
         $pass = $_POST["pass"];
-        $remember = $_POST["re-check"];
+       // $remember = $_POST["re-check"];
 
         // Input validation
-        if(inputsEmptyLogin($email, $pass)){
-            header("location: ../index.php?err=empty_inputs");
+        if(inputsEmptyLogin($user_name, $pass)){
+            
+            header("location: donor_login_index.php?error=Please enter Username and Password");
+        exit();
         }
-        else if(emailInvalid($email)){
-            header("location: ../index.php?err=invalid_email");
+        else if(usernameInvalid($user_name)){
+            header("location: donor_login_index.php?error=Invalid Username");
         }
         else if(passwordInvalid($pass)){
-            header("location: ../index.php?err=invalid_password");
+            header("location: donor_login_index.php?error=Invalid Password");
         }
         else{
             // If all inputs are error free
-            loginUser($conn, $email, $pass, $remember);
+            loginUser($connection, $user_name, $pass);
         }
     }
     else{
-        header("location: ../index.php");
+        header("location: donor_login_index.php");
         exit();
     }
 
     // Function for login
-    function loginUser($connection, $email, $pass, $remember){
-        // Query
-        $sql = "SELECT * FROM users WHERE email = ?;";
-        // Initialize the prepared statement
-        $stmt = mysqli_stmt_init($connection);
-        // Bind the statement with the query and check errors
-        if(!mysqli_stmt_prepare($stmt, $sql)){
-            header("location: ../index.php?err=failedstmt");
-        }
-        else{
-            // Bind data with the statement
-            mysqli_stmt_bind_param($stmt, "s", $email);
-            // Execute the statement
-            mysqli_stmt_execute($stmt);
-            // Save results if available
-            $data = mysqli_stmt_get_result($stmt);
-            // Check if there is at least one result
-            if($row = mysqli_fetch_assoc($data)){
-                //*** */ Get encrypted password
-                //$passHashed = $row["password"];
-                // Verify password
-                $isPassOk = $pass;
-                if($isPassOk){
-                    // Setup session variables
-                    session_start();
-                    $_SESSION["user_email"] = $row["email"];
-                    $_SESSION["user_fname"] = $row["fname"];
-                    $_SESSION["user_lname"] = $row["lname"];
-                    $_SESSION["user_mobile"] = $row["mobile"];
+function loginUser($connection, $user_name, $pass)
+{
+    // Query
+    $sql = "SELECT * FROM donor WHERE user_name = ?;";
+    // Initialize the prepared statement
+    $stmt = mysqli_stmt_init($connection);
+    // Bind the statement with the query and check errors
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: donor_login_index.php?error=failedstmt");
+    } else {
+        // Bind data with the statement
+        mysqli_stmt_bind_param($stmt, "s", $user_name);
+        // Execute the statement
+        mysqli_stmt_execute($stmt);
+        // Save results if available
+        $data = mysqli_stmt_get_result($stmt);
+        // Check if there is at least one result
+        if ($row = mysqli_fetch_assoc($data)) {
 
-                    // If remember me checked
-                    if(isset($remember)){
-                        // Create cookies for email and password
-                        setcookie("emailcookie", $email, time() + (3600 * 24 * 7), "/");
-                        setcookie("passwordcookie", $pass, time() + (3600 * 24 * 7), "/");
-                    }
-                    else{
-                        // Destroy cookies value
-                        if(isset($_COOKIE["emailcookie"])){
-                            setcookie("emailcookie", "", time() - (3600 * 24 * 7), "/");
-                        }
-                        if(isset($_COOKIE["passwordcookie"])){
-                            setcookie("passwordcookie", "", time() - (3600 * 24 * 7), "/");
-                        }
-                    }
 
-                    header("location: ../profile.php");
-                }
-                else{
-                    header("location: ../index.php?err=loginfailedpass");
-                    exit();
-                }
-            }
-            else{
-                header("location: ../index.php?err=loginfailedemail");
+            if ($row['user_name'] === $user_name && $row['password'] === $pass) {
+                session_start();
+                $_SESSION['user_name'] = $row['user_name'];
+                $_SESSION['donor_id'] = $row['donor_id'];
+                $_SESSION['first_name'] = $row['first_name'];
+                header("Location: donor_home.php");
+                exit();
+            } else {
+                header("location: donor_login_index.php?error=Incorrect Password");
                 exit();
             }
+        } else {
+            header("location: donor_login_index.php?error=Incorrect Username");
+            exit();
         }
-        // Close the statement
-        mysqli_stmt_close($stmt);
     }
-?>
+    // Close the statement
+    mysqli_stmt_close($stmt);
+}
+
+
+

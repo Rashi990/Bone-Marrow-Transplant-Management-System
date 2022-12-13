@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login As a Donor</title>
-    <link rel="stylesheet" href="../css/donor_login.css">
+    <link rel="stylesheet" href="../../public/css/donor_login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
 </head>
@@ -26,12 +26,16 @@
         <br>
         <br>
        
-
             <!-- Form Section-->
             <div class="frms">
 
                 <!--Login In form-->
                 <form action="../../src/php/donor_login.php" class="logfrm" method="post">
+                <?php if (isset($_GET['error'])) {?>
+            <p class="error"><?php echo ($_GET['error']); ?></p>
+            <?php } ?>
+       
+
 
                  <div class="inpt">
  
@@ -40,7 +44,7 @@
                   </label>
                     <br>
 
-                        <input type="text" placeholder="Enter your Username here" name="username" class="unm"required>
+                        <input type="text" placeholder="Enter your Username here" name="username" class="unm" required>
                   
 
                       <br>
@@ -81,7 +85,7 @@
                       <br>
                       <br>
                       
-                        <a href="index.html"> <button class="login" name="login-btn" id="login-btn">
+                        <button class="login" name="login-btn" id="login-btn">
                           <span class="lg">Log In</span>
                       </button></a>
                     
@@ -117,7 +121,7 @@
 
     </div>
     <div class="right">
-      <img src="../images/donor_login.png" alt="you give a smile for someone">
+      <img src="../../public/images/donor_login.png" alt="you give a smile for someone">
     </div>
 </body>
 

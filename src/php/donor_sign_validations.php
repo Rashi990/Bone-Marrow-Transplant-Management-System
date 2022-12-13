@@ -1,21 +1,4 @@
 <?php
-//--Functions to validate inputs--
-
-
-//Check if register inputs are empty
-
-function inputsEmptyRegister($fname, $lname, $email, $mobile, $pass ,$re_pass ){
-    $value = true;
-    if(empty($fname)||empty($lname)||empty($email)||empty($mobile)||empty($pass)||empty($re_pass)){
-        $value = true;
-
-    }
-    else{
-        $value = false;
-    }
-    return $value;
-}
-
 
 // Check if login inputs are empty
 function inputsEmptyLogin($email, $pass){
@@ -26,19 +9,50 @@ function inputsEmptyLogin($email, $pass){
     }
     return $value;
 }
+//Check if login username is invalid
+
+function usernameInvalid($user_name){
+    
+    if(!preg_match("/^.{4,}$/",$user_name)){
+        $value = true;
+    }
+    else{
+        $value = false;
+    }
+    return $value;
+}
+
+
+//--Functions to validate inputs--
+
+
+//Check if register inputs are empty
+
+function inputsEmptyRegister($fname, $lname, $email, $pass ,$re_pass){
+    
+    if(empty($fname)||empty($lname)||empty($email)||empty($pass)||empty($re_pass)){
+        $value = true;
+
+    }
+    else{
+        $value = false;
+    }
+    return $value;
+}
+
 
 
 //Check if names are invalid
-function nameInvalid($fname, $lname){
+function nameInvalid($fname){
 
-    if(!preg_match("/^[a-zA-Z]+$/",$fname)){ 
+    if(!preg_match("/^[a-zA-Z\s]+$/",$fname)){ 
         $value = true;
 
     }
-    elseif(!preg_match("/^[a-zA-Z]+$/",$lname)){
+   /* elseif(!preg_match("/^[a-zA-Z]+$/",$lname)){
     
         $value = true;
-    }
+    }*/
     else{
         $value = false;
     }
@@ -60,7 +74,7 @@ function emailInvalid($email){
 
 
 //Check if mobile is invalid
-function mobileInvalid($mobile){
+/*function mobileInvalid($mobile){
    
     if(!preg_match("/^[0][\d]{9}$/",$mobile)){
         $value = true;
@@ -69,12 +83,12 @@ function mobileInvalid($mobile){
         $value = false;
     }
     return $value;
-}
+}*/
 
 //Check if password is invalid
 function passwordInvalid($pass){
   
-    if(!preg_match("/^.{5,}$/",$pass)){
+    if(!preg_match("/^.{2,}$/",$pass)){
         $value = true;
     }
     else{
@@ -97,20 +111,20 @@ function passNotMatch($pass, $re_pass){
 
 
 //Check if email or mobile available in the system
-function emailOrMobileAvailable($connection, $email, $mobile){
+function emailAvailable($connection, $email){
    
     //Query
-    $sql = "SELECT * FROM donor WHERE email =? OR telephone_no =?;";
+    $sql = "SELECT * FROM donor WHERE email =? ;";
     //Initialize the prepared statement 
     $stmt = mysqli_stmt_init($connection);
     //Bind the statement with the query and check errors
-    if(mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ./donor_index.php?err=failedstmt");
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+        header("location: donor_signup_index.php?error=failedstmt");
         exit();
     } 
     else {
         //Bind data with the statement
-        mysqli_stmt_bind_param($stmt, "si", $email, $mobile);
+        mysqli_stmt_bind_param($stmt, "s", $email);
         //Execute the statement
         mysqli_stmt_execute($stmt);
         //Save results if available
