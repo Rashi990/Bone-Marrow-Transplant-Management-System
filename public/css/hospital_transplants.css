@@ -7,7 +7,7 @@ body{
 .board{
     position: absolute;
     margin-left: 240px;
-    margin-top: 50px;
+    margin-top: 60px;
     width: 80%;
     background-color: #ebe7e7;
     border-radius: 20px;
@@ -21,7 +21,7 @@ body{
     border-radius: 20px;
     padding: 10px;
     margin: 20px;
-    width: 45%;
+    width: 70%;
 }
 
 .btn{
@@ -29,7 +29,7 @@ body{
     padding-bottom: 30px;
 }
 
-.goto-list{
+.goto-transplant-list{
     float: right;
     text-decoration: none;
     font-size: 16px;
@@ -42,10 +42,11 @@ body{
     
 }
 
-.goto-list:hover{
+.goto-transplant-list:hover{
     background-color: #061535;
     color: #bbf4f8;
 }
+
 
 .count{
     display: flex;
@@ -56,15 +57,15 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #bde4e0;
+    color: #006296;
+    font-weight: bold;
+    text-align: center;
+    line-height: 10px;
     border-radius: 20px;
     padding: 20px;
     margin: 5px 20px;
     width: 30%;
     height: 50px;
-    color: #006296;
-    font-weight: bold;
-    text-align: center;
-    line-height: 10px;
     cursor: pointer;
 }
 
@@ -79,24 +80,35 @@ body{
     margin: 20px;
     width: 85%;
     height: 300px;
+    cursor: pointer;
     color: #006296;
     font-weight: bold;
     text-align: center;
-    cursor: pointer;
 }
 
 .chart:hover{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
-.match{
+/*
+.sec{
+    background-color: #a7c7c4;
+    border-radius: 20px;
+    padding: 30px 20px;
     margin: 20px;
-    padding: 30px;
+    width: 30%;
+}
+*/
+
+.transplant{
+    margin: 20px;
+    padding: 20px;
     background-color: #c1dada;
     border-radius: 20px;
+    width: 80%;
 }
 
-.match h3{
+.transplant h3{
     font-size: 20px;
     font-weight: bold;
     color: #006296;
@@ -182,6 +194,3 @@ table.list .delete:hover{
     background-color: #540d13;
     color: #bde4e0;
 }
-
-
-

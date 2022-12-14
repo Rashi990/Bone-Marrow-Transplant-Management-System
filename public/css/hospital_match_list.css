@@ -55,7 +55,7 @@ table.list td{
 table.list tr:nth-child(even){
     background-color: #9bcdc8;
 }
-
+/*
 table.list .new{
     margin: 0px 50px;
     text-decoration: none;
@@ -71,8 +71,9 @@ table.list .new:hover{
     background-color: #141616;
     color: #bde4e0;
 }
+*/
 
-table.list .update{
+table.list .view{
     text-decoration: none;
     background-color: #08c84b;
     color: #0d0c0c;
@@ -82,7 +83,7 @@ table.list .update{
     transition: 0.5s;
 }
 
-table.list .update:hover{
+table.list .view:hover{
     background-color: #0e5f1a;
     color: #bde4e0;
 }
