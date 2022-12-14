@@ -1,8 +1,8 @@
-<?php require_once('../../config/connection.php'); ?>
-<?php 
+<?php require_once('../../config/connection.php'); 
+
 session_start();
 session_unset();
 session_destroy();
-header("Location:hospital_login.php");
+header('Location: hospital_login.php');
 
 ?>
