@@ -4,11 +4,11 @@ body{
     background-color: #F7FFFF;
 }
 
-.session-list{
+.transplant-list{
     position: absolute;
     margin-left: 240px;
     margin-top: 60px;
-    background-color: #ebe7e7;
+    background-color: #dfdfdf;
     padding: 10px;
     width: 80%;
     height: 80vh;
@@ -16,7 +16,7 @@ body{
     border-radius: 20px;
 }
 
-.session-list h1{
+.transplant-list h1{
     color: #006296;
     font-size: 30px;
     font-weight: bold;
@@ -44,6 +44,7 @@ table.list th{
 }
 
 table.list td{
+    margin-top: 10px;
     padding: 10px;
     font-size: 16px;
     font-weight: bold;
@@ -56,7 +57,7 @@ table.list tr:nth-child(even){
 }
 
 table.list .new{
-    margin: 0px 20px;
+    margin: 0px 50px;
     text-decoration: none;
     background-color: #14208f;
     color: #ebe7e7;
@@ -71,7 +72,7 @@ table.list .new:hover{
     color: #bde4e0;
 }
 
-table.list .update{
+table.list .view{
     text-decoration: none;
     background-color: #08c84b;
     color: #0d0c0c;
@@ -81,7 +82,7 @@ table.list .update{
     transition: 0.5s;
 }
 
-table.list .update:hover{
+table.list .view:hover{
     background-color: #0e5f1a;
     color: #bde4e0;
 }
