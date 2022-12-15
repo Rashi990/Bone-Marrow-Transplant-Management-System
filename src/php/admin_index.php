@@ -38,13 +38,13 @@
                             <i class='bx bx-hide icon'></i>
                             <i class='bx bxs-show showhidepw'></i>
                         </div>
-                        <div class="input-container cta">
+                        <!-- <div class="input-container cta">
                             <label class="checkbox-container">
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                                 Remember me
                             </label>
-                        </div>  
+                        </div>   -->
                     </div>
                    
                     <button class="signup-btn" type="submit"> Sign Up</button>
@@ -52,7 +52,7 @@
                     <br>
                     <section class="copy legal"> 
                         <p><span class="small"> 
-                            Don"t have account <a href="#">Create account</a>
+                            Don"t have account <a href="../../src/php/admin_signup.php">Create account</a>
                         </span></p>
                     </section>
                 </form>
