@@ -1,5 +1,5 @@
 <?php
-require_once('admin_dashboard.php');
+require_once('admin_sidebar.php');
 ?>
 <?php
 require_once('../../config/connection.php');
@@ -18,11 +18,39 @@ if (!(isset($_SESSION['user_name'])  ))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewhospital.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewhospital.css">
 </head>
 <body>
+    <!-- header -->
+    <div class="main-content">
+        <header>
+            <h2>
+               View Hospitals
+            </h2>
+            <div class="search-wrapper">
+                <span class='bx bx-search'></span>
+                <input type="search" placeholder="search here">
+            </div>
     
+           
     
+            <div class="box-icon">
+                <div class="item">
+                    <i class='bx bxs-bell'></i>
+                </div>
+                <div class="item">
+                    <i class='bx bxs-conversation'></i>
+                </div>
+                
+            </div>
+           
+            
+            <div class="user-wrapper">
+                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+                <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
+            </div>
+        </header>
+    </div>
 <div class="right">
 
     <a href="admin_addhospital.php" class="create-btn"> + Add Hospital

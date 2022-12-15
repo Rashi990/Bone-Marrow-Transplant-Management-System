@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/css/admin_dashboard.css?v=1">
+    <link rel="stylesheet" href="../../public/css/admin_dashboard.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,6 +70,117 @@
     
     <!-- home section -->
 
+<div class="main-content">
+        <header>
+            <h2>
+                Dashboard
+            </h2>
+            <div class="search-wrapper">
+                <span class='bx bx-search'></span>
+                <input type="search" placeholder="search here">
+            </div>
+    
+           
+    
+            <div class="box-icon">
+                <div class="item">
+                    <i class='bx bxs-bell'></i>
+                </div>
+                <div class="item">
+                    <i class='bx bxs-conversation'></i>
+                </div>
+                
+            </div>
+           
+            
+            <div class="user-wrapper">
+                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+                <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
+            </div>
+        </header>
+    <main>
+        <div class="calendar">
+            <ul class="weeks">
+              <li>Sun</li>
+              <li>Mon</li>
+              <li>Tue</li>
+              <li>Wed</li>
+              <li>Thu</li>
+              <li>Fri</li>
+              <li>Sat</li>
+            </ul>
+            <ul class="days">
+            <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>10</li>
+              <li>11</li>
+              <li>12</li>
+              <li>13</li>
+              <li>14</li>
+              <li>15</li>
+              <li>16</li>
+              <li>17</li>
+              <li>18</li>
+              <li>19</li>
+              <li>20</li>
+              <li>21</li>
+              <li>22</li>
+              <li>22</li>
+              <li>23</li>
+              <li>24</li>
+              <li>25</li>
+              <li>26</li>
+              <li>27</li>
+              <li>28</li>
+              <li>29</li>
+              <li>30</li>
+              <li>31</li>
+            </ul>
+          </div>
+        <div class="cards">
+            <div class="card-single">
+                <div class="card-detail">
+                    <h1>54</h1>
+                    <span> Total Donors</span>
+                </div>
+                    <div>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    
+            </div>
+            <div class="card-single">
+                <div class="card-detail">
+                    <h1>25</h1>
+                    <span> Total hospital</span> 
+                </div>
+                <div> 
+                    <i class='bx bx-plus-medical'></i>
+                </div>
 
+            </div>
+            <div class="card-single">
+                <div class="card-detail">
+                    <h1>2</h1>
+                    <span> Request</span>
+                    </div>
+                    <div>
+                        <i class='bx bx-list-ul'></i>
+                    </div>
+                   
+                    
+                </div>
+
+            </div>
+        </div>
+        
+    </main>
+</div>   
 </body>
 </html>
