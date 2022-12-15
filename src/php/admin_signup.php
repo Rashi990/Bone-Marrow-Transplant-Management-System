@@ -16,9 +16,9 @@
                 <section class="copy">
                 <h2>SIGN UP</h2>
                 </section>
-                <br>
-                <br>
+                
                 <div class="login-container"> 
+                    <br>
                 <?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
      	<?php } ?>
