@@ -161,5 +161,34 @@ main{
 .card-single i:last-child{
    color:#006296;
 }
+.cards-2{
+   display: table;
+   grid-template-columns:repeat(4,1fr);
+   grid-gap:2.5rem ;
+   margin-top: 1rem;
+   color: #006296;
+}
+.card-single-2{
+   display: table;
+   justify-content: space-between;
+   background: #fff;
+   padding: 2rem;
+   border: 1px;
+   border-radius: 20px;
+}
+.title {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: 15px 10px;
+   border-bottom: 2px solid #999;
+}
+table {
+   padding: 10px;
+}
 
-
+th,
+td {
+   text-align: left;
+   padding: 8px;
+}

@@ -19,7 +19,7 @@ if (!(isset($_SESSION['user_name'])))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Donor</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewhospital.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewdonor.css">
 </head>
 <body>
 <!-- header -->
@@ -56,9 +56,7 @@ if (!(isset($_SESSION['user_name'])))
 <div class="right">
     <a href="admin_adddonor.php" class="create-btn"> + Add Donor </a>
 
-    
-
-  <table class="table">
+  <table>
         <thead>
         <tr>
         <th class="table-head">

@@ -1,14 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+:root{
+    font-size: 100%;
+    background: #F7FFFF;
+    font-size: 16px;
+    line-height: 1.5;
 }
 @media screen and (min-width:900px) {
     body{
-        min-height: 100vh;
-        width: 100%;
-        background: #F7FFFF;
+        padding: 0;
+        margin:0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+    
     }
 }
 .main-content{
@@ -68,4 +71,121 @@
  }
 .box-icon .item{
    padding-right: 50px;
+}
+.right{
+    display:table-cell;
+    padding-left: 300px;
+}
+
+
+a.create-btn{
+    text-align: center;
+    background-color: #F7FFFF;
+    display: block;
+    width:200px;
+    color:#006296;
+    font-weight: 700;
+    border:2px solid #006296;
+    margin: 2rem 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+   
+
+}
+a.create-btn:hover{
+    background: #006296;
+    cursor: pointer;
+    color:white;
+}
+.update-btn{
+    background-color: #F7FFFF;
+    display: block;
+    width:60px;
+    color:#006296;
+    font-weight: 700;
+    border:2px solid #006296;
+    margin: 2rem 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+}
+.update-btn:hover{
+    background: #006296;
+    cursor: pointer;
+    color:white;
+}
+.delete-btn{
+    background-color: #F7FFFF;
+    display: block;
+    width:60px;
+    color:#FF0404;
+    font-weight: 700;
+    border:2px solid #FF0404;
+    margin: 2rem 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+}
+.delete-btn:hover{
+    background: #FF0404;
+    cursor: pointer;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color: #006296;
+}
+
+table{
+    border-collapse: collapse;
+    color: #006296;
+    margin: 25px 0;
+    font-size: 0.9em;
+    width:fit-content;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px 20px;
+
+}
+table th{
+    padding: 10px 20px;
+}
+table td{
+    display:table-cell;
+    padding: 2px 3px;
+}
+
+table tbody tr {
+    border-bottom: 0.5px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
 }
