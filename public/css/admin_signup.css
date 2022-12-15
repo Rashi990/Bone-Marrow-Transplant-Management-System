@@ -128,14 +128,19 @@ label{
     cursor: pointer;
     color:white;
 }
-.error {
-   background: #F2DEDE;
-   color: #A94442;
-   padding: 10px;
-   width: 95%;
-   border-radius: 5px;
-   margin: 20px auto;
-}
+.error{
+    background: #f2dede;
+    color: #a94442;
+    width: 75%;
+    height: 3px;
+    padding: 10px 0;
+    border-radius: 15px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
 
 .success {
    background: #D4EDDA;

@@ -24,9 +24,11 @@
                         <h2>Welcome Back</h2>
                         <p>Welcome back! Please enter your details.</p>
                     </section> 
-                    <div class="login-container"> 
+                    <div class="login-container">
+
                     <?php if (isset($_GET['error'])) {?>
-            <p class="error"><?php echo ($_GET['error']); ?></p>
+            <p class="error">
+                <?php echo ($_GET['error']); ?></p>
             <?php } ?>
                         <div class="input-container name">
                             <label for="fname">Username</label>
