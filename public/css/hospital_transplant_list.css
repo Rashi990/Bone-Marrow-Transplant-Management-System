@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.transplant-list{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 60px;
+    background-color: #dfdfdf;
+    padding: 10px;
+    width: 80%;
+    height: 80vh;
+    border: none;
+    border-radius: 20px;
+}
+
+.transplant-list h1{
+    color: #006296;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+table.list{
+    margin: 20px;
+    padding: 10px;
+    width: 96%;
+    border-collapse: collapse;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+table.list th{
+    background-color: #186868;
+    color: #ebe7e7;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    height: 25px;
+}
+
+table.list td{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+    height: 25px;
+}
+
+table.list tr:nth-child(even){
+    background-color: #9bcdc8;
+}
+
+table.list .new{
+    margin: 0px 50px;
+    text-decoration: none;
+    background-color: #14208f;
+    color: #ebe7e7;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+table.list .new:hover{
+    background-color: #141616;
+    color: #bde4e0;
+}
+
+table.list .view{
+    text-decoration: none;
+    background-color: #08c84b;
+    color: #0d0c0c;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+table.list .view:hover{
+    background-color: #0e5f1a;
+    color: #bde4e0;
+}
+
+table.list .delete{
+    text-decoration: none;
+    background-color: #f21515;
+    color: #0d0c0c;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+table.list .delete:hover{
+    background-color: #540d13;
+    color: #bde4e0;
+}
