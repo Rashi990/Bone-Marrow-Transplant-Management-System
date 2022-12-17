@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.board{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 50px;
+    width: 80%;
+    background-color: #ebe7e7;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.data{
+    background-color: #72b1ac;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    width: 70%;
+    height: 550px;
+}
+
+.form1{
+    background-color: #bde4e0;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    width: 85%;
+    height: 80%;
+    color: #006296;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.form1:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.form1 .sbar{
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 10px;
+    background-color: #085353;
+    color: #F7FFFF;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.form1 .sbar input[type="search"]{
+    padding: 2px 20px;
+    margin: 5px;
+    width: 70%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form1 .sbar button{
+    padding: 8px 12px;
+    background-color: #6ceaaf;
+    color: #0c0e0e;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.form1 .sbar button:hover{
+   background-color: #0a0b0b;
+   color: #bcf3f3;
+}
+
+.chart{
+    background-color: #fbfafa;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.chart .image{
+    width: 40%;
+    height: 30%;
+}
+
+.reports{
+    background-color: #72b1ac;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    width: 20%;
+}
+
+.reports h3{
+    color: #006296;
+    text-align: center;
+}
+
+.reports .types{
+    margin: 10px;
+    padding: 10px;
+    background-color: #bcf3f3;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.types a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: #085353;
+    color: #bbf4f8;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px auto;
+    width: 60%;
+    border-radius: 20px;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+    transition: 0.5s;
+}
+
+.types a:hover{
+    background-color: #032121;
+}
+

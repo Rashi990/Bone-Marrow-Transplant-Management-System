@@ -71,13 +71,13 @@ width: 100%;
   
     font-size: 18px;
  }
- 
+
  .main-content{
     margin-left: 250px;
  }
  header{
-    display: flex;
-    justify-content: space-between;
+    display:grid;
+    grid-template-columns: 300px 600px auto auto;
     align-items: center;
     padding: 5px;
     box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
@@ -97,7 +97,7 @@ width: 100%;
     border-radius: 30px;
     width: fit-content;
     height: 40px;
-    width: 30%;
+    width: 80%;
     display: flex;
     align-items: center;
     overflow-x: hidden;
@@ -115,7 +115,7 @@ width: 100%;
  }.user-wrapper{
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 3px;
  }
  .user-wrapper img{
     border-radius: 50%;
@@ -128,90 +128,67 @@ width: 100%;
     justify-content:space-between;
  }
 .box-icon .item{
-   padding-right: 50px;
+   padding-right: 20px;
 }
- main{
-    margin-top:30px;
-    padding: 2rem 1.5rem;
-    background: #f1f5f9;
-    min-height: calc(90vh - 90px);
-    border: 0px;
-    border-radius: 1rem;
- }
+main{
+   margin-top:30px;
+   padding: 2rem 1.5rem;
+   background: #f1f5f9;
+   min-height: calc(90vh - 90px);
+   border: 0px;
+   border-radius: 1rem;
+}
 .cards{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap:2rem ;
-    margin-top: 1rem;
+   display: grid;
+   grid-template-columns:repeat(4,1fr);
+   grid-gap:2.5rem ;
+   margin-top: 1rem;
 }
 .card-single{
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    padding: 2rem;
-    border: 1px;
-    border-radius: 20px;
+   display: flex;
+   justify-content: space-between;
+   background: #fff;
+   padding: 2rem;
+   border: 1px;
+   border-radius: 20px;
 }
 .card-detail{
-    color: #006296;
+   color: #006296;
 }
 .card-single i:first-child{
-    font-size:3rem ;
+   font-size:3rem ;
 }
 .card-single i:last-child{
-    color:#006296;
+   color:#006296;
+}
+.cards-2{
+   display: table;
+   grid-template-columns:repeat(4,1fr);
+   grid-gap:2.5rem ;
+   margin-top: 1rem;
+   color: #006296;
+}
+.card-single-2{
+   display: table;
+   justify-content: space-between;
+   background: #fff;
+   padding: 2rem;
+   border: 1px;
+   border-radius: 20px;
+}
+.title {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: 15px 10px;
+   border-bottom: 2px solid #999;
+}
+table {
+   padding: 10px;
 }
 
-
-.calendar{
-   padding: 20px;
- }
- .calendar ul{
-   display: flex;
-   flex-wrap: wrap;
-   list-style: none;
-   text-align: center;
- }
- .calendar .days{
-   margin-bottom: 20px;
- }
- .calendar li{
-   color: #006296;
-   width: calc(100% / 7);
-   font-size: 1.07rem;
- }
- .calendar .weeks li{
-   font-weight: 500;
-   cursor: default;
- }
- .calendar .days li{
-   z-index: 1;
-   cursor: pointer;
-   position: relative;
-   margin-top: 30px;
- }
- .days li.inactive{
-   color: #aaa;
- }
- .days li.active{
-   color: #fff;
- }
- .days li::before{
-   position: absolute;
-   content: "";
-   left: 50%;
-   top: 50%;
-   height: 40px;
-   width: 40px;
-   z-index: -1;
-   border-radius: 50%;
-   transform: translate(-50%, -50%);
- }
- .days li.active::before{
-   background: #9B59B6;
- }
- .days li:not(.active):hover::before{
-   background: #f2f2f2;
- }
-
-
+th,
+td {
+   text-align: left;
+   padding: 8px;
+}
