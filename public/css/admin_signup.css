@@ -1,39 +1,15 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
-:root{
-    font-size: 100%;
-    background: #F7FFFF;
-    font-size: 16px;
-    line-height: 1.5;
-    --primary-blue: #006296;
-}
-body{
+*{
+    margin: 0;
     padding: 0;
-    margin:0;
-    font-family: Poppins, sans-serif;
-    font-weight: 500;
-
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-h1{
-    font-size: 2.25rem;
-    font-weight: 700;
-
-}
-h2{
-    font-size: 1.5rem;
-    font-weight: 700;
-
-}
-a{
-    text-decoration: none;
-    color: var(--primary-blue);
-}
-a:hover{
-    text-decoration: underline;
-}
-.small{
-    font-size: 90%;
-    text-align: center;
+@media screen and (min-width:900px) {
+    body{
+        min-height: 100vh;
+        width: 100%;
+        background: #F7FFFF;
+    }
 }
 .split-screen{
     display: flex;
@@ -51,6 +27,11 @@ a:hover{
 .left{
     background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(../images/login1.jpg);
     background-size:cover;
+
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
 
 }
 .left .copy{
@@ -96,6 +77,7 @@ a:hover{
 
 color: #636364;
 }
+
 .right form{
     width: 328px;
 }
@@ -115,7 +97,7 @@ form input[type="password"]{
 
 label{
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-size: 0.85rem;
     font-weight: 500;
     line-height: 30px;
@@ -126,77 +108,13 @@ label{
 .input-container.password {
     position: relative;
 }
-.input-container.password i.icon{
-    position: absolute;
-    top: 50px;
-    right: 16px;
-}
-.input-container.password i.showhidepw{
-    position: absolute;
-    top: 50px;
-    right: 16px;
-}
 
-.input-container .cta{
-    display: flex;
-    flex-direction: row;
-}
-
-.checkbox-container input{
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width:0;
-}
-.checkbox-container{
-    display: block;
-    position: relative;
-    padding-left: 2rem;
-    cursor: pointer;
-    user-select: none;
-    margin: 0 0 1.25rem 0;
-    box-sizing: border-box;
-    
-}
-.checkbox-container input:checked~.checkmark{
-background-color: var(--primary-blue);
-border: 1px solid var(--primary-blue);
-
-}
-.checkmark{
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background: white;
-    border: 1px solid #c4c4c4;
-    border-radius: 4px;
-    top: -4px;
-    left: 0;
-}
-.checkmark:after{
-    content: "";
-    position: absolute;
-    display: none;
-}
-.checkbox-container input:checked~.checkmark:after{
-    display: block;
-}
-.checkbox-container .checkmark:after{
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    width: 5px;
-    height: 10px;
-    left: 8px;
-    top: 4px;
-    transform: rotate(45deg);
-}
 .signup-btn{
     background-color: #F7FFFF;
     display: block;
     width: 100%;
     color:#006296;
-    font-weight: 700;
+    font-weight: 500;
     border:2px solid #006296;
     padding: 0.5rem;
     border-radius: 8px;
@@ -214,7 +132,7 @@ border: 1px solid var(--primary-blue);
     background: #f2dede;
     color: #a94442;
     width: 75%;
-    height: 30px;
+    height: 3px;
     padding: 10px 0;
     border-radius: 15px;
     margin: 20px auto;
@@ -224,6 +142,30 @@ border: 1px solid var(--primary-blue);
     font-size: 12px;
   }
 
+.success {
+   background: #D4EDDA;
+   color: #40754C;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+
+h1 {
+	text-align: center;
+	color: #fff;
+}
+
+.ca {
+	font-size: 14px;
+	display: inline-block;
+	padding: 10px;
+	text-decoration: none;
+	color: #444;
+}
+.ca:hover {
+	text-decoration: underline;
+} 
 @media screen and (min-width:900px) {
     .split-screen{
         flex-direction: row;
@@ -235,7 +177,3 @@ border: 1px solid var(--primary-blue);
         height: auto;
     }
 }
-
-
-
-
