@@ -26,7 +26,7 @@ if (!(isset($_SESSION['user_name'])))
     <div class="main-content">
         <header>
             <h2>
-               View Donors
+              Donor Manage
             </h2>
             <div class="search-wrapper">
                 <span class='bx bx-search'></span>
@@ -54,6 +54,7 @@ if (!(isset($_SESSION['user_name'])))
     </div>
     
 <div class="right">
+    
     <a href="admin_adddonor.php" class="create-btn"> + Add Donor </a>
 
   <table>
@@ -95,7 +96,7 @@ if (!(isset($_SESSION['user_name'])))
         <td>'.$tele. '</td>
         <td>'.$address. '</td>  
         <td><a href="admin_adddonor.php?" class="update-btn"> edit
-        </a></button></td>
+        </a></td>
         <td><a href="admin_deletedonor.php? deleteid='.$id.'"><button class="delete-btn" > delete
        </button></a></td>   
     </tr>';

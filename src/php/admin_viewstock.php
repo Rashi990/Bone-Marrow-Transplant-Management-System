@@ -87,7 +87,7 @@ if (!(isset($_SESSION['user_name'])  ))
         if($result){
             while($row=mysqli_fetch_assoc($result)){
                 $sid=$row['sample_bid'];
-                $oid=$row['owner_id'];
+                $oid=$row['sample_owner_id'];
                 $mdate=$row['stored_date'];
                 $exdate=$row['expiry_date'];
                 $hname=$row['hospital_id'];

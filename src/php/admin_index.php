@@ -48,9 +48,10 @@
                             </label>
                         </div>   -->
                     </div>
-                   
+                 
+                   <br>
                     <button class="signup-btn" type="submit"> Sign Up</button>
-                    <br>
+<br>
                     <br>
                     <section class="copy legal"> 
                         <p><span class="small"> 
