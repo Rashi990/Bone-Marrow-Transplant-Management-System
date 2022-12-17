@@ -46,12 +46,12 @@ if (isset($_POST['username']) && isset($_POST['password']))
          $_SESSION['admin_id'] = $row['admin_id'];
          $_SESSION['email'] = $row['email'];
         header("Location: admin_dashboard.php");
-        exit();
+    
       }
       else
       {
         header("Location: admin_index.php?error=Incorrect User Name or Password");
-        exit();
+    
       }
     }
   }
@@ -61,4 +61,6 @@ else {
   header("Location: admin_index.php");
   exit();
 }
+
+$_SESSION['userLogin'] = "Loggedin";
 

@@ -5,15 +5,11 @@
     font-family: 'Poppins', sans-serif;
 }
 @media screen and (min-width:900px) {
-body{
-  
+    body{
+        min-height: 100vh;
+        width: 100%;
         background: #F7FFFF;
     }
-}
-.container{
-    margin-top: 20px;
-    margin-left: 200px;
-    
 }
 .main-content{
     margin-left: 250px;
@@ -73,66 +69,3 @@ body{
 .box-icon .item{
    padding-right: 50px;
 }
-main{
-    background: none;
-    width: 90%;
-    margin:0 auto;
-}
-.list{
-    padding: 1rem;
-
-}
-.line{
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #D7F0ED;
-    padding: 0.5rem 1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s;
-
-}
-.line:hover{
-    box-shadow: 0 0 0.8rem rgba(0,0,0,0.3);
-}
-.name{
-    font-size: 20px;
-    color: #006296;
-    line-height: 30px;
-    padding-bottom: 1rem;
-}
-.content{
-    font-weight: 400;
-font-size: 14px;
-line-height: 19px;
-color: #006296;
-}
-.content p{
-    font-size:0.8rem;
-    line-height: 30px;
-
-}
-
-.hospital{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.profile img{
-     object-fit: cover;
-}
-.hospital .details{
-    margin-left: 15px;
-    line-height: 1.5;
-    text-transform: capitalize;
-
-
-}
-.btn{
-    justify-content: left;
-}
-
