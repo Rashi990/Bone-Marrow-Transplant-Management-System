@@ -89,6 +89,33 @@ body{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
+.perc{
+    margin: 10px auto;
+    padding: 20px;
+    width: 80%;
+    height: 60%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #006296;
+    display: flex;
+    justify-content: space-between;
+}
+.perc:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.perc h2{
+    text-align: center;
+}
+
+.per{
+    width: 30%;
+    height: 60%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
 .match{
     margin: 20px;
     padding: 30px;
