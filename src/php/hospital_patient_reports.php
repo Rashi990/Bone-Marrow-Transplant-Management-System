@@ -28,5 +28,5 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
  </html>
 
 
-<?php include('../../public/html/hospital_reports.html'); ?>
+<?php include('../../public/html/hospital_patient_reports.html'); ?>
 <?php require_once('hospital_footer.php'); ?>
