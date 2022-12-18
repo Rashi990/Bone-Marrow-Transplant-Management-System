@@ -1,5 +1,5 @@
+<?php require_once('hospital_navbar.php'); ?>
 <?php
-require_once('hospital_navbar.php'); 
 require_once('../../config/connection.php');
 session_start();
 if (!isset($_SESSION['user_name']) && !isset($_SESSION['hospital_name']) )
@@ -25,7 +25,6 @@ if (!isset($_SESSION['user_name']) && !isset($_SESSION['hospital_name']) )
         <span class="material-icons">account_circle</span>
       </div>
  </body>
- </html>
 
-<?php include('../../public/html/hospital_donors.html'); ?>
+<?php include('../../public/html/hospital_check_avl.html'); ?>
 <!--<?php require_once('hospital_footer.php'); ?>-->

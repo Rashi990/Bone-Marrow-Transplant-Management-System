@@ -28,4 +28,4 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
  </html>
 
 <?php include('../../public/html/hospital_match_list.html'); ?>
-<?php require_once('hospital_footer.php'); ?>
+<!--<?php require_once('hospital_footer.php'); ?>-->
