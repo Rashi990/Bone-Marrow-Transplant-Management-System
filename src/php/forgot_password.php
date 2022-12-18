@@ -11,7 +11,7 @@
       </div>
       <div class="form-box">
         <div class="heading">
-          <h1 class="title">Forgot Password?</h1>
+          <h1 class="title">FORGOT PASSWORD?</h1>
         </div>
         <form class="forgot_password" action="forgot_password_setting.php" method="post">
           <?php if (isset($_GET['error'])) {?>
