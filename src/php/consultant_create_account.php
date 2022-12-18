@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Consultant Register</title>
-    <link rel="stylesheet" type="text/css" href="consultant_create_account.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_create_account.css">
   </head>
   <body>
     <div class="hero">

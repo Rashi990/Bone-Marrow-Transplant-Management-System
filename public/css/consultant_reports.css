@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  font-family: Poppins, sans-serif;
 }
 
 .hero{
@@ -181,7 +182,6 @@ abbr{
   flex: 85%;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg,#6ac1c5,#bda5ff);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,11 +194,10 @@ abbr{
 
 #appointments{
   display: flex;
-  flex-direction: column;
   position: relative;
   top: 10%;
   left: 0;
-  width: 1000px;
+  width: 1100px;
   height: 500px;
   padding-bottom: 10px;
 }
@@ -209,7 +208,7 @@ abbr{
   flex-direction: column;
   justify-content: space-between;
   align-items:center;
-  background: #308C83;
+  background: #bde4e0;
   border-radius: 15px;
   margin: 10px 10px 0 10px;
 }
@@ -229,6 +228,7 @@ abbr{
   flex: 70%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -239,15 +239,15 @@ abbr{
   justify-content: center;
   align-items: center;
   background: #D7F0ED;
-  margin: 20px;
-  height: 150px;
+  margin: 50px;
+  height: 100px;
   border-radius: 15px;
 }
 
 .column a{
   text-decoration:none;
   color: #006296;
-  font-size: 30px;
+  font-size: 16px;
 }
 
 @media (max-width:1050px) {
