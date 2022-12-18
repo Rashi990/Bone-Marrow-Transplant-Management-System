@@ -1,13 +1,23 @@
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins, sans-serif;
     background-color: #F7FFFF;
+}
+
+.head h1{
+    position: absolute;
+    display: flex;
+    margin-left: 260px;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
 }
 
 .search{
     display: flex;
-    margin-left: 250px;
-    padding-top: 15px;
+    margin-left: 280px;
+    padding-top: 20px;
     justify-content: center;
 }
 
@@ -51,7 +61,7 @@ body{
     margin-left: 240px;
     margin-top: 30px;
     width: 80%;
-    background-color: #ebe7e7;
+    background-color: #F1F5F9;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -59,7 +69,7 @@ body{
 }
 
 .data{
-    background-color: #72b1ac;
+    background-color: #bde4e0;
     border-radius: 20px;
     padding: 10px;
     margin: 20px;
@@ -76,19 +86,18 @@ body{
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    background-color: #006296;
-    color: #ebe7e7;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
     border-radius: 20px;
     padding: 10px 20px;
-    transition: 0.5s;
-    
+    transition: 0.5s;   
 }
 
 .goto-transplant-list:hover{
-    background-color: #061535;
-    color: #bbf4f8;
+    background-color: #006296;
+    color: #F7FFFF;
 }
-
 
 .count{
     display: flex;
@@ -98,7 +107,7 @@ body{
 .box{
     display: flex;
     flex-direction: column;
-    background-color: #bde4e0;
+    background-color: #F7FFFF;
     color: #006296;
     font-weight: bold;
     text-align: center;
@@ -116,7 +125,7 @@ body{
 }
 
 .chart{
-    background-color: #bde4e0;
+    background-color: #F7FFFF;
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
@@ -144,9 +153,12 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
+/*
 .perc:hover{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
+*/
 
 .perc h2{
     text-align: center;
@@ -172,7 +184,7 @@ body{
 .transplant{
     margin: 20px;
     padding: 20px;
-    background-color: #c1dada;
+    background-color: #bde4e0;
     border-radius: 20px;
     width: 80%;
 }
@@ -194,8 +206,8 @@ table.list{
 }
 
 table.list th{
-    background-color: #186868;
-    color: #ebe7e7;
+    background-color: #308C83;
+    color: #F7FFFF;
     padding: 10px;
     text-align: left;
     font-size: 16px;
@@ -212,7 +224,7 @@ table.list td{
 }
 
 table.list tr:nth-child(even){
-    background-color: #72b1ac;
+    background-color: #F7FFFF;
 }
 
 table.list tr{
@@ -221,45 +233,48 @@ table.list tr{
 
 table.list .new{
     text-decoration: none;
-    background-color: #14208f;
-    color: #ebe7e7;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 30px;
     font-size: 14px;
     transition: 0.5s;
 }
 
 table.list .new:hover{
-    background-color: #141616;
-    color: #bde4e0;
+    background-color: #006296;
+    color: #F7FFFF;
 }
 
 table.list .send{
     text-decoration: none;
-    background-color: #4471e3;
-    color: #0d0c0c;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px 20px;
     font-size: 14px;
     transition: 0.5s;
 }
 
 table.list .send:hover{
-    background-color: #070b45;
-    color: #bde4e0;
+    background-color: #006296;
+    color: #F7FFFF;
 }
 
 table.list .delete{
     text-decoration: none;
-    background-color: #f21515;
-    color: #0d0c0c;
+    background-color: #F7FFFF;
+    color: #FF0404;
+    border: 1px solid #FF0404;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px 20px;
     font-size: 14px;
     transition: 0.5s;
 }
 
 table.list .delete:hover{
-    background-color: #540d13;
-    color: #bde4e0;
+    background-color: #FF0404;
+    color: #F7FFFF;
 }

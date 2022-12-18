@@ -4,13 +4,22 @@ body{
     background-color: #F7FFFF;
 }
 
-.search{
+.head h1{
+    position: absolute;
     display: flex;
-    margin-left: 250px;
-    padding-top: 15px;
-    justify-content: center;
+    margin-left: 260px;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
 }
 
+.search{
+    display: flex;
+    margin-left: 280px;
+    padding-top: 20px;
+    justify-content: center;
+}
 .search-bar{
     border: 1px solid #ccc;
     border-radius: 30px;
@@ -88,7 +97,7 @@ body{
     margin: 20px auto;
     padding: 8px 10px;
     width: 60%;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #96bdb8;
     color: #F7FFFF;
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
