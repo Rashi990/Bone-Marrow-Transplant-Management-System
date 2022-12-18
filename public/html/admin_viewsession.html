@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <link rel="stylesheet" href="../../public/css/admin_viewsession.css?v=1">
+     <link rel="stylesheet" href="../../public/css/admin_viewsession.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -22,10 +23,10 @@
     
             <div class="box-icon">
                 <div class="item">
-                    <i class='bx bxs-bell'></i>
+                    <span class="material-icons">notifications</span>
                 </div>
                 <div class="item">
-                    <i class='bx bxs-conversation'></i>
+                    <span class="material-icons">chat_bubble</span>
                 </div>
                 
             </div>
@@ -36,61 +37,58 @@
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
         </header>
-    </div>
- 
-    <div class="container">
+    
         <main>
-            <!-- section 1 -->
-            <div class="list">
-                <div class="line">
-                    <div class="hospital">
-                        <div class="profile">
-                            <img src="../../public/images/smiling-female-doctor-holding-medical-records-lab-coat-her-office-clipboard-looking-camera-56673035.jpg" alt="photo" width="100px" height="100px">
-                        </div>
-                        <div class="details">
-                            <h1 class="name"> What is Bone Marrow Transplant is?</h1>
-                            <p class="content">An Awareness session conducted by Apeksha Hopital, Maharagama,<br>
-    
-                                Place:Apeksha Hospital,Maharagama. <br>
-                                Date: 25 th November 2022 <br>
-                                Time: 10.00 a.m. <br>
-                                <div class="btn">
-                                    <a href="">edit</a>
-                                    <a href="">send</a>
-                                </div>
-                           
-                            </p>
-                        </div>
+
+            <div class="cards-2">
+                <div class="card-single-2">
+                    <div class="title">
+                        <h3>Awareness Campaigns</h3>
+                        <a href="../../public/html/admin_create_campaign.html" class="update-btn"> + Create New Campaign
+                        </a>
                     </div>
+                        <table>
+                            <tr>
+                                <th>Campaign Name</th>
+                                <th> Conducting Hospital</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Introduction About SLBTMS </td>
+                                <td>Colombo General Hospital<br>
+                                    Apeksha Hospital<br>
+                                    Lanka Hospital<br>
+                                </td>
+                                <td>2022-12-24<br>
+                                    2022-12-26<br>
+                                    2022-12-24<br></td>
+                                    <td>10.00 a.m<br>
+                                        10.00 a.m<br>
+                                        11.00 a.m<br></td>
+                                        <td><a href="#" class="btn">View More</a></td>
+                            </tr>
+                            <tr>
+                                <td>Promoting Society About <br>br>Boan Marrow Transplant </td>
+                                <td>Anuradhapura General Hospital<br>
+                                    Apeksha Hospital<br>
+                                    Lanka Hospital<br>
+                                </td>
+                                <td>2022-12-29<br>
+                                    2022-12-29<br>
+                                    2022-12-28<br></td>
+                                    <td>10.00 a.m<br>
+                                        10.00 a.m<br>
+                                        11.00 a.m<br></td>
+                                        <td><a href="#" class="btn">View More</a></td>
+                            </tr>
+                        </table>
                 </div>
-            </div>
-    
-            <!-- section 2 -->
-            <div class="list">
-                <div class="line">
-                    <div class="hospital">
-                        <div class="profile">
-                            <img src="../../public/images/smiling-female-doctor-holding-medical-records-lab-coat-her-office-clipboard-looking-camera-56673035.jpg" alt="photo" width="100px" height="100px">
-                        </div>
-                        <div class="details">
-                            <h1 class="name"> What is Bone Marrow Transplant is?</h1>
-                            <p class="content">An Awareness session conducted by Apeksha Hopital, Maharagama,<br>
-    
-                                Place:Apeksha Hospital,Maharagama. <br>
-                                Date: 25 th November 2022 <br>
-                                Time: 10.00 a.m. <br>
-                                <div class="btn">
-                                    <a href="">edit</a>
-                                    <a href="">send</a>
-                                </div>
-                           
-                            </p>
-                        </div>
-                    </div>
                 </div>
-            </div>
+           
         </main>
+   
     </div>
-    
 </body>
 </html>
