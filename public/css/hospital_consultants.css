@@ -1,13 +1,23 @@
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins, sans-serif;
     background-color: #F7FFFF;
+}
+
+.head h1{
+    position: absolute;
+    display: flex;
+    margin-left: 260px;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
 }
 
 .search{
     display: flex;
-    margin-left: 250px;
-    padding-top: 15px;
+    margin-left: 280px;
+    padding-top: 20px;
     justify-content: center;
 }
 
@@ -50,7 +60,7 @@ body{
     position: absolute;
     margin-left: 240px;
     margin-top: 30px;
-    background-color: #ebe7e7;
+    background-color: #F1F5F9;
     padding: 10px;
     width: 80%;
     height: 80vh;
@@ -76,8 +86,8 @@ table.list{
 }
 
 table.list th{
-    background-color: #186868;
-    color: #ebe7e7;
+    background-color: #308C83;
+    color: #F7FFFF;
     padding: 10px;
     text-align: left;
     font-size: 18px;
@@ -94,66 +104,71 @@ table.list td{
 }
 
 table.list tr:nth-child(even){
-    background-color: #9bcdc8;
+    background-color: #bde4e0;
 }
 
 table.list .new{
     margin: 0px 20px;
     text-decoration: none;
-    background-color: #14208f;
-    color: #ebe7e7;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 50px;
     font-size: 14px;
     transition: 0.5s;
+    float: right;
 }
 
 table.list .new:hover{
-    background-color: #141616;
-    color: #bde4e0;
+    background-color: #006296;
+    color: #F7FFFF;
 }
 
 table.list .view{
     text-decoration: none;
-    background-color: #08c84b;
-    color: #0d0c0c;
+    background-color: #F7FFFF;
+    color: #009879;
+    border: 1px solid #009879;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px 20px;
     font-size: 14px;
     transition: 0.5s;
 }
 
 table.list .view:hover{
-    background-color: #0e5f1a;
-    color: #bde4e0;
+    background-color: #009879;
+    color: #F7FFFF;
 }
 
 table.list .delete{
     text-decoration: none;
-    background-color: #f21515;
-    color: #0d0c0c;
+    background-color: #F7FFFF;
+    color: #FF0404;
+    border: 1px solid #FF0404;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px 20px;
     font-size: 14px;
     transition: 0.5s;
 }
 
 table.list .delete:hover{
-    background-color: #540d13;
-    color: #bde4e0;
+    background-color: #FF0404;
+    color: #F7FFFF;
 }
 
 table.list .edit{
     text-decoration: none;
-    background-color: #5393ed;
-    color: #0d0c0c;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px 20px;
     font-size: 14px;
     transition: 0.5s;
 }
 
 table.list .edit:hover{
-    background-color: #060f3d;
-    color: #bde4e0;
+    background-color: #006296;
+    color: #F7FFFF;
 }
