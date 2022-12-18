@@ -42,7 +42,10 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
         <div class="right">
           <div class="rtop">
             <div class="empty">
-              <p>Donor</p>
+              <div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="search" placeholder="search here">
+              </div>
             </div>
             <div class="profile">
               <abbr title="notifications">
@@ -113,7 +116,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                 </div>
               </a>
             </div>
-            <div id="session">
+            <!--<div id="session">
               <a class="box" href="consultant_calendar.php">
                 <div class="links-container">
                   <div class="image">
@@ -124,7 +127,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                   </div>
                 </div>
               </a>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>

@@ -4,10 +4,20 @@ body{
     background-color: #F7FFFF;
 }
 
+.head h1{
+    position: absolute;
+    display: flex;
+    margin-left: 260px;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
+}
+
 .search{
     display: flex;
-    margin-left: 250px;
-    padding-top: 15px;
+    margin-left: 280px;
+    padding-top: 20px;
     justify-content: center;
 }
 
@@ -39,12 +49,6 @@ body{
     padding-left: 10px;
     cursor: pointer;
 }
-.search-bar .Loggedin{
-    padding-left: 50px;
-    padding-right: 50px;
-    margin: 0px 20px;
-    width: 80%;
-}
 
 .clinicians{
     position: absolute;
@@ -57,15 +61,6 @@ body{
     border: none;
     border-radius: 20px;
 }
-
-.clinicians h1{
-    margin: 20px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 30px;
-    color: #006296;
-}
-
 
 table.clinician_list{
     margin: 20px;
@@ -114,7 +109,7 @@ table.clinician_list tr:nth-child(even){
 table.clinician_list td a{
     width: 150px;
     height: 40px;
-    padding: 5px 10px;
+    padding: 8px 20px;
     background-color: #F7FFFF;
     color: #006296;
     border: 1px solid #006296 ;

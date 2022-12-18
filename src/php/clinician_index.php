@@ -12,7 +12,10 @@
         </div>
         <div class="form-box">
           <div class="heading">
-            <h1 class="title">Login</h1>
+            <h1 class="title">Welcome Back!</h1>
+          </div>
+          <div class="des">
+            <p>Welcome back! Please enter your details.</p>
           </div>
           <form class="login" action="clinician_login.php" method="post">
             <?php if (isset($_GET['error'])) {?>
@@ -22,6 +25,7 @@
             <input type="text" class="input-field" name="username" placeholder="Enter Your User Name">
             <label class="input-label">Password</label>
             <input type="password" class="input-field" name="password" placeholder="Enter Your Password">
+            <a class="fp" href="forgot_password.php">Forgot Password?</a>
             <button type="submit" class="submit-btn">Login</button>
             <span class="cr">© 2022 SLBMTMS. All rights reserved.</span>
           </form>

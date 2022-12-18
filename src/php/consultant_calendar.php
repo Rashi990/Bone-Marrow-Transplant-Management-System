@@ -42,7 +42,10 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
         <div class="right">
           <div class="rtop">
             <div class="empty">
-              <p>Calendar</p>
+              <div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="search" placeholder="search here">
+              </div>
             </div>
             <div class="profile">
               <abbr title="notifications">
@@ -74,7 +77,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               </abbr>
               <abbr title="Welcome!">
                 <div class="greet">
-                  <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+                  <h3 class="greet-text">Welcome! Dr.<?php echo $_SESSION['consultant_name'];?></h3>
                 </div>
               </abbr>
               <abbr title="Profile">
@@ -104,7 +107,6 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
     </div>
   </body>
 </html>
-}
 
 <?php
 }
