@@ -99,6 +99,21 @@ main{
     margin-bottom: 2rem;
     border-radius: 20px;
  }
+ .cards-3{
+    display:flex;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap:2.5rem ;
+    margin-top: 1rem;
+    color: #006296;
+ }
+ .card-single-3{
+    display: table;
+    justify-content: space-between;
+    background: #D7F0ED;
+    border: 1px;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+ }
  .title {
     display: flex;
     align-items:center;
