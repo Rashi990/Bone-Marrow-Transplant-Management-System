@@ -8,8 +8,8 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Clinician Calendar</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/clinician_calendar.css">
+    <title>Consultant Calendar</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_calendar.css?v=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
@@ -22,10 +22,10 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
           <div class="tabs">
 
             <a class="hi" href="clinician_requests.php">Requests</a>
-            <a class="hi-selected">Calendar</a>
+            <a class="hi-selected" href="clinician_calendar.php">Calendar</a>
             <a class="hi" href="clinician_patient.php">Patient</a>
             <a class="hi" href="clinician_donor.php">Donor</a>
-            <a class="hi" href="clinician_reports.php">Match</a>
+            <a class="hi" href="clinician_match.php">Match</a>
 
             <div class="logout">
               <abbr title="Logout">
@@ -42,7 +42,10 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
         <div class="right">
           <div class="rtop">
             <div class="empty">
-              <p>Calendar</p>
+              <div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="search" placeholder="search here">
+              </div>
             </div>
             <div class="profile">
               <abbr title="notifications">
@@ -64,7 +67,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
                 </a>
               </abbr>
               <abbr title="Home">
-                <a href="clinician_home.php">
+                <a href="consultant_home.php">
                   <div class="icon">
                     <span class="material-icons">
                       home
@@ -74,7 +77,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
               </abbr>
               <abbr title="Welcome!">
                 <div class="greet">
-                  <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['clinician_name'];?></h3>
+                  <h3 class="greet-text">Welcome! Dr.<?php echo $_SESSION['consultant_name'];?></h3>
                 </div>
               </abbr>
               <abbr title="Profile">
@@ -104,7 +107,6 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
     </div>
   </body>
 </html>
-}
 
 <?php
 }

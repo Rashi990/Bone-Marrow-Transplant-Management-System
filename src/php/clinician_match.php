@@ -8,9 +8,10 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Consultant Calendar</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_calendar.css?v=1">
+    <title>Consultant Appointments</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_appointments.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
@@ -21,11 +22,11 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 
           <div class="tabs">
 
-            <a class="hi" href="consultant_appointments.php">Appointments</a>
-            <a class="hi" href="consultant_reports.php">Reports</a>
-            <a class="hi-selected">Calendar</a>
-            <a class="hi" href="consultant_patient.php">Patient</a>
-            <a class="hi" href="consultant_donor.php">Donor</a>
+            <a class="hi" href="clinician_requests.php">Requests</a>
+            <a class="hi" href="clinician_calendar.php">Calendar</a>
+            <a class="hi" href="clinician_patient.php">Patient</a>
+            <a class="hi" href="clinician_donor.php">Donor</a>
+            <a class="hi-selected" href="clinician_match.php">Match</a>
 
             <div class="logout">
               <abbr title="Logout">
@@ -92,7 +93,9 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
             </div>
           </div>
           <div class="rbottom">
-            <?php include('../../public/html/consultant_calendar.html'); ?>
+            <div class="main">
+              <?php include('../../public/html/consultant_match.html'); ?>
+            </div>
           </div>
         </div>
       </div>
@@ -107,6 +110,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
     </div>
   </body>
 </html>
+}
 
 <?php
 }
