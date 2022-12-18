@@ -29,4 +29,4 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
 
 
 <?php include('../../public/html/hospital_reports.html'); ?>
-<?php require_once('hospital_footer.php'); ?>
+<!--<?php require_once('hospital_footer.php'); ?>-->
