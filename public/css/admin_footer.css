@@ -6,8 +6,8 @@ body{
 
 .bottom{
    
-    position:fixed;
-    bottom: 0;
+    /* position:flex;
+    bottom: 0; */
     display:table-cell;
     vertical-align:middle;
     background-color:#006296;

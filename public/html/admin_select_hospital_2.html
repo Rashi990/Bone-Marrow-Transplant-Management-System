@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLBMTS</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/admin_select_hospital.css">
+</head>
+<body>
+   <!-- header  -->
+   <div class="main-content">
+        <header>
+            <h2>
+                Select Hospital
+            </h2>
+            <div class="search-wrapper">
+                <span class='bx bx-search'></span>
+                <input type="search" placeholder="search here">
+            </div>
+    
+           
+    
+            <div class="box-icon">
+                <div class="item">
+                    <i class='bx bxs-bell'></i>
+                </div>
+                <div class="item">
+                    <i class='bx bxs-conversation'></i>
+                </div>
+                
+            </div>
+           
+            
+            <div class="user-wrapper">
+                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+                <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
+            </div>
+        </header>
+    </div>
+    <div class="right">
+        <div class="list">
+            <div class="line">
+                <div class="hospital">
+                    <div class="profile">
+                        <i class='bx bxs-user-circle'></i>
+                    </div>
+                    <div class="details">
+                        <table>
+                            <td><h3 class="name"> Aruni Siriwardena</h3></td>
+                            <td><h4 class="name"> colombo</h4></td>
+                            <td><h4 class="name"> 20 yr.</h4></td>
+                            <td> <a href="#" class="create-btn"> Select Location </a>
+                            </td>
+                            </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="name">Nearest Available Hospital To Maharagama</h3>
+        <br>
+        <br>
+                          <h4>  No Hospital Found </h4> 
+                          <h4>  Select Location From Map </h4> 
+
+        <!-- <table>
+            <tr>
+                <td><h4 class="name"> Apeksha Hospital Maharagama</h3></td>
+                    <td><a href="#" class="update-btn"> 22/12/19 2 seats</a></td>
+                    <td><a href="#" class="update-btn"> 22/12/24 13 seats</a></td>
+                    <td> <a href="#" class="update-btn"> 22/12/26 15 seats</a></td>
+                    <td> <a href="#" class="update-btn"> 22/12/30 18 seats</a></td>
+            </tr>
+            <tr>
+                <td><h4 class="name"> Lanka Hospital</h3></td>
+                    <td><a href="#" class="update-btn"> 22/12/20 1 seats</a></td>
+                    <td><a href="#" class="update-btn"> 22/12/24 5 seats</a></td>
+                    <td> <a href="#" class="update-btn"> 22/12/26 20 seats</a></td>
+                    <td> <a href="#" class="update-btn"> 22/12/30 18 seats</a></td>
+            </tr>
+            <tr>
+                <td><h4 class="name">General Hospital</h3></td>
+                    <td><a href="#" class="update-btn"> 22/12/21 5 seats</a></td>
+                    <td><a href="#" class="update-btn"> 22/12/26 8 seats</a></td>
+                    <td> <a href="#" class="update-btn"> 22/12/30 19 seats</a></td>
+                    <td> <a href="#" class="update-btn"> 22/12/31 19 seats</a></td>
+            </tr>
+           
+
+            </table> -->
+    </div>
+</body>
+</html>

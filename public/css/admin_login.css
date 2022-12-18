@@ -32,8 +32,9 @@ a:hover{
     text-decoration: underline;
 }
 .small{
-    font-size: 90%;
-    text-align: center;
+    color: #030303;
+    font-size: 70%;
+    text-align: right;
 }
 .split-screen{
     display: flex;
