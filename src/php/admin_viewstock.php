@@ -56,8 +56,7 @@ if (!(isset($_SESSION['user_name'])  ))
     <a href="admin_addsample.php" class="create-btn"> + Add Sample
        </a>
 
-  <table>
-        <thead>
+  <table class="list">
         <tr>
         <th class="table-head">
       Sample ID
@@ -78,9 +77,6 @@ if (!(isset($_SESSION['user_name'])  ))
       Operation
       </th>
         </tr>
-        </thead>
-       <tbody>
-
         <?php 
         $sql="select * from `bloodbank_stock`";
         $result=mysqli_query($connection,$sql);
@@ -109,9 +105,6 @@ if (!(isset($_SESSION['user_name'])  ))
         }
         
         ?>
-        
-       </tbody>
-      
        </table>
     </div>
     
