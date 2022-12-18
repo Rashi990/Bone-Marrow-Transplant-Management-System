@@ -53,4 +53,4 @@ else{
  </html>
 
 <?php include('../../public/html/hospital_clinicians.html'); ?>
-<?php require_once('hospital_footer.php'); ?>
+<!--<?php require_once('hospital_footer.php'); ?>-->

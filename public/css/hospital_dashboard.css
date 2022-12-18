@@ -1,15 +1,57 @@
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #F7FFFF;
+    font-family: Poppins, sans-serif;
+}
+
+.search{
+    display: flex;
+    margin-left: 250px;
+    padding-top: 15px;
+    justify-content: center;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+
+.search-bar span{
+    display: inline-block;
+    padding: 5px;
+    font-size:14px ;
+ }
+ 
+ .search-bar input{
+    height: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+ }
+
+.search-bar span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.search-bar .Loggedin{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px 20px;
+    width: 80%;
 }
 
 .board{
     position: absolute;
     margin-left: 240px;
-    margin-top: 60px;
+    margin-top: 30px;
     width: 80%;
-    background-color: #ebe7e7;
+    background-color: #F1F5F9;
     border-radius: 20px;
     padding: 20px;
 }
@@ -29,7 +71,7 @@ body{
     height: 50px;
     background-color: #bde4e0;
     border-radius: 20px;
-    border: 1px solid #457873;
+    border: none;
     text-align: center;
     font-weight: bold;
     color: #006296;
@@ -67,7 +109,7 @@ body{
     padding: 10px;
     margin: 10px auto;
     background-color: #bde4e0;
-    border: 1px solid #457873;
+    border: none;
     border-radius: 20px;
 }
 
@@ -108,7 +150,7 @@ body{
 }
 
 .cal{
-    background-color: #73beb6;
+    background-color: #F7FFFF;
     width: 23%;
     border-radius: 20px;
     margin: 20px auto;

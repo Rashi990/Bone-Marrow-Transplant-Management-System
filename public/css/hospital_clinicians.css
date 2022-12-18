@@ -1,14 +1,56 @@
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins, sans-serif;
     background-color: #F7FFFF;
+}
+
+.search{
+    display: flex;
+    margin-left: 250px;
+    padding-top: 15px;
+    justify-content: center;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+
+.search-bar span{
+    display: inline-block;
+    padding: 5px;
+    font-size:14px ;
+ }
+ 
+ .search-bar input{
+    height: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+ }
+
+.search-bar span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.search-bar .Loggedin{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px 20px;
+    width: 80%;
 }
 
 .clinicians{
     position: absolute;
     margin-left: 240px;
-    margin-top: 60px;
-    background-color: #ebe7e7;
+    margin-top: 30px;
+    background-color: #F1F5F9;
     padding: 10px;
     width: 80%;
     height: 80vh;
@@ -34,8 +76,8 @@ table.clinician_list{
 }
 
 .clinicians .new{
-    background-color: #14208f;
-    color: #eff2f3;
+    background-color: #F7FFFF;
+    color: #006296;
     margin-right: 20px;
     padding: 10px 40px;
     float: right;
@@ -45,16 +87,16 @@ table.clinician_list{
 }
 
 .clinicians .new:hover{
-    background-color: #0b1034;
-    color: #5ccbbe;
+    background-color: #006296;
+    color: #F7FFFF;
 }
 
 table.clinician_list th{
     padding: 10px;
     font-weight: bold;
     text-align: left;
-    background-color: #186868;
-    color: #ebe7e7;
+    background-color: #308C83;
+    color: #F7FFFF;
 }
 
 table.clinician_list td{
@@ -66,16 +108,16 @@ table.clinician_list td{
 }
 
 table.clinician_list tr:nth-child(even){
-    background-color: #9bcdc8;
+    background-color: #bde4e0;
 }
 
 table.clinician_list td a{
     width: 150px;
     height: 40px;
     padding: 5px 10px;
-    background: #eff2f3;
-    background-color: #10992c;
-    color: #0d0c0c;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
     border-radius: 10px;
     text-decoration: none;
     font-size: 14px;
@@ -83,8 +125,8 @@ table.clinician_list td a{
 }
 
 table.clinician_list td a:hover{
-    background-color: #0e5f1a;
-    color: #bde4e0;
+    background-color: #006296;
+    color: #F7FFFF;
 }
 
 
