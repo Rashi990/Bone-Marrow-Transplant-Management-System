@@ -39,6 +39,9 @@
     margin-left: 18px;
 
 }
+.sidebar .nav-link.link-name{
+   text-decoration: none;
+}
 .sidebar .nav-link li{
    height: 50px;
    width: 100%;
@@ -96,7 +99,7 @@ width: 100%;
 
  }
  .search-wrapper{
-    border: 1px solid #ccc;
+    border: 1px solid ;
     border-radius: 30px;
     width: fit-content;
     height: 40px;
@@ -141,6 +144,7 @@ main{
    min-height: calc(90vh - 90px);
    border: 0px;
    border-radius: 1rem;
+   margin-right: 30px;
 }
 .cards{
    display: grid;
@@ -151,7 +155,7 @@ main{
 .card-single{
    display: flex;
    justify-content: space-between;
-   background: #fff;
+   background: #D7F0ED;
    padding: 2rem;
    border: 1px;
    border-radius: 20px;
@@ -166,8 +170,8 @@ main{
    color:#006296;
 }
 .cards-2{
-   display: table;
-   grid-template-columns:repeat(4,1fr);
+   display:flex;
+   grid-template-columns:repeat(2,1fr);
    grid-gap:2.5rem ;
    margin-top: 1rem;
    color: #006296;
@@ -175,7 +179,7 @@ main{
 .card-single-2{
    display: table;
    justify-content: space-between;
-   background: #fff;
+   background: #D7F0ED;
    padding: 2rem;
    border: 1px;
    border-radius: 20px;
@@ -195,4 +199,22 @@ th,
 td {
    text-align: left;
    padding: 8px;
+}
+.cal{
+   background-color: #D7F0ED;
+   width: 30%;
+   border-radius: 20px;
+   margin: 20px auto;
+   padding: 20px;
+   font-weight: bold;
+   color: #006296;
+   cursor: pointer;
+}
+
+.cal:hover{
+   box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.cal h2{
+   text-align: center;
 }
