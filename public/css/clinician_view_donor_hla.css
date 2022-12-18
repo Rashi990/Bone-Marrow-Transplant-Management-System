@@ -1,0 +1,206 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+
+}
+
+body{
+    
+    background-color: #F7FFFF;
+    display: flex;
+}
+
+.container{
+    position: absolute;
+    margin-top: 5%;
+    padding-bottom: 50px;
+    width: 50%;
+    height: 40%;
+}
+
+
+.head{
+    
+    margin-left: 20%;
+    margin-top: 2%;
+    width: 100%;
+    height: 100%;
+    color: #030303;
+
+}
+
+
+
+.error{
+    background: #f2dede;
+    color: #a94442;
+    width: 50%;
+    height: 40px;
+    padding: 10px 0;
+    border-radius: 15px;
+    margin-left:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+
+}
+
+
+
+
+.create{
+  
+
+    position: absolute;
+    width: 40%;
+    height: 39px;
+    top: 2%;
+    
+    box-sizing: border-box;
+    
+    background: #FFFFFF;
+    border: 2px solid #006296;
+    border-radius: 12px;
+    
+    
+    left: 40%;
+    
+
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: #006296;
+    
+
+}
+.ct{
+    color:#636364;
+    font-size: 22.5px;
+
+}
+
+.create:hover{
+    background-color: rgb(181, 177, 239);
+}
+
+
+.table{
+    position: absolute;
+    left: 35%;
+    top:30%;
+   width: 130%;
+    
+   border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+
+   
+ 
+}
+thead{
+    background: #D7F0ED;
+    height: 90px;
+  
+  
+    text-align: center;
+
+}
+
+tr{
+    height:80px;
+   
+}
+tr:hover {background-color: rgb(172, 252, 252);} 
+
+.eh,.dh{
+   
+    width:12%;
+}
+td{
+    text-align: center;
+    
+}
+
+.edt{
+
+
+box-sizing: border-box;
+
+position: absolute;
+left: 105%;
+
+
+
+height: 8%;
+width: 8%;
+background: #FFFFFF;
+border: 2px solid #006296;
+border-radius: 12px;
+
+}
+.dl{
+  
+
+
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 115%;
+    right: 0%;
+    
+    
+    height: 8%;
+    width: 8%;
+    background: #FFFFFF;
+    border: 2px solid #FF0404;
+    border-radius: 12px;
+
+
+}
+
+
+
+
+
+/*.table thead{
+    /* Rectangle 19 
+
+position: absolute;
+width:120%;
+height: 80%;
+left: 0px;
+top: 0px;
+text-align: center;
+
+
+background: #D7F0ED;
+border-radius: 30px;
+
+}
+.table td{
+    
+
+}
+*/
+
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
