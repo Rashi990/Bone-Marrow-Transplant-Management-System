@@ -110,14 +110,10 @@ a.create-btn:hover{
     color:#006296;
     font-weight: 700;
     border:2px solid #006296;
-    margin: 2rem 2rem;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 8px 20px;
     border-radius: 8px;
     font-size: 0.75rem;
-    text-transform: uppercase;
+    text-transform:capitalize;
     letter-spacing: 0.5px;
 
 }
@@ -129,18 +125,14 @@ a.create-btn:hover{
 .delete-btn{
     background-color: #F7FFFF;
     display: block;
-    width:60px;
+    width:70px;
     color:#FF0404;
     font-weight: 700;
     border:2px solid #FF0404;
-    margin: 2rem 2rem;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 8px 20px;
     border-radius: 8px;
     font-size: 0.75rem;
-    text-transform: uppercase;
+    text-transform:capitalize;
     letter-spacing: 0.5px;
 
 }
