@@ -18,10 +18,13 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['email']) ))
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
+
 <body>
 
 
 </body>
-</html>
-<?php require_once('admin_footer.php'); ?>   
 <?php include('../../public/html/admin_dashboard.html'); ?>
+</html> 
+
+
+
