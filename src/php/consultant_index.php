@@ -11,7 +11,10 @@
       </div>
       <div class="form-box">
         <div class="heading">
-          <h1 class="title">Login</h1>
+          <h1 class="title">Welcome Back!</h1>
+        </div>
+        <div class="des">
+          <p>Welcome back! Please enter your details.</p>
         </div>
         <form class="login" action="consultant_login.php" method="post">
           <?php if (isset($_GET['error'])) {?>

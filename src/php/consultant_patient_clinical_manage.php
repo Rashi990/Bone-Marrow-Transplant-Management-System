@@ -10,7 +10,7 @@ include "../../config/connection.php";
   <head>
     <meta charset="utf-8">
     <title>Patient Clinical Reports</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient_clinical_manage.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_patient_clinical_manage.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
@@ -81,7 +81,6 @@ include "../../config/connection.php";
           <div class="mid-bottom">
               <table>
                 <tr>
-                  <th>Record ID</th>
                   <th>Patient ID</th>
                   <th>Date</th>
                   <th>Drug Name</th>
@@ -91,7 +90,7 @@ include "../../config/connection.php";
                   <th colspan="2">Action</th>
                 </tr>
                 <?php
-                    $sql="SELECT * FROM patient_clinical_reports";
+                    $sql="SELECT * FROM patient_clinical_reports ORDER BY date, patient_id, drug_name";
                     $result=mysqli_query($connection,$sql);
                     if($result){
                         while($row=mysqli_fetch_assoc($result)){
@@ -103,25 +102,29 @@ include "../../config/connection.php";
                             $route=$row['route'];
                             $frequency=$row['frequency'];
                             echo '
-                              <th>'.$patient_cr_id.'</th>
                               <td>'.$patient_id.'</td>
                               <td>'.$date.'</td>
                               <td>'.$drug_name.'</td>
                               <td>'.$dosage.'</td>
                               <td>'.$route.'</td>
                               <td>'.$frequency.'</td>
-                              <th>
-                                <button id="btn-update" class="btn btn-primary">
+                              <td>
+                                <button id="btn-view" class="btn">
+                                  <a href="consultant_patient_clinical_reports_view.php?update-id='.$patient_cr_id.'" class="text-light">
+                                    View
+                                    </a>
+                                </button>
+                                <button id="btn-update" class="btn">
                                   <a href="consultant_patient_clinical_reports_update.php?update-id='.$patient_cr_id.'" class="text-light">
                                     Update
                                   </a>
                                 </button>
-                                <button id="btn-delete" class="btn btn-danger">
+                                <button id="btn-delete" class="btn">
                                   <a href="consultant_patient_clinical_reports_delete.php?delete-id='.$patient_cr_id.'" class="text-light">
                                     Delete
                                   </a>
                                 </button>
-                              </th>
+                              </td>
                             </tr>
                             ';
                         }
