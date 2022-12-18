@@ -1,0 +1,211 @@
+.left{
+    position:absolute ;
+    left: 4%;
+    top: 20%;
+
+
+}
+
+.reg-img{
+    width: 400px;
+    height: 500px;
+}
+
+
+
+.description-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    /* width: 40%;
+    border-radius: 5px; */
+
+    margin-top: 8.8%;
+    margin-left: 35%;
+    background: #D7F0ED;
+    border-radius: 30px;
+    display:flex;
+    padding: 2%;
+    gap:5%;
+
+
+
+
+
+position: absolute;
+width: 50%;
+height: 20%;
+
+
+
+
+
+
+
+  }
+  .description-card2{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+   
+
+  margin-top: 25%;
+  margin-left: 35%;
+    background: #D7F0ED;
+    border-radius: 30px;
+    display:flex;
+    padding: 2%;
+    gap:5%;
+
+
+
+
+
+position: absolute;
+width: 50%;
+height: 25%;
+
+
+
+
+
+
+
+  }
+
+  .details{
+    color: #006296;
+  }
+
+  .paragraph{
+ 
+    font-style: normal;
+  
+  
+
+
+
+
+  
+
+position: absolute;
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+
+color: #006296;
+
+
+  }
+
+.heading{ 
+
+position: absolute;
+width:670px;
+
+top: 30%;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 30px;
+text-align: center;
+
+color: #006296;
+
+
+  }
+
+
+
+.age-between-btn{
+  
+box-sizing: border-box;
+top:400%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+padding: 17.5px 15px;
+gap: 10px;
+left: 70px;
+position: absolute;
+width: 254px;
+height: 55.3px;
+
+
+background: #FFFFFF;
+border: 2px solid #308C83;
+border-radius: 30px;
+
+
+
+
+
+
+  }
+
+
+.age-above-btn{
+  box-sizing: border-box;
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+padding: 17.5px 15px;
+gap: 10px;
+box-sizing: border-box;
+top:400%;
+position: absolute;
+width: 254px;
+height: 55.3px;
+left: 450px;
+
+background: #FFFFFF;
+border: 2px solid #308C83;
+border-radius: 30px;
+
+}
+
+
+.age-fnt{
+ 
+
+width: 224px;
+height: 36px;
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 36px;
+top: 20%;
+text-align: center;
+
+color: #308C83;
+
+
+}  
+
+.bottom{
+   
+    position:fixed;
+    bottom: 0;
+    display:table-cell;
+    vertical-align:middle;
+    background-color:#006296;
+    color: #FFFFFF;
+    font-size: 10px;
+    overflow: hidden;
+    width:100%;
+    height: 60px;
+    text-align:center;
+    line-height: 1em;
+    left: 0%;
+}
+.bottom p{
+    left: 35%;
+}
