@@ -84,7 +84,7 @@ main{
     margin-right:30px;
  }
 .cards-2{
-    display:flex;
+    display:inherit;
     grid-template-columns:repeat(2,1fr);
     grid-gap:2.5rem ;
     margin-top: 1rem;
@@ -94,72 +94,45 @@ main{
     display: table;
     justify-content: space-between;
     background: #D7F0ED;
-    padding: 2rem;
+    padding:5px;
     border: 1px;
+    margin-bottom: 2rem;
     border-radius: 20px;
  }
  .title {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items:center;
+    justify-content:left;
     padding: 15px 10px;
     border-bottom: 2px solid #999;
  }
- .update-btn{
-    margin-left: 30px;
-    text-decoration: none;
-    background-color: #F7FFFF;
-    display: block;
-    color:#006296;
-    font-weight: 700;
-    border:2px solid #006296;
-   padding: 7px 15px;
-    border-radius: 8px;
-    font-size: 0.75rem;
-    text-transform: capitalize;
-    letter-spacing: 0.5px;
-    text-align: center;
-
-}
-.update-btn:hover{
-    background: #006296;
-    cursor: pointer;
-    color:white;
-}
- table {
-   padding: 10px;
-}
-
-th,
-td {
-   text-align: left;
-   padding: 15px;
-}
-.row{
-    display: grid;
-}
-.list{
-    padding: 1rem;
+ .list{
+    padding: 0;
 
 }
 .line{
+    margin-top: 10px;
     margin-bottom: 1rem;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #D7F0ED;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     border-radius: 30px;
     cursor: pointer;
-    transition: all 0.3s;
 
 }
-.line:hover{
-    box-shadow: 0 0 0.8rem rgba(0,0,0,0.3);
-}
-.name{
-    font-size: 20px;
+
+h3.name,h4.name{
+   
     color: #006296;
+    line-height: 30px;
+    padding-bottom: 1rem;
+}
+h4{
+    color: #9b9d9d;
+    text-align: center;
     line-height: 30px;
     padding-bottom: 1rem;
 }
@@ -182,9 +155,15 @@ color: #006296;
 
 }
 
-.profile img{
-     object-fit: cover;
-}
+.profile{
+    display: flex;
+    align-items: center;
+
+ }
+ .profile img{
+    border-radius: 50%;
+
+ }
 .hospital .details{
     margin-left: 15px;
     line-height: 1.5;
@@ -192,8 +171,40 @@ color: #006296;
 
 
 }
-.btn{
-    text-decoration:none;
-    justify-content: left;
-}
+table {
+   
+    padding: 10px;
+ }
+ 
+ th,
+ td {
+    text-align: left;
+    padding-right: 40px;
+ }
 
+a.create-btn{
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    background-color: #F7FFFF;
+    display: block;
+    width:200px;
+    color:#006296;
+    font-weight: 700;
+    border:2px solid #006296;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+   
+
+}
+a.create-btn:hover{
+    background: #006296;
+    cursor: pointer;
+    color:white;
+}

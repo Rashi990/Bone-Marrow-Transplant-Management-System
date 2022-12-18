@@ -70,11 +70,41 @@
    padding-right: 50px;
 }
 
-
+main{
+  margin-top:30px;
+  margin-bottom:30px;
+  padding: 2rem 1.5rem;
+  background: #f1f5f9;
+  min-height: calc(90vh - 90px);
+  border: 0px;
+  border-radius: 1rem;
+  margin-right:30px;
+}
+.cards-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-gap:8rem ;
+  margin-top: 1rem;
+  color: #006296;
+}
+.card-single-2{
+  display: table;
+  justify-content: space-between;
+  background: #D7F0ED;
+  padding: 2rem;
+  border: 1px;
+  border-radius: 20px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 10px;
+  border-bottom: 2px solid #999;
+}
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 .main-box{
-  margin-left: 300px;
   margin-top: 50px;
 }
 .wrapper{
@@ -164,4 +194,23 @@ header .current-date{
 }
 .days li:not(.active):hover::before{
   background: #f2f2f2;
+}
+.cal{
+  background-color: #D7F0ED;
+  width: 30%;
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 20px;
+  font-weight: bold;
+  color: #006296;
+  cursor: pointer;
+}
+table {
+  padding: 10px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 15px;
 }

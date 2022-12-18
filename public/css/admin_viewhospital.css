@@ -127,7 +127,7 @@ a.create-btn:hover{
     text-align: center;
     background-color: #F7FFFF;
     display: block;
-    width:60px;
+    width:80px;
     color:#FF0404;
     font-weight: 700;
     border:2px solid #FF0404;
@@ -152,26 +152,26 @@ table{
     color: #006296;
     margin: 25px 0;
     font-size: 0.9em;
-    width:fit-content;
+    width:auto;
     font-family: sans-serif;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-table thead tr {
+
+
+table th{
+    text-align: left;
     background-color: #009879;
     color: #ffffff;
-    text-align: left;
-    padding: 10px 20px;
-
-}
-table th{
     padding: 10px 20px;
 }
 table td{
+    text-align: center;
     display:table-cell;
     padding: 2px 3px;
 }
 
 table tbody tr {
+    padding: 10px;
     border-bottom: 0.5px solid #dddddd;
 }
 

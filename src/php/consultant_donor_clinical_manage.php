@@ -76,7 +76,7 @@ include "../../config/connection.php";
       </div>
       <div class="middle">
           <button class="add" type="button" name="button">
-            <a href="consultant_donor_clinical_form.php">+ Add New Clinical Record</a>
+            <a href="consultant_donor_clinical_form.php">+ Add New Record</a>
           </button>
           <div class="mid-bottom">
               <table>
@@ -103,14 +103,14 @@ include "../../config/connection.php";
                             $route=$row['route'];
                             $frequency=$row['frequency'];
                             echo '
-                              <th>'.$donor_cr_id.'</th>
+                              <td>'.$donor_cr_id.'</td>
                               <td>'.$donor_id.'</td>
                               <td>'.$date.'</td>
                               <td>'.$drug_name.'</td>
                               <td>'.$dosage.'</td>
                               <td>'.$route.'</td>
                               <td>'.$frequency.'</td>
-                              <th>
+                              <td>
                                 <button id="btn-update">
                                   <a href="consultant_donor_clinical_reports_update.php?update-id='.$donor_cr_id.'" class="text-light">
                                     Update
@@ -121,7 +121,7 @@ include "../../config/connection.php";
                                     Delete
                                   </a>
                                 </button>
-                              </th>
+                              </td>
                             </tr>
                             ';
                         }

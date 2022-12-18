@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="stylesheet" href="../../public/css/admin_profile_page.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLBMTS</title>
+</head>
+<body>
+    <div class="main-content">
+        <header>
+            <h2>
+                Profile Details
+            </h2>
+            <div class="search-wrapper">
+                <span class='bx bx-search'></span>
+                <input type="search" placeholder="search here">
+            </div>
+    
+           
+    
+            <div class="box-icon">
+                <div class="item">
+                    <span class="material-icons">notifications</span>
+                </div>
+                <div class="item">
+                    <span class="material-icons">chat_bubble</span>
+                </div>
+                
+            </div>
+           
+            
+            <div class="user-wrapper">
+                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+                <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
+            </div>
+        </header>
+    
+        <main>
+
+            <div class="cards-2">
+                <div class="card-single-2">
+                    <div class="list">
+                        <div class="line">
+                            <div class="hospital">
+                                <div class="profile">
+                                    <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="80px" height="80px" >
+                                </div>
+                                <div class="details">
+                                    <table>
+                                        <td><h3 class="name"> Imal Upalakshitha</h3></td>
+                                        <td><h4 class="name"> Maharagama</h4></td>
+                                        <td><h4 class="name"> 23 yr.</h4></td>
+                                        <td> <a href="#" class="create-btn"> Edit Profile </a>
+                                        </td>
+                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-single-2">
+                    <div class="title">
+                        <h3>Personal Details</h3>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>   First Name : </td>
+                                <td>Malsha
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>   Last Name : </td>
+                                <td>Samadhika
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>   Full Name : </td>
+                                <td>Malsha Samadhika
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>   Address :</td>
+                                <td>No 57, Pahalamulla ,Karawanella
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>   Gender : </td>
+                                <td> Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>   Tele.No : </td>
+                                <td> 077-225547
+                                </td>
+                            </tr>
+                </div>
+                </div>
+           
+        </main>
+   
+    </div>
+</body>
+</html>
+

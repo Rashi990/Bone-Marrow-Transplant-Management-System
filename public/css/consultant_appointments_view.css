@@ -142,21 +142,3 @@ abbr{
   padding: 10px 50px;
   border-radius: 10px;
 }
-
-th{
-  font-size: 18px;
-}
-
-td{
-  text-align: center;
-  padding: 5px 15px;
-}
-
-#view{
-  border: 1px solid #006296;
-  background: #fff;
-  color: #006296;
-  border-radius: 10px;
-  width: 50px;
-  height: 25px;
-}

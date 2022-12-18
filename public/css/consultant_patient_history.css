@@ -127,32 +127,61 @@ abbr{
   justify-content: space-between;
 }
 
-.pd{
-  flex:35%;
+.pt{
+  flex:25%;
   margin: 20px;
   background: #bde4e0;
   padding: 10px 50px;
   border-radius: 10px;
 }
 
-.ph{
-  flex: 65%;
+.pm{
+  flex: 60%;
   margin: 20px;
   background: #bde4e0;
   padding: 10px 50px;
   border-radius: 10px;
 }
 
-th{
-  font-size: 18px;
+.pa{
+  flex: 15%;
+  margin: 20px;
+  background: #bde4e0;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+.red{
+  color:#FF0404;
+}
+
+.blue{
+  color: #007AFA;
 }
 
 td{
-  text-align: center;
-  padding: 5px 15px;
+  padding: 5px 10px;
 }
 
 #view{
+  border: 1px solid #006296;
+  background: #fff;
+  color: #006296;
+  border-radius: 10px;
+  width: 50px;
+  height: 25px;
+}
+
+#edit{
+  border: 1px solid #006296;
+  background: #fff;
+  color: #006296;
+  border-radius: 10px;
+  width: 50px;
+  height: 25px;
+}
+
+#add{
   border: 1px solid #006296;
   background: #fff;
   color: #006296;
