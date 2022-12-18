@@ -60,6 +60,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])
            $result2 = mysqli_query($connection, $sql2);
            if ($result2) {
            	 header("Location: admin_signup.php?success=Your account has been created successfully");
+				header("Location: admin_dashboard.php?");
 	         exit();
            }else {
 	           	header("Location: admin_signup.php?error=unknown error occurred&$user_data");
