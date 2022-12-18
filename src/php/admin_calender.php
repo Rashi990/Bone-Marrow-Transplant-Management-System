@@ -51,8 +51,10 @@ if (!(isset($_SESSION['user_name'])))
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
         </header>
-    </div>
- <div class="main-box">
+        <main>
+          <div class="cards-2">
+            <div class="card-single-2">
+            <div class="main-box">
  <div class="wrapper">
       <header>
         <p class="current-date">December 19 2022</p>
@@ -108,9 +110,29 @@ if (!(isset($_SESSION['user_name'])))
       </div>
     </div>
  </div>
-    
-    
+            </div>
+            <div class="card-single-2">
+              <div class="title">
+              <h3>Activities</h3>
+              </div>
+                  <table>
+                    <tr>
+                      <th> Thursday,<br>
+                      December 19 th
+                    </th>
+                    </tr>
+                    <tr>
+                      <td> Upcoming Stock expiration </td>
+                    </tr>
+                    <tr>
+                      <td>You have 12 Pending donor request to accept or reject </td>
+                    </tr>
+                  </table>    
+            </div>
+          </div>
+
+ 
+  </main>
+ </div>
   </body>
-</html>
-</body>
 </html>
