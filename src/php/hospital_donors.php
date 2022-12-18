@@ -10,4 +10,4 @@ if (!isset($_SESSION['user_name']) && !isset($_SESSION['hospital_name']) )
 <?php require_once('hospital_navbar.php'); ?>
 
 <?php include('../../public/html/hospital_donors.html'); ?>
-<?php require_once('hospital_footer.php'); ?>
+<!--<?php require_once('hospital_footer.php'); ?>-->

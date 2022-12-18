@@ -27,5 +27,6 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
  </body>
  </html>
 
-<?php include('../../public/html/hospital_matchings.html'); ?>
-<!--<?php require_once('hospital_footer.php'); ?>-->
+
+<?php include('../../public/html/hospital_donor_reports.html'); ?>
+<?php require_once('hospital_footer.php'); ?>

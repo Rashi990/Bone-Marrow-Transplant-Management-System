@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_reports.css?v=2">
     <title>Hospital - Reports</title>
 </head>
 <body>
+
+    <div class="search">
+        <div class="search-bar">
+          <span class="material-icons">search</span>
+          <input type="search" placeholder="search here">
+        </div>
+    </div>
+
+    <div class="board">
+
+        <!--Section1-->
+        <div class="data">
+            <form class="form1">
+
+                <div class="sbar">
+                    <input type="search" name="search" value="search"> <button>Search</button>
+                </div>
+
+                <div class="chart">
+                    <h3>2022 Details</h3>
+                    <img src="../../public/images/pie.png" class="image">
+                    <img src="../../public/images/bar.png" class="image">
+                </div>
+
+            </form>
+            
+        </div>
+
+        <!--Report Types-->
+        <div class="reports">
+            <div class="types">
+                <h3>Select Report Type</h3>
+                <a href="../../src/php/hospital_patient_reports.php">Patient Reports</a>
+                <a href="../../src/php/hospital_donor_reports.php">Donor Reports</a>
+            </div>
+        </div>
+            
+      
+    </div>
+    
+    
+    
+    </div>
     
 </body>
 </html>

@@ -4,6 +4,48 @@ body{
     background-color: #F7FFFF;
 }
 
+.search{
+    display: flex;
+    margin-left: 250px;
+    padding-top: 15px;
+    justify-content: center;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+
+.search-bar span{
+    display: inline-block;
+    padding: 5px;
+    font-size:14px ;
+ }
+ 
+ .search-bar input{
+    height: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+ }
+
+.search-bar span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.search-bar .Loggedin{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px 20px;
+    width: 80%;
+}
+
 .board{
     position: absolute;
     margin-left: 240px;
@@ -13,6 +55,7 @@ body{
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    background-color: #F1F5F9;
 }
 
 .sec1{
@@ -20,7 +63,7 @@ body{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    background-color: #97acaa;
+    background-color: #bde4e0;
     color: #006296;
     width: 45%;
     border: none;
@@ -42,8 +85,13 @@ body{
     width: 30%;
     border: none;
     border-radius: 20px;
-    background-color: #bae6d4;
-    align-items: flex-start;
+    background-color: #F7FFFF;
+    height: 40px;
+    color: #006296;
+    font-weight: bold;
+    text-align: center;
+    line-height: 10px;
+    cursor: pointer;
 }
 
 .count .box:hover{
@@ -52,11 +100,11 @@ body{
 
 .charts{
     margin: 0 10px 20px 10px;
-    padding: 10px;
+    padding: 20px;
     border: none;
     border-radius: 20px;
-    background-color: #bae6d4; 
-    height: 450px;
+    background-color: #F7FFFF; 
+    height: 400px;
     text-align: center;
 }
 
@@ -64,10 +112,36 @@ body{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
+.perc{
+    margin: 10px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #006296;
+    display: flex;
+    flex-direction: column;
+}
+.perc:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.perc h2{
+    text-align: center;
+}
+
+.per{
+    width: 30%;
+    height: 40%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
 .sec2{
     margin-top: 20px;
     padding: 10px;
-    background-color: #97acaa;
+    background-color: #bde4e0;
     width: 50%;
     border: none;
     border-radius: 20px;
@@ -77,9 +151,9 @@ body{
     margin: 10px;
     float: right;
     width: 25%;
-    color: #F7FFFF;
+    color: #006296;
     font-weight: bold;
-    background-color: #024c74;
+    background-color: #F7FFFF;
     text-decoration: none;
     border: 1px solid #006296;
     border-radius: 20px;
@@ -89,15 +163,15 @@ body{
 }
 
 .sec2 .list:hover{
-    background-color: #030303;
-    color: #bae6d4;
+    background-color: #006296;
+    color: #F7FFFF;
 }
 
 .sec2 .content{
     margin: 80px 10px 10px 10px;
     width: 91%;
     color: #006296;
-    background-color: #bae6d4;
+    background-color: #bde4e0;
     text-decoration: none;
     border: none;
     border-radius: 20px;
@@ -113,7 +187,7 @@ body{
 
 .sec2 .content .session{
     margin: 10px;
-    background-color: #79b6ac;
+    background-color: #F7FFFF;
     color: #006296;
     border: none;
     border-radius: 20px;
