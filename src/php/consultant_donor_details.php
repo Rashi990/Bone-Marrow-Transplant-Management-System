@@ -106,10 +106,9 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
           <div class="rbottom">
             <div class="main">
               <div class="pd">
-                <h3 align="center">Patient Details</h3>
-                <p>Hospital Name: <?php echo $hospital_name ?></p>
-                <p>Patient ID: <?php echo $patient_id ?></p>
-                <p>Patient Name: <?php echo $patient_name ?></p>
+                <h3 align="center">Donor Details</h3>
+                <p>Donor ID: <?php echo $patient_id ?></p>
+                <p>Donor Name: <?php echo $patient_name ?></p>
                 <p>Gender: <?php echo $gender ?></p>
                 <p>Age: 26</p>
                 <p>Blood Group: <?php echo $blood_group ?></p>

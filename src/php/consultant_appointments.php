@@ -43,7 +43,10 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
         <div class="right">
           <div class="rtop">
             <div class="empty">
-              <p>Appointments</p>
+              <div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="search" placeholder="search here">
+              </div>
             </div>
             <div class="profile">
               <abbr title="notifications">
@@ -75,7 +78,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               </abbr>
               <abbr title="Welcome!">
                 <div class="greet">
-                  <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+                  <h3 class="greet-text">Welcome! Dr.<?php echo $_SESSION['consultant_name'];?></h3>
                 </div>
               </abbr>
               <abbr title="Profile">
@@ -90,7 +93,9 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
             </div>
           </div>
           <div class="rbottom">
-            <?php include('../../public/html/consultant_appointments.html'); ?>
+            <div class="main">
+              <?php include('../../public/html/consultant_appointments.html'); ?>
+            </div>
           </div>
         </div>
       </div>

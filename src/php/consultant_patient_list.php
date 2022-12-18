@@ -4,7 +4,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 {
   include '../../config/connection.php';
 
-  $sql="SELECT * FROM patient WHERE patient_id=1";
+  $sql="SELECT * FROM patient";
   $result=mysqli_query($connection,$sql);
   if( $result){
     while($rows = mysqli_fetch_assoc($result)){
@@ -12,6 +12,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
       $patient_name=$rows['patient_name'];
       $gender=$rows['gender'];
       $blood_group=$rows['blood_group'];
+      $date_of_birth=$rows['date_of_birth'];
       $hospital_id=$rows['hospital_id'];
     }
   }
@@ -105,58 +106,80 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
           </div>
           <div class="rbottom">
             <div class="main">
-              <div class="pd">
-                <h3 align="center">Patient Details</h3>
-                <p>Hospital Name: <?php echo $hospital_name ?></p>
-                <p>Patient ID: <?php echo $patient_id ?></p>
-                <p>Patient Name: <?php echo $patient_name ?></p>
-                <p>Gender: <?php echo $gender ?></p>
-                <p>Age: 26</p>
-                <p>Blood Group: <?php echo $blood_group ?></p>
-                <p>HLA Antigen Type: <?php echo $hla_antigen ?></p>
-                <p>HLA Allele Family: <?php echo $hla_allele_family ?></p>
-                <p>HLA Second Type: <?php echo $hla_2nd_type ?></p>
-                <p>HLA Third Type: <?php echo $hla_3rd_type ?></p>
-                <p>HLA Fourth Type: <?php echo $hla_4th_type ?></p>
-                <p>HLA Fifth Type: <?php echo $hla_5th_type ?></p>
-              </div>
               <div class="ph">
-                <h3 align="center">Details of Diseases</h3>
+                <h3 align="center">Patient List</h3>
                 <table align="center">
                   <tr>
-                    <th>Problems</th>
-                    <th>Medications</th>
-                    <th>Tests</th>
-                    <th>Reports</th>
+                    <th>Patient ID</th>
+                    <th>Patient Name</th>
+                    <th>Hospital Name</th>
+                    <th>Date of Birth</th>
+                    <th>Gender</th>
+                    <th>Blood Group</th>
+                    <th>Action</th>
                   </tr>
                   <tr>
-                    <td>Diabetes</td>
-                    <td>Metfomin</td>
-                    <td>FBS</td>
+                    <td><?php echo $patient_id ?></td>
+                    <td><?php echo $patient_name ?></td>
+                    <td><?php echo $hospital_name ?></td>
+                    <td><?php echo $date_of_birth ?></td>
+                    <td><?php echo $gender ?></td>
+                    <td><?php echo $blood_group ?></td>
                     <td>
                       <button type="button" name="button" id="view">View</button>
                     </td>
                   </tr>
                   <tr>
-                    <td>Chest Pain</td>
-                    <td>Atrova</td>
-                    <td>Chest X-ray</td>
+                    <td><?php echo $patient_id ?></td>
+                    <td><?php echo $patient_name ?></td>
+                    <td><?php echo $hospital_name ?></td>
+                    <td><?php echo $date_of_birth ?></td>
+                    <td><?php echo $gender ?></td>
+                    <td><?php echo $blood_group ?></td>
                     <td>
                       <button type="button" name="button" id="view">View</button>
                     </td>
                   </tr>
                   <tr>
-                    <td>Kidney Stone</td>
-                    <td>Amoxillin</td>
-                    <td>CT Scan</td>
+                    <td><?php echo $patient_id ?></td>
+                    <td><?php echo $patient_name ?></td>
+                    <td><?php echo $hospital_name ?></td>
+                    <td><?php echo $date_of_birth ?></td>
+                    <td><?php echo $gender ?></td>
+                    <td><?php echo $blood_group ?></td>
                     <td>
                       <button type="button" name="button" id="view">View</button>
                     </td>
                   </tr>
                   <tr>
-                    <td>Knee Pain</td>
-                    <td>Anillin</td>
-                    <td>MRI Scan</td>
+                    <td><?php echo $patient_id ?></td>
+                    <td><?php echo $patient_name ?></td>
+                    <td><?php echo $hospital_name ?></td>
+                    <td><?php echo $date_of_birth ?></td>
+                    <td><?php echo $gender ?></td>
+                    <td><?php echo $blood_group ?></td>
+                    <td>
+                      <button type="button" name="button" id="view">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><?php echo $patient_id ?></td>
+                    <td><?php echo $patient_name ?></td>
+                    <td><?php echo $hospital_name ?></td>
+                    <td><?php echo $date_of_birth ?></td>
+                    <td><?php echo $gender ?></td>
+                    <td><?php echo $blood_group ?></td>
+                    <td>
+                      <button type="button" name="button" id="view">View</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><?php echo $patient_id ?></td>
+                    <td><?php echo $patient_name ?></td>
+                    <td><?php echo $hospital_name ?></td>
+                    <td><?php echo $date_of_birth ?></td>
+                    <td><?php echo $gender ?></td>
+                    <td><?php echo $blood_group ?></td>
                     <td>
                       <button type="button" name="button" id="view">View</button>
                     </td>
