@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.board{
+    background-color: #F1F5F9;
+}
+
+.logout{
+    background-color: #bde4e0;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout h1{
+    color: #006296;
+}
+
+

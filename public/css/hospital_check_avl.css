@@ -1,0 +1,217 @@
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.head h1{
+    position: absolute;
+    display: flex;
+    margin-left: 260px;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
+}
+
+.search{
+    display: flex;
+    margin-left: 400px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+
+.search-bar span{
+    display: inline-block;
+    padding: 5px;
+    font-size:14px ;
+ }
+ 
+ .search-bar input{
+    height: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+ }
+
+.search-bar span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.dates{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 30px;
+    width: 80%;
+    background-color: #F1F5F9;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content{
+    margin-left: 250px;
+ }
+ header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
+ }
+ header h2{
+   padding-right: 20%;
+    color: #4f4d4d;
+
+ }
+ header label span{
+    font-size: 1.7rem;
+    padding-left: 1rem;
+
+ }
+ .search-wrapper{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 40px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+ .search-wrapper span{
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size:1.5rem ;
+ }
+ .search-wrapper input{
+    height: 100%;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+ }.user-wrapper{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+ }
+ .user-wrapper img{
+    border-radius: 50%;
+    margin-right: 1rem;
+ }
+
+ .box-icon{
+    display: flex;
+    font-size: 2rem;
+    justify-content:space-between;
+ }
+.box-icon .item{
+   padding-right: 50px;
+}
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+.main-box{
+  margin-left: 300px;
+  margin-top: 50px;
+}
+.wrapper{
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+header .icons{
+  display: flex;
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+header .icons span:hover{
+  background: #f2f2f2;
+}
+header .current-date{
+  color: #006296;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #006296;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background: #9B59B6;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
