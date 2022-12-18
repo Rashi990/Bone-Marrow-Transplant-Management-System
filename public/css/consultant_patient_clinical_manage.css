@@ -206,7 +206,8 @@ tr:nth-child(even){
   text-decoration: none;
   font-size: 20px;
   padding: 8px;
-  margin: 0 10px;
+  margin: 0 2px;
+  width: 80px;
   border: none;
   border-radius: 5px;
 }
@@ -217,7 +218,8 @@ tr:nth-child(even){
   text-decoration: none;
   font-size: 20px;
   padding: 8px;
-  margin: 0 10px;
+  margin: 0 2px;
+  width: 80px;
   border: none;
   border-radius: 5px;
 }
@@ -227,5 +229,21 @@ tr:nth-child(even){
 }
 
 #btn-delete:hover{
+  opacity: .7;
+}
+
+#btn-view{
+  background: green;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px;
+  margin: 0 2px;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+}
+
+#btn-view:hover{
   opacity: .7;
 }
