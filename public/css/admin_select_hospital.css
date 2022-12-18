@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
-:root{
-    font-size: 100%;
-    background: #F7FFFF;
-    font-size: 16px;
-    line-height: 1.5;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 @media screen and (min-width:900px) {
     body{
-        padding: 0;
-        margin:0;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-    
+        min-height: 100vh;
+        width: 100%;
+        background: #F7FFFF;
     }
 }
 .main-content{
@@ -34,6 +31,10 @@
     padding-left: 1rem;
 
  }
+ .right{
+   display:table-cell;
+   padding-left: 300px;
+}
  .search-wrapper{
     border: 1px solid #ccc;
     border-radius: 30px;
@@ -75,11 +76,69 @@
 .right{
     display:table-cell;
     padding-left: 300px;
+ }
+ .list{
+    padding: 1rem;
+
+}
+.line{
+    margin-top: 10px;
+    margin-bottom: 1rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D7F0ED;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    cursor: pointer;
 
 }
 
+h3.name,h4.name{
+   
+    color: #006296;
+    line-height: 30px;
+    padding-bottom: 1rem;
+}
+h4{
+    color: #9b9d9d;
+    text-align: center;
+    line-height: 30px;
+    padding-bottom: 1rem;
+}
+.content{
+    font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+color: #006296;
+}
+.content p{
+    font-size:0.8rem;
+    line-height: 30px;
 
+}
+
+.hospital{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.profile i{
+    font-size: 3rem;
+     object-fit: cover;
+}
+.hospital .details{
+    margin-left: 15px;
+    line-height: 1.5;
+    text-transform: capitalize;
+
+
+}
 a.create-btn{
+    text-decoration: none;
     text-align: center;
     background-color: #F7FFFF;
     display: block;
@@ -87,7 +146,6 @@ a.create-btn{
     color:#006296;
     font-weight: 700;
     border:2px solid #006296;
-    margin: 2rem 2rem;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0.5rem;
@@ -96,6 +154,7 @@ a.create-btn{
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+   
 
 }
 a.create-btn:hover{
@@ -103,19 +162,29 @@ a.create-btn:hover{
     cursor: pointer;
     color:white;
 }
-.update-btn{
+table {
+    width: 100%;
+    padding: 10px;
+ }
+ 
+ th,
+ td {
+    text-align: left;
+    padding-right: 50px;
+ }
+ .update-btn{
     background-color: #F7FFFF;
-    display: block;
+    display: inherit;
     width:60px;
     color:#006296;
     font-weight: 700;
     border:2px solid #006296;
-   padding: 8px 20px;
+    padding:18px;
     border-radius: 8px;
     font-size: 0.75rem;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
     text-align: center;
+    text-decoration: none;
 
 }
 .update-btn:hover{
@@ -123,62 +192,4 @@ a.create-btn:hover{
     cursor: pointer;
     color:white;
 }
-.delete-btn{
-    text-align: center;
-    background-color: #F7FFFF;
-    display: block;
-    width:60px;
-    color:#FF0404;
-    font-weight: 700;
-    border:2px solid #FF0404;
-    padding: 8px 20px;
-    border-radius: 8px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-
-}
-.delete-btn:hover{
-    background: #FF0404;
-    cursor: pointer;
-    color:white;
-}
-a{
-    text-decoration: none;
-    color: #006296;
-}
-table{
-    border-collapse: collapse;
-    color: #006296;
-    margin: 25px 0;
-    font-size: 0.9em;
-    width:fit-content;
-    font-family: sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-    padding: 10px 20px;
-
-}
-table th{
-    padding: 10px 20px;
-}
-table td{
-    display:table-cell;
-    padding: 2px 3px;
-}
-
-table tbody tr {
-    border-bottom: 0.5px solid #dddddd;
-}
-
-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
+ 

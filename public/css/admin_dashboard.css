@@ -24,7 +24,7 @@
 .sidebar{
     position: fixed;
     height: 100%;
-    width: 240px;
+    width: 230px;
     background: #308C83;
 }
 .sidebar .logo-details{
@@ -36,6 +36,7 @@
 
 .sidebar .nav-link{
     margin-top: 40px;
+    margin-left: 18px;
 
 }
 .sidebar .nav-link li{
@@ -62,7 +63,7 @@
 }
  .sidebar .nav-link li:last-child{
 position: absolute;
-bottom: 4rem;
+bottom: 5rem;
 width: 100%;
  }
  .sidebar .nav-link li a i{
@@ -73,10 +74,12 @@ width: 100%;
  }
 
  .main-content{
+   
     margin-left: 250px;
  }
  header{
     display:grid;
+    position:sticky;
     grid-template-columns: 300px 600px auto auto;
     align-items: center;
     padding: 5px;
@@ -132,6 +135,7 @@ width: 100%;
 }
 main{
    margin-top:30px;
+   margin-bottom:30px;
    padding: 2rem 1.5rem;
    background: #f1f5f9;
    min-height: calc(90vh - 90px);

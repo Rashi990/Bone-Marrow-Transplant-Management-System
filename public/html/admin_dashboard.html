@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/css/admin_dashboard.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500;1,700&display=swap" rel="stylesheet">
     <title>SLBTMS</title>
 </head>
@@ -17,50 +17,52 @@
      <ul class="nav-link">
         <li>
             <a href="../../src/php/admin_dashboard.php">
-                <i class='bx bx-detail'></i>
                 <span class="link_name">Dashboard</span>
             </a>
         </li>
         <li>
             <a href="../../src/php/admin_viewsession.php">
-                <i class='bx bx-detail'></i>
                 <span class="link_name">Campaign</span>
             </a>
         </li>
         <li>
             <a href="../../src/php/admin_calender.php">
-                <i class='bx bx-calendar'></i>
                 <span class="link_name">Calendar</span>
             </a>
         </li>
         <li>
             <a href="../../src/php/admin_viewdonor.php">
-                <i class="bx bx-list-ul"></i>
-                <span class="link_name">Donor</span>
+                <span class="link_name">Donors</span>
             </a>
         </li>
         <li>
             <a href="../../src/php/admin_viewhospital.php">
-                <i class="bx bx-pie-chart-alt-2"></i>
                 <span class="link_name">Hospital</span>
             </a>
         </li>
         <li>
             <a href="../../src/php/admin_viewstock.php">
-                <i class="bx bx-coin-stack"></i>
                 <span class="link_name">stock</span>
             </a>
         </li>
         <li>
             <a href="../../src/php/admin_viewrequest.php">
-                <i class="bx bx-book-alt"></i>
                 <span class="link_name">Request</span>
+            </a>
+        </li>
+        <li>
+            <a href="../../src/php/admin_viewrequest.php">
+                <span class="link_name">Tests</span>
+            </a>
+        </li>
+        <li>
+            <a href="../../src/php/admin_viewrequest.php">
+                <span class="link_name">Generate Reports</span>
             </a>
         </li>
             <li>
                 <a href="../../src/php/home.php">
-                    <i class="bx bx-log-out"></i>
-                    <span class="link_name">Log out</span>
+                    <span class="material-icons">logout</span>
                 </a>
             </li>
      </ul>
@@ -69,7 +71,7 @@
     <!-- header -->
 
 <div class="main-content">
-        <header>
+        <header >
             <h2>
                 Dashboard
             </h2>
@@ -82,10 +84,10 @@
     
             <div class="box-icon">
                 <div class="item">
-                    <i class='bx bxs-bell'></i>
+                    <span class="material-icons">notifications</span>
                 </div>
                 <div class="item">
-                    <i class='bx bxs-conversation'></i>
+                    <span class="material-icons">chat_bubble</span>
                 </div>
                 
             </div>
@@ -144,57 +146,59 @@
         <div class="cards-2">
             <div class="card-single-2">
                 <div class="title">
-                    <h3>Remaining Donor Request</h3>
+                    <h3>Pending Donor Request</h3>
                     <a href="#" class="btn">View All</a>
                 </div>
                 <table>
                     <tr>
-                        <th>Name</th>
-                        <th>School</th>
-                        <th>Amount</th>
-                        <th>Option</th>
+                        <th>Donor Name</th>
+                        <th>Hospital</th>
+                        <th>Status</th>
+                        <th>Test Result</th>
                     </tr>
                     <tr>
-                        <td>John Doe</td>
-                        <td>St. James College</td>
-                        <td>$120</td>
+                        <td>Amila kumara</td>
+                        <td>Colombo Hospital</td>
+                        <td style="color:#38fa11 ;">Qualified</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
                     <tr>
-                        <td>John Doe</td>
-                        <td>St. James College</td>
-                        <td>$120</td>
+                        <td>Aruni siriwardena</td>
+                        <td>Colombo Hospital</td>
+                        <td style="color:#fa1111 ;">Disqualified</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
                     <tr>
-                        <td>John Doe</td>
-                        <td>St. James College</td>
-                        <td>$120</td>
+                        <td>Amila kumara</td>
+                        <td>Colombo Hospital</td>
+                        <td style="color:#38fa11 ;">Qualified</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
                     <tr>
-                        <td>John Doe</td>
-                        <td>St. James College</td>
-                        <td>$120</td>
+                        <td>Amila kumara</td>
+                        <td>Colombo Hospital</td>
+                        <td style="color:#38fa11 ;">Qualified</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
                     <tr>
-                        <td>John Doe</td>
-                        <td>St. James College</td>
-                        <td>$120</td>
+                        <td>Amila kumara</td>
+                        <td>Colombo Hospital</td>
+                        <td style="color:#38fa11 ;">Qualified</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
                     <tr>
-                        <td>John Doe</td>
-                        <td>St. James College</td>
-                        <td>$120</td>
+                        <td>Aruni siriwardena</td>
+                        <td>Colombo Hospital</td>
+                        <td style="color:#fa1111 ;">Disqualified</td>
                         <td><a href="#" class="btn">View</a></td>
                     </tr>
                 </table>
             </div>
         </div>
-
+        
     </main>
-</div>   
+   
+</div> 
+ 
 </body>
 </html>

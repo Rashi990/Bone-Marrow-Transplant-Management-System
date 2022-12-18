@@ -36,4 +36,4 @@ if(isset($_POST['submit']) )
 }
 ?>
 
- <?php require_once('admin_footer.php');?>
+ <!-- <?php require_once('admin_footer.php');?> -->
