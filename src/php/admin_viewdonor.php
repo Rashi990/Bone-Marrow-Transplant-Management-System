@@ -10,7 +10,7 @@ if (!(isset($_SESSION['user_name'])))
 }
 ?>
 
-<?php require_once('admin_footer.php');?>
+<!-- <?php require_once('admin_footer.php');?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@ if (!(isset($_SESSION['user_name'])))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Donor</title>
+    <title>View Donors</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewdonor.css">
 </head>
 <body>
@@ -54,11 +54,14 @@ if (!(isset($_SESSION['user_name'])))
     </div>
     
 <div class="right">
-    
-    <a href="admin_adddonor.php" class="create-btn"> + Add Donor </a>
+<nav>
+        <ul>
+        <li><a class="active" href="#">view Donor Details</a> </li>
+        <li><a href="../../src/php/admin_accept_pending_donor.php">Accept Pending Donors</a></li>
+      </ul>
+    </nav>
 
-  <table>
-        <thead>
+  <table class="list">
         <tr>
         <th class="table-head">
       Donor ID
@@ -76,9 +79,6 @@ if (!(isset($_SESSION['user_name'])))
       Operation
       </th>
         </tr>
-        </thead>
-       <tbody>
-
         <?php 
         $sql="select * from `donor`";
         $result=mysqli_query($connection,$sql);
@@ -95,18 +95,16 @@ if (!(isset($_SESSION['user_name'])))
         <td>'.$blood. '</td>
         <td>'.$tele. '</td>
         <td>'.$address. '</td>  
-        <td><a href="admin_adddonor.php?" class="update-btn"> edit
+        <td><a href="admin_adddonor.php?" class="update-btn">edit
         </a></td>
-        <td><a href="admin_deletedonor.php? deleteid='.$id.'"><button class="delete-btn" > delete
-       </button></a></td>   
+        <td><a href="admin_deletedonor.php? deleteid='.$id.'"><button class="delete-btn" >delete
+       </button></a></td>
     </tr>';
 
             }
         }
         
         ?>
-        
-       </tbody>
       
        </table>
     </div>

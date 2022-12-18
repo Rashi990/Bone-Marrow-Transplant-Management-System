@@ -24,7 +24,7 @@
 .sidebar{
     position: fixed;
     height: 100%;
-    width: 240px;
+    width: 230px;
     background: #308C83;
 }
 .sidebar .logo-details{
@@ -36,6 +36,7 @@
 
 .sidebar .nav-link{
     margin-top: 40px;
+    margin-left: 18px;
 
 }
 .sidebar .nav-link li{
@@ -134,6 +135,7 @@ width: 100%;
 }
 main{
    margin-top:30px;
+   margin-bottom:30px;
    padding: 2rem 1.5rem;
    background: #f1f5f9;
    min-height: calc(90vh - 90px);

@@ -10,4 +10,4 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['email']) ))
 require_once('admin_sidebar.php');
 ?>
 <!-- <?php require_once('admin_footer.php'); ?>    -->
-<?php include('../../public/html/admin_select_hospital.html'); ?>
+<?php include('../../public/html/admin_accept_pending_donor.html'); ?>
