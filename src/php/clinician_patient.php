@@ -24,7 +24,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
             <a class="hi" href="clinician_calendar.php">Calendar</a>
             <a class="hi-selected">Patient</a>
             <a class="hi" href="clinician_donor.php">Donor</a>
-            <a class="hi" href="clinician_reports.php">Match</a>
+            <a class="hi" href="clinician_match.php">Match</a>
 
             <div class="logout">
               <abbr title="Logout">
@@ -40,6 +40,12 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
         </div>
         <div class="right">
           <div class="rtop">
+            <div class="empty">
+              <div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="search" placeholder="search here">
+              </div>
+            </div>
             <div class="profile">
               <abbr title="notifications">
                 <a href="../../public/html/consultant_notifications.html">
@@ -59,9 +65,18 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
                   </div>
                 </a>
               </abbr>
+              <abbr title="Home">
+                <a href="consultant_home.php">
+                  <div class="icon">
+                    <span class="material-icons">
+                      home
+                    </span>
+                  </div>
+                </a>
+              </abbr>
               <abbr title="Welcome!">
                 <div class="greet">
-                  <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['clinician_name'];?></h3>
+                  <h3 class="greet-text">Welcome! Dr.<?php echo $_SESSION['clinician_name'];?></h3>
                 </div>
               </abbr>
               <abbr title="Profile">
