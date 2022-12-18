@@ -46,7 +46,11 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
         <div class="right">
           <div class="rtop">
             <div class="empty">
-              <p>Sri Lanakan Bone Marrow Transplant Management System</p>
+              <p></p>
+              <!--<div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="search" placeholder="search here">
+              </div>-->
             </div>
             <div class="profile">
               <abbr title="Notifications">
@@ -69,7 +73,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               </abbr>
               <abbr title="Welcome!">
                 <div class="greet">
-                  <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+                  <h3 class="greet-text">Welcome! Dr.<?php echo $_SESSION['consultant_name'];?></h3>
                 </div>
               </abbr>
               <abbr title="Profile">
@@ -84,128 +88,130 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
             </div>
           </div>
           <div class="rbottom">
-            <div class="banner">
-              <div class="phara">
-                <p>This is a phara. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <button type="button" name="button">Read More</button>
-              </div>
-            </div>
-            <div class="cases">
-              <a href="">
-              <div class="case">
-                <div class="name">
-                  <span class="material-symbols-rounded">
-                    healing
-                  </span>
-                  Primary Care
-                </div>
-                <div class="descript">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <div class="main">
+              <div class="banner">
+                <div class="phara">
+                  <p>Bone marrow is the primary source of pluripotent stem cells that give rise to all hemopoietic cells (blood cells) including lymphocytes. As a part of the lymphatic system, it is the major organ for B cell maturation and gives rise to the precursor cells of the thymic lymphocytes.
+                  </p>
+                  <button type="button" name="button">Read More</button>
                 </div>
               </div>
-              </a>
-              <a href="">
-              <div class="case">
-                <div class="name">
-                  <span class="material-symbols-rounded">
-                    emergency
-                  </span>
-                  Emergency Cases
-                </div>
-                <div class="descript">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
-              </div>
-              </a>
-              <a href="">
-              <div class="case">
-                <div class="name">
-                  <span class="material-symbols-rounded">
-                    calendar_apps_script
-                  </span>
-                  Online Appoinments
-                </div>
-                <div class="descript">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <div class="cases">
+                <a href="">
+                <div class="case">
+                  <div class="name">
+                    <span class="material-symbols-rounded">
+                      healing
+                    </span>
+                    Primary Care
+                  </div>
+                  <div class="descript">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </div>
                 </div>
                 </a>
-              </div>
-            </div>
-            <div class="banner2">
-              <div class="phara2">
-                <p>This is a phara. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <button type="button" name="button">Read More</button>
-              </div>
-            </div>
-            <div class="read-m">
-              <div class="read">
-                <div class="pic">
-                  <span class="material-symbols-outlined">
-                    sick
-                  </span>
+                <a href="">
+                <div class="case">
+                  <div class="name">
+                    <span class="material-symbols-rounded">
+                      emergency
+                    </span>
+                    Emergency Cases
+                  </div>
+                  <div class="descript">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </div>
                 </div>
-                <div class="topic">
-                  Disease-Specific Indications and Outcomes
-                </div>
-                <div class="desc">
-                  <br>Find the latest references, outcomes, and referral timing guidelines by disease. Access patient-friendly handouts.
-                  <br>
-                </div>
-                <div class="but1">
-                  <a href="consultant_disease.php">Browse All Diseases</a><br>
-                  <select id="d1" name="disease" onchange="selectDisease();">
-                    <option selected="selected" disabled=disabled>Select the Disease</option>
-                    <option value="AML-Adult">AML - Adult</option>
-                    <option value="AML-Pediatric">AML-Pediatric</option>
-                    <option value="ALL-Adult">ALL-Adult</option>
-                    <option value="ALL-Pediatric">ALL-Pediatric</option>
-                    <option value="MDS">MDS</option>
-                    <option value="CML">CML</option>
-                    <option value="CLL">CLL</option>
-                    <option value="NHL">NHL</option>
-                    <option value="HodgkinLymphoma">Hodgkin Lymphoma</option>
-                    <option value="MultipleMyeloma">Multiple Myeloma</option>
-                    <option value="SevereAplasticAnemia&MarrowFailure">Severe Aplastic Anemia & Marrow Failure</option>
-                    <option value="SickleCellDisease">Sickle Cell Disease</option>
-                    <option value="ImmuneDeficiencyDiseases">Immune Deficiency Diseases</option>
-                    <option value="InheritedMetabolicDisorders">Inherited Metabolic Disorders</option>
-                    <option value="Thalassemia">Thalassemia</option>
-                    <option value="OtherDiseases">Other Diseases</option>
-                    <option value="MultipleSclerosis">Multiple Sclerosis</option>
-                    <option value="SystemicSclerosis">Systemic Sclerosis</option>
-                  </select>
+                </a>
+                <a href="consultant_calendar.php">
+                <div class="case">
+                  <div class="name">
+                    <span class="material-symbols-rounded">
+                      calendar_apps_script
+                    </span>
+                    Online Appoinments
+                  </div>
+                  <div class="descript">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </div>
+                  </a>
                 </div>
               </div>
-              <div class="read">
-                <div class="pic">
-                  <span class="material-symbols-outlined">
-                    rheumatology
-                  </span>
+              <div class="banner2">
+                <div class="phara2">
+                  <p>There are two categories of bone marrow tissue: red marrow and yellow marrow. Most of the bone marrow during birth to early adolescence is red marrow while the red marrow is replaced with yellow with age.
+                  </p>
+                  <button type="button" name="button">Read More</button>
                 </div>
-                <div class="topic">
-                  HLA Today
+              </div>
+              <div class="read-m">
+                <div class="read">
+                  <div class="pic">
+                    <span class="material-symbols-outlined">
+                      sick
+                    </span>
+                  </div>
+                  <div class="topic">
+                    Disease-Specific Indications and Outcomes
+                  </div>
+                  <div class="desc">
+                    <br>Find the latest references, outcomes, and referral timing guidelines by disease. Access patient-friendly handouts.
+                    <br>
+                  </div>
+                  <div class="but1">
+                    <a href="consultant_disease.php">Browse All Diseases</a><br>
+                    <select id="d1" name="disease" onchange="selectDisease();">
+                      <option selected="selected" disabled=disabled>Select the Disease</option>
+                      <option value="AML-Adult">AML - Adult</option>
+                      <option value="AML-Pediatric">AML-Pediatric</option>
+                      <option value="ALL-Adult">ALL-Adult</option>
+                      <option value="ALL-Pediatric">ALL-Pediatric</option>
+                      <option value="MDS">MDS</option>
+                      <option value="CML">CML</option>
+                      <option value="CLL">CLL</option>
+                      <option value="NHL">NHL</option>
+                      <option value="HodgkinLymphoma">Hodgkin Lymphoma</option>
+                      <option value="MultipleMyeloma">Multiple Myeloma</option>
+                      <option value="SevereAplasticAnemia&MarrowFailure">Severe Aplastic Anemia & Marrow Failure</option>
+                      <option value="SickleCellDisease">Sickle Cell Disease</option>
+                      <option value="ImmuneDeficiencyDiseases">Immune Deficiency Diseases</option>
+                      <option value="InheritedMetabolicDisorders">Inherited Metabolic Disorders</option>
+                      <option value="Thalassemia">Thalassemia</option>
+                      <option value="OtherDiseases">Other Diseases</option>
+                      <option value="MultipleSclerosis">Multiple Sclerosis</option>
+                      <option value="SystemicSclerosis">Systemic Sclerosis</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="desc">
-                    Remove barriers to patient and family member HLA typing at diagnosis. Get the critical info you need to make treatment decisions.
-                </div>
-                <div class="but2">
-                  <a href="consultant_discover.php">Discover How</a>
+                <div class="read">
+                  <div class="pic">
+                    <span class="material-symbols-outlined">
+                      rheumatology
+                    </span>
+                  </div>
+                  <div class="topic">
+                    HLA Today
+                  </div>
+                  <div class="desc">
+                      Remove barriers to patient and family member HLA typing at diagnosis. Get the critical info you need to make treatment decisions.
+                  </div>
+                  <div class="but2">
+                    <a href="consultant_discover.php">Discover How</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="bottom">
+      <!--<div class="bottom">
         <div class="bottom-input">
           <span>© 2022 SLBMTMS. All rights reserved.</span>
         </div>
         <div class="bottom-input">
           <span>Terms and conditions</span>
         </div>
-      </div>
+      </div>-->
     </div>
   </body>
 </html>

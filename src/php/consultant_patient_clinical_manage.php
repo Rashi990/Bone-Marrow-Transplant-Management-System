@@ -59,7 +59,7 @@ include "../../config/connection.php";
             </abbr>
             <abbr title="Welcome!">
               <div class="greet">
-                <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+                <h3 class="greet-text">Welcome! Dr.<?php echo $_SESSION['consultant_name'];?></h3>
               </div>
             </abbr>
             <abbr title="Profile">
@@ -76,10 +76,10 @@ include "../../config/connection.php";
       </div>
       <div class="middle">
           <button class="add" type="button" name="button">
-            <a href="consultant_clinical_form.php">+ Add New Clinical Record</a>
+            <a href="consultant_clinical_form.php">+ Add New Record</a>
           </button>
           <div class="mid-bottom">
-              <table>
+              <table align="center">
                 <tr>
                   <th>Patient ID</th>
                   <th>Date</th>
@@ -116,7 +116,7 @@ include "../../config/connection.php";
                                 </button>
                                 <button id="btn-update" class="btn">
                                   <a href="consultant_patient_clinical_reports_update.php?update-id='.$patient_cr_id.'" class="text-light">
-                                    Update
+                                    Edit
                                   </a>
                                 </button>
                                 <button id="btn-delete" class="btn">
@@ -133,7 +133,6 @@ include "../../config/connection.php";
               </table>
           </div>
       </div>
-
       <div class="bottom">
         <div class="bottom-input">
           <span>© 2022 SLBMTMS. All rights reserved.</span>
