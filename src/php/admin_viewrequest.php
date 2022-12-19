@@ -54,7 +54,7 @@ if (!(isset($_SESSION['user_name']) ))
 <nav>
         <ul>
         <li><a class="active" href="#">Pending Donor Request</a> </li>
-        <li><a href="../../src/php/admin_view_hospital_request.php">Hospital Matching Request</a></li>
+        <li><a href="../../src/php/admin_view_hospital_request.php" > Hospital Matching Request </a></li>
       </ul>
     </nav>
     <div class="cards-2">
