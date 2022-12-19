@@ -93,7 +93,7 @@ if (!(isset($_SESSION['user_name'])))
            
             
             <div class="user-wrapper">
-                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+                <img src="../../public/images/donor_image.jpg" alt="profile_pictire" width="50px" height="50px" >
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
         </header>
