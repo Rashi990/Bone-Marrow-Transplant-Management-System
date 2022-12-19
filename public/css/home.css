@@ -76,8 +76,8 @@ body{
 
 .banner2-sec{
     background-color: #D7F0ED;
-    width: 80%;
-    height: 70vh;
+    width: 60%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,7 +96,7 @@ body{
 .banner-img{
     display: flex;
     width: 60%;
-    height: 40vh;
+    height: 35vh;
     margin: 30px auto;
 }
 

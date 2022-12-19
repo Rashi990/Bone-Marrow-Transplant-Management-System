@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2022 at 09:04 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- Generation Time: Dec 19, 2022 at 07:12 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,11 +41,22 @@ CREATE TABLE `bloodbank_reports` (
 
 CREATE TABLE `bloodbank_stock` (
   `sample_bid` int(11) NOT NULL,
-  `date` date NOT NULL,
+  `sample_owner_id` int(255) NOT NULL,
+  `hospital_id` int(11) NOT NULL,
+  `stored_date` date NOT NULL,
   `time` time NOT NULL,
   `arrival_time` time NOT NULL,
-  `expiry_date` date NOT NULL
+  `expiry_date` date NOT NULL,
+  `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bloodbank_stock`
+--
+
+INSERT INTO `bloodbank_stock` (`sample_bid`, `sample_owner_id`, `hospital_id`, `stored_date`, `time`, `arrival_time`, `expiry_date`, `status`) VALUES
+(1, 12, 2, '2022-12-19', '12:00:00', '02:00:00', '2022-12-26', 'Active'),
+(2, 13, 2, '2022-12-12', '12:00:00', '03:00:00', '2022-12-19', 'expired');
 
 -- --------------------------------------------------------
 
@@ -170,8 +181,7 @@ CREATE TABLE `donor` (
 --
 
 INSERT INTO `donor` (`donor_id`, `donor_name`, `telephone_no`, `email`, `address`, `date_of dirth`, `gender`, `id_number`, `marital_state`, `image`, `blood_group`, `user_name`, `password`) VALUES
-(1, 'Warami Nethunya', 762531489, 'wara@gmail.com', 'No.258, Gregory lake road, Nuwaraeliya', '2000-11-15', 'Female', '200015326923', 'Unmarried', '', 'B-', 'wara_00', '987'),
-(2, 'Nelsan Bandara', 115632489, 'nelson@gmail.com', '-', '1986-11-18', 'Male', '198612395633', 'Married', '', 'B+', 'nel123', '123');
+(1, 'Warami Nethunya', 762531489, 'wara@gmail.com', 'No.258, Gregory lake road, Nuwaraeliya', '2000-11-15', 'Female', '200015326923', 'Unmarried', '', 'B-', 'wara_00', '987');
 
 -- --------------------------------------------------------
 
@@ -211,8 +221,7 @@ CREATE TABLE `donor_hla_details` (
 --
 
 INSERT INTO `donor_hla_details` (`dh_id`, `donor_id`, `hla_antigen`, `hla_allele_family`, `hla_2nd_type`, `hla_3rd_type`, `hla_4th_type`, `hla_5th_type`) VALUES
-(1, 1, 'HLA-A', '02', '101', '01', '02', 'N'),
-(2, 2, 'HLA-B', '08', '01', '01', '01', 'L');
+(1, 1, 'HLA-A', '02', '101', '01', '02', 'N');
 
 -- --------------------------------------------------------
 
@@ -398,10 +407,13 @@ INSERT INTO `patient_hla_details` (`ph_id`, `patient_id`, `hla_antigen`, `hla_al
 
 CREATE TABLE `pending_donor` (
   `pending_donor_id` int(11) NOT NULL,
-  `pending_donor_name` varchar(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `second_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `telephone_no` int(10) NOT NULL,
   `address` varchar(255) NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `district` varchar(255) NOT NULL,
   `date_of_birth` date NOT NULL,
   `gender` varchar(255) NOT NULL,
   `id_number` int(12) NOT NULL,
@@ -411,6 +423,13 @@ CREATE TABLE `pending_donor` (
   `user_name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pending_donor`
+--
+
+INSERT INTO `pending_donor` (`pending_donor_id`, `first_name`, `second_name`, `email`, `telephone_no`, `address`, `city`, `district`, `date_of_birth`, `gender`, `id_number`, `marital_state`, `image`, `blood_group`, `user_name`, `password`) VALUES
+(1, 'Kamal', 'Vithanage', 'kmv12@gmail.com', 912563845, 'No.25,Main Road,Galle', 'Nagoda', 'Galle', '1988-05-12', 'Male', 2147483647, 'Married', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -657,7 +676,7 @@ ALTER TABLE `bloodbank_reports`
 -- AUTO_INCREMENT for table `bloodbank_stock`
 --
 ALTER TABLE `bloodbank_stock`
-  MODIFY `sample_bid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `sample_bid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `blood_bank`
@@ -753,7 +772,7 @@ ALTER TABLE `patient_hla_details`
 -- AUTO_INCREMENT for table `pending_donor`
 --
 ALTER TABLE `pending_donor`
-  MODIFY `pending_donor_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `pending_donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `session`
@@ -838,23 +857,6 @@ ALTER TABLE `transplant_request`
   ADD CONSTRAINT `tr3` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
---
--- Change  table `transplant_request` column 'date' into `stored_date`
---
-ALTER TABLE `bloodbank_stock` CHANGE `date` `stored_date` DATE NOT NULL;
-
---
--- Add a `status` column into table `transplant_request`
---
-ALTER TABLE `bloodbank_stock` ADD `status` VARCHAR(255) NOT NULL AFTER `expiry_date`;
-
-INSERT INTO `bloodbank_stock` (`sample_bid`, `stored_date`, `time`, `arrival_time`, `expiry_date`, `status`) VALUES ('1', '2022-12-19', '12:00:00', '02:00:00', '2022-12-26', 'Active');
-INSERT INTO `bloodbank_stock` (`sample_bid`, `stored_date`, `time`, `arrival_time`, `expiry_date`, `status`) VALUES ('2', '2022-12-12', '12:00:00', '03:00:00', '2022-12-19', 'expired');
-
-ALTER TABLE `bloodbank_stock` ADD `sample_owner_id` INT(255) NOT NULL AFTER `sample_bid`;
-ALTER TABLE `bloodbank_stock` ADD `hospital_id` INT NOT NULL AFTER `sample_owner_id`;
-UPDATE `bloodbank_stock` SET `sample_owner_id` = '12', `hospital_id` = '2' WHERE `bloodbank_stock`.`sample_bid` = 1;
-UPDATE `bloodbank_stock` SET `sample_owner_id` = '13', `hospital_id` = '2' WHERE `bloodbank_stock`.`sample_bid` = 2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
