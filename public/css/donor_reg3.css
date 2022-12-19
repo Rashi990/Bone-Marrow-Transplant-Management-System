@@ -162,6 +162,8 @@ border-radius: 12px;
 
 }
 
+
+
 .inpt p{
 
 position: absolute;
@@ -247,7 +249,7 @@ border-radius: 12px;
     display: flex;
     position: absolute;
     width: 15%;
-    height:5%;
+    height:4%;
     left:70%;
     top: 85%;
     margin-bottom: 30%;

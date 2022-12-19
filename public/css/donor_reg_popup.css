@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background:#cdeded ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+body{
+    width: 400px;
+    
+}
+
+
+.description-card .details{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: #006296;
+    z-index: 1;
+    display: none;
+
+}
+
+
+.description-card .paragraph{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background: #cdeded;
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.description-card .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #60f086;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.description-card.active .details{
+    display: block;
+
+} 
+
+.description-card.active .paragraph{
+
+
+
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.description-card{
+    /* pop up - 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 38px 73px;
+gap: 31px;
+top: 20%;
+left:20%;
+position: absolute;
+width: 652px;
+height: 363px;
+
+background: #cdeded;
+border-radius: 30px;
+background: #cdeded;
+transform:translate(-50%,-50%);
+width: 400px;
+text-align: center;
+
+
+}
+
+
+
+
+
+
+
+
