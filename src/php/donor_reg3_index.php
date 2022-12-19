@@ -39,7 +39,7 @@
                 <div class="frms">
     
                     <!--Login In form-->
-             <form action="../../src/php/donor_signup.php" class="logfrm" method="post">
+             <form action="../../src/php/donor_reg3.php" class="logfrm" method="post">
              <?php if (isset($_GET['error'])) {?>
             <p class="error"><?php echo ($_GET['error']); ?></p>
             <?php } ?>
@@ -55,7 +55,7 @@
                     </label>
                         <br><br>
     
-                            <input type="text" placeholder="Enter your Full Name here" name="fname" class="np">
+                            <input type="text" placeholder="Enter your Full Name here" name="fname" class="np" required>
                         <br>
                         <br>
 
@@ -64,7 +64,7 @@
                     </label>
                         <br><br>
         
-                            <input type="text" placeholder="Enter a Username here" name="username" class="np">
+                            <input type="text" placeholder="Enter your Last Name here" name="lname" class="np" required>
                           
                         <br>
                         <br>
@@ -75,7 +75,7 @@
                     </label>
                         <br><br>
         
-                            <input type="email" placeholder="Enter your Email here" name="email" class="np">
+                            <input type="email" placeholder="Enter your Email here" name="email" class="np" required>
                           
                         <br>
                         <br>
@@ -84,7 +84,7 @@
                     </label>
                         <br><br>
         
-                            <input type="tel"placeholder="Enter your Telephone Number here" name="tel" class="np">
+                            <input type="tel"placeholder="Enter your Telephone Number here" name="tel" class="np" required>
                           
                         <br>
                         <br>
@@ -93,7 +93,7 @@
                     </label>
                         <br><br>
         
-                            <input type="text"placeholder="Enter your Address here" name="address" class="np">
+                            <input type="text"placeholder="Enter your Address here" name="address" class="np"required>
                           
                         <br>
                         <br>
@@ -102,28 +102,76 @@
                     </label>
                         <br><br>
         
-                            <input type="text" placeholder="Enter your Nearest City Name here" name="city" class="np">
+                            <input type="text" placeholder="Enter your Nearest City Name here" name="city" class="np" required>
                           
                         <br>
                         <br>
                         <label class ="flp" >
+                           District
+                    </label>
+                        <br><br>
+        
+                            <input type="text" placeholder="Enter your District Name here" name="district" class="np" required>
+                          
+                        <br>
+                        <br>
+                        
+                        <label class ="flp" >
+                           Date of Birth
+                    </label>
+                        <br><br>
+        
+                            <input type="date" placeholder="Enter your date of birth here" name="dob" class="np" required >
+                          
+                        <br>
+                        <br>
+
+        
+                        <br>
+                        
+
+
+                        <label class ="flp" >
+                           NIC Number
+                    </label>
+                        <br><br>
+        
+                            <input type="text" placeholder="Enter your NIC Number here" name="nic" class="np" required>
+                          
+                        <br>
+                        <br>
+
+                        
+                        <label class ="flp" >
+                            Marital Status
+                    </label><br><br>
+                <div class="mf">
+                <input type="radio" id="amrd" name="marital" value="Married"> <label for="married">Married</label><br>
+                <input type="radio" id="nmrd" name="marital" value="Unmarried"> <label for="unmarried">Unmarried</label>
+                </div>
+                        <br><br><br>
+
+                   
+
+
+
+
+
+
+
+
+
+
+
+                        <label class ="flp" >
                             Gender
                     </label><br><br>
                 <div class="mf">
-                <input type="radio" id="male" name="male" value="Male"> <label for="male">Male</label><br>
-                <input type="radio" id="female" name="female" value="Female"> <label for="female">Female</label>
+                <input type="radio" id="male" name="gender" value="Male"> <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="Female"> <label for="female">Female</label>
                 </div>
                         <br><br><br>
-                        <label class ="flp" >
-                        Weight
-                    </label><br><br>
-                        
-        
-                            <input type="number" step="any" min="1"name="wt" class="wt1">
-                            <div class="measure1">kg</div>
-                        <br>
-                        
-                        <br>
+                    
                         
                         <br>
 
@@ -139,7 +187,7 @@
     
                           
                           
-                         <button class="request" name="request-btn" id="request-btn">
+                         <button class="request" name="create-btn" id="create-btn">
                               <span class="rt">Request</span>
                         </button>
                         
@@ -156,7 +204,7 @@
     </div>
     
 
-
+dfxc 
                 
     
                    <!-- <footer>

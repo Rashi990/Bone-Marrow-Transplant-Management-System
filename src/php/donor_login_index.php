@@ -67,7 +67,7 @@
                       <br> 
                       <br>
                       <br>
-
+<!--
                       <label for="re-check" class="remember">
                         
                         <input type="checkbox" class="rmb" name="re-check" id="re-check">
@@ -80,9 +80,9 @@
                         <a href="Verify_email.html">Forgot Password?</a>
                       </label>
 
-
-                      <br>
-                      <br>
+                -->
+                    
+                      
                       <br>
                       
                         <button class="login" name="login-btn" id="login-btn">
@@ -95,7 +95,7 @@
                 <br><br>
 
                 <div class="newacc">
-                    <p>Don't have an account?<a href="donor_signup.php"> Create Account</a></p>
+                    <p>Save a life by 3 steps <a href="donor_reg1_index.php">Click to Register</a></p>
                 </div>
 
                 <br>
