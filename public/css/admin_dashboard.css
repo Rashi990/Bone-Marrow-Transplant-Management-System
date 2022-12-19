@@ -37,7 +37,6 @@
 .sidebar{
    width: 230px;
    height: 100%;
-   margin: -6px;
    position: fixed;
    background-color: #308C83;
 }

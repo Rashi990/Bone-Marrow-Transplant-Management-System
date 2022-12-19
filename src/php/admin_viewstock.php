@@ -34,12 +34,13 @@ if (!(isset($_SESSION['user_name'])  ))
     
            
     
+            
             <div class="box-icon">
                 <div class="item">
-                    <i class='bx bxs-bell'></i>
+                    <span class="material-icons">notifications</span>
                 </div>
                 <div class="item">
-                    <i class='bx bxs-conversation'></i>
+                    <span class="material-icons">chat_bubble</span>
                 </div>
                 
             </div>
@@ -68,7 +69,7 @@ if (!(isset($_SESSION['user_name'])  ))
       </th><th class="table-head">
       Expire Date
       </th><th class="table-head">
-      Hospital Name
+      Hospital ID
       </th>
       <th class="table-head">
       status
