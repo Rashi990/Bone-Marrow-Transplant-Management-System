@@ -60,7 +60,7 @@ function loginUser($connection, $user_name, $pass)
                 $_SESSION['user_name'] = $row['user_name'];
                 $_SESSION['donor_id'] = $row['donor_id'];
                 $_SESSION['first_name'] = $row['first_name'];
-                header("Location: donor_home.php");
+                header("Location: ../../public/html/donor_clinical_history.html");
                 exit();
             } else {
                 header("location: donor_login_index.php?error=Incorrect Password");

@@ -79,13 +79,13 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
           </div>
           <div class="rbottom">
             <div class="session">
-                <a  class="box" href="../../public/html/consultant_patient_hla.html">
+                <a  class="box" href="../../src/php/clinician_view_donor_hla.php">
                   <div class="box">
                     <div class="image">
                       <img class="image" src="../../public/images/hla.jpg" alt="Hla Reports">
                     </div>
                     <div class="text">
-                      <h3>View Patient HLA Reports</h3>
+                      <h3>View Donor HLA </h3>
                     </div>
                   </div>
                 </a>
