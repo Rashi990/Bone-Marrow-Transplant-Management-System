@@ -838,6 +838,23 @@ ALTER TABLE `transplant_request`
   ADD CONSTRAINT `tr3` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
+--
+-- Change  table `transplant_request` column 'date' into `stored_date`
+--
+ALTER TABLE `bloodbank_stock` CHANGE `date` `stored_date` DATE NOT NULL;
+
+--
+-- Add a `status` column into table `transplant_request`
+--
+ALTER TABLE `bloodbank_stock` ADD `status` VARCHAR(255) NOT NULL AFTER `expiry_date`;
+
+INSERT INTO `bloodbank_stock` (`sample_bid`, `stored_date`, `time`, `arrival_time`, `expiry_date`, `status`) VALUES ('1', '2022-12-19', '12:00:00', '02:00:00', '2022-12-26', 'Active');
+INSERT INTO `bloodbank_stock` (`sample_bid`, `stored_date`, `time`, `arrival_time`, `expiry_date`, `status`) VALUES ('2', '2022-12-12', '12:00:00', '03:00:00', '2022-12-19', 'expired');
+
+ALTER TABLE `bloodbank_stock` ADD `sample_owner_id` INT(255) NOT NULL AFTER `sample_bid`;
+ALTER TABLE `bloodbank_stock` ADD `hospital_id` INT NOT NULL AFTER `sample_owner_id`;
+UPDATE `bloodbank_stock` SET `sample_owner_id` = '12', `hospital_id` = '2' WHERE `bloodbank_stock`.`sample_bid` = 1;
+UPDATE `bloodbank_stock` SET `sample_owner_id` = '13', `hospital_id` = '2' WHERE `bloodbank_stock`.`sample_bid` = 2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
