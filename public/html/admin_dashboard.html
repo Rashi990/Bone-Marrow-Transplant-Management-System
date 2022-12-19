@@ -14,53 +14,36 @@
         <div class="logo-details">
             <img src="../../public/images/logo.png" class="logo">
         </div>
-     <ul class="nav-link">
-        <li>
+     
             <a href="../../src/php/admin_dashboard.php">
+              
                 <span class="link_name">Dashboard</span>
             </a>
-        </li>
-        <li>
+     
             <a href="../../src/php/admin_viewsession.php">
                 <span class="link_name">Campaign</span>
             </a>
-        </li>
-        <li>
             <a href="../../src/php/admin_calender.php">
                 <span class="link_name">Calendar</span>
             </a>
-        </li>
-        <li>
             <a href="../../src/php/admin_viewdonor.php">
                 <span class="link_name">Donors</span>
             </a>
-        </li>
-        <li>
             <a href="../../src/php/admin_viewhospital.php">
                 <span class="link_name">Hospital</span>
             </a>
-        </li>
-        <li>
             <a href="../../src/php/admin_viewstock.php">
                 <span class="link_name">stock</span>
             </a>
-        </li>
-        <li>
             <a href="../../src/php/admin_viewrequest.php">
                 <span class="link_name">Request</span>
             </a>
-        </li>
-        <li>
-            <a href="../../src/php/admin_viewrequest.php">
+            <a href="../../src/php/admin_viewtesting.php">
                 <span class="link_name">Tests</span>
             </a>
-        </li>
-        <li>
-            <a href="../../src/php/admin_viewrequest.php">
+            <a href="../../src/php/admin_generatereport.php">
                 <span class="link_name">Generate Reports</span>
             </a>
-        </li>
-            <li>
                 <a href="../../src/php/home.php">
                     <span class="material-icons">logout</span>
                 </a>
@@ -94,7 +77,7 @@
            
             
             <div class="user-wrapper">
-                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+                <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
         </header>
@@ -194,6 +177,12 @@
                     </tr>
                 </table>
             </div>
+            <div class="cal">
+                <h2>Calender</h2>
+                <img src="../../public/images/calendar.png" class="calndr">
+              </div>
+        </div>
+       
         </div>
         
     </main>

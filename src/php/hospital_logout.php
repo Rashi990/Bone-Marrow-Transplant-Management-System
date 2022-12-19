@@ -3,6 +3,7 @@
 session_start();
 session_unset();
 session_destroy();
-header('Location: hospital_login.php');
+
+echo "<script type='text/javascript'>alert('Successfully loggedout!');</script>";
 
 ?>

@@ -75,8 +75,41 @@
 .right{
     display:table-cell;
     padding-left: 300px;
-
 }
+nav{
+    margin: 0px 20px;
+    margin-top: 30px;
+    height: 80px;
+    width: 700px;
+  }
+ nav ul{
+    float: right;
+    margin-right: 20px;}
+ 
+ 
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: #FFFFFF;
+    font-size: 17px;
+    padding: 4px 50px;
+    border-radius: 30px;
+    background: #006296;
+  }
+  a.active{
+    color: #006296;
+    font-weight: 400;
+    background: #FFFFFF;
+    transition: .5s;
+  }
+  a:hover{
+    color: #006296;
+    font-weight: 400;
+    background: #FFFFFF;
+  }
 
 
 a.create-btn{
@@ -85,7 +118,7 @@ a.create-btn{
     display: block;
     width:200px;
     color:#006296;
-    font-weight: 700;
+    font-weight: 600;
     border:2px solid #006296;
     margin: 2rem 2rem;
     padding-left: 0;
@@ -94,8 +127,8 @@ a.create-btn{
     padding-bottom: 0.5rem;
     border-radius: 8px;
     font-size: 0.75rem;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
+   
 
 }
 a.create-btn:hover{
@@ -110,12 +143,12 @@ a.create-btn:hover{
     color:#006296;
     font-weight: 700;
     border:2px solid #006296;
-   padding: 8px 20px;
+    padding: 8px 20px;
     border-radius: 8px;
     font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    text-transform: capitalize;
     text-align: center;
+    letter-spacing: 0.5px;
 
 }
 .update-btn:hover{
@@ -124,17 +157,17 @@ a.create-btn:hover{
     color:white;
 }
 .delete-btn{
-    text-align: center;
     background-color: #F7FFFF;
     display: block;
-    width:60px;
+    width:80px;
     color:#FF0404;
     font-weight: 700;
     border:2px solid #FF0404;
     padding: 8px 20px;
     border-radius: 8px;
     font-size: 0.75rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    text-align: center;
     letter-spacing: 0.5px;
 
 }
@@ -147,36 +180,37 @@ a{
     text-decoration: none;
     color: #006296;
 }
-table{
+table.list{
+    margin: 20px;
+    padding: 10px;
+    width: 96%;
     border-collapse: collapse;
-    color: #006296;
-    margin: 25px 0;
-    font-size: 0.9em;
-    width:fit-content;
-    font-family: sans-serif;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
+table.list th{
+    padding: 10px;
+    font-weight: bold;
     text-align: left;
-    padding: 10px 20px;
+    background-color: #009879;
+    color: #ebe7e7;
+}
+table.list tr{
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
 
-}
-table th{
-    padding: 10px 20px;
-}
-table td{
-    display:table-cell;
-    padding: 2px 3px;
-}
-
-table tbody tr {
-    border-bottom: 0.5px solid #dddddd;
+    color: #ebe7e7;
 }
 
-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+table.list td{
+    padding: 10px;
+    height: 25px;
+    font-size: 14px;
+    color: #006296;
+}
+
+table.list tr:nth-child(even){
+    background-color: #D7F0ED;
 }
 
 table tbody tr:last-of-type {

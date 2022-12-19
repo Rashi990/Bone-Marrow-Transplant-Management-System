@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  font-family: Poppins, sans-serif;
 }
 
 .hero{
@@ -15,19 +16,18 @@
 }
 
 .top{
-  flex: 10%;
+  flex: 15%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 100px;
   display: flex;
   align-items:space-between;
   overflow: hidden;
 }
 
 .bottom{
-  height: 60px;
   flex: 10%;
   background-color: white;
   padding: 20px;
@@ -38,6 +38,7 @@
   bottom: 0;
   overflow: hidden;
   background-color: #006296;
+  height: 60px;
   width: 100%;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .profile{
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
   float: right;
@@ -69,21 +70,13 @@ abbr{
 .greet-text{
   text-align:center;
   font-size: 16px;
-  color: gray;
+  color: black;
 }
 
 .profile .material-icons{
-  color: gray;
+  color: black;
   cursor: pointer;
   padding: 10px;
-}
-
-.profile .material-icons:hover{
-  color: black;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  border-bottom: none;
 }
 
 .rtop{
@@ -94,7 +87,7 @@ abbr{
 }
 
 .empty{
-  flex: 70%;
+  flex: 50%;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -104,11 +97,12 @@ abbr{
 .empty p{
   text-align: justify;
   font-size: 20px;
-  color:#888;
+  color:black;
   font-weight:bolder;
 }
 
 .middle{
+  flex: 85%;
   display: flex;
   flex-direction: column;
   padding: 30px;
@@ -136,24 +130,29 @@ h2{
   justify-content: center;
   align-items: center;
   height: 50px;
-  width: 20%;
-  font-size: 20px;
+  width: 13%;
+  font-size: 17px;
   margin: 20px;
-  margin-left: 20px;
+  margin-left: 180px;
   cursor: pointer;
   padding: 20px;
-  border: none;
+  border: 2px solid #006296;
   border-radius: 5px;
-  background: green;
+  background: White;
   position: absolute;
   top: 40px;
 }
 
 .add:hover{
-  opacity: .7;
+  background: #006296;
+}
+
+.add a:hover{
+  color: white;
 }
 
 .add a{
+  color: #006296;
   display: flex;
   height: 50px;
   width: 100%;
@@ -171,9 +170,9 @@ a{
   overflow-y: scroll;
   position: absolute;
   top: 130px;
-  bottom: 70px;
-  left: 50px;
-  right: 50px;
+  bottom: 80px;
+  left: 200px;
+  right: 200px;
 }
 
 table{
@@ -188,44 +187,95 @@ table{
 th{
   background: #308C83;
   color: white;
-  height: 60px;
+  height: 40px;
+  font-size: 18px;
 }
 
 tr{
   height: 50px;
+  font-size: 17px;
+  color: #006296;
+  font-weight: bold;
 }
 
 tr:nth-child(even){
   background: #DBFFFC;
-  color: #308C83;
+  color: #006296;
+  font-weight: bold;
 }
 
 #btn-update{
-  background: blue;
-  color: white;
+  background: white;
   text-decoration: none;
-  font-size: 20px;
-  padding: 8px;
-  margin: 0 10px;
-  border: none;
+  font-size: 15px;
+  margin: 0 2px;
+  width: 60px;
+  height: 30px;
+  border: 2px solid #006296;
   border-radius: 5px;
+}
+
+#btn-update a{
+  height: 30px;
+  width: 60px;
+  color: #006296;
+}
+
+#btn-update a:hover{
+  color: white;
 }
 
 #btn-delete{
-  background: red;
-  color: white;
+  background: white;
   text-decoration: none;
-  font-size: 20px;
-  padding: 8px;
-  margin: 0 10px;
+  font-size: 15px;
+  margin: 0 2px;
+  width: 60px;
+  height: 30px;
   border: none;
   border-radius: 5px;
+  border: 2px solid #FF0404;
 }
 
 #btn-update:hover{
-  opacity: .7;
+  color: white;
+  background: #006296;
+}
+
+#btn-delete a{
+  height: 50px;
+  color: #FF0404;
+}
+
+#btn-delete a:hover{
+  color: white;
 }
 
 #btn-delete:hover{
-  opacity: .7;
+  background: #FF0404;
+}
+
+#btn-view{
+  background: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 0 2px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid #308C83;
+}
+
+#btn-view a{
+  height: 50px;
+  color: #308C83;
+}
+
+#btn-view a:hover{
+  color: white;
+}
+
+#btn-view:hover{
+  background: #308C83;
 }

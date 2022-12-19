@@ -1,0 +1,144 @@
+*{
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items:space-between;
+  overflow: hidden;
+}
+
+.bottom{
+  flex: 10%;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items:space-between;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #006296;
+  height: 60px;
+  width: 100%;
+}
+
+.bottom-input{
+  width: 50%;
+  justify-content: center;
+  text-align:center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.profile{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-right: 15px;
+}
+
+abbr{
+  text-decoration: none;
+}
+
+.icon{
+  width:34px;
+  height:28px;
+}
+
+/*.greet{
+  display: flex;
+  justify-content: space-between;
+}*/
+
+.profile .material-icons{
+  color: black;
+}
+
+.greet-text{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 10px 0 2px;
+  height: 28px;
+}
+
+.rtop{
+  flex: 9.5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty{
+  flex: 70%;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.rbottom{
+  flex: 90.5%;
+  position:relative;
+  top: 0;
+  right: 0;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  margin: 30px;
+
+}
+
+.main{
+  background: #F1F5F9;
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pd{
+  flex:35%;
+  margin: 20px;
+  background: #bde4e0;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+.ph{
+  flex: 65%;
+  margin: 20px;
+  background: #bde4e0;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
