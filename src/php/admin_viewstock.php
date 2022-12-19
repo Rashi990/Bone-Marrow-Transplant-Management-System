@@ -34,12 +34,13 @@ if (!(isset($_SESSION['user_name'])  ))
     
            
     
+            
             <div class="box-icon">
                 <div class="item">
-                    <i class='bx bxs-bell'></i>
+                    <span class="material-icons">notifications</span>
                 </div>
                 <div class="item">
-                    <i class='bx bxs-conversation'></i>
+                    <span class="material-icons">chat_bubble</span>
                 </div>
                 
             </div>
@@ -56,8 +57,7 @@ if (!(isset($_SESSION['user_name'])  ))
     <a href="admin_addsample.php" class="create-btn"> + Add Sample
        </a>
 
-  <table>
-        <thead>
+  <table class="list">
         <tr>
         <th class="table-head">
       Sample ID
@@ -69,7 +69,7 @@ if (!(isset($_SESSION['user_name'])  ))
       </th><th class="table-head">
       Expire Date
       </th><th class="table-head">
-      Hospital Name
+      Hospital ID
       </th>
       <th class="table-head">
       status
@@ -78,9 +78,6 @@ if (!(isset($_SESSION['user_name'])  ))
       Operation
       </th>
         </tr>
-        </thead>
-       <tbody>
-
         <?php 
         $sql="select * from `bloodbank_stock`";
         $result=mysqli_query($connection,$sql);
@@ -109,9 +106,6 @@ if (!(isset($_SESSION['user_name'])  ))
         }
         
         ?>
-        
-       </tbody>
-      
        </table>
     </div>
     

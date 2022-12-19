@@ -7,7 +7,7 @@ body{
     /* width: 40%;
     border-radius: 5px; */
 
-    margin-top: 8.8%;
+    margin-top: 8%;
     margin-left: 22%;
     
     background: #D7F0ED;
@@ -17,7 +17,7 @@ body{
     gap:5%;
 position: absolute;
 width: 60%;
-height: 50%;
+height: 55%;
 
 
 
@@ -55,22 +55,16 @@ line-height: 48px;
 
   
 
-position: absolute;
 
 
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 30px;
+
 
 color: #006296;
-
 
   }
 
 .check1{
-    left: 400px;
+    left: 500px;
 
 
 
@@ -78,7 +72,7 @@ position: absolute;
 width: 326px;
 height: 29px;
 left: 20px;
-top: 100px;
+top: 150px;
 
 font-family: 'Poppins';
 font-style: normal;
@@ -98,18 +92,11 @@ color: #006296;
 .check2{
    
     align-items: right;
-
-
-
-
-
-
-
 position: absolute;
-width: 326px;
+width: 400px;
 height: 29px;
 left: 375px;
-top: 100px;
+top: 0px;
 
 font-family: 'Poppins';
 font-style: normal;
@@ -160,7 +147,7 @@ color: #006296;
 .pre-btn{
   
 box-sizing: border-box;
-top:600px;
+top:610px;
 display: flex;
 flex-direction: row;
 justify-content: center;
@@ -193,7 +180,7 @@ justify-content: center;
 padding: 17.5px 15px;
 gap: 10px;
 box-sizing: border-box;
-top:600px;
+top:610px;
 position: absolute;
 width: 100px;
 height: 55.3px;
@@ -225,6 +212,32 @@ color: #308C83;
 
 
 }  
+
+
+.fnt2{
+  
+ 
+    padding-top: none;
+    width: 224px;
+    height: 36px;
+    
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 36px;
+    top: 10%;
+    text-align: left;
+    
+    color: #308C83;
+    
+    
+    }  
+
+
+
+
 
 .bottom{
    

@@ -34,12 +34,13 @@ if (!(isset($_SESSION['user_name'])  ))
     
            
     
+           
             <div class="box-icon">
                 <div class="item">
-                    <i class='bx bxs-bell'></i>
+                    <span class="material-icons">notifications</span>
                 </div>
                 <div class="item">
-                    <i class='bx bxs-conversation'></i>
+                    <span class="material-icons">chat_bubble</span>
                 </div>
                 
             </div>
@@ -56,7 +57,7 @@ if (!(isset($_SESSION['user_name'])  ))
     <a href="admin_addhospital.php" class="create-btn"> + Add Hospital
        </a>
 
-  <table>
+  <table  class="list">
         <tr>
         <th class="table-head">
       Hospital ID
@@ -69,6 +70,12 @@ if (!(isset($_SESSION['user_name'])  ))
       Hospital Telephone No.
       </th><th class="table-head">
       Hospital Address
+      </th>
+      <th class="table-head">
+      Hospital Username
+      </th>
+      <th class="table-head">
+      Hospital Password
       </th>
       <th colspan="2" class="table-head">
       Operation
@@ -86,12 +93,17 @@ if (!(isset($_SESSION['user_name'])  ))
                 $email=$row['email'];
                 $tele=$row['telephone_no'];
                 $address=$row['address'];
+                $uname=$row['user_name'];
+                $password=$row['password'];
              echo '<tr>
         <td>'.$id. '</td>
         <td>'.$name. '</td>
         <td>'.$email. '</td>
         <td>'.$tele. '</td>
-        <td>'.$address. '</td>  
+        <td>'.$address. '</td> 
+        <td>'.$uname. '</td> 
+        <td>'.$password. '</td> 
+
         <td><a href="admin_addhospital.php?" class="update-btn"> edit
         </a></td>
         <td><a href="admin_deletehospital.php? deleteid='.$id.'" class="delete-btn" > delete

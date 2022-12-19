@@ -57,7 +57,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
         <div class="right">
           <div class="rtop">
             <div class="empty">
-              
+
             </div>
             <div class="profile">
               <abbr title="notifications">
@@ -121,6 +121,61 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                 <p>HLA Fifth Type: <?php echo $hla_5th_type ?></p>
               </div>
               <div class="ph">
+                <h3 align="center">Patient Medication Details</h3>
+                <table align="center">
+                  <tr>
+                    <th>Drug Name</th>
+                    <th>Dosage</th>
+                    <th>Route</th>
+                    <th>Frequency</th>
+                    <th>Operation</th>
+                  </tr>
+                  <tr>
+                    <td>Vermox</td>
+                    <td>200mg</td>
+                    <td>three times a day</td>
+                    <td>three days</td>
+                    <td>
+                      <button type="button" name="button" id="edit">Edit</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Vermox</td>
+                    <td>200mg</td>
+                    <td>three times a day</td>
+                    <td>three days</td>
+                    <td>
+                      <button type="button" name="button" id="edit">Edit</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Vermox</td>
+                    <td>200mg</td>
+                    <td>three times a day</td>
+                    <td>three days</td>
+                    <td>
+                      <button type="button" name="button" id="edit">Edit</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Vermox</td>
+                    <td>200mg</td>
+                    <td>three times a day</td>
+                    <td>three days</td>
+                    <td>
+                      <button type="button" name="button" id="edit">Edit</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Vermox</td>
+                    <td>200mg</td>
+                    <td>three times a day</td>
+                    <td>three days</td>
+                    <td>
+                      <button type="button" name="button" id="edit">Edit</button>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>

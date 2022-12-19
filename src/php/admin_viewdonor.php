@@ -35,12 +35,13 @@ if (!(isset($_SESSION['user_name'])))
     
            
     
+            
             <div class="box-icon">
                 <div class="item">
-                    <i class='bx bxs-bell'></i>
+                    <span class="material-icons">notifications</span>
                 </div>
                 <div class="item">
-                    <i class='bx bxs-conversation'></i>
+                    <span class="material-icons">chat_bubble</span>
                 </div>
                 
             </div>

@@ -364,3 +364,22 @@ abbr{
     margin: 0px 20px;
     width: 80%;
 }
+
+td{
+  padding: 5px 10px;
+  text-align: center;
+  color: #555;
+}
+
+#view{
+  border: 1px solid #006296;
+  background: #fff;
+  color: #006296;
+  border-radius: 10px;
+  width: 50px;
+  height: 25px;
+}
+
+th{
+  color: #006296;
+}
