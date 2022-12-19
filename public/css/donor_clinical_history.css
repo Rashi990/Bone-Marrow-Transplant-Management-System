@@ -1,0 +1,180 @@
+body{
+    background-color: #F7FFFE;
+}
+
+.doner-history-topic{
+    color:#006296;
+    position: absolute;
+     width: 246px; 
+    height: 36px;
+    left: 384px;
+    top: 59px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.container {
+    padding: 2px 16px;
+    margin-top: 115px;
+}
+
+.current-medication{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+    width: 215px;
+    height: 275px;
+    margin-top: 2%;
+    background: #D7F0ED;
+    border-radius: 30px;
+    padding: 3%;
+
+    margin-left: 338px;
+}
+
+.appointment-details{
+    display:flex;
+    justify-content: space-between;
+}
+
+.list li{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #006296;
+}
+
+.list p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+
+    color: #006296;
+}
+
+.donor-card-details{
+    margin-top:135px;
+}
+
+.current-medication h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1px;
+    text-align: center;
+    color: #006296;
+}
+
+.next-appointment h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1px;
+    color: #006296;
+}
+
+.next-appointment h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 7px;
+    color: #006296;
+    text-align: center;
+}
+
+.next-appointment{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+    height: 227px;
+    width:500px;
+    margin-top: 2%;
+    background: #D7F0ED;
+    border-radius: 30px;
+    padding: 2%;
+    
+}
+
+h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 33px;
+    color: #006296;
+    margin-left: 338px;
+}
+
+.donor-reports{
+    display:flex;
+    justify-content: space-between;
+}
+
+.reports{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+    width: 600px;
+    height: 275px;
+    margin-top: 2%;
+    background: #D7F0ED;
+    border-radius: 30px;
+    padding: 3%;
+
+    margin-left: 338px;
+}
+
+button {
+    width: 96px;
+    height: 38px; /* Green */
+    border: solid 1px #006296;
+    border-radius:30px;
+    color: white;
+    padding: 3px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: #006296;
+}
+
+table{
+    color: #006296;
+}
+
+.post-donations{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    /* width: 40%;
+    border-radius: 5px; */
+
+    color: #006296;
+    width: 289px;
+    height: 217px;
+    margin-top: 5%;
+    background: #D7F0ED;
+    border-radius: 30px;
+    padding: 2%;
+}
+.session-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 227px;
+    margin-top: 2%;
+    background: #D7F0ED;
+    border-radius: 30px;
+    display:flex;
+    padding: 2%;
+    gap:5%;
+}
+
+  

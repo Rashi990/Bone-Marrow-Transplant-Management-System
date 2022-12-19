@@ -148,6 +148,11 @@ border-radius: 30px;
   }
 
 
+  .age-between-btn:hover{
+    color: #308C83;
+  }
+
+
 .age-above-btn{
   box-sizing: border-box;
 
