@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.split-screen{
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+}
+.left{
+    margin-top: 0px;
+    height: 100vh;
+    width: 80%;
+    background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(../../public/images/about.jpg);
+    background-size:cover;
+}
+
+.left .img1{
+    margin-top: 0;
+}
+
+.right{
+   
+    justify-content: center;
+    align-content: center;
+}
+
+.left, .right{
+    display: flex;
+    flex-direction: column;
+}
+
+.right .con{
+    margin-bottom: 20px;
+    color: #006296;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.right .con p{
+    justify-content: center;
+    color: #006296;
+    background-color: #bde4e0;
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    line-height: 30px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register{
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    color: #308C83;
+    text-decoration: none;
+    border: 1px solid #308C83;
+    border-radius: 20px;
+    padding: 12px 30px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.register:hover{
+    color: #F7FFFF;
+    background-color: #308C83;
+}

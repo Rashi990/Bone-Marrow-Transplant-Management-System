@@ -8,7 +8,7 @@ body{
      width: 246px; 
     height: 36px;
     left: 384px;
-    top: 59px;
+    top: 60px;
 
     font-family: 'Poppins';
     font-style: normal;
@@ -26,9 +26,9 @@ body{
 .current-medication{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
-    width: 215px;
+    width: 600px;
     height: 275px;
-    margin-top: 2%;
+    margin-top: 0px;
     background: #D7F0ED;
     border-radius: 30px;
     padding: 3%;
@@ -96,9 +96,9 @@ body{
 .next-appointment{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
-    height: 227px;
+    height:270px;
     width:500px;
-    margin-top: 2%;
+    margin-top: 0%;
     background: #D7F0ED;
     border-radius: 30px;
     padding: 2%;
@@ -124,7 +124,7 @@ h1{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
     width: 600px;
-    height: 275px;
+    height: 340px;
     margin-top: 2%;
     background: #D7F0ED;
     border-radius: 30px;
@@ -159,9 +159,9 @@ table{
     border-radius: 5px; */
 
     color: #006296;
-    width: 289px;
-    height: 217px;
-    margin-top: 5%;
+    width: 500px;
+    height: 340px;
+    margin-top: 2%;
     background: #D7F0ED;
     border-radius: 30px;
     padding: 2%;
