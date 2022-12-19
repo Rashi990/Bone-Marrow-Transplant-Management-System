@@ -33,7 +33,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
 
             <div class="logout">
               <abbr title="Logout">
-                <a class="hi" href="home.php">
+                <a class="hi" href="consultant_logout.php">
                   <span class="material-symbols-rounded">
                     logout
                   </span>
@@ -87,7 +87,8 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
             <div class="main">
               <div class="banner2">
                 <div class="phara2">
-                  <p class="p2">This is a phara. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p class="p2">
+                    Bone marrow is the primary source of pluripotent stem cells that give rise to all hemopoietic cells (blood cells) including lymphocytes. As a part of the lymphatic system, it is the major organ for B cell maturation and gives rise to the precursor cells of the thymic lymphocytes.
                   </p>
                   <button type="button" name="button">Read More</button>
                 </div>
@@ -151,7 +152,8 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
               </div>
               <div class="banner">
                 <div class="phara">
-                  <p class="p2">This is a phara. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p class="p2">
+                    There are two categories of bone marrow tissue: red marrow and yellow marrow. Most of the bone marrow during birth to early adolescence is red marrow while the red marrow is replaced with yellow with age.
                   </p>
                   <button type="button" name="button">Read More</button>
                 </div>

@@ -8,7 +8,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Consultant Patient Page</title>
+    <title>Patient Page</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/clinician_patient.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
@@ -28,7 +28,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
 
             <div class="logout">
               <abbr title="Logout">
-                <a class="hi" href="consultant_login.php">
+                <a class="hi" href="consultant_logout.php">
                   <span class="material-icons">
                     logout
                   </span>

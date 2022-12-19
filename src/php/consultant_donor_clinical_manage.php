@@ -49,7 +49,7 @@ include "../../config/connection.php";
               </a>
             </abbr>
             <abbr title="Logout">
-              <a href="consultant_login.php">
+              <a href="consultant_logout.php">
                 <div class="icon">
                   <span class="material-icons">
                     logout

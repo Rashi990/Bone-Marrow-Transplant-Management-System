@@ -144,15 +144,50 @@ abbr{
 }
 
 td{
-  padding: 5px 10px;
   text-align: center;
+  padding: 2px 50px;
 }
 
-#edit{
-  border: 1px solid #006296;
-  background: #fff;
+#view{
+  background: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 0 2px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid #308C83;
+  color: #308C83;
+}
+
+#view a{
+  height: 50px;
+}
+
+#view:hover{
+  color: white;
+  background: #308C83;
+}
+
+#match{
+  background: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 0 2px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid #006296;
   color: #006296;
-  border-radius: 10px;
-  width: 50px;
-  height: 25px;
+}
+
+#match a{
+  height: 50px;
+}
+
+#match:hover{
+  color: white;
+  background: #006296;
 }

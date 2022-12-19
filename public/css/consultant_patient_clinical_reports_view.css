@@ -127,13 +127,13 @@ abbr{
   top: 52%;
   left: 50%;
   transform: translate(-50%, -52%);
-  color: white;
+  color: #555;
   width: 800px;
   height: auto;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 10px;
-  background: #308C83;
+  background: #bde4e0;
   display: flex;
   flex-direction: column;
   align-items: center;
