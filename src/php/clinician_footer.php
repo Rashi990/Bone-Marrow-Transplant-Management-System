@@ -1,0 +1,1 @@
+<?php include('../../public/html/clinician_footer.html'); ?>

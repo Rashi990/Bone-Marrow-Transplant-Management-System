@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    font-family: 'Poppins' sans-serif;
+    background-color: #F7FFFF;
+}
+
+.bottom{
+   
+    position:fixed;
+    bottom: 0;
+    display:table-cell;
+    vertical-align:middle;
+    background-color:#006296;
+    color: #FFFFFF;
+    font-size: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+    text-align:center;
+    line-height: 1em;
+}
+
+@media screen and (min-width:900px) {
+    .split-screen{
+        flex-direction: row;
+        height: 100vh;
+    }
+    .left, .right{
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+}

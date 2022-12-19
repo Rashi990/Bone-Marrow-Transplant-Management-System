@@ -56,7 +56,7 @@ if (!(isset($_SESSION['user_name'])  ))
     <a href="admin_addhospital.php" class="create-btn"> + Add Hospital
        </a>
 
-  <table>
+  <table  class="list">
         <tr>
         <th class="table-head">
       Hospital ID
