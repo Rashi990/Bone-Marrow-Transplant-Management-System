@@ -1,4 +1,4 @@
-<?php include('../../public/html/clinician_nav.html'); 
+<?php  
 require_once('clinician_footer.php');?>
 
 
