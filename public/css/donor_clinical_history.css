@@ -19,7 +19,8 @@ body{
 
 .container {
     padding: 2px 16px;
-    margin-top: 115px;
+    margin-top: 300px;
+    margin-left: 20px;
 }
 
 .current-medication{
