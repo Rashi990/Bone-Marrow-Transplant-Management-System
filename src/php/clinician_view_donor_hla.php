@@ -1,6 +1,6 @@
 <?php 
 require_once ("../../config/connection.php");
- include('../../public/html/clinician_nav.html'); 
+ 
 require_once('../../src/php/clinician_footer.php');
 
 //write the query to get data from users table
