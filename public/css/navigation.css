@@ -34,20 +34,20 @@ body{
 
 .login{
   float: right;
-  background-color: #FFFFFF;
+  background-color: #F7FFFF;
+  color: #308C83;
   border: 1px solid #308C83;
   border-radius: 20px;
   padding: 10px 20px;
   margin: 10px 20px;
   text-decoration: none;
-  color: #006296;
   font-weight: bold;
   transition: 0.5s;
 }
 
 .login:hover{
-  color: #0b0b0b;
-  background-color: #5fe4d7;
+  color: #F7FFFF;
+  background-color: #308C83;
 }
 
 .nav2{
