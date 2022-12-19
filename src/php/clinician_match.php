@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
+if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
 {
 ?>
 
@@ -8,7 +8,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Consultant Appointments</title>
+    <title>Match</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/consultant_appointments.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -30,7 +30,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 
             <div class="logout">
               <abbr title="Logout">
-                <a class="hi" href="consultant_login.php">
+                <a class="hi" href="consultant_logout.php">
                   <span class="material-symbols-rounded">
                     logout
                   </span>
@@ -78,7 +78,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               </abbr>
               <abbr title="Welcome!">
                 <div class="greet">
-                  <h3 class="greet-text">Welcome! Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+                  <h3 class="greet-text">Welcome! Dr.<?php echo $_SESSION['clinician_name'];?></h3>
                 </div>
               </abbr>
               <abbr title="Profile">
