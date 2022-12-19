@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.head h1{
+    position: absolute;
+    display: flex;
+    margin-left: 260px;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
+}
+
+.search{
+    display: flex;
+    margin-left: 280px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+
+.search-bar span{
+    display: inline-block;
+    padding: 5px;
+    font-size:14px ;
+ }
+ 
+ .search-bar input{
+    height: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+ }
+
+.search-bar span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.search-bar .Loggedin{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px 20px;
+    width: 80%;
+}
+
+.patients{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 30px;
+    background-color: #F1F5F9;
+    padding: 10px;
+    width: 80%;
+    height: 80vh;
+    border: none;
+    border-radius: 20px;
+}
+
+.patients h1{
+    color: #006296;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+table.list{
+    margin: 20px;
+    padding: 10px;
+    width: 96%;
+    border-collapse: collapse;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+table.list th{
+    background-color: #308C83;
+    color: #F7FFFF;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    height: 25px;
+}
+
+table.list td{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+    height: 25px;
+}
+
+table.list tr:nth-child(even){
+    background-color: #bde4e0;
+}
+
+table.list .new{
+    margin: 0px 20px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    border-radius: 10px;
+    padding: 10px 50px;
+    font-size: 14px;
+    transition: 0.5s;
+    float: right;
+}
+
+table.list .new:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+table.list .view{
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #009879;
+    border: 1px solid #009879;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+table.list .view:hover{
+    background-color: #009879;
+    color: #F7FFFF;
+}
+
+table.list .delete{
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #FF0404;
+    border: 1px solid #FF0404;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+table.list .delete:hover{
+    background-color: #FF0404;
+    color: #F7FFFF;
+}
+
+table.list .edit{
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+table.list .edit:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}

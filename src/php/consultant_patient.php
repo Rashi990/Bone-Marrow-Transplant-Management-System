@@ -42,7 +42,10 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
         <div class="right">
           <div class="rtop">
             <div class="empty">
-              <p>Patient</p>
+              <div class="search-bar">
+                <span class="material-icons">search</span>
+                <input type="search" placeholder="search here">
+              </div>
             </div>
             <div class="profile">
               <abbr title="notifications">
@@ -74,7 +77,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               </abbr>
               <abbr title="Welcome!">
                 <div class="greet">
-                  <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+                  <h3 class="greet-text">Welcome! Dr.<?php echo $_SESSION['consultant_name'];?></h3>
                 </div>
               </abbr>
               <abbr title="Profile">
@@ -90,7 +93,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
           </div>
           <div class="rbottom">
             <div id="session">
-              <a  class="box" href="consultant_patient_details.php">
+              <a  class="box" href="consultant_patient_list.php">
                 <div class="links-container">
                   <div class="image">
                     <img class="image" src="../../public/images/pat.jpg" alt="Hla Reports">
@@ -113,7 +116,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                 </div>
               </a>
             </div>
-            <div id="session">
+            <!--<div id="session">
               <a class="box" href="consultant_calendar.php">
                 <div class="links-container">
                   <div class="image">
@@ -124,7 +127,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                   </div>
                 </div>
               </a>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>

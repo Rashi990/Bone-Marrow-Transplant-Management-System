@@ -74,9 +74,69 @@ body{
    padding-right: 50px;
 }
 main{
-    background: none;
-    width: 90%;
-    margin:0 auto;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding: 2rem 1.5rem;
+    background: #f1f5f9;
+    min-height: calc(90vh - 90px);
+    border: 0px;
+    border-radius: 1rem;
+    margin-right:30px;
+ }
+.cards-2{
+    display:flex;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap:2.5rem ;
+    margin-top: 1rem;
+    color: #006296;
+ }
+ .card-single-2{
+    display: table;
+    justify-content: space-between;
+    background: #D7F0ED;
+    padding: 2rem;
+    border: 1px;
+    border-radius: 20px;
+ }
+ .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+ }
+ .update-btn{
+    margin-left: 30px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    display: block;
+    color:#006296;
+    font-weight: 700;
+    border:2px solid #006296;
+   padding: 7px 15px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    text-align: center;
+
+}
+.update-btn:hover{
+    background: #006296;
+    cursor: pointer;
+    color:white;
+}
+ table {
+   padding: 10px;
+}
+
+th,
+td {
+   text-align: left;
+   padding: 15px;
+}
+.row{
+    display: grid;
 }
 .list{
     padding: 1rem;
@@ -133,6 +193,7 @@ color: #006296;
 
 }
 .btn{
+    text-decoration:none;
     justify-content: left;
 }
 

@@ -56,8 +56,7 @@ if (!(isset($_SESSION['user_name'])  ))
     <a href="admin_addhospital.php" class="create-btn"> + Add Hospital
        </a>
 
-  <table>
-        <thead>
+  <table  class="list">
         <tr>
         <th class="table-head">
       Hospital ID
@@ -75,8 +74,7 @@ if (!(isset($_SESSION['user_name'])  ))
       Operation
       </th>
         </tr>
-        </thead>
-       <tbody>
+       
 
         <?php 
         $sql="select * from `hospital`";
@@ -104,9 +102,6 @@ if (!(isset($_SESSION['user_name'])  ))
         }
         
         ?>
-        
-       </tbody>
-      
        </table>
     </div>
     
