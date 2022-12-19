@@ -98,3 +98,7 @@ body{
     color: #F7FFFF;
     background-color: #308C83;
 }
+
+.material-icons{
+  padding: 5px;
+}
