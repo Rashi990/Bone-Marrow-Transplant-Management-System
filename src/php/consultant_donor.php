@@ -29,7 +29,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 
             <div class="logout">
               <abbr title="Logout">
-                <a class="hi" href="consultant_login.php">
+                <a class="hi" href="consultant_logout.php">
                   <span class="material-symbols-rounded">
                     logout
                   </span>

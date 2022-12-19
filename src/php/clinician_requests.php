@@ -27,11 +27,11 @@ include "../../config/connection.php";
             <a class="hi" href="clinician_calendar.php">Calendar</a>
             <a class="hi" href="clinician_patient.php">Patient</a>
             <a class="hi" href="clinician_donor.php">Donor</a>
-            <a class="hi" href="clinician_reports.php">Match</a>
+            <a class="hi" href="clinician_match.php">Match</a>
 
             <div class="logout">
               <abbr title="Logout">
-                <a class="hi" href="consultant_login.php">
+                <a class="hi" href="consultant_logout.php">
                   <span class="material-symbols-rounded">
                     logout
                   </span>
