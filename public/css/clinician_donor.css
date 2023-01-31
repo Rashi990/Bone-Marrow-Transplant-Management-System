@@ -205,7 +205,8 @@ abbr{
 .image{
   flex:80%;
   height: 450px;
-  width: 100%;
+  width: 10%;
+  left: 200px;
 }
 
 .text{
