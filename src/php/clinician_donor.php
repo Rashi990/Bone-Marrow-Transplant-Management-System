@@ -11,9 +11,134 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
     <title>Clinician Donor Page</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/clinician_donor.css?v=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
-  <body>
-    <div class="hero">
+  
+
+
+  <link rel="stylesheet" href="../../public/css/clinician_sidebar.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500;1,700&display=swap" rel="stylesheet">
+    <title>SLBTMS</title>
+</head>
+<body>
+    <!-- sidebar section -->
+   <!--
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="../../public/images/logo.png" class="logo">
+        </div>
+     <ul class="nav-link">
+        <li>
+            <a href="../../src/php/donor_clinical_history.php">
+                <span class="link_name">Requests</span>
+            </a>
+        </li>
+        <li>
+            <a href="../../src/php/donor_session.php">
+                <span class="link_name">Calender</span>
+            </a>
+        </li>
+        <li>
+            <a href="../../public/html/donor_transplant_request.html">
+                <span class="link_name">Patient</span>
+            </a>
+        </li>
+        <li>
+            <a href="../../src/php/donor_calender.php">
+                <span class="link_name">Donor</span>
+            </a>
+        </li>
+        <li>
+            <a href="../../src/php/donor_calender.php">
+                <span class="link_name">Match</span>
+            </a>
+        </li>
+            
+            
+            <li>
+                <a href="../../src/php/home.php">
+                    <span class="material-icons">logout</span>
+                </a>
+            </li>
+     </ul>
+    </div>-->
+    <!--Header-->
+
+
+    <div class="main-content">
+        <header>
+            <h2>
+                Donor
+            </h2>
+            <div class="search-wrapper">
+                <span class='bx bx-search'></span>
+                <input type="search" placeholder="search here">
+            </div>
+    
+           
+    
+            <div class="box-icon">
+                <div class="item">
+                    <i class='bx bxs-bell'></i>
+                </div>
+                <div class="item">
+                    <i class='bx bxs-conversation'></i>
+                </div>
+                
+            </div>
+           
+            
+            <div class="user-wrapper">
+                <img src="../../public/images/donor_image.jpg" alt="profile_pictire" width="50px" height="50px" >
+                <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
+            </div>
+        </header>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- <div class="hero">
       <div class="top">
         <div class="left">
             <img src="../../public/images/logo.png" class="logo">
@@ -76,7 +201,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
                 </a>
               </abbr>
             </div>
-          </div>
+          </div>-->
           <div class="rbottom">
             <div class="session">
                 <a  class="box" href="../../src/php/clinician_view_donor_hla.php">
