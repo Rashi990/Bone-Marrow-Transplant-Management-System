@@ -46,7 +46,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
         $_SESSION['clinician_id'] = $row['clinician_id'];
         $_SESSION['clinician_name'] = $row['clinician_name'];
         $_SESSION['image'] = $row['image'];
-        header("Location: clinician_home.php");
+        header("Location: clinician_dashboard.php");
         exit();
       }
       else

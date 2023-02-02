@@ -1,10 +1,10 @@
-<?php require_once('consultant_navbar_appointment.php'); ?>
+<?php require_once('clinician_navbar.php'); ?>
 <?php
 require_once('../../config/connection.php');
 session_start();
-if (!(isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']) ))
+if (!(isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']) ))
 {
-    header("Location:consultant_login.php");
+    header("Location:clinician_login.php");
 }
  ?>
 
@@ -23,12 +23,12 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']) ))
 <div class="top">
         <span class="material-icons">notifications</span>
         <span class="material-icons">chat_bubble</span>
-        <div class="Loggedin"> Welcome! <?php echo $_SESSION['consultant_name'];?></div>
+        <div class="Loggedin"> Welcome! <?php echo $_SESSION['clinician_name'];?></div>
         <span class="material-icons">account_circle</span>
       </div>
 
 </body>
 </html>
 
-<?php include('../../public/html/consultant_appointment.html'); ?>
+<?php include('../../public/html/clinician_dashboard.html'); ?>
 <!--<?php require_once('consultant_footer.php'); ?>-->
