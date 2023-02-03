@@ -1,4 +1,4 @@
-<?php require_once('consultant_navbar_appointment.php'); ?>
+<?php require_once('consultant_navbar.php'); ?>
 <?php
 require_once('../../config/connection.php');
 session_start();
@@ -30,5 +30,5 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']) ))
 </body>
 </html>
 
-<?php include('../../public/html/consultant_appointment.html'); ?>
+<?php include('../../public/html/consultant_dashboard.html'); ?>
 <!--<?php require_once('consultant_footer.php'); ?>-->
