@@ -57,8 +57,9 @@ if (!(isset($_SESSION['user_name'])))
 <div class="right">
 <nav>
         <ul>
-        <li><a class="active" href="#">view Donor Details</a> </li>
+        <li><a class="active" href="#">Donor Details</a> </li>
         <li><a href="../../src/php/admin_accept_pending_donor.php">Accept Pending Donors</a></li>
+        <li><a href="#"> + Test Results</a></li>
       </ul>
     </nav>
 
