@@ -45,7 +45,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
         $_SESSION['user_name'] = $row['user_name'];
         $_SESSION['consultant_id'] = $row['consultant_id'];
         $_SESSION['consultant_name'] = $row['consultant_name'];
-        header("Location: consultant_home.php");
+        header("Location: consultant_dashboard.php");
         exit();
       }
       else

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_create_session.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Hospital create sessions</title>
+</head>
+
+<body>
+
+    <center>
+
+    <div class="create_session">
+
+        <form action="../../src/php/hospital_create_session.php" method="post" enctype="multipart/form-data" class="create_session_form">
+
+        
+        <p>
+            <label for="">Camp ID</label>
+            <input type="text" name="camp_id">
+        </p>
+
+        <p>
+            <label for="">Session ID</label>
+            <input type="text" name="session_id">
+        </p>
+
+        <p>
+            <label for="">Session Name</label>
+            <input type="text" name="session_name">
+        </p>
+
+        <p>
+            <label for="">Date</label>
+            <input type="date" name="date" >
+        </p>
+
+        <p>
+            <label for="">Time</label>
+            <input type="datetime" name="time">
+        </p>
+
+        <p>
+            <label for="">Session Image</label>
+            <input type="file" name="session_image">
+        </p>
+
+        <p>
+            <label>&nbsp;</label>
+            <input type="submit" name="submit" value="Submit" class="btn">
+        </p>
+
+    </form>
+
+    </div>
+
+</center>
+
+    
+</body>
+</html>

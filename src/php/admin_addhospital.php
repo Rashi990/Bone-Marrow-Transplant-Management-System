@@ -64,9 +64,11 @@ if(isset($_POST['submit']) )
   echo "<script type='text/javascript'>alert('Password is required!');</script>";
   exit();
 }
+//  add form submitting date in to database
+$date = date('Y-m-d H:i:s');
+  $sql="INSERT INTO `hospital`(hospital_id, hospital_name, email, telephone_no, address,user_name,password,date) VALUES ('$hID','$hname',' $email',' $tel','$address','$username','$password','$date')";
 
-
-  $sql="INSERT INTO `hospital`(hospital_id, hospital_name, email, telephone_no, address,user_name,password) VALUES ('$hID','$hname',' $email',' $tel','$address','$username','$password')";
+  
   $result = mysqli_query($connection,$sql);
 
   if($result) {
