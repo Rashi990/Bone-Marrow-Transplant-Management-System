@@ -1,8 +1,8 @@
 <?php
 
 // Check if login inputs are empty
-function inputsEmptyLogin($email, $pass){
-    if(empty($email) || empty($pass)){
+function inputsEmptyLogin($user_name, $pass){
+    if(empty($user_name) || empty($pass)){
         $value = true;
     }else{
         $value = false;

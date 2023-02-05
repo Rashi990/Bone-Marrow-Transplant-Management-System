@@ -1,44 +1,69 @@
 body{
     background-color: #F7FFFE;
+    margin-top: 0px;
+    overflow-x: hidden;
 }
 
-.doner-history-topic{
-    color:#006296;
+/*
+.header .top h1{
     position: absolute;
-     width: 246px; 
-    height: 36px;
-    left: 384px;
-    top: 60px;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 54px;
+    display: flex;
+    margin-left: 260px;
+    padding-top: 0px;
+    margin-top: 0%;
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
 }
+*/
 
 .container {
-    padding: 2px 16px;
-    margin-top: 300px;
-    margin-left: 20px;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 0px;
+    margin-top: 70px;
+    margin-left: 22px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+
 }
+.backboard{
+    position: absolute;
+    margin-left: 270px;
+    margin-top: 10px;
+    margin-bottom: 880px;
+    width: 1150px;
+    height:870px;
+    background-color: #F1F5F9;
+    border-radius: 20px;
+   
+}
+
+
+
+
+
+
 
 .current-medication{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
-    width: 600px;
+    width: 400px;
     height: 275px;
-    margin-top: 0px;
+    
     background: #D7F0ED;
     border-radius: 30px;
     padding: 3%;
-
-    margin-left: 338px;
+    
 }
 
 .appointment-details{
     display:flex;
     justify-content: space-between;
+    margin-left: 38px;
+    margin-top: 25px;
+    margin-right: 40px;
+
 }
 
 .list li{
@@ -96,7 +121,7 @@ body{
 .next-appointment{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
-    height:270px;
+    height:303.5px;
     width:500px;
     margin-top: 0%;
     background: #D7F0ED;
@@ -112,25 +137,30 @@ h1{
     font-size: 30px;
     line-height: 33px;
     color: #006296;
-    margin-left: 338px;
+    margin-left: 50px;
+    margin-top: 5px;
 }
 
 .donor-reports{
     display:flex;
     justify-content: space-between;
+    margin-right: 30px;
+    margin-top: 2%;
+
+   
 }
 
 .reports{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
-    width: 600px;
-    height: 340px;
-    margin-top: 2%;
+    width: 400px;
+    height: 275px;
+
     background: #D7F0ED;
     border-radius: 30px;
     padding: 3%;
-
-    margin-left: 338px;
+   
+    margin-left: 38px;
 }
 
 button {
@@ -150,6 +180,7 @@ button {
 
 table{
     color: #006296;
+  
 }
 
 .post-donations{
@@ -160,11 +191,13 @@ table{
 
     color: #006296;
     width: 500px;
-    height: 340px;
-    margin-top: 2%;
+    height: 305px;
+   
     background: #D7F0ED;
     border-radius: 30px;
     padding: 2%;
+    margin-top: 0%;
+    margin-bottom: 2px;
 }
 .session-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

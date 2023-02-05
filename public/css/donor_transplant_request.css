@@ -2,6 +2,27 @@ body{
     background-color: #F7FFFE;
 }
 
+
+
+.backboard{
+  position: absolute;
+  margin-left: 270px;
+  margin-top: 10px;
+  margin-bottom: 880px;
+  width: 1150px;
+  height:870px;
+  background-color: #F1F5F9;
+  border-radius: 20px;
+ 
+}
+
+
+
+
+
+
+
+
 .doner-transplant-topic{
     color:#006296;
     font-family: 'Poppins';
@@ -18,7 +39,10 @@ body{
 }
 
 .donor-card-details{
-    margin-top:135px;
+   position: absolute;
+
+margin-right: 40px;
+
 }
 .transplant-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -28,8 +52,8 @@ body{
 
     width: 959px;
     height:146px;
-    margin-top: 2%;
-    margin-left: 384px;
+    margin-top: 1%;
+    margin-left: 150px;
     background: #D7F0ED;
     border-radius: 30px;
     display:flex;
@@ -38,6 +62,7 @@ body{
   }
 
   .donor-transplant-details{
+  
     color: #006296;
   }
 
