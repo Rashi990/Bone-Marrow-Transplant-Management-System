@@ -83,6 +83,7 @@ nav{
     width: 700px;
   }
  nav ul{
+    position: absolute;
     float: right;
     margin-right: 20px;}
  
