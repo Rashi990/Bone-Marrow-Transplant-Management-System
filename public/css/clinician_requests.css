@@ -57,6 +57,9 @@ body{
 }
 
 .board{
+  display: flex;
+  align-items: center;
+  justify-content:center;
     position: absolute;
     margin-left: 240px;
     margin-top: 30px;
@@ -66,30 +69,42 @@ body{
     padding: 20px;
 }
 
-.counts{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
 
-.counts .box{
+.box{
     display: flex;
     flex-direction: column;
     margin: 10px;
     padding: 20px;
-    width: 25%;
-    height: 250px;
+    width: 90%;
+    height: 500px;
     background-color: #bde4e0;
-    border-radius: 20px;
     border: none;
-    text-align: center;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     color: #006296;
+    overflow-y: scroll;
     /*line-height: 10px;*/
 }
 
-.counts .box:hover{
+.box:hover{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+th{
+  text-align: center;
+  height: 50px;
+}
+
+td{
+  text-align: center;
+  height: 20px;
+}
+
+.th1{
+  width: 100px;
+}
+
+.th2{
+  width: 200px;
 }

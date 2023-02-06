@@ -133,7 +133,7 @@ body{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
-button{
+.btn{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -147,4 +147,26 @@ button{
     font-weight: bold;
     color: #006296;
     cursor: pointer;
+}
+
+th{
+  text-align: center;
+  height: 50px;
+}
+
+td{
+  text-align: center;
+  height: 20px;
+}
+
+.th1{
+  width: 100px;
+}
+
+.th2{
+  width: 200px;
+}
+
+.th3{
+  width: 300px;
 }
