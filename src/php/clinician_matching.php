@@ -27,6 +27,72 @@
     <div class="counts1">
 
         <div class="box">
+          <table class="list">
+              <tr>
+                  <th>Patient ID</th>
+                  <th>Patient Name</th>
+                  <th>Donors</th>
+                  <th>Donor ID</th>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>H.T.Sarath Kumara De Silva</td>
+                  <td>
+                      <ul>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                      </ul>
+                 </td>
+                 <td>
+                  <ul>
+                      <li>2</li>
+                      <li>4</li>
+                      <li>56</li>
+                      <li>77</li>
+                      <li>66</li>
+                      <li>7</li>
+                      <li>12</li>
+                      <li>44</li>
+                  </ul>
+             </td>
+              </tr>
+
+              <tr>
+                  <td>1</td>
+                  <td>H.T.Sarath De Silva</td>
+                  <td>
+                      <ul>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                          <li>S.M.Saman Kumara</li>
+                      </ul>
+                 </td>
+                 <td>
+                  <ul>
+                      <li>2</li>
+                      <li>4</li>
+                      <li>56</li>
+                      <li>77</li>
+                      <li>66</li>
+                      <li>7</li>
+                      <li>12</li>
+                      <li>44</li>
+                  </ul>
+                  </td>
+              </tr>
+
+              </table>
         </div>
 
     </div>
@@ -34,15 +100,7 @@
     <div class="counts2">
 
         <div class="box">
-          <button type="button" name="button"><a href="#">View Patient List and HLA Details</a></button>
-        </div>
-
-        <div class="box">
-          <button type="button" name="button"><a href="#">View Donor List and HLA Details</a></button>
-        </div>
-
-        <div class="box">
-          <button type="button" name="button"><a href="#">Match Patients with Donors</a></button>
+          <button type="button" name="button"><a href="#">Re-match Patients with Donors</a></button>
         </div>
 
     </div>
