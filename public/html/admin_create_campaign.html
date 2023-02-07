@@ -12,7 +12,7 @@
    
 <div class="container">
  <div class="form_content">
-    <form class="form_form"action="admin_addhospital.php" method="post">
+    <form class="form_form"action="admin_create_campaign.php" method="post">
     
         <section class="copy">
             <h2>Add Hospital</h2>
@@ -20,20 +20,21 @@
       <table>
         <tr>
             <td>
-                <label for="ID">Campaign Name</label>
-                    <input type="text" name="ID"  placeholder="Enter Campaign Name" >
+                <label for="cname">Campaign Name</label>
+                    <input type="text" name="cname"  placeholder="Enter Campaign Name" >
             </td>
             <td>
-                <label for="hname">Date</label>
-                    <input type="date" name="date" placeholder="Enter Date" >
+                <label for="date">Date</label>
+                    <input  type="date" name="date" placeholder="Enter Date" >
             </td>
         </tr>
         <tr>
             <td>
                 <label for="hname">Hospital Name</label>
                 <input type="text" name="hname" placeholder="Enter Hospital Name">
-                <input type="text" name="hname" placeholder="Enter Hospital Name">
-                <input type="text" name="hname" placeholder="Enter Hospital Name">
+                <script src="../../public/js/admin_create_campaign.js"> </script>
+                <!-- <input type="text" name="hname" placeholder="Enter Hospital Name">
+                <input type="text" name="hname" placeholder="Enter Hospital Name"> -->
             </td>
             <td>
                 <label for="time">Time</label>
@@ -43,12 +44,12 @@
       </table>
       <table>
         <tr><td>
-            <a href="../../src/php/admin_viewsession.php" class="create-btn"> Create
-            </a>
+            <button class="create-btn" name="submit" type="submit"> Create
+            </button>
         </td>
     <td>
-        <a href="../../src/php/admin_viewsession.php" class="cancle-btn"> Cancle
-        </a>
+        <button class="cancle-btn" name="cancel" type="cancel"> Cancel
+        </button>
     </td></tr>
       </table>
         

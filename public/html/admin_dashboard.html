@@ -26,7 +26,7 @@
             <a href="../../src/php/admin_calender.php">
                 <span class="link_name">Calendar</span>
             </a>
-            <a href="../../src/php/admin_viewdonor.php">
+            <a href="../../src/php/admin_view_donor.php">
                 <span class="link_name">Donors</span>
             </a>
             <a href="../../src/php/admin_viewhospital.php">
@@ -173,52 +173,37 @@
         <div class="cards-2">
             <div class="card-single-2">
                 <div class="title">
-                    <h3>Pending Donor Request</h3>
-                    <a href="#" class="btn">View All</a>
+                    <h3>Pending Donor Accept</h3>
+                    <a href="../../src/php/admin_accept_pending_donor.php" class="btn">View All</a>
                 </div>
                 <table>
                     <tr>
+                        <th>Donor ID</th>
                         <th>Donor Name</th>
-                        <th>Hospital</th>
                         <th>Status</th>
                         <th>Test Result</th>
                     </tr>
-                    <tr>
-                        <td>Amila kumara</td>
-                        <td>Colombo Hospital</td>
-                        <td style="color:#38fa11 ;">Qualified</td>
-                        <td><a href="#" class="btn">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>Aruni siriwardena</td>
-                        <td>Colombo Hospital</td>
-                        <td style="color:#fa1111 ;">Disqualified</td>
-                        <td><a href="#" class="btn">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>Amila kumara</td>
-                        <td>Colombo Hospital</td>
-                        <td style="color:#38fa11 ;">Qualified</td>
-                        <td><a href="#" class="btn">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>Amila kumara</td>
-                        <td>Colombo Hospital</td>
-                        <td style="color:#38fa11 ;">Qualified</td>
-                        <td><a href="#" class="btn">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>Amila kumara</td>
-                        <td>Colombo Hospital</td>
-                        <td style="color:#38fa11 ;">Qualified</td>
-                        <td><a href="#" class="btn">View</a></td>
-                    </tr>
-                    <tr>
-                        <td>Aruni siriwardena</td>
-                        <td>Colombo Hospital</td>
-                        <td style="color:#fa1111 ;">Disqualified</td>
-                        <td><a href="#" class="btn">View</a></td>
-                    </tr>
+                    <?php 
+        $sql="select * from `pending_donor`";
+        $result=mysqli_query($connection,$sql);
+        if($result){
+            while($row=mysqli_fetch_assoc($result)){
+                $id=$row['pending_donor_id'];
+                $fname=$row['first_name'];
+                $lname=$row['second_name'];
+                $status=$row['status'];
+             echo '<tr>
+        <td>'.$id. '</td>
+        <td>'.$fname,'&nbsp',$lname. '</td>
+                <td id="status_cl">'.$status. '</td> 
+                <td><a href="#" class="btn">View</a></td> 
+        </tr>';
+
+            }
+        }
+        
+        ?>
+
                 </table>
             </div>
             <div class="cal">
