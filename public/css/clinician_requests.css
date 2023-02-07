@@ -95,21 +95,21 @@ td{
 }
 
 #view{
-  color: #308C86;
+  color: #009879;
   height: 30px;
   width: 60px;
   border-radius: 5px;
-  border-color: #308C86;
+  border-color: #009879;
 }
 
 #view:hover{
-  background: #308C86;
+  background: #009879;
   color: White;
 }
 
 #view a{
   text-decoration: none;
-  color: #308C86;
+  color: #009879;
   width: 60px;
   height: 30px;
 }
@@ -144,4 +144,16 @@ button{
 
 #match a:hover{
   color: white;
+}
+
+a.butt {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: #009879;
+    background: white;
+    width: 60px;
+    height: 25px;
 }
