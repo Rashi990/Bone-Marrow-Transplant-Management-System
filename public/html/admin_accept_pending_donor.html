@@ -41,6 +41,14 @@
 </header>
 </div>
 <div class="right">
+
+    <nav>
+        <ul>
+        <li><a href="../../src/php/admin_view_donor.php">Donor Details</a> </li>
+        <li><a  class ="active" href="#">Accept Pending Donors</a></li>
+        <li><a href="#"> + Test Results</a></li>
+      </ul>
+    </nav>
     <div class="cards-2">
             <div class="card-single-2">
                 <div class="title">
@@ -54,140 +62,42 @@
                         <th>Requested Date</th>
                         <th>Status</th>
                         <th>Accept</th>
-                        <th>Reject</th>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Amila kumara</td>
-                        <td>Nugegoda</td>
-                        <td>12/19</td>
-                        <td style="color:#38fa11 ;">Qualified</td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Aruni siriwardena</td>
-                        <td>Colombo 07</td>
-                        <td>12/19</td>
-                        <td style="color:#fa1111 ;">Disqualified</td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>kavinda karunathilaka</td>
-                        <td>Anuradhapura</td>
-                        <td>12/19</td>
-                        <td style="color:#38fa11 ;">Qualified</td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>kamala Hansani</td>
-                        <td>Kegalle</td>
-                        <td>12/19</td>
-                        <td style="color:#38fa11 ;">Qualified</td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Kapila kumara</td>
-                        <td>Maharagama</td>
-                        <td>12/19</td>
-                        <td style="color:#38fa11 ;">Qualified</td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Ramani siriwardena</td>
-                        <td>Colombo 02</td>
-                        <td>12/19</td>
-                        <td style="color:#fa1111 ;">Disqualified</td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                        <td>
-                            <div class="input-container cta">
-                                <label class="checkbox-container">
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                        </td>
-                    </tr>
+                    <?php 
+        $sql="select * from `pending_donor`";
+        $result=mysqli_query($connection,$sql);
+        if($result){
+            while($row=mysqli_fetch_assoc($result)){
+                $id=$row['pending_donor_id'];
+                $fname=$row['first_name'];
+                $lname=$row['second_name'];
+                $city=$row['city'];
+                $requestdate=$row['request_date'];
+                $status=$row['status'];
+             echo '<tr>
+        <td>'.$id. '</td>
+        <td>'.$fname,'&nbsp',$lname. '</td>
+        <td>'.$city. '</td>
+        <td>'.$requestdate. '</td>
+        <td id="status_cl">'.$status. '</td>  
+        <td><div class="input-container cta">
+            <label class="checkbox-container">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            </div></td>
+    </tr>';
+
+            }
+        }
+        
+        ?>
                 </table>
             </div>
 
 </div>
         
-    
+<script src="../../public/js/admin_accept_pending_donor.js"></script>
     
 </body>
 </html>

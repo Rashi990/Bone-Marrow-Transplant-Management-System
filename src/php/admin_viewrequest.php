@@ -53,14 +53,14 @@ if (!(isset($_SESSION['user_name']) ))
 <div class="right">
 <nav>
         <ul>
-        <li><a class="active" href="#">Pending Donor Request</a> </li>
+        <li><a class="active" href="#">Pending Donor Test Request</a> </li>
         <li><a href="../../src/php/admin_view_hospital_request.php" > Hospital Matching Request </a></li>
       </ul>
     </nav>
     <div class="cards-2">
             <div class="card-single-2">
                 <div class="title">
-                    <h3>Pending Donor Request</h3>
+                    <h3>Pending Donor Test Request</h3>
                 </div>
                 <table>
                     <tr>

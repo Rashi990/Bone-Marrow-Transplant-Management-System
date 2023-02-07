@@ -74,6 +74,42 @@
 .box-icon .item{
    padding-right: 50px;
 }
+nav{
+   margin: 0px 20px;
+   margin-top: 30px;
+   height: 80px;
+   width: 700px;
+ }
+nav ul{
+   position: absolute;
+   float: right;
+   margin-right: 20px;}
+
+
+ nav ul li{
+   display: inline-block;
+   line-height: 80px;
+   margin: 0 5px;
+ }
+ nav ul li a{
+   text-decoration: none;
+   color: #FFFFFF;
+   font-size: 17px;
+   padding: 4px 50px;
+   border-radius: 30px;
+   background: #006296;
+ }
+ nav ul li a:hover{
+   color: #006296;
+   font-weight: 400;
+   background: #F7FFFF;
+ }
+ a.active{
+   color: #006296;
+   font-weight: 400;
+   background: #F7FFFF;
+   transition: .5s;
+ }
 .cards-2{
     display: table;
     grid-template-columns:repeat(4,1fr);
