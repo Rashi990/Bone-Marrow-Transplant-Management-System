@@ -6,43 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
 	<title>Add Hospital</title>
-    <link rel="stylesheet"  href="../../public/css/admin_addhospital.css">
+    <link rel="stylesheet"  href="../../public/css/admin_add_testing_report.css">
 </head>
 <body>
    
 <div class="container">
- <div class="form_content">
-    <form class="form_form"action="admin_add_testing_report.php" method="post">
+    <form action="admin_add_testing_report.php" method="post">
     
         <section class="copy">
             <h2>Add Testing Report</h2>
         </section> 
-      
-                <label for="ID">Sample ID</label>
-                <input type="text" name="ID"  placeholder="Enter Hospital ID" >
-                <label for="hname">Donor ID</label>
-                <input type="text" name="hname" placeholder="Enter Hospital Name">
-                <label for="email">Tested Hospital ID</label>
-                <input type="email" name="email" placeholder="Enter Hospital Email" >
-                <label for="telephone">HLA-Antigen</label>
-                <input type="tel" name="tel" placeholder="Enter telephone number">
-                <label for="address">HLA-allele-Family</label>
-                <input type="text" name="address" placeholder="Enter Hospital Address">
-                <label for="username">HLA-2nd type</label>
-                <input type="text" name="username" placeholder="Enter Hospital Username">
-                <label for="passwors">HLA-3rd type</label>
-                <input type="text" name="password" placeholder="Enter Hospital password">
-                <label for="username">HLA-4th type</label>
-                <input type="text" name="username" placeholder="Enter Hospital Username">
-                <label for="passwors">HLA-5th type</label>
-                <input type="text" name="password" placeholder="Enter Hospital password">
-    
-     
-       
-        <button class="create-btn" name="submit" type="submit"> Create</button>
+      <div class="user-details">
+        <div class="input-box">
+            <label for="ID">Sample ID</label>
+            <input type="text" name="ID"  placeholder="Enter Sample ID" >
+        </div>
+        <div class="input-box">
+            <label for="hname">Donor ID</label>
+                <input type="text" name="hname" placeholder="Enter Donor ID">
+        </div>
+        <div class="input-box">
+            <label for="email">Tested Hospital ID</label>
+                <input type="email" name="email" placeholder="Enter Hospital ID" >
+        </div>
+        <div class="input-box">
+            <label for="telephone">HLA-Antigen</label>
+                <input type="tel" name="tel" placeholder="Enter HLA-Antigen">
+        </div>
+        <div class="input-box">
+            <label for="address">HLA-allele-Family</label>
+                <input type="text" name="address" placeholder="Enter HLA-allele-Family">
+        </div>
+       <div class="input-box">
+        <label for="username">HLA-2nd type</label>
+                <input type="text" name="username" placeholder="Enter HLA-2nd type">
+       </div>
+       <div class="input-box">
+        <label for="passwors">HLA-3rd type</label>
+                <input type="text" name="password" placeholder="Enter HLA-3rd type">
+       </div>
+       <div class="input-box">
+        <label for="username">HLA-4th type</label>
+                <input type="text" name="username" placeholder="Enter HLA-4th type">
+       </div>
+       <div class="input-box">
+        <label for="passwors">HLA-5th type</label>
+                <input type="text" name="password" placeholder="Enter HLA-5th type">
+       </div>         
+      </div>
+                
+
+        <div class="create-btn" name="submit" type="submit"> Create</div>
            
     </form>  
- </div>
+
          
                 </div>
 	
