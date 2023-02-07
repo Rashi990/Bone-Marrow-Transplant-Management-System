@@ -56,22 +56,29 @@
                                 <th>Time</th>
                                 <th></th>
                             </tr>
-                            <tr>
-                                <td>Introduction About SLBTMS </td>
-                                <td>Colombo General Hospital<br>
-                                    Apeksha Hospital<br>
-                                    Lanka Hospital<br>
-                                </td>
-                                <td>2022-12-24<br>
-                                    2022-12-26<br>
-                                    2022-12-24<br></td>
-                                    <td>10.00 a.m<br>
-                                        10.00 a.m<br>
-                                        11.00 a.m<br></td>
-                                        <td><a href="#" class="btn">View More</a></td>
-                            </tr>
-                            <tr>
-                                <td>Promoting Society About <br>br>Boan Marrow Transplant </td>
+                            <?php 
+        $sql="select * from `campaign`";
+        $result=mysqli_query($connection,$sql);
+        if($result){
+            while($row=mysqli_fetch_assoc($result)){
+                $cname=$row['camp_name'];
+                $date=$row['camp_date'];
+                $time=$row['camp_time'];
+                $venue=$row['hospital_name'];
+             echo '<tr>
+        <td width="40%">'.$cname. '</td>
+        <td>'.$venue. '</td> 
+        <td>'.$date. '</td>
+        <td>'.$time. '</td>
+       
+    </tr>';
+
+            }
+        }
+        
+        ?>
+                            <!-- <tr>
+                                <td>Promoting Society About <br>Boan Marrow Transplant </td>
                                 <td>Anuradhapura General Hospital<br>
                                     Apeksha Hospital<br>
                                     Lanka Hospital<br>
@@ -83,7 +90,7 @@
                                         10.00 a.m<br>
                                         11.00 a.m<br></td>
                                         <td><a href="#" class="btn">View More</a></td>
-                            </tr>
+                            </tr> -->
                         </table>
                 </div>
                 </div>
