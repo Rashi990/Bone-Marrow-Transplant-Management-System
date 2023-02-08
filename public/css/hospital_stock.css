@@ -77,6 +77,25 @@ body{
     text-align: center;
 }
 
+.new{
+    float: right;
+    margin: 10px 80px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 80px;
+    font-size: 14px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.new:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
 table.list{
     margin: 20px auto;
     padding: 10px;
@@ -105,24 +124,6 @@ table.list td{
 
 table.list tr:nth-child(even){
     background-color: #bde4e0;
-}
-
-table.list .new{
-    float: right;
-    margin-right: 60px;
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296;
-    border-radius: 10px;
-    padding: 10px 30px;
-    font-size: 14px;
-    transition: 0.5s;
-}
-
-table.list .new:hover{
-    background-color: #006296;
-    color: #F7FFFF;
 }
 
 table.list .update{

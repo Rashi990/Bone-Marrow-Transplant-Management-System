@@ -70,18 +70,21 @@ table.clinician_list{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
-.clinicians .new{
+.new{
+    float: right;
+    margin: 10px 40px;
+    text-decoration: none;
     background-color: #F7FFFF;
     color: #006296;
-    margin-right: 20px;
-    padding: 10px 40px;
-    float: right;
+    border: 1px solid #006296 ;
     border-radius: 10px;
-    text-decoration: none;
+    padding: 10px 80px;
+    font-size: 14px;
     transition: 0.5s;
+    font-weight: bold;
 }
 
-.clinicians .new:hover{
+.new:hover{
     background-color: #006296;
     color: #F7FFFF;
 }

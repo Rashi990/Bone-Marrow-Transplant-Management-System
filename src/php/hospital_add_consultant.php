@@ -27,7 +27,7 @@ session_start();
         $result = mysqli_query($connection,$sql);
 
         if($result){
-            header("Location:hospital_clinicians.php");
+            header("Location:hospital_consultant.php");
         }
         else{
             die(mysqli_error($connection));
@@ -36,5 +36,20 @@ session_start();
 
  ?>
 
-<?php include('../../public/html/hospital_add_clinicians.html'); ?>
-<?php require_once('hospital_footer.php'); ?>
+
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_add_consultant.css">
+                    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@700;800&family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+                    <title>Document</title>
+                </head>
+                <body>
+
+                </body>
+                </html>         
+
+<?php include('../../public/html/hospital_add_consultant.html'); ?>
