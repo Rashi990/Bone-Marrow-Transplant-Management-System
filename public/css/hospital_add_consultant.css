@@ -4,7 +4,7 @@ body{
     background-color: #F7FFFF;
 }
 
-.add_clinician{
+.add_consultant{
     position: relative;
     background-color: #bde4e0;
     margin: 90px auto;
@@ -14,14 +14,14 @@ body{
     box-shadow: 20px 10px 34px rgba(0, 0, 0, 0.3);
 }
 
-.add_clinician h1{
+.add_consultant h1{
     margin: 20px auto;
     padding-bottom: 20px;
     text-align: center;
     color: #006296;
 }
 
-form.add_clinician_form label{
+form.add_consultant_form label{
     width: 30%;
     float: left;
     font-size: 18px;
@@ -29,7 +29,7 @@ form.add_clinician_form label{
     color: #006296;
 }
 
-form.add_clinician_form input[type="text"],[type="email"],[type="password"]{
+form.add_consultant_form input[type="text"],[type="email"],[type="password"]{
     width: 50%;
     border-radius: 10px;
     border: none;
@@ -106,7 +106,3 @@ p .buttons{
     background-color: #006296;
     color: #F7FFFF;
 }
-
-
-
-
