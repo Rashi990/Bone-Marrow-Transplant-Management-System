@@ -56,7 +56,7 @@ body{
     margin-top: 30px;
     width: 80%;
     height: 90%;
-    background-color: #F1F5F9;
+    background-color: #f4f7fa;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -159,7 +159,7 @@ body{
 }
 
 .data{
-    background-color: #d7f0ed;
+    background-color: #D7F0ED;
     border-radius: 20px;
     padding: 10px;
     margin: 5px;
@@ -172,7 +172,7 @@ body{
     justify-content: space-between;
     margin: 5px;
     padding: 15px;
-    background-color: #d7f0ed;
+    background-color: #D7F0ED;
     border-radius: 20px;
     width: 30%;
 }
@@ -294,7 +294,7 @@ table.list .delete:hover{
 
 .pd tr{
   height: 30px;
-  background: #d7f0ed;
+  background: #D7F0ED;
   color: #006296;
 }
 
@@ -353,7 +353,7 @@ table.list .delete:hover{
 
 .dd tr{
   height: 30px;
-  background: #d7f0ed;
+  background: #D7F0ED;
   color: #006296;
 }
 
