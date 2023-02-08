@@ -52,7 +52,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
   </head>
   <body>
     <div class="head">
-        <h1>Patient Details</h1>
+        <h1>Matching Process</h1>
     </div>
 
     <div class="search">
@@ -181,7 +181,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                 <td>B+</td>
                 <td>HLA-C 08 01 01 01 L</td>
                 <td>
-                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                  <a href="../../src/php/clinician_donor_details.php" class="view">View</a>
                 </td>
               </tr>
               <tr>
@@ -190,7 +190,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                 <td>B+</td>
                 <td>HLA-C 08 01 01 01 L</td>
                 <td>
-                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                  <a href="../../src/php/clinician_donor_details.php" class="view">View</a>
                 </td>
               </tr>
               <tr>
@@ -199,7 +199,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
                 <td>B+</td>
                 <td>HLA-C 08 01 01 01 L</td>
                 <td>
-                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                  <a href="../../src/php/clinician_donor_details.php" class="view">View</a>
                 </td>
               </tr>
               <tr>

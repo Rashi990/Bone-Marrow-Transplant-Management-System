@@ -20,15 +20,15 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']) ))
 </head>
 <body>
 
-<div class="top">
-        <span class="material-icons">notifications</span>
-        <span class="material-icons">chat_bubble</span>
-        <div class="Loggedin"> Welcome! <?php echo $_SESSION['clinician_name'];?></div>
-        <span class="material-icons">account_circle</span>
-      </div>
+  <div class="top">
+      <span class="material-icons">notifications</span>
+      <span class="material-icons">chat_bubble</span>
+      <div class="Loggedin"> Welcome! <?php echo $_SESSION['clinician_name'];?></div>
+      <span class="material-icons">account_circle</span>
+  </div>
 
 </body>
 </html>
 
-<?php include('../../public/html/clinician_requests.html'); ?>
+<?php include('clinician_d_details.php'); ?>
 <!--<?php require_once('consultant_footer.php'); ?>-->
