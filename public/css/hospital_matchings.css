@@ -55,7 +55,7 @@ body{
     margin-left: 240px;
     margin-top: 30px;
     width: 80%;
-    background-color: #F1F5F9;
+    background-color: #f4f7fa;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -63,7 +63,7 @@ body{
 }
 
 .data{
-    background-color: #bde4e0;
+    background-color: #d7f0ed;
     border-radius: 20px;
     padding: 10px;
     margin: 20px;
@@ -168,8 +168,9 @@ body{
 .match{
     margin: 20px;
     padding: 30px;
-    background-color: #bde4e0;
+    background-color: #d7f0ed;
     border-radius: 20px;
+    width: 45%;
 }
 
 .match h3{
@@ -199,8 +200,8 @@ body{
 }
 
 table.list{
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
     width: 95%;
     border-collapse: collapse;
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
@@ -233,13 +234,30 @@ table.list tr{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
+table.list .view{
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #308C83;
+    border: 1px solid #308C83;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+table.list .view:hover{
+    background-color: #308C83;
+    color: #F7FFFF;
+}
+
+
 table.list .send{
     text-decoration: none;
     background-color: #F7FFFF;
     color: #006296;
     border: 1px solid #006296;
     border-radius: 10px;
-    padding: 8px 20px;
+    padding: 8px 10px;
     font-size: 14px;
     transition: 0.5s;
 }
@@ -255,7 +273,7 @@ table.list .delete{
     color: #FF0404;
     border: 1px solid #FF0404;
     border-radius: 10px;
-    padding: 8px 20px;
+    padding: 8px 10px;
     font-size: 14px;
     transition: 0.5s;
 }

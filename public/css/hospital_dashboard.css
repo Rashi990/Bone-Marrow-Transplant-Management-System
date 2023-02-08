@@ -61,7 +61,7 @@ body{
     margin-left: 240px;
     margin-top: 30px;
     width: 80%;
-    background-color: #F1F5F9;
+    background-color: #f4f7fa;
     border-radius: 20px;
     padding: 20px;
 }
@@ -79,7 +79,7 @@ body{
     padding: 20px;
     width: 13%;
     height: 50px;
-    background-color: #bde4e0;
+    background-color: #d7f0ed;
     border-radius: 20px;
     border: none;
     text-align: center;
@@ -118,7 +118,7 @@ body{
     width: 98%;
     padding: 10px;
     margin: 10px auto;
-    background-color: #bde4e0;
+    background-color: #d7f0ed;
     border: none;
     border-radius: 20px;
 }

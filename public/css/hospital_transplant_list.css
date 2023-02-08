@@ -54,7 +54,7 @@ body{
     position: absolute;
     margin-left: 240px;
     margin-top: 60px;
-    background-color: #F1F5F9;
+    background-color: #f4f7fa;
     padding: 10px;
     width: 80%;
     height: 80vh;
@@ -99,7 +99,7 @@ table.list td{
 }
 
 table.list tr:nth-child(even){
-    background-color: #bde4e0;
+    background-color: #d7f0ed;
 }
 
 table.list .new{
