@@ -57,8 +57,7 @@ body{
 }
 
 .board{
-    display: flex;
-    justify-content:center;
+    text-align: center;
     position: absolute;
     margin-left: 240px;
     margin-top: 30px;

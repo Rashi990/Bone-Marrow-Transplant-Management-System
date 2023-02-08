@@ -25,6 +25,7 @@
 
   <div class="board">
     <div class="counts1">
+      <h4>Matched Patient and Donor List</h4>
       <table class="list">
           <tr>
               <th>Patient ID</th>
@@ -124,7 +125,10 @@
     <div class="counts2">
 
         <div class="box">
-          <button type="button" name="button"><a href="#">Re-match Patients with Donors</a></button>
+          <a href="matching_process.php">Do the Matching</a>
+        </div>
+        <div class="box">
+          <a href="#">Send Matching List</a>
         </div>
 
     </div>
