@@ -1,10 +1,15 @@
+<?php
+if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
+{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../public/css/clinician_dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/matching.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,7 +18,7 @@
 <body>
 
   <div class="head">
-    <h1>Dashboard</h1>
+    <h1>Matching Process</h1>
   </div>
 
   <div class="search">
@@ -27,34 +32,25 @@
     <div class="counts">
 
         <div class="box">
-         Total Requests<h2>55</h2>
-        </div>
-
-        <div class="box">
-          Total Matches<h2>25</h2>
-        </div>
-
-        <div class="box">
-          Total Donors<h2>64</h2>
+         1
         </div>
 
     </div>
 
     <div class="section">
       <div class="charts">
-        <h2>2023 Data</h2>
-        <div class="images">
-          <img src="../../public/images/percentage.jpg" class="percentage" <h2>Matching Requests</h2>
-          <img src="../../public/images/percentage2.jpg" class="percentage" <h2>Transplants</h2>
-          <img src="../../public/images/bar.png" class="bar">
-        </div>
+        2
       </div>
       <div class="cal">
-        <h2>Calender</h2>
-        <img src="../../public/images/calendar.png" class="calndr">
+        3
       </div>
     </div>
     </div>
 
 </body>
 </html>
+
+
+<?php
+}
+?>

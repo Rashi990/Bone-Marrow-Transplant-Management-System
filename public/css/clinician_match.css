@@ -104,7 +104,12 @@ body{
     align-items: center;
     font-weight: bold;
     color: #006296;
+    overflow-y: scroll;
     /*line-height: 10px;*/
+}
+
+.counts1 .box::-webkit-scrollbar {
+  display: none;
 }
 
 .counts1 .box:hover{
@@ -152,4 +157,24 @@ button{
 .box a{
   text-decoration: none;
   color: #006296;
+}
+
+th{
+  text-align: center;
+  height: 50px;
+  width: 300px;
+  color: #ffffff;
+  background: #308C86;
+}
+
+table{
+  margin:0;
+  width: 100%;
+}
+
+td{
+  text-align: center;
+  height: auto;
+  width: 200px;
+  background: #bde4e0;
 }
