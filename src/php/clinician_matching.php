@@ -24,8 +24,8 @@
   </div>
 
   <div class="board">
+    <h3>Matched Patient and Donor List</h3>
     <div class="counts1">
-      <h4>Matched Patient and Donor List</h4>
       <table class="list">
           <tr>
               <th>Patient ID</th>
@@ -125,7 +125,7 @@
     <div class="counts2">
 
         <div class="box">
-          <a href="matching_process.php">Do the Matching</a>
+          <a href="clinician_requests.php">Requests</a>
         </div>
         <div class="box">
           <a href="#">Send Matching List</a>
