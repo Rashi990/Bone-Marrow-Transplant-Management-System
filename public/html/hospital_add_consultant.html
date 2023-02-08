@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_add_clinicians.css?v=1">
-    <title>Add Clinician</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_add_consultant.css?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@700;800&family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <title>Add Consultant</title>
 </head>
 <body>
     
-    <div class="add_clinician">
-        <h1>Add New Clinician</h1>
+    <div class="add_consultant">
+        <h1>Add New Consultant</h1>
 
-        <form action="../../src/php/hospital_add_consultant.php" method="post" class="add_clinician_form">
+        <form action="../../src/php/hospital_add_consultant.php" method="post" class="add_consultant_form">
+
+            <p>
+                <label for="">ID</label>
+                <input type="text" name="consultant_id">
+            </p>
 
             <p>
                 <label for="">Name</label>
@@ -20,7 +26,7 @@
             </p>
 
             <p>
-                <label for="">Eamil</label>
+                <label for="">Email</label>
                 <input type="email" name="email" required>
             </p>
 
@@ -44,18 +50,12 @@
                 <input type="password" name="password" required>
             </p>
 
-            <!--
-            <p>
-                <label for="">HID</label>
-                <input type="text" name="hospital_id" required>
-            </p>
-            -->
-
-            <p>
+            <p class="buttons">
                 <label>&nbsp;</label>
-                <button class="btn">Save</button>
+                <input type="submit" name="submit" value="submit" class="btn">
+                <a class="back_btn" href="../../src/php/hospital_consultant.php">Back</a>
             </p>
-
+         
         </form>
 
     </div>

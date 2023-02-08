@@ -19,6 +19,8 @@ if(! (isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ) )
         $img_loc = $_FILES['session_image']['tmp_name'];
         $img_name = $_FILES['session_image']['name'];
         move_uploaded_file($img_loc,'../../public/images/uploadimages/'.$img_name);
+
+        mysqli_query($con, "INSERT INTO `session`(`session_id`, `session_name`, `session_image`, `date`, `time`, `camp_id`) VALUES ('[$sid]','[$sname]','[$img]','[$sdate]','[$stime]','[$cid]')");
     }
 
 ?>
