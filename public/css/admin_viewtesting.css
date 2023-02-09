@@ -23,7 +23,7 @@
  }
  header h2{
    padding-right: 20%;
-    color: #4f4d4d;
+    color: #006296;
 
  }
  header label span{
@@ -72,6 +72,16 @@
  }
 .box-icon .item{
    padding-right: 50px;
+}
+main{
+   margin-top:30px;
+   margin-bottom:30px;
+   padding: 2rem 1.5rem;
+   background: #f4f7fa;
+   min-height: calc(90vh - 90px);
+   border: 0px;
+   border-radius: 1rem;
+   margin-right: 30px;
 }
 a.create-btn{
    text-align: center;
@@ -132,18 +142,18 @@ nav ul{
  nav ul li a:hover{
    color: #006296;
    font-weight: 400;
-   background: #F7FFFF;
- }
- a.active{
-   color: #006296;
-   font-weight: 400;
-   background: #F7FFFF;
-   transition: .5s;
+   background: #F4f7fa;
  }
  a:hover{
    color: #006296;
    font-weight: 400;
-   background: #D7F0ED;
+   background: #F4f7fa;
+   transition: .1s;
+ }
+ a.active{
+   color: #006296;
+   font-weight: 400;
+   background: #F4f7fa;
  }
  .cards-2{
    display: table;

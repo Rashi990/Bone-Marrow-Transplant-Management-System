@@ -4,7 +4,10 @@ session_start();
 include "../../config/connection.php";
 
 require_once("../../public/html/admin_addhospital.html"); 
-
+if (isset($_POST['cancel']))
+{
+    header("Location: admin_viewhospital.php");
+}
 if(isset($_POST['submit']) )
 {
 

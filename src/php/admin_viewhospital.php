@@ -47,12 +47,13 @@ if (!(isset($_SESSION['user_name'])  ))
            
             
             <div class="user-wrapper">
-                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+            <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
         </div>
     </div>
 <div class="right">
+    <main>
 <div class="button">
 <a href="admin_addhospital.php" class="create-btn"> + Add Hospital
        </a>
@@ -73,12 +74,6 @@ if (!(isset($_SESSION['user_name'])  ))
       </th><th class="table-head">
       Hospital Address
       </th>
-      <th class="table-head">
-      Hospital Username
-      </th>
-      <th class="table-head">
-      Hospital Password
-      </th>
       <th colspan="2" class="table-head">
       Operation
       </th>
@@ -95,18 +90,16 @@ if (!(isset($_SESSION['user_name'])  ))
                 $email=$row['email'];
                 $tele=$row['telephone_no'];
                 $address=$row['address'];
-                $uname=$row['user_name'];
-                $password=$row['password'];
+                // $uname=$row['user_name'];
+                // $password=$row['password'];
              echo '<tr>
         <td>'.$id. '</td>
         <td>'.$name. '</td>
         <td>'.$email. '</td>
         <td>'.$tele. '</td>
         <td>'.$address. '</td> 
-        <td>'.$uname. '</td> 
-        <td>'.$password. '</td> 
 
-        <td><a href="admin_addhospital.php?" class="update-btn"> edit
+        <td><a href="admin_update_hospital.php?" class="update-btn"> edit
         </a></td>
         <td><a href="admin_deletehospital.php? deleteid='.$id.'" class="delete-btn" > delete
        </a></td>   
@@ -117,6 +110,7 @@ if (!(isset($_SESSION['user_name'])  ))
         
         ?>
        </table>
+       </main>
     </div>
     
         
