@@ -21,9 +21,3 @@ function validate(){
     return validate;
 }
 
-
-
-
-
-
-

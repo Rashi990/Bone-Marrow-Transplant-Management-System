@@ -1,35 +1,37 @@
 
 <?php
+
+
+session_start(); 
+
     // --Add dbh file--
     require_once "../../config/connection.php";
     // --Add validation file--
     require_once "../php/donor_sign_validations.php";
     
     // If user clicks the login button
-    if(isset($_POST["login-btn"])){
+if (isset($_POST["login-btn"])) {
+
+
         // Get form input data
         $user_name = $_POST["username"];
         $pass = $_POST["pass"];
-       // $remember = $_POST["re-check"];
+        // $remember = $_POST["re-check"];
 
         // Input validation
-        if(inputsEmptyLogin($user_name, $pass)){
-            
+        if (inputsEmptyLogin($user_name, $pass)) {
+
             header("location: donor_login_index.php?error=Please enter Username and Password");
-        exit();
-        }
-        else if(usernameInvalid($user_name)){
+            exit();
+        } else if (usernameInvalid($user_name)) {
             header("location: donor_login_index.php?error=Invalid Username");
-        }
-        else if(passwordInvalid($pass)){
+        } else if (passwordInvalid($pass)) {
             header("location: donor_login_index.php?error=Invalid Password");
-        }
-        else{
+        } else {
             // If all inputs are error free
             loginUser($connection, $user_name, $pass);
         }
-    }
-    else{
+    } else {
         header("location: donor_login_index.php");
         exit();
     }
@@ -74,6 +76,3 @@ function loginUser($connection, $user_name, $pass)
     // Close the statement
     mysqli_stmt_close($stmt);
 }
-
-
-
