@@ -4,11 +4,17 @@ body{
     background-color: #F7FFFF;
 }
 
+.top-nav{
+    display:grid;
+    position:sticky;
+    margin-left: 220px;
+    grid-template-columns: 300px 600px auto auto;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
+}
+
 .head h1{
-    position: absolute;
-    display: flex;
-    margin-left: 260px;
-    padding-top: 0px;
     text-align: center;
     font-size: 30px;
     color: #006296;
@@ -16,8 +22,8 @@ body{
 
 .search{
     display: flex;
-    margin-left: 280px;
-    padding-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
     justify-content: center;
 }
 
@@ -26,7 +32,7 @@ body{
     border-radius: 30px;
     width: fit-content;
     height: 30px;
-    width: 40%;
+    width: 100%;
     display: flex;
     align-items: center;
     overflow-x: hidden;
@@ -49,13 +55,41 @@ body{
     padding-left: 10px;
     cursor: pointer;
 }
+.search-bar .Loggedin{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px 20px;
+    width: 80%;
+}
+
+.top{
+    position: relative;
+    display: flex;
+    float: right;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.top span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.top p{
+    font-size: 14px;
+    margin: 5px 0px 20px 10px;
+}
+
+.top .Loggedin{
+    padding-left: 20px;
+}
 
 .board{
     position: absolute;
     margin-left: 240px;
     margin-top: 30px;
     width: 80%;
-    background-color: #F1F5F9;
+    background-color: #f4f7fa;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -63,11 +97,11 @@ body{
 }
 
 .data{
-    background-color: #bde4e0;
+    background-color: #d7f0ed;
     border-radius: 20px;
     padding: 10px;
     margin: 20px;
-    width: 45%;
+    width: 50%;
 }
 
 .btn{
@@ -168,8 +202,9 @@ body{
 .match{
     margin: 20px;
     padding: 30px;
-    background-color: #bde4e0;
+    background-color: #d7f0ed;
     border-radius: 20px;
+    width: 45%;
 }
 
 .match h3{
@@ -179,9 +214,28 @@ body{
     text-align: center;
 }
 
+.new{
+    float: right;
+    margin: 10px 30px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 60px;
+    font-size: 14px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.new:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
 table.list{
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
     width: 95%;
     border-collapse: collapse;
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
@@ -214,21 +268,22 @@ table.list tr{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
-table.list .new{
+table.list .view{
     text-decoration: none;
     background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296;
+    color: #308C83;
+    border: 1px solid #308C83;
     border-radius: 10px;
-    padding: 10px 30px;
+    padding: 8px 10px;
     font-size: 14px;
     transition: 0.5s;
 }
 
-table.list .new:hover{
-    background-color: #006296;
+table.list .view:hover{
+    background-color: #308C83;
     color: #F7FFFF;
 }
+
 
 table.list .send{
     text-decoration: none;
@@ -236,7 +291,7 @@ table.list .send{
     color: #006296;
     border: 1px solid #006296;
     border-radius: 10px;
-    padding: 8px 20px;
+    padding: 8px 10px;
     font-size: 14px;
     transition: 0.5s;
 }
@@ -252,7 +307,7 @@ table.list .delete{
     color: #FF0404;
     border: 1px solid #FF0404;
     border-radius: 10px;
-    padding: 8px 20px;
+    padding: 8px 10px;
     font-size: 14px;
     transition: 0.5s;
 }

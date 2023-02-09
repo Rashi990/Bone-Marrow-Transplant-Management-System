@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins, sans-serif;
     background-color: #F7FFFF;
 }
 
@@ -9,7 +9,7 @@ body{
     background-color: #bde4e0;
     margin: 90px auto;
     padding: 20px;
-    width: 35%;
+    width: 30%;
     border-radius: 20px;
     box-shadow: 20px 10px 34px rgba(0, 0, 0, 0.3);
 }
@@ -36,16 +36,17 @@ form.add_clinician_form input[type="text"],[type="email"],[type="password"]{
     line-height: 30px;
 }
 
+p .buttons{
+    display: flex;
+}
+
 .btn{
-    width: 50%;
     background-color: #F7FFFF;
     color: #006296;
     border: 1px solid #006296;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 8px 30px ;
     border-radius: 20px;
     transition: 0.5s;
 }
@@ -54,6 +55,23 @@ form.add_clinician_form input[type="text"],[type="email"],[type="password"]{
     background-color: #006296;
     color: #F7FFFF;
     cursor: pointer;
+}
+
+.back_btn{
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 8px 30px ;
+    transition: 0.5s;
+}
+
+.back_btn:hover{
+    cursor: pointer;
+    background-color: #006296;
+    color: #F7FFFF;
 }
 
 .err{
@@ -89,25 +107,6 @@ form.add_clinician_form input[type="text"],[type="email"],[type="password"]{
     color: #F7FFFF;
 }
 
-.back_btn{
-    position: fixed;
-    top: 0;
-    left: 0;
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296;
-    font-weight: bold;
-    width: 180px;
-    border-radius: 10px;
-    padding: 5px 5px 20px 10px ;
-    transition: 0.5s;
-}
 
-.back_btn:hover{
-    cursor: pointer;
-    background-color: #006296;
-    color: #F7FFFF;
-}
 
 

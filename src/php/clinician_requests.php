@@ -1,4 +1,4 @@
-<?php require_once('clinician_navbar_requests.php'); ?>
+<?php require_once('clinician_navbar_matching.php'); ?>
 <?php
 require_once('../../config/connection.php');
 session_start();

@@ -1,0 +1,298 @@
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.head h1{
+    position: absolute;
+    display: flex;
+    margin-left: 260px;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
+}
+
+.search{
+    display: flex;
+    margin-left: 280px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+
+.search-bar span{
+    display: inline-block;
+    padding: 5px;
+    font-size:14px ;
+ }
+
+ .search-bar input{
+    height: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+ }
+
+.search-bar span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.board{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 30px;
+    width: 80%;
+    height: 600px;
+    background-color: #f4f7fa;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    margin: 20px 20px;
+    padding-bottom: 30px;
+}
+
+.goto-list{
+    float: right;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+
+.goto-list:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+.count{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    background-color: #F7FFFF;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 5px 20px;
+    width: 30%;
+    height: 50px;
+    color: #006296;
+    font-weight: bold;
+    text-align: center;
+    line-height: 10px;
+    cursor: pointer;
+}
+
+.box:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.chart{
+    background-color: #F7FFFF;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    width: 85%;
+    height: 300px;
+    color: #006296;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.chart:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.perc{
+    margin: 10px auto;
+    padding: 20px;
+    width: 80%;
+    height: 60%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #006296;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+.perc:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+*/
+
+.perc h2{
+    text-align: center;
+}
+
+.per{
+    width: 30%;
+    height: 60%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.data{
+    background-color: #D7F0ED;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+    width: 70%;
+}
+
+.match{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 15px;
+    background-color: #D7F0ED;
+    border-radius: 20px;
+    width: 30%;
+}
+
+h4{
+    font-size: 18px;
+    margin: 10px;
+    font-weight: bold;
+    color: #006296;
+    text-align: center;
+}
+
+#view{
+  color: #009879;
+  height: 30px;
+  width: 60px;
+  border-radius: 5px;
+  border-color: #009879;
+}
+
+#view:hover{
+  background: #009879;
+  color: White;
+}
+
+#view a{
+  text-decoration: none;
+  color: #009879;
+  width: 60px;
+  height: 30px;
+}
+
+#view a:hover{
+  color: white;
+}
+
+.pd tr{
+  height: 35px;
+  background: #D7F0ED;
+  color: #006296;
+}
+
+.pd td{
+  width: 120px;
+  padding: 0 10px;
+}
+
+.patient-details{
+  background: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.patient-diseases{
+  background: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.selected-donors{
+  background: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.buttons{
+  background: white;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 17%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons a{
+  text-decoration: none;
+  color: #006296;
+}
+
+.buttons:hover{
+  background: #006296;
+  color: white;
+}
+
+.buttons a:hover{
+  color: white;
+}
+
+.dd tr{
+  height: 35px;
+  background: #D7F0ED;
+  color: #006296;
+}
+
+.dd td{
+  width: 120px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.long{
+  width: 160px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.dd th{
+  text-align: center;
+  height: 35px;
+  color: #ffffff;
+  background: #308C86;
+}
+
+table{
+  width: 100%;
+}

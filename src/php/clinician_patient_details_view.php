@@ -66,67 +66,58 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 
       <!--Requests List-->
       <div class="match">
-        <h3 align="center">Patient Details</h3>
-        <table class="pd" align="center">
-          <tr>
-            <td>Hospital ID</td>
-            <td>: <?php echo $hospital_id ?></td>
-          </tr>
-          <tr>
-            <td>Hospital Name</td>
-            <td>: <?php echo $hospital_name ?></td>
-          </tr>
-          <tr>
-            <td>Patient ID</td>
-            <td>: <?php echo $patient_id ?></td>
-          </tr>
-          <tr>
-            <td>Patient Name</td>
-            <td>: <?php echo $patient_name ?></td>
-          </tr>
-          <tr>
-            <td>Gender</td>
-            <td>: <?php echo $gender ?></td>
-          </tr>
-          <tr>
-            <td>Age</td>
-            <td>: 26</td>
-          </tr>
-          <tr>
-            <td>Blood Group</td>
-            <td>: <?php echo $blood_group ?></td>
-          </tr>
-          <tr>
-            <td>HLA Antigen Type</td>
-            <td>: <?php echo $hla_antigen ?></td>
-          </tr>
-          <tr>
-            <td>HLA Allele Family</td>
-            <td>: <?php echo $hla_allele_family ?></td>
-          </tr>
-          <tr>
-            <td>HLA Second Type</td>
-            <td>: <?php echo $hla_2nd_type ?></td>
-          </tr>
-          <tr>
-            <td>HLA Third Type</td>
-            <td>: <?php echo $hla_3rd_type ?></td>
-          </tr>
-          <tr>
-            <td>HLA Fourth Type</td>
-            <td>: <?php echo $hla_4th_type ?></td>
-          </tr>
-          <tr>
-            <td>HLA Fifth Type</td>
-            <td>: <?php echo $hla_5th_type ?></td>
-          </tr>
-        </table>
-      </div>
-
-        <!--Section1-->
-        <div class="data">
-          <h3 align="center">Details of Diseases</h3>
-          <table align="center">
+        <div class="patient-details">
+          <h4 align="center">Patient Details</h4>
+          <table class="pd" align="center">
+            <tr>
+              <td>Patient ID</td>
+              <td>: <?php echo $patient_id ?></td>
+            </tr>
+            <tr>
+              <td>Patient Name</td>
+              <td>: <?php echo $patient_name ?></td>
+            </tr>
+            <tr>
+              <td>Gender</td>
+              <td>: <?php echo $gender ?></td>
+            </tr>
+            <tr>
+              <td>Age</td>
+              <td>: 26</td>
+            </tr>
+            <tr>
+              <td>Blood Group</td>
+              <td>: <?php echo $blood_group ?></td>
+            </tr>
+            <tr>
+              <td>HLA Antigen Type</td>
+              <td>: <?php echo $hla_antigen ?></td>
+            </tr>
+            <tr>
+              <td>HLA Allele Family</td>
+              <td>: <?php echo $hla_allele_family ?></td>
+            </tr>
+            <tr>
+              <td>HLA Second Type</td>
+              <td>: <?php echo $hla_2nd_type ?></td>
+            </tr>
+            <tr>
+              <td>HLA Third Type</td>
+              <td>: <?php echo $hla_3rd_type ?></td>
+            </tr>
+            <tr>
+              <td>HLA Fourth Type</td>
+              <td>: <?php echo $hla_4th_type ?></td>
+            </tr>
+            <tr>
+              <td>HLA Fifth Type</td>
+              <td>: <?php echo $hla_5th_type ?></td>
+            </tr>
+          </table>
+        </div>
+        <div class="patient-diseases">
+          <h4 align="center">Details of Diseases</h4>
+          <table class="dd" align="center">
             <tr>
               <th>Problems</th>
               <th>Medications</th>
@@ -166,6 +157,152 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
               </td>
             </tr>
           </table>
+        </div>
+      </div>
+
+        <!--Section1-->
+        <div class="data">
+          <div class="buttons">
+            <a href="#">Do the Matching</a>
+          </div>
+          <div class="selected-donors">
+            <h4 align="center">Selected Donor List</h4>
+            <table  class="dd" align="center">
+              <tr>
+                <th>Donor ID</th>
+                <th class="long">Donor Name</th>
+                <th>Blood Group</th>
+                <th class="long">HLA Type</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Malki Nethusha</td>
+                <td>B+</td>
+                <td>HLA-C 08 01 01 01 L</td>
+                <td>
+                  <a href="../../src/php/clinician_patient_details.php" class="view">View</a>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
 
     </div>

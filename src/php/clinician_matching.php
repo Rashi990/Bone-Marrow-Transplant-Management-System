@@ -13,7 +13,7 @@
 <body>
 
   <div class="head">
-    <h1>Matching</h1>
+    <h1>Matches</h1>
   </div>
 
   <div class="search">
@@ -24,83 +24,111 @@
   </div>
 
   <div class="board">
+    <h3>Matched Patient and Donor List</h3>
     <div class="counts1">
+      <table class="list">
+          <tr>
+              <th>Patient ID</th>
+              <th>Patient Name</th>
+              <th>Donors</th>
+              <th>Donor ID</th>
+          </tr>
+          <tr>
+              <td rowspan="3">1</td>
+              <td rowspan="3">H.T.Sarath Kumara De Silva</td>
+              <td>S.M.Saman Kumara</td>
+              <td>22</td>
+          </tr>
+          <tr>
+              <td>K.M.Wasana Samaranayake</td>
+              <td>38</td>
+          </tr>
+          <tr>
+              <td>D.S.M.Nalaka Senewirathna</td>
+              <td>27</td>
+          </tr>
+          <tr>
+              <td rowspan="3">2</td>
+              <td rowspan="3">H.T.Sarath Kumara De Silva</td>
+              <td>S.M.Saman Kumara</td>
+              <td>22</td>
+          </tr>
+          <tr>
+              <td>K.M.Wasana Samaranayake</td>
+              <td>38</td>
+          </tr>
+          <tr>
+              <td>D.S.M.Nalaka Senewirathna</td>
+              <td>27</td>
+          </tr>
+          <tr>
+              <td rowspan="3">3</td>
+              <td rowspan="3">H.T.Sarath Kumara De Silva</td>
+              <td>S.M.Saman Kumara</td>
+              <td>22</td>
+          </tr>
+          <tr>
+              <td>K.M.Wasana Samaranayake</td>
+              <td>38</td>
+          </tr>
+          <tr>
+              <td>D.S.M.Nalaka Senewirathna</td>
+              <td>27</td>
+          </tr>
+          <tr>
+              <td rowspan="3">4</td>
+              <td rowspan="3">H.T.Sarath Kumara De Silva</td>
+              <td>S.M.Saman Kumara</td>
+              <td>22</td>
+          </tr>
+          <tr>
+              <td>K.M.Wasana Samaranayake</td>
+              <td>38</td>
+          </tr>
+          <tr>
+              <td>D.S.M.Nalaka Senewirathna</td>
+              <td>27</td>
+          </tr>
+          <tr>
+              <td rowspan="3">5</td>
+              <td rowspan="3">H.T.Sarath Kumara De Silva</td>
+              <td>S.M.Saman Kumara</td>
+              <td>22</td>
+          </tr>
+          <tr>
+              <td>K.M.Wasana Samaranayake</td>
+              <td>38</td>
+          </tr>
+          <tr>
+              <td>D.S.M.Nalaka Senewirathna</td>
+              <td>27</td>
+          </tr>
+          <tr>
+              <td rowspan="3">6</td>
+              <td rowspan="3">H.T.Sarath Kumara De Silva</td>
+              <td>S.M.Saman Kumara</td>
+              <td>22</td>
+          </tr>
+          <tr>
+              <td>K.M.Wasana Samaranayake</td>
+              <td>38</td>
+          </tr>
+          <tr>
+              <td>D.S.M.Nalaka Senewirathna</td>
+              <td>27</td>
+          </tr>
 
-        <div class="box">
-          <table class="list">
-              <tr>
-                  <th>Patient ID</th>
-                  <th>Patient Name</th>
-                  <th>Donors</th>
-                  <th>Donor ID</th>
-              </tr>
-              <tr>
-                  <td>1</td>
-                  <td>H.T.Sarath Kumara De Silva</td>
-                  <td>
-                      <ul>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                      </ul>
-                 </td>
-                 <td>
-                  <ul>
-                      <li>2</li>
-                      <li>4</li>
-                      <li>56</li>
-                      <li>77</li>
-                      <li>66</li>
-                      <li>7</li>
-                      <li>12</li>
-                      <li>44</li>
-                  </ul>
-             </td>
-              </tr>
 
-              <tr>
-                  <td>1</td>
-                  <td>H.T.Sarath De Silva</td>
-                  <td>
-                      <ul>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                          <li>S.M.Saman Kumara</li>
-                      </ul>
-                 </td>
-                 <td>
-                  <ul>
-                      <li>2</li>
-                      <li>4</li>
-                      <li>56</li>
-                      <li>77</li>
-                      <li>66</li>
-                      <li>7</li>
-                      <li>12</li>
-                      <li>44</li>
-                  </ul>
-                  </td>
-              </tr>
-
-              </table>
-        </div>
-
+          </table>
     </div>
 
     <div class="counts2">
 
         <div class="box">
-          <button type="button" name="button"><a href="#">Re-match Patients with Donors</a></button>
+          <a href="clinician_requests.php">Requests</a>
+        </div>
+        <div class="box">
+          <a href="#">Send Matching List</a>
         </div>
 
     </div>

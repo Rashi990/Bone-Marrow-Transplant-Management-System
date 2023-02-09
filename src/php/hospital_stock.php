@@ -18,12 +18,29 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
     <title>Document</title>
  </head>
  <body>
+
+ <div class="top-nav">
+
+ <div class="head">
+        <h1>Samples</h1>
+    </div>
+
+    <div class="search">
+        <div class="search-bar">
+          <span class="material-icons">search</span>
+          <input type="search" placeholder="search here">
+        </div>
+    </div>
+
  <div class="top">
         <span class="material-icons">notifications</span>
         <span class="material-icons">chat_bubble</span>
         <div class="Loggedin"> Welcome! <?php echo $_SESSION['hospital_name'];?></div>
         <span class="material-icons">account_circle</span>
       </div>
+
+</div>
+
  </body>
  </html>
 

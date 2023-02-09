@@ -55,19 +55,12 @@ body{
     margin-left: 240px;
     margin-top: 30px;
     width: 80%;
-    background-color: #F1F5F9;
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.data{
-    background-color: #bde4e0;
+    height: 600px;
+    background-color: #f4f7fa;
     border-radius: 20px;
     padding: 10px;
-    margin: 20px;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn{
@@ -165,16 +158,28 @@ body{
     margin-top: 10px;
 }
 
-.match{
-    margin: 20px;
-    padding: 30px;
-    background-color: #bde4e0;
+.data{
+    background-color: #D7F0ED;
     border-radius: 20px;
-    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    width: 70%;
 }
 
-h3{
-    font-size: 20px;
+.match{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 15px;
+    background-color: #D7F0ED;
+    border-radius: 20px;
+    width: 30%;
+}
+
+h4{
+    font-size: 17px;
+    margin: 0;
     font-weight: bold;
     color: #006296;
     text-align: center;
@@ -196,7 +201,7 @@ table.list th{
     text-align: left;
     font-size: 16px;
     font-weight: bold;
-    height: 25px;
+    height: 20px;
 }
 
 table.list td{
@@ -264,21 +269,21 @@ table.list .delete:hover{
 }
 
 #view{
-  color: #308C86;
+  color: #009879;
   height: 30px;
   width: 60px;
   border-radius: 5px;
-  border-color: #308C86;
+  border-color: #009879;
 }
 
 #view:hover{
-  background: #308C86;
+  background: #009879;
   color: White;
 }
 
 #view a{
   text-decoration: none;
-  color: #308C86;
+  color: #009879;
   width: 60px;
   height: 30px;
 }
@@ -288,12 +293,111 @@ table.list .delete:hover{
 }
 
 .pd tr{
-  height: 30px;
-  background: white;
+  height: 23px;
+  background: #D7F0ED;
   color: #006296;
 }
 
 .pd td{
-  width: 200px;
+  width: 120px;
   padding: 0 10px;
+}
+
+.patient-details{
+  background: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.patient-diseases{
+  background: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.selected-donors{
+  background: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.buttons{
+  background: white;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 17%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons a{
+  text-decoration: none;
+  color: #006296;
+}
+
+.buttons:hover{
+  background: #006296;
+  color: white;
+}
+
+.buttons a:hover{
+  color: white;
+}
+
+.dd tr{
+  height: 30px;
+  background: #D7F0ED;
+  color: #006296;
+}
+
+.dd td{
+  width: 120px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.long{
+  width: 160px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.dd th{
+  text-align: center;
+  height: 35px;
+  color: #ffffff;
+  background: #308C86;
+}
+
+table{
+  width: 100%;
+}
+
+a.view {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: #009879;
+    background: white;
+    width: 60px;
+    height: 20px;
+    padding: 2px;
+    text-align: center;
+
+    border: 1px solid #009879;
+    border-radius: 10px;
+}
+
+a.view:hover {
+    color: white;
+    background: #009879;
 }
