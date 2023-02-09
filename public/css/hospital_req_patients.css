@@ -125,7 +125,7 @@ body{
     color: #F7FFFF;
 }
 
-.board{
+.donors{
     position: absolute;
     margin-left: 240px;
     margin-top: 20px;
@@ -136,7 +136,7 @@ body{
     border-radius: 20px;
 }
 
-.board h1{
+.donors h1{
     color: #006296;
     font-size: 30px;
     font-weight: bold;
@@ -145,101 +145,56 @@ body{
     text-align: center;
 }
 
-.board{
-    position: absolute;
-    margin-left: 240px;
-    margin-top: 30px;
-    width: 80%;
-    background-color: #f4f7fa;
-    border-radius: 20px;
-    padding: 20px;
-    overflow: hidden;
-}
-
-.counts{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.counts .box{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding: 20px;
-    width: 20%;
-    height: 50px;
-    background-color: #d7f0ed;
-    border-radius: 20px;
-    border: none;
-    text-align: center;
-    font-weight: bold;
-    color: #006296;
-    line-height: 10px;
-}
-
-.counts .box:hover{
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
-}
-
-.section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 98%;
-    padding: 10px;
-    margin: 10px auto;
-    background-color: #d7f0ed;
-    border: none;
-    border-radius: 20px;
-}
-
-.data{
-    margin: 20px;
-    padding: 10px;
-    width: 65%;
-    background-color: #ffffff;
-    border-radius: 20px;
-    font-weight: bold;
-    color: #006296;
-}
-.data:hover{
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
-}
-
-.data h2{
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-}
-
 table.list{
-    margin: 20px;
+    margin: 30px;
     padding: 10px;
     width: 96%;
+    border-radius: 20px;
+    border: none;
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+    background-color: #d7f0ed;
 }
 
 table.list th{
-    background-color: #308C83;
-    color: #F7FFFF;
+    border-bottom: 1px solid #006296;
+    color: #006296;
     padding: 10px;
     text-align: left;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     height: 25px;
 }
 
 table.list td{
     padding: 10px;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
     color: #006296;
-    background-color: #d7f0ed;
+    background-color: #F7FFFF;
     height: 25px;
+    border-bottom: 1px solid #006296;
 }
 
-/*
-table.list tr:nth-child(even){
-    background-color: #d7f0ed;
+ul li{
+    line-height: 35px;
+    list-style: none;
+    font-weight: 200;
+    font-size: 16px;
 }
-*/
+
+ul li .view{
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #009879;
+    border: 1px solid #009879;
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+ul li .view:hover{
+    background-color: #009879;
+    color: #F7FFFF;
+}
+
