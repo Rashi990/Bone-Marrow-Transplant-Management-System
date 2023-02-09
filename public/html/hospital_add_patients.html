@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_add_patients.css?v=2">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@700;800&family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <title>Add Clinician</title>
+</head>
+<body>
+
+    <div class="add_patient">
+        <h1>Add New Patient</h1>
+
+        <form action="../../src/php/hospital_add_patients.php" method="post" class="add_patient_form">
+
+            <p>
+                <label for="">ID</label>
+                <input type="text" name="patient_id">
+            </p>
+
+            <p>
+                <label for="">Name</label>
+                <input type="text" name="patient_name" required>
+            </p>
+
+            <p>
+                <label for="">Email</label>
+                <input type="email" name="email" required>
+            </p>
+
+            <p>
+                <label for="">Telephone No</label>
+                <input type="text" name="telephone_no" required>
+            </p>
+
+            <p>
+                <label for="">Address</label>
+                <input type="text" name="address" required>
+            </p>
+
+            <p>
+                <label for="">Age</label>
+                <input type="text" name="age" required>
+            </p>
+
+<!--
+            <p>
+                <label for="">Status</label>
+                <input type="radio" id="normal" name="normal" value="normal">
+                <label class="" for="normal">Normal</label><br>
+                <input type="radio" id="critical" name="critical" value="critical">
+                <label for="critical">Critical</label><br>
+            </p>
+            -->
+
+            <p class="buttons">
+                <label>&nbsp;</label>
+                <input type="submit" name="submit" value="Next" class="btn" >
+                <a class="back_btn" href="../../src/php/hospital_all_patients.php">Back</a>
+            </p>
+         
+        </form>
+
+    </div>
+
+</body>
+</html>
