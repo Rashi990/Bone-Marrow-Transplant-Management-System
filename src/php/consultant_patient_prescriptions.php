@@ -20,7 +20,7 @@ include "../../config/connection.php";
 
       </div>
       <div class="">
-        <a href="consultant_clinical_form.php" class="new">+ Add</a>
+        <a href="consultant_prescription_form.php" class="new">+ Add</a>
         <div class="mid-bottom">
             <table align="center">
               <tr>
