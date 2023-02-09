@@ -20,9 +20,7 @@ include "../../config/connection.php";
 
       </div>
       <div class="">
-        <button class="add" type="button" name="button">
-          <a href="consultant_clinical_form.php">+ Add New Record</a>
-        </button>
+        <a href="consultant_clinical_form.php" class="new">+ Add</a>
         <div class="mid-bottom">
             <table align="center">
               <tr>
@@ -32,7 +30,7 @@ include "../../config/connection.php";
                 <th>Dosage</th>
                 <th>Route</th>
                 <th>Frequency</th>
-                <th colspan="2">Action</th>
+                <th colspan="3">Action</th>
               </tr>
               <?php
                   $sql="SELECT * FROM patient_clinical_reports ORDER BY date, patient_id, drug_name";
