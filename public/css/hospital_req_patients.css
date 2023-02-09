@@ -125,7 +125,7 @@ body{
     color: #F7FFFF;
 }
 
-.patients{
+.donors{
     position: absolute;
     margin-left: 240px;
     margin-top: 20px;
@@ -136,7 +136,7 @@ body{
     border-radius: 20px;
 }
 
-.patients h1{
+.donors h1{
     color: #006296;
     font-size: 30px;
     font-weight: bold;
@@ -145,36 +145,19 @@ body{
     text-align: center;
 }
 
-.new{
-    float: right;
-    margin: 10px 40px;
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296 ;
-    border-radius: 10px;
-    padding: 10px 80px;
-    font-size: 14px;
-    transition: 0.5s;
-    font-weight: bold;
-}
-
-.new:hover{
-    background-color: #006296;
-    color: #F7FFFF;
-}
-
 table.list{
-    margin: 20px;
+    margin: 30px;
     padding: 10px;
     width: 96%;
-    border-collapse: collapse;
+    border-radius: 20px;
+    border: none;
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+    background-color: #d7f0ed;
 }
 
 table.list th{
-    background-color: #308C83;
-    color: #F7FFFF;
+    border-bottom: 1px solid #006296;
+    color: #006296;
     padding: 10px;
     text-align: left;
     font-size: 18px;
@@ -187,57 +170,31 @@ table.list td{
     font-size: 16px;
     font-weight: bold;
     color: #006296;
+    background-color: #F7FFFF;
     height: 25px;
+    border-bottom: 1px solid #006296;
 }
 
-table.list tr:nth-child(even){
-    background-color: #d7f0ed;
+ul li{
+    line-height: 35px;
+    list-style: none;
+    font-weight: 200;
+    font-size: 16px;
 }
 
-table.list .view{
+ul li .view{
     text-decoration: none;
     background-color: #F7FFFF;
     color: #009879;
     border: 1px solid #009879;
     border-radius: 10px;
-    padding: 8px 20px;
+    padding: 4px 10px;
     font-size: 14px;
     transition: 0.5s;
 }
 
-table.list .view:hover{
+ul li .view:hover{
     background-color: #009879;
     color: #F7FFFF;
 }
 
-table.list .delete{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #FF0404;
-    border: 1px solid #FF0404;
-    border-radius: 10px;
-    padding: 8px 20px;
-    font-size: 14px;
-    transition: 0.5s;
-}
-
-table.list .delete:hover{
-    background-color: #FF0404;
-    color: #F7FFFF;
-}
-
-table.list .edit{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296 ;
-    border-radius: 10px;
-    padding: 8px 20px;
-    font-size: 14px;
-    transition: 0.5s;
-}
-
-table.list .edit:hover{
-    background-color: #006296;
-    color: #F7FFFF;
-}
