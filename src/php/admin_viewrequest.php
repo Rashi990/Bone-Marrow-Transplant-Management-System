@@ -26,7 +26,7 @@ if (!(isset($_SESSION['user_name']) ))
                 View Requests
             </h2>
             <div class="search-wrapper">
-                <span class='bx bx-search'></span>
+            <span class="material-icons">search</span>
                 <input type="search" placeholder="search here">
             </div>
     
@@ -45,7 +45,7 @@ if (!(isset($_SESSION['user_name']) ))
            
             
             <div class="user-wrapper">
-                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+            <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
 </header>

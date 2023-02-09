@@ -41,6 +41,7 @@ form .user-details .input-box{
     height: 45px;
     width: 100%;
 }
+
 .user-details .input-box label{
         display: block;
         margin-bottom: 0.5rem;
@@ -50,7 +51,7 @@ form .user-details .input-box{
         letter-spacing: 0.03em;
         color: #006296;
     }
-.user-details .input-box input{
+.user-details .input-box input,select{
     display: 50%;
     width: 100%;
     box-sizing:border-box;
@@ -73,7 +74,7 @@ h2{
     background-color: #F7FFFF;
     display: flex;
     justify-content: center;
-    width: 50%;
+    width:50%;
     color:#006296;
     font-weight: 700;
     margin-top: 20px;
@@ -94,3 +95,36 @@ h2{
     cursor: pointer;
     color:#F7FFFF;
 }
+.cancle-btn{
+    text-decoration: none;
+    background-color: #F7FFFF;
+    display: block;
+    width: 50%;
+    color:#FF0404;
+    font-weight: 700;
+    border:2px solid #FF0404;
+    margin: 2rem 2rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+
+}
+.cancle-btn:hover{
+    background: #FF0404;
+    cursor: pointer;
+    color:white;
+}
+table {
+    width: 100%;
+    padding: 10px;
+ }
+ 
+ th,
+ td {
+    width: 30%;
+    text-align: left;
+    padding-right: 50px;
+ }
+
