@@ -12,19 +12,19 @@
 </head>
 <body>
 
-  <div class="head">
-    <h1>Matches</h1>
-  </div>
-
-  <div class="search">
-  <div class="search-bar">
-    <span class="material-icons">search</span>
-    <input type="search" placeholder="search here">
-  </div>
-  </div>
-
   <div class="board">
-    <h3>Matched Patient and Donor List</h3>
+
+    <div class="counts2">
+
+      <div class="box">
+        <a class="selected">Matched Patient and Donor List</a>
+      </div>
+        <div class="box">
+          <a class="not-selected" href="clinician_requests.php">Matching Requests</a>
+        </div>
+
+    </div>
+
     <div class="counts1">
       <table class="list">
           <tr>
@@ -120,17 +120,6 @@
 
 
           </table>
-    </div>
-
-    <div class="counts2">
-
-        <div class="box">
-          <a href="clinician_requests.php">Requests</a>
-        </div>
-        <div class="box">
-          <a href="#">Send Matching List</a>
-        </div>
-
     </div>
   </div>
 

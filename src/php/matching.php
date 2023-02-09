@@ -51,16 +51,6 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <div class="head">
-        <h1>Matching Process</h1>
-    </div>
-
-    <div class="search">
-        <div class="search-bar">
-          <span class="material-icons">search</span>
-          <input type="search" placeholder="search here">
-        </div>
-    </div>
 
     <div class="board">
 

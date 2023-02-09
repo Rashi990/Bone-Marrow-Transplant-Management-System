@@ -1,14 +1,20 @@
 body{
     margin: 0;
     background-color: #F7FFFF;
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-nav{
+    display:grid;
+    position:sticky;
+    margin-left: 220px;
+    grid-template-columns: 300px 600px auto auto;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
 }
 
 .head h1{
-    position: absolute;
-    display: flex;
-    margin-left: 260px;
-    padding-top: 0px;
     text-align: center;
     font-size: 30px;
     color: #006296;
@@ -16,8 +22,8 @@ body{
 
 .search{
     display: flex;
-    margin-left: 280px;
-    padding-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
     justify-content: center;
 }
 
@@ -26,7 +32,7 @@ body{
     border-radius: 30px;
     width: fit-content;
     height: 30px;
-    width: 40%;
+    width: 100%;
     display: flex;
     align-items: center;
     overflow-x: hidden;
@@ -56,14 +62,36 @@ body{
     width: 80%;
 }
 
+.top{
+    position: relative;
+    display: flex;
+    float: right;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.top span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.top p{
+    font-size: 14px;
+    margin: 5px 0px 20px 10px;
+}
+
+.top .Loggedin{
+    padding-left: 20px;
+}
+
 .board{
     display: flex;
     flex-direction: column;
     position: absolute;
     margin-left: 240px;
-    margin-top:50px;
+    margin-top:20px;
     width: 80%;
-    height: 100%;
+    height: 550px;
     background-color: #f4f7fa;
     border-radius: 20px;
     padding: 20px;
@@ -82,11 +110,9 @@ body{
 }
 
 .counts2{
-    margin-top: 10px;
     display: flex;
     margin: 10px;
     width: 50%;
-    height: 550px;
     justify-content: center;
 }
 
@@ -95,27 +121,6 @@ body{
 }
 
 .counts1:hover{
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
-}
-
-.counts2 .box{
-    display: flex;
-    margin: 10px;
-    padding: 20px;
-    width: 100%;
-    height: 50px;
-    background-color: #D7F0ED;
-    border-radius: 20px;
-    border: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #006296;
-    /*line-height: 10px;*/
-}
-
-.counts2 .box:hover{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
@@ -165,4 +170,47 @@ h3{
     margin-bottom: 10px;
     font-weight: bold;
     color: #006296;
+}
+
+.selected{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 5px;
+    border-radius: 20px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #006296;
+    /*line-height: 10px;*/
+}
+
+.selected .box:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.not-selected{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 5px;
+    background: #006296;
+    border-radius: 20px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    /*line-height: 10px;*/
+}
+
+a.not-selected{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.not-selected .box:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
