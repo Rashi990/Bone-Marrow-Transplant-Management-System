@@ -23,7 +23,7 @@ if (!(isset($_SESSION['user_name']) ))
    <div class="main-content">
         <header>
             <h2>
-                View Requests
+                Hospital Matching Request
             </h2>
             <div class="search-wrapper">
             <span class="material-icons">search</span>
@@ -53,24 +53,24 @@ if (!(isset($_SESSION['user_name']) ))
 <div class="right">
 <nav>
         <ul>
-        <li><a href="#">Pending Donor Test Request</a> </li>
-        <li><a  class="active" href="../../src/php/admin_hospital_match_request.php" > Hospital Matching Request </a></li>
+        <li><a class="active" href="../../src/php/admin_viewrequest.php">Pending Donor Test Request</a> </li>
+        <li><a   href="#" > Hospital Matching Request </a></li>
       </ul>
     </nav>
     <div class="cards-2">
             <div class="card-single-2">
                 <div class="title">
-                    <h3>Pending Donor Test Request</h3>
+                    <h3>Hospital Matching Request</h3>
                 </div>
                 <table>
                     <tr>
-                        <th>Donor Name</th>
-                        <th>Nearest City</th>
-                        <th>Requested Date</th>
-                        <th>More Details</th>
+                        <th>Hospital  Name</th>
+                        <th colspan="3" >Patients ID</th>
+                        <th>Status</th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td>Amila kumara</td>
+                        <td>Apeksha Hospital</td>
                         <td>Nugegoda</td>
                         <td>12/19</td>
                         <!-- <td style="color:#38fa11 ;">Qualified</td> -->
