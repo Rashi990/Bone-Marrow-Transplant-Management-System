@@ -1,14 +1,20 @@
 body{
     margin: 0;
-    font-family: Poppins, sans-serif;
     background-color: #F7FFFF;
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-nav{
+    display:grid;
+    position:sticky;
+    margin-left: 220px;
+    grid-template-columns: 300px 600px auto auto;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
 }
 
 .head h1{
-    position: absolute;
-    display: flex;
-    margin-left: 260px;
-    padding-top: 0px;
     text-align: center;
     font-size: 30px;
     color: #006296;
@@ -16,8 +22,8 @@ body{
 
 .search{
     display: flex;
-    margin-left: 280px;
-    padding-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
     justify-content: center;
 }
 
@@ -26,7 +32,7 @@ body{
     border-radius: 30px;
     width: fit-content;
     height: 30px;
-    width: 40%;
+    width: 100%;
     display: flex;
     align-items: center;
     overflow-x: hidden;
@@ -49,11 +55,39 @@ body{
     padding-left: 10px;
     cursor: pointer;
 }
+.search-bar .Loggedin{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px 20px;
+    width: 80%;
+}
+
+.top{
+    position: relative;
+    display: flex;
+    float: right;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.top span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.top p{
+    font-size: 14px;
+    margin: 5px 0px 20px 10px;
+}
+
+.top .Loggedin{
+    padding-left: 20px;
+}
 
 .board{
     position: absolute;
     margin-left: 240px;
-    margin-top: 30px;
+    margin-top: 20px;
     width: 80%;
     height: 600px;
     background-color: #f4f7fa;
@@ -171,21 +205,21 @@ body{
     flex-direction: column;
     justify-content: space-between;
     margin: 5px;
-    padding: 15px;
+    padding: 5px;
     background-color: #D7F0ED;
     border-radius: 20px;
     width: 30%;
 }
 
 h4{
-    font-size: 17px;
+    font-size: 16px;
     margin: 0;
     font-weight: bold;
     color: #006296;
     text-align: center;
 }
 
-table.list{
+/*table.list{
     margin: 20px;
     padding: 20px;
     width: 95%;
@@ -266,7 +300,7 @@ table.list .delete{
 table.list .delete:hover{
     background-color: #FF0404;
     color: #F7FFFF;
-}
+}*/
 
 #view{
   color: #009879;
@@ -293,7 +327,7 @@ table.list .delete:hover{
 }
 
 .pd tr{
-  height: 23px;
+  height: 20px;
   background: #D7F0ED;
   color: #006296;
 }
@@ -301,6 +335,7 @@ table.list .delete:hover{
 .pd td{
   width: 120px;
   padding: 0 10px;
+  font-size: 15px;
 }
 
 .patient-details{
@@ -322,6 +357,12 @@ table.list .delete:hover{
   padding: 5px;
   margin: 5px;
   border-radius: 10px;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.selected-donors::-webkit-scrollbar {
+  display: none;
 }
 
 .buttons{
@@ -352,7 +393,7 @@ table.list .delete:hover{
 }
 
 .dd tr{
-  height: 30px;
+  height: 35px;
   background: #D7F0ED;
   color: #006296;
 }
@@ -361,6 +402,7 @@ table.list .delete:hover{
   width: 120px;
   padding: 0 10px;
   text-align: center;
+  font-size: 14px;
 }
 
 .long{

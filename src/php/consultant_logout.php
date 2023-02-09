@@ -5,6 +5,6 @@ session_unset();
 session_destroy();
 
 echo "<script type='text/javascript'>alert('Successfully loggedout!');</script>";
-header("Location:home.php");
+header("Location:login_choose2.php");
 
 ?>
