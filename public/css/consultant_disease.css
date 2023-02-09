@@ -6,8 +6,7 @@
 .hero{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  flex: 100%;
+  justify-content:space-between;
   position: absolute;
   top: 0;
   left: 0;
@@ -19,36 +18,49 @@
   height: 50px;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 60px;
   align-items:space-between;
   overflow: hidden;
 }
 
-.bottom{
-  flex: 10%;
-  background-color: white;
-  padding: 20px;
+.middle{
+  height: 100%;
+  background: #f4f7fa;
+  margin: 20px;
+  border-radius: 20px;
   display: flex;
-  justify-content: center;
-  align-items:space-between;
-  position: absolute;
-  bottom: 0;
-  overflow: hidden;
-  background-color: #006296;
-  height: 60px;
-  width: 100%;
+  overflow-y: scroll;
 }
 
-.bottom-input{
-  width: 50%;
-  justify-content: center;
-  text-align:center;
-  color: #fff;
-  font-size: 14px;
+.tabs{
+  flex:20%;
+  margin: 20px;
+  background: #D7F0ED;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box{
+  width: 100%;
+  height: 50px;
+  background: #308C86;
+}
+
+.box:hover{
+  background: white;
+  color: #308C86;
+}
+
+.box a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.descript{
+  flex:70%;
+  margin: 20px;
+  background: #D7F0ED;
 }
 
 .profile{
