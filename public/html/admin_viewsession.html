@@ -36,7 +36,7 @@
            
             
             <div class="user-wrapper">
-                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+                <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
         </div>
@@ -59,7 +59,9 @@
                                 <th></th>
                             </tr>
                             <?php 
-        $sql="select * from `campaign`";
+                            $sql="SELECT campaign.camp_name, campaign.camp_date, campaign.camp_time,hospital.hospital_name
+                            FROM campaign
+                            INNER JOIN hospital ON campaign.hospital_id=hospital.hospital_id";
         $result=mysqli_query($connection,$sql);
         if($result){
             while($row=mysqli_fetch_assoc($result)){

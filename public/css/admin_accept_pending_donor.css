@@ -24,7 +24,7 @@
  }
  header h2{
    padding-right: 20%;
-    color: #4f4d4d;
+    color: #006296;
 
  }
  header label span{
@@ -37,7 +37,7 @@
    padding-left: 300px;
 }
  .search-wrapper{
-    border: 1px;
+    border: 1px solid #ccc; 
     border-radius: 30px;
     width: fit-content;
     height: 40px;
@@ -102,12 +102,12 @@ nav ul{
  nav ul li a:hover{
    color: #006296;
    font-weight: 400;
-   background: #F7FFFF;
+   background: #F4f7fa;
  }
  a.active{
    color: #006296;
    font-weight: 400;
-   background: #F7FFFF;
+   background: #F4f7fa;
    transition: .5s;
  }
 .cards-2{

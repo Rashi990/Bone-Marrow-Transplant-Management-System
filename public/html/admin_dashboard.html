@@ -16,32 +16,52 @@
         </div>
      
             <a href="../../src/php/admin_dashboard.php">
-              
+                <span class="material-icons">dashboard</span>
                 <span class="link_name">Dashboard</span>
             </a>
      
             <a href="../../src/php/admin_viewsession.php">
+                <span class="material-icons">video_camera_front</span>
                 <span class="link_name">Campaign</span>
             </a>
             <a href="../../src/php/admin_calender.php">
+                <span class="material-icons">
+                    web
+                    </span>
                 <span class="link_name">Calendar</span>
             </a>
             <a href="../../src/php/admin_view_donor.php">
+                <span class="material-icons">people</span>
                 <span class="link_name">Donors</span>
             </a>
             <a href="../../src/php/admin_viewhospital.php">
+                <span class="material-icons">
+                    local_hospital
+                    </span>
                 <span class="link_name">Hospital</span>
             </a>
             <a href="../../src/php/admin_viewstock.php">
+                <span class="material-icons">
+                    bloodtype
+                    </span>
                 <span class="link_name">Sample</span>
             </a>
             <a href="../../src/php/admin_viewrequest.php">
+                <span class="material-icons">
+                    groups
+                    </span>
                 <span class="link_name">Request</span>
             </a>
             <a href="../../src/php/admin_viewtesting.php">
+                <span class="material-icons">
+                    vaccines
+                    </span>
                 <span class="link_name">Tests</span>
             </a>
             <a href="../../src/php/admin_generatereport.php">
+                <span class="material-icons">
+                    file_copy
+                    </span>
                 <span class="link_name">Generate Reports</span>
             </a>
                 <a href="../../src/php/home.php">
@@ -175,7 +195,7 @@
         <div class="cards-2">
             <div class="card-single-2">
                 <div class="title">
-                    <h3>Pending Donor Accept</h3>
+                    <h3>New Pending Donor <br>Acceptance </h3>
                     <a href="../../src/php/admin_accept_pending_donor.php" class="btn">View All</a>
                 </div>
                 <table>
@@ -183,7 +203,7 @@
                         <th>Donor ID</th>
                         <th>Donor Name</th>
                         <th>Status</th>
-                        <th>Test Result</th>
+                        <!-- <th>Test Result</th> -->
                     </tr>
                     <?php 
         $sql="select * from `pending_donor`";
@@ -198,7 +218,7 @@
         <td>'.$id. '</td>
         <td>'.$fname,'&nbsp',$lname. '</td>
                 <td id="status_cl">'.$status. '</td> 
-                <td><a href="#" class="btn">View</a></td> 
+                <!-- <td><a href="../../src/php/admin_view_test_result.php" class="btn">View</a></td>  -->
         </tr>';
 
             }

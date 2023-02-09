@@ -41,6 +41,9 @@
    position: fixed;
    background-color: #308C83;
 }
+.sidebar span{
+   margin: 0px 10px 8px 0px;
+}
 .sidebar a{
    padding: 15px;
    padding-right: 25px;
@@ -71,6 +74,7 @@
     grid-template-columns: 300px 600px auto auto;
     align-items: center;
     padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
  }
  .header h2{
    padding-right: 20%;

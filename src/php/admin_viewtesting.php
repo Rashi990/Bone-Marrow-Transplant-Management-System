@@ -23,10 +23,10 @@ if (!(isset($_SESSION['user_name']) ))
    <div class="main-content">
         <header>
             <h2>
-                View Requests
+                View Test
             </h2>
             <div class="search-wrapper">
-                <span class='bx bx-search'></span>
+            <span class="material-icons">search</span>
                 <input type="search" placeholder="search here">
             </div>
     
@@ -44,12 +44,13 @@ if (!(isset($_SESSION['user_name']) ))
             </div>
             
             <div class="user-wrapper">
-                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+            <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
 </header>
 </div>
 <div class="right">
+    <main>
 <nav>
         <ul>
         <li><a class="active" href="#">Pending Donor Testing</a> </li>
@@ -108,8 +109,9 @@ if (!(isset($_SESSION['user_name']) ))
                     </tr>
                 </table>
             </div>
-
+            </main>
 </div>
+
         
     
     
