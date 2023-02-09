@@ -26,7 +26,7 @@ if (!(isset($_SESSION['user_name']) ))
                 Generate Reports
             </h2>
             <div class="search-wrapper">
-                <span class='bx bx-search'></span>
+            <span class="material-icons">search</span>
                 <input type="search" placeholder="search here">
             </div>
     
