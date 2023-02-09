@@ -66,20 +66,16 @@ body{
     padding: 20px;
 }
 
-.counts{
+.counts1{
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
 }
 
-.counts .box{
+.counts1 .box{
     display: flex;
     flex-direction: column;
-    margin: 10px;
-    padding: 20px;
-    width: 25%;
-    height: 250px;
-    background-color: #bde4e0;
+    width: 100%;
     border-radius: 20px;
     border: none;
     text-align: center;
@@ -87,9 +83,50 @@ body{
     align-items: center;
     font-weight: bold;
     color: #006296;
+    overflow-y: scroll;
     /*line-height: 10px;*/
 }
 
-.counts .box:hover{
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+.counts1 .box:hover{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+th{
+  text-align: center;
+  height: 50px;
+  color: #ffffff;
+  background: #308C86;
+}
+
+table{
+  margin:0;
+  width: 100%;
+}
+
+td{
+  text-align: center;
+  height: auto;
+  width: 200px;
+  background: #D7F0ED;
+}
+
+a.butt {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: #009879;
+    background: white;
+    width: 60px;
+    height: 25px;
+    padding: 2px;
+    text-align: center;
+
+    border: 1px solid #009879;
+    border-radius: 10px;
 }
