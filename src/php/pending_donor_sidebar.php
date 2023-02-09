@@ -19,10 +19,9 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../../public/css/donor_clinical_history.css">
-    <link rel="stylesheet" href="../../public/css/donor_sidebar.css">
-    <link rel="stylesheet" href="../../public/css/donor_session.css">
-    <link rel="stylesheet" href="../../public/css/donor_transplant_request.css">
+    <link rel="stylesheet" href="../../public/css/pending_donor_sidebar.css">
+    <link rel="stylesheet" href="../../public/css/pending_donor_session.css">
+    <link rel="stylesheet" href="../../public/css/pending_donor_request.css">
 
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -41,7 +40,7 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
     <div class="tp-lft">
         <span class="material-icons">notifications</span>
         <span class="material-icons">chat_bubble</span>
-        <div class="Loggedin"> Welcome! <?php echo $_SESSION['user_name'];?></div>
+        <div class="Loggedin"> Welcome!</div>
         <span class="material-icons">account_circle</span>
       </div>
 </div>
@@ -50,4 +49,4 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
 
 </body>
 </html>
-<?php include('../../public/html/donor_sidebar.html'); ?>
+<?php include('../../public/html/pending_donor_sidebar.html'); ?>

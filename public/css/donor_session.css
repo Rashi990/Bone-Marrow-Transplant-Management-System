@@ -11,14 +11,15 @@ body{
 
 .backboard{
   position: absolute;
-  margin-left: 92px;
-  margin-top: 60px;
+
+  margin-top: 5px;
   margin-bottom: 880px;
-  width: 1150px;
-  height:900px;
-  background-color: #F1F5F9;
+  width: 1240px;
+  height:870px;
+  background-color: #f4f7fa;
   border-radius: 20px;
- 
+  margin-left: 50px;
+
 }
 
 
@@ -42,8 +43,8 @@ body{
 }
 */
 .donor-card-details{
-  margin-left: 38px;
-  margin-top: 25px;
+  margin-left: 30px;
+  margin-top: 20px;
   margin-right: 40px;
   
 }
@@ -53,10 +54,10 @@ body{
     /* width: 40%;
     border-radius: 5px; */
 
-    width: 1030px;
-    height: 227px;
+    width: 1130px;
+    height: 150px;
     margin-top: 2%;
-
+    margin-bottom: 20px;
     background: #D7F0ED;
     border-radius: 30px;
     display:flex;
@@ -65,38 +66,93 @@ body{
   }
 
   .donor-img{
-    width:251px;
-    height:90%;
+    width: 251px;
+    height: 150px;
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-left: 2px;
     
   }
+  .donor-img:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+  }
   
+  
+
+
+  .details-background-card1{
+
+    margin-top: 0px;
+    width: 820px;
+    padding: 10px;
+    position: absolute;
+    transition: 0.3s;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #006296;
+}
+
+
+.details-background-card1:hover{
+  box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+
+
+
 
   .donor-session-details{
     color: #006296;
+    margin-left: -25px;
   }
 
   .donor-session-question{
     font-family: 'Poppins';
     font-style: normal;
+    text-align:center;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 30px;
+    margin-left: 100px;
   }
 
   .donor-session-address{
-    margin-top: 10%;
-
+    margin-top: 0px;
+    margin-left: 12px;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 100;
+    font-size: 15px;
     line-height: 19px;
   }
+
+  .session-intro tbody tr{
+    
+ 
+  }
+
+
+  tr{
+    
+  }
+
+.session-venue-details{
+  margin-top: 4px;
+}
+
+
+
+
+
+
+
   
   .donor-join-now-btn{
-    margin-left: 80%;
-    margin-top: 2%;
-    width: 50%;
+    margin-left: 85%;
+margin-top: -15px;
+width: 50%;
   }
 
   .card:hover {
