@@ -13,7 +13,7 @@
    <div class="main-content">
         <header>
             <h2>
-                View Requests
+                Today's Arrivals
             </h2>
             <div class="search-wrapper">
                 <span class='bx bx-search'></span>
@@ -44,46 +44,36 @@
 
     <nav>
         <ul>
-        <li><a href="../../src/php/admin_view_donor.php">Donor Details</a> </li>
-        <li><a  class ="active" href="#">Accept Pending Donors</a></li>
+        <li><a href="../../src/php/admin_view_donor.php">Stock Details</a> </li>
+        <li><a  class ="active" href="#">Today's Arrivals</a></li>
       </ul>
     </nav>
     <div class="cards-2">
             <div class="card-single-2">
                 <div class="title">
-                    <h3>Pending Donor Request</h3>
+                    <h3>Today's Sample Arrivals</h3>
                 </div>
                 <table>
                     <tr>
-                        <th>Donor ID</th>
-                        <th>Donor Name</th>
-                        <th>Nearest City</th>
-                        <th>Requested Date</th>
-                        <th>Status</th>
-                        <th>Accept</th>
+                        <th>Sample ID</th>
+                        <th>Hospital ID</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
                     </tr>
                     <?php 
-        $sql="select * from `pending_donor`";
+        $sql="select * from `bloodbank_stock`";
         $result=mysqli_query($connection,$sql);
         if($result){
             while($row=mysqli_fetch_assoc($result)){
-                $id=$row['pending_donor_id'];
-                $fname=$row['first_name'];
-                $lname=$row['second_name'];
-                $city=$row['city'];
-                $requestdate=$row['request_date'];
-                $status=$row['status'];
+                $id=$row['sample_bid'];
+                $hid=$row['hospital_id'];
+                $dtime=$row['time'];
              echo '<tr>
         <td>'.$id. '</td>
-        <td>'.$fname,'&nbsp',$lname. '</td>
-        <td>'.$city. '</td>
-        <td>'.$requestdate. '</td>
-        <td id="status_cl">'.$status. '</td>  
+        <td>'.$hid. '</td>
+        <td>'.$dtime. '</td> 
         <td><div class="input-container cta">
-            <label class="checkbox-container">
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
+                <input type="time" name="time" placeholder="Entert Time">
             </div></td>
     </tr>';
 

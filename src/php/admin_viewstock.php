@@ -53,7 +53,12 @@ if (!(isset($_SESSION['user_name'])  ))
         </header>
     </div>
 <div class="right">
-
+<nav>
+        <ul>
+        <li><a  class ="active">Stock Details</a> </li>
+        <li><a  href="../../src/php/admin_todays_arrival.php">Today's Arrivals</a></li>
+      </ul>
+    </nav>
     <a href="admin_addsample.php" class="create-btn"> + Add Sample
        </a>
 
@@ -63,15 +68,13 @@ if (!(isset($_SESSION['user_name'])  ))
       Sample ID
       </th>
       <th class="table-head">
-      Sample owner ID
-      </th><th class="table-head">
-      Stored date
+      Sample Owner ID
+      </th>
+      <th class="table-head">
+      Hospital ID
       </th><th class="table-head">
       Expire Date
       </th><th class="table-head">
-      Hospital ID
-      </th>
-      <th class="table-head">
       status
       </th>
       <th colspan="2" class="table-head">
@@ -85,18 +88,16 @@ if (!(isset($_SESSION['user_name'])  ))
             while($row=mysqli_fetch_assoc($result)){
                 $sid=$row['sample_bid'];
                 $oid=$row['sample_owner_id'];
-                $mdate=$row['stored_date'];
-                $exdate=$row['expiry_date'];
                 $hname=$row['hospital_id'];
+                $exdate=$row['expiry_date'];
                 $status=$row['status'];
              echo '<tr>
         <td>'.$sid. '</td>
         <td>'.$oid. '</td>
-        <td>'.$mdate. '</td>
-        <td>'.$exdate. '</td>
         <td>'.$hname. '</td> 
+        <td>'.$exdate. '</td>
         <td>'.$status.'</td>
-        <td><a href="admin_addstock.php?" class="update-btn"> edit
+        <td><a href="#" class="update-btn"> View
         </a></td>
         <td><a href="admin_deletestock.php? deleteid='.$sid.'" class="delete-btn" > delete
        </a></td>   
