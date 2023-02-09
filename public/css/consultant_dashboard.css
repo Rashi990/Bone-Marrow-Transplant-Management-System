@@ -57,116 +57,25 @@ body{
 }
 
 .board{
+    display: flex;
+    align-items: center;
     position: absolute;
     margin-left: 240px;
     margin-top: 30px;
     width: 80%;
+    height: 600px;
     background-color: #F1F5F9;
     border-radius: 20px;
-    padding: 20px;
-}
-
-.counts{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.counts .box{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding: 20px;
-    width: 13%;
-    height: 50px;
-    background-color: #bde4e0;
-    border-radius: 20px;
-    border: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #006296;
-    /*line-height: 10px;*/
-}
-
-.counts .box:hover{
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
-}
-
-/*
-.top{
-    display: flex;
-    float: right;
-    margin: 10px 30px 0 0;
     padding: 10px;
-}
-
-.top span{
-    padding-left: 30px;
-    cursor: pointer;
-}
-
-.top p{
-    font-size: 14px;
-    margin: 5px 0px 20px 10px;
-}
-*/
-
-.section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 98%;
-    padding: 10px;
-    margin: 10px auto;
-    background-color: #bde4e0;
-    border: none;
-    border-radius: 20px;
-}
-
-.charts{
-    margin: 20px auto;
-    padding: 10px;
-    width: 65%;
-    background-color: #ffffff;
-    border-radius: 20px;
-    font-weight: bold;
-    color: #006296;
-}
-.charts:hover{
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
-}
-
-.charts h2{
-    text-align: center;
-}
-
-.images{
-    display: flex;
-    justify-content: space-between;
-}
-
-.percentage{
-    width: 15%;
-    height: 28%;
-    padding: 0px;
-    margin-top: 10px;
-}
-
-.bar{
-    width: 40%;
-    height: 10%;
-    padding: 10px;
-    margin: 10px;
 }
 
 .cal{
-    background-color: #F7FFFF;
-    width: 23%;
+    background-color: #bde4e0;
+    flex: 30%;
+    height: 80%;
     border-radius: 20px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
     font-weight: bold;
     color: #006296;
     cursor: pointer;
@@ -182,18 +91,18 @@ body{
 
 .calndr{
     width: 100%;
-    height: 100%;
+    height: 80%;
 }
 
 .read{
-  flex:50%;
-  background: #fff;
+  flex:70%;
+  background: #bde4e0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 50px;
-  padding: 50px;
+  margin: 30px;
+  padding: 50px 30px;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 

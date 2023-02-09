@@ -1,12 +1,17 @@
-<?php require_once('clinician_navbar_matching.php'); ?>
+
+
+
 <?php
 require_once('../../config/connection.php');
+/*
 session_start();
-if (!(isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']) ))
+if (!(isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
 {
-    header("Location:clinician_login.php");
+    header("Location:donor_login.php");
 }
+*/
  ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,21 +19,34 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']) ))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_navbar.css">
+    <link rel="stylesheet" href="../../public/css/pending_donor_sidebar.css">
+    <link rel="stylesheet" href="../../public/css/pending_donor_session.css">
+    <link rel="stylesheet" href="../../public/css/pending_donor_request.css">
+
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Top</title>
+    <title>SLBMTS</title>
+
+
+
+
+
+    
 </head>
 <body>
-
+    
+<div class="header">
 <div class="top">
+    <div class="tp-lft">
         <span class="material-icons">notifications</span>
         <span class="material-icons">chat_bubble</span>
-        <div class="Loggedin"> Welcome! <?php echo $_SESSION['clinician_name'];?></div>
+        <div class="Loggedin"> Welcome!</div>
         <span class="material-icons">account_circle</span>
       </div>
+</div>
+</div>
+
 
 </body>
 </html>
-
-<?php include('../../public/html/clinician_requests.html'); ?>
-<!--<?php require_once('consultant_footer.php'); ?>-->
+<?php include('../../public/html/pending_donor_sidebar.html'); ?>
