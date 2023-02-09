@@ -41,11 +41,11 @@ if (isset($_POST["create-btn"])) {
     else if (emailAvailable($connection, $email,)) {
         header("location: donor_reg3_index.php?error=Email is already available");
     }
-    
+    /*
     else if (nicInvalid($nic)) {
         header("location: donor_reg3_index.php?error=Invalid NIC Number");
     }
-    
+    */
      else {
         //If all inputs are error free
        registerNewUser($connection, $fname,$lname,$email,$tel,$address,$city,$district,$dob,$gender,$nic,$marital);
@@ -76,7 +76,12 @@ function registerNewUser($connection, $fname,$lname,$email,$tel,$address,$city,$
            mysqli_stmt_execute($stmt);
            //close the statement
         mysqli_stmt_close($stmt);
+        
         header("location: donor_reg3_index.php?error=successfully Added");
+       
+
+
+        
         
     }
 
