@@ -4,6 +4,30 @@ body{
     background-color: #F7FFFF;
 }
 
+/*
+.top{
+    display: flex;
+    float: right;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.top span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.top p{
+    font-size: 14px;
+    margin: 5px 0px 20px 10px;
+}
+
+.top .Loggedin{
+    padding-left: 20px;
+}
+
+*/
+
 .side-navbar{
     width: 230px;
     height: 100%;
@@ -28,8 +52,8 @@ body{
     transition: 0.2s;
 }
 
-/*.side-navbar a:hover{
-    background: #FFFFFF;
+.side-navbar a:hover{
+    background-color: #FFFFFF;
     color : #308C83;
 }
 
@@ -37,7 +61,7 @@ body{
     background-color: #81efe4;
     color: black;
     transition: 0.2s;
-}*/
+}
 
 .side-navbar span{
     margin: 0px 15px 8px 5px;

@@ -44,5 +44,5 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']) ))
 </body>
 </html>
 
-<?php include('../../public/html/consultant_reports.html'); ?>
+<?php include('../../public/html/consultant_patient_test_details.html'); ?>
 <!--<?php require_once('consultant_footer.php'); ?>-->

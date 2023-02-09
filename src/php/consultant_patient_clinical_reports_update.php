@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
     $result=mysqli_query($connection,$sql);
     if($result){
         //echo "Data updated successfully";
-        header('location:consultant_patient_clinical_manage.php');
+        header('location:consultant_prescriptions.php');
     }
     else{
         die(mysqli_error($connection));
