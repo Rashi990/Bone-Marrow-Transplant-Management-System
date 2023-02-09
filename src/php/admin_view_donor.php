@@ -24,12 +24,14 @@ if (!(isset($_SESSION['user_name'])))
 <body>
 <!-- header -->
     <div class="main-content">
-        <header>
+    <div class="header">
             <h2>
-              Donor Manage
+                Donor Manage
             </h2>
             <div class="search-wrapper">
-                <span class='bx bx-search'></span>
+                <span class="material-icons">
+                    search
+                </span>
                 <input type="search" placeholder="search here">
             </div>
     
@@ -51,7 +53,7 @@ if (!(isset($_SESSION['user_name'])))
                 <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
-        </header>
+        </div>
     </div>
     
 <div class="right">
@@ -59,7 +61,6 @@ if (!(isset($_SESSION['user_name'])))
         <ul>
         <li><a class="active" href="#">Donor Details</a> </li>
         <li><a href="../../src/php/admin_accept_pending_donor.php">Accept Pending Donors</a></li>
-        <li><a href="#"> + Test Results</a></li>
       </ul>
     </nav>
 
@@ -78,7 +79,7 @@ if (!(isset($_SESSION['user_name'])))
       Donor Address
       </th>
       <th colspan="2" class="table-head">
-      Operation
+      status
       </th>
         </tr>
         <?php 
@@ -97,7 +98,7 @@ if (!(isset($_SESSION['user_name'])))
         <td>'.$blood. '</td>
         <td>'.$tele. '</td>
         <td>'.$address. '</td>  
-        <td><a href="admin_adddonor.php?" class="update-btn">edit
+        <td> <a href="admin_adddonor.php?" class="update-btn">edit
         </a></td>
         <td><a href="admin_deletedonor.php? deleteid='.$id.'"><button class="delete-btn" >delete
        </button></a></td>

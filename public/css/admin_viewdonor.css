@@ -17,24 +17,24 @@
 .main-content{
     margin-left: 250px;
  }
- header{
+.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
- }
- header h2{
-   padding-right: 20%;
-    color: #4f4d4d;
 
  }
- header label span{
+.header h2{
+   padding-right: 20%;
+    color: #006296;
+
+ }
+.header label span{
     font-size: 1.7rem;
     padding-left: 1rem;
 
  }
- .search-wrapper{
+.search-wrapper{
     border: 1px solid #ccc;
     border-radius: 30px;
     width: fit-content;

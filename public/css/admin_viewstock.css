@@ -35,7 +35,7 @@
 
  }
  .search-wrapper{
-    border: 1px solid #ccc;
+    border: 1px solid #F7FFFF;
     border-radius: 30px;
     width: fit-content;
     height: 40px;
@@ -93,7 +93,7 @@ nav{
     margin: 0 5px;
   }
   nav ul li a{
-    color: #FFFFFF;
+    color: #F7FFFF;
     font-size: 17px;
     padding: 4px 50px;
     border-radius: 30px;
@@ -102,13 +102,13 @@ nav{
   a.active{
     color: #006296;
     font-weight: 400;
-    background: #FFFFFF;
+    background: #F7FFFF;
     transition: .5s;
   }
   a:hover{
     color: #006296;
     font-weight: 400;
-    background: #FFFFFF;
+    background: #F7FFFF;
   }
 
 
@@ -120,7 +120,9 @@ a.create-btn{
     color:#006296;
     font-weight: 600;
     border:2px solid #006296;
-    margin: 2rem 2rem;
+    margin-left: auto;
+    margin-right: 10%;
+    margin-top: 50px;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0.5rem;
@@ -134,7 +136,7 @@ a.create-btn{
 a.create-btn:hover{
     background: #006296;
     cursor: pointer;
-    color:white;
+    color:#F7FFFF;
 }
 .update-btn{
     background-color: #F7FFFF;

@@ -23,12 +23,12 @@ if (!(isset($_SESSION['user_name'])  ))
 <body>
     <!-- header -->
     <div class="main-content">
-        <header>
-            <h2>
+        <div class="header">
+        <h2>
                View Hospitals
             </h2>
             <div class="search-wrapper">
-                <span class='bx bx-search'></span>
+            <span class="material-icons">search</span>
                 <input type="search" placeholder="search here">
             </div>
     
@@ -50,12 +50,14 @@ if (!(isset($_SESSION['user_name'])  ))
                 <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
-        </header>
+        </div>
     </div>
 <div class="right">
-
-    <a href="admin_addhospital.php" class="create-btn"> + Add Hospital
+<div class="button">
+<a href="admin_addhospital.php" class="create-btn"> + Add Hospital
        </a>
+</div>
+    
 
   <table  class="list">
         <tr>
