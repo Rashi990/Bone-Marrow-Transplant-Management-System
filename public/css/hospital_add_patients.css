@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.add_patient{
+    position: relative;
+    background-color: #bde4e0;
+    margin: 90px auto;
+    padding: 20px;
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: 20px 10px 34px rgba(0, 0, 0, 0.3);
+}
+
+.add_patient h1{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #006296;
+}
+
+form.add_patient_form label{
+    width: 30%;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+}
+
+form.add_patient_form input[type="text"],[type="email"],[type="password"]{
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    line-height: 30px;
+}
+
+p .buttons{
+    display: flex;
+}
+
+.btn{
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 30px ;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+    cursor: pointer;
+}
+
+.back_btn{
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 6px 25px ;
+    transition: 0.5s;
+}
+
+.back_btn:hover{
+    cursor: pointer;
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+.err{
+    background-color: #f61313;
+    color: #F7FFFF;
+    width: 800px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 20px 10px 34px rgba(0, 0, 0, 0.3);
+}
+
+.err a{
+    position: relative;
+    padding: 10px;
+    float: right;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.err a:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+
+
+

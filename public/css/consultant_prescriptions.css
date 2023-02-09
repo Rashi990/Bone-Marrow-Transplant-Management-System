@@ -137,9 +137,11 @@ table{
 
 td{
   text-align: center;
-  height: auto;
-  width: 200px;
   background: #D7F0ED;
+}
+
+td a{
+  text-decoration: none;
 }
 
 a.butt {
@@ -158,4 +160,99 @@ a.butt {
 
     border: 1px solid #009879;
     border-radius: 10px;
+}
+
+.new{
+    float: right;
+    margin: 10px 0;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 80px;
+    font-size: 14px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.new:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+#btn-update{
+  background: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 0 2px;
+  width: 60px;
+  height: 30px;
+  border: 2px solid #006296;
+  border-radius: 5px;
+}
+
+#btn-update a{
+  height: 30px;
+  width: 60px;
+  color: #006296;
+}
+
+#btn-update a:hover{
+  color: white;
+}
+
+#btn-delete{
+  background: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 0 2px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid #FF0404;
+}
+
+#btn-update:hover{
+  color: white;
+  background: #006296;
+}
+
+#btn-delete a{
+  height: 50px;
+  color: #FF0404;
+}
+
+#btn-delete a:hover{
+  color: white;
+}
+
+#btn-delete:hover{
+  background: #FF0404;
+}
+
+#btn-view{
+  background: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 0 2px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid #308C83;
+}
+
+#btn-view a{
+  height: 50px;
+  color: #308C83;
+}
+
+#btn-view a:hover{
+  color: white;
+}
+
+#btn-view:hover{
+  background: #308C83;
 }
