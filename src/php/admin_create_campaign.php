@@ -4,7 +4,10 @@ session_start();
 include "../../config/connection.php";
 
 require_once("../../public/html/admin_create_campaign.html"); 
-
+if (isset($_POST['cancel']))
+{
+    header("Location: admin_viewsession.php");
+}
 if(isset($_POST['submit']) )
 {
 

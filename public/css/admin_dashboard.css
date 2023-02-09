@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -64,20 +65,19 @@
    
     margin-left: 250px;
  }
- header{
+ .header{
     display:grid;
     position:sticky;
     grid-template-columns: 300px 600px auto auto;
     align-items: center;
     padding: 5px;
-    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
  }
- header h2{
+ .header h2{
    padding-right: 20%;
-    color: #4f4d4d;
+    color: #006296;
 
  }
- header label span{
+ .header label span{
     font-size: 1.7rem;
     padding-left: 1rem;
 
@@ -102,6 +102,7 @@
     padding: 0.5rem;
     border: none;
     outline: none;
+    color: #F7FFFF;
  }.user-wrapper{
     display: flex;
     align-items: center;
@@ -124,7 +125,7 @@ main{
    margin-top:30px;
    margin-bottom:30px;
    padding: 2rem 1.5rem;
-   background: #f1f5f9;
+   background: #f4f7fa;
    min-height: calc(90vh - 90px);
    border: 0px;
    border-radius: 1rem;
