@@ -18,19 +18,18 @@ body{
 .main-content{
     margin-left: 250px;
  }
- header{
+ .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
  }
- header h2{
+ .header h2{
    padding-right: 20%;
-    color: #4f4d4d;
+    color: #006296;
 
  }
- header label span{
+ .header label span{
     font-size: 1.7rem;
     padding-left: 1rem;
 
@@ -77,7 +76,7 @@ main{
     margin-top:30px;
     margin-bottom:30px;
     padding: 2rem 1.5rem;
-    background: #f1f5f9;
+    background: #f4f7fa;
     min-height: calc(90vh - 90px);
     border: 0px;
     border-radius: 1rem;
