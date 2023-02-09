@@ -125,7 +125,7 @@ body{
     color: #F7FFFF;
 }
 
-.patients{
+.board{
     position: absolute;
     margin-left: 240px;
     margin-top: 20px;
@@ -136,7 +136,7 @@ body{
     border-radius: 20px;
 }
 
-.patients h1{
+.board h1{
     color: #006296;
     font-size: 30px;
     font-weight: bold;
@@ -145,30 +145,78 @@ body{
     text-align: center;
 }
 
-.new{
-    float: right;
-    margin: 10px 40px;
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296 ;
-    border-radius: 10px;
-    padding: 10px 80px;
-    font-size: 14px;
-    transition: 0.5s;
-    font-weight: bold;
+.board{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 30px;
+    width: 80%;
+    background-color: #f4f7fa;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
 }
 
-.new:hover{
-    background-color: #006296;
-    color: #F7FFFF;
+.counts{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.counts .box{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 20px;
+    width: 20%;
+    height: 50px;
+    background-color: #d7f0ed;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    color: #006296;
+    line-height: 10px;
+}
+
+.counts .box:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #d7f0ed;
+    border: none;
+    border-radius: 20px;
+}
+
+.data{
+    margin: 20px;
+    padding: 10px;
+    width: 65%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #006296;
+}
+.data:hover{
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.data h2{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 table.list{
     margin: 20px;
     padding: 10px;
     width: 96%;
-    border-collapse: collapse;
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
@@ -177,67 +225,21 @@ table.list th{
     color: #F7FFFF;
     padding: 10px;
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     height: 25px;
 }
 
 table.list td{
     padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
     color: #006296;
+    background-color: #d7f0ed;
     height: 25px;
 }
 
+/*
 table.list tr:nth-child(even){
     background-color: #d7f0ed;
 }
-
-table.list .view{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #009879;
-    border: 1px solid #009879;
-    border-radius: 10px;
-    padding: 8px 20px;
-    font-size: 14px;
-    transition: 0.5s;
-}
-
-table.list .view:hover{
-    background-color: #009879;
-    color: #F7FFFF;
-}
-
-table.list .delete{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #FF0404;
-    border: 1px solid #FF0404;
-    border-radius: 10px;
-    padding: 8px 20px;
-    font-size: 14px;
-    transition: 0.5s;
-}
-
-table.list .delete:hover{
-    background-color: #FF0404;
-    color: #F7FFFF;
-}
-
-table.list .edit{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296 ;
-    border-radius: 10px;
-    padding: 8px 20px;
-    font-size: 14px;
-    transition: 0.5s;
-}
-
-table.list .edit:hover{
-    background-color: #006296;
-    color: #F7FFFF;
-}
+*/

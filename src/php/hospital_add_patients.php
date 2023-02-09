@@ -19,6 +19,7 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
  </head>
  <body>
 
+ <!--
  <div class="top-nav">
 
 <div class="head">
@@ -31,16 +32,16 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
     <input type="search" placeholder="search here">
   </div>
   </div>
-
+-->
 <div class="top">
         <span class="material-icons">notifications</span>
         <span class="material-icons">chat_bubble</span>
         <div class="Loggedin"> Welcome! <?php echo $_SESSION['hospital_name'];?></div>
         <span class="material-icons">account_circle</span>
       </div>
-
+<!--
 </div>
-
+-->
  </body>
  </html>
 
