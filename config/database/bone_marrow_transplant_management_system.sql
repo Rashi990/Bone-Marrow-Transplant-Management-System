@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2022 at 07:12 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Feb 09, 2023 at 06:35 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -89,8 +89,15 @@ CREATE TABLE `campaign` (
   `camp_name` varchar(255) NOT NULL,
   `camp_date` date NOT NULL,
   `camp_time` time NOT NULL,
-  `camp_venue` varchar(255) NOT NULL
+  `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `campaign`
+--
+
+INSERT INTO `campaign` (`camp_id`, `camp_name`, `camp_date`, `camp_time`, `hospital_id`) VALUES
+(1, 'Introduction', '2023-02-09', '00:00:11', 1);
 
 -- --------------------------------------------------------
 
@@ -124,7 +131,9 @@ INSERT INTO `clinician` (`clinician_id`, `clinician_name`, `email`, `telephone_n
 (9, 'Fathima', 'fa@gmail.com', '0778866000', '44/9,Matara Road, Matara', 'fathima66', 'fa33333', 2),
 (12, 'Sanjana', 'sanj@gmail.com', '0778861111', '22/9,Galle Road, Colombo', 'Sanju99', '228899', 1),
 (13, 'Sarath Silva', 'sarath@gmail.com', '0778862222', '78/5, Main Road, Jaffna', 'sarath22', 'sa8800', 3),
-(15, 'P.Samaranayaka', 'sama@gmail.com', '0778866111', 'Main Road, Colombo', 'sama22', '222333', 1);
+(15, 'P.Samaranayaka', 'sama@gmail.com', '0778866111', 'Main Road, Colombo', 'sama22', '222333', 1),
+(16, 'Mashi', 'ma@gmail.com', '0778866667', 'Panideniya Road, Kandy', 'ma888', '1111111', 1),
+(17, 'mahagama', 'mahaga@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', 'mahi6666', '889977', 1);
 
 -- --------------------------------------------------------
 
@@ -261,7 +270,8 @@ INSERT INTO `hospital` (`hospital_id`, `hospital_name`, `email`, `telephone_no`,
 (1, 'Apeksha Hospital', 'apeksha@gmail.com', '0112467448', 'New road, Maharagama', '2022/06/10', 'apeksha', '123456'),
 (2, 'Karapitiya Hospital', 'karapitiya@gmail.com', '0112992222', '66/5, Kaluwella Road, Galle', '2022/07/10', 'karapitiya', '222444'),
 (3, 'Mahaweli Hospital', ' maha@gmail.com', '0112233444', 'Panideniya Road, Kandy', '2022/06/14', 'maha22', 'ma4466'),
-(4, 'Ninewells', ' ninewells@gamil.com', ' 011223311', 'Main Road, Colo', '', '', '');
+(4, 'Ninewells', ' ninewells@gamil.com', ' 011223311', 'Main Road, Colo', '', '', ''),
+(8, 'Kegalle Hospital', ' kegalle@gmail.com', ' 011236548', 'Main road, Kegalle', '', 'kegalle1', '11223344');
 
 -- --------------------------------------------------------
 
@@ -372,7 +382,8 @@ INSERT INTO `patient_clinical_reports` (`patient_cr_id`, `patient_id`, `date`, `
 (12, 3, '2022-01-21', 'Amoxapine', 12, 'two times a day', '6 days'),
 (13, 4, '2022-02-14', 'Aspirin', 9, 'three times a day', '3 days'),
 (15, 1, '2022-05-12', 'Dexamethasone', 14, 'two times a day', '1 week'),
-(16, 4, '2022-03-09', 'Aspirin', 19, 'three times a day', '1 week');
+(16, 4, '2022-03-09', 'Aspirin', 19, 'three times a day', '1 week'),
+(18, 3, '2022-10-10', 'Dexamethasone', 11, 'three times a day', '1 week');
 
 -- --------------------------------------------------------
 
@@ -429,7 +440,9 @@ CREATE TABLE `pending_donor` (
 --
 
 INSERT INTO `pending_donor` (`pending_donor_id`, `first_name`, `second_name`, `email`, `telephone_no`, `address`, `city`, `district`, `date_of_birth`, `gender`, `id_number`, `marital_state`, `image`, `blood_group`, `user_name`, `password`) VALUES
-(1, 'Kamal', 'Vithanage', 'kmv12@gmail.com', 912563845, 'No.25,Main Road,Galle', 'Nagoda', 'Galle', '1988-05-12', 'Male', 2147483647, 'Married', '', '', '', '');
+(1, 'Kamal', 'Vithanage', 'kmv12@gmail.com', 912563845, 'No.25,Main Road,Galle', 'Nagoda', 'Galle', '1988-05-12', 'Male', 2147483647, 'Married', '', '', '', ''),
+(2, 'Nimal', 'Hewage', 'ni@gmail.com', 112233777, 'Main Road, Colombo', 'Colombo', 'Colombo', '2022-11-30', 'Male', 2147483647, 'Married', '', '', '', ''),
+(3, 'Kaveesha', 'Perarra', 'kw@gmail.com', 912275845, 'no.23,Galle', 'Galle', 'Galle', '1999-02-15', 'Male', 2147483647, 'Unmarried', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -440,10 +453,10 @@ INSERT INTO `pending_donor` (`pending_donor_id`, `first_name`, `second_name`, `e
 CREATE TABLE `session` (
   `session_id` int(11) NOT NULL,
   `session_name` varchar(100) NOT NULL,
+  `session_image` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL,
-  `participation_count` int(11) NOT NULL,
-  `feedback` varchar(255) NOT NULL
+  `camp_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -528,7 +541,8 @@ ALTER TABLE `blood_bank`
 -- Indexes for table `campaign`
 --
 ALTER TABLE `campaign`
-  ADD PRIMARY KEY (`camp_id`);
+  ADD PRIMARY KEY (`camp_id`),
+  ADD KEY `camp_venue` (`hospital_id`);
 
 --
 -- Indexes for table `clinician`
@@ -633,7 +647,8 @@ ALTER TABLE `pending_donor`
 -- Indexes for table `session`
 --
 ALTER TABLE `session`
-  ADD PRIMARY KEY (`session_id`);
+  ADD PRIMARY KEY (`session_id`),
+  ADD KEY `camp_data` (`camp_id`);
 
 --
 -- Indexes for table `testing`
@@ -688,13 +703,13 @@ ALTER TABLE `blood_bank`
 -- AUTO_INCREMENT for table `campaign`
 --
 ALTER TABLE `campaign`
-  MODIFY `camp_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `camp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `clinician`
 --
 ALTER TABLE `clinician`
-  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `consultant`
@@ -724,7 +739,7 @@ ALTER TABLE `donor_hla_details`
 -- AUTO_INCREMENT for table `hospital`
 --
 ALTER TABLE `hospital`
-  MODIFY `hospital_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `hospital_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `hospital_reports`
@@ -760,7 +775,7 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for table `patient_clinical_reports`
 --
 ALTER TABLE `patient_clinical_reports`
-  MODIFY `patient_cr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `patient_cr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `patient_hla_details`
@@ -772,7 +787,7 @@ ALTER TABLE `patient_hla_details`
 -- AUTO_INCREMENT for table `pending_donor`
 --
 ALTER TABLE `pending_donor`
-  MODIFY `pending_donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `pending_donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `session`
@@ -801,6 +816,12 @@ ALTER TABLE `transplant_request`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `campaign`
+--
+ALTER TABLE `campaign`
+  ADD CONSTRAINT `camp_venue` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `clinician`
@@ -849,6 +870,12 @@ ALTER TABLE `patient`
 --
 ALTER TABLE `patient_hla_details`
   ADD CONSTRAINT `test5` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `session`
+--
+ALTER TABLE `session`
+  ADD CONSTRAINT `camp_data` FOREIGN KEY (`camp_id`) REFERENCES `campaign` (`camp_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `transplant_request`

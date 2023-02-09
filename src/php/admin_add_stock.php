@@ -2,10 +2,10 @@
 session_start();
 include "../../config/connection.php";
 
-require_once("../../public/html/admin_adddonor.html"); 
+require_once("../../public/html/admin_add_stock.html"); 
 if (isset($_POST['cancel']))
 {
-    header("Location: admin_view_donor.php");
+    header("Location: admin_viewstock.php");
 }
 if(isset($_POST['submit']) )
 {
@@ -18,7 +18,7 @@ if(isset($_POST['submit']) )
     return $data;
   }
 
-  $hID = $_POST['ID'];
+  $ID = $_POST['sample_bid'];
   $hname = $_POST['hname'];
   $email = $_POST['email']; 
   $tel = $_POST['tel']; 

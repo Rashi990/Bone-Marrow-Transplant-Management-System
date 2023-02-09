@@ -47,16 +47,16 @@ if (!(isset($_SESSION['user_name'])))
                 </div>
                 
             </div>
-           
             
             <div class="user-wrapper">
-                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+            <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
             </div>
         </div>
     </div>
     
-<div class="right">
+    <div class="right">
+    <main>
 <nav>
         <ul>
         <li><a class="active" href="#">Donor Details</a> </li>
@@ -110,7 +110,10 @@ if (!(isset($_SESSION['user_name'])))
         ?>
       
        </table>
+       </main>
     </div>
+   
+
     
         
 </body>

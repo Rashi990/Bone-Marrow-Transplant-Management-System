@@ -73,6 +73,16 @@
 .box-icon .item{
    padding-right: 50px;
 }
+main{
+    margin-top:30px;
+    margin-bottom:30px;
+    padding: 2rem 1.5rem;
+    background: #f4f7fa;
+    min-height: calc(90vh - 90px);
+    border: 0px;
+    border-radius: 1rem;
+    margin-right: 30px;
+ }
 .right{
     display:table-cell;
     padding-left: 300px;
