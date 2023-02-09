@@ -50,3 +50,18 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
 </body>
 </html>
 <?php include('../../public/html/donor_sidebar.html'); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
