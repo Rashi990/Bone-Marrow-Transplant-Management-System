@@ -4,50 +4,84 @@ body{
     background-color: #F7FFFF;
 }
 
+.top-nav{
+  display:grid;
+  position:sticky;
+  margin-left: 220px;
+  grid-template-columns: 300px 600px auto auto;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
+}
+
 .head h1{
-    position: absolute;
-    display: flex;
-    margin-left: 260px;
-    padding-top: 0px;
-    text-align: center;
-    font-size: 30px;
-    color: #006296;
+  text-align: center;
+  font-size: 30px;
+  color: #006296;
 }
 
 .search{
-    display: flex;
-    margin-left: 400px;
-    padding-top: 20px;
-    justify-content: center;
+  display: flex;
+  margin-left: 20px;
+  padding: 10px;
+  justify-content: center;
 }
 
 .search-bar{
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    width: fit-content;
-    height: 30px;
-    width: 40%;
-    display: flex;
-    align-items: center;
-    overflow-x: hidden;
- }
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  width: fit-content;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
 
 .search-bar span{
-    display: inline-block;
-    padding: 5px;
-    font-size:14px ;
- }
- 
- .search-bar input{
-    height: 100%;
-    padding: 5px;
-    border: none;
-    outline: none;
- }
+  display: inline-block;
+  padding: 5px;
+  font-size:14px ;
+}
+
+.search-bar input{
+  height: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
 
 .search-bar span{
-    padding-left: 10px;
-    cursor: pointer;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.search-bar .Loggedin{
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 0px 20px;
+  width: 80%;
+}
+
+.top{
+  position: relative;
+  display: flex;
+  float: right;
+  margin: 10px 10px 0 0;
+  padding: 10px;
+}
+
+.top span{
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.top p{
+  font-size: 14px;
+  margin: 5px 0px 20px 10px;
+}
+
+.top .Loggedin{
+  padding-left: 20px;
 }
 
 .dates{
@@ -55,7 +89,7 @@ body{
     margin-left: 240px;
     margin-top: 30px;
     width: 80%;
-    background-color: #F1F5F9;
+    background-color: #f4f7fa;
     border-radius: 20px;
     padding: 30px;
     display: flex;
@@ -63,12 +97,15 @@ body{
 }
 
 .dates .box1{
-  background-color: #bde4e0;
+  background-color: #d7f0ed;
+  flex-direction: column;
+  margin: 10px;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
   justify-content: center;
   align-items: center;
+  width: 50%;
 }
 
 .main-content{
@@ -225,7 +262,7 @@ header .current-date{
 }
 
 .dates .box2{
-  background-color: #bde4e0;
+  background-color: #d7f0ed;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 4px 4px 5px rgba(0,0,0,0.2);

@@ -50,11 +50,15 @@ elseif(isset($_POST["age-above-btn"])){
 
 
 </div>
-<div class="description-card">
+<div class="popup">
                 <div class="details">
                     
                     <div class="paragraph">
-                        <p>*For the safty of the patients, we are only accept members between 18 and 40 because blood stem cells from younger donors provide more suvival-rate.</p>
+                        <p>For the safty of the patients, we are only accept members between 18 and 40 because blood stem cells from younger donors provide more suvival-rate.</p>
+                    </div>
+
+                    <div class="back-btn">
+                        <button class="back-home" onclick="myFunction1()"><span class="age-fnt">Back to Home</span></button>
                     </div>
                 </div>
 </div>
@@ -64,20 +68,32 @@ elseif(isset($_POST["age-above-btn"])){
                 <div class="details">
                 <div class="paragraph">
 <p><h1 class="heading">Which describes You? *</h1></p>
-<div class="age-left-btn">
-                    <button class="age-between-btn" onclick="myFunction1()"><span class="age-fnt">Between 18 and 40</span></button>
+</div>
+
+                <div class="age-left-btn">
+                    <button class="age-btn" onclick="myFunction2()"><span class="age-fnt">Between 18 and 40</span></button>
                 </div>
                 <div class="age-right-btn">
-                    <button class="age-above-btn" onclick="myFunction2()"><span class="age-fnt">41 or older</span></button>
+                    <button class="age-btn" onclick="myFunction3()" id="age-btn"><span class="age-fnt">41 or older</span></button>
                 </div>
+          
                 
  <script>
-    function myFunction1() {
-  location.replace("donor_reg2_index.php");
-}
-function myFunction2() {
+    
+function myFunction1() {
   location.replace("home.php");
 }
+
+
+function myFunction2() {
+  location.replace("donor_reg2_index.php");
+}
+function myFunction3() {
+    alert("Sorry!For the safty of the patients, you can not be a donor at this time.");
+}
+
+
+
 
 
  </script>               

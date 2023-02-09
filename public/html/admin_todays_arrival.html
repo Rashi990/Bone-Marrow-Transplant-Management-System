@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requests</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/admin_accept_pending_donor.css">
+</head>
+<body>
+   <!-- header  -->
+   <div class="main-content">
+        <header>
+            <h2>
+                Today's Arrivals
+            </h2>
+            <div class="search-wrapper">
+                <span class='bx bx-search'></span>
+                <input type="search" placeholder="search here">
+            </div>
+    
+           
+    
+          
+            <div class="box-icon">
+                <div class="item">
+                    <span class="material-icons">notifications</span>
+                </div>
+                <div class="item">
+                    <span class="material-icons">chat_bubble</span>
+                </div>
+                
+            </div>
+           
+            
+            <div class="user-wrapper">
+                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
+                <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
+            </div>
+</header>
+</div>
+<div class="right">
+
+    <nav>
+        <ul>
+        <li><a href="../../src/php/admin_view_donor.php">Stock Details</a> </li>
+        <li><a  class ="active" href="#">Today's Arrivals</a></li>
+      </ul>
+    </nav>
+    <div class="cards-2">
+            <div class="card-single-2">
+                <div class="title">
+                    <h3>Today's Sample Arrivals</h3>
+                </div>
+                <table>
+                    <tr>
+                        <th>Sample ID</th>
+                        <th>Hospital ID</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                    </tr>
+                    <?php 
+        $sql="select * from `bloodbank_stock`";
+        $result=mysqli_query($connection,$sql);
+        if($result){
+            while($row=mysqli_fetch_assoc($result)){
+                $id=$row['sample_bid'];
+                $hid=$row['hospital_id'];
+                $dtime=$row['time'];
+             echo '<tr>
+        <td>'.$id. '</td>
+        <td>'.$hid. '</td>
+        <td>'.$dtime. '</td> 
+        <td><div class="input-container cta">
+                <input type="time" name="time" placeholder="Entert Time">
+            </div></td>
+    </tr>';
+
+            }
+        }
+        
+        ?>
+                </table>
+            </div>
+
+</div>
+        
+<script src="../../public/js/admin_accept_pending_donor.js"></script>
+    
+</body>
+</html>

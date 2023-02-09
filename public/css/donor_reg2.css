@@ -145,6 +145,46 @@ color: #006296;
 
 
 .pre-btn{
+
+
+
+ 
+  
+    position: absolute;
+    box-sizing: border-box;
+    height: 49px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+    gap: 10px;
+    background: #FFFFFF;
+    border: 2px solid #308C83;
+    border-radius: 16px;
+    left: 32.4%;
+    top: 85%;
+  
+  }
+  
+  
+  
+  
+  .pre-btn:hover {
+    background-color: #e4e3ff;
+  }
+
+
+
+
+
+
+
+
+/*  
   
 box-sizing: border-box;
 top:610px;
@@ -166,9 +206,9 @@ border-radius: 30px;
 
 
 
+*/
 
-
-  }
+  
 
 
 .nxt-btn{

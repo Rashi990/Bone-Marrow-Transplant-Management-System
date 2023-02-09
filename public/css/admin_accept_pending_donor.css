@@ -93,7 +93,7 @@ nav ul{
  }
  nav ul li a{
    text-decoration: none;
-   color: #FFFFFF;
+   color: #F7FFFF;
    font-size: 17px;
    padding: 4px 50px;
    border-radius: 30px;
@@ -174,7 +174,7 @@ border: 1px solid var(--primary-blue);
     position: absolute;
     width: 24px;
     height: 24px;
-    background: white;
+    background: #F7FFFF;
     border: 1px solid #c4c4c4;
     border-radius: 4px;
     top: -10px;
@@ -189,7 +189,7 @@ border: 1px solid var(--primary-blue);
     display: block;
 }
 .checkbox-container .checkmark:after{
-    border: solid white;
+    border: solid #F7FFFF;
     border-width: 0 3px 3px 0;
     width: 5px;
     height: 10px;
