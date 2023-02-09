@@ -1,14 +1,20 @@
 body{
     margin: 0;
     background-color: #F7FFFF;
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-nav{
+    display:grid;
+    position:sticky;
+    margin-left: 220px;
+    grid-template-columns: 300px 600px auto auto;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
 }
 
 .head h1{
-    position: absolute;
-    display: flex;
-    margin-left: 260px;
-    padding-top: 0px;
     text-align: center;
     font-size: 30px;
     color: #006296;
@@ -16,8 +22,8 @@ body{
 
 .search{
     display: flex;
-    margin-left: 280px;
-    padding-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
     justify-content: center;
 }
 
@@ -26,7 +32,7 @@ body{
     border-radius: 30px;
     width: fit-content;
     height: 30px;
-    width: 40%;
+    width: 80%;
     display: flex;
     align-items: center;
     overflow-x: hidden;
@@ -56,6 +62,28 @@ body{
     width: 80%;
 }
 
+.top{
+    position: relative;
+    display: flex;
+    float: right;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.top span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.top p{
+    font-size: 14px;
+    margin: 5px 0px 20px 10px;
+}
+
+.top .Loggedin{
+    padding-left: 20px;
+}
+
 .board{
     position: absolute;
     margin-left: 240px;
@@ -63,7 +91,8 @@ body{
     width: 80%;
     background-color: #f4f7fa;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 20px;
+    overflow: hidden;
 }
 
 .counts{
@@ -77,9 +106,9 @@ body{
     flex-direction: column;
     margin: 10px;
     padding: 20px;
-    width: 30%;
+    width: 13%;
     height: 50px;
-    background-color: #D7F0ED;
+    background-color: #d7f0ed;
     border-radius: 20px;
     border: none;
     text-align: center;
