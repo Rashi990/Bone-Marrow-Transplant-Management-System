@@ -9,7 +9,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
   <head>
     <meta charset="utf-8">
     <title>Diseases</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_disease.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_disease.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
@@ -54,13 +54,63 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
         </div>
       </div>
       <div class="middle">
-      </div>
-      <div class="bottom">
-        <div class="bottom-input">
-          <span>© 2022 SLBMTMS. All rights reserved.</span>
+        <div class="tabs">
+          <div class="box">
+            <a href="#">AML - Adult</a>
+          </div>
+          <div class="box">
+            <a href="#">AML - Pediatric</a>
+          </div>
+          <div class="box">
+            <a href="#">ALl Adult</a>
+          </div>
+          <div class="box">
+            <a href="#">ALL Pediatric</a>
+          </div>
+          <div class="box">
+            <a href="#">MDS</a>
+          </div>
+          <div class="box">
+            <a href="#">CML</a>
+          </div>
+          <div class="box">
+            <a href="#">CLL</a>
+          </div>
+          <div class="box">
+            <a href="#">NHL</a>
+          </div>
+          <div class="box">
+            <a href="#">HodgkinLymphoma</a>
+          </div>
+          <div class="box">
+            <a href="#">MultipleMyeloma</a>
+          </div>
+          <div class="box">
+            <a href="#">SevereAplasticAnemia&MarrowFailure</a>
+          </div>
+          <div class="box">
+            <a href="#">SickleCellDisease</a>
+          </div>
+          <div class="box">
+            <a href="#">ImmuneDeficiencyDiseases</a>
+          </div>
+          <div class="box">
+            <a href="#">InheritedMetabolicDisorders</a>
+          </div>
+          <div class="box">
+            <a href="#">Thalassemia</a>
+          </div>
+          <div class="box">
+            <a href="#">OtherDiseases</a>
+          </div>
+          <div class="box">
+            <a href="#">MultipleSclerosis</a>
+          </div>
+          <div class="box">
+            <a href="#">SystemicSclerosis</a>
+          </div>
         </div>
-        <div class="bottom-input">
-          <span>Terms and conditions</span>
+        <div class="descript">
         </div>
       </div>
     </div>
