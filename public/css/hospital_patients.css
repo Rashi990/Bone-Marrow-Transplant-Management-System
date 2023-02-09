@@ -84,13 +84,10 @@ body{
     padding-left: 20px;
 }
 
-.choose{
-    margin: 40px 20px 10px 260px;
-    
-}
-
 .r-patients{
-    margin: 0px 20px;
+    position: relative;
+    margin: 50px 20px 10px 260px;
+    margin-left: 260px;
     text-decoration: none;
     background-color: #F7FFFF;
     color: #006296;
@@ -108,7 +105,9 @@ body{
 }
 
 .all-patients{
-    margin: 0px 20px;
+    position: relative;
+    margin: 100px 20px 10px 200px;
+    margin-left: 260px;
     text-decoration: none;
     background-color: #F7FFFF;
     color: #006296;
@@ -128,10 +127,11 @@ body{
 .patients{
     position: absolute;
     margin-left: 240px;
-    margin-top: 20px;
+    margin-top: 60px;
     background-color: #f4f7fa;
     padding: 10px;
     width: 80%;
+    height: 80vh;
     border: none;
     border-radius: 20px;
 }
