@@ -8,4 +8,9 @@ if (!(isset($_SESSION['user_name'])))
 }
 ?>
 
-<?php include('../../public/html/admin_update_hospital.html'); ?>
+<?php include('../../public/html/admin_update_hospital.html'); 
+if (isset($_POST['cancel']))
+{
+    header("Location: admin_viewhospital.php");
+}
+?>
