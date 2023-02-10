@@ -8,7 +8,6 @@ body{
     background-image: url("../../public/images/home4.jpg");
     background-size: cover;
     background-position: center;
-    height: 50vh;
     width: 100%;
     height: 700px;
     display: flex;
@@ -21,14 +20,16 @@ body{
 }
 
 .dec{
-  position:absolute;
-  top: 150px;
-  left: 270px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 40%;
+}
+
+.empty{
+  display: flex;
+  width: 60%;
 }
 
 .dec p{
