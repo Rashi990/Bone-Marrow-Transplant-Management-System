@@ -65,47 +65,41 @@ if (!(isset($_SESSION['user_name']) ))
                 <table>
                     <tr>
                         <th>Hospital  Name</th>
-                        <th colspan="3" >Patients ID</th>
-                        <th>Status</th>
-                        <th></th>
+                        <th>Patients Name</th>
+                        <th>Condition</th>
                     </tr>
                     <tr>
-                        <td>Apeksha Hospital</td>
-                        <td>Nugegoda</td>
-                        <td>12/19</td>
-                        <!-- <td style="color:#38fa11 ;">Qualified</td> -->
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select Hospital</a></td>
+                        <td rowspan="3">Apeksha Hospital</td>
+                        <td >Malsha Samadhika</td>
+                        <td>Critical</td>
+                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
                     </tr>
                     <tr>
-                        <td>Aruni siriwardena</td>
-                        <td>Colombo 07</td>
-                        <td>12/19</td>
-                        <!-- <td style="color:#fa1111 ;">Disqualified</td> -->
-                        <td><a href="../../src/php/admin_select_hospital_2.php" class="btn">Select Hospital</a></td>
+                    <td >Lalani Karunawathee</td>
+                        <td>Critical</td>
+                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
                     </tr>
                     <tr>
-                        <td>kavinda karunathilaka</td>
-                        <td>Anuradhapura</td>
-                        <td>12/19</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select Hospital</a></td>
+                        <td >Rishmi Vithanage</td>
+                        <td>Critical</td>
+                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3">Lanka Hospital</td>
+                        <td >Kamal Gunawardhena</td>
+                        <td>Non-Critical</td>
+                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
                     </tr>
                     <tr>
-                        <td>kamala Hansani</td>
-                        <td>Kegalle</td>
-                        <td>12/19</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select Hospital</a></td>
+                    <td >Sunil Perera</td>
+                        <td>Non-Critical</td>
+                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
                     </tr>
                     <tr>
-                        <td>Kapila kumara</td>
-                        <td>Maharagama</td>
-                        <td>12/19</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select Hospial</a></td>
-                    </tr>
-                    <tr>
-                        <td>Ramani siriwardena</td>
-                        <td>Colombo 02</td>
-                        <td>12/19</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select Hospital</a></td>
+                        <td>Malani Hansika</td>
+                        <td>Non-Critical</td>
+                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
                     </tr>
                 </table>
             </div>
