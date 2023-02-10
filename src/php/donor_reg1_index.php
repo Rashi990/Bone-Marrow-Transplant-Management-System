@@ -38,7 +38,7 @@ elseif(isset($_POST["age-above-btn"])){
     <title>Create Account</title>
     <link rel="stylesheet" href="../../public/css/donor_reg1.css">
     <link rel="stylesheet" href="../../public/css/donor_reg_header.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="../../public/js/donor_reg1_val.js"></script>
 
@@ -96,14 +96,16 @@ function myFunction3() {
 
 
 
- </script>               
+ </script>      <!--         
 
                 <div class="bottom">
         <p>©2022 SLBMTMS &emsp;&emsp;&emsp;&emsp; All rights reserved.Terms and conditions</p>
     </div>
-    
+-->
+                </div>
+</div>
 </body>
 </html>
-
+<?php include('../../public/html/footer.html'); ?>
 
 
