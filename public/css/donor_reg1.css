@@ -65,7 +65,7 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 30px;
   color: #006296;
 }
@@ -73,12 +73,11 @@
 
 .back-home{
 
+   
   position: absolute;
   box-sizing: border-box;
-  left: 3%;
-  top: 60%;
   height: 49px;
-  width: 170px;
+  width: 200px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -90,32 +89,13 @@
   background: #FFFFFF;
   border: 2px solid #308C83;
   border-radius: 16px;
-
-  /*
-  box-sizing: border-box;
-  top: 58%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 17.5px 15px;
-  gap: 10px;
-  left: 25px;
-  position: absolute;
-  width: 200px;
-  height: 50px;
-
-
-  background: #FFFFFF;
-  border: 2px solid #308C83;
-  border-radius: 30px;
-
-*/
+  margin-top: 80px;
 
 }
 
-
-.back-home:hover {
-  background-color: #bfdaf6;
+.back-home:hover{
+  background-color: #006296;
+  color: #F7FFFF;
 }
 
 
@@ -142,7 +122,8 @@
 
 
 .age-btn:hover {
-  background-color: #e4e3ff;
+  background-color: #006296;
+  color: #F7FFFF;
 }
 
 
@@ -169,7 +150,7 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 29px;
   line-height: 30px;
   text-align: center;
   color: #006296;
@@ -184,10 +165,11 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 36px;
-  text-align: center;
+  text-align: justify;
   color: #308C83;
+
 }
 
 .bottom {
@@ -211,59 +193,3 @@
   left: 35%;
 }
 
-
-/*
-
-.age-between-btn {
-
-  box-sizing: border-box;
-  top: 400%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 17.5px 15px;
-  gap: 10px;
-  left: 70px;
-  position: absolute;
-  width: 254px;
-  height: 55.3px;
-
-
-  background: #FFFFFF;
-  border: 2px solid #308C83;
-  border-radius: 30px;
-
-
-
-
-
-
-}
-
-
-.age-between-btn:hover {
-  background-color: #b9d9e9;
-}
-
-
-.age-above-btn {
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 17.5px 15px;
-  gap: 10px;
-  box-sizing: border-box;
-  top: 400%;
-  position: absolute;
-  width: 254px;
-  height: 55.3px;
-  left: 450px;
-
-  background: #FFFFFF;
-  border: 2px solid #308C83;
-  border-radius: 30px;
-
-}
-*/
