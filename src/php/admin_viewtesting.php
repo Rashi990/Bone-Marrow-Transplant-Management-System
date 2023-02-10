@@ -23,7 +23,7 @@ if (!(isset($_SESSION['user_name']) ))
    <div class="main-content">
         <header>
             <h2>
-                View Test
+                View Test Details
             </h2>
             <div class="search-wrapper">
             <span class="material-icons">search</span>
@@ -74,38 +74,38 @@ if (!(isset($_SESSION['user_name']) ))
                         <td>004</td>
                         <td>12/19</td>
                         <!-- <td style="color:#38fa11 ;">Qualified</td> -->
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">View More</a></td>
+                        <td><a href="#" class="btn">View More</a></td>
                     </tr>
                     <tr>
                         <td>002</td>
                         <td>005</td>
                         <td>12/19</td>
                         <!-- <td style="color:#fa1111 ;">Disqualified</td> -->
-                        <td><a href="../../src/php/admin_select_hospital_2.php" class="btn">View More</a></td>
+                        <td><a href="#" class="btn">View More</a></td>
                     </tr>
                     <tr>
                         <td>003</td>
                         <td>006</td>
                         <td>006</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">View More</a></td>
+                        <td><a href="#" class="btn">View More</a></td>
                     </tr>
                     <tr>
                         <td>004</td>
                         <td>007</td>
                         <td>12/19</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">View More</a></td>
+                        <td><a href="#" class="btn">View More</a></td>
                     </tr>
                     <tr>
                         <td>005</td>
                         <td>008</td>
                         <td>12/19</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">View More</a></td>
+                        <td><a href="#" class="btn">View More</a></td>
                     </tr>
                     <tr>
                         <td>006</td>
                         <td>009</td>
                         <td>12/19</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">View More</a></td>
+                        <td><a href="#" class="btn">View More</a></td>
                     </tr>
                 </table>
             </div>
