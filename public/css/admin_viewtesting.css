@@ -147,13 +147,13 @@ nav ul{
  a:hover{
    color: #006296;
    font-weight: 400;
-   background: #F4f7fa;
+   background: #D7F0ED;
    transition: .1s;
  }
  a.active{
    color: #006296;
    font-weight: 400;
-   background: #F4f7fa;
+   background: #f4f7fa;
  }
  .cards-2{
    display: table;
