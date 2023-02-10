@@ -41,10 +41,12 @@ if (isset($_POST["create-btn"])) {
     else if (emailAvailable($connection, $email,)) {
         header("location: donor_reg3_index.php?error=Email is already available");
     }
+    /*
     
     else if (nicInvalid($nic)) {
         header("location: donor_reg3_index.php?error=Invalid NIC Number");
     }
+    */
     
      else {
         //If all inputs are error free
