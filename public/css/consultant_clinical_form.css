@@ -8,22 +8,23 @@
     margin-left: 240px;
     margin-top: 20px;
     width: 80%;
-    height: 580px;
+    height: 630px;
     background-color: #F1F5F9;
     border-radius: 20px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .form{
-  /*position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -52%);*/
   background: #D7F0ED;
   width: 1190px;
-  height: auto;
-  padding: 20px;
+  height: 500px;
+  padding: 50px;
   padding-bottom: 50px;
+  overflow-y: scroll;
+}
+
+.form::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-height:500px;) {
@@ -47,7 +48,7 @@ label{
   transform: translateY(10px);
   font-size: 14px;
   width: 100%;
-  height: 20px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +61,7 @@ label{
   border: 1px solid #308C83;
   display: block;
   justify-content: center;
-  height: 25px;
+  height: 35px;
   width: 100%;
   padding: 0 20px;
   margin: 0;
@@ -73,7 +74,7 @@ input:focus{
 .select{
   transform: translateY(10px);
   width: 100%;
-  height: auto;
+  height: 35px;
   padding-left: 20px;
   margin: 0;
 }
@@ -86,15 +87,15 @@ button{
   background: #308C83;
   color: #fff;
   font-size: 16px;
-  width: 35%;
-  height: 35px;
+  width: 20%;
+  height: 50px;
   cursor: pointer;
   border: none;
   margin: 0 15px;
 }
 
 .btns{
-  transform: translateY(10px);
+  transform: translateY(30px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,10 +131,8 @@ a{
 }
 
 .db{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 10%;
+  margin-top: 30px;
   height: 100%;
 }
 
@@ -144,7 +143,7 @@ a{
   background:black;
   color: white;
   width: 80%;
-  height: 40px;
+  height: 50px;
 }
 
 .add a{
@@ -160,7 +159,7 @@ a{
   background:red;
   color: white;
   width: 80%;
-  height: 40px;
+  height: 50px;
 }
 
 .remove a{
@@ -171,12 +170,12 @@ a{
 
 .ds{
   margin: 0;
+  padding: 0;
   height: 60px;
 }
 
 .error{
-  background: #308C83;
-  color: white;
+  color: #FF6666;
   width: 85%;
   height: 40px;
   padding: 10px 0;

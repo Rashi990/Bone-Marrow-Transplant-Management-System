@@ -1,5 +1,5 @@
 <?php
-if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
+if (isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']))
 {
   include '../../config/connection.php';
 
