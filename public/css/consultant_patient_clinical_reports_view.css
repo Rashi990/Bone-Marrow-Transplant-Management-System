@@ -1,0 +1,40 @@
+.board{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  background: #D7F0ED;
+  width: 50%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+border-radius: 15px;
+}
+
+.title{
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #006296;
+}
+
+.details{
+  flex: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background: white;
+  margin: 20px;
+  color: #308C86;
+  width: 80%;
+  border-radius: 15px;
+}
