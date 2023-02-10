@@ -15,6 +15,7 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']) ))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../public/css/clinician_navbar.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/clinician_patient_details_view.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Top</title>
 </head>
@@ -43,5 +44,5 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']) ))
 </body>
 </html>
 
-<?php include('matching.php'); ?>
+<?php include('clinician_matching_process.php'); ?>
 <!--<?php require_once('consultant_footer.php'); ?>-->

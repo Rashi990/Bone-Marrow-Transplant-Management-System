@@ -166,7 +166,7 @@ tr{
 }
 
 td{
-  background: #D7F0ED;
+  background: #ffffff;
 }
 
 h3{
@@ -189,6 +189,10 @@ h3{
     font-weight: bold;
     color: #006296;
     /*line-height: 10px;*/
+}
+
+.selected a{
+  text-decoration: underline;
 }
 
 .selected .box:hover{
@@ -253,4 +257,18 @@ a.butt2 {
 
     border: 1px solid #006296;
     border-radius: 10px;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    height: 500px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #d7f0ed;
+    border: none;
+    border-radius: 20px;
 }
