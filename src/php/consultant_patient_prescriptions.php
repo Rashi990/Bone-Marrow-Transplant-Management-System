@@ -53,7 +53,7 @@ include "../../config/connection.php";
                             <td>'.$frequency.'</td>
                             <td>
                               <button id="btn-view" class="btn">
-                                <a href="consultant_patient_clinical_reports_view.php?update-id='.$patient_cr_id.'" class="text-light">
+                                <a href="consultant_patient_reports_view.php?update-id='.$patient_cr_id.'" class="text-light">
                                   View
                                   </a>
                               </button>
