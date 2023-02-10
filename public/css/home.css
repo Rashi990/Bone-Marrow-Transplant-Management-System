@@ -5,23 +5,42 @@ body{
 }
 
 .banner1{
-    background-image: url("../../public/images/home1.jpg");
+    background-image: url("../../public/images/home4.jpg");
     background-size: cover;
     background-position: center;
     height: 50vh;
     width: 100%;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 140px;
+    margin-top: 10px;
     color: #006296;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-.banner1 p{
-    line-height: 1px;
+.dec{
+  position:absolute;
+  top: 150px;
+  left: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+
+.dec p{
+    line-height:30px;
+    text-align: center;
     font-size: 16px;
+}
+
+.dec h1{
+    line-height: 2px;
+    text-align: center;
+    font-size: 24px;
 }
 
 .more{
@@ -119,5 +138,3 @@ body{
     color: #F7FFFF;
     background-color: #308C83;
 }
-
-  
