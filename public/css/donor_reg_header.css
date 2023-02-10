@@ -2,38 +2,33 @@
 
 
 
-    position: absolute;
-    width: 100%;
-    height: 110px;
-    left: 0px;
-    top: 0px;
-    
-    background: #006296;
-    }
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  left: 0px;
+  top: 0px;
+  background: #006296;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  }
+  /*
 .login{
-    position: absolute;
-    left: 90%;
-    top: 20%;
-    width: 5%;
-    border-radius: 30px;
-
-
-
+  
+  position: absolute;
+  left: 90%;
+  top: 20%;
+  width: 5px;
+  border-radius: 20px;
 display: flex;
 flex-direction: row;
 align-items: flex-start;
-padding: 0px;
-
+padding: 10px 20px;
 position: absolute;
-
-
-
-
-
-
 box-sizing: border-box;
-
-
 display: flex;
 flex-direction: row;
 justify-content: center;
@@ -48,18 +43,32 @@ background: #FFFFFF;
 border: 2px solid #308C83;
 border-radius: 30px;
 
+/*----
 
-
-
-
-
-
-
-
-
+float: right;
+background-color: #F7FFFF;
+color: #308C83;
+border: 1px solid #308C83;
+border-radius: 20px;
+padding: 10px 20px;
+margin: 10px 20px;
+text-decoration: none;
+font-weight: bold;
+transition: 0.5s;
 
 
 }
+
+
+
+
+
+
+.login:hover{
+  color: #F7FFFF;
+  background-color: #308C83;
+}
+
 
 .lg{
 
@@ -73,15 +82,44 @@ line-height: 36px;
 text-align: center;
 
 color: #308C83;
-
-
-
-
-   
 }
-    
-    
-    
-    
-    
-    
+
+*/
+
+
+ 
+.login{
+  float: right;
+  background-color: #F7FFFF;
+  color: #308C83;
+  border: 1px solid #308C83;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.login:hover{
+  color: #F7FFFF;
+  background-color: #308C83;
+}
+  
+
+.logo{
+  /*
+  margin-top: 10px;
+margin-left: 10px;
+width: 80px;*/
+height: 70px;
+margin-right: 20px;
+
+
+}
+
+
+  
+  
+  
+  
