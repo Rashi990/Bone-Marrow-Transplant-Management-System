@@ -13,7 +13,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 
     if (empty($patient_id)||empty($date)||empty($drug_name)||empty($dosage)||empty($route)||empty($frequency))
   {
-    header("Location: consultant_clinical_form.php?error=All feilds are required");
+    header("Location: consultant_prescription_form.php?error=All feilds are required!");
     exit();
   }
 
@@ -21,7 +21,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
       $result=mysqli_query($connection,$sql);
       if($result){
           //echo "Data inserted successfully";
-          header('location:consultant_patient_clinical_manage.php');
+          header('location:consultant_prescriptions.php');
       }
       else{
           die(mysqli_error($connection));
@@ -173,7 +173,7 @@ if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
           </div>
           <div class="btns">
             <button type="submit" name="submit" id="add_btn">Add Records</button>
-            <button type="button" name="button"><a id="butt" href="consultant_patient_clinical_manage.php">View Records</a></button>
+            <button type="button" name="button"><a id="butt" href="consultant_prescriptions.php">View Records</a></button>
           </div>
         </form>
       </div>

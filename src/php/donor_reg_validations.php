@@ -145,7 +145,7 @@ function emailAvailable($connection, $email){
     return $value;
 }
 
-/*
+
 function nicInvalid($nic){
 
 
@@ -159,7 +159,7 @@ function nicInvalid($nic){
 }
 
 
-*/
+
 
 
 

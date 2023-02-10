@@ -39,7 +39,7 @@
                 <div class="frms">
     
                     <!--Login In form-->
-             <form action="../../src/php/donor_reg3.php"name="regform" class="logfrm" method="post" onsubmit="return validateForm()" >
+             <form action="../../src/php/donor_reg3.php" class="logfrm" method="post">
              <?php if (isset($_GET['error'])) {?>
             <p class="error"><?php echo ($_GET['error']); ?></p>
             <?php } ?>
@@ -178,29 +178,19 @@
 <br>
                      
           
-        
                  
                         <div class="btn">
-    <!--
-                        <div class="contr">-->
+    
+    
                           <br> 
                          
     
                           
-                         <button type="submit" class="request" name="create-btn" id="create-btn" onclick="openPopup()">
+                          
+                         <button class="request" name="create-btn" id="create-btn">
                               <span class="rt">Request</span>
                         </button>
-
-<!--
-                        <div class="popup" id="popup">
-        <img src="tick.png">
-        <h2>Thank You!</h2>
-        <p>Your Request has been successfully sent.Thank You for requesting to be a Donor.You will be notified soon with further details with your provided Mobile Number and email.</p>
-        <button type="button" onclick="closePopup()">Ok</button>
-
-    </div>
-</div>
-             -->      
+                        
                         </div>
                         
             </form>
@@ -214,6 +204,7 @@
     </div>
     
 
+dfxc 
                 
     
                    <!-- <footer>
@@ -235,155 +226,6 @@
         
     
         </div>
-
-
-
-<!--
-        <div class="contr">
-    <button type="submit" class="rqt-btn" onclick="openPopup()">Request</button>
-    <div class="popup" id="popup">
-        <img src="tick.png">
-        <h2>Thank You!</h2>
-        <p>Your Request has been successfully sent.Thank You for requesting to be a Donor.You will be notified soon with further details with your provided Mobile Number and email.</p>
-        <button type="button" onclick="closePopup()">Ok</button>
-
-    </div>
-</div>
-
-
-             -->
-    <script>
-
-
-
-
-
-function validateForm() {
-  let fn = document.forms["regform"]["fname"].value;
-  if (fn == "") {
-    /*alert("Name must be filled out");*/
-    return false;
-  }
-  let ln = document.forms["regform"]["lname"].value;
-  if (ln == "") {
-    /*alert("Name must be filled out");*/
-    return false;
-  }
-  let eml = document.forms["regform"]["email"].value;
-  if (eml == "") {
-    /*alert("Name must be filled out");*/
-    return false;
-  }
-  let tel = document.forms["regform"]["tel"].value;
-  if (tel == "") {
-    /*alert("Name must be filled out");*/
-    return false;
-  }
-  let addr = document.forms["regform"]["address"].value;
-  if (addr == "") {
-    /*alert("Name must be filled out");*/
-    return false;
-  }
-  let ct = document.forms["regform"]["city"].value;
-  if (ct == "") {
-    /*alert("Name must be filled out");*/
-    return false;
-  }
-
-  let dst = document.forms["regform"]["district"].value;
-  if (dst == "") {
-    /*alert("Name must be filled out");*/
-    return false;
-  }
-  let dob = document.forms["regform"]["dob"].value;
-  if (dob == "") {
-    /*alert("Name must be filled out");*/
-    return false;
-  }
-
-  let nic = document.forms["regform"]["nic"].value;
-  if (nic == "") {
-    /*alert("Name must be filled out");*/
-    return false;
-  }
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----popup functions---*/
-
-
-
-function validatePopup(){
-
-if(validateForm()=="true"){
-
-
-
-        let popup =document.getElementById("popup");
-
-
-        function openPopup(){
-            popup.classList.add("open-popup")
-        }
-
-        function closePopup(){
-            popup.classList.remove("open-popup")
-        }
-
-
-    }
-}
-
-
-
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
        
     </body>
     
