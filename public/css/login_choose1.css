@@ -24,49 +24,51 @@ body{
 }
 
 .type{
-    margin: 110px auto;  
-    width: 500px;
-    height: 300px;
-    background-color:  #060606;
-    border: 1px solid #86b8d1;
+    margin: 200px auto;  
+    width: 380px;
+    height: 200px;
+    background-color:  #bde4e0;
+    border: 1px solid #006296;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .type h1{
     font-size: 30px;
     font-weight: bold;
-    color: #86b8d1;
+    color: #006296;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .tp{
-    width: 180px;
-    height: 100px;
-    background-color: #00195e;
-    margin: 10px 0 10px 30px;
-    padding: 10px;
-    border: 1px solid #86b8d1;
+    width: 300px;
+    height: 20px;
+    background-color: #F7FFFF;
+    margin: 5px 20px;
+    padding: 5px 10px;
+    border: 1px solid #308C83;
     border-radius: 10px;
-    display: flex;
-    float: left;
+    text-align: center;
 }
 
 .type a{
     text-decoration: none;
-    color: #86b8d1;
-    font-size: 20px;
+    color: #006296;
+    font-size: 16px;
     font-weight: bold;
-    margin: 10px;
-    padding: 30px;
+    margin: 0px 5px;
+    padding: 10px;
 }
 
 .tp:hover{
-    background-color: #93cae9;
+    background-color: #006296;
     cursor: pointer;
 }
 
 .tp a:hover{
-    color: #090909;
+    color: #F7FFFF;
     font-weight: bold;
 }
 
