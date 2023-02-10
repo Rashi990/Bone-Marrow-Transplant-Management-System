@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_add_session.css?v=2">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@700;800&family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <title>Add Session</title>
+</head>
+<body>
+
+    <div class="add_session">
+        <h1>Add New Session</h1>
+
+        <form action="../../src/php/hospital_add_session.php" method="post" class="add_session_form">
+
+            <p>
+                <label for="">Session ID</label>
+                <input type="text" name="session_id">
+            </p>
+
+            <p>
+                <label for="">Camp ID</label>
+                <input type="text" name="camp_id">
+            </p>
+
+            <p>
+                <label for="">Session Name</label>
+                <input type="text" name="session_name" required>
+            </p>
+
+            <p>
+                <label for="">Date</label>
+                <input type="date" name="date" required>
+            </p>
+
+            <p>
+                <label for="">Time</label>
+                <input type="time" name="time" required>
+            </p>
+
+            <p>
+                <label for="">Description</label>
+                <input type="text" name="descrition" required>
+            </p>
+
+
+            <p class="buttons">
+                <label>&nbsp;</label>
+                <input type="submit" name="submit" value="Submit" class="btn">
+                <a class="back_btn" href="../../src/php/hospital_session_list.php">Back</a>
+            </p>
+         
+        </form>
+
+    </div>
+
+</body>
+</html>
