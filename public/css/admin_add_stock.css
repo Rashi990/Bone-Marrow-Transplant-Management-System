@@ -5,40 +5,11 @@
     font-size: 16px;
     line-height: 1.5;
 }
-@media screen and (min-width:900px) {
-    body{
-        min-height: 100vh;
-        width: 100%;
-        background: #F7FFFF;
-    }
-}
 body{
     padding: 0;
     margin:0;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-
-}
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    font-weight: 100%;
-    margin: 30px;
-}
-.form_content{
-    background: #D7F0ED;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 500px;
-    margin: 50px;
-    padding: 20px 100px;
 
 }
 h2{
@@ -48,31 +19,22 @@ h2{
 
 }
 
-.input-box{
-    display: 50%;
-    width: 100%;
-    box-sizing:border-box;
-    border-radius: 8px;
-    border: 1px solid #c4c4c4;
-    padding: 1em;
-    margin-bottom: 1.25rem;
-    font-size: 0.875;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 12px;
-}
-.form_form{
 
-    padding: 1px 1px 1px 1px;
+form{
+    width: 328px;
+    padding: 50px 10px 0 30px;
+    box-sizing: border-box;
 }
 
-
+   .center{
+    align:center;
+   }
 form input[type="text"],
-form input[type="email"],
 form input[type="date"],
-form input[type="time"]
+form input[type="tel"]
 
 {
-    display: 50%;
+    display: 100%;
     width: 100%;
     box-sizing:border-box;
     border-radius: 8px;
@@ -83,21 +45,20 @@ form input[type="time"]
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
     border-radius: 12px;
 }
+.container{
+    justify-content: space-between;
+    background: #D7F0ED;
+    width: 50%;
+    margin: auto; 
+    position: relative;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  border-radius: 2rem;
 
-.hospital_options{
-    display: 50%;
-    width: 100%;
-    box-sizing:border-box;
-    border-radius: 8px;
-    border: 1px solid #c4c4c4;
-    padding: 1em;
-    margin-bottom: 1.25rem;
-    font-size: 0.875;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 12px;
 }
 
 label{
+    
     display: block;
     margin-bottom: 0.5rem;
     font-size: 0.85rem;
@@ -106,36 +67,35 @@ label{
     letter-spacing: 0.03em;
     color: #006296;
 }
-.controls {
-    width: 294px;
-    margin: 15px auto;
-  }
+
 .create-btn{
-    text-decoration: none;
     background-color: #F7FFFF;
     display: block;
-    width: 40%;
+    width: 100%;
     color:#006296;
     font-weight: 700;
     border:2px solid #006296;
     margin: 2rem 2rem;
-    padding: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border-radius: 8px;
     font-size: 0.75rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
 
 }
 .create-btn:hover{
     background: #2c4893;
     cursor: pointer;
-    color:white;
+    color:#F7FFFF;
 }
 .cancle-btn{
     text-decoration: none;
     background-color: #F7FFFF;
     display: block;
-    width: 40%;
+    width: 100%;
     color:#FF0404;
     font-weight: 700;
     border:2px solid #FF0404;
@@ -159,6 +119,7 @@ table {
  
  th,
  td {
+    width: 30%;
     text-align: left;
     padding-right: 50px;
  }

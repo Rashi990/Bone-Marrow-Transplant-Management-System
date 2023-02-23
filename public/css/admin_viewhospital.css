@@ -144,40 +144,40 @@ a.create-btn{
    
 
 }
-a.create-btn:hover{
+/* a.create-btn:hover{
     background: #006296;
     cursor: pointer;
     color:#F7FFFF;
-}
+} */
 .update-btn{
-    background-color: #F7FFFF;
+   
     display: block;
     width:60px;
     color:#006296;
     font-weight: 700;
-    border:2px solid #006296;
+   
     padding: 8px 20px;
-    border-radius: 8px;
+   
     font-size: 0.75rem;
     text-transform: capitalize;
     text-align: center;
     letter-spacing: 0.5px;
 
 }
-.update-btn:hover{
+/* .update-btn:hover{
     background: #006296;
     cursor: pointer;
     color:white;
-}
+} */
 .delete-btn{
-    background-color: #F7FFFF;
+    
     display: block;
     width:80px;
     color:#FF0404;
     font-weight: 700;
-    border:2px solid #FF0404;
-    padding: 8px 20px;
-    border-radius: 8px;
+    
+    padding: 10px 10px;
+   
     font-size: 0.75rem;
     text-transform: capitalize;
     text-align: center;
