@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
 {
 include '../../config/connection.php';
@@ -53,115 +52,48 @@ else{
   </head>
 
   <body>
-    <div class="hero">
-      <div class="rtop">
-        <div class="empty">
-          <p>Patient Clinical Details</p>
-        </div>
-        <div class="profile">
-          <abbr title="notifications">
-            <a href="../../public/html/consultant_notifications.html">
-              <div class="icon">
-                <span class="material-icons">
-                  notifications
-                </span>
-              </div>
-            </a>
-          </abbr>
-          <abbr title="messages">
-            <a href="../../public/html/consultant_messages.html">
-              <div class="icon">
-                <span class="material-icons">
-                  chat_bubble
-                </span>
-              </div>
-            </a>
-          </abbr>
-          <abbr title="Home">
-            <a href="consultant_home.php">
-              <div class="icon">
-                <span class="material-icons">
-                  home
-                </span>
-              </div>
-            </a>
-          </abbr>
-          <abbr title="Logout">
-            <a href="consultant_login.php">
-              <div class="icon">
-                <span class="material-icons">
-                  logout
-                </span>
-              </div>
-            </a>
-          </abbr>
-          <abbr title="Welcome!">
-            <div class="greet">
-              <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
-            </div>
-          </abbr>
-          <abbr title="Profile">
-            <a href="../../public/html/consultant_profile.html">
-              <div class="pp">
-                <span class="material-icons">
-                  account_circle
-                </span>
-              </div>
-            </a>
-          </abbr>
-        </div>
-      </div>
 
-      <div class="middle">
-        <div class="form">
-          <div class="title">
-            Patient No: <?php echo $patient_id ?> Clinical Details
+    <div class="board">
+      <div class="form">
+        <div class="title">
+          Patient No: <?php echo $patient_id ?> Clinical Details
+        </div>
+        <div class="details">
+          <div class="det">
+            Patient Name: <?php echo $patient_name ?>
           </div>
-          <div class="details">
-            <div class="det">
-              Patient Name: <?php echo $patient_name ?>
-            </div>
-            <div class="det">
-              Hospital Name: <?php echo $hospital_name ?>
-            </div>
-            <div class="det">
-              Gender: <?php echo $gender ?>
-            </div>
-            <div class="det">
-              Blood Group: <?php echo $blood_group ?>
-            </div>
+          <div class="det">
+            Hospital Name: <?php echo $hospital_name ?>
           </div>
-          <div class="details">
-            <div class="det">
-              Clinical Date: <?php echo $date ?>
-            </div>
-            <div class="det">
-              <div class="dd">
-                Drug Name: <?php echo $drug_name ?>
-              </div>
-              <div class="dd">
-                Dosage: <?php echo $dosage ?>
-              </div>
-              <div class="dd">
-                Route: <?php echo $route ?>
-              </div>
-              <div class="dd">
-                Frequency: <?php echo $frequency ?>
-              </div>
-            </div>
+          <div class="det">
+            Gender: <?php echo $gender ?>
+          </div>
+          <div class="det">
+            Blood Group: <?php echo $blood_group ?>
           </div>
         </div>
-      </div>
-
-      <div class="bottom">
-        <div class="bottom-input">
-          <span>© 2022 SLBMTMS. All rights reserved.</span>
-        </div>
-        <div class="bottom-input">
-          <span>Terms and conditions</span>
+        <div class="details">
+          <div class="det">
+            Clinical Date: <?php echo $date ?>
+          </div>
+          <div class="det">
+            <div class="dd">
+              Drug Name: <?php echo $drug_name ?>
+            </div>
+            <div class="dd">
+              Dosage: <?php echo $dosage ?>
+            </div>
+            <div class="dd">
+              Route: <?php echo $route ?>
+            </div>
+            <div class="dd">
+              Frequency: <?php echo $frequency ?>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
   </body>
 </html>
 

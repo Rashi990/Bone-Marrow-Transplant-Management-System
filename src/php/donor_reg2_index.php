@@ -14,12 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
 
-</head><body>
-<div class="left">
+</head>
+<body>
+<div class="container">
 
-
-
-</div>
 
 <div class="checklist-card">
                 <div class="details">
@@ -89,7 +87,8 @@
                     <button type="submit" value="Next"class="nxt-btn" id="nxt-btn" onclick="return validate()"><span class="fnt">Next</span></button>
                 </div>
 -->
-
+</div>
+<!--
                 <div class="bottom">
         <p>©2022 SLBMTMS &emsp;&emsp;&emsp;&emsp; All rights reserved.Terms and conditions</p>
     </div>
@@ -98,7 +97,8 @@
 
 
 
-
+-->
+<?php include('../../public/html/footer.html'); ?>
 
 
 
