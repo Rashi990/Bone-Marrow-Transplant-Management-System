@@ -11,5 +11,5 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['email']) ))
 <?php
 if (isset($_POST['cancel']))
 {
-    header("Location: admin_viewstock.php");
+    header("Location: admin_viewtesting.php");
 }?>
