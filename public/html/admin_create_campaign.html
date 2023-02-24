@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <script src="../../public/js/admin_create_campaign.js"></script>
 	<title>Add Hospital</title>
     <link rel="stylesheet"  href="../../public/css/admin_create_campaign.css">
 </head>
@@ -17,7 +17,7 @@
         <section class="copy">
             <h2>Add Hospital</h2>
         </section> 
-      <table>
+      <table id="myTable">
         <tr>
             <td>
                 <label for="cname">Campaign Name</label>
@@ -25,20 +25,28 @@
             </td>
             <td>
                 <label for="date">Date</label>
-                    <input  type="date" name="date" placeholder="Enter Date" >
+                    <input  type="date" id="date" name="date" placeholder="Enter Date" >
+                     
             </td>
         </tr>
         <tr>
             <td>
                 <label for="hname">Hospital Name</label>
-                <input type="text" name="hname" placeholder="Enter Hospital Name">
-                <!-- <script src="../../public/js/admin_create_campaign.js"> </script> -->
-                <!-- <input type="text" name="hname" placeholder="Enter Hospital Name">
-                <input type="text" name="hname" placeholder="Enter Hospital Name"> -->
+                <div id="hospital_options">
+                                <select id="status">
+                                    <option value="qulified"> Qulified</option>
+                                    <option value="disqulified"> Disqulified</option>
+                               </select>
+                      
+                </div>
+                <div class="controls">
+                    <a href="#" id="add_more_fields">Add More</a>
+                    <a href="#" id="remove_fields">Remove Field</a>
+                  </div>
             </td>
             <td>
-                <label for="time">Time</label>
-                <input type="time" name="time" placeholder="Entert Time">
+                <label for="time" >Time</label>
+                <input type="time" id="time" name="time" placeholder="Entert Time">
             </td>
         </tr>       
       </table>
@@ -57,6 +65,6 @@
  </div>
          
                 </div>
-	
+                
 </body>
 </html>

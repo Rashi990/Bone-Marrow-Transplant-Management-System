@@ -9,6 +9,7 @@
     <title>SLBTMS</title>
 </head>
 <body>
+    <script src="../../public/js/admin_dashboard.js"></script>
     <!-- sidebar section -->
     <div class="sidebar">
         <div class="logo-details">
@@ -20,10 +21,13 @@
                 <span class="material-icons">dashboard</span>
                 <span class="link_name">Dashboard</span>
             </a>
-     
             <a href="../../src/php/admin_viewsession.php">
-                <span class="material-icons">video_camera_front</span>
-                <span class="link_name">Campaign</span>
+            <div id="text" onclick="makeActive()">
+                
+                    <span class="material-icons">video_camera_front</span>
+                    <span class="link_name">Campaign</span>
+             
+             </div>
             </a>
             <a href="../../src/php/admin_calender.php">
                 <span class="material-icons">
