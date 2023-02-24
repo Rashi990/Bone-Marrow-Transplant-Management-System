@@ -156,33 +156,21 @@ table.list tr:nth-child(even){
 }
 
 table.list .update{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #009879;
-    border: 1px solid #009879;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 14px;
+    color: #006296;
+    padding: 8px 20px;
     transition: 0.5s;
 }
 
 table.list .update:hover{
-    background-color: #009879;
-    color: #F7FFFF;
+    color: #080909;
 }
 
 table.list .delete{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #FF0404;
-    border: 1px solid #FF0404;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 14px;
+    color: #006296;
+    padding: 8px 20px;
     transition: 0.5s;
 }
 
 table.list .delete:hover{
-    background-color: #FF0404;
-    color: #F7FFFF;
+    color: #080909;
 }
