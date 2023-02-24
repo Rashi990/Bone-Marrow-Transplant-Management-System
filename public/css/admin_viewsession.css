@@ -176,10 +176,11 @@ a.create-btn:hover{
    padding: 10px;
 }
 
-th,
+th,tr,
 td {
+   
    text-align: left;
-   padding: 15px;
+   padding: 10px;
 }
 .row{
     display: grid;
