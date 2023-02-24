@@ -194,49 +194,31 @@ table.list tr:nth-child(even){
 }
 
 table.list .view{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #009879;
-    border: 1px solid #009879;
-    border-radius: 10px;
+    color: #006296;
     padding: 8px 20px;
-    font-size: 14px;
     transition: 0.5s;
 }
 
 table.list .view:hover{
-    background-color: #009879;
-    color: #F7FFFF;
+    color: #080909;
 }
 
 table.list .delete{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #FF0404;
-    border: 1px solid #FF0404;
-    border-radius: 10px;
+    color: #006296;
     padding: 8px 20px;
-    font-size: 14px;
     transition: 0.5s;
 }
 
 table.list .delete:hover{
-    background-color: #FF0404;
-    color: #F7FFFF;
+    color: #080909;
 }
 
 table.list .edit{
-    text-decoration: none;
-    background-color: #F7FFFF;
     color: #006296;
-    border: 1px solid #006296 ;
-    border-radius: 10px;
     padding: 8px 20px;
-    font-size: 14px;
     transition: 0.5s;
 }
 
 table.list .edit:hover{
-    background-color: #006296;
-    color: #F7FFFF;
+    color: #080909;
 }
