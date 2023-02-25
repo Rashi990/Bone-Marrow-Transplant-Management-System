@@ -104,35 +104,83 @@ main{
     padding: 15px 10px;
     border-bottom: 2px solid #999;
  }
- .update-btn{
-    margin-left: 30px;
-    text-decoration: none;
+
+a.create-btn{
+    text-align: center;
     background-color: #F7FFFF;
     display: block;
+    width:200px;
     color:#006296;
-    font-weight: 700;
+    font-weight: 600;
     border:2px solid #006296;
-   padding: 7px 15px;
+    margin: 2rem 2rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border-radius: 8px;
     font-size: 0.75rem;
-    text-transform: capitalize;
     letter-spacing: 0.5px;
-    text-align: center;
-
 }
-.update-btn:hover{
+a.create-btn:hover{
     background: #006296;
     cursor: pointer;
     color:white;
 }
+ a{
+    text-decoration: none;
+    color: #006296;
+}
+
+.update-btn{
+    /* background-color: #F7FFFF; */
+    display: block;
+    width:60px;
+    color:#006296;
+    font-weight: 700;
+    /* border:2px solid #006296; */
+    padding: 8px 8px;
+    /* border-radius: 8px; */
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+}
+/* .update-btn:hover{
+    background: #006296;
+    cursor: pointer;
+    color:white;
+} */
+.delete-btn{
+    /* background-color: #F7FFFF; */
+    display: block;
+    width:80px;
+    color:#FF0404;
+    font-weight: 700;
+    /* border:2px solid #FF0404; */
+    padding: 10px 10px;
+    /* border-radius: 8px; */
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+}
+/* .delete-btn:hover{
+    background: #FF0404;
+    cursor: pointer;
+    color:white;
+} */
  table {
    padding: 10px;
 }
 
-th,
+th,tr,
 td {
+   
    text-align: left;
-   padding: 15px;
+   padding: 10px;
 }
 .row{
     display: grid;

@@ -98,10 +98,13 @@ if (!(isset($_SESSION['user_name'])))
         <td>'.$blood. '</td>
         <td>'.$tele. '</td>
         <td>'.$address. '</td>  
-        <td> <a href="admin_adddonor.php?" class="update-btn">edit
+        <td> <a href="admin_editdonor.php?" editid='.$id.'"  class="update-btn"><span class="material-icons">
+        edit_square
+        </span>
         </a></td>
-        <td><a href="admin_deletedonor.php? deleteid='.$id.'"><button class="delete-btn" >delete
-       </button></a></td>
+        <td><a href="admin_deletedonor.php? deleteid='.$id.'"  class="delete-btn" ><span class="material-icons">
+        delete
+        </span>
     </tr>';
 
             }
