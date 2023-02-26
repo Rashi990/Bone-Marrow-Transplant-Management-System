@@ -10,7 +10,7 @@ if (!(isset($_SESSION['user_name'])))
 ?>
 <?php require_once('admin_sidebar.php'); ?>
 <?php include('../../public/html/admin_viewsession.html'); ?> 
-<!-- <?php require_once('admin_footer.php');?> -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,5 +22,8 @@ if (!(isset($_SESSION['user_name'])))
     <link rel="stylesheet" type="text/css" href="../../public/css/admin_viewsession.css">
 </head>
 <body>
+
+
 </body>
+
 </html>
