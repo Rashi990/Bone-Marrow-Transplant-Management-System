@@ -110,81 +110,8 @@ body{
     font-weight: bold;
 }
 
-.all-patients:hover, .rank-donors, .hla-patients:hover, .match-patients:hover{
+.all-patients:hover, .rank-donors:hover, .hla-patients, .match-patients:hover{
     background-color: #006296;
-    color: #F7FFFF;
-}
-
-.donors{
-    position: absolute;
-    margin-left: 240px;
-    margin-top: 20px;
-    background-color: #f4f7fa;
-    padding: 10px;
-    width: 80%;
-    border: none;
-    border-radius: 20px;
-}
-
-.donors h1{
-    color: #006296;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 20px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-
-table.list{
-    margin: 30px;
-    padding: 10px;
-    width: 96%;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
-    background-color: #d7f0ed;
-}
-
-table.list th{
-    border-bottom: 1px solid #006296;
-    color: #006296;
-    padding: 10px;
-    text-align: left;
-    font-size: 18px;
-    font-weight: bold;
-    height: 25px;
-}
-
-table.list td{
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #006296;
-    background-color: #F7FFFF;
-    height: 25px;
-    border-bottom: 1px solid #006296;
-}
-
-ul li{
-    line-height: 35px;
-    list-style: none;
-    font-weight: 200;
-    font-size: 16px;
-}
-
-ul li .view{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #009879;
-    border: 1px solid #009879;
-    border-radius: 10px;
-    padding: 4px 10px;
-    font-size: 14px;
-    transition: 0.5s;
-}
-
-ul li .view:hover{
-    background-color: #009879;
     color: #F7FFFF;
 }
 
