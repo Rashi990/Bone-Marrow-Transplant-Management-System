@@ -85,42 +85,26 @@ body{
 }
 
 .choose{
-    margin: 40px 20px 10px 260px;
-    
+    margin: 40px 20px 10px 270px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f4f7fa;
 }
 
-.r-patients{
+.all-patients, .rank-donors, .hla-patients, .match-patients{
     margin: 0px 20px;
     text-decoration: none;
     background-color: #F7FFFF;
     color: #006296;
     border: 1px solid #006296 ;
     border-radius: 10px;
-    padding: 10px 80px;
+    padding: 10px 60px;
     font-size: 14px;
     transition: 0.5s;
     font-weight: bold;
 }
 
-.r-patients:hover{
-    background-color: #006296;
-    color: #F7FFFF;
-}
-
-.all-patients{
-    margin: 0px 20px;
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296 ;
-    border-radius: 10px;
-    padding: 10px 80px;
-    font-size: 14px;
-    transition: 0.5s;
-    font-weight: bold;
-}
-
-.all-patients:hover{
+.all-patients:hover, .rank-donors:hover, .hla-patients:hover, .match-patients:hover{
     background-color: #006296;
     color: #F7FFFF;
 }

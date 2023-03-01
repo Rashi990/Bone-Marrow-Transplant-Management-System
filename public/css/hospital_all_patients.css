@@ -85,42 +85,32 @@ body{
 }
 
 .choose{
-    margin: 40px 20px 10px 260px;
-    
+    margin: 40px 20px 10px 270px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f4f7fa;   
 }
 
-.r-patients{
-    margin: 0px 20px;
+.back-patients{
+    margin-top: 20px;
+    margin-right: 20px;
+    color: #006296;
+}
+
+.all-patients, .rank-donors, .hla-patients, .match-patients{
+    margin: 0px 10px;
     text-decoration: none;
     background-color: #F7FFFF;
     color: #006296;
     border: 1px solid #006296 ;
     border-radius: 10px;
-    padding: 10px 80px;
+    padding: 10px 60px;
     font-size: 14px;
     transition: 0.5s;
     font-weight: bold;
 }
 
-.r-patients:hover{
-    background-color: #006296;
-    color: #F7FFFF;
-}
-
-.all-patients{
-    margin: 0px 20px;
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296 ;
-    border-radius: 10px;
-    padding: 10px 80px;
-    font-size: 14px;
-    transition: 0.5s;
-    font-weight: bold;
-}
-
-.all-patients:hover{
+.all-patients, .rank-donors:hover, .hla-patients:hover, .match-patients:hover{
     background-color: #006296;
     color: #F7FFFF;
 }
@@ -144,6 +134,40 @@ body{
     padding-bottom: 10px;
     text-align: center;
 }
+
+.filter{
+    display: flex;
+    padding: 5px 20px;
+    margin: auto;
+    justify-content: center;
+    border: 1px solid #006296;
+    border-radius: 30px;
+    width: 35%;
+    height: 20px;
+    font-size: 14px;
+    color: #006296;
+    background-color: #e6e6e6;
+}
+
+.filter label{
+    margin: 0px 40px;
+}
+
+.filter input{
+    height: 100%;
+    width: 95%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 1px;
+    outline: none;
+ }
+
+.filter span{
+    display: inline-block;
+    padding: 0px 20px;
+    font-size:22px ;
+    cursor: pointer;
+ }
 
 .new{
     float: right;

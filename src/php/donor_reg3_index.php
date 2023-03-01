@@ -135,7 +135,7 @@
                            NIC Number
                     </label>
                         <br><br>
-        
+    
                             <input type="text" placeholder="Enter your NIC Number here" name="nic" class="np" required>
                           
                         <br>
