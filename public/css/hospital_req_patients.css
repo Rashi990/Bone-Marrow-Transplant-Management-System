@@ -135,6 +135,41 @@ body{
     text-align: center;
 }
 
+.filter{
+    display: flex;
+    padding: 5px 20px;
+    margin: auto;
+    justify-content: center;
+    border: 1px solid #006296;
+    border-radius: 30px;
+    width: 35%;
+    height: 20px;
+    font-size: 14px;
+    color: #006296;
+    background-color: #e6e6e6;
+}
+
+.filter label{
+    margin: 0px 40px;
+}
+
+.filter input{
+    height: 100%;
+    width: 95%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 1px;
+    outline: none;
+ }
+
+.filter span{
+    display: inline-block;
+    padding: 0px 20px;
+    font-size:22px ;
+    cursor: pointer;
+ }
+
+
 table.list{
     margin: 30px;
     padding: 10px;
