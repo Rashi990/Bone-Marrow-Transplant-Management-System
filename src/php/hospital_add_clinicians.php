@@ -1,85 +1,131 @@
 <?php
 require_once('../../config/connection.php');
 session_start();
-if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
-{
-    header("Location:hospital_login.php");
-}
 
-    $errors = array();
+    $sql2="select max(clinician_id) from clinician";
+    $result2=mysqli_query($connection,$sql2);
+    $max=mysqli_fetch_assoc($result2);
+    $maxid=$max['max(clinician_id)'];
+    $nextclinicianid=$maxid+1;
+?>
 
+<?php
     if(isset($_POST['submit'])){
-    
-        $cID = $_POST['clinician_id'];
+        
+		/*
+        function validation($data){
+            $data = trim($data);
+            $data = htmlspecialchars($data);
+            $data = stripcslashes($data);
+            return $data;
+        }
+*/
+
+        $_GLOBAL['accountdone']=0;
+        $_GLOBAL['cliniciandone']=0;
+        //$_GLOBAL['consultantavailabilitydone']=0;
+
+
+        //$filename=$nextconsultantid;
+        //$cID = $_POST['consultant_id'];
         $clinician_name = $_POST['clinician_name'];
         $c_email = $_POST['email'];
         $tele = $_POST['telephone_no'];
         $address = $_POST['address'];
-        $c_username = $_POST['user_name'];
+        $c_username = $_POST['username'];
         $c_password = $_POST['password'];
+		//$conpassword=$_POST['conpassword'];
+        //$hospital_id = $_POST['hospital_id']
 
         $hospital_id = $_SESSION['hospital_id'];
 
-        //Checking length
-        $max_len_fields = array('clinician_name' =>255, 'email' =>100, 'telephone_no' =>10, 'address' =>255, 'user_name' =>20, 'password' =>20 );
+        $checked = checkusername($c_username,$connection);
+		$checkedemail = checkemail($c_email,$connection);
 
-        foreach($max_len_fields as $field => $max_len){
-            if(strlen(trim($_POST[$field])) > $max_len ){
-                $errors[] = ' Error! : '.$field . ' must be less than ' . $max_len . ' characters';
-            }
-        }
 
-        //Checking if email already exists
-        $c_email = mysqli_real_escape_string($connection, $_POST['email']);
-        $check_email = "SELECT * FROM clinician WHERE email = '{$c_email}' ";
+        if(($checked==1) && ($checkedemail==1)){
 
-        $check_email_result = mysqli_query($connection, $check_email);
+        $insertclinician = "INSERT INTO clinician(`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES ('".$clinician_name."','".$c_email."','".$tele."','".$address."','".$hospital_id."')";
+        $result=$connection->query($insertclinician);
 
-        if($check_email_result){
-            if(mysqli_num_rows($check_email_result) == 1 ){
-                $errors[] = ' Error! : Email address already exists !';
-            }
-        }
-
-        //Checking if username already exists
-        $c_username = mysqli_real_escape_string($connection, $_POST['user_name']);
-        $check_uname = "SELECT * FROM clinician WHERE user_name = '{$c_username}' ";
-
-        $check_uname_result = mysqli_query($connection, $check_uname);
-
-        if($check_uname_result){
-            if(mysqli_num_rows($check_uname_result) == 1 ){
-                $errors[] = ' Error! : Username already exists !';
-            }
-        }
-
-        if(!empty($errors)){
-            echo '<div class="err">';
-            echo '<a href="hospital_add_clinicians.php">OK</a>';
-            foreach($errors as $error){
-                $error = str_replace("_", " ", $error);
-                echo $error;
-                echo '</br><br>';
-            }
-            echo '</div>';
+        if($result2){
+            $_GLOBAL['cliniciandone']=1;
         }else{
-
-        $sql = "INSERT INTO `clinician`(`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `user_name`, `password`, `hospital_id`) VALUES ('$cID', '$clinician_name', '$c_email', '$tele', '$address', '$c_username', '$c_password', '$hospital_id')";
-        $result = mysqli_query($connection,$sql);
-
-        if($result){
-            header("Location:hospital_clinicians.php");
-            echo "<script type='text/javascript'> alert('Insert is Successful') </script>";	
+            $_GLOBAL['cliniciandone']=0;
+			echo "<script> alert('Registration is Failled consultantdone not') </script>";
         }
-        else{
-            die(mysqli_error($connection));
-            echo "<script type='text/javascript'> alert('Insert is Fail') </script>";	
-        }
-    }
 
-}
+
+        $sql9="select max(clinician_id) from clinician";
+		$result9=mysqli_query($connection,$sql9);
+		$max=mysqli_fetch_assoc($result9);
+		$maxclinicianid=$max['max(clinician_id)'];
+		echo $maxclinicianid;
+
+					//insert in to account table
+					$insertaccount = "INSERT INTO account(uid,username,password,userlevel) values ('".$maxclinicianid."','".$c_username."','".$c_password."',2)";
+					$result=$connection->query($insertaccount);
+					if($result){
+						$_GLOBAL['accountdone']=1;
+						
+					}else{
+						$_GLOBAL['accountdone']=0;
+						echo "<script> alert('Registration is Failled accountdone not') </script>";
+					}
+
+					
+					if( ($_GLOBAL['accountdone']==1) && ($_GLOBAL['cliniciandone']==1) ){
+						echo "<script> alert('Registration is Sucessfull') </script>";
+						header("Location: clinician_login.php");
+					}else{
+						echo "<script> alert('Registration is Failled') </script>";
+					}
+				}else if($checked==0){
+					//echo 'failed';
+					//header("Location: account_page.php");
+					$c_username="";
+					echo "<script> alert('Username already used..') </script>";
+				}else if($checkedemail==0){
+					//echo 'failed';
+					//header("Location: account_page.php");
+					$c_email="";
+					echo "<script> alert('Email already used..') </script>";
+				}else{
+					
+				}
+        }            
+
+
 
  ?>
+
+<?php
+	function checkusername($c_username,$connection){
+		$sql10="select * from account where username='".$c_username."'";
+		//echo $sql10;
+		$result10=mysqli_query($connection,$sql10);
+		if($row10=$result10->fetch_assoc()){
+			return 0;
+		}else{
+			return 1;
+		} 
+	}
+?>
+
+<?php
+	function checkemail($c_email,$connection){
+		$sql11="select * from clinician where email='".$c_email."'";
+		//echo $sql10;
+		$result11=mysqli_query($connection,$sql11);
+		if($row11=$result11->fetch_assoc()){
+			return 0;
+		}else{
+			return 1;
+		} 
+	}
+?>
+
+
                 <!DOCTYPE html>
                 <html lang="en">
                 <head>
@@ -93,6 +139,6 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
                 <body>
 
                 </body>
-                </html>
+                </html>         
 
 <?php include('../../public/html/hospital_add_clinicians.html'); ?>
