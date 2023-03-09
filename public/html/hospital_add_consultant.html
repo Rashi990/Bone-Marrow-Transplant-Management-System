@@ -15,46 +15,79 @@
 
         <form action="../../src/php/hospital_add_consultant.php" method="post" class="add_consultant_form">
 
-            <p>
-                <label for="">ID</label>
-                <input type="text" name="consultant_id">
-            </p>
+            <div class="row">
+                <div class="col-25">
+                    <label>Name</label>
+                </div>
+                <div class="col-75">
+                    <input name="consultant_name" id="consultant_name" placeholder="Name" value="<?=(isset($consultant_name) ? $consultant_name : '')?>" type="text" onblur="required_name()" required >
+                </div>
+            </div>		
 
-            <p>
-                <label for="">Name</label>
-                <input type="text" name="consultant_name" required>
-            </p>
+            <div class="row">
+                <div class="col-25">
+                    <label>Email</label>
+                </div>
+                <div class="col-75">
+                    <input name="email" id="email" placeholder="Email" type="email" value="<?=(isset($c_email) ? $c_email : '')?>" required >
+                </div>
+            </div>
 
-            <p>
-                <label for="">Email</label>
-                <input type="email" name="email" required>
-            </p>
+            <div class="row">
+                <div class="col-25">
+                    <label>Telephone No</label>
+                </div>
+                <div class="col-75">
+                    <input name="telephone_no" id="telephone_no" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                </div>
+            </div>
 
-            <p>
-                <label for="">Telephone No</label>
-                <input type="text" name="telephone_no" required>
-            </p>
+            <div class="row">
+                <div class="col-25">
+                    <label>Address</label>
+                </div>
+                <div class="col-75">
+                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" onblur="required_address()" required >
+                </div>
+            </div>
 
-            <p>
-                <label for="">Address</label>
-                <input type="text" name="address" required>
-            </p>
+            <div class="row">
+                <div class="col-25">
+                    <label>User Name</label>
+                </div>
+                <div class="col-75">
+                    <input name="username" id="username" placeholder="User Name" value="<?=(isset($c_username) ? $c_username : '')?>" type="text" onblur="required_username()" required >
+                </div>
+                    <label><i style="font-size:9px;">**Use at least one lowercase, uppercase and digit. Minimum length is 6 characters.</i></label>
+            </div>
+                                
+            <div class="row">
+                <div class="col-25">
+                    <label>Password</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" name="password" id="password" value="<?=(isset($c_password) ? $c_password : '')?>" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onblur="c_password_validation()" required>
+                </div>
+            </div>
 
-            <p>
-                <label for="">Username</label>
-                <input type="text" name="user_name" required>
-            </p>
 
-            <p>
-                <label for="">Password</label>
-                <input type="password" name="password" required>
-            </p>
+            <!--
+            <div class="row">
+                <div class="col-25">
+                    <label>Confirm Password</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" name="cpassword" id="conpassword" placeholder="Confirm Password" value="<?=(isset($conpassword) ? $conpassword : '')?>" onblur="conpassword_validation()" required>
+                </div>
+            </div>
+                -->                    
 
-            <p class="buttons">
+
+            <div class="row">
                 <label>&nbsp;</label>
                 <input type="submit" name="submit" value="submit" class="btn">
                 <a class="back_btn" href="../../src/php/hospital_consultant.php">Back</a>
-            </p>
+            </div>
          
         </form>
 

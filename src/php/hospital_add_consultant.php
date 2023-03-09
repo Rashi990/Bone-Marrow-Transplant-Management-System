@@ -2,39 +2,128 @@
 require_once('../../config/connection.php');
 session_start();
 
+    $sql1="select max(consultant_id) from consultant";
+    $result1=mysqli_query($connection,$sql1);
+    $max=mysqli_fetch_assoc($result1);
+    $maxid=$max['max(consultant_id)'];
+    $nextconsultantid=$maxid+1;
+?>
 
+<?php
     if(isset($_POST['submit'])){
         
+		/*
         function validation($data){
             $data = trim($data);
             $data = htmlspecialchars($data);
             $data = stripcslashes($data);
             return $data;
         }
+*/
 
-        $cID = $_POST['consultant_id'];
+        $_GLOBAL['accountdone']=0;
+        $_GLOBAL['consultantdone']=0;
+        //$_GLOBAL['consultantavailabilitydone']=0;
+
+
+        //$filename=$nextconsultantid;
+        //$cID = $_POST['consultant_id'];
         $consultant_name = $_POST['consultant_name'];
         $c_email = $_POST['email'];
         $tele = $_POST['telephone_no'];
         $address = $_POST['address'];
-        $c_username = $_POST['user_name'];
+        $c_username = $_POST['username'];
         $c_password = $_POST['password'];
+		//$conpassword=$_POST['conpassword'];
         //$hospital_id = $_POST['hospital_id']
 
-        //$hospital_id = $_SESSION['hospital_id'];
+        $hospital_id = $_SESSION['hospital_id'];
 
-        $sql = "INSERT INTO `consultant`(`consultant_id`, `consultant_name`, `email`, `telephone_no`, `address`, `user_name`, `password`) VALUES ('$cID','$consultant_name','$c_email','$tele','$address','$c_username','$c_password')";
-        $result = mysqli_query($connection,$sql);
+        $checked = checkusername($c_username,$connection);
+		$checkedemail = checkemail($c_email,$connection);
 
-        if($result){
-            header("Location:hospital_consultant.php");
+
+        if(($checked==1) && ($checkedemail==1)){
+
+        $insertconsultant = "INSERT INTO consultant(`consultant_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES ('".$consultant_name."','".$c_email."','".$tele."','".$address."','".$hospital_id."')";
+        $result=$connection->query($insertconsultant);
+
+        if($result1){
+            $_GLOBAL['consultantdone']=1;
+        }else{
+            $_GLOBAL['consultantdone']=0;
+			echo "<script> alert('Registration is Failled consultantdone not') </script>";
         }
-        else{
-            die(mysqli_error($connection));
-        }
-    }
+
+
+        $sql8="select max(consultant_id) from consultant";
+		$result8=mysqli_query($connection,$sql8);
+		$max=mysqli_fetch_assoc($result8);
+		$maxconsultantid=$max['max(consultant_id)'];
+		echo $maxconsultantid;
+
+					//insert in to account table
+					$insertaccount = "INSERT INTO account(uid,username,password,userlevel) values ('".$maxconsultantid."','".$c_username."','".$c_password."',1)";
+					$result=$connection->query($insertaccount);
+					if($result){
+						$_GLOBAL['accountdone']=1;
+						
+					}else{
+						$_GLOBAL['accountdone']=0;
+						echo "<script> alert('Registration is Failled accountdone not') </script>";
+					}
+
+					
+					if( ($_GLOBAL['accountdone']==1) && ($_GLOBAL['consultantdone']==1) ){
+						echo "<script> alert('Registration is Sucessfull') </script>";
+						header("Location: consultant_login.php");
+					}else{
+						echo "<script> alert('Registration is Failled') </script>";
+					}
+				}else if($checked==0){
+					//echo 'failed';
+					//header("Location: account_page.php");
+					$c_username="";
+					echo "<script> alert('Username already used..') </script>";
+				}else if($checkedemail==0){
+					//echo 'failed';
+					//header("Location: account_page.php");
+					$c_email="";
+					echo "<script> alert('Email already used..') </script>";
+				}else{
+					
+				}
+        }            
+
+
 
  ?>
+
+<?php
+	function checkusername($c_username,$connection){
+		$sql10="select * from account where username='".$c_username."'";
+		//echo $sql10;
+		$result10=mysqli_query($connection,$sql10);
+		if($row10=$result10->fetch_assoc()){
+			return 0;
+		}else{
+			return 1;
+		} 
+	}
+?>
+
+<?php
+	function checkemail($c_email,$connection){
+		$sql11="select * from consultant where email='".$c_email."'";
+		//echo $sql10;
+		$result11=mysqli_query($connection,$sql11);
+		if($row11=$result11->fetch_assoc()){
+			return 0;
+		}else{
+			return 1;
+		} 
+	}
+?>
 
 
                 <!DOCTYPE html>
