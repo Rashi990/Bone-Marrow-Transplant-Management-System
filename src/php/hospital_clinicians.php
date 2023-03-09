@@ -7,6 +7,7 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
     header("Location:hospital_login.php");
 }
 
+/*
 $clinician_list = '';
 
 $hospital_id = $_SESSION['hospital_id'];
@@ -30,6 +31,8 @@ if($clinicians){
 else{
     echo "Database query failed!";
 }
+
+*/
 
 ?>
 
