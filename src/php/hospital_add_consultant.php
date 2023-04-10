@@ -23,8 +23,6 @@ session_start();
 
         $_GLOBAL['accountdone']=0;
         $_GLOBAL['consultantdone']=0;
-        //$_GLOBAL['consultantavailabilitydone']=0;
-
 
         //$filename=$nextconsultantid;
         //$cID = $_POST['consultant_id'];
@@ -34,7 +32,7 @@ session_start();
         $address = $_POST['address'];
         $c_username = $_POST['username'];
         $c_password = $_POST['password'];
-		//$conpassword=$_POST['conpassword'];
+		$conpassword=$_POST['conpassword'];
         //$hospital_id = $_POST['hospital_id']
 
         $hospital_id = $_SESSION['hospital_id'];
@@ -45,10 +43,10 @@ session_start();
 
         if(($checked==1) && ($checkedemail==1)){
 
-        $insertconsultant = "INSERT INTO consultant(`consultant_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES ('".$consultant_name."','".$c_email."','".$tele."','".$address."','".$hospital_id."')";
-        $result=$connection->query($insertconsultant);
+        $insertconsultant = "INSERT INTO consultant(`consultant_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES ('$consultant_name','$c_email','$tele','$address','$hospital_id')";
+        $result2=$connection->query($insertconsultant);
 
-        if($result1){
+        if($result2){
             $_GLOBAL['consultantdone']=1;
         }else{
             $_GLOBAL['consultantdone']=0;
@@ -56,16 +54,16 @@ session_start();
         }
 
 
-        $sql8="select max(consultant_id) from consultant";
-		$result8=mysqli_query($connection,$sql8);
-		$max=mysqli_fetch_assoc($result8);
+        $sql3="select max(consultant_id) from consultant";
+		$result3=mysqli_query($connection,$sql3);
+		$max=mysqli_fetch_assoc($result3);
 		$maxconsultantid=$max['max(consultant_id)'];
-		echo $maxconsultantid;
+		//echo $maxconsultantid;
 
 					//insert in to account table
-					$insertaccount = "INSERT INTO account(uid,username,password,userlevel) values ('".$maxconsultantid."','".$c_username."','".$c_password."',1)";
-					$result=$connection->query($insertaccount);
-					if($result){
+					$insertaccount = "INSERT INTO `account`(uid,username,password,userlevel) values ('$maxconsultantid','$c_username','$conpassword',1)";
+					$result4=$connection->query($insertaccount);
+					if($result4){
 						$_GLOBAL['accountdone']=1;
 						
 					}else{
@@ -75,18 +73,20 @@ session_start();
 
 					
 					if( ($_GLOBAL['accountdone']==1) && ($_GLOBAL['consultantdone']==1) ){
+						//echo $_GLOBAL['accountdone'];
+						//echo $_GLOBAL['consultantdone'];
 						echo "<script> alert('Registration is Sucessfull') </script>";
 						header("Location: consultant_login.php");
 					}else{
 						echo "<script> alert('Registration is Failled') </script>";
 					}
 				}else if($checked==0){
-					//echo 'failed';
+					echo 'uname failed';
 					//header("Location: account_page.php");
 					$c_username="";
 					echo "<script> alert('Username already used..') </script>";
 				}else if($checkedemail==0){
-					//echo 'failed';
+					echo 'mail failed';
 					//header("Location: account_page.php");
 					$c_email="";
 					echo "<script> alert('Email already used..') </script>";
@@ -94,17 +94,14 @@ session_start();
 					
 				}
         }            
-
-
-
  ?>
 
 <?php
 	function checkusername($c_username,$connection){
-		$sql10="select * from account where username='".$c_username."'";
+		$sql5="select * from account where username='".$c_username."'";
 		//echo $sql10;
-		$result10=mysqli_query($connection,$sql10);
-		if($row10=$result10->fetch_assoc()){
+		$result5=mysqli_query($connection,$sql5);
+		if($row5=$result5->fetch_assoc()){
 			return 0;
 		}else{
 			return 1;
@@ -114,10 +111,10 @@ session_start();
 
 <?php
 	function checkemail($c_email,$connection){
-		$sql11="select * from consultant where email='".$c_email."'";
+		$sql6="select * from consultant where email='".$c_email."'";
 		//echo $sql10;
-		$result11=mysqli_query($connection,$sql11);
-		if($row11=$result11->fetch_assoc()){
+		$result6=mysqli_query($connection,$sql6);
+		if($row6=$result6->fetch_assoc()){
 			return 0;
 		}else{
 			return 1;

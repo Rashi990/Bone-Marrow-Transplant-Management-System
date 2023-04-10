@@ -45,7 +45,7 @@ session_start();
 
         if(($checked==1) && ($checkedemail==1)){
 
-        $insertclinician = "INSERT INTO clinician(`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES ('".$clinician_name."','".$c_email."','".$tele."','".$address."','".$hospital_id."')";
+        $insertclinician = "INSERT INTO clinician(`clinician_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES ('".$clinician_name."','".$c_email."','".$tele."','".$address."','".$hospital_id."')";
         $result=$connection->query($insertclinician);
 
         if($result2){
