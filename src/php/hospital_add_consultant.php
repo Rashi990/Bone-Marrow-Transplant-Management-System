@@ -99,7 +99,7 @@ session_start();
 <?php
 	function checkusername($c_username,$connection){
 		$sql5="select * from account where username='".$c_username."'";
-		//echo $sql10;
+		//echo $sql5;
 		$result5=mysqli_query($connection,$sql5);
 		if($row5=$result5->fetch_assoc()){
 			return 0;
@@ -112,7 +112,7 @@ session_start();
 <?php
 	function checkemail($c_email,$connection){
 		$sql6="select * from consultant where email='".$c_email."'";
-		//echo $sql10;
+		//echo $sql6;
 		$result6=mysqli_query($connection,$sql6);
 		if($row6=$result6->fetch_assoc()){
 			return 0;
