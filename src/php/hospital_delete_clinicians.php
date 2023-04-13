@@ -6,24 +6,37 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ))
     header("Location:hospital_login.php");
 }
 
-if(isset($_GET['clinician_id'])){
-    $cID = mysqli_real_escape_string($connection, $_GET['clinician_id']);
-    
-    $sql = "DELETE FROM clinician WHERE clinician_id = $cID ";
-    $result = mysqli_query($connection,$sql);
+if(isset($_GET['deleteid'])){
+    $id=$_GET['deleteid'];
 
-    if($result){
-        echo "<script type='text/javascript'> alert('Passed') </script>";
-        //header("Location:hospital_clinician_list.php");
+    $sql1="DELETE FROM clinician WHERE clinician_id='$id'";
+    $result1=mysqli_query($connection,$sql1);
+
+    if($result1){
+        $_GLOBAL['cliniciandone']=1;
+    }else{
+        $_GLOBAL['cliniciandone']=0;
     }
-    else{
-        echo "<script type='text/javascript'> alert('Failed') </script>";	;
+
+    $sql2="DELETE FROM account WHERE uid='$id'";
+    $result2=mysqli_query($connection,$sql2);
+
+    if($result2){
+        $_GLOBAL['accountdone']=1;
+    }else{
+        $_GLOBAL['accountdone']=0;
+    }
+
+    if(($_GLOBAL['cliniciandone']==1)&&($_GLOBAL['accountdone']==1)){
+        echo "<script>alert('Successfully Deleted !')</script>";
+        header("Location:hospital_clinicians.php");
+    }else{
+        echo "<script>alert('Deletion cannot be done. Please try again ! !')</script>";
     }
 }
 
 ?>
 
-<?php include('../../public/html/hospital_delete_clinicians.html'); ?>
 
 
 
