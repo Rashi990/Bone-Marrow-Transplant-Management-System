@@ -2,9 +2,9 @@
 require_once('../../config/connection.php');
 session_start();
 
-    $sql2="select max(clinician_id) from clinician";
-    $result2=mysqli_query($connection,$sql2);
-    $max=mysqli_fetch_assoc($result2);
+    $sql1="select max(clinician_id) from clinician";
+    $result1=mysqli_query($connection,$sql1);
+    $max=mysqli_fetch_assoc($result1);
     $maxid=$max['max(clinician_id)'];
     $nextclinicianid=$maxid+1;
 ?>
@@ -23,8 +23,6 @@ session_start();
 
         $_GLOBAL['accountdone']=0;
         $_GLOBAL['cliniciandone']=0;
-        //$_GLOBAL['consultantavailabilitydone']=0;
-
 
         //$filename=$nextconsultantid;
         //$cID = $_POST['consultant_id'];
@@ -34,7 +32,7 @@ session_start();
         $address = $_POST['address'];
         $c_username = $_POST['username'];
         $c_password = $_POST['password'];
-		//$conpassword=$_POST['conpassword'];
+		$conpassword=$_POST['conpassword'];
         //$hospital_id = $_POST['hospital_id']
 
         $hospital_id = $_SESSION['hospital_id'];
@@ -45,8 +43,8 @@ session_start();
 
         if(($checked==1) && ($checkedemail==1)){
 
-        $insertclinician = "INSERT INTO clinician(`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES ('".$clinician_name."','".$c_email."','".$tele."','".$address."','".$hospital_id."')";
-        $result=$connection->query($insertclinician);
+        $insertclinician = "INSERT INTO clinician(`clinician_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES ('$clinician_name','$c_email','$tele','$address','$hospital_id')";
+        $result2=$connection->query($insertclinician);
 
         if($result2){
             $_GLOBAL['cliniciandone']=1;
@@ -56,16 +54,16 @@ session_start();
         }
 
 
-        $sql9="select max(clinician_id) from clinician";
-		$result9=mysqli_query($connection,$sql9);
-		$max=mysqli_fetch_assoc($result9);
+        $sql3="select max(clinician_id) from clinician";
+		$result3=mysqli_query($connection,$sql3);
+		$max=mysqli_fetch_assoc($result3);
 		$maxclinicianid=$max['max(clinician_id)'];
 		echo $maxclinicianid;
 
 					//insert in to account table
-					$insertaccount = "INSERT INTO account(uid,username,password,userlevel) values ('".$maxclinicianid."','".$c_username."','".$c_password."',2)";
-					$result=$connection->query($insertaccount);
-					if($result){
+					$insertaccount = "INSERT INTO account(uid,username,password,userlevel) values ('$maxclinicianid','$c_username','$conpassword',2)";
+					$result4=$connection->query($insertaccount);
+					if($result4){
 						$_GLOBAL['accountdone']=1;
 						
 					}else{
@@ -95,16 +93,14 @@ session_start();
 				}
         }            
 
-
-
  ?>
 
 <?php
 	function checkusername($c_username,$connection){
-		$sql10="select * from account where username='".$c_username."'";
-		//echo $sql10;
-		$result10=mysqli_query($connection,$sql10);
-		if($row10=$result10->fetch_assoc()){
+		$sql5="select * from account where username='".$c_username."'";
+		//echo $sql5;
+		$result5=mysqli_query($connection,$sql5);
+		if($row5=$result5->fetch_assoc()){
 			return 0;
 		}else{
 			return 1;
@@ -114,10 +110,10 @@ session_start();
 
 <?php
 	function checkemail($c_email,$connection){
-		$sql11="select * from clinician where email='".$c_email."'";
-		//echo $sql10;
-		$result11=mysqli_query($connection,$sql11);
-		if($row11=$result11->fetch_assoc()){
+		$sql6="select * from clinician where email='".$c_email."'";
+		//echo $sql6;
+		$result6=mysqli_query($connection,$sql6);
+		if($row6=$result6->fetch_assoc()){
 			return 0;
 		}else{
 			return 1;

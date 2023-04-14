@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2023 at 06:35 AM
+-- Generation Time: Apr 09, 2023 at 06:15 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -20,6 +20,67 @@ SET time_zone = "+00:00";
 --
 -- Database: `bone_marrow_transplant_management_system`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account`
+--
+
+CREATE TABLE `account` (
+  `aid` int(11) NOT NULL,
+  `uid` varchar(20) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `userlevel` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `account`
+--
+
+INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `userlevel`) VALUES
+(1, '4', '', '0', 1),
+(2, '4', 'ann', '0', 1),
+(3, '5', 'shan', '0', 1),
+(4, '5', 'niki', '0', 1),
+(5, '4', 'ken', '0', 1),
+(6, '4', 'pet', '0', 1),
+(7, '4', 'go', '0', 1),
+(8, '4', 'nesh', '0', 1),
+(9, '4', 'his', '0', 1),
+(10, '8', 'vin', '0', 1),
+(11, '9', 'yo', '0', 1),
+(12, '10', 'din', '0', 1),
+(13, '11', 'js', 'Js112233', 1),
+(14, '15', 'gg', 'Gg112233', 1),
+(15, '16', 'jone', 'Jo112233', 1),
+(16, '17', 'sa', 'Sa112233', 1),
+(17, '', 'bb', 'Bb112233', 2),
+(18, '17', 'kk', 'Kk112233', 2),
+(19, '17', 'ww', 'Ww112233', 2),
+(20, '17', 'hh', 'Hh112233', 2),
+(21, '17', 'rr', 'Rr112233', 2),
+(22, '18', 'go123', 'Go1234', 1),
+(23, '17', 'rin', 'Rin123', 2),
+(24, '17', 'faa', 'Fa1234', 2),
+(25, '18', 'hoo', 'Hoo123', 2),
+(26, '19', 'noo', 'Noo123', 1),
+(27, '19', 'haa', 'Haa123', 2),
+(28, '20', 'laa', 'Laa123', 2),
+(29, '21', 'saaa', 'Sa1234', 2),
+(30, '22', 'ooo', 'Oo1234', 2),
+(31, '23', 'jj', 'Jj1234', 2),
+(32, '20', 'www', 'Ww1234', 1),
+(33, '24', 'ddd', 'Dd1234', 2),
+(34, '21', 'mee', 'Me1234', 1),
+(35, '22', 'cc', 'Cc1234', 1),
+(36, '23', 'bbb', 'Bb1234', 1),
+(37, '24', 'hhh', 'Hh1234', 1),
+(38, '25', 'kkk', 'Kk1234', 1),
+(39, '26', 'pp', 'Pp1234', 1),
+(40, '27', 'xx', 'Xx1234', 1),
+(41, '28', 'tt', 'Tt1234', 1);
 
 -- --------------------------------------------------------
 
@@ -111,8 +172,6 @@ CREATE TABLE `clinician` (
   `email` varchar(100) NOT NULL,
   `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
-  `user_name` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
   `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -120,20 +179,27 @@ CREATE TABLE `clinician` (
 -- Dumping data for table `clinician`
 --
 
-INSERT INTO `clinician` (`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `user_name`, `password`, `hospital_id`) VALUES
-(1, 'Thilini De Mel', '9898.thilini@gmail.com', '0772440643', 'No.2/61, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', 'thili_99', '120899', 1),
-(2, 'Nisal', 'nis@gmail.com', '0115555448', 'Flower Road, Kandy', 'nisal', '440000', 2),
-(3, 'Ashi', 'ash@gamil.com', '0112997222', '77/A, Galle Road, Colombo', 'ashi', '668899', 2),
-(4, 'Dinu', 'di@gmail.com', '0112996666', '44/97, Silver Street , Matara', 'dinu77', '997755', 1),
-(6, 'Hashi', 'hashi@gmail.com', '0112467999', '55/99, Baker Street, Colombo', 'hashi88', '8899jj', 1),
-(7, 'Mashi', 'mashi@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', 'mashi66', '888999', 1),
-(8, 'Samantha', 'sam@gmail.com', '0778866111', '44/2,Mahawa Road,Galle', 'sam778', '666555', 2),
-(9, 'Fathima', 'fa@gmail.com', '0778866000', '44/9,Matara Road, Matara', 'fathima66', 'fa33333', 2),
-(12, 'Sanjana', 'sanj@gmail.com', '0778861111', '22/9,Galle Road, Colombo', 'Sanju99', '228899', 1),
-(13, 'Sarath Silva', 'sarath@gmail.com', '0778862222', '78/5, Main Road, Jaffna', 'sarath22', 'sa8800', 3),
-(15, 'P.Samaranayaka', 'sama@gmail.com', '0778866111', 'Main Road, Colombo', 'sama22', '222333', 1),
-(16, 'Mashi', 'ma@gmail.com', '0778866667', 'Panideniya Road, Kandy', 'ma888', '1111111', 1),
-(17, 'mahagama', 'mahaga@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', 'mahi6666', '889977', 1);
+INSERT INTO `clinician` (`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES
+(1, 'Thilini De Mel', '9898.thilini@gmail.com', '0772440643', 'No.2/61, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', 1),
+(2, 'Nisal', 'nis@gmail.com', '0115555448', 'Flower Road, Kandy', 2),
+(3, 'Ashi', 'ash@gamil.com', '0112997222', '77/A, Galle Road, Colombo', 2),
+(4, 'Dinu', 'di@gmail.com', '0112996666', '44/97, Silver Street , Matara', 1),
+(6, 'Hashi', 'hashi@gmail.com', '0112467999', '55/99, Baker Street, Colombo', 1),
+(7, 'Mashi', 'mashi@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', 1),
+(8, 'Samantha', 'sam@gmail.com', '0778866111', '44/2,Mahawa Road,Galle', 2),
+(9, 'Fathima', 'fa@gmail.com', '0778866000', '44/9,Matara Road, Matara', 2),
+(12, 'Sanjana', 'sanj@gmail.com', '0778861111', '22/9,Galle Road, Colombo', 1),
+(13, 'Sarath Silva', 'sarath@gmail.com', '0778862222', '78/5, Main Road, Jaffna', 3),
+(15, 'P.Samaranayaka', 'sama@gmail.com', '0778866111', 'Main Road, Colombo', 1),
+(16, 'Mashi', 'ma@gmail.com', '0778866667', 'Panideniya Road, Kandy', 1),
+(17, 'mahagama', 'mahaga@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', 1),
+(18, 'hoo', 'hoo@gmail.com', '0778866667', 'Main Road, Colombo', 1),
+(19, 'haa', 'haa@gmail.com', '0778866667', 'Main Road, Colombo', 2),
+(20, 'laa', 'laa@gmail.com', '0778866667', 'Main Road, Colombo', 2),
+(21, 'sa', 'sa@gmail.com', '0778866667', 'Main Road, Colombo', 2),
+(22, 'oo', 'oo@gmail.com', '0778866667', 'Main Road, Colombo', 1),
+(23, 'jj', 'jj@gmail.com', '0778866667', 'Main Road, Colombo', 1),
+(24, 'ddd', 'ddd@gmail.com', '0778866667', 'Main Road, Colombo', 1);
 
 -- --------------------------------------------------------
 
@@ -148,8 +214,6 @@ CREATE TABLE `consultant` (
   `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
   `image` mediumblob NOT NULL,
-  `user_name` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
   `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -157,11 +221,32 @@ CREATE TABLE `consultant` (
 -- Dumping data for table `consultant`
 --
 
-INSERT INTO `consultant` (`consultant_id`, `consultant_name`, `email`, `telephone_no`, `address`, `image`, `user_name`, `password`, `hospital_id`) VALUES
-(1, 'Thilini De Mel', '9898.thilini@gmail.com', '772440643', 'No.61/2, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', '', 'thili_99', '120899', 1),
-(2, 'Malsha Samadhika', 'malsha@gmail.com', '771234567', 'No.235, Kandy Road, Kegalle', '', 'salma_99', '1234', 1),
-(3, 'Rashini Lakshika', 'rash@gmail.com', '712589634', 'No.24/3, Park Road, Galle', '', 'rash_99', '1111', 2),
-(4, 'Subodhinie', 'subo@gmail.com', '759865472', 'No.33, Upper Lake Road, Colombo 07', '', 'subo_99', '3333', 3);
+INSERT INTO `consultant` (`consultant_id`, `consultant_name`, `email`, `telephone_no`, `address`, `image`, `hospital_id`) VALUES
+(1, 'Thilini De Mel', '9898.thilini@gmail.com', '772440643', 'No.61/2, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', '', 1),
+(2, 'Malsha Samadhika', 'malsha@gmail.com', '771234567', 'No.235, Kandy Road, Kegalle', '', 1),
+(3, 'Rashini Lakshika', 'rash@gmail.com', '712589634', 'No.24/3, Park Road, Galle', '', 2),
+(4, 'Subodhinie', 'subo@gmail.com', '759865472', 'No.33, Upper Lake Road, Colombo 07', '', 3),
+(8, 'vin', 'vin@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(9, 'yo', 'yo@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(10, 'din', 'din@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(11, 'js', 'js@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(12, 'fa', 'fa@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(13, 'mas', 'mas@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(14, 'dd', 'dd@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(15, 'gg', 'gg@gmail.com', '0778866111', 'Main Road, Colombo', '', 1),
+(16, 'jone', 'jo@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(17, 'sa', 'sa@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(18, 'go', 'go@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(19, 'noo', 'noo@gmail.com', '0778866667', 'Main Road, Colombo', '', 2),
+(20, 'ww', 'ww@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(21, 'mee', 'mee@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(22, 'cc', 'cc@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(23, 'bb', 'bb@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(24, 'hh', 'hhh@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(25, 'kk', 'kkk@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(26, 'pp', 'pp@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(27, 'xx', 'xx@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
+(28, 'tt', 'tt@gmail.com', '0778866667', 'Main Road, Colombo', '', 1);
 
 -- --------------------------------------------------------
 
@@ -432,17 +517,20 @@ CREATE TABLE `pending_donor` (
   `image` mediumblob NOT NULL,
   `blood_group` varchar(255) NOT NULL,
   `user_name` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `request_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `pending_donor`
 --
 
-INSERT INTO `pending_donor` (`pending_donor_id`, `first_name`, `second_name`, `email`, `telephone_no`, `address`, `city`, `district`, `date_of_birth`, `gender`, `id_number`, `marital_state`, `image`, `blood_group`, `user_name`, `password`) VALUES
-(1, 'Kamal', 'Vithanage', 'kmv12@gmail.com', 912563845, 'No.25,Main Road,Galle', 'Nagoda', 'Galle', '1988-05-12', 'Male', 2147483647, 'Married', '', '', '', ''),
-(2, 'Nimal', 'Hewage', 'ni@gmail.com', 112233777, 'Main Road, Colombo', 'Colombo', 'Colombo', '2022-11-30', 'Male', 2147483647, 'Married', '', '', '', ''),
-(3, 'Kaveesha', 'Perarra', 'kw@gmail.com', 912275845, 'no.23,Galle', 'Galle', 'Galle', '1999-02-15', 'Male', 2147483647, 'Unmarried', '', '', '', '');
+INSERT INTO `pending_donor` (`pending_donor_id`, `first_name`, `second_name`, `email`, `telephone_no`, `address`, `city`, `district`, `date_of_birth`, `gender`, `id_number`, `marital_state`, `image`, `blood_group`, `user_name`, `password`, `status`, `request_date`) VALUES
+(1, 'Kamal', 'Vithanage', 'kmv12@gmail.com', 912563845, 'No.25,Main Road,Galle', 'Nagoda', 'Galle', '1988-05-12', 'Male', 2147483647, 'Married', '', '', '', '', 'Qualified\r\n', NULL),
+(2, 'Nimal', 'Hewage', 'ni@gmail.com', 112233777, 'Main Road, Colombo', 'Colombo', 'Colombo', '2022-11-30', 'Male', 2147483647, 'Married', '', '', '', '', 'Disqualified\r\n', NULL),
+(3, 'Kaveesha', 'Perarra', 'kw@gmail.com', 912275845, 'no.23,Galle', 'Galle', 'Galle', '1999-02-15', 'Male', 2147483647, 'Unmarried', '', '', '', '', 'Qualified\r\n', NULL),
+(4, 'Dashi', 'Hewage', 'das@gmail.com', 112233777, 'Main Road, Colombo', 'Colombo', 'Colombo', '2022-10-12', 'Male', 996518540, 'Married', '', '', '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -518,6 +606,12 @@ CREATE TABLE `user` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `account`
+--
+ALTER TABLE `account`
+  ADD PRIMARY KEY (`aid`);
 
 --
 -- Indexes for table `bloodbank_reports`
@@ -682,6 +776,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `account`
+--
+ALTER TABLE `account`
+  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+--
 -- AUTO_INCREMENT for table `bloodbank_reports`
 --
 ALTER TABLE `bloodbank_reports`
@@ -709,13 +809,13 @@ ALTER TABLE `campaign`
 -- AUTO_INCREMENT for table `clinician`
 --
 ALTER TABLE `clinician`
-  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `consultant`
 --
 ALTER TABLE `consultant`
-  MODIFY `consultant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `consultant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `donor`
@@ -787,7 +887,7 @@ ALTER TABLE `patient_hla_details`
 -- AUTO_INCREMENT for table `pending_donor`
 --
 ALTER TABLE `pending_donor`
-  MODIFY `pending_donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `pending_donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `session`
