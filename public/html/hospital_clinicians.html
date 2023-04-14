@@ -28,21 +28,20 @@
         <a class="new" href="../../src/php/hospital_add_clinicians.php">+Add</a>
         
         <table class="clinician_list">
-            <tr>
+            <tr class="theads">
                 <th>Clinician ID</th>
                 <th>Clinician Name</th>
+                <th>Email</th>
                 <th>Telehpone No</th>
                 <th>Address</th>
                 <th colspan="3"></th>
             </tr>
 
-            <!--
-            <?php echo $clinician_list; ?>
-            -->
+            <?php include('../../src/php/hospital_clinicians_table.php') ?>
             
         </table>
-
-    </div>
+       
+       </div>
 
     
 </body>

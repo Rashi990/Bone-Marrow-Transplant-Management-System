@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../public/css/hospital_add_consultant.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@700;800&family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../../public/js/hospital_form_validation.js"></script>
     <title>Add Consultant</title>
 </head>
 <body>
@@ -16,77 +17,77 @@
         <form action="../../src/php/hospital_add_consultant.php" method="post" class="add_consultant_form">
 
             <div class="row">
-                <div class="col-25">
+                <div class="col-1">
                     <label>Name</label>
                 </div>
-                <div class="col-75">
-                    <input name="consultant_name" id="consultant_name" placeholder="Name" value="<?=(isset($consultant_name) ? $consultant_name : '')?>" type="text" onblur="required_name()" required >
+                <div class="col-2">
+                    <input name="consultant_name" id="consultant_name" placeholder="Name" value="<?=(isset($consultant_name) ? $consultant_name : '')?>" type="text" required >
                 </div>
             </div>		
 
             <div class="row">
-                <div class="col-25">
+                <div class="col-1">
                     <label>Email</label>
                 </div>
-                <div class="col-75">
+                <div class="col-2">
                     <input name="email" id="email" placeholder="Email" type="email" value="<?=(isset($c_email) ? $c_email : '')?>" required >
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-25">
+                <div class="col-1">
                     <label>Telephone No</label>
                 </div>
-                <div class="col-75">
+                <div class="col-2">
                     <input name="telephone_no" id="telephone_no" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-25">
+                <div class="col-1">
                     <label>Address</label>
                 </div>
-                <div class="col-75">
-                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" onblur="required_address()" required >
+                <div class="col-2">
+                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" required >
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-25">
+                <div class="col-1">
                     <label>User Name</label>
                 </div>
-                <div class="col-75">
-                    <input name="username" id="username" placeholder="User Name" value="<?=(isset($c_username) ? $c_username : '')?>" type="text" onblur="required_username()" required >
+                <div class="col-2">
+                    <input name="username" id="username" placeholder="User Name" value="<?=(isset($c_username) ? $c_username : '')?>" type="text" required >
                 </div>
-                    <label><i style="font-size:9px;">**Use at least one lowercase, uppercase and digit. Minimum length is 6 characters.</i></label>
+                   
             </div>
                                 
             <div class="row">
-                <div class="col-25">
+                <div class="col-1">
                     <label>Password</label>
                 </div>
-                <div class="col-75">
-                    <input type="password" name="password" id="password" value="<?=(isset($c_password) ? $c_password : '')?>" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onblur="c_password_validation()" required>
+                <div class="col-2">
+                    <input type="password" name="password" id="password" value="<?=(isset($c_password) ? $c_password : '')?>" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
                 </div>
             </div>
+            <label><i style="font-size:10px;margin-top:0px;margin-left:30px;margin-bottom: 30px;">**Password required minimum length is 6 characters. Use at least one lowercase, uppercase and digit. </i></label>
 
 
-            <!--
             <div class="row">
-                <div class="col-25">
+                <div class="col-1">
                     <label>Confirm Password</label>
                 </div>
-                <div class="col-75">
-                    <input type="password" name="cpassword" id="conpassword" placeholder="Confirm Password" value="<?=(isset($conpassword) ? $conpassword : '')?>" onblur="conpassword_validation()" required>
+                <div class="col-2">
+                    <input type="password" name="conpassword" id="conpassword" placeholder="Confirm Password" value="<?=(isset($conpassword) ? $conpassword : '')?>" onblur="conpassword_validation()" required>
                 </div>
             </div>
-                -->                    
+                           
 
 
             <div class="row">
                 <label>&nbsp;</label>
                 <input type="submit" name="submit" value="submit" class="btn">
-                <a class="back_btn" href="../../src/php/hospital_consultant.php">Back</a>
+                <a class="back_btn" href="../../src/php/hospital_consultants.php">Back</a>
             </div>
          
         </form>
