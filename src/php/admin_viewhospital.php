@@ -99,11 +99,8 @@ if (!(isset($_SESSION['user_name'])  ))
         <td>'.$tele. '</td>
         <td>'.$address. '</td> 
 
-        <td><a href="admin_update_hospital.php? updateid='.$id.'" class="update-btn"> <span class="material-icons">
-        edit_square
-        </span>
-        </a></td>
-        <td><a href="admin_deletehospital.php? deleteid='.$id.'" class="delete-btn" > <span class="material-icons">
+        <td><a href="admin_edithospital.php? editid='.$id.'" class="update-btn"><span class="material-icons">edit_square</span></a></td>
+        <td><a href="admin_deletehospital.php? deleteid='.$id.'" class="delete-btn" ><span class="material-icons">
         delete
         </span>
        </a></td>   
