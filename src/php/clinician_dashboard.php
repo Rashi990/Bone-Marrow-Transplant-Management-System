@@ -2,9 +2,9 @@
 <?php
 require_once('../../config/connection.php');
 session_start();
-if (!(isset($_SESSION['user_name']) && isset($_SESSION['clinician_name']) ))
+if($_SESSION['userlevel']!=2)
 {
-    header("Location:clinician_login.php");
+    header("Location:login.php");
 }
  ?>
 
