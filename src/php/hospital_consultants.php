@@ -9,6 +9,7 @@ if($_SESSION['userlevel']!=3)
 
 $uid=$_SESSION['uid'];
 $username=$_SESSION['username'];
+$hospital_id=$_SESSION['hospital_id'];
 
  ?>
 
