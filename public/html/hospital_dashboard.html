@@ -25,24 +25,30 @@
   <div class="board">
     <div class="counts">
 
+      <?php include('../../src/php/hospital_dashboard_counts.php')?>
         <div class="box">
-         Total Patients<h2>55</h2>
+         Total Patients
+         <h2><?php echo $_SESSION['p']?></h2>
         </div>
 
         <div class="box">
-          Total Donors<h2>25</h2>
+          Total Donors
+          <h2><?php echo $_SESSION['d']?></h2>
         </div>
 
         <div class="box">
-          Total Consultants<h2>64</h2>
+          Total Consultants
+          <h2><?php echo $_SESSION['con']?></h2>
         </div>
 
         <div class="box">
-          Total Clinicians<h2>45</h2>
+          Total Clinicians
+          <h2><?php echo $_SESSION['cli']?></h2>
         </div>
 
         <div class="box">
-          Total Sessions<h2>30</h2>
+          Total Sessions
+          <h2><?php echo $_SESSION['s']?></h2>
         </div>
 
     </div>

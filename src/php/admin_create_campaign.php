@@ -8,18 +8,6 @@ if (isset($_POST['cancel']))
 {
     header("Location: admin_viewsession.php");
 }
-
-function drop(){
-  $sql="SELECT hospital_name FROM `hospital`";
-  $result = mysqli_query($connection,$sql);
-  echo "<select name='country'>";
-while ($row = mysqli_fetch_assoc($result)) {
-  echo "<option value='" . $row['hospital_name'] . "'>" . $row['name'] . "</option>";
-}
-echo "</select>";
-}
-
-
 if(isset($_POST['submit']) )
 {
 
