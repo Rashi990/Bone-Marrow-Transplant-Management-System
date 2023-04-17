@@ -1,10 +1,13 @@
 <?php
 require_once('../../config/connection.php');
 session_start();
-if(! (isset($_SESSION['user_name']) && isset($_SESSION['hospital_name']) ) )
+if($_SESSION['userlevel']!=3)
 {
-    header("Location:hospital_login.php");
+    header("Location:login.php");
 }
+
+$uid=$_SESSION['uid'];
+$username=$_SESSION['username'];
 
     //$errors = array();
 
