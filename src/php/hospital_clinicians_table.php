@@ -2,9 +2,9 @@
 
   $hospital_id = $_SESSION['hospital_id'];
 
-  $sql = "SELECT clinician_id, clinician_name, email, telephone_no, address FROM clinician ORDER BY clinician_id ";
+  $sql = "SELECT clinician_id, clinician_name, email, telephone_no, address FROM clinician WHERE hospital_id=$hospital_id ORDER BY clinician_id";
   //echo $sql;
-  $result = $connection->query($sql);
+  $result = mysqli_query($connection,$sql);
 
   if($result){
   while($row=mysqli_fetch_assoc($result)){
