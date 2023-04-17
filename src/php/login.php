@@ -26,9 +26,7 @@ if(isset($_POST['submit']))
                     $_SESSION['aid']=$user['aid'];
                     $_SESSION['uid']=$user['uid'];
 
-                    $_SESSION['hospital_name'] = $user['hospital_name'];
-
-
+                
                     if($user['userlevel']==0){
                         $_SESSION['userlevel']=0;
                         header("Location:admin_dashboard.php");
@@ -46,33 +44,34 @@ if(isset($_POST['submit']))
                     }
 
 
-                    /*
-                    if($_SESSION['userlevel']==0){
-                        header("Location:admin_dashboard.php");
-                    }else if($_SESSION['userlevel']==1){
-                        header("Location:consultant_dashboard.php");
-                    }else if($_SESSION['userlevel']==2){
-                        header("Location:clinician_dashboard.php");
-                    }else if($_SESSION['userlevel']==3){
-                        header("Location:hospital_dashboard.php");
-                    }else{
-                        echo "<script> alert('Error ! ') </script>";
-                    }
 
-                    */
+
+                    $sql1="SELECT * FROM hospital WHERE username='$username'";
+                    $result1=mysqli_query($connection,$sql1);
+            
+                        if($result1){
+                            if(mysqli_num_rows($result1)==1){
+                                $hospital=mysqli_fetch_assoc($result1);
+                                $_SESSION['hospital_id']=$hospital['hospital_id'];
+                                $_SESSION['hospital_name']=$hospital['hospital_name'];
+                            }
+            
+                        }
+
 
             }else{
                 echo "<script> alert('Invalid Username or Password ! ') </script>";
             }
-         }
 
+         }else{
+            echo "<script> alert('Error ! ') </script>";
         }
 
-    }
-else{
-    echo "<script> alert('Error ! ') </script>";
+       
 }
 
+
+    }
 ?>
 
 
