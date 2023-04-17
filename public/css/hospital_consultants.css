@@ -96,13 +96,12 @@ body{
     border-radius: 20px;
 }
 
-.consultants h1{
-    color: #006296;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 20px;
-    padding-bottom: 10px;
-    text-align: center;
+table.consultant_list{
+    margin: 10px;
+    padding: 10px;
+    width: 96%;
+    border-collapse: collapse;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
 .new{
@@ -124,62 +123,54 @@ body{
     color: #F7FFFF;
 }
 
-table.list{
-    margin: 20px;
-    padding: 10px;
-    width: 96%;
-    border-collapse: collapse;
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
-}
-
-table.list th{
+table.consultant_list th{
     background-color: #308C83;
     color: #F7FFFF;
     padding: 10px;
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     height: 25px;
 }
 
-table.list td{
+table.consultant_list td{
     padding: 10px;
+    height: 25px;
     font-size: 16px;
     font-weight: bold;
     color: #006296;
-    height: 25px;
 }
 
-table.list tr:nth-child(even){
+table.consultant_list tr:nth-child(even){
     background-color: #d7f0ed;
 }
 
-table.list .view{
+table.consultant_list .view{
     color: #006296;
-    padding: 8px 20px;
+    padding: 8px 10px;
     transition: 0.5s;
 }
 
-table.list .view:hover{
+table.consultant_list .view:hover{
     color: #080909;
 }
 
-table.list .delete{
-    color: #006296;
-    padding: 8px 20px;
+table.consultant_list .delete{
+    color: #d40000;
+    padding: 8px 10px;
     transition: 0.5s;
 }
 
-table.list .delete:hover{
-    color: #080909;
+table.consultant_list .delete:hover{
+    color: #940707;
 }
 
-table.list .edit{
+table.consultant_list .edit{
     color: #006296;
-    padding: 8px 20px;
+    padding: 8px 10px;
     transition: 0.5s;
 }
 
-table.list .edit:hover{
+table.consultant_list .edit:hover{
     color: #080909;
 }
