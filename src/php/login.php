@@ -15,7 +15,7 @@ if(isset($_POST['submit']))
             echo "<script> alert('Password is required ! ') </script>";
         }else{
 
-            $sql="SELECT * FROM account WHERE username='$username' && password='$password' ";
+            $sql="SELECT * FROM account WHERE username='$username'";
             $result=mysqli_query($connection,$sql);
 
             if($result){
@@ -26,22 +26,27 @@ if(isset($_POST['submit']))
                     $_SESSION['aid']=$user['aid'];
                     $_SESSION['uid']=$user['uid'];
 
+                    $_SESSION['hospital_name'] = $user['hospital_name'];
+
+
                     if($user['userlevel']==0){
                         $_SESSION['userlevel']=0;
-                        //header("Location:admin_dashboard.php");
+                        header("Location:admin_dashboard.php");
                     }else if($user['userlevel']==1){
                         $_SESSION['userlevel']=1;
-                        //header("Location:consultant_dashboard.php");
+                        header("Location:consultant_dashboard.php");
                     }else if($user['userlevel']==2){
                         $_SESSION['userlevel']=2;
-                        //header("Location:clinician_dashboard.php");
+                        header("Location:clinician_dashboard.php");
                     }else if($user['userlevel']==3){
                         $_SESSION['userlevel']=3;
-                        //header("Location:hospital_dashboard.php");
+                        header("Location:hospital_dashboard.php");
                     }else{
-
+                        echo "<script> alert('Error ! ') </script>";
                     }
 
+
+                    /*
                     if($_SESSION['userlevel']==0){
                         header("Location:admin_dashboard.php");
                     }else if($_SESSION['userlevel']==1){
@@ -54,11 +59,13 @@ if(isset($_POST['submit']))
                         echo "<script> alert('Error ! ') </script>";
                     }
 
+                    */
 
             }else{
                 echo "<script> alert('Invalid Username or Password ! ') </script>";
             }
          }
+
         }
 
     }

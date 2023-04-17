@@ -6,6 +6,9 @@ if($_SESSION['userlevel']!=2)
 {
     header("Location:login.php");
 }
+
+$uid=$_SESSION['uid'];
+$username=$_SESSION['username'];
  ?>
 
 <!DOCTYPE html>
@@ -35,7 +38,7 @@ if($_SESSION['userlevel']!=2)
     <div class="top">
       <span class="material-icons">notifications</span>
       <span class="material-icons">chat_bubble</span>
-      <div class="Loggedin"> Welcome! <?php echo $_SESSION['clinician_name'];?></div>
+      <div class="Loggedin"> Welcome! <?php echo $username;?></div>
       <span class="material-icons">account_circle</span>
     </div>
   </div>
