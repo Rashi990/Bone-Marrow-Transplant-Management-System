@@ -1,6 +1,14 @@
 <?php
 require_once('../../config/connection.php');
 session_start();
+if($_SESSION['userlevel']!=3)
+{
+    header("Location:login.php");
+}
+
+$uid=$_SESSION['uid'];
+$username=$_SESSION['username'];
+$hospital_id=$_SESSION['hospital_id'];
 
     $sql1="select max(clinician_id) from clinician";
     $result1=mysqli_query($connection,$sql1);
@@ -34,8 +42,6 @@ session_start();
         $c_password = $_POST['password'];
 		$conpassword=$_POST['conpassword'];
         //$hospital_id = $_POST['hospital_id']
-
-        $hospital_id = $_SESSION['hospital_id'];
 
         $checked = checkusername($c_username,$connection);
 		$checkedemail = checkemail($c_email,$connection);
@@ -74,7 +80,7 @@ session_start();
 					
 					if( ($_GLOBAL['accountdone']==1) && ($_GLOBAL['cliniciandone']==1) ){
 						echo "<script> alert('Registration is Sucessfull') </script>";
-						header("Location: clinician_login.php");
+						header("Location: hospital_clinicians.php");
 					}else{
 						echo "<script> alert('Registration is Failled') </script>";
 					}

@@ -11,13 +11,13 @@ if($_SESSION['userlevel']!=3)
 if(isset($_GET['deleteid'])){
     $id=$_GET['deleteid'];
 
-    $sql1="DELETE FROM clinician WHERE clinician_id='$id'";
+    $sql1="DELETE FROM consultant WHERE consultant_id='$id'";
     $result1=mysqli_query($connection,$sql1);
 
     if($result1){
-        $_GLOBAL['cliniciandone']=1;
+        $_GLOBAL['consultantdone']=1;
     }else{
-        $_GLOBAL['cliniciandone']=0;
+        $_GLOBAL['consultantdone']=0;
     }
 
     $sql2="DELETE FROM account WHERE uid='$id'";
@@ -29,9 +29,9 @@ if(isset($_GET['deleteid'])){
         $_GLOBAL['accountdone']=0;
     }
 
-    if(($_GLOBAL['cliniciandone']==1)&&($_GLOBAL['accountdone']==1)){
+    if(($_GLOBAL['consultantdone']==1)&&($_GLOBAL['accountdone']==1)){
         echo "<script>alert('Successfully Deleted !')</script>";
-        header("Location:hospital_clinicians.php");
+        header("Location:hospital_consultants.php");
     }else{
         echo "<script>alert('Deletion cannot be done. Please try again ! !')</script>";
     }

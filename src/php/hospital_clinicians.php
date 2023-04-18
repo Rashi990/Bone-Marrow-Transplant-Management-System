@@ -2,10 +2,14 @@
 <?php
 require_once('../../config/connection.php');
 session_start();
-if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_id']) ))
+if($_SESSION['userlevel']!=3)
 {
-    header("Location:hospital_login.php");
+    header("Location:login.php");
 }
+
+$uid=$_SESSION['uid'];
+$username=$_SESSION['username'];
+$hospital_id=$_SESSION['hospital_id'];
 
 ?>
 
@@ -37,7 +41,7 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['hospital_id']) ))
 <div class="top">
         <span class="material-icons">notifications</span>
         <span class="material-icons">chat_bubble</span>
-        <div class="Loggedin"> Welcome! <?php echo $_SESSION['hospital_name'];?></div>
+        <div class="Loggedin"> Welcome! <?php echo $username;?></div>
         <span class="material-icons">account_circle</span>
       </div>
 
