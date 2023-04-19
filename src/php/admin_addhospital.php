@@ -47,7 +47,7 @@ if (isset($_POST['cancel']))
     
 
         if(($checked==1) && ($checkedpassword==1)){
-        $inserthospital = "INSERT INTO `hospital`(hospital_id, hospital_name, email, telephone_no, address,user_name,password) VALUES ('$maxhospitalid','$hname',' $email',' $tel','$address','$username','$password')";
+        $inserthospital = "INSERT INTO `hospital`(hospital_name, email, telephone_no, address,username,password) VALUES ('$hname',' $email',' $tel','$address','$username','$password')";
         $result2=$connection->query( $inserthospital);
 
         if($result2){

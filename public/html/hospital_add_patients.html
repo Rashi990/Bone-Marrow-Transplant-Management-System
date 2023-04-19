@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../../public/css/hospital_add_patients.css?v=2">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@700;800&family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
-    <title>Add Clinician</title>
+    <script type="text/javascript" src="../../public/js/hospital_form_validation.js"></script>
+    <title>Add Patients</title>
 </head>
 <body>
 
@@ -16,35 +17,99 @@
 
         <form action="../../src/php/hospital_add_patients.php" method="post" class="add_patient_form">
 
-            <p>
-                <label for="">ID</label>
-                <input type="text" name="patient_id">
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>Patient Name</label>
+                </div>
+                <div class="col-2">
+                    <input name="clinician_name" id="clinician_name" placeholder="Name" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                </div>
+            </div>	
+            
+            <div class="row">
+                <div class="col-1">
+                    <label>Address</label>
+                </div>
+                <div class="col-2">
+                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                </div>
+            </div>
 
-            <p>
-                <label for="">Name</label>
-                <input type="text" name="patient_name" required>
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>Date of Birth</label>
+                </div>
+                <div class="col-2">
+                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                </div>
+            </div>
 
-            <p>
-                <label for="">Email</label>
-                <input type="email" name="email" required>
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>Age</label>
+                </div>
+                <div class="col-2">
+                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                </div>
+            </div>
 
-            <p>
-                <label for="">Telephone No</label>
-                <input type="text" name="telephone_no" required>
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>Gender</label>
+                </div>
+                <div class="col-2">
+                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                </div>
+            </div>
 
-            <p>
-                <label for="">Address</label>
-                <input type="text" name="address" required>
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>Marital Status</label>
+                </div>
+                <div class="col-2">
+                    <input name="telephone_no" id="telephone_no" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                </div>
+            </div>
 
-            <p>
-                <label for="">Age</label>
-                <input type="text" name="age" required>
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>Blood Group</label>
+                </div>
+                <div class="col-2">
+                    <input name="telephone_no" id="telephone_no" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <label>NIC</label>
+                </div>
+                <div class="col-2">
+                    <input name="telephone_no" id="telephone_no" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <label>Telephone No</label>
+                </div>
+                <div class="col-2">
+                    <input name="telephone_no" id="telephone_no" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <label>Email</label>
+                </div>
+                <div class="col-2">
+                    <input name="email" id="email" placeholder="Email" type="email" value="<?=(isset($c_email) ? $c_email : '')?>" required >
+                </div>
+            </div>
+
+           
+
+            
 
 <!--
             <p>
@@ -56,11 +121,12 @@
             </p>
             -->
 
-            <p class="buttons">
+            <div class="row">
                 <label>&nbsp;</label>
-                <input type="submit" name="submit" value="Next" class="btn" >
                 <a class="back_btn" href="../../src/php/hospital_all_patients.php">Back</a>
-            </p>
+                <input type="submit" name="submit" value="submit" class="btn">
+                <a class="next_btn" href="../../src/php/hospital_hla_patients.php">Next</a>
+            </div>
          
         </form>
 

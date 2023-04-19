@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/login.css?v=3"> 
+    <title>Login</title>
+</head> 
+
+
+<body>
+
+    <div class="split-screen">
+        <div class="left">
+        </div>
+
+        <div class="right">
+    
+    <div class="login-hospital">
+        <form method="post" action="../../src/php/login.php">
+
+            <h1>WELCOME BACK !</h1>
+            <h4>Welcome back! Please enter your details.</h4>
+            
+        <p>
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter Username" > <!--required-->
+        </p>
+
+        <p>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="******" minlength="6" > <!--required-->
+        </p>
+
+        <div class="bottom">
+    <!--
+        <div class="rem">
+            <input type="checkbox" name="recheck" id="recheck">
+            <label for="recheck">Remember Me</label>
+        </div>
+    -->
+           <a class="reset" href="forgot_password.html">Forgot Password</a>
+        </div>
+
+        <p>
+            <input type="submit" name="submit" value="Login" class="login_btn">
+        </p>
+
+        </form>
+    </div>
+    </div>
+    </div>
+
+</body>
+</html>
+
