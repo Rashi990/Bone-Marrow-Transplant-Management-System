@@ -1,0 +1,117 @@
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.top-nav{
+    display:grid;
+    position:sticky;
+    margin-left: 220px;
+    grid-template-columns: 300px 600px auto auto;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
+}
+
+.head h1{
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
+}
+
+.search{
+    display: flex;
+    margin-left: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+
+.search-bar span{
+    display: inline-block;
+    padding: 5px;
+    font-size:14px ;
+ }
+ 
+ .search-bar input{
+    height: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+ }
+
+.search-bar span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.search-bar .Loggedin{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px 20px;
+    width: 80%;
+}
+
+.top{
+    position: relative;
+    display: flex;
+    float: right;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.top span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.top p{
+    font-size: 14px;
+    margin: 5px 0px 20px 10px;
+}
+
+.top .Loggedin{
+    padding-left: 20px;
+}
+
+.choose{
+    margin: 40px 20px 10px 270px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f4f7fa;
+}
+
+.back-patients{
+    margin-top: 20px;
+    margin-right: 20px;
+    color: #006296;
+}
+
+.all-patients, .rank-donors, .hla-patients, .match-patients{
+    margin: 0px 20px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 60px;
+    font-size: 14px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.all-patients:hover, .rank-donors:hover, .hla-patients:hover, .match-patients{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+

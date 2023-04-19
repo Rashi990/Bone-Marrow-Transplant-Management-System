@@ -97,7 +97,7 @@ body{
 }
 
 table.clinician_list{
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
     width: 96%;
     border-collapse: collapse;
@@ -124,11 +124,13 @@ table.clinician_list{
 }
 
 table.clinician_list th{
-    padding: 10px;
-    font-weight: bold;
-    text-align: left;
     background-color: #308C83;
     color: #F7FFFF;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    height: 25px;
 }
 
 table.clinician_list td{
@@ -143,6 +145,7 @@ table.clinician_list tr:nth-child(even){
     background-color: #d7f0ed;
 }
 
+/*
 table.clinician_list td a{
     width: 150px;
     height: 40px;
@@ -160,5 +163,34 @@ table.clinician_list td a:hover{
     background-color: #006296;
     color: #F7FFFF;
 }
+*/
 
+table.clinician_list .view{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
 
+table.clinician_list .view:hover{
+    color: #080909;
+}
+
+table.clinician_list .delete{
+    color: #d40000;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.clinician_list .delete:hover{
+    color: #940707;
+}
+
+table.clinician_list .edit{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.clinician_list .edit:hover{
+    color: #080909;
+}

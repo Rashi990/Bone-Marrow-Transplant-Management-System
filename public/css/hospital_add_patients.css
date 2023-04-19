@@ -9,48 +9,60 @@ body{
     background-color: #bde4e0;
     margin: 90px auto;
     padding: 20px;
-    width: 30%;
+    width: 40%;
     border-radius: 20px;
     box-shadow: 20px 10px 34px rgba(0, 0, 0, 0.3);
+    display: block;
+    justify-content:center;
 }
 
 .add_patient h1{
-    font-size: 20px;
-    font-weight: bold;
     margin: 20px auto;
     padding-bottom: 20px;
     text-align: center;
     color: #006296;
 }
 
-form.add_patient_form label{
-    width: 30%;
+.row{
+    margin: 10px 20px 20px 20px;
+    display: flex; 
+}
+
+.col-1{
+    width: 35%;
     float: left;
+}
+
+.col-2{
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+}
+
+form.add_patient_form label{
     font-size: 16px;
     font-weight: bold;
     color: #006296;
 }
 
-form.add_patient_form input[type="text"],[type="email"],[type="password"]{
-    width: 50%;
+form.add_patient_form input[type="text"],[type="tel"],[type="email"],[type="password"]{
+    width: 100%;
     border-radius: 10px;
     border: none;
     line-height: 30px;
-}
-
-p .buttons{
-    display: flex;
 }
 
 .btn{
     background-color: #F7FFFF;
     color: #006296;
     border: 1px solid #006296;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
-    padding: 8px 30px ;
+    padding: 5px 30px ;
     border-radius: 20px;
     transition: 0.5s;
+    margin-left: 100px;
+    margin-top: 20px;
 }
 
 .btn:hover{
@@ -66,8 +78,10 @@ p .buttons{
     border: 1px solid #006296;
     font-weight: bold;
     border-radius: 20px;
-    padding: 6px 25px ;
+    padding: 8px 30px ;
     transition: 0.5s;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .back_btn:hover{

@@ -101,7 +101,9 @@ if (!(isset($_SESSION['user_name'])  ))
         <td>'.$status.'</td>
         <td><a href="#" class="update-btn"> View
         </a></td>
-        <td><a href="admin_deletestock.php? deleteid='.$sid.'" class="delete-btn" > delete
+        <td><a href="admin_deletestock.php? deleteid='.$sid.'" class="delete-btn" > <span class="material-icons">
+        delete
+        </span>
        </a></td>   
     </tr>';
 

@@ -1,7 +1,5 @@
 <?php
 require_once('admin_sidebar.php');
-?>
-<?php
 require_once('../../config/connection.php');
 session_start();
 if (!(isset($_SESSION['user_name'])))
@@ -92,16 +90,14 @@ if (!(isset($_SESSION['user_name'])))
                 $blood=$row['blood_group'];
                 $tele=$row['telephone_no'];
                 $address=$row['address'];
-             echo '<tr>
+             echo'<tr>
         <td>'.$id. '</td>
         <td>'.$name. '</td>
         <td>'.$blood. '</td>
         <td>'.$tele. '</td>
         <td>'.$address. '</td>  
-        <td> <a href="admin_adddonor.php?" class="update-btn">edit
-        </a></td>
-        <td><a href="admin_deletedonor.php? deleteid='.$id.'"><button class="delete-btn" >delete
-       </button></a></td>
+        <td><a href="admin_editdonor.php? editid='.$id.'" class="update-btn"><span class="material-icons">edit_square</span></a></td>
+        <td><a href="admin_deletedonor.php? deleteid='.$id.'"  class="delete-btn" ><span class="material-icons">delete</span></a></td>
     </tr>';
 
             }

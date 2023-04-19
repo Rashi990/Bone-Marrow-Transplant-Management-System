@@ -116,19 +116,12 @@ nav{
     font-weight: 400;
     background: #F4f7fa;
   }
-  a.active{
+ nav ul li a.active{
     color: #006296;
     font-weight: 400;
     background: #f4f7fa;
     transition: .5s;
   }
-  a:hover{
-    color: #006296;
-    font-weight: 400;
-    background: #f4f7fa;
-  }
-
-
 a.create-btn{
     text-align: center;
     background-color: #F7FFFF;
@@ -154,45 +147,37 @@ a.create-btn:hover{
     color:white;
 }
 .update-btn{
-    background-color: #F7FFFF;
+    /* background-color: #F7FFFF; */
     display: block;
     width:60px;
     color:#006296;
     font-weight: 700;
-    border:2px solid #006296;
-    padding: 8px 20px;
-    border-radius: 8px;
+    /* border:2px solid #006296; */
+    padding: 8px 8px;
+    /* border-radius: 8px; */
     font-size: 0.75rem;
     text-transform: capitalize;
     text-align: center;
     letter-spacing: 0.5px;
 
 }
-.update-btn:hover{
-    background: #006296;
-    cursor: pointer;
-    color:white;
-}
+
 .delete-btn{
-    background-color: #F7FFFF;
+    /* background-color: #F7FFFF; */
     display: block;
     width:80px;
     color:#FF0404;
     font-weight: 700;
-    border:2px solid #FF0404;
-    padding: 8px 20px;
-    border-radius: 8px;
+    /* border:2px solid #FF0404; */
+    padding: 10px 10px;
+    /* border-radius: 8px; */
     font-size: 0.75rem;
     text-transform: capitalize;
     text-align: center;
     letter-spacing: 0.5px;
 
 }
-.delete-btn:hover{
-    background: #FF0404;
-    cursor: pointer;
-    color:white;
-}
+
 a{
     text-decoration: none;
     color: #006296;
@@ -209,7 +194,7 @@ table.list th{
     font-weight: bold;
     text-align: left;
     background-color: #308C83;
-    color: #ebe7e7;
+    /* color: #ebe7e7; */
 }
 table.list tr{
     padding: 10px;

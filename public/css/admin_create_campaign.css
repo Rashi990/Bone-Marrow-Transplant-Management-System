@@ -48,7 +48,18 @@ h2{
 
 }
 
-
+.input-box{
+    display: 50%;
+    width: 100%;
+    box-sizing:border-box;
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    padding: 1em;
+    margin-bottom: 1.25rem;
+    font-size: 0.875;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 12px;
+}
 .form_form{
 
     padding: 1px 1px 1px 1px;
@@ -73,6 +84,18 @@ form input[type="time"]
     border-radius: 12px;
 }
 
+.hospital_options{
+    display: 50%;
+    width: 100%;
+    box-sizing:border-box;
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    padding: 1em;
+    margin-bottom: 1.25rem;
+    font-size: 0.875;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 12px;
+}
 
 label{
     display: block;
@@ -83,7 +106,10 @@ label{
     letter-spacing: 0.03em;
     color: #006296;
 }
-
+.controls {
+    width: 294px;
+    margin: 15px auto;
+  }
 .create-btn{
     text-decoration: none;
     background-color: #F7FFFF;

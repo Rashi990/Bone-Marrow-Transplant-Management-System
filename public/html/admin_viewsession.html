@@ -47,57 +47,47 @@
                 <div class="card-single-2">
                     <div class="title">
                         <h3>Awareness Campaigns</h3>
-                        <a href="../../public/html/admin_create_campaign.html" class="update-btn"> + Create New Campaign
+                        <a href="../../public/html/admin_create_campaign.html" class="create-btn"> + Create New Campaign
                         </a>
                     </div>
-                        <table>
-                            <tr>
-                                <th>Campaign Name</th>
-                                <th> Conducting Hospital</th>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th></th>
-                            </tr>
-                            <?php 
-                            $sql="SELECT campaign.camp_name, campaign.camp_date, campaign.camp_time,hospital.hospital_name
-                            FROM campaign
-                            INNER JOIN hospital ON campaign.hospital_id=hospital.hospital_id";
-        $result=mysqli_query($connection,$sql);
-        if($result){
-            while($row=mysqli_fetch_assoc($result)){
-                $cname=$row['camp_name'];
-                $date=$row['camp_date'];
-                $time=$row['camp_time'];
-                $venue=$row['hospital_name'];
-             echo '<tr>
-        <td width="40%">'.$cname. '</td>
-        <td>'.$venue. ' <br>
-            Apeksha hospital</td> 
-        <td>'.$date. '<br>
-            2023-02-18</td>
-        <td>'.$time. ' <br>10:00:00</td>
-       
-    </tr>';
+                    <table>
+                        <tr>
+                            <th>Campaign Name</th>
+                            <th > Conducting Hospital</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th></th>
+                        </tr>
+                        <?php 
+                        $sql="SELECT camp_name,hospital_name,date,time from campaign t1 inner join session t2 on t1.camp_id=t2.camp_id inner join hospital t3 on t3.hospital_id=t2.hospital_id";
 
-            }
+    $result=mysqli_query($connection,$sql);
+    if($result){
+        while($row=mysqli_fetch_assoc($result)){
+            $cname=$row['camp_name'];
+            $date=$row['date'];
+            $time=$row['time'];
+            $venue=$row['hospital_name'];
+         echo '<tr>
+    <td >'.$cname. '</td>
+    <td>'.$venue. ' </td> 
+    <td>'.$date. '</td>
+    <td>'.$time. ' </td>
+    <td> <a href="#"  class="update-btn"><span class="material-icons">
+        edit_square
+        </span>
+        </a></td>
+        <td><a href="#" class="delete-btn" ><span class="material-icons">
+        delete
+        </span>
+</tr>';
+
         }
-        
-        ?>
-                            <!-- <tr>
-                                <td>Promoting Society About <br>Boan Marrow Transplant </td>
-                                <td>Anuradhapura General Hospital<br>
-                                    Apeksha Hospital<br>
-                                    Lanka Hospital<br>
-                                </td>
-                                <td>2022-12-29<br>
-                                    2022-12-29<br>
-                                    2022-12-28<br></td>
-                                    <td>10.00 a.m<br>
-                                        10.00 a.m<br>
-                                        11.00 a.m<br></td>
-                                        <td><a href="#" class="btn">View More</a></td>
-                            </tr> -->
-                        </table>
+    }
+    
+    ?>
+    
+                    </table>
                 </div>
                 </div>
            
