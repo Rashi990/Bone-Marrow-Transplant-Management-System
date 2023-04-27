@@ -71,29 +71,48 @@
                     <label>Blood Group</label>
                 </div>
                 <div class="col-2">
+            <table>
+            <tr>
+                <td>
                     <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
                     <label for="a+" class="lbl">A+</label>
-
+                </td>
+                <td>
                     <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="a-" class="lbl">A-</label><br>
-
+                    <label for="a-" class="lbl">A-</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
                     <label for="b+" class="lbl">B+</label>
-
+                </td>
+                <td>
                     <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="b-" class="lbl">B-</label><br>
-
+                    <label for="b-" class="lbl">B-</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
                     <label for="ab+" class="lbl">AB+</label>
-
+                </td>
+                <td>
                     <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="ab-" class="lbl">AB-</label><br>
-
+                    <label for="ab-" class="lbl">AB-</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
                     <label for="o+" class="lbl">O+</label>
-
+                </td>
+                <td>
                     <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
                     <label for="o-" class="lbl">O-</label>
+                </td>
+            </tr>
+                </table>
                 </div>
             </div>
 
@@ -112,9 +131,9 @@
                 </div>
                 <div class="col-2">
                     <input name="marital_sts" id="marital_sts" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="married">Married</label>
+                    <label for="married" class="lbl">Married</label>
                     <input name="marital_sts" id="marital_sts" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="unmarried">Unmarried</label>
+                    <label for="unmarried" class="lbl">Unmarried</label>
                 </div>
             </div>
 
