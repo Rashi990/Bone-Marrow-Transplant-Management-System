@@ -8,7 +8,7 @@
 
   if($result){
   while($row=mysqli_fetch_assoc($result)){
-    $id=$row['clinician_id'];
+    $id='CLID'.str_pad($row['clinician_id'],3,'0',STR_PAD_LEFT);
     $name=$row['clinician_name'];
     $email=$row['email'];
     $tele=$row['telephone_no'];
