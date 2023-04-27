@@ -10,54 +10,84 @@
 </head>
 <body>
 
-        <a class="back_btn" href="../../src/php/hospital_clinicians.php"><span class="material-icons">arrow_back</span>
-            Back to view list</a>
-
-    <div class="add_clinician">
+    <div class="update_clinician">
         <h1>Update Clinician</h1>
 
-        <form action="../../src/php/hospital_update_clinicians.php" method="post" class="add_clinician_form">
+        <form action="../../src/php/hospital_update_clinicians.php" method="post" class="update_clinician_form">
 
-            <p>
-                <label for="">ID</label>
-                <input type="text" name="clinician_id">
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>Name</label>
+                </div>
+                <div class="col-2">
+                    <input name="clinician_name" id="clinician_name" placeholder="Name" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                </div>
+            </div>		
 
-            <div>
-                <label for="">Name</label>
-                <input type="text" name="clinician_name" >
+            <div class="row">
+                <div class="col-1">
+                    <label>Email</label>
+                </div>
+                <div class="col-2">
+                    <input name="email" id="email" placeholder="Email" type="email" value="<?=(isset($c_email) ? $c_email : '')?>" required >
+                </div>
             </div>
 
-            <p>
-                <label for="">Email</label>
-                <input type="email" name="email">
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>Telephone No</label>
+                </div>
+                <div class="col-2">
+                    <input name="telephone_no" id="telephone_no" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                </div>
+            </div>
 
-            <p>
-                <label for="">Telephone No</label>
-                <input type="text" name="telephone_no" >
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>Address</label>
+                </div>
+                <div class="col-2">
+                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                </div>
+            </div>
 
-            <p>
-                <label for="">Address</label>
-                <input type="text" name="address" >
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>User Name</label>
+                </div>
+                <div class="col-2">
+                    <input name="username" id="username" placeholder="User Name" value="<?=(isset($c_username) ? $c_username : '')?>" type="text" required >
+                </div>
+                   
+            </div>
+                                
+            <div class="row">
+                <div class="col-1">
+                    <label>Password</label>
+                </div>
+                <div class="col-2">
+                    <input type="password" name="password" id="password" value="<?=(isset($c_password) ? $c_password : '')?>" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+                </div>
+            </div>
+            <label><i style="font-size:10px;margin-top:0px;margin-left:30px;margin-bottom: 30px;">**Password required minimum length is 6 characters. Use at least one lowercase, uppercase and digit. </i></label>
 
-            <p>
-                <label for="">Username</label>
-                <input type="text" name="user_name" >
-            </p>
 
-            <p>
-                <label for="">Password</label>
-                <input type="password" name="password" >
-            </p>
+            <div class="row">
+                <div class="col-1">
+                    <label>Confirm Password</label>
+                </div>
+                <div class="col-2">
+                    <input type="password" name="conpassword" id="conpassword" placeholder="Confirm Password" value="<?=(isset($conpassword) ? $conpassword : '')?>" onblur="conpassword_validation()" required>
+                </div>
+            </div>                      
 
-            <p>
+
+            <div class="row">
                 <label>&nbsp;</label>
                 <input type="submit" name="submit" value="Update" class="btn">
-                <button class="cancle"><a href="../../src/php/hospital_clinician_list.php">Cancle</a></button>
-            </p>
+                <a class="back_btn" href="../../src/php/hospital_clinicians.php">Back</a>
+            </div>
+
 
         </form>
 

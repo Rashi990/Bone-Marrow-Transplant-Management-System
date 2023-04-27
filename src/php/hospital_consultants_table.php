@@ -7,7 +7,7 @@ $result=mysqli_query($connection,$sql);
 
 if($result){
     while($row=mysqli_fetch_assoc($result)){
-        $id=$row['consultant_id'];
+        $id='CID'.str_pad($row['consultant_id'],3,'0',STR_PAD_LEFT)  ;
         $name=$row['consultant_name'];
         $email=$row['email'];
         $tele=$row['telephone_no'];
