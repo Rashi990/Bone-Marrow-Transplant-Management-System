@@ -40,7 +40,7 @@
                     <label>Date of Birth</label>
                 </div>
                 <div class="col-2">
-                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                    <input name="dob" id="dob" placeholder="Date of Birth" type="date" value="<?=(isset($address) ? $address : '')?>" required >
                 </div>
             </div>
 
@@ -49,7 +49,7 @@
                     <label>Age</label>
                 </div>
                 <div class="col-2">
-                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                    <input name="age" id="age" type="number" value="<?=(isset($address) ? $address : '')?>" required >
                 </div>
             </div>
 
@@ -58,16 +58,11 @@
                     <label>Gender</label>
                 </div>
                 <div class="col-2">
-                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" required >
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1">
-                    <label>Marital Status</label>
-                </div>
-                <div class="col-2">
-                    <input name="telephone_no" id="telephone_no" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <select name="gender" id="gender">
+                        <option value="<?=(isset($address) ? $address : '')?>">Male</option>
+                        <option value="<?=(isset($address) ? $address : '')?>">Female</option>
+                        <option value="<?=(isset($address) ? $address : '')?>">Other</option>
+                    </select>
                 </div>
             </div>
 
@@ -76,7 +71,29 @@
                     <label>Blood Group</label>
                 </div>
                 <div class="col-2">
-                    <input name="telephone_no" id="telephone_no" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <label for="a+" class="lbl">A+</label>
+
+                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <label for="a-" class="lbl">A-</label><br>
+
+                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <label for="b+" class="lbl">B+</label>
+
+                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <label for="b-" class="lbl">B-</label><br>
+
+                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <label for="ab+" class="lbl">AB+</label>
+
+                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <label for="ab-" class="lbl">AB-</label><br>
+
+                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <label for="o+" class="lbl">O+</label>
+
+                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <label for="o-" class="lbl">O-</label>
                 </div>
             </div>
 
@@ -85,7 +102,19 @@
                     <label>NIC</label>
                 </div>
                 <div class="col-2">
-                    <input name="telephone_no" id="telephone_no" placeholder="Telephone" type="tel" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <input name="NIC" id="NIC" placeholder="NIC" type="text" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <label>Marital Status</label>
+                </div>
+                <div class="col-2">
+                    <input name="marital_sts" id="marital_sts" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <label for="married">Married</label>
+                    <input name="marital_sts" id="marital_sts" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <label for="unmarried">Unmarried</label>
                 </div>
             </div>
 
