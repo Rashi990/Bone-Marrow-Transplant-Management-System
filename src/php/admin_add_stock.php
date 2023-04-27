@@ -29,7 +29,7 @@ if(isset($_POST['submit']) )
 
   if($result) {
     
-    header("Location: admin_viewhospital.php");
+    header("Location: admin_viewstock.php");
    
   }
   else{

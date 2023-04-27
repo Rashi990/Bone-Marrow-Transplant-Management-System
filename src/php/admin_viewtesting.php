@@ -4,7 +4,7 @@ require_once('admin_sidebar.php');
 <?php
 require_once('../../config/connection.php');
 session_start();
-if (!(isset($_SESSION['user_name']) ))
+if($_SESSION['userlevel']!=0)
 {
     header("Location:admin_login.php");
 }
@@ -45,7 +45,7 @@ if (!(isset($_SESSION['user_name']) ))
             
             <div class="user-wrapper">
             <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
-                <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
+                <div> <h4>Welcome! </h4><?php echo $_SESSION['username'];?></div>
             </div>
 </header>
 </div>
