@@ -46,23 +46,34 @@ form.add_patient_form label{
 }
 
 form.add_patient_form input[type="text"],[type="tel"],[type="email"],[type="numbers"],[type="date"]{
-    width: 80%;
+    width: 70%;
     border-radius: 10px;
     border: none;
-    line-height: 28px;
+    line-height: 20px;
+    padding: 2px 10px;
+}
+
+table tr{
+    margin-left: 0;
+}
+
+table td{
+    margin-left: 0;
+    padding: 0px 70px 8px 10px;
+
 }
 
 form.add_patient_form input[type="radio"]{
-    width: 30%;
-    margin-right: 0px;
+    float: left;
 }
 
 form.add_patient_form .lbl{
-    font-size: 16px;
-    margin-left: 0px;
-    padding: 0px;
-    font-weight: 100;
-    color: #000000;
+    float: left;
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 3px;
+    margin-right: 30px;
+    color: #342c2c;
 }
 
 .btn{
@@ -71,10 +82,10 @@ form.add_patient_form .lbl{
     border: 1px solid #006296;
     font-size: 16px;
     font-weight: bold;
-    padding: 5px 30px ;
+    padding: 3px 30px ;
     border-radius: 20px;
     transition: 0.5s;
-    margin-left: 100px;
+    margin-left: 30px;
     margin-top: 20px;
 }
 
@@ -91,9 +102,9 @@ form.add_patient_form .lbl{
     border: 1px solid #006296;
     font-weight: bold;
     border-radius: 20px;
-    padding: 8px 30px ;
+    padding: 5px 30px ;
     transition: 0.5s;
-    margin-left: 10px;
+    margin-left: 100px;
     margin-top: 20px;
 }
 
@@ -110,7 +121,7 @@ form.add_patient_form .lbl{
     border: 1px solid #006296;
     font-weight: bold;
     border-radius: 20px;
-    padding: 8px 30px ;
+    padding: 5px 30px ;
     transition: 0.5s;
     margin-left: 20px;
     margin-top: 20px;
