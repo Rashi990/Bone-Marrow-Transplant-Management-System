@@ -1,9 +1,7 @@
-
-
 <?php
 require_once('../../config/connection.php');
 session_start();
-if (!(isset($_SESSION['user_name'])))
+if (($_SESSION['userlevel']!=0))
 {
     header("Location:admin_login.php");
 }

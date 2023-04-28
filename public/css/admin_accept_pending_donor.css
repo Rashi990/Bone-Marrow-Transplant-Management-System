@@ -197,3 +197,29 @@ border: 1px solid var(--primary-blue);
     top: 4px;
     transform: rotate(45deg);
 }
+.create-btn{
+   background-color: #F7FFFF;
+   display: block;
+   width: 100%;
+   color:#006296;
+   font-weight: 700;
+   border:2px solid #006296;
+   /* margin: 2rem 2rem; */
+   padding-left: 0;
+   padding-right: 0;
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+   border-radius: 8px;
+   font-size: 0.75rem;
+   text-transform: capitalize;
+   letter-spacing: 0.5px;
+
+}
+.create-btn:hover{
+   background: #2c4893;
+   cursor: pointer;
+   color:#F7FFFF;
+}
+a{
+   text-decoration: none;
+}

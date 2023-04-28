@@ -4,72 +4,123 @@ body{
     background-color: #F7FFFF;
 }
 
-.add_clinician{
+.update_clinician{
     position: relative;
-    background-color: #66b1b1;
-    margin: 100px auto;
+    background-color: #bde4e0;
+    margin: 90px auto;
     padding: 20px;
-    width: 600px;
-    border: 1px solid #404343;
+    width: 40%;
     border-radius: 20px;
-    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 10px 34px rgba(0, 0, 0, 0.3);
+    display: block;
+    justify-content:center;
 }
 
-.add_clinician h1{
+.update_clinician h1{
     margin: 20px auto;
     padding-bottom: 20px;
     text-align: center;
+    color: #006296;
 }
 
-form.add_clinician_form label{
-    width: 30%;
+.row{
+    margin: 10px 20px 20px 20px;
+    display: flex; 
+}
+
+.col-1{
+    width: 35%;
     float: left;
-    font-size: 18px;
-    font-weight: bold;
 }
 
-form.add_clinician_form input[type="text"],[type="email"],[type="password"]{
-    width: 60%;
+.col-2{
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+}
+
+form.update_clinician_form label{
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+}
+
+form.update_clinician_form input[type="text"],[type="tel"],[type="email"],[type="password"]{
+    width: 100%;
     border-radius: 10px;
-    line-height: 20px;
+    border: none;
+    line-height: 30px;
 }
 
 .btn{
-    width: 200px;
-    background-color: #0e316a;
-    color: #b5ecec;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px;
+    padding: 5px 30px ;
     border-radius: 20px;
     transition: 0.5s;
+    margin-left: 100px;
+    margin-top: 20px;
 }
 
 .btn:hover{
-    background-color: #101010;
+    background-color: #006296;
     color: #F7FFFF;
     cursor: pointer;
 }
 
 .back_btn{
-    position: fixed;
-    top: 0;
-    left: 0;
     text-decoration: none;
-    background-color: #0e316a;
-    color: #F7FFFF;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
     font-weight: bold;
-    width: 180px;
-    border: 1px solid #101010;
-    border-radius: 10px;
-    padding: 5px 5px 20px 10px ;
+    border-radius: 20px;
+    padding: 8px 30px ;
     transition: 0.5s;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .back_btn:hover{
     cursor: pointer;
-    background-color: #101010;
-    color: #73dcdc;
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+.err{
+    background-color: #f61313;
+    color: #F7FFFF;
+    width: 800px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 20px 10px 34px rgba(0, 0, 0, 0.3);
+}
+
+.err a{
+    position: relative;
+    padding: 10px;
+    float: right;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.err a:hover{
+    background-color: #006296;
+    color: #F7FFFF;
 }
 
 

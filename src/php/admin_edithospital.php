@@ -1,6 +1,6 @@
 <?php
+session_start();
 include "../../config/connection.php";
- 
 if (isset($_POST['cancel']))
 {
     header("Location: admin_viewhospital.php");
@@ -10,7 +10,7 @@ if(isset($_POST['submit']) )
 {
 
   $id=$_GET['editid'];
-  
+
   function validate($data)
   {
     $data = trim($data);
@@ -20,10 +20,10 @@ if(isset($_POST['submit']) )
   }
 
 
-  $name = $_POST['hname'];
-  $email = $_POST['email']; 
-  $tel = $_POST['tel']; 
-  $address = $_POST['address']; 
+  $name = validate($_POST['hname']);
+  $email =validate($_POST['email']); 
+  $tel = validate($_POST['tel']); 
+  $address = validate($_POST['address']); 
 
   $sql= "update hospital SET hospital_name='$name',email='$email',telephone_no='$tel',address='$address' where hospital_id= $id";
   $result = mysqli_query($connection,$sql);

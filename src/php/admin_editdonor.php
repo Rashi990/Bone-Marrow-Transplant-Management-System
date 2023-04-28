@@ -79,7 +79,7 @@ if(isset($_POST['submit']) )
 }?>
             <table>
                 <tr><td>
-                    <button class="create-btn" name="submit" type="submit"> Create
+                    <button class="create-btn" name="submit" type="submit"> Update
                     </button>
                 </td>
             <td>
