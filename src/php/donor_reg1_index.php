@@ -27,6 +27,5 @@ elseif(isset($_POST["age-above-btn"])){
 
 
 
-<?php include('../../public/html/footer.html'); ?>
-
+<?php  include('../../public/html/footer.html'); ?>
 
