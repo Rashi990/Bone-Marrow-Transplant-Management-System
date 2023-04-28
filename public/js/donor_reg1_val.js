@@ -3,6 +3,14 @@ function togglePopup(){
 }
 
 
+
+function toggle(){
+     var blur = document.getElementById("blur");
+       blur.classList.toggle("active");
+       var mssg = document.getElementById("mssg");
+       mssg.classList.toggle("active");
+     }
+
 function validate(){
     var valid=false;
   
@@ -15,9 +23,13 @@ function validate(){
     }
 
     else{
-        alert("Sorry!For the safty of the patients, you can not be a donor at this time.");
+       
+       if((document.getElementsByClassName("disease"))){ 
+          toggle();
+    }
     }
     
     return validate;
 }
 
+ 
