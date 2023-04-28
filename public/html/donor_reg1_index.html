@@ -15,13 +15,16 @@
     <script src="../../public/js/donor_reg1_val.js"></script>
 
 
-</head><body>
-<div class="left">
+</head>
+<body>
+    <div class="container" id="blur">
+<div class="left" >
 <img class="reg-img" src="../../public/images/reg1_image.png" alt="Give a smile for a life">
 
 
 
 </div>
+
 <div class="popup">
                 <div class="details">
                     
@@ -31,7 +34,7 @@
 
                     <div class="back-btn">
                         <a class="back-home" href="../../src/php/home.php">Back to Home</a>
-                        <!--<button class="back-home" onclick="myFunction1()"><span class="age-fnt">Back to Home</span></button>-->
+                        <button class="back-home" onclick="myFunction1()"><span class="age-fnt">Back to Home</span></button>
                     </div>
                 </div>
 </div>
@@ -47,35 +50,64 @@
                     <button class="age-btn" onclick="myFunction2()"><span class="age-fnt">Between 18 and 40</span></button>
                 </div>
                 <div class="age-right-btn">
-                    <button class="age-btn" onclick="myFunction3()" id="age-btn"><span class="age-fnt">41 or older</span></button>
+                    <button class="age-btn" onclick="toggle()" id="age-btn"><span class="age-fnt">41 or older</span></button>
+
+                   <!-- <button class="age-btn" onclick="openMssg();toggle()" id="age-btn"><span class="age-fnt">41 or older</span></button>-->
+                    <!--<button class="age-btn" onclick="myFunction3()" id="age-btn"><span class="age-fnt">41 or older</span></button>-->
+                   
                 </div>
           
                 
  <script>
-/*
+
 function myFunction1() {
   location.replace("home.php");
 }
-*/
 
 function myFunction2() {
   location.replace("donor_reg2_index.php");
 }
-function myFunction3() {
+/*function myFunction3() {
     alert("Sorry!For the safty of the patients, you can not be a donor at this time.");
 }
+*/ 
+  /*let displayMssg = document.getElementById("mssg");
+     function openMssg(){
+      
+        displayMssg.classList.add("open-mssg"); 
+        }
+        function closeMssg(){
+            displayMssg.classList.remove("open-mssg");
+        }
+
+
+       */
+
+ function toggle(){
+  var blur = document.getElementById("blur");
+  blur.classList.toggle("active");
+  var mssg = document.getElementById("mssg");
+  mssg.classList.toggle("active");
+
+        }
+    </script>
 
 
 
 
 
- </script>      <!--         
-
-                <div class="bottom">
-        <p>©2022 SLBMTMS &emsp;&emsp;&emsp;&emsp; All rights reserved.Terms and conditions</p>
-    </div>
--->
+     
                 </div>
+</div>
+</div>
+<div class="mssg" id="mssg">
+           
+    <h2>Sorry!</h2>
+    <p>For the safty of the patients, we only accept members between <br> 18 and 40 because blood stem cells from younger donors provide more suvival-rate.</p>
+    <button type="button" onclick="toggle()" >OK</button>
+
+   
+    <!--<button type="button" onclick="closeMssg()">OK</button>-->
 </div>
 </body>
 </html>
