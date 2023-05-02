@@ -36,7 +36,7 @@
             
             <div class="user-wrapper">
                 <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
-                <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
+                <div> <h4>Welcome! </h4><?php echo $_SESSION['username'];?></div>
             </div>
 </header>
 </div>
@@ -60,7 +60,7 @@
                         <th>Nearest City</th>
                         <th>Requested Date</th>
                         <th>Status</th>
-                        <th>Accept</th>
+                        <th colspan="2">Accept</th>
                     </tr>
                     <?php 
         $sql="select * from `pending_donor`";
@@ -78,19 +78,35 @@
         <td>'.$fname,'&nbsp',$lname. '</td>
         <td>'.$city. '</td>
         <td>'.$requestdate. '</td>
-        <td id="status_cl">'.$status. '</td>  
-        <td><div class="input-container cta">
+        <td id="status_cl">Disqualified</td>  
+        <!-- <td id="status_cl">'.$status. '</td>   -->
+        <td>
+            <!-- <div class="input-container cta">
             <label class="checkbox-container">
-                <input type="checkbox">
+                <input type="checkbox" id="accept" name="my_checkbox"  value="accept" onclick="isChecked()">
+                <p id="message"> Not checked</p>
                 <span class="checkmark"></span>
             </label>
-            </div></td>
-    </tr>';
+        </div> -->
+       
+        <form action="../../src/php/admin_accept_pending_donor1.php" method="get">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <button class="create-btn" name="submit" type="submit" >Accept
+            </button>
+          </form>
+            </td>
+            <td>
+            <button class="create-btn" name="reject" type="submit">Reject
+            </button>
+        
+            </td>
+    </tr>'; 
 
             }
         }
         
         ?>
+        
                 </table>
             </div>
         </main>
