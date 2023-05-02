@@ -115,3 +115,135 @@ body{
     color: #F7FFFF;
 }
 
+.patients{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 20px;
+    background-color: #f4f7fa;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 20px;
+}
+
+.patients h1{
+    color: #006296;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.filter{
+    display: flex;
+    padding: 5px 20px;
+    margin: auto;
+    justify-content: center;
+    border: 1px solid #006296;
+    border-radius: 30px;
+    width: 35%;
+    height: 20px;
+    font-size: 14px;
+    color: #006296;
+    background-color: #e6e6e6;
+}
+
+.filter label{
+    margin: 0px 40px;
+}
+
+.filter input{
+    height: 100%;
+    width: 95%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 1px;
+    outline: none;
+ }
+
+.filter span{
+    display: inline-block;
+    padding: 0px 20px;
+    font-size:22px ;
+    cursor: pointer;
+ }
+
+.new{
+    float: right;
+    margin: 10px 40px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 80px;
+    font-size: 14px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.new:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+table.list{
+    margin: 20px;
+    padding: 10px;
+    width: 96%;
+    border-collapse: collapse;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+table.list th{
+    background-color: #308C83;
+    color: #F7FFFF;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    height: 25px;
+}
+
+table.list td{
+    padding: 10px;
+    font-size: 16px;
+    color: #006296;
+    height: 25px;
+}
+
+table.list tr:nth-child(even){
+    background-color: #d7f0ed;
+}
+
+table.list .view{
+    color: #006296;
+    padding: 8px 20px;
+    transition: 0.5s;
+}
+
+table.list .view:hover{
+    color: #080909;
+}
+
+table.list .delete{
+    color: #006296;
+    padding: 8px 20px;
+    transition: 0.5s;
+}
+
+table.list .delete:hover{
+    color: #080909;
+}
+
+table.list .edit{
+    color: #006296;
+    padding: 8px 20px;
+    transition: 0.5s;
+}
+
+table.list .edit:hover{
+    color: #080909;
+}
+
