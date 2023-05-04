@@ -9,6 +9,7 @@ if($_SESSION['userlevel']!=3)
 
 $uid=$_SESSION['uid'];
 $username=$_SESSION['username'];
+$hospital_id=$_SESSION['hospital_id'];
 
  ?>
 
@@ -23,10 +24,11 @@ $username=$_SESSION['username'];
  </head>
  <body>
 
+ <!--
  <div class="top-nav">
 
 <div class="head">
-    <h1>Patient HLA Matchings</h1>
+    <h1>Add Patient</h1>
 </div>
 
   <div class="search">
@@ -35,18 +37,18 @@ $username=$_SESSION['username'];
     <input type="search" placeholder="search here">
   </div>
   </div>
-
+-->
 <div class="top">
         <span class="material-icons">notifications</span>
         <span class="material-icons">chat_bubble</span>
         <div class="Loggedin"> Welcome! <?php echo $username;?></div>
         <span class="material-icons">account_circle</span>
       </div>
-
+<!--
 </div>
-
+-->
  </body>
  </html>
 
-<?php include('../../public/html/hospital_match_patients.html'); ?>
+<?php include('../../public/html/hospital_add_patient_hla_details.html'); ?>
 <!--<?php require_once('hospital_footer.php'); ?>-->
