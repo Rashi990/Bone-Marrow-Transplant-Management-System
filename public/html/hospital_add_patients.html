@@ -49,7 +49,7 @@
                     <label>Age</label>
                 </div>
                 <div class="col-2">
-                    <input name="age" id="age" type="number" value="<?=(isset($address) ? $address : '')?>" required >
+                    <input name="age" id="age" placeholder="Age" type="number" value="<?=(isset($address) ? $address : '')?>" required >
                 </div>
             </div>
 
@@ -118,6 +118,24 @@
 
             <div class="row">
                 <div class="col-1">
+                    <label>Height</label>
+                </div>
+                <div class="col-2">
+                    <input name="height" id="height" placeholder="Height" type="number" value="<?=(isset($address) ? $address : '')?>" required >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <label>Weight</label>
+                </div>
+                <div class="col-2">
+                    <input name="weight" id="weight" placeholder="Weight" type="number" value="<?=(isset($address) ? $address : '')?>" required >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
                     <label>NIC</label>
                 </div>
                 <div class="col-2">
@@ -155,6 +173,25 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-1">
+                    <label>Diagnosis</label>
+                </div>
+                <div class="col-2">
+                    <input name="diagnosis" id="diagnosis" placeholder="Enter Diagnosis" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <label>Disease Status</label>
+                </div>
+                <div class="col-2">
+                    <input name="status" id="status" placeholder="Enter Current Disease Status" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                </div>
+            </div>
+
+
            
 
             
@@ -172,8 +209,8 @@
             <div class="row">
                 <label>&nbsp;</label>
                 <a class="back_btn" href="../../src/php/hospital_all_patients.php">Back</a>
-                <input type="submit" name="submit" value="submit" class="btn">
-                <a class="next_btn" href="../../src/php/hospital_hla_patients.php">Next</a>
+                <!--<input type="submit" name="submit" value="submit" class="btn">-->
+                <a class="next_btn" href="../../src/php/hospital_add_patient_hla_details.php">Next</a>
             </div>
          
         </form>
