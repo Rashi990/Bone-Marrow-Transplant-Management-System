@@ -37,7 +37,7 @@
             
             <div class="user-wrapper">
                 <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
-                <div> <h4>Welcome! </h4><?php echo $_SESSION['user_name'];?></div>
+                <div> <h4>Welcome! </h4><?php echo $_SESSION['username'];?></div>
             </div>
         </div>
     
@@ -47,7 +47,7 @@
                 <div class="card-single-2">
                     <div class="title">
                         <h3>Awareness Campaigns</h3>
-                        <a href="../../public/html/admin_create_campaign.html" class="create-btn"> + Create New Campaign
+                        <a href="../../src/php/admin_create_campaign.php" class="create-btn"> + Create New Campaign
                         </a>
                     </div>
                     <table>
@@ -59,27 +59,23 @@
                             <th></th>
                         </tr>
                         <?php 
-                        $sql="SELECT camp_name,hospital_name,date,time from campaign t1 inner join session t2 on t1.camp_id=t2.camp_id inner join hospital t3 on t3.hospital_id=t2.hospital_id";
+                        $sql="SELECT * from hospital INNER JOIN campaign ON hospital.hospital_id=campaign.hospital_id ";
 
     $result=mysqli_query($connection,$sql);
     if($result){
         while($row=mysqli_fetch_assoc($result)){
+            $id=$row['camp_id'];
             $cname=$row['camp_name'];
-            $date=$row['date'];
-            $time=$row['time'];
+            $date=$row['camp_date'];
+            $time=$row['camp_time'];
             $venue=$row['hospital_name'];
          echo '<tr>
     <td >'.$cname. '</td>
     <td>'.$venue. ' </td> 
     <td>'.$date. '</td>
     <td>'.$time. ' </td>
-    <td> <a href="#"  class="update-btn"><span class="material-icons">
-        edit_square
-        </span>
-        </a></td>
-        <td><a href="#" class="delete-btn" ><span class="material-icons">
-        delete
-        </span>
+    <td><a href="admin_edit_campaign.php? editid='.$id.'" class="update-btn"><span class="material-icons">edit_square</span></a></td>
+        <td><a href="admin_delete_campaign.php? deleteid='.$id.'" class="delete-btn" ><span class="material-icons">delete</span></a></td>   
 </tr>';
 
         }
