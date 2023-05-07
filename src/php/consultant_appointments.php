@@ -41,8 +41,50 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']) ))
     </div>
   </div>
 
+  <div class="board">
+    <div class="row">
+      <div class="col">
+        <div class="box1">
+          Count<br />
+          Total New Appointments
+        </div>
+        <div class="box2">
+          <a href="#">View Details</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="box1">
+          Count<br />
+          Total Approved Appointments
+        </div>
+        <div class="box2">
+          <a href="#">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="box1">
+          Count<br />
+          Total Cancelled Appointments
+        </div>
+        <div class="box2">
+          <a href="#">View Details</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="box1">
+          Count<br />
+          Total Appointments
+        </div>
+        <div class="box2">
+          <a href="#">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
 
-<?php include('../../public/html/consultant_appointment.html'); ?>
 <!--<?php require_once('consultant_footer.php'); ?>-->
