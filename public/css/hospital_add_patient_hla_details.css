@@ -9,7 +9,7 @@ body{
     background-color: #bde4e0;
     margin: 90px auto;
     padding: 20px;
-    width: 45%;
+    width: 68%;
     border-radius: 20px;
     box-shadow: 20px 10px 34px rgba(0, 0, 0, 0.3);
     display: block;
@@ -23,25 +23,35 @@ body{
     color: #006296;
 }
 
+
 .row{
-    margin: 10px 20px 20px 20px;
-    display: flex; 
+    margin: 15px 10px;
+    align-items: center;
+   
 }
 
+/*
 .col-1{
-    width: 35%;
-    float: left;
+    width: 100%;
+   
 }
 
 .col-2{
-    width: 70%;
-    float: left;
-    margin-left: 10px;
+    width: 35%;
+   
 }
+*/
 
 form.add_patient_hla_form fieldset{
+    margin-bottom: 30px;
+    padding: 10px;
     border: 1px solid #a4a0a066;
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 form.add_patient_hla_form h3{
@@ -50,32 +60,33 @@ form.add_patient_hla_form h3{
     color: #006296;
     margin: 0px 100px 0px 10px;
     background-color: #a4a0a066;
-    width: 30%;
+    width: 16%;
     border-radius: 5px;
 }
 
 form.add_patient_hla_form label{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: #006296;
 }
 
 form.add_patient_hla_form input[type="text"],[type="tel"],[type="email"],[type="number"],[type="date"]{
-    width: 70%;
-    border-radius: 10px;
+    width: 50%;
+    border-radius: 5px;
     border: none;
     line-height: 20px;
     padding: 2px 10px;
 }
 
 form.add_patient_hla_form select{
-    width: 40%;
-    border-radius: 10px;
+    width: 55%;
+    border-radius: 5px;
     border: none;
     line-height: 20px;
     padding: 2px 10px;
 }
 
+/*
 form.add_patient_hla_form .lbl{
     float: left;
     font-size: 15px;
@@ -84,6 +95,7 @@ form.add_patient_hla_form .lbl{
     margin-right: 30px;
     color: #342c2c;
 }
+*/
 
 .btn{
     background-color: #F7FFFF;
@@ -91,7 +103,7 @@ form.add_patient_hla_form .lbl{
     border: 1px solid #006296;
     font-size: 16px;
     font-weight: bold;
-    padding: 3px 30px ;
+    padding: 8px 30px ;
     border-radius: 20px;
     transition: 0.5s;
     margin-left: 30px;
@@ -109,34 +121,16 @@ form.add_patient_hla_form .lbl{
     background-color: #F7FFFF;
     color: #006296;
     border: 1px solid #006296;
+    font-size: 16px;
     font-weight: bold;
     border-radius: 20px;
     padding: 5px 30px ;
     transition: 0.5s;
-    margin-left: 100px;
+    margin-left: 350px;
     margin-top: 20px;
 }
 
 .back_btn:hover{
-    cursor: pointer;
-    background-color: #006296;
-    color: #F7FFFF;
-}
-
-.next_btn{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296;
-    font-weight: bold;
-    border-radius: 20px;
-    padding: 5px 30px ;
-    transition: 0.5s;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.next_btn:hover{
     cursor: pointer;
     background-color: #006296;
     color: #F7FFFF;
