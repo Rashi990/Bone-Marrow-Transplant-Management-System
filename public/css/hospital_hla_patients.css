@@ -115,3 +115,125 @@ body{
     color: #F7FFFF;
 }
 
+
+
+
+.patients{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 20px;
+    background-color: #f4f7fa;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 20px;
+}
+
+.patients h1{
+    color: #006296;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.filter{
+    display: flex;
+    padding: 5px 20px;
+    margin: auto;
+    justify-content: center;
+    border: 1px solid #006296;
+    border-radius: 30px;
+    width: 35%;
+    height: 20px;
+    font-size: 14px;
+    color: #006296;
+    background-color: #e6e6e6;
+}
+
+.filter label{
+    margin: 0px 40px;
+}
+
+.filter input{
+    height: 100%;
+    width: 95%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 1px;
+    outline: none;
+ }
+
+.filter span{
+    display: inline-block;
+    padding: 0px 20px;
+    font-size:22px ;
+    cursor: pointer;
+ }
+
+
+
+
+
+ .hla_patients{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 60px;
+    background-color: #f4f7fa;
+    padding: 10px;
+    width: 80%;
+    height: 80vh;
+    border: none;
+    border-radius: 20px;
+}
+
+table.hla_patient_list{
+    margin: 10px;
+    padding: 10px;
+    width: 96%;
+    border-collapse: collapse;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+table.hla_patient_list th{
+    background-color: #308C83;
+    color: #F7FFFF;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    height: 25px;
+}
+
+table.hla_patient_list td{
+    padding: 10px;
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+}
+
+table.hla_patient_list tr:nth-child(even){
+    background-color: #d7f0ed;
+}
+
+table.hla_patient_list .view{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.hla_patient_list .view:hover{
+    color: #080909;
+}
+
+table.hla_patient_list .edit{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.hla_patient_list .edit:hover{
+    color: #080909;
+}

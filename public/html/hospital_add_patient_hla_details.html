@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_add_patient_hla_details.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@700;800&family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../../public/js/hospital_form_validation.js"></script>
+    <title>Add Patient HLA Details</title>
+</head>
+<body>
+    
+    <div class="add_patient_hla">
+        <h1>Add Patient HLA Details</h1>
+
+        <form action="../../src/php/hospital_add_patient_hla_details.php" method="post" class="add_patient_hla_form">
+
+<!--HLA class 1-->
+        <!---HLA-A-->
+        <h3>HLA-A*</h3>
+        <fieldset>  
+            <div class="row">
+                <div class="col-1">
+                    <label>HLA-A* Allele</label>
+                </div>
+                <div class="col-2">
+                    <input name="allele_group" id="allele_group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                      <!--placeholder="Enter Allele Group"-->
+                </div>
+            </div>	
+
+            <div class="row">
+                <div class="col-1">
+                    <label>HLA-A* Proteins</label>
+                </div>
+                <div class="col-2">
+                    <input name="proteins" id="proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                     <!--placeholder="Enter Number of Different Proteins"-->
+                </div>
+            </div>	
+
+            <div class="row">
+                <div class="col-1">
+                    <label>HLA-A* Exons</label>
+                </div>
+                <div class="col-2">
+                    <input name="exons" id="exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                    <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
+                </div>
+            </div>	
+
+            <div class="row">
+                <div class="col-1">
+                    <label>HLA-A* Introns</label>
+                </div>
+                <div class="col-2">
+                    <input name="introns" id="introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                    <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
+                </div>
+            </div>	
+
+            <div class="row">
+                <div class="col-1">
+                    <label>HLA-A* Ex Level</label>
+                </div>
+                <div class="col-2">
+                    <select name="level" id="level">
+                        <option value="<?=(isset($address) ? $address : '')?>">N</option>
+                        <option value="<?=(isset($address) ? $address : '')?>">L</option>
+                        <option value="<?=(isset($address) ? $address : '')?>">S</option>
+                        <option value="<?=(isset($address) ? $address : '')?>">A</option>
+                        <option value="<?=(isset($address) ? $address : '')?>">Q</option>
+                    </select>
+                </div>
+            </div>	
+
+        </fieldset>
+
+         <!---HLA-B-->
+         <h3>HLA-B*</h3>
+    <fieldset>  
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-B* Allele</label>
+            </div>
+            <div class="col-2">
+                <input name="allele_group" id="allele_group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!-- placeholder="Enter Allele Group" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-B* Proteins</label>
+            </div>
+            <div class="col-2">
+                <input name="proteins" id="proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                   <!-- placeholder="Enter Number of Different Proteins"-->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-B* Exons</label>
+            </div>
+            <div class="col-2">
+                <input name="exons" id="exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!-- placeholder="Enter Number of Synonymous mutations in Exons"-->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-B* Introns</label>
+            </div>
+            <div class="col-2">
+                <input name="introns" id="introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!-- placeholder="Enter Number of Synonymous mutations in Introns"-->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-B* Ex Level</label>
+            </div>
+            <div class="col-2">
+                <select name="level" id="level">
+                    <option value="<?=(isset($address) ? $address : '')?>">N</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">L</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">S</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">A</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">Q</option>
+                </select>
+            </div>
+        </div>	
+
+    </fieldset>
+
+           <!---HLA-C-->
+           <h3>HLA-C*</h3>
+    <fieldset>
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-C* Allele</label>
+            </div>
+            <div class="col-2">
+                <input name="allele_group" id="allele_group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                <!-- placeholder="Enter Allele Group" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-C* Proteins</label>
+            </div>
+            <div class="col-2">
+                <input name="proteins" id="proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                <!--placeholder="Enter Number of Different Proteins" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-C* Exons</label>
+            </div>
+            <div class="col-2">
+                <input name="exons" id="exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                <!-- placeholder="Enter Number of Synonymous mutations in Exons"-->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-C* Introns</label>
+            </div>
+            <div class="col-2">
+                <input name="introns" id="introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-C* Ex Level</label>
+            </div>
+            <div class="col-2">
+                <select name="level" id="level">
+                    <option value="<?=(isset($address) ? $address : '')?>">N</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">L</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">S</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">A</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">Q</option>
+                </select>
+            </div>
+        </div>	
+
+    </fieldset>
+
+    <!--HLA Class 2-->
+           <!---HLA-DRB1-->
+           <h3>HLA-DRB1*</h3>
+    <fieldset> 
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB1* Allele</label>
+            </div>
+            <div class="col-2">
+                <input name="allele_group" id="allele_group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Allele Group" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB1* Proteins</label>
+            </div>
+            <div class="col-2">
+                <input name="proteins" id="proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                  <!--placeholder="Enter Number of Different Proteins" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB1* Exons</label>
+            </div>
+            <div class="col-2">
+                <input name="exons" id="exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB1* Introns</label>
+            </div>
+            <div class="col-2">
+                <input name="introns" id="introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB1* Ex Level</label>
+            </div>
+            <div class="col-2">
+                <select name="level" id="level">
+                    <option value="<?=(isset($address) ? $address : '')?>">N</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">L</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">S</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">A</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">Q</option>
+                </select>
+            </div>
+        </div>	
+
+    </fieldset>
+
+         <!---HLA-DRB3,4,5*-->
+         <h3>HLA-DRB3,4,5*</h3>
+    <fieldset>
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB3,4,5* Allele</label>
+            </div>
+            <div class="col-2">
+                <input name="allele_group" id="allele_group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Allele Group" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB3,4,5* Proteins</label>
+            </div>
+            <div class="col-2">
+                <input name="proteins" id="proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                <!--placeholder="Enter Number of Different Proteins" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB3,4,5* Exons</label>
+            </div>
+            <div class="col-2">
+                <input name="exons" id="exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB3,4,5* Introns</label>
+            </div>
+            <div class="col-2">
+                <input name="introns" id="introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB3,4,5* Ex Level</label>
+            </div>
+            <div class="col-2">
+                <select name="level" id="level">
+                    <option value="<?=(isset($address) ? $address : '')?>">N</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">L</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">S</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">A</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">Q</option>
+                </select>
+            </div>
+        </div>	
+
+    </fieldset>
+
+         <!---HLA-DQB1*-->
+         <h3>HLA-DQB1*</h3>
+    <fieldset>  
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DQB1* Allele</label>
+            </div>
+            <div class="col-2">
+                <input name="allele_group" id="allele_group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Allele Group" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DQB1* Proteins</label>
+            </div>
+            <div class="col-2">
+                <input name="proteins" id="proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Different Proteins" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DQB1* Exons</label>
+            </div>
+            <div class="col-2">
+                <input name="exons" id="exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                  <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DQB1* Introns</label>
+            </div>
+            <div class="col-2">
+                <input name="introns" id="introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DQB1* Ex Level</label>
+            </div>
+            <div class="col-2">
+                <select name="level" id="level">
+                    <option value="<?=(isset($address) ? $address : '')?>">N</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">L</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">S</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">A</option>
+                    <option value="<?=(isset($address) ? $address : '')?>">Q</option>
+                </select>
+            </div>
+        </div>	
+
+    </fieldset>
+
+         
+            <div class="row">
+                <label>&nbsp;</label>
+                <a class="back_btn" href="../../src/php/hospital_add_patients.php">Back</a>
+                <input type="submit" name="submit" value="submit" class="btn">
+            </div>
+         
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -26,10 +26,34 @@
       <a class="back-patients" href="../../src/php/hospital_patients.php"><span class="material-icons">arrow_back_ios</span></a> 
       <a class="all-patients" href="../../src/php/hospital_all_patients.php">All Patients</a>  
       <a class="hla-patients" href="../../src/php/hospital_hla_patients.php">Patients HLA Details</a>  
-      <a class="match-patients" href="../../src/php/hospital_match_patients.php">Patient Matchings</a>  
+      <a class="match-patients" href="../../src/php/hospital_match_patients.php">HLA Summary</a>  
       <a class="rank-donors" href="../../src/php/hospital_req_patients.php">Ranked Donor Lists</a>   
     </div>
+
+    <div class="hla_patients">
+
+        <div class="filter">
+            <label>Search </label><input type="search" placeholder="search here"><span class="material-icons">filter_alt</span>
+        </div>
+   
+            <table class="hla_patient_list">
+                <tr class="theads">
+                    <th>Patient HLA ID</th>
+                    <th>Patient ID</th>
+                    <th>HLA-A*</th>
+                    <th>HLA-B*</th>
+                    <th>HLA-C*</th>
+                    <th>HLA-DRB1*</th>
+                    <th>HLA-DRB3,4,5*</th>
+                    <th>HLA-DRQB1*</th>
+                    <th colspan="2"></th>
+                </tr>
     
+                <?php include('../../src/php/hospital_hla_patients_table.php') ?>
+                
+            </table>
+           
+           </div>
    
     
 </body>

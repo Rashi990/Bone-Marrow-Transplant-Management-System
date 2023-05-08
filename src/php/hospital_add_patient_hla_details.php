@@ -1,4 +1,4 @@
-<?php require_once('hospital_navbar.php'); ?>
+
 <?php
 require_once('../../config/connection.php');
 session_start();
@@ -24,10 +24,11 @@ $hospital_id=$_SESSION['hospital_id'];
  </head>
  <body>
 
+ <!--
  <div class="top-nav">
 
 <div class="head">
-    <h1>Patients</h1>
+    <h1>Add Patient</h1>
 </div>
 
   <div class="search">
@@ -45,9 +46,9 @@ $hospital_id=$_SESSION['hospital_id'];
       </div>
 
 </div>
-
+-->
  </body>
  </html>
 
-<?php include('../../public/html/hospital_patients.html'); ?>
+<?php include('../../public/html/hospital_add_patient_hla_details.html'); ?>
 <!--<?php require_once('hospital_footer.php'); ?>-->
