@@ -4,7 +4,7 @@ body{
     background-color: #F7FFFF;
 }
 
-.add_patient{
+.add_stock{
     position: relative;
     background-color: #bde4e0;
     margin: 90px auto;
@@ -16,7 +16,7 @@ body{
     justify-content:center;
 }
 
-.add_patient h1{
+.add_stock h1{
     margin: 20px auto;
     padding-bottom: 20px;
     text-align: center;
@@ -39,49 +39,17 @@ body{
     margin-left: 10px;
 }
 
-form.add_patient_form label{
+form.add_stock_form label{
     font-size: 16px;
     font-weight: bold;
     color: #006296;
 }
 
-form.add_patient_form input[type="text"],[type="tel"],[type="email"],[type="number"],[type="date"]{
-    width: 70%;
+form.add_stock_form input[type="text"],[type="tel"],[type="email"],[type="password"]{
+    width: 100%;
     border-radius: 10px;
     border: none;
-    line-height: 20px;
-    padding: 2px 10px;
-}
-
-form.add_patient_form select{
-    width: 40%;
-    border-radius: 10px;
-    border: none;
-    line-height: 20px;
-    padding: 2px 10px;
-}
-
-table tr{
-    margin-left: 0;
-}
-
-table td{
-    margin-left: 0;
-    padding: 0px 70px 8px 10px;
-
-}
-
-form.add_patient_form input[type="radio"]{
-    float: left;
-}
-
-form.add_patient_form .lbl{
-    float: left;
-    font-size: 15px;
-    font-weight: normal;
-    margin-left: 3px;
-    margin-right: 30px;
-    color: #342c2c;
+    line-height: 30px;
 }
 
 .btn{
@@ -90,10 +58,10 @@ form.add_patient_form .lbl{
     border: 1px solid #006296;
     font-size: 16px;
     font-weight: bold;
-    padding: 8px 30px ;
+    padding: 5px 30px ;
     border-radius: 20px;
     transition: 0.5s;
-    margin-left: 30px;
+    margin-left: 100px;
     margin-top: 20px;
 }
 
@@ -110,9 +78,9 @@ form.add_patient_form .lbl{
     border: 1px solid #006296;
     font-weight: bold;
     border-radius: 20px;
-    padding: 5px 30px ;
+    padding: 8px 30px ;
     transition: 0.5s;
-    margin-left: 100px;
+    margin-left: 20px;
     margin-top: 20px;
 }
 
@@ -121,27 +89,6 @@ form.add_patient_form .lbl{
     background-color: #006296;
     color: #F7FFFF;
 }
-
-/*
-.next_btn{
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296;
-    font-weight: bold;
-    border-radius: 20px;
-    padding: 5px 30px ;
-    transition: 0.5s;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.next_btn:hover{
-    cursor: pointer;
-    background-color: #006296;
-    color: #F7FFFF;
-}
-*/
 
 .err{
     background-color: #f61313;

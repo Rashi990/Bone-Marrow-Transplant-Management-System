@@ -7,6 +7,7 @@ $result=mysqli_query($connection,$sql);
 
 if($result){
     while($row=mysqli_fetch_assoc($result)){
+        $consultant_id=$row['consultant_id'];
         $id='CID'.str_pad($row['consultant_id'],3,'0',STR_PAD_LEFT)  ;
         $name=$row['consultant_name'];
         $email=$row['email'];
@@ -23,7 +24,7 @@ if($result){
 
             echo "<td><a href='hospital_view_concultants.php?viewid=".$id."' class='view'><span class='material-icons'>visibility</span></a></td>";
             echo "<td><a href='hospital_update_consultants.php?updateid=".$id."' class='edit'><span class='material-icons'>edit_square</span></a></td>";
-            echo "<td><a href='hospital_delete_consultants.php?deleteid=".$id."' class='delete'><span class='material-icons'>delete</span></td>";
+            echo "<td><a href='hospital_delete_consultants.php?deleteid=".$consultant_id."' class='delete'><span class='material-icons'>delete</span></td>";
 
         echo "</tr>";
 
