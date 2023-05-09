@@ -1,5 +1,4 @@
 <?php require_once('consultant_navbar_appointment.php'); ?>
-
 <?php
 require_once('../../config/connection.php');
 session_start();
@@ -43,45 +42,46 @@ if($_SESSION['userlevel']!=1)
   </div>
 
   <div class="board">
-    <div class="row">
-      <div class="col">
-        <div class="box1">
-          Count<br />
-          Total New Appointments
-        </div>
-        <div class="box2">
-          <a href="consultant_new_appointments.php">View Details</a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="box1">
-          Count<br />
-          Total Approved Appointments
-        </div>
-        <div class="box2">
-          <a href="consultant_approved_appointments.php">View Details</a>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="box1">
-          Count<br />
-          Total Cancelled Appointments
-        </div>
-        <div class="box2">
-          <a href="consultant_cancelled_appointments.php">View Details</a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="box1">
-          Count<br />
-          Total Appointments
-        </div>
-        <div class="box2">
-          <a href="consultant_all_appointments.php">View Details</a>
-        </div>
-      </div>
+    <div class="full-box">
+      <h2>New Appointments</h2>
+      <table align="center">
+        <tr>
+          <th>Appointment ID</th>
+          <th>Patient Name</th>
+          <th>Mobile Number</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+        <?php
+          $sql="SELECT * FROM appointments";
+          $result=mysqli_query($connection,$sql);
+          if($result){
+            while($row=mysqli_fetch_assoc($result)){
+              $appointment_id=$row['appointment_id'];
+              $patient_name=$row['patient_name'];
+              $telephone_no=$row['telephone_no'];
+              $email=$row['email'];
+              $status=$row['status'];
+              echo '
+                <td>'.$appointment_id.'</td>
+                <td>'.$patient_name.'</td>
+                <td>'.$telephone_no.'</td>
+                <td>'.$email.'</td>
+                <td>'.$status.'</td>
+                <td>
+                  <button id="btn-view" class="btn">
+                    <a href="consultant_appointments_view.php?appointment-id='.$appointment_id.'" class="text-light">
+                      View
+                    </a>
+                  </button>
+                </td>
+              </tr>
+              ';
+            }
+          }
+        ?>
+      </table>
     </div>
   </div>
 
