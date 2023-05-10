@@ -92,6 +92,12 @@ $hospital_id=$_SESSION['hospital_id'];
 <!--
 </div>
 -->
+
+echo '<a class="back_btn" href="../../src/php/hospital_all_patients.php">Back</a>'
+echo '<a href="../../src/php/hospital_add_patient_hla_details.php?patient_id=$patient_id">
+                <button type="submit" name="submit" value="Next" class="btn">
+</button>'
+
  </body>
  </html>
 
