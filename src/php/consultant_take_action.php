@@ -1,7 +1,7 @@
 <?php require_once('consultant_navbar_appointment.php'); ?>
 <?php
 session_start();
-if (isset($_SESSION['username']))
+if($_SESSION['userlevel']=1)
 {
 include '../../config/connection.php';
 
