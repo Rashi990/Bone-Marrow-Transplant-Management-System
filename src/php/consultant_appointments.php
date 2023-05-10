@@ -16,7 +16,7 @@ if($_SESSION['userlevel']!=1)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../public/css/consultant_navbar.css">
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_appointment.css" />
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_appointment.css?v=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Top</title>
 </head>
@@ -46,7 +46,14 @@ if($_SESSION['userlevel']!=1)
     <div class="row">
       <div class="col">
         <div class="box1">
-          Count<br />
+          <div class="count">
+            <?php
+              $sql1 = "SELECT appointment_id FROM appointments WHERE `status` = 'Not Updated Yet' ORDER by appointment_date";
+              $result1 = mysqli_query($connection, $sql1);
+              $row = mysqli_num_rows($result1);
+              echo '<h1>' .$row. '</h1>';
+            ?>
+          </div>
           Total New Appointments
         </div>
         <div class="box2">
@@ -55,7 +62,14 @@ if($_SESSION['userlevel']!=1)
       </div>
       <div class="col">
         <div class="box1">
-          Count<br />
+          <div class="count">
+            <?php
+              $sql1 = "SELECT appointment_id FROM appointments WHERE `status` = 'Approved' ORDER by appointment_date";
+              $result1 = mysqli_query($connection, $sql1);
+              $row = mysqli_num_rows($result1);
+              echo '<h1>' .$row. '</h1>';
+            ?>
+          </div>
           Total Approved Appointments
         </div>
         <div class="box2">
@@ -66,7 +80,14 @@ if($_SESSION['userlevel']!=1)
     <div class="row">
       <div class="col">
         <div class="box1">
-          Count<br />
+          <div class="count">
+            <?php
+              $sql1 = "SELECT appointment_id FROM appointments WHERE `status` = 'Cancelled' ORDER by appointment_date";
+              $result1 = mysqli_query($connection, $sql1);
+              $row = mysqli_num_rows($result1);
+              echo '<h1>' .$row. '</h1>';
+            ?>
+          </div>
           Total Cancelled Appointments
         </div>
         <div class="box2">
@@ -75,7 +96,14 @@ if($_SESSION['userlevel']!=1)
       </div>
       <div class="col">
         <div class="box1">
-          Count<br />
+          <div class="count">
+            <?php
+              $sql1 = "SELECT appointment_id FROM appointments ORDER by appointment_date";
+              $result1 = mysqli_query($connection, $sql1);
+              $row = mysqli_num_rows($result1);
+              echo '<h1>' .$row. '</h1>';
+            ?>
+          </div>
           Total Appointments
         </div>
         <div class="box2">

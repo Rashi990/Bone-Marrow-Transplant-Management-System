@@ -1,4 +1,4 @@
-
+<?php require_once('hospital_navbar.php'); ?>
 <?php
 require_once('../../config/connection.php');
 session_start();
@@ -37,14 +37,14 @@ $hospital_id=$_SESSION['hospital_id'];
     <input type="search" placeholder="search here">
   </div>
   </div>
-
+-->
 <div class="top">
         <span class="material-icons">notifications</span>
         <span class="material-icons">chat_bubble</span>
         <div class="Loggedin"> Welcome! <?php echo $username;?></div>
         <span class="material-icons">account_circle</span>
       </div>
-
+<!--
 </div>
 -->
  </body>

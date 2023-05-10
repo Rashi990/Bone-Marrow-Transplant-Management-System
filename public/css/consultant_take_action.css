@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    background-color: #F7FFFF;
+    font-family: 'Poppins', sans-serif;
+}
+
+.board{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 20px;
+    width: 80%;
+    height: 550px;
+    background-color: #F1F5F9;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.row{
+  display: flex;
+  align-items:flex-start;
+}

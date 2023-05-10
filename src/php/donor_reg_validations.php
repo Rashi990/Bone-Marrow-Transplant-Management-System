@@ -63,9 +63,6 @@ function nameInvalid($fname,$lname){
 
 
 //Check if email is invalid
-
-
-
 function emailInvalid($email){
   
     if(!preg_match("/^[a-zA-Z\d\._-]+@[a-zA-Z\d_-]+\.[a-zA-Z\d\.]{2,}$/",$email)){
@@ -89,9 +86,33 @@ function mobileInvalid($tel){
     }
     return $value;
 }
+/*
+//Check if password is invalid
+function passwordInvalid($pass){
+  
+    if(!preg_match("/^.{2,}$/",$pass)){
+        $value = true;
+    }
+    else{
+        $value = false;
+    }
+    return $value;
+}
 
+//Check if pass and re_pass aren't simillar
+function passNotMatch($pass, $re_pass){
 
-//Check if email available in the system
+    if($pass !== $re_pass){
+        $value = true;
+    }
+    else{
+        $value = false;
+    }
+    return $value;
+}
+*/
+
+//Check if email or mobile available in the system
 function emailAvailable($connection, $email){
    
     //Query
@@ -124,21 +145,25 @@ function emailAvailable($connection, $email){
     return $value;
 }
 
-
+/*
 function nicInvalid($nic){
 
 
-  if(!preg_match("/^([0-9]{9}[x|X|v|V]|[0-9]{12})$/",$nic)){
+  if(!preg_match("/^[\d]{12}$/",$nic)){
         $value = true;
     }
-   /* else if(!preg_match("/^[8-9]{2}\d{7}[vV]$/",$nic)){
-        $value = true;
-    }*/
     else{
         $value = false;
     }
     return $value;
 }
+*/
+
+
+
+
+
+
 
 
 
