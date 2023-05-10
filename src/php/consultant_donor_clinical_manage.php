@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
+if($_SESSION['userlevel']=1)
 {
 include "../../config/connection.php";
 ?>
@@ -59,7 +59,7 @@ include "../../config/connection.php";
             </abbr>
             <abbr title="Welcome!">
               <div class="greet">
-                <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+                <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['username'];?></h3>
               </div>
             </abbr>
             <abbr title="Profile">

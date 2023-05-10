@@ -2,7 +2,7 @@
   <?php
   require_once('../../config/connection.php');
   session_start();
-  if (!(isset($_SESSION['username'])))
+  if($_SESSION['userlevel']!=1)
   {
       header("Location:consultant_login.php");
   }

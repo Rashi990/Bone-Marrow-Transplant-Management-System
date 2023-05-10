@@ -2,7 +2,7 @@
 <?php
 require_once('../../config/connection.php');
 session_start();
-if (!(isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']) ))
+if($_SESSION['userlevel']!=1)
 {
     header("Location:consultant_login.php");
 }
@@ -24,7 +24,7 @@ if (!(isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']) ))
         <span class="material-icons">home</span>
         <span class="material-icons">notifications</span>
         <span class="material-icons">chat_bubble</span>
-        <div class="Loggedin"> Welcome! <?php echo $_SESSION['consultant_name'];?></div>
+        <div class="Loggedin"> Welcome! <?php echo $_SESSION['username'];?></div>
         <span class="material-icons">account_circle</span>
       </div>
 
