@@ -71,9 +71,6 @@ else{
         <p>Status: <?php echo $status ?></p>
         <p>Remark: <?php echo $remark ?></p>
       </div>
-      <div class="btn">
-        <a href="#"><button type="button" name="button">Take Action</button></a>
-      </div>
     </div>
   </body>
 </html>

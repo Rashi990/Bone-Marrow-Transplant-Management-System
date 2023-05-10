@@ -72,7 +72,10 @@ else{
         <p>Remark: <?php echo $remark ?></p>
       </div>
       <div class="btn">
-        <a href="#"><button type="button" name="button">Take Action</button></a>
+        <?php
+        echo
+        '<a href="consultant_take_action.php?appointment-id='.$appointment_id.'"><button type="button" name="button">Take Action</button></a>';
+        ?>
       </div>
     </div>
   </body>
