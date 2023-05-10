@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2023 at 06:28 PM
+-- Generation Time: May 09, 2023 at 06:04 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -83,8 +83,6 @@ INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `userlevel`) VALUES
 (47, '34', 'Rash', 'Ra1234', 1),
 (48, '25', 'ishu', 'Ish1234', 2),
 (49, '35', 'mali22', 'ghhhhh', 1),
-(50, '36', 'hima', 'Hima12', 1),
-(51, '37', 'mm', 'Mn12345', 1),
 (52, '26', 'desh', 'ffff', 2),
 (53, '27', 'shri', 'Sh1234', 2),
 (55, '29', 'nishanthi', 'Ni1234', 2),
@@ -100,7 +98,36 @@ INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `userlevel`) VALUES
 (66, '32', 'niseka', 'Ni1234', 2),
 (67, '33', 'gayesha', 'Ga1234', 2),
 (68, '34', 'ishara', 'Ish123', 2),
-(70, '39', 'kasun', 'Ka1234', 1);
+(70, '39', 'kasun', 'Ka1234', 1),
+(71, '35', 'nehara', 'Neha22', 2),
+(72, '40', 'janitha', 'Ja1234', 1),
+(75, '38', 'madara', 'Ma1234', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointments`
+--
+
+CREATE TABLE `appointments` (
+  `appointment_id` int(11) NOT NULL,
+  `patient_name` varchar(100) NOT NULL,
+  `telephone_no` int(11) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `appointment_date` date NOT NULL,
+  `appointment_time` time NOT NULL,
+  `apply_date` date NOT NULL,
+  `status` varchar(20) DEFAULT 'Not Updated Yet',
+  `remark` varchar(255) DEFAULT 'Not Updated Yet'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `appointments`
+--
+
+INSERT INTO `appointments` (`appointment_id`, `patient_name`, `telephone_no`, `email`, `appointment_date`, `appointment_time`, `apply_date`, `status`, `remark`) VALUES
+(1, 'Pond Naravit', 773256984, 'ppnaravit@gmail.com', '2023-05-31', '10:00:00', '2023-05-08', 'Not Updated Yet', 'Not Updated Yet'),
+(2, 'Phuwin Tang', 773256256, 'phuwintang@gmail.com', '2023-05-30', '11:00:00', '2023-05-09', 'Not Updated Yet', 'Not Updated Yet');
 
 -- --------------------------------------------------------
 
@@ -178,7 +205,8 @@ CREATE TABLE `campaign` (
 --
 
 INSERT INTO `campaign` (`camp_id`, `camp_name`, `camp_date`, `camp_time`, `hospital_id`) VALUES
-(1, 'Introduction', '2023-02-09', '00:00:11', 1);
+(1, 'introduction about boan marrow ', '2023-02-09', '19:34:00', 1),
+(2, 'Transplant', '2023-05-02', '00:00:00', 3);
 
 -- --------------------------------------------------------
 
@@ -192,6 +220,8 @@ CREATE TABLE `clinician` (
   `email` varchar(100) NOT NULL,
   `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -199,32 +229,34 @@ CREATE TABLE `clinician` (
 -- Dumping data for table `clinician`
 --
 
-INSERT INTO `clinician` (`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES
-(1, 'Thilini De Mel', '9898.thilini@gmail.com', '0772440643', 'No.2/61, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', 1),
-(2, 'Nisal', 'nis@gmail.com', '0115555448', 'Flower Road, Kandy', 2),
-(3, 'Ashi', 'ash@gamil.com', '0112997222', '77/A, Galle Road, Colombo', 2),
-(4, 'Dinu', 'di@gmail.com', '0112996666', '44/97, Silver Street , Matara', 1),
-(6, 'Hashi', 'hashi@gmail.com', '0112467999', '55/99, Baker Street, Colombo', 1),
-(7, 'Mashi', 'mashi@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', 1),
-(8, 'Samantha', 'sam@gmail.com', '0778866111', '44/2,Mahawa Road,Galle', 2),
-(9, 'Fathima', 'fa@gmail.com', '0778866000', '44/9,Matara Road, Matara', 2),
-(12, 'Sanjana', 'sanj@gmail.com', '0778861111', '22/9,Galle Road, Colombo', 1),
-(13, 'Sarath Silva', 'sarath@gmail.com', '0778862222', '78/5, Main Road, Jaffna', 3),
-(15, 'P.Samaranayaka', 'sama@gmail.com', '0778866111', 'Main Road, Colombo', 1),
-(16, 'Mashi', 'ma@gmail.com', '0778866667', 'Panideniya Road, Kandy', 1),
-(17, 'mahagama', 'mahaga@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', 1),
-(18, 'hoo', 'hoo@gmail.com', '0778866667', 'Main Road, Colombo', 1),
-(20, 'laa', 'laa@gmail.com', '0778866667', 'Main Road, Colombo', 2),
-(21, 'sa', 'sa@gmail.com', '0778866667', 'Main Road, Colombo', 2),
-(22, 'oo', 'oo@gmail.com', '0778866667', 'Main Road, Colombo', 1),
-(24, 'ddd', 'ddd@gmail.com', '0778866667', 'Main Road, Colombo', 1),
-(25, 'Ishara Silva', 'ish@gmail.com', '0778866667', 'Main Road, Colombo', 1),
-(26, 'Desha Kavya', 'desh@gmail.com', '0778866111', 'Main Road, Colombo', 1),
-(27, 'Shriya Aseka', 'shri@gmail.com', '0778866000', 'Main Road, Colombo', 1),
-(29, 'Nishanthi Gamage', 'nish@gmail.com', '0778866000', 'Panideniya Road, Kandy', 1),
-(32, 'Niseka', 'nise@gmail.com', '0778866667', 'Main Road, Colombo', 14),
-(33, 'Gayesha', 'Gaye@gmail.com', '0778866667', 'Main Road, Colombo', 14),
-(34, 'Ishara', 'ishara@gmail.com', '0778866667', 'Main Road, Colombo', 14);
+INSERT INTO `clinician` (`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `username`, `password`, `hospital_id`) VALUES
+(1, 'Thilini De Mel', '9898.thilini@gmail.com', '0772440643', 'No.2/61, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', '', '', 1),
+(2, 'Nisal', 'nis@gmail.com', '0115555448', 'Flower Road, Kandy', '', '', 2),
+(3, 'Ashi', 'ash@gamil.com', '0112997222', '77/A, Galle Road, Colombo', '', '', 2),
+(4, 'Dinu', 'di@gmail.com', '0112996666', '44/97, Silver Street , Matara', '', '', 1),
+(6, 'Hashi', 'hashi@gmail.com', '0112467999', '55/99, Baker Street, Colombo', '', '', 1),
+(7, 'Mashi', 'mashi@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', '', '', 1),
+(8, 'Samantha', 'sam@gmail.com', '0778866111', '44/2,Mahawa Road,Galle', '', '', 2),
+(9, 'Fathima', 'fa@gmail.com', '0778866000', '44/9,Matara Road, Matara', '', '', 2),
+(12, 'Sanjana', 'sanj@gmail.com', '0778861111', '22/9,Galle Road, Colombo', '', '', 1),
+(13, 'Sarath Silva', 'sarath@gmail.com', '0778862222', '78/5, Main Road, Jaffna', '', '', 3),
+(15, 'P.Samaranayaka', 'sama@gmail.com', '0778866111', 'Main Road, Colombo', '', '', 1),
+(16, 'Mashi', 'ma@gmail.com', '0778866667', 'Panideniya Road, Kandy', '', '', 1),
+(17, 'mahagama', 'mahaga@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', '', '', 1),
+(18, 'hoo', 'hoo@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 1),
+(20, 'laa', 'laa@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 2),
+(21, 'sa', 'sa@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 2),
+(22, 'oo', 'oo@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 1),
+(24, 'ddd', 'ddd@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 1),
+(25, 'Ishara Silva', 'ish@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 1),
+(26, 'Desha Kavya', 'desh@gmail.com', '0778866111', 'Main Road, Colombo', '', '', 1),
+(27, 'Shriya Aseka', 'shri@gmail.com', '0778866000', 'Main Road, Colombo', '', '', 1),
+(29, 'Nishanthi Gamage', 'nish@gmail.com', '0778866000', 'Panideniya Road, Kandy', '', '', 1),
+(32, 'Niseka', 'nise@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 14),
+(33, 'Gayesha', 'Gaye@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 14),
+(34, 'Ishara', 'ishara@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 14),
+(35, 'K.G.Nehara Wijesiri', 'nehara@gmail.com', '0778866999', 'Main Road, Colombo', '', '', 13),
+(38, 'K.G.Madara ', 'mada@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 13);
 
 -- --------------------------------------------------------
 
@@ -239,6 +271,8 @@ CREATE TABLE `consultant` (
   `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
   `image` mediumblob NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -246,42 +280,43 @@ CREATE TABLE `consultant` (
 -- Dumping data for table `consultant`
 --
 
-INSERT INTO `consultant` (`consultant_id`, `consultant_name`, `email`, `telephone_no`, `address`, `image`, `hospital_id`) VALUES
-(1, 'Thilini De Mel', '9898.thilini@gmail.com', '772440643', 'No.61/2, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', '', 1),
-(2, 'Malsha Samadhika', 'malsha@gmail.com', '771234567', 'No.235, Kandy Road, Kegalle', '', 1),
-(3, 'Rashini Lakshika', 'rash@gmail.com', '712589634', 'No.24/3, Park Road, Galle', '', 2),
-(4, 'Subodhinie', 'subo@gmail.com', '759865472', 'No.33, Upper Lake Road, Colombo 07', '', 3),
-(8, 'vin', 'vin@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(9, 'yo', 'yo@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(10, 'din', 'din@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(11, 'js', 'js@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(12, 'fa', 'fa@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(13, 'mas', 'mas@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(14, 'dd', 'dd@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(15, 'gg', 'gg@gmail.com', '0778866111', 'Main Road, Colombo', '', 1),
-(16, 'jone', 'jo@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(17, 'sa', 'sa@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(18, 'go', 'go@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(19, 'noo', 'noo@gmail.com', '0778866667', 'Main Road, Colombo', '', 2),
-(20, 'ww', 'ww@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(21, 'mee', 'mee@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(22, 'cc', 'cc@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(23, 'bb', 'bb@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(24, 'hh', 'hhh@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(25, 'kk', 'kkk@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(26, 'pp', 'pp@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(27, 'xx', 'xx@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(28, 'tt', 'tt@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(29, 'gaa', 'gaa@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(30, 'qq', 'qq@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(31, 'perera', 'pee@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(32, 'silva', 'si@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(33, 'Kee Silva', 'kee@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(34, 'Rashi Herath', 'ra@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(35, 'Mali ', 'mali@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(36, 'Himaya', 'hima@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(37, 'Masha Silva', 'masha@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(39, 'Kasun Rathnayaka', 'kasun@gmail.com', '0778866667', 'Main Road, Colombo', '', 14);
+INSERT INTO `consultant` (`consultant_id`, `consultant_name`, `email`, `telephone_no`, `address`, `image`, `username`, `password`, `hospital_id`) VALUES
+(1, 'Thilini De Mel', '9898.thilini@gmail.com', '772440643', 'No.61/2, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', '', '', '', 1),
+(2, 'Malsha Samadhika', 'malsha@gmail.com', '771234567', 'No.235, Kandy Road, Kegalle', '', '', '', 1),
+(3, 'Rashini Lakshika', 'rash@gmail.com', '712589634', 'No.24/3, Park Road, Galle', '', '', '', 2),
+(4, 'Subodhinie', 'subo@gmail.com', '759865472', 'No.33, Upper Lake Road, Colombo 07', '', '', '', 3),
+(8, 'vin', 'vin@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(9, 'yo', 'yo@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(10, 'din', 'din@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(11, 'js', 'js@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(12, 'fa', 'fa@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(13, 'mas', 'mas@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(14, 'dd', 'dd@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(15, 'gg', 'gg@gmail.com', '0778866111', 'Main Road, Colombo', '', '', '', 1),
+(16, 'jone', 'jo@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(17, 'sa', 'sa@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(18, 'go', 'go@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(19, 'noo', 'noo@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 2),
+(20, 'ww', 'ww@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(21, 'mee', 'mee@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(22, 'cc', 'cc@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(23, 'bb', 'bb@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(24, 'hh', 'hhh@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(25, 'kk', 'kkk@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(26, 'pp', 'pp@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(27, 'xx', 'xx@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(28, 'tt', 'tt@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(29, 'gaa', 'gaa@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(30, 'qq', 'qq@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(31, 'perera', 'pee@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(32, 'silva', 'si@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(33, 'Kee Silva', 'kee@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(34, 'Rashi Herath', 'ra@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(35, 'Mali ', 'mali@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(36, 'Himaya', 'hima@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(37, 'Masha Silva', 'masha@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(39, 'Kasun Rathnayaka', 'kasun@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 14),
+(40, 'G.Janitha Lakeshi', 'janitha@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 13);
 
 -- --------------------------------------------------------
 
@@ -311,7 +346,8 @@ CREATE TABLE `donor` (
 --
 
 INSERT INTO `donor` (`donor_id`, `donor_name`, `telephone_no`, `email`, `address`, `date_of dirth`, `gender`, `id_number`, `marital_state`, `image`, `blood_group`, `user_name`, `password`, `hospital_id`) VALUES
-(3, 'Sarani Silva', 112467448, 'sarani@gmail.com', 'No 88/56, Main Road, Colombo', '2015-04-09', 'Female', '995510310V', 'Unmarried', '', 'O+', 'sarani', 'Sa1234', 14);
+(3, 'Sarani Silva', 112467448, 'sarani@gmail.com', 'No 88/56, Main Road, Colombo', '2015-04-09', 'Female', '995510310V', 'Unmarried', '', 'O+', 'sarani', 'Sa1234', 14),
+(5, 'malsha', 0, '', '', '0000-00-00', '', '', '', '', 'B+', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -371,6 +407,7 @@ CREATE TABLE `hospital` (
   `email` varchar(255) NOT NULL,
   `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
+  `city` varchar(255) NOT NULL,
   `date_availability` varchar(255) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL
@@ -380,17 +417,17 @@ CREATE TABLE `hospital` (
 -- Dumping data for table `hospital`
 --
 
-INSERT INTO `hospital` (`hospital_id`, `hospital_name`, `email`, `telephone_no`, `address`, `date_availability`, `username`, `password`) VALUES
-(1, 'Apeksha Hospital', 'apeksha@gmail.com', '0112467448', 'New road, Maharagama', '2022/06/10', '', ''),
-(2, 'Karapitiya Hospital', 'karapitiya@gmail.com', '0112992222', '66/5, Kaluwella Road, Galle', '2022/07/10', '', ''),
-(3, 'Mahaweli Hospital', ' maha@gmail.com', '0112233444', 'Panideniya Road, Kandy', '2022/06/14', '', ''),
-(8, 'Kegalle Hospital', ' kegalle@gmail.com', ' 011236548', 'Main road, Kegalle', '', '', ''),
-(9, 'Central Hospital', ' central@gmail.com', ' 011223377', 'Main Road, Colombo', '', '', ''),
-(10, 'Negambo Hospital', ' ni@gmail.com', ' 011223377', 'Panideniya Road, Kandy', '', '', ''),
-(11, 'Asiri Hospital', ' asiri@gmail.com', ' 011223377', 'Main Road, Colombo', '', 'asiri22', 'As1122'),
-(12, 'HH', ' hh@gmail.com', ' 011223377', 'Main Road, Colombo', '', 'hhh123', 'Hh1234'),
-(13, 'Rhunu Hospital', ' ruhunu@gmail.com', ' 011223377', 'Main Road, Colombo', '', 'ruhunu', 'Ru1234'),
-(14, 'Mahaweli Hospital', ' maha@gmail.com', ' 011223377', 'Main Road, Colombo', '', 'maha33', 'Ma1234');
+INSERT INTO `hospital` (`hospital_id`, `hospital_name`, `email`, `telephone_no`, `address`, `city`, `date_availability`, `username`, `password`) VALUES
+(1, 'Apeksha Hospital', 'apeksha@gmail.com', '0112467448', 'New road, Maharagama', 'Maharagama', '2022/06/10', '', ''),
+(2, 'Karapitiya Hospital', 'karapitiya@gmail.com', '0112992222', '66/5, Kaluwella Road, Galle', 'Galle', '2022/07/10', '', ''),
+(3, 'Mahaweli Hospital', ' maha@gmail.com', '0112233444', 'Panideniya Road, Kandy', 'Kandy', '2022/06/14', '', ''),
+(8, 'Kegalle Hospital', ' kegalle@gmail.com', ' 011236548', 'Main road, Kegalle', 'Kegalle', '', '', ''),
+(9, 'Central Hospital', ' central@gmail.com', ' 011223377', 'Main Road, Colombo', 'Colombo', '', '', ''),
+(10, 'Negambo Hospital', ' ni@gmail.com', ' 011223377', 'Panideniya Road, Kandy', 'Kandy', '', '', ''),
+(11, 'Asiri Hospital', ' asiri@gmail.com', ' 011223377', 'Main Road, Colombo', 'Colombo', '', 'asiri22', 'As1122'),
+(12, 'HH', ' hh@gmail.com', ' 011223377', 'Main Road, Colombo', 'Colombo', '', 'hhh123', 'Hh1234'),
+(13, 'Rhunu Hospital', ' ruhunu@gmail.com', ' 011223377', 'Main Road, Colombo', 'Colombo', '', 'ruhunu', 'Ru1234'),
+(14, 'Mahaweli Hospital', ' maha@gmail.com', ' 011223377', 'Main Road, Colombo', 'Colombo', '', 'maha33', 'Ma1234');
 
 -- --------------------------------------------------------
 
@@ -416,7 +453,8 @@ CREATE TABLE `hospital_stock` (
   `sample_hid` int(11) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL,
-  `departure_time` time NOT NULL
+  `departure_time` time NOT NULL,
+  `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -444,8 +482,16 @@ CREATE TABLE `match_details` (
 CREATE TABLE `match_requests` (
   `match_request_id` int(11) NOT NULL,
   `patient_id` int(11) NOT NULL,
-  `patient_name` varchar(255) NOT NULL
+  `hospital_id` int(11) NOT NULL,
+  `patient_status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `match_requests`
+--
+
+INSERT INTO `match_requests` (`match_request_id`, `patient_id`, `hospital_id`, `patient_status`) VALUES
+(1, 1, 1, 'critical');
 
 -- --------------------------------------------------------
 
@@ -457,13 +503,18 @@ CREATE TABLE `patient` (
   `patient_id` int(11) NOT NULL,
   `patient_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `telephone_no` int(10) NOT NULL,
+  `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
   `date_of_birth` date NOT NULL,
-  `gender` varchar(255) NOT NULL,
-  `id_number` text NOT NULL,
-  `marital_state` varchar(255) NOT NULL,
-  `blood_group` varchar(255) NOT NULL,
+  `age` int(11) NOT NULL,
+  `gender` enum('Male','Female','Other') NOT NULL,
+  `height` float NOT NULL,
+  `weight` float NOT NULL,
+  `NIC` text NOT NULL,
+  `marital_state` enum('Married','Unmarried') NOT NULL,
+  `blood_group` enum('A+','A-','B+','B-','AB+','AB-','O+','O-') NOT NULL,
+  `diagnosis` varchar(100) NOT NULL,
+  `current_status` enum('Critical','Normal') NOT NULL,
   `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -471,12 +522,25 @@ CREATE TABLE `patient` (
 -- Dumping data for table `patient`
 --
 
-INSERT INTO `patient` (`patient_id`, `patient_name`, `email`, `telephone_no`, `address`, `date_of_birth`, `gender`, `id_number`, `marital_state`, `blood_group`, `hospital_id`) VALUES
-(1, 'Malki Nethusha', 'malki.12@gmail.com', 753264189, 'No.23, Hetti Vidiya, Colombo 07', '1996-11-14', 'Female', '199612547893', 'Unmarried', 'B+', 1),
-(2, 'Mallika Kumari', '-', 522236589, 'No.29, Malwaththa Road, Kandana', '1951-08-15', 'Female', '51125878923', 'Married', 'AB-', 1),
-(3, 'Kamal Jayathilake', 'kamal@gmail.com', 715236489, 'No.25, Park Road, Walimada', '1973-12-21', 'Male', '197312547693', 'Married', 'O-', 2),
-(4, 'Amali Bhagya', 'ama_b98@gmail.com', 752369852, 'No.63, Chapel Road, Nugegoda', '1998-06-16', 'Female', '199823651492', 'Unmarried', 'A+', 2),
-(5, 'Ramani Biseka', 'rama@gmail.com', 112467448, 'No 55/99, Main Road, Kandy', '2013-04-17', 'Female', '996498230V', 'Married', 'AB+', 14);
+INSERT INTO `patient` (`patient_id`, `patient_name`, `email`, `telephone_no`, `address`, `date_of_birth`, `age`, `gender`, `height`, `weight`, `NIC`, `marital_state`, `blood_group`, `diagnosis`, `current_status`, `hospital_id`) VALUES
+(1, 'Malki Nethusha', 'malki.12@gmail.com', '753264189', 'No.23, Hetti Vidiya, Colombo 07', '1996-11-14', 0, 'Female', 0, 0, '1996125478', 'Unmarried', 'B+', '', '', 1),
+(2, 'Mallika Kumari', '-', '522236589', 'No.29, Malwaththa Road, Kandana', '1951-08-15', 0, 'Female', 0, 0, '5112587892', 'Married', 'AB-', '', '', 1),
+(3, 'Kamal Jayathilake', 'kamal@gmail.com', '715236489', 'No.25, Park Road, Walimada', '1973-12-21', 0, 'Male', 0, 0, '1973125476', 'Married', 'O-', '', '', 2),
+(4, 'Amali Bhagya', 'ama_b98@gmail.com', '752369852', 'No.63, Chapel Road, Nugegoda', '1998-06-16', 0, 'Female', 0, 0, '1998236514', 'Unmarried', 'A+', '', '', 2),
+(5, 'Ramani Biseka', 'rama@gmail.com', '112467448', 'No 55/99, Main Road, Kandy', '2013-04-17', 0, 'Female', 0, 0, '996498230V', 'Married', 'AB+', '', '', 14),
+(8, '', 'shan@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', '0000-00-00', 57, '', 126, 78, '', '', '', 'Thalisemia', '', 13),
+(10, 'S.G.Nishani', 'nisha@gmail.com', '0112467448', 'Main Road, Galle', '2013-04-17', 44, 'Female', 125, 55, '998949210V', 'Unmarried', 'AB+', 'Anemia', 'Critical', 13),
+(11, '', 'fiya@gmail.com', '0778866111', 'Main Road, Colombo', '0000-00-00', 66, '', 124, 56, '', '', '', 'Blood Cancer', '', 13),
+(12, '', 'banu@gmail.com', '0778855555', 'Main Road, Colombo', '0000-00-00', 76, '', 139, 34, '', '', '', 'Thalisemia', '', 13),
+(13, '', 'ja@gmail.com', '0778855555', '55/9,Galle Road, Hikkaduwa', '0000-00-00', 70, '', 150, 67, '', '', '', 'Thalisemia', '', 13),
+(14, '', 'hani@gmail.com', '0778866000', 'Panideniya Road, Kandy', '0000-00-00', 56, '', 56, 78, '', '', '', 'Blood Cancer', '', 13),
+(17, 'Nehara silva', 'neha@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', '0000-00-00', 34, '', 110, 45, '', '', '', 'Thalisemia', '', 13),
+(18, 'Ashi Dileka', 'ashi@gmail.com', '0778866667', 'no.23,Galle', '2004-12-27', 76, '', 134, 56, '996719720V', '', '', 'Thalisemia', 'Critical', 13),
+(19, 'Akash Weerasiri', 'akash@gmail.com', '0778866111', 'Panideniya Road, Kandy', '2003-01-29', 66, 'Male', 150, 78, '996719820V', 'Married', 'AB-', 'Thalisemia', 'Critical', 13),
+(20, 'Ashadi Silva', 'asha@gmail.com', '0778866667', 'Main Road, Colombo', '2023-05-09', 66, 'Male', 120, 57, '996719820V', 'Married', 'A+', 'Anemia', 'Critical', 13),
+(21, 'Gihan Dias', 'giha@gmail.com', '0778866000', 'no.23,Galle', '2015-03-18', 100, 'Male', 120, 57, '996719821V', 'Married', 'A+', 'Thalisemia', 'Critical', 13),
+(22, 'Waruna Zoysa', 'waru@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', '2008-01-30', 15, 'Male', 136, 66, '996719827V', 'Married', 'A+', 'Anemia', 'Critical', 13),
+(23, 'Geetha ', 'gee@gmail.com', '0778855555', 'Main Road, Colombo', '2014-01-09', 9, 'Female', 139, 58, '996719820V', 'Unmarried', 'B+', 'Thalisemia', 'Normal', 13);
 
 -- --------------------------------------------------------
 
@@ -514,21 +578,62 @@ INSERT INTO `patient_clinical_reports` (`patient_cr_id`, `patient_id`, `date`, `
 CREATE TABLE `patient_hla_details` (
   `ph_id` int(11) NOT NULL,
   `patient_id` int(11) NOT NULL,
-  `hla_antigen` varchar(255) NOT NULL,
-  `hla_allele_family` varchar(255) NOT NULL,
-  `hla_2nd_type` varchar(255) NOT NULL,
-  `hla_3rd_type` varchar(255) NOT NULL,
-  `hla_4th_type` varchar(255) NOT NULL,
-  `hla_5th_type` varchar(255) NOT NULL
+  `HLA-A_allele_group` varchar(11) NOT NULL,
+  `HLA-A_protein` varchar(11) NOT NULL,
+  `HLA-A_syn_exons` varchar(11) NOT NULL,
+  `HLA-A_syn_introns` varchar(11) NOT NULL,
+  `HLA-A_ex_level` varchar(11) NOT NULL,
+  `HLA-B_allele_group` varchar(11) NOT NULL,
+  `HLA-B_protein` varchar(11) NOT NULL,
+  `HLA-B_syn_exons` varchar(11) NOT NULL,
+  `HLA-B_syn_introns` varchar(11) NOT NULL,
+  `HLA-B_ex_level` varchar(11) NOT NULL,
+  `HLA-C_allele_group` varchar(11) NOT NULL,
+  `HLA-C_protein` varchar(11) NOT NULL,
+  `HLA-C_syn_exons` varchar(11) NOT NULL,
+  `HLA-C_syn_introns` varchar(11) NOT NULL,
+  `HLA-C_ex_level` varchar(11) NOT NULL,
+  `HLA-DRB1_allele_group` varchar(11) NOT NULL,
+  `HLA-DRB1_protein` varchar(11) NOT NULL,
+  `HLA-DRB1_syn_exons` varchar(11) NOT NULL,
+  `HLA-DRB1_syn_introns` varchar(11) NOT NULL,
+  `HLA-DRB1_ex_level` varchar(11) NOT NULL,
+  `HLA-DRB3,4,5_allele_group` varchar(11) NOT NULL,
+  `HLA-DRB3,4,5_protein` varchar(11) NOT NULL,
+  `HLA-DRB3,4,5_syn_exons` varchar(11) NOT NULL,
+  `HLA-DRB3,4,5_syn_introns` varchar(11) NOT NULL,
+  `HLA-DRB3,4,5_ex_level` varchar(11) NOT NULL,
+  `HLA-DQB1_allele_group` varchar(11) NOT NULL,
+  `HLA-DQB1_protein` varchar(11) NOT NULL,
+  `HLA-DQB1_syn_exons` varchar(11) NOT NULL,
+  `HLA-DQB1_syn_introns` varchar(11) NOT NULL,
+  `HLA-DQB1_ex_level` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `patient_hla_details`
 --
 
-INSERT INTO `patient_hla_details` (`ph_id`, `patient_id`, `hla_antigen`, `hla_allele_family`, `hla_2nd_type`, `hla_3rd_type`, `hla_4th_type`, `hla_5th_type`) VALUES
-(1, 1, 'HLA-C', '24', '02', '01', '02', 'S'),
-(2, 2, 'HLA-A', '44', '02', '01', '02', 'A');
+INSERT INTO `patient_hla_details` (`ph_id`, `patient_id`, `HLA-A_allele_group`, `HLA-A_protein`, `HLA-A_syn_exons`, `HLA-A_syn_introns`, `HLA-A_ex_level`, `HLA-B_allele_group`, `HLA-B_protein`, `HLA-B_syn_exons`, `HLA-B_syn_introns`, `HLA-B_ex_level`, `HLA-C_allele_group`, `HLA-C_protein`, `HLA-C_syn_exons`, `HLA-C_syn_introns`, `HLA-C_ex_level`, `HLA-DRB1_allele_group`, `HLA-DRB1_protein`, `HLA-DRB1_syn_exons`, `HLA-DRB1_syn_introns`, `HLA-DRB1_ex_level`, `HLA-DRB3,4,5_allele_group`, `HLA-DRB3,4,5_protein`, `HLA-DRB3,4,5_syn_exons`, `HLA-DRB3,4,5_syn_introns`, `HLA-DRB3,4,5_ex_level`, `HLA-DQB1_allele_group`, `HLA-DQB1_protein`, `HLA-DQB1_syn_exons`, `HLA-DQB1_syn_introns`, `HLA-DQB1_ex_level`) VALUES
+(1, 1, '0', '', '', '', '', '', '', '', '', '', '', '0', '', '', '', '0', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(2, 2, '0', '', '', '', '', '', '', '', '', '', '', '0', '', '', '', '0', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patient_hla_summary`
+--
+
+CREATE TABLE `patient_hla_summary` (
+  `phs_id` int(11) NOT NULL,
+  `patient_id` int(11) NOT NULL,
+  `HLA-A` varchar(11) NOT NULL,
+  `HLA-B` varchar(11) NOT NULL,
+  `HLA-C` varchar(11) NOT NULL,
+  `HLA-DRB1` varchar(11) NOT NULL,
+  `HLA-DRB3,4,5` varchar(11) NOT NULL,
+  `HLA-DQB1` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -579,7 +684,8 @@ CREATE TABLE `session` (
   `session_image` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL,
-  `camp_id` int(11) NOT NULL
+  `camp_id` int(11) NOT NULL,
+  `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -591,7 +697,9 @@ CREATE TABLE `session` (
 CREATE TABLE `testing` (
   `test_id` int(11) NOT NULL,
   `test_date` date NOT NULL,
-  `test_time` int(11) NOT NULL
+  `test_time` int(11) NOT NULL,
+  `donor_id` int(11) NOT NULL,
+  `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -647,6 +755,12 @@ CREATE TABLE `user` (
 --
 ALTER TABLE `account`
   ADD PRIMARY KEY (`aid`);
+
+--
+-- Indexes for table `appointments`
+--
+ALTER TABLE `appointments`
+  ADD PRIMARY KEY (`appointment_id`);
 
 --
 -- Indexes for table `bloodbank_reports`
@@ -730,7 +844,8 @@ ALTER TABLE `hospital_reports`
 -- Indexes for table `hospital_stock`
 --
 ALTER TABLE `hospital_stock`
-  ADD PRIMARY KEY (`sample_hid`);
+  ADD PRIMARY KEY (`sample_hid`),
+  ADD KEY `stock-test1` (`hospital_id`);
 
 --
 -- Indexes for table `match_details`
@@ -745,7 +860,9 @@ ALTER TABLE `match_details`
 -- Indexes for table `match_requests`
 --
 ALTER TABLE `match_requests`
-  ADD PRIMARY KEY (`match_request_id`);
+  ADD PRIMARY KEY (`match_request_id`),
+  ADD KEY `patient_id` (`patient_id`),
+  ADD KEY `hospital` (`hospital_id`);
 
 --
 -- Indexes for table `patient`
@@ -768,6 +885,13 @@ ALTER TABLE `patient_hla_details`
   ADD KEY `test5` (`patient_id`);
 
 --
+-- Indexes for table `patient_hla_summary`
+--
+ALTER TABLE `patient_hla_summary`
+  ADD PRIMARY KEY (`phs_id`),
+  ADD KEY `phs` (`patient_id`);
+
+--
 -- Indexes for table `pending_donor`
 --
 ALTER TABLE `pending_donor`
@@ -778,13 +902,16 @@ ALTER TABLE `pending_donor`
 --
 ALTER TABLE `session`
   ADD PRIMARY KEY (`session_id`),
-  ADD KEY `camp_data` (`camp_id`);
+  ADD KEY `camp_data` (`camp_id`),
+  ADD KEY `hospital_id` (`hospital_id`);
 
 --
 -- Indexes for table `testing`
 --
 ALTER TABLE `testing`
-  ADD PRIMARY KEY (`test_id`);
+  ADD PRIMARY KEY (`test_id`),
+  ADD KEY `donor` (`donor_id`),
+  ADD KEY `hos` (`hospital_id`);
 
 --
 -- Indexes for table `transplant_details`
@@ -815,7 +942,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+
+--
+-- AUTO_INCREMENT for table `appointments`
+--
+ALTER TABLE `appointments`
+  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `bloodbank_reports`
@@ -839,25 +972,25 @@ ALTER TABLE `blood_bank`
 -- AUTO_INCREMENT for table `campaign`
 --
 ALTER TABLE `campaign`
-  MODIFY `camp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `camp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `clinician`
 --
 ALTER TABLE `clinician`
-  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `consultant`
 --
 ALTER TABLE `consultant`
-  MODIFY `consultant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `consultant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `donor`
 --
 ALTER TABLE `donor`
-  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `donor_clinical_reports`
@@ -899,13 +1032,13 @@ ALTER TABLE `match_details`
 -- AUTO_INCREMENT for table `match_requests`
 --
 ALTER TABLE `match_requests`
-  MODIFY `match_request_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `match_request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patient_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `patient_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `patient_clinical_reports`
@@ -917,7 +1050,13 @@ ALTER TABLE `patient_clinical_reports`
 -- AUTO_INCREMENT for table `patient_hla_details`
 --
 ALTER TABLE `patient_hla_details`
-  MODIFY `ph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `patient_hla_summary`
+--
+ALTER TABLE `patient_hla_summary`
+  MODIFY `phs_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pending_donor`
@@ -996,10 +1135,23 @@ ALTER TABLE `hospital_reports`
   ADD CONSTRAINT `Test2` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `hospital_stock`
+--
+ALTER TABLE `hospital_stock`
+  ADD CONSTRAINT `stock-test1` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `match_details`
 --
 ALTER TABLE `match_details`
   ADD CONSTRAINT `f3` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `match_requests`
+--
+ALTER TABLE `match_requests`
+  ADD CONSTRAINT `hospital` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `patient_id` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `patient`
@@ -1014,10 +1166,23 @@ ALTER TABLE `patient_hla_details`
   ADD CONSTRAINT `test5` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `patient_hla_summary`
+--
+ALTER TABLE `patient_hla_summary`
+  ADD CONSTRAINT `phs` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `session`
 --
 ALTER TABLE `session`
-  ADD CONSTRAINT `camp_data` FOREIGN KEY (`camp_id`) REFERENCES `campaign` (`camp_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `hospital_id` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `testing`
+--
+ALTER TABLE `testing`
+  ADD CONSTRAINT `donor` FOREIGN KEY (`donor_id`) REFERENCES `donor` (`donor_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `hos` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `transplant_request`

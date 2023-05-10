@@ -9,8 +9,6 @@ if($_SESSION['userlevel']!=3)
 
 $uid=$_SESSION['uid'];
 $username=$_SESSION['username'];
-$hospital_id=$_SESSION['hospital_id'];
-
  ?>
 
 <!DOCTYPE html>
@@ -19,7 +17,7 @@ $hospital_id=$_SESSION['hospital_id'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" type="text/css" href="../../public/css/hospital_navbar.css?v=1">-->
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_navbar.css?v=1">
     <title>Document</title>
  </head>
  <body>
