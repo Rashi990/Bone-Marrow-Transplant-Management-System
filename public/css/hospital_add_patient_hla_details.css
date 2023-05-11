@@ -1,0 +1,181 @@
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.add_patient_hla{
+    position: relative;
+    background-color: #bde4e0;
+    margin: 90px auto;
+    padding: 20px;
+    width: 45%;
+    border-radius: 20px;
+    box-shadow: 20px 10px 34px rgba(0, 0, 0, 0.3);
+    display: block;
+    justify-content:center;
+}
+
+.add_patient_hla h1{
+    margin: 20px auto;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #006296;
+}
+
+.row{
+    margin: 10px 20px 20px 20px;
+    display: flex; 
+}
+
+.col-1{
+    width: 35%;
+    float: left;
+}
+
+.col-2{
+    width: 70%;
+    float: left;
+    margin-left: 10px;
+}
+
+form.add_patient_hla_form fieldset{
+    border: 1px solid #a4a0a066;
+    border-radius: 5px;
+}
+
+form.add_patient_hla_form h3{
+    padding: 5px;
+    text-align: center;
+    color: #006296;
+    margin: 0px 100px 0px 10px;
+    background-color: #a4a0a066;
+    width: 30%;
+    border-radius: 5px;
+}
+
+form.add_patient_hla_form label{
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+}
+
+form.add_patient_hla_form input[type="text"],[type="tel"],[type="email"],[type="number"],[type="date"]{
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+    line-height: 20px;
+    padding: 2px 10px;
+}
+
+form.add_patient_hla_form select{
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    line-height: 20px;
+    padding: 2px 10px;
+}
+
+form.add_patient_hla_form .lbl{
+    float: left;
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 3px;
+    margin-right: 30px;
+    color: #342c2c;
+}
+
+.btn{
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 3px 30px ;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.btn:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+    cursor: pointer;
+}
+
+.back_btn{
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 5px 30px ;
+    transition: 0.5s;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.back_btn:hover{
+    cursor: pointer;
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+.next_btn{
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 5px 30px ;
+    transition: 0.5s;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.next_btn:hover{
+    cursor: pointer;
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+
+.err{
+    background-color: #f61313;
+    color: #F7FFFF;
+    width: 800px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 20px 10px 34px rgba(0, 0, 0, 0.3);
+}
+
+.err a{
+    position: relative;
+    padding: 10px;
+    float: right;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.err a:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+
+
+

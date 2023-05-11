@@ -26,7 +26,7 @@ $username=$_SESSION['username'];
  <div class="top-nav">
 
 <div class="head">
-    <h1>Patient Matchings</h1>
+    <h1>Patient HLA Matchings</h1>
 </div>
 
   <div class="search">

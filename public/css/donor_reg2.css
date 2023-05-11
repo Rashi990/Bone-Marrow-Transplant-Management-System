@@ -1,15 +1,17 @@
 body{
     overflow: hidden;
+    font-family: 'Poppins';
 }
-.container{
-  margin-top: 50px;
+.container#blur.active{
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
 }
+
 .checklist-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-  
-    margin-left: 22%;
-    
+    margin-left: 19%;
     background: #D7F0ED;
     border-radius: 20px;
     display:flex;
@@ -18,129 +20,78 @@ body{
     position: absolute;
     width: 60%;
     height: 55%;
-    margin-top: 80px;
-
-
-  }
-
-
-  .details{
+    margin-top: 8.5%;
     color: #006296;
+    height: 63.5%;
   }
 
-  .selections{
+.details{
+    padding-top: 8px ;
+    margin-bottom: 5px;
+  }
 
-
+.selections{
 position: absolute;
-left: 15%;
-right: 12.92%;
-top: 5%;
-bottom: 77.25%;
-
-font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
-font-size: 20px;
+font-size: 16px;
 line-height: 48px;
-
-
-
-
-  
-  
-
-
-
-
-  
-
-
-
-
-
-color: #006296;
+padding-top: 5px;
 
   }
-
+/*
 .check1{
-    left: 500px;
-
-
-
+left: 500px;
 position: absolute;
 width: 326px;
 height: 29px;
 left: 20px;
-top: 150px;
-
+top: 8px;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
 line-height: 30px;
-
 color: #006296;
 
 
-
-
-
-
-
 }
+
 .check2{
    
-    align-items: right;
+align-items: right;
 position: absolute;
 width: 400px;
 height: 29px;
 left: 375px;
 top: 0px;
-
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
 line-height: 30px;
-
 color: #006296;
 
-
-
-
-
-
-
-
 }
+*/
 
 
 
-
-
-
-
-.cb{
-
-}
 
 .heading{ 
 
 position: absolute;
-width:670px;
 top: 2%;
 font-family: 'Poppins';
 font-style: normal;
-font-weight: 500;
-font-size: 25px;
+font-weight: 200;
+font-size: 20px;
 line-height: 30px;
 text-align: justify;
-
 color: #006296;
-
-
+padding-top: 3%;
+left: 9.5%;
   }
-
 
 
 .pre-btn{
@@ -152,7 +103,7 @@ color: #006296;
     position: absolute;
     box-sizing: border-box;
     height: 49px;
-    width: 200px;
+    width: 180px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -164,8 +115,11 @@ color: #006296;
     background: #FFFFFF;
     border: 2px solid #308C83;
     border-radius: 16px;
-    left: 32.4%;
-    top: 85%;
+    left: 5%;
+    top: 84%;
+    font-size:16px;
+    color: #006296;
+   
   
   }
   
@@ -173,8 +127,12 @@ color: #006296;
   
   
   .pre-btn:hover {
-    background-color: #e4e3ff;
-  }
+  background-color: #006296;
+  color: #F7FFFF;
+}
+
+
+  
 
 
 
@@ -232,7 +190,7 @@ border-radius: 30px;
 }
 
 
-.fnt{
+/*.fnt{
  
 padding-top: none;
 width: 224px;
@@ -251,6 +209,7 @@ color: #308C83;
 
 
 }  
+*/
 
 
 .fnt2{
@@ -297,3 +256,111 @@ color: #308C83;
 .bottom p{
     left: 35%;
 }
+
+
+
+
+table{
+  border: 0;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+color: #006296;
+margin-top: 8%;
+margin-left: -1%;
+
+}
+ td{
+  height: 50px;
+}
+
+#mssg{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+    width: 600px; 
+    height: 300px;
+    background: #D7F0ED;
+   
+  border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%) scale(0.1);
+    padding:0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s , top 0.4s;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+#mssg.active{
+  visibility: visible;
+  top: 40%;
+  opacity: 1;
+  transform: translate(-50% , -35%) scale(1);
+}
+.mssg h2{
+  font-size: 30px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+  position: relative;
+  font-family: 'Poppins';
+  font-style: normal;
+  line-height: 30px;
+  text-align: center;
+  color: #006296;
+
+
+
+
+
+}
+
+.mssg p{
+
+  font-style: normal;
+  position: absolute;
+  font-family: 'Poppins';
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  color: #006296;
+  height: 50px;
+  margin-left: 30px;
+}
+
+
+
+.mssg button{
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 130px;
+  padding: 10px 0;
+  background: #006296;
+  color: #F7FFFF;
+  outline:none;
+  font-size:18px;
+  border-radius:10px;
+  cursor:pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+

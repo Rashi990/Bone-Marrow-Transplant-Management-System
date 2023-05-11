@@ -8,6 +8,7 @@
 
   if($result){
   while($row=mysqli_fetch_assoc($result)){
+    $clinician_id = $row['clinician_id'];
     $id='CLID'.str_pad($row['clinician_id'],3,'0',STR_PAD_LEFT);
     $name=$row['clinician_name'];
     $email=$row['email'];
@@ -23,7 +24,7 @@
 
     echo "<td><a href='hospital_view_clinicians.php?viewid=".$id."' class='view'><span class='material-icons'>visibility</span></a></td>";
     echo "<td><a href='hospital_update_clinicians.php?updateid=".$id."' class='edit'><span class='material-icons'>edit_square</span></a></td>";
-    echo "<td><a href='hospital_delete_clinicians.php?deleteid=".$id."' class='delete'><span class='material-icons'>delete</span></td>";
+    echo "<td><a href='hospital_delete_clinicians.php?deleteid=".$clinician_id."' class='delete'><span class='material-icons'>delete</span></td>";
 
 
   echo "</tr>";
