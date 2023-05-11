@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
   $route=$_POST['route'];
   $frequency=$_POST['frequency'];
 
-    $sql="UPDATE patient_clinical_reports SET patient_cr_id=$patient_cr_id, patient_id=$patient_id, date='$date', drug_name='$drug_name', dosage='$dosage', route='$route', frequency='$frequency' WHERE patient_cr_id=$patient_cr_id";
+    $sql="UPDATE patient_clinical_reports SET patient_cr_id=$patient_cr_id, patient_id='$patient_id', date='$date', drug_name='$drug_name', dosage='$dosage', route='$route', frequency='$frequency' WHERE patient_cr_id=$patient_cr_id";
     $result=mysqli_query($connection,$sql);
     if($result){
         //echo "Data updated successfully";

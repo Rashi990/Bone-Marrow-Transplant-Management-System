@@ -1,7 +1,7 @@
 <?php require_once('consultant_navbar_appointment.php'); ?>
 <?php
 session_start();
-if($_SESSION['userlevel']=1)
+if (isset($_SESSION['username']))
 {
 include '../../config/connection.php';
 
@@ -25,17 +25,10 @@ else{
   die(mysqli_error($connection));
 }
 if(isset($_POST['submit'])){
-  $appointment_id=$_POST['appointment_id'];
-  $patient_name=$_POST['patient_name'];
-  $telephone_no=$_POST['telephone_no'];
-  $email=$_POST['email'];
-  $appointment_date=$_POST['appointment_date'];
-  $appointment_time=$_POST['appointment_time'];
-  $apply_date=$_POST['apply_date'];
   $status=$_POST['status'];
   $remark=$_POST['remark'];
 
-    $sql="UPDATE appointments SET appointment_id=$appointment_id, patient_name=$patient_name, telephone_no='$telephone_no', email='$email', appointment_date='$appointment_date', appointment_time='$appointment_time', apply_date='$apply_date', status='$status', remark='$remark' WHERE appointment_id=$appointment_id";
+    $sql0="UPDATE appointments SET patient_name=$patient_name, appointment_date='$appointment_date', appointment_time='$appointment_time', apply_date='$apply_date', status='$status', remark='$remark' WHERE appointment_id=$appointment_id";
     $result=mysqli_query($connection,$sql);
     if($result){
         header('location:consultant_appointments.php');
@@ -87,43 +80,43 @@ if(isset($_POST['submit'])){
         <form class="" action="" method="post">
           <div class="row">
             <label class="lbl">Appointment ID: </label>
-            <label class="data" name="aapointment_id" value=<?php echo $appointment_id ?>></label>
+            <label class="data" name="aapointment_id" value=""  ><?php echo $appointment_id ?></label>
           </div>
           <div class="row">
             <label class="lbl">Patient Name: </label>
-            <label class="data"name="patient_name" value=<?php echo $patient_name ?>></label>
+            <label class="data"name="patient_name" value=""><?php echo $patient_name ?></label>
           </div>
           <div class="row">
             <label class="lbl">Mobile Number: </label>
-            <label class="data" name="Mobile Number" value=<?php echo $telephone_no ?>></label>
+            <label class="data" name="Mobile Number" value=""><?php echo $telephone_no ?></label>
           </div>
           <div class="row">
             <label class="lbl">Email: </label>
-            <label class="data" name="Email" value=<?php echo $email ?>></label>
+            <label class="data" name="Email" value=""><?php echo $email ?></label>
           </div>
           <div class="row">
             <label class="lbl">Appointment Date: </label>
-            <label class="data" name="Appointment Date" value=<?php echo $appointment_date ?>></label>
+            <label class="data" name="Appointment Date" value=""><?php echo $appointment_date ?></label>
           </div>
           <div class="row">
             <label class="lbl">Appointment Time: </label>
-            <label class="data" name="Appointment Time" value=<?php echo $appointment_time ?>></label>
+            <label class="data" name="Appointment Time" value=""><?php echo $appointment_time ?></label>
           </div>
           <div class="row">
             <label class="lbl">Apply Date: </label>
-            <label class="data" name="Apply Date" value=<?php echo $apply_date ?>></label>
+            <label class="data" name="Apply Date" value=""><?php echo $apply_date ?></label>
           </div>
           <div class="row">
             <label class="lbl">Status: </label>
             <select class="status" name="status">
-              <option value="default"><?php echo $status ?></option>
-              <option value="approved">Approved</option>
-              <option value="cancelled">Cancelled</option>
+              <option name="status" value="default"><?php echo $status ?></option>
+              <option name="status" value="approved">Approved</option>
+              <option name="status" value="cancelled">Cancelled</option>
             </select>
           </div>
           <div class="row">
             <label class="lbl">Remark: </label>
-            <textarea class="remark" name="Remark" value=<?php echo $remark ?>></textarea>
+            <textarea class="remark" name="remark" value="remark"><?php echo $remark ?></textarea>
           </div>
           <div class="btns">
             <button type="cancel" name="cancel">Cancel</button>

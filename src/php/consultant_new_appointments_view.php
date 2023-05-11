@@ -61,15 +61,15 @@ else{
     <div class="board">
       <div class="pd">
         <h3 align="center">Patient Details</h3>
-        <p>Appointment ID: <?php echo $appointment_id ?></p>
-        <p>Patient Name: <?php echo $patient_name ?></p>
-        <p>Mobile Number: <?php echo $telephone_no ?></p>
-        <p>Email: <?php echo $email ?></p>
-        <p>Appointment Date: <?php echo $appointment_date ?></p>
-        <p>Appointment Time: <?php echo $appointment_time ?></p>
-        <p>Apply Date: <?php echo $apply_date ?></p>
-        <p>Status: <?php echo $status ?></p>
-        <p>Remark: <?php echo $remark ?></p>
+        <p>Appointment ID: <?php echo $appointment_id; ?></p>
+        <p>Patient Name: <?php echo $patient_name; ?></p>
+        <p>Mobile Number: <?php echo $telephone_no; ?></p>
+        <p>Email: <?php echo $email; ?></p>
+        <p>Appointment Date: <?php echo $appointment_date; ?></p>
+        <p>Appointment Time: <?php echo $appointment_time; ?></p>
+        <p>Apply Date: <?php echo $apply_date; ?></p>
+        <p>Status: <?php echo $status; ?></p>
+        <p>Remark: <?php echo $remark; ?></p>
       </div>
       <div class="btn">
         <?php
