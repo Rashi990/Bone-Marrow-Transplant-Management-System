@@ -19,8 +19,8 @@
 
 <!--HLA class 1-->
         <!---HLA-A-->
+        <h3>HLA-A*</h3>
         <fieldset>
-                <h3>HLA-A*</h3>
             <div class="row">
                 <div class="col-1">
                     <label>HLA-A* Allele Group</label>
@@ -30,7 +30,6 @@
                     <input name="HLA-A_allele_group" id="HLA-A_allele_group" value="<?=(isset($hla_A_ag) ? $hla_A_ag : '')?>" type="text" onblur="required_name()" required >
                       <!--placeholder="Enter Allele Group"-->
 
-                    <input name="allele_group" id="allele_group" placeholder="Enter Allele Group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
 
                 </div>
             </div>	
@@ -44,8 +43,6 @@
                     <input name="HLA-A_protein" id="HLA-A_protein" value="<?=(isset($hla_A_pro) ? $hla_A_pro : '')?>" type="text" onblur="required_name()" required >
                      <!--placeholder="Enter Number of Different Proteins"-->
 
-                    <input name="proteins" id="proteins" placeholder="Enter Number of Different Proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
-
                 </div>
             </div>	
 
@@ -57,8 +54,6 @@
 
                     <input name="HLA-A_syn_exons" id="HLA-A_syn_exons" value="<?=(isset($hla_A_exo) ? $hla_A_exo : '')?>" type="text" onblur="required_name()" required >
                     <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
-
-                    <input name="exons" id="exons" placeholder="Enter Number of Synonymous mutations in Exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
 
                 </div>
             </div>	
@@ -72,14 +67,12 @@
                     <input name="HLA-A_syn_introns" id="HLA-A_syn_introns" value="<?=(isset($hla_A_intro) ? $hla_A_intro : '')?>" type="text" onblur="required_name()" required >
                     <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
 
-                    <input name="introns" id="introns" placeholder="Enter Number of Synonymous mutations in Introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
-
                 </div>
             </div>	
 
             <div class="row">
                 <div class="col-1">
-                    <label>HLA-A* Express Level</label>
+                    <label>HLA-A* Level</label>
                 </div>
                 <div class="col-2">
                     <select name="HLA-A_ex_level" id="HLA-A_ex_level">
@@ -95,8 +88,8 @@
         </fieldset>
 
          <!---HLA-B-->
-         <fieldset>
-            <h3>HLA-B*</h3>
+        <h3>HLA-B*</h3>
+        <fieldset>
         <div class="row">
             <div class="col-1">
                 <label>HLA-B* Allele Group</label>
@@ -105,8 +98,6 @@
 
                 <input name="HLA-B_allele_group" id="HLA-B_allele_group" value="<?=(isset($hla_B_ag) ? $hla_B_ag : '')?>" type="text" onblur="required_name()" required >
                  <!-- placeholder="Enter Allele Group" -->
-
-                <input name="allele_group" id="allele_group" placeholder="Enter Allele Group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
 
             </div>
         </div>	
@@ -120,8 +111,6 @@
                 <input name="HLA-B_protein" id="HLA-B_protein" value="<?=(isset($hla_B_pro) ? $hla_B_pro : '')?>" type="text" onblur="required_name()" required >
                    <!-- placeholder="Enter Number of Different Proteins"-->
 
-                <input name="proteins" id="proteins" placeholder="Enter Number of Different Proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
-
             </div>
         </div>	
 
@@ -134,8 +123,6 @@
                 <input name="HLA-B_syn_exons" id="HLA-B_syn_exons" value="<?=(isset($hla_B_exo) ? $hla_B_exo : '')?>" type="text" onblur="required_name()" required >
                  <!-- placeholder="Enter Number of Synonymous mutations in Exons"-->
 
-                <input name="exons" id="exons" placeholder="Enter Number of Synonymous mutations in Exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
-
             </div>
         </div>	
 
@@ -144,19 +131,15 @@
                 <label>HLA-B* Introns</label>
             </div>
             <div class="col-2">
-
                 <input name="HLA-B_syn_introns" id="HLA-B_syn_introns" value="<?=(isset($hla_B_intro) ? $hla_B_intro : '')?>" type="text" onblur="required_name()" required >
                  <!-- placeholder="Enter Number of Synonymous mutations in Introns"-->
-
-                <input name="introns" id="introns" placeholder="Enter Number of Synonymous mutations in Introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
         <div class="row">
             <div class="col-1">
-                <label>HLA-B* Express Level</label>
+                <label>HLA-B* Level</label>
             </div>
-            <br>
             <div class="col-2">
                 <select name="HLA-B_ex_level" id="HLA-B_ex_level">
                     <option value="N">N</option>
@@ -171,8 +154,8 @@
     </fieldset>
 
            <!---HLA-C-->
-           <fieldset>
-            <h3>HLA-C*</h3>
+           <h3>HLA-C*</h3>
+           <fieldset>  
         <div class="row">
             <div class="col-1">
                 <label>HLA-C* Allele Group</label>
@@ -180,8 +163,6 @@
             <div class="col-2">
                 <input name="HLA-C_allele_group" id="HLA-C_allele_group" value="<?=(isset($hla_C_ag) ? $hla_C_ag : '')?>" type="text" onblur="required_name()" required >
                 <!-- placeholder="Enter Allele Group" -->
-
-                <input name="allele_group" id="allele_group" placeholder="Enter Allele Group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -192,7 +173,6 @@
             <div class="col-2">
                 <input name="HLA-C_protein" id="HLA-C_protein" value="<?=(isset($hla_C_pro) ? $hla_C_pro : '')?>" type="text" onblur="required_name()" required >
                 <!--placeholder="Enter Number of Different Proteins" -->
-                <input name="proteins" id="proteins" placeholder="Enter Number of Different Proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -203,8 +183,6 @@
             <div class="col-2">
                 <input name="HLA-C_syn_exons" id="HLA-C_syn_exons" value="<?=(isset($hla_C_exo) ? $hla_C_exo : '')?>" type="text" onblur="required_name()" required >
                 <!-- placeholder="Enter Number of Synonymous mutations in Exons"-->
-
-                <input name="exons" id="exons" placeholder="Enter Number of Synonymous mutations in Exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -215,15 +193,12 @@
             <div class="col-2">
                 <input name="HLA-C_syn_introns" id="HLA-C_syn_introns" value="<?=(isset($hla_C_intro) ? $hla_C_intro : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
-
-                <input name="introns" id="introns" placeholder="Enter Number of Synonymous mutations in Introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
-
             </div>
         </div>	
 
         <div class="row">
             <div class="col-1">
-                <label>HLA-C* Express Level</label>
+                <label>HLA-C* Level</label>
             </div>
             <div class="col-2">
                 <select name="HLA-C_ex_level" id="HLA-C_ex_level">
@@ -240,8 +215,8 @@
 
     <!--HLA Class 2-->
            <!---HLA-DRB1-->
+           <h3>HLA-DRB1*</h3>
            <fieldset>
-            <h3>HLA-DRB1*</h3>
         <div class="row">
             <div class="col-1">
                 <label>HLA-DRB1* Allele Group</label>
@@ -249,7 +224,6 @@
             <div class="col-2">
                 <input name="HLA-DRB1_allele_group" id="HLA-DRB1_allele_group" value="<?=(isset($hla_DRB1_ag) ? $hla_DRB1_ag : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Allele Group" -->
-                <input name="allele_group" id="allele_group" placeholder="Enter Allele Group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -260,8 +234,6 @@
             <div class="col-2">
                 <input name="HLA-DRB1_protein" id="HLA-DRB1_protein" value="<?=(isset($hla_DRB1_pro) ? $hla_DRB1_pro : '')?>" type="text" onblur="required_name()" required >
                   <!--placeholder="Enter Number of Different Proteins" -->
-
-                <input name="proteins" id="proteins" placeholder="Enter Number of Different Proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -272,8 +244,6 @@
             <div class="col-2">
                 <input name="HLA-DRB1_syn_exons" id="HLA-DRB1_syn_exons" value="<?=(isset($hla_DRB1_exo) ? $hla_DRB1_exo : '')?>" type="text" onblur="required_name()" required >
                 <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
-
-                <input name="exons" id="exons" placeholder="Enter Number of Synonymous mutations in Exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -284,13 +254,12 @@
             <div class="col-2">
                 <input name="HLA-DRB1_syn_introns" id="HLA-DRB1_syn_introns" value="<?=(isset($hla_DRB1_intro) ? $hla_DRB1_intro : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
-                <input name="introns" id="introns" placeholder="Enter Number of Synonymous mutations in Introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
         <div class="row">
             <div class="col-1">
-                <label>HLA-DRB1* Express Level</label>
+                <label>HLA-DRB1* Level</label>
             </div>
             <div class="col-2">
                 <select name="HLA-DRB1_ex_level" id="HLA-DRB1_ex_level">
@@ -306,8 +275,8 @@
     </fieldset>
 
          <!---HLA-DRB3,4,5*-->
+         <h3>HLA-DRB3,4,5*</h3>
          <fieldset>
-            <h3>HLA-DRB3,4,5*</h3>
         <div class="row">
             <div class="col-1">
                 <label>HLA-DRB3,4,5* Allele Group</label>
@@ -315,8 +284,6 @@
             <div class="col-2">
                 <input name="HLA-DRB3,4,5_allele_group" id="HLA-DRB3,4,5_allele_group" value="<?=(isset($hla_DRB3_ag) ? $hla_DRB3_ag : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Allele Group" -->
-
-                <input name="allele_group" id="allele_group" placeholder="Enter Allele Group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -327,7 +294,6 @@
             <div class="col-2">
                 <input name="HLA-DRB3,4,5_protein" id="HLA-DRB3,4,5_protein" value="<?=(isset($hla_DRB3_pro) ? $hla_DRB3_pro : '')?>" type="text" onblur="required_name()" required >
                 <!--placeholder="Enter Number of Different Proteins" -->
-                <input name="proteins" id="proteins" placeholder="Enter Number of Different Proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -338,8 +304,6 @@
             <div class="col-2">
                 <input name="HLA-DRB3,4,5_syn_exons" id="HLA-DRB3,4,5_syn_exons" value="<?=(isset($hla_DRB3_exo) ? $hla_DRB3_exo : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
-
-                <input name="exons" id="exons" placeholder="Enter Number of Synonymous mutations in Exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -350,13 +314,12 @@
             <div class="col-2">
                 <input name="HLA-DRB3,4,5_syn_introns" id="HLA-DRB3,4,5_syn_introns" value="<?=(isset($hla_DRB3_intro) ? $hla_DRB3_intro : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
-                <input name="introns" id="introns" placeholder="Enter Number of Synonymous mutations in Introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
         <div class="row">
             <div class="col-1">
-                <label>HLA-DRB3,4,5* Express Level</label>
+                <label>HLA-DRB3,4,5* Level</label>
             </div>
             <div class="col-2">
                 <select name="HLA-DRB3,4,5_ex_level" id="HLA-DRB3,4,5_ex_level">
@@ -372,8 +335,8 @@
     </fieldset>
 
          <!---HLA-DQB1*-->
+         <h3>HLA-DQB1*</h3>
          <fieldset>
-            <h3>HLA-DQB1*</h3>
         <div class="row">
             <div class="col-1">
                 <label>HLA-DQB1* Allele Group</label>
@@ -381,7 +344,6 @@
             <div class="col-2">
                 <input name="HLA-DQB1_allele_group" id="HLA-DQB1_allele_group" value="<?=(isset($hla_DQB1_ag) ? $hla_DQB1_ag : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Allele Group" -->
-                <input name="allele_group" id="allele_group" placeholder="Enter Allele Group" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -392,7 +354,6 @@
             <div class="col-2">
                 <input name="HLA-DQB1_protein" id="HLA-DQB1_protein" value="<?=(isset($hla_DQB1_pro) ? $hla_DQB1_pro : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Number of Different Proteins" -->
-                <input name="proteins" id="proteins" placeholder="Enter Number of Different Proteins" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -403,7 +364,6 @@
             <div class="col-2">
                 <input name="HLA-DQB1_syn_exons" id="HLA-DQB1_syn_exons" value="<?=(isset($hla_DQB1_exo) ? $hla_DQB1_exo : '')?>" type="text" onblur="required_name()" required >
                   <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
-                <input name="exons" id="exons" placeholder="Enter Number of Synonymous mutations in Exons" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
@@ -414,13 +374,12 @@
             <div class="col-2">
                 <input name="HLA-DQB1_syn_introns" id="HLA-DQB1_syn_introns" value="<?=(isset($hla_DQB1_intro) ? $hla_DQB1_intro : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
-                <input name="introns" id="introns" placeholder="Enter Number of Synonymous mutations in Introns" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
             </div>
         </div>	
 
         <div class="row">
             <div class="col-1">
-                <label>HLA-DQB1* Express Level</label>
+                <label>HLA-DQB1* Level</label>
             </div>
             <div class="col-2">
                 <select name="HLA-DQB1_ex_level" id="HLA-DQB1_ex_level">

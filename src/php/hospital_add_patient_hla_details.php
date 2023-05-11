@@ -1,4 +1,4 @@
-<?php require_once('hospital_navbar.php'); ?>
+
 <?php
 require_once('../../config/connection.php');
 session_start();
@@ -10,16 +10,15 @@ if($_SESSION['userlevel']!=3)
 $uid=$_SESSION['uid'];
 $username=$_SESSION['username'];
 $hospital_id=$_SESSION['hospital_id'];
-$patient_id=$_GET['patient_id'];
+
+$id=$_GET['add-id'];
+$patient_id=intval(substr($id, 3));
 
 ?>
 
 <?php
 
   if(isset($_POST['submit'])){
-
-    //$hid=$_POST['ph_id'];
-    //$pid=$_POST['patient_id'];
 
     $hla_A_ag=$_POST['HLA-A_allele_group'];
     $hla_A_pro=$_POST['HLA-A_protein'];
@@ -76,12 +75,7 @@ $patient_id=$_GET['patient_id'];
           `$hla_DRB3_ag`, `$hla_DRB3_pro`, `$hla_DRB3_exo`, `$hla_DRB3_intro`, `$hla_DRB3_lvl`,
           `$hla_DQB1_ag`, `$hla_DQB1_pro`, `$hla_DQB1_exo`, `$hla_DQB1_intro`, `$hla_DQB1_lvl`
         ) 
-          SELECT
-        `patient_id`
-          FROM
-        `patient`
-          WHERE
-        `patient_id` = '$patient_id'; ";
+          ";
 
     $result=mysqli_query($connection,$sql);
 
@@ -122,14 +116,16 @@ $patient_id=$_GET['patient_id'];
   </div>
   </div>
 -->
+
+<!--
 <div class="top">
         <span class="material-icons">notifications</span>
         <span class="material-icons">chat_bubble</span>
         <div class="Loggedin"> Welcome! <?php echo $username;?></div>
         <span class="material-icons">account_circle</span>
       </div>
-<!--
-</div>
+
+
 -->
  </body>
  </html>
