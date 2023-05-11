@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2023 at 06:28 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- Generation Time: May 01, 2023 at 08:47 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `account` (
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `userlevel` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `account`
@@ -100,7 +100,10 @@ INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `userlevel`) VALUES
 (66, '32', 'niseka', 'Ni1234', 2),
 (67, '33', 'gayesha', 'Ga1234', 2),
 (68, '34', 'ishara', 'Ish123', 2),
-(70, '39', 'kasun', 'Ka1234', 1);
+(70, '39', 'kasun', 'Ka1234', 1),
+(71, '35', 'nehara', 'Neha22', 2),
+(72, '40', 'janitha', 'Ja1234', 1),
+(73, '36', 'madu', 'Ma1122', 2);
 
 -- --------------------------------------------------------
 
@@ -112,7 +115,7 @@ CREATE TABLE `bloodbank_reports` (
   `report_bid` int(11) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -129,7 +132,7 @@ CREATE TABLE `bloodbank_stock` (
   `arrival_time` time NOT NULL,
   `expiry_date` date NOT NULL,
   `status` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `bloodbank_stock`
@@ -150,7 +153,7 @@ CREATE TABLE `blood_bank` (
   `email` varchar(255) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `blood_bank`
@@ -171,14 +174,14 @@ CREATE TABLE `campaign` (
   `camp_date` date NOT NULL,
   `camp_time` time NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `campaign`
 --
 
 INSERT INTO `campaign` (`camp_id`, `camp_name`, `camp_date`, `camp_time`, `hospital_id`) VALUES
-(1, 'Introduction', '2023-02-09', '00:00:11', 1);
+(1, 'introduction about boan marrow ', '2023-02-09', '19:34:00', 1);
 
 -- --------------------------------------------------------
 
@@ -192,39 +195,43 @@ CREATE TABLE `clinician` (
   `email` varchar(100) NOT NULL,
   `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `clinician`
 --
 
-INSERT INTO `clinician` (`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `hospital_id`) VALUES
-(1, 'Thilini De Mel', '9898.thilini@gmail.com', '0772440643', 'No.2/61, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', 1),
-(2, 'Nisal', 'nis@gmail.com', '0115555448', 'Flower Road, Kandy', 2),
-(3, 'Ashi', 'ash@gamil.com', '0112997222', '77/A, Galle Road, Colombo', 2),
-(4, 'Dinu', 'di@gmail.com', '0112996666', '44/97, Silver Street , Matara', 1),
-(6, 'Hashi', 'hashi@gmail.com', '0112467999', '55/99, Baker Street, Colombo', 1),
-(7, 'Mashi', 'mashi@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', 1),
-(8, 'Samantha', 'sam@gmail.com', '0778866111', '44/2,Mahawa Road,Galle', 2),
-(9, 'Fathima', 'fa@gmail.com', '0778866000', '44/9,Matara Road, Matara', 2),
-(12, 'Sanjana', 'sanj@gmail.com', '0778861111', '22/9,Galle Road, Colombo', 1),
-(13, 'Sarath Silva', 'sarath@gmail.com', '0778862222', '78/5, Main Road, Jaffna', 3),
-(15, 'P.Samaranayaka', 'sama@gmail.com', '0778866111', 'Main Road, Colombo', 1),
-(16, 'Mashi', 'ma@gmail.com', '0778866667', 'Panideniya Road, Kandy', 1),
-(17, 'mahagama', 'mahaga@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', 1),
-(18, 'hoo', 'hoo@gmail.com', '0778866667', 'Main Road, Colombo', 1),
-(20, 'laa', 'laa@gmail.com', '0778866667', 'Main Road, Colombo', 2),
-(21, 'sa', 'sa@gmail.com', '0778866667', 'Main Road, Colombo', 2),
-(22, 'oo', 'oo@gmail.com', '0778866667', 'Main Road, Colombo', 1),
-(24, 'ddd', 'ddd@gmail.com', '0778866667', 'Main Road, Colombo', 1),
-(25, 'Ishara Silva', 'ish@gmail.com', '0778866667', 'Main Road, Colombo', 1),
-(26, 'Desha Kavya', 'desh@gmail.com', '0778866111', 'Main Road, Colombo', 1),
-(27, 'Shriya Aseka', 'shri@gmail.com', '0778866000', 'Main Road, Colombo', 1),
-(29, 'Nishanthi Gamage', 'nish@gmail.com', '0778866000', 'Panideniya Road, Kandy', 1),
-(32, 'Niseka', 'nise@gmail.com', '0778866667', 'Main Road, Colombo', 14),
-(33, 'Gayesha', 'Gaye@gmail.com', '0778866667', 'Main Road, Colombo', 14),
-(34, 'Ishara', 'ishara@gmail.com', '0778866667', 'Main Road, Colombo', 14);
+INSERT INTO `clinician` (`clinician_id`, `clinician_name`, `email`, `telephone_no`, `address`, `username`, `password`, `hospital_id`) VALUES
+(1, 'Thilini De Mel', '9898.thilini@gmail.com', '0772440643', 'No.2/61, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', '', '', 1),
+(2, 'Nisal', 'nis@gmail.com', '0115555448', 'Flower Road, Kandy', '', '', 2),
+(3, 'Ashi', 'ash@gamil.com', '0112997222', '77/A, Galle Road, Colombo', '', '', 2),
+(4, 'Dinu', 'di@gmail.com', '0112996666', '44/97, Silver Street , Matara', '', '', 1),
+(6, 'Hashi', 'hashi@gmail.com', '0112467999', '55/99, Baker Street, Colombo', '', '', 1),
+(7, 'Mashi', 'mashi@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', '', '', 1),
+(8, 'Samantha', 'sam@gmail.com', '0778866111', '44/2,Mahawa Road,Galle', '', '', 2),
+(9, 'Fathima', 'fa@gmail.com', '0778866000', '44/9,Matara Road, Matara', '', '', 2),
+(12, 'Sanjana', 'sanj@gmail.com', '0778861111', '22/9,Galle Road, Colombo', '', '', 1),
+(13, 'Sarath Silva', 'sarath@gmail.com', '0778862222', '78/5, Main Road, Jaffna', '', '', 3),
+(15, 'P.Samaranayaka', 'sama@gmail.com', '0778866111', 'Main Road, Colombo', '', '', 1),
+(16, 'Mashi', 'ma@gmail.com', '0778866667', 'Panideniya Road, Kandy', '', '', 1),
+(17, 'mahagama', 'mahaga@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', '', '', 1),
+(18, 'hoo', 'hoo@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 1),
+(20, 'laa', 'laa@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 2),
+(21, 'sa', 'sa@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 2),
+(22, 'oo', 'oo@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 1),
+(24, 'ddd', 'ddd@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 1),
+(25, 'Ishara Silva', 'ish@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 1),
+(26, 'Desha Kavya', 'desh@gmail.com', '0778866111', 'Main Road, Colombo', '', '', 1),
+(27, 'Shriya Aseka', 'shri@gmail.com', '0778866000', 'Main Road, Colombo', '', '', 1),
+(29, 'Nishanthi Gamage', 'nish@gmail.com', '0778866000', 'Panideniya Road, Kandy', '', '', 1),
+(32, 'Niseka', 'nise@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 14),
+(33, 'Gayesha', 'Gaye@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 14),
+(34, 'Ishara', 'ishara@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 14),
+(35, 'K.G.Nehara Wijesiri', 'nehara@gmail.com', '0778866999', 'Main Road, Colombo', '', '', 13),
+(36, 'H.Maduri Kumar', 'madu@gmail.com', '0778866111', 'Main Road, Colombo', '', '', 13);
 
 -- --------------------------------------------------------
 
@@ -239,49 +246,52 @@ CREATE TABLE `consultant` (
   `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
   `image` mediumblob NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `consultant`
 --
 
-INSERT INTO `consultant` (`consultant_id`, `consultant_name`, `email`, `telephone_no`, `address`, `image`, `hospital_id`) VALUES
-(1, 'Thilini De Mel', '9898.thilini@gmail.com', '772440643', 'No.61/2, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', '', 1),
-(2, 'Malsha Samadhika', 'malsha@gmail.com', '771234567', 'No.235, Kandy Road, Kegalle', '', 1),
-(3, 'Rashini Lakshika', 'rash@gmail.com', '712589634', 'No.24/3, Park Road, Galle', '', 2),
-(4, 'Subodhinie', 'subo@gmail.com', '759865472', 'No.33, Upper Lake Road, Colombo 07', '', 3),
-(8, 'vin', 'vin@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(9, 'yo', 'yo@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(10, 'din', 'din@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(11, 'js', 'js@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(12, 'fa', 'fa@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(13, 'mas', 'mas@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(14, 'dd', 'dd@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(15, 'gg', 'gg@gmail.com', '0778866111', 'Main Road, Colombo', '', 1),
-(16, 'jone', 'jo@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(17, 'sa', 'sa@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(18, 'go', 'go@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(19, 'noo', 'noo@gmail.com', '0778866667', 'Main Road, Colombo', '', 2),
-(20, 'ww', 'ww@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(21, 'mee', 'mee@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(22, 'cc', 'cc@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(23, 'bb', 'bb@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(24, 'hh', 'hhh@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(25, 'kk', 'kkk@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(26, 'pp', 'pp@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(27, 'xx', 'xx@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(28, 'tt', 'tt@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(29, 'gaa', 'gaa@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(30, 'qq', 'qq@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(31, 'perera', 'pee@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(32, 'silva', 'si@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(33, 'Kee Silva', 'kee@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(34, 'Rashi Herath', 'ra@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(35, 'Mali ', 'mali@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(36, 'Himaya', 'hima@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(37, 'Masha Silva', 'masha@gmail.com', '0778866667', 'Main Road, Colombo', '', 1),
-(39, 'Kasun Rathnayaka', 'kasun@gmail.com', '0778866667', 'Main Road, Colombo', '', 14);
+INSERT INTO `consultant` (`consultant_id`, `consultant_name`, `email`, `telephone_no`, `address`, `image`, `username`, `password`, `hospital_id`) VALUES
+(1, 'Thilini De Mel', '9898.thilini@gmail.com', '772440643', 'No.61/2, Lady Macclums Drive, Hawaeliya, Nuwaraeliya', '', '', '', 1),
+(2, 'Malsha Samadhika', 'malsha@gmail.com', '771234567', 'No.235, Kandy Road, Kegalle', '', '', '', 1),
+(3, 'Rashini Lakshika', 'rash@gmail.com', '712589634', 'No.24/3, Park Road, Galle', '', '', '', 2),
+(4, 'Subodhinie', 'subo@gmail.com', '759865472', 'No.33, Upper Lake Road, Colombo 07', '', '', '', 3),
+(8, 'vin', 'vin@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(9, 'yo', 'yo@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(10, 'din', 'din@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(11, 'js', 'js@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(12, 'fa', 'fa@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(13, 'mas', 'mas@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(14, 'dd', 'dd@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(15, 'gg', 'gg@gmail.com', '0778866111', 'Main Road, Colombo', '', '', '', 1),
+(16, 'jone', 'jo@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(17, 'sa', 'sa@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(18, 'go', 'go@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(19, 'noo', 'noo@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 2),
+(20, 'ww', 'ww@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(21, 'mee', 'mee@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(22, 'cc', 'cc@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(23, 'bb', 'bb@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(24, 'hh', 'hhh@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(25, 'kk', 'kkk@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(26, 'pp', 'pp@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(27, 'xx', 'xx@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(28, 'tt', 'tt@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(29, 'gaa', 'gaa@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(30, 'qq', 'qq@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(31, 'perera', 'pee@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(32, 'silva', 'si@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(33, 'Kee Silva', 'kee@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(34, 'Rashi Herath', 'ra@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(35, 'Mali ', 'mali@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(36, 'Himaya', 'hima@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(37, 'Masha Silva', 'masha@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 1),
+(39, 'Kasun Rathnayaka', 'kasun@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 14),
+(40, 'G.Janitha Lakeshi', 'janitha@gmail.com', '0778866667', 'Main Road, Colombo', '', '', '', 13);
 
 -- --------------------------------------------------------
 
@@ -304,14 +314,15 @@ CREATE TABLE `donor` (
   `user_name` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `donor`
 --
 
 INSERT INTO `donor` (`donor_id`, `donor_name`, `telephone_no`, `email`, `address`, `date_of dirth`, `gender`, `id_number`, `marital_state`, `image`, `blood_group`, `user_name`, `password`, `hospital_id`) VALUES
-(3, 'Sarani Silva', 112467448, 'sarani@gmail.com', 'No 88/56, Main Road, Colombo', '2015-04-09', 'Female', '995510310V', 'Unmarried', '', 'O+', 'sarani', 'Sa1234', 14);
+(3, 'Sarani Silva', 112467448, 'sarani@gmail.com', 'No 88/56, Main Road, Colombo', '2015-04-09', 'Female', '995510310V', 'Unmarried', '', 'O+', 'sarani', 'Sa1234', 14),
+(5, 'malsha', 0, '', '', '0000-00-00', '', '', '', '', 'B+', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -327,7 +338,7 @@ CREATE TABLE `donor_clinical_reports` (
   `dosage` int(2) NOT NULL,
   `route` varchar(255) NOT NULL,
   `frequency` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -344,7 +355,7 @@ CREATE TABLE `donor_hla_details` (
   `hla_3rd_type` varchar(255) NOT NULL,
   `hla_4th_type` varchar(255) NOT NULL,
   `hla_5th_type` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -357,7 +368,7 @@ CREATE TABLE `donor_request` (
   `donor_id` int(11) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -371,26 +382,27 @@ CREATE TABLE `hospital` (
   `email` varchar(255) NOT NULL,
   `telephone_no` varchar(10) NOT NULL,
   `address` varchar(255) NOT NULL,
+  `city` varchar(255) NOT NULL,
   `date_availability` varchar(255) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hospital`
 --
 
-INSERT INTO `hospital` (`hospital_id`, `hospital_name`, `email`, `telephone_no`, `address`, `date_availability`, `username`, `password`) VALUES
-(1, 'Apeksha Hospital', 'apeksha@gmail.com', '0112467448', 'New road, Maharagama', '2022/06/10', '', ''),
-(2, 'Karapitiya Hospital', 'karapitiya@gmail.com', '0112992222', '66/5, Kaluwella Road, Galle', '2022/07/10', '', ''),
-(3, 'Mahaweli Hospital', ' maha@gmail.com', '0112233444', 'Panideniya Road, Kandy', '2022/06/14', '', ''),
-(8, 'Kegalle Hospital', ' kegalle@gmail.com', ' 011236548', 'Main road, Kegalle', '', '', ''),
-(9, 'Central Hospital', ' central@gmail.com', ' 011223377', 'Main Road, Colombo', '', '', ''),
-(10, 'Negambo Hospital', ' ni@gmail.com', ' 011223377', 'Panideniya Road, Kandy', '', '', ''),
-(11, 'Asiri Hospital', ' asiri@gmail.com', ' 011223377', 'Main Road, Colombo', '', 'asiri22', 'As1122'),
-(12, 'HH', ' hh@gmail.com', ' 011223377', 'Main Road, Colombo', '', 'hhh123', 'Hh1234'),
-(13, 'Rhunu Hospital', ' ruhunu@gmail.com', ' 011223377', 'Main Road, Colombo', '', 'ruhunu', 'Ru1234'),
-(14, 'Mahaweli Hospital', ' maha@gmail.com', ' 011223377', 'Main Road, Colombo', '', 'maha33', 'Ma1234');
+INSERT INTO `hospital` (`hospital_id`, `hospital_name`, `email`, `telephone_no`, `address`, `city`, `date_availability`, `username`, `password`) VALUES
+(1, 'Apeksha Hospital', 'apeksha@gmail.com', '0112467448', 'New road, Maharagama', 'Maharagama', '2022/06/10', '', ''),
+(2, 'Karapitiya Hospital', 'karapitiya@gmail.com', '0112992222', '66/5, Kaluwella Road, Galle', 'Galle', '2022/07/10', '', ''),
+(3, 'Mahaweli Hospital', ' maha@gmail.com', '0112233444', 'Panideniya Road, Kandy', 'Kandy', '2022/06/14', '', ''),
+(8, 'Kegalle Hospital', ' kegalle@gmail.com', ' 011236548', 'Main road, Kegalle', 'Kegalle', '', '', ''),
+(9, 'Central Hospital', ' central@gmail.com', ' 011223377', 'Main Road, Colombo', 'Colombo', '', '', ''),
+(10, 'Negambo Hospital', ' ni@gmail.com', ' 011223377', 'Panideniya Road, Kandy', 'Kandy', '', '', ''),
+(11, 'Asiri Hospital', ' asiri@gmail.com', ' 011223377', 'Main Road, Colombo', 'Colombo', '', 'asiri22', 'As1122'),
+(12, 'HH', ' hh@gmail.com', ' 011223377', 'Main Road, Colombo', 'Colombo', '', 'hhh123', 'Hh1234'),
+(13, 'Rhunu Hospital', ' ruhunu@gmail.com', ' 011223377', 'Main Road, Colombo', 'Colombo', '', 'ruhunu', 'Ru1234'),
+(14, 'Mahaweli Hospital', ' maha@gmail.com', ' 011223377', 'Main Road, Colombo', 'Colombo', '', 'maha33', 'Ma1234');
 
 -- --------------------------------------------------------
 
@@ -404,7 +416,7 @@ CREATE TABLE `hospital_reports` (
   `date` date NOT NULL,
   `time` time NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -417,7 +429,7 @@ CREATE TABLE `hospital_stock` (
   `date` date NOT NULL,
   `time` time NOT NULL,
   `departure_time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -433,7 +445,7 @@ CREATE TABLE `match_details` (
   `patient_id` int(11) NOT NULL,
   `donor_id` int(11) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -444,8 +456,16 @@ CREATE TABLE `match_details` (
 CREATE TABLE `match_requests` (
   `match_request_id` int(11) NOT NULL,
   `patient_id` int(11) NOT NULL,
-  `patient_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `hospital_id` int(11) NOT NULL,
+  `patient_status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `match_requests`
+--
+
+INSERT INTO `match_requests` (`match_request_id`, `patient_id`, `hospital_id`, `patient_status`) VALUES
+(1, 1, 1, 'critical');
 
 -- --------------------------------------------------------
 
@@ -460,23 +480,24 @@ CREATE TABLE `patient` (
   `telephone_no` int(10) NOT NULL,
   `address` varchar(255) NOT NULL,
   `date_of_birth` date NOT NULL,
+  `age` int(11) NOT NULL,
   `gender` varchar(255) NOT NULL,
   `id_number` text NOT NULL,
   `marital_state` varchar(255) NOT NULL,
   `blood_group` varchar(255) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `patient`
 --
 
-INSERT INTO `patient` (`patient_id`, `patient_name`, `email`, `telephone_no`, `address`, `date_of_birth`, `gender`, `id_number`, `marital_state`, `blood_group`, `hospital_id`) VALUES
-(1, 'Malki Nethusha', 'malki.12@gmail.com', 753264189, 'No.23, Hetti Vidiya, Colombo 07', '1996-11-14', 'Female', '199612547893', 'Unmarried', 'B+', 1),
-(2, 'Mallika Kumari', '-', 522236589, 'No.29, Malwaththa Road, Kandana', '1951-08-15', 'Female', '51125878923', 'Married', 'AB-', 1),
-(3, 'Kamal Jayathilake', 'kamal@gmail.com', 715236489, 'No.25, Park Road, Walimada', '1973-12-21', 'Male', '197312547693', 'Married', 'O-', 2),
-(4, 'Amali Bhagya', 'ama_b98@gmail.com', 752369852, 'No.63, Chapel Road, Nugegoda', '1998-06-16', 'Female', '199823651492', 'Unmarried', 'A+', 2),
-(5, 'Ramani Biseka', 'rama@gmail.com', 112467448, 'No 55/99, Main Road, Kandy', '2013-04-17', 'Female', '996498230V', 'Married', 'AB+', 14);
+INSERT INTO `patient` (`patient_id`, `patient_name`, `email`, `telephone_no`, `address`, `date_of_birth`, `age`, `gender`, `id_number`, `marital_state`, `blood_group`, `hospital_id`) VALUES
+(1, 'Malki Nethusha', 'malki.12@gmail.com', 753264189, 'No.23, Hetti Vidiya, Colombo 07', '1996-11-14', 0, 'Female', '199612547893', 'Unmarried', 'B+', 1),
+(2, 'Mallika Kumari', '-', 522236589, 'No.29, Malwaththa Road, Kandana', '1951-08-15', 0, 'Female', '51125878923', 'Married', 'AB-', 1),
+(3, 'Kamal Jayathilake', 'kamal@gmail.com', 715236489, 'No.25, Park Road, Walimada', '1973-12-21', 0, 'Male', '197312547693', 'Married', 'O-', 2),
+(4, 'Amali Bhagya', 'ama_b98@gmail.com', 752369852, 'No.63, Chapel Road, Nugegoda', '1998-06-16', 0, 'Female', '199823651492', 'Unmarried', 'A+', 2),
+(5, 'Ramani Biseka', 'rama@gmail.com', 112467448, 'No 55/99, Main Road, Kandy', '2013-04-17', 0, 'Female', '996498230V', 'Married', 'AB+', 14);
 
 -- --------------------------------------------------------
 
@@ -492,7 +513,7 @@ CREATE TABLE `patient_clinical_reports` (
   `dosage` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   `frequency` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `patient_clinical_reports`
@@ -520,7 +541,7 @@ CREATE TABLE `patient_hla_details` (
   `hla_3rd_type` varchar(255) NOT NULL,
   `hla_4th_type` varchar(255) NOT NULL,
   `hla_5th_type` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `patient_hla_details`
@@ -555,7 +576,7 @@ CREATE TABLE `pending_donor` (
   `password` varchar(255) NOT NULL,
   `status` varchar(100) NOT NULL,
   `request_date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pending_donor`
@@ -579,8 +600,9 @@ CREATE TABLE `session` (
   `session_image` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL,
-  `camp_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `camp_id` int(11) NOT NULL,
+  `hospital_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -591,8 +613,10 @@ CREATE TABLE `session` (
 CREATE TABLE `testing` (
   `test_id` int(11) NOT NULL,
   `test_date` date NOT NULL,
-  `test_time` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `test_time` int(11) NOT NULL,
+  `donor_id` int(11) NOT NULL,
+  `hospital_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -608,7 +632,7 @@ CREATE TABLE `transplant_details` (
   `succeed_rate` varchar(100) NOT NULL,
   `patient_id` int(11) NOT NULL,
   `donor_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -622,7 +646,7 @@ CREATE TABLE `transplant_request` (
   `donor_id` int(11) NOT NULL,
   `patient_id` int(11) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -636,7 +660,7 @@ CREATE TABLE `user` (
   `email` varchar(255) NOT NULL,
   `telephone` int(10) NOT NULL,
   `address` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -745,7 +769,9 @@ ALTER TABLE `match_details`
 -- Indexes for table `match_requests`
 --
 ALTER TABLE `match_requests`
-  ADD PRIMARY KEY (`match_request_id`);
+  ADD PRIMARY KEY (`match_request_id`),
+  ADD KEY `patient_id` (`patient_id`),
+  ADD KEY `hospital` (`hospital_id`);
 
 --
 -- Indexes for table `patient`
@@ -778,13 +804,16 @@ ALTER TABLE `pending_donor`
 --
 ALTER TABLE `session`
   ADD PRIMARY KEY (`session_id`),
-  ADD KEY `camp_data` (`camp_id`);
+  ADD KEY `camp_data` (`camp_id`),
+  ADD KEY `hospital_id` (`hospital_id`);
 
 --
 -- Indexes for table `testing`
 --
 ALTER TABLE `testing`
-  ADD PRIMARY KEY (`test_id`);
+  ADD PRIMARY KEY (`test_id`),
+  ADD KEY `donor` (`donor_id`),
+  ADD KEY `hos` (`hospital_id`);
 
 --
 -- Indexes for table `transplant_details`
@@ -815,7 +844,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `bloodbank_reports`
@@ -845,19 +874,19 @@ ALTER TABLE `campaign`
 -- AUTO_INCREMENT for table `clinician`
 --
 ALTER TABLE `clinician`
-  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `consultant`
 --
 ALTER TABLE `consultant`
-  MODIFY `consultant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `consultant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `donor`
 --
 ALTER TABLE `donor`
-  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `donor_clinical_reports`
@@ -899,7 +928,7 @@ ALTER TABLE `match_details`
 -- AUTO_INCREMENT for table `match_requests`
 --
 ALTER TABLE `match_requests`
-  MODIFY `match_request_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `match_request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `patient`
@@ -1002,6 +1031,13 @@ ALTER TABLE `match_details`
   ADD CONSTRAINT `f3` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Constraints for table `match_requests`
+--
+ALTER TABLE `match_requests`
+  ADD CONSTRAINT `hospital` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `patient_id` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`patient_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `patient`
 --
 ALTER TABLE `patient`
@@ -1017,7 +1053,14 @@ ALTER TABLE `patient_hla_details`
 -- Constraints for table `session`
 --
 ALTER TABLE `session`
-  ADD CONSTRAINT `camp_data` FOREIGN KEY (`camp_id`) REFERENCES `campaign` (`camp_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `hospital_id` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `testing`
+--
+ALTER TABLE `testing`
+  ADD CONSTRAINT `donor` FOREIGN KEY (`donor_id`) REFERENCES `donor` (`donor_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `hos` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`hospital_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `transplant_request`
