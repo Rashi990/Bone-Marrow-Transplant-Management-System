@@ -68,39 +68,32 @@ if($_SESSION['userlevel']!=0)
                         <th>Patients Name</th>
                         <th>Condition</th>
                     </tr>
-                    <tr>
-                        <td rowspan="3">Apeksha Hospital</td>
-                        <td >Malsha Samadhika</td>
-                        <td>Critical</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
-                    </tr>
-                    <tr>
-                    <td >Lalani Karunawathee</td>
-                        <td>Critical</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
-                    </tr>
-                    <tr>
-                        <td >Rishmi Vithanage</td>
-                        <td>Critical</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
-                    </tr>
 
-                    <tr>
-                        <td rowspan="3">Lanka Hospital</td>
-                        <td >Kamal Gunawardhena</td>
-                        <td>Non-Critical</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
-                    </tr>
-                    <tr>
-                    <td >Sunil Perera</td>
-                        <td>Non-Critical</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
-                    </tr>
-                    <tr>
-                        <td>Malani Hansika</td>
-                        <td>Non-Critical</td>
-                        <td><a href="../../src/php/admin_select_hospital.php" class="btn">Select donors</a></td>
-                    </tr>
+                    <?php 
+                        $sql="SELECT patient.`patient_id`, match_requests.`patient_status`, hospital.`hospital_name`, patient.`patient_name`
+                        FROM match_requests
+                        LEFT JOIN hospital ON match_requests.`hospital_id` = hospital.`hospital_id`
+                        LEFT JOIN patient ON match_requests.`patient_id` = patient.`patient_id`";
+
+    $result=mysqli_query($connection,$sql);
+    if($result){
+        while($row=mysqli_fetch_assoc($result)){
+            $id=$row['patient_id'];
+            $hname=$row['hospital_name'];
+            $pname=$row['patient_name'];
+            $status=$row['patient_status'];
+         echo '<tr>
+         <td >'.$hname. '</td>
+         <td>'.$pname. ' </td> 
+         <td>'.$status. '</td>
+        <td><a href="../../src/php/admin_select_donor.php? id='.$id.'" class="btn">Select Donor</a></td>
+        </tr>';
+
+    }
+}
+
+?>
+                    
                 </table>
             </div>
 
