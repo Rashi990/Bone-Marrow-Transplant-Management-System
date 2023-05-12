@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/css/admin_dashboard.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../../public/js/admin_notification.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500;1,700&display=swap" rel="stylesheet">
     <title>SLBTMS</title>
 </head>
@@ -35,9 +36,10 @@
                     </span>
                 <span class="link_name">Calendar</span>
             </a>
-            <a href="../../src/php/admin_view_donor.php">
+            <a onclick='updateNotificationStatus("donor","notify")' href="../../src/php/admin_view_donor.php">
                 <span class="material-icons">people</span>
                 <span class="link_name">Donors</span>
+                <span class="not" id="notify"></span>
             </a>
             <a href="../../src/php/admin_viewhospital.php">
                 <span class="material-icons">
@@ -49,9 +51,10 @@
                 <span class="material-icons">water_drop</span>
                 <span class="link_name">Sample</span>
             </a>
-            <a href="../../src/php/admin_viewrequest.php">
+            <a onclick='updateNotificationStatus("match_requests","notify1")' href="../../src/php/admin_viewrequest.php">
                 <span class="material-icons">group_add</span>
                 <span class="link_name">Request</span>
+            <span class="not" id="notify1"></span>
             </a>
             <a href="../../src/php/admin_viewtesting.php">
                 <span class="material-icons">
@@ -70,5 +73,15 @@
      </ul>
     </div>
     
+    
+    
+    
+    
+    
+    <script type="text/javascript">
+       
+
+</script>
+
 </body>
 </html>

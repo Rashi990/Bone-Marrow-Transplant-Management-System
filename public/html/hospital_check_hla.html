@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_check_hla.css">
+    <title>Hospital -All Patients</title>
+</head>
+<body>
+
+        <div class="choose">
+            <a class="back-patients" href="../../src/php/hospital_patients.php"><span class="material-icons">arrow_back_ios</span></a> 
+            <a class="all-patients" href="../../src/php/hospital_all_patients.php">All Patients</a>  
+            <a class="check-hla" href="../../src/php/hospital_check_hla.php">Check HLA</a> 
+            <a class="hla-patients" href="../../src/php/hospital_hla_patients.php">Patients HLA Details</a>   
+            <a class="rank-donors" href="../../src/php/hospital_req_patients.php">Ranked Donor Lists</a>  
+        </div>
+
+        <div class="check_hla">
+
+            <div class="filter">
+                <label>Search </label><input type="search" placeholder="search here"><span class="material-icons">filter_alt</span>
+            </div>  
+
+            <h2>Check HLA None Added Patients</h2>
+    
+                <table class="check_hla_list">
+                    <tr class="theads">
+                        <th>Patient ID</th>
+                        <th>Patient Name</th>
+                        <th colspan="2">Add HLA</th>
+                    </tr>
+    
+                    <?php include('../../src/php/hospital_check_hla_table.php') ?>
+    
+                </table>
+    
+               </div>
+    
+
+    
+</body>
+</html>
