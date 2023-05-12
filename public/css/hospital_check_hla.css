@@ -110,12 +110,12 @@ body{
     font-weight: bold;
 }
 
-.all-patients, .rank-donors:hover, .hla-patients:hover, .check-hla:hover{
+.all-patients:hover, .rank-donors:hover, .hla-patients:hover, .check-hla{
     background-color: #006296;
     color: #F7FFFF;
 }
 
-.patients{
+.check_hla{
     position: absolute;
     margin-left: 240px;
     margin-top: 60px;
@@ -126,6 +126,7 @@ body{
     border: none;
     border-radius: 20px;
 }
+
 
 .filter{
     display: flex;
@@ -161,14 +162,22 @@ body{
     cursor: pointer;
  }
 
-table.patient_list{
-    margin: 10px;
+table.check_hla_list{
+    margin: 10px auto;
     padding: 10px;
-    width: 96%;
+    width: 40%;
     border-collapse: collapse;
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
+h2{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #006296;
+}
+
+/*
 .new{
     float: right;
     margin: 10px 40px;
@@ -187,8 +196,9 @@ table.patient_list{
     background-color: #006296;
     color: #F7FFFF;
 }
+*/
 
-table.patient_list th{
+table.check_hla_list th{
     background-color: #308C83;
     color: #F7FFFF;
     padding: 10px;
@@ -198,7 +208,7 @@ table.patient_list th{
     height: 25px;
 }
 
-table.patient_list td{
+table.check_hla_list td{
     padding: 10px;
     height: 25px;
     font-size: 16px;
@@ -206,36 +216,51 @@ table.patient_list td{
     color: #006296;
 }
 
-table.patient_list tr:nth-child(even){
+table.check_hla_list tr:nth-child(even){
     background-color: #d7f0ed;
 }
 
-table.patient_list .view{
+table.check_hla_list .view{
     color: #006296;
     padding: 8px 10px;
     transition: 0.5s;
 }
 
-table.clinician_list .view:hover{
+table.check_hla_list .view:hover{
     color: #080909;
 }
 
-table.patient_list .delete{
+table.check_hla_list .delete{
     color: #d40000;
     padding: 8px 10px;
     transition: 0.5s;
 }
 
-table.patient_list .delete:hover{
+table.check_hla_list .delete:hover{
     color: #940707;
 }
 
-table.patient_list .edit{
+table.check_hla_list .edit{
     color: #006296;
     padding: 8px 10px;
     transition: 0.5s;
 }
 
-table.patient_list .edit:hover{
+table.check_hla_list .edit:hover{
     color: #080909;
+}
+
+.add{
+    padding: 7px 15px;
+    border: 1px solid #006296;
+    border-radius: 10px;
+    color: #d7f0ed;
+    background-color: #006296;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add:hover{
+    color: #006296;
+    background-color: #d7f0ed;
 }
