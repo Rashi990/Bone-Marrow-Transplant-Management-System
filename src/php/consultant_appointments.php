@@ -82,7 +82,7 @@ if($_SESSION['userlevel']!=1)
         <div class="box1">
           <div class="count">
             <?php
-              $sql1 = "SELECT appointment_id FROM appointments WHERE `status` = 'Cancelled' ORDER by appointment_date";
+              $sql1 = "SELECT appointment_id FROM appointments WHERE `status` = 'Canceled' ORDER by appointment_date";
               $result1 = mysqli_query($connection, $sql1);
               $row = mysqli_num_rows($result1);
               echo '<h1>' .$row. '</h1>';
@@ -91,7 +91,7 @@ if($_SESSION['userlevel']!=1)
           Total Cancelled Appointments
         </div>
         <div class="box2">
-          <a href="consultant_cancelled_appointments.php">View Details</a>
+          <a href="consultant_canceled_appointments.php">View Details</a>
         </div>
       </div>
       <div class="col">
