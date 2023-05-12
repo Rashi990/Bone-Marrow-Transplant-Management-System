@@ -19,19 +19,28 @@
 
             <div class="row">
                 <div class="col-1">
-                    <label>Sample ID</label>
+                    <label>Date</label>
                 </div>
                 <div class="col-2">
-                    <input name="clinician_name" id="clinician_name" placeholder="Name" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                    <input name="date" id="date" value="<?=(isset($date) ? $date : '')?>" type="date" onblur="required_name()" required >
                 </div>
             </div>	
             
             <div class="row">
                 <div class="col-1">
-                    <label>Sample ID</label>
+                    <label>Arrival Time</label>
                 </div>
                 <div class="col-2">
-                    <input name="clinician_name" id="clinician_name" placeholder="Name" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                    <input name="time" id="time" value="<?=(isset($time) ? $time : '')?>" type="time" onblur="required_name()" required >
+                </div>
+            </div>		
+
+            <div class="row">
+                <div class="col-1">
+                    <label>Departure Time</label>
+                </div>
+                <div class="col-2">
+                    <input name="departure_time" id="departure_time" value="<?=(isset($departure_time) ? $departure_time : '')?>" type="time" onblur="required_name()" required >
                 </div>
             </div>		
 
