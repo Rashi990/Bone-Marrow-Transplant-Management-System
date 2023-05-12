@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
   $status=$_POST['status'];
   $remark=$_POST['remark'];
 
-    $sql0="UPDATE `appointments` SET `appointment_id`=$appointment_id, `patient_name`=$patient_name`, `appointment_date`='$appointment_date', `appointment_time`='$appointment_time', `apply_date`='$apply_date', `status`='$status', `remark`='$remark' WHERE `appointment_id`=$appointment_id";
+    $sql0="UPDATE `appointments` SET `appointment_id`='$appointment_id', `patient_name`='$patient_name', `appointment_date`='$appointment_date', `appointment_time`='$appointment_time', `apply_date`='$apply_date', `status`='$status', `remark`='$remark' WHERE `appointment_id`='$appointment_id'";
     $result0=mysqli_query($connection,$sql0);
     if($result0){
         header('location:consultant_appointments.php');
