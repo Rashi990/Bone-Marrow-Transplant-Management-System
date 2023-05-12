@@ -7,16 +7,15 @@ function loadDoc(tableName, elementId) {
                 var element = document.getElementById(elementId);
                 if (element) {
                     element.innerHTML = this.responseText;
-                    
+                    alert('You have new record');
                 }
             }
         };
         xhttp.open("GET", "notify.php?table=" + tableName, true);
         xhttp.send();
     }, 1000);
-   
 }
-loadDoc("donor","notify3");
+
 loadDoc("match_requests","notify1");
 loadDoc("donor","notify");
 
