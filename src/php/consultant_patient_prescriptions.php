@@ -50,7 +50,6 @@ if (!(isset($_SESSION['username'])))
       <div class="mid-bottom">
           <table align="center">
             <tr>
-              <th>Patient ID</th>
               <th>Date</th>
               <th>Drug Name</th>
               <th>Dosage</th>
@@ -71,7 +70,6 @@ if (!(isset($_SESSION['username'])))
                         $route=$row['route'];
                         $frequency=$row['frequency'];
                         echo '
-                          <td>'.$patient_id.'</td>
                           <td>'.$date.'</td>
                           <td>'.$drug_name.'</td>
                           <td>'.$dosage.'</td>
@@ -79,7 +77,7 @@ if (!(isset($_SESSION['username'])))
                           <td>'.$frequency.'</td>
                           <td>
                             <button id="btn-view" class="btn">
-                              <a href="consultant_patient_reports_view.php?update-id='.$patient_cr_id.'" class="text-light">
+                              <a href="consultant_patient_clinical_reports_view.php?update-id='.$patient_cr_id.'" class="text-light">
                                 View
                                 </a>
                             </button>
