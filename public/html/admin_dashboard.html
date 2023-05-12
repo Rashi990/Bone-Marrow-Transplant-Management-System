@@ -9,7 +9,7 @@
     <title>SLBTMS</title>
 </head>
 <body>
-    <script src="../../public/js/admin_dashboard.js"></script>
+    
     <!-- sidebar section -->
     <div class="sidebar">
         <div class="logo-details">
@@ -32,10 +32,11 @@
                     </span>
                 <span class="link_name">Calendar</span>
             </a>
-            <a href="../../src/php/admin_view_donor.php">
+            <a onclick='updateNotificationStatus("donor","notify3")' href="../../src/php/admin_view_donor.php">
                 <span class="material-icons">people</span>
                 <span class="link_name">Donors</span>
-            </a>
+                <span class="not" id="notify3"></span>
+
             <a href="../../src/php/admin_viewhospital.php">
                 <span class="material-icons">
                     local_hospital
