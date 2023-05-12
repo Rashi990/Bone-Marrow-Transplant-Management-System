@@ -11,7 +11,6 @@ $uid=$_SESSION['uid'];
 $username=$_SESSION['username'];
 $hospital_id=$_SESSION['hospital_id'];
 
-
 $id=$_GET['add-id'];
 $patient_id=intval(substr($id, 3));
 
@@ -91,8 +90,6 @@ $patient_id=intval(substr($id, 3));
 
 ?>
 
-
- ?>
 
 <!DOCTYPE html>
  <html lang="en">
