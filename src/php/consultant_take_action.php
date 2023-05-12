@@ -25,18 +25,26 @@ else{
   die(mysqli_error($connection));
 }
 if(isset($_POST['submit'])){
+  $appointment_id=$_POST['appointment_id'];
+  $patient_name=$_POST['patient_name'];
+  $telephone_no=$_POST['telephone_no'];
+  $email=$_POST['email'];
+  $appointment_date=$_POST['appointment_date'];
+  $appointment_time=$_POST['appointment_time'];
+  $apply_date=$_POST['apply_date'];
   $status=$_POST['status'];
   $remark=$_POST['remark'];
 
-    $sql0="UPDATE appointments SET patient_name=$patient_name, appointment_date='$appointment_date', appointment_time='$appointment_time', apply_date='$apply_date', status='$status', remark='$remark' WHERE appointment_id=$appointment_id";
-    $result=mysqli_query($connection,$sql);
-    if($result){
+    $sql0="UPDATE `appointments` SET `appointment_id`=$appointment_id, `patient_name`=$patient_name`, `appointment_date`='$appointment_date', `appointment_time`='$appointment_time', `apply_date`='$apply_date', `status`='$status', `remark`='$remark' WHERE `appointment_id`=$appointment_id";
+    $result0=mysqli_query($connection,$sql0);
+    if($result0){
         header('location:consultant_appointments.php');
     }
     else{
         die(mysqli_error($connection));
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -80,43 +88,43 @@ if(isset($_POST['submit'])){
         <form class="" action="" method="post">
           <div class="row">
             <label class="lbl">Appointment ID: </label>
-            <label class="data" name="aapointment_id" value=""  ><?php echo $appointment_id ?></label>
+            <input class="data" name="apointment_id" value="<?php echo $appointment_id ?>">
           </div>
           <div class="row">
             <label class="lbl">Patient Name: </label>
-            <label class="data"name="patient_name" value=""><?php echo $patient_name ?></label>
+            <input class="data"name="patient_name" value="<?php echo $patient_name ?>">
           </div>
           <div class="row">
             <label class="lbl">Mobile Number: </label>
-            <label class="data" name="Mobile Number" value=""><?php echo $telephone_no ?></label>
+            <input class="data" name="telephone_no" value="<?php echo $telephone_no ?>">
           </div>
           <div class="row">
             <label class="lbl">Email: </label>
-            <label class="data" name="Email" value=""><?php echo $email ?></label>
+            <input class="data" name="email" value="<?php echo $email ?>">
           </div>
           <div class="row">
             <label class="lbl">Appointment Date: </label>
-            <label class="data" name="Appointment Date" value=""><?php echo $appointment_date ?></label>
+            <input class="data" name="appointment_date" value="<?php echo $appointment_date ?>">
           </div>
           <div class="row">
             <label class="lbl">Appointment Time: </label>
-            <label class="data" name="Appointment Time" value=""><?php echo $appointment_time ?></label>
+            <input class="data" name="appointment_time" value="<?php echo $appointment_time ?>">
           </div>
           <div class="row">
             <label class="lbl">Apply Date: </label>
-            <label class="data" name="Apply Date" value=""><?php echo $apply_date ?></label>
+            <input class="data" name="apply_date" value="<?php echo $apply_date ?>">
           </div>
           <div class="row">
             <label class="lbl">Status: </label>
             <select class="status" name="status">
-              <option name="status" value="default"><?php echo $status ?></option>
+              <option name="status" selected="selected" disabled="disabled"><?php echo $status ?>  </option>
               <option name="status" value="approved">Approved</option>
-              <option name="status" value="cancelled">Cancelled</option>
+              <option name="status" value="canceled">Canceled</option>
             </select>
           </div>
           <div class="row">
             <label class="lbl">Remark: </label>
-            <textarea class="remark" name="remark" value="remark"><?php echo $remark ?></textarea>
+            <textarea class="remark" name="remark" value="remark" placeholder="Give a remark"><?php echo $remark ?></textarea>
           </div>
           <div class="btns">
             <button type="cancel" name="cancel">Cancel</button>

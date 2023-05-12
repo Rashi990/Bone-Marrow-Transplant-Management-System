@@ -88,11 +88,17 @@ body{
     margin: 40px 20px 10px 270px;
     padding: 20px;
     border-radius: 20px;
-    background-color: #f4f7fa;
+    background-color: #f4f7fa;   
+}
+
+.back-patients{
+    margin-top: 20px;
+    margin-right: 20px;
+    color: #006296;
 }
 
 .all-patients, .rank-donors, .hla-patients, .check-hla{
-    margin: 0px 20px;
+    margin: 0px 10px;
     text-decoration: none;
     background-color: #F7FFFF;
     color: #006296;
@@ -104,107 +110,95 @@ body{
     font-weight: bold;
 }
 
-.all-patients:hover, .rank-donors:hover, .hla-patients:hover, .check-hla:hover{
+.all-patients:hover, .rank-donors:hover, .hla-patients:hover, .check-hla{
     background-color: #006296;
     color: #F7FFFF;
 }
 
-.board{
+.check_hla{
     position: absolute;
     margin-left: 240px;
-    margin-top: 20px;
+    margin-top: 60px;
     background-color: #f4f7fa;
     padding: 10px;
     width: 80%;
+    height: 80vh;
     border: none;
     border-radius: 20px;
 }
 
-.board h1{
+
+.filter{
+    display: flex;
+    padding: 5px 20px;
+    margin: auto;
+    justify-content: center;
+    border: 1px solid #006296;
+    border-radius: 30px;
+    width: 35%;
+    height: 20px;
+    font-size: 14px;
     color: #006296;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 20px;
-    padding-bottom: 10px;
-    text-align: center;
+    background-color: #e6e6e6;
 }
 
-.board{
-    position: absolute;
-    margin-left: 240px;
-    margin-top: 30px;
-    width: 80%;
-    background-color: #f4f7fa;
-    border-radius: 20px;
-    padding: 20px;
-    overflow: hidden;
+.filter label{
+    margin: 0px 40px;
 }
 
-.counts{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.counts .box{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding: 20px;
-    width: 20%;
-    height: 50px;
-    background-color: #d7f0ed;
-    border-radius: 20px;
+.filter input{
+    height: 100%;
+    width: 95%;
+    padding: 5px 10px;
     border: none;
-    text-align: center;
-    font-weight: bold;
-    color: #006296;
-    line-height: 10px;
-}
+    border-radius: 1px;
+    outline: none;
+ }
 
-.counts .box:hover{
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
-}
+.filter span{
+    display: inline-block;
+    padding: 0px 20px;
+    font-size:22px ;
+    cursor: pointer;
+ }
 
-.section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 98%;
-    padding: 10px;
+table.check_hla_list{
     margin: 10px auto;
-    background-color: #d7f0ed;
-    border: none;
-    border-radius: 20px;
+    padding: 10px;
+    width: 40%;
+    border-collapse: collapse;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
-.data{
-    margin: 20px;
-    padding: 10px;
-    width: 65%;
-    background-color: #ffffff;
-    border-radius: 20px;
-    font-weight: bold;
+h2{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
     color: #006296;
 }
-.data:hover{
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
-}
 
-.data h2{
-    text-align: center;
-    font-size: 18px;
+/*
+.new{
+    float: right;
+    margin: 10px 40px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 80px;
+    font-size: 14px;
+    transition: 0.5s;
     font-weight: bold;
 }
 
-table.list{
-    margin: 20px;
-    padding: 10px;
-    width: 96%;
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+.new:hover{
+    background-color: #006296;
+    color: #F7FFFF;
 }
+*/
 
-table.list th{
+table.check_hla_list th{
     background-color: #308C83;
     color: #F7FFFF;
     padding: 10px;
@@ -214,16 +208,59 @@ table.list th{
     height: 25px;
 }
 
-table.list td{
+table.check_hla_list td{
     padding: 10px;
-    font-size: 14px;
-    color: #006296;
-    background-color: #d7f0ed;
     height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
 }
 
-/*
-table.list tr:nth-child(even){
+table.check_hla_list tr:nth-child(even){
     background-color: #d7f0ed;
 }
-*/
+
+table.check_hla_list .view{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.check_hla_list .view:hover{
+    color: #080909;
+}
+
+table.check_hla_list .delete{
+    color: #d40000;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.check_hla_list .delete:hover{
+    color: #940707;
+}
+
+table.check_hla_list .edit{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.check_hla_list .edit:hover{
+    color: #080909;
+}
+
+.add{
+    padding: 7px 15px;
+    border: 1px solid #006296;
+    border-radius: 10px;
+    color: #d7f0ed;
+    background-color: #006296;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add:hover{
+    color: #006296;
+    background-color: #d7f0ed;
+}
