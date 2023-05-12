@@ -43,7 +43,7 @@ if($_SESSION['userlevel']!=1)
 
   <div class="board">
     <div class="full-box">
-      <h2>Cancelled Appointments</h2>
+      <h2>Canceled Appointments</h2>
       <table align="center">
         <tr>
           <th>Appointment ID</th>
@@ -54,7 +54,7 @@ if($_SESSION['userlevel']!=1)
           <th>Action</th>
         </tr>
         <?php
-          $sql="SELECT * FROM `appointments` WHERE `status` = 'Cancelled'";
+          $sql="SELECT * FROM `appointments` WHERE `status` = 'Canceled'";
           $result=mysqli_query($connection,$sql);
           if($result){
             while($row=mysqli_fetch_assoc($result)){

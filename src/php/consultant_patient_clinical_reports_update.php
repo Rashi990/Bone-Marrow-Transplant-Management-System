@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['user_name']) && isset($_SESSION['consultant_name']))
+if($_SESSION['userlevel']=1)
 {
 include '../../config/connection.php';
 
@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
   $route=$_POST['route'];
   $frequency=$_POST['frequency'];
 
-    $sql="UPDATE patient_clinical_reports SET patient_cr_id=$patient_cr_id, patient_id=$patient_id, date='$date', drug_name='$drug_name', dosage='$dosage', route='$route', frequency='$frequency' WHERE patient_cr_id=$patient_cr_id";
+    $sql="UPDATE patient_clinical_reports SET patient_cr_id=$patient_cr_id, patient_id='$patient_id', date='$date', drug_name='$drug_name', dosage='$dosage', route='$route', frequency='$frequency' WHERE patient_cr_id=$patient_cr_id";
     $result=mysqli_query($connection,$sql);
     if($result){
         //echo "Data updated successfully";
@@ -96,7 +96,7 @@ if(isset($_POST['submit'])){
           </abbr>
           <abbr title="Welcome!">
             <div class="greet">
-              <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['consultant_name'];?></h3>
+              <h3 class="greet-text">Hi, Dr.<?php echo $_SESSION['username'];?></h3>
             </div>
           </abbr>
           <abbr title="Profile">

@@ -74,10 +74,10 @@ if (isset($_POST['cancel']))
 
 					
 					if( ($_GLOBAL['accountdone']==1) && ($_GLOBAL['hospitaldone']==1) ){
-				
 						echo "<script> alert('Registration is Sucessfull') </script>";
 						header("Location: admin_viewhospital.php");
-					}else{
+					}
+					else{
 						echo "<script> alert('Registration is Failled') </script>";
 					}
 				}else if($checked==0){
