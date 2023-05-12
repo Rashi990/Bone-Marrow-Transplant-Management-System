@@ -18,13 +18,12 @@ if(isset($_POST['submit']) )
     return $data;
   }
 
-  $ID = $_POST['sample_bid'];
-  $hname = $_POST['hname'];
-  $email = $_POST['email']; 
-  $tel = $_POST['tel']; 
-  $address = $_POST['address']; 
+  $ID = $_POST['ID'];
+  $did = $_POST['DID'];
+  $hid = $_POST['HID']; 
+  $date = $_POST['date']; 
 
-  $sql="INSERT INTO `hospital`(hospital_id, hospital_name, email, telephone_no, address) VALUES ('$hID','$hname',' $email',' $tel','$address')";
+  $sql="INSERT INTO `bloodbank_stock`(sample_bid, sample_owner_id, hispital_id, expiry_date) VALUES ('$hID','$did',' $hid',' $date')";
   $result = mysqli_query($connection,$sql);
 
   if($result) {

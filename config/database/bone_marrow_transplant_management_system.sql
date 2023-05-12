@@ -1,11 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+
+-- Generation Time: May 01, 2023 at 08:47 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
+
 -- Generation Time: May 09, 2023 at 06:04 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +39,7 @@ CREATE TABLE `account` (
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `userlevel` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `account`
@@ -101,6 +107,9 @@ INSERT INTO `account` (`aid`, `uid`, `username`, `password`, `userlevel`) VALUES
 (70, '39', 'kasun', 'Ka1234', 1),
 (71, '35', 'nehara', 'Neha22', 2),
 (72, '40', 'janitha', 'Ja1234', 1),
+
+(73, '36', 'madu', 'Ma1122', 2);
+
 (75, '38', 'madara', 'Ma1234', 2);
 
 -- --------------------------------------------------------
@@ -129,6 +138,7 @@ INSERT INTO `appointments` (`appointment_id`, `patient_name`, `telephone_no`, `e
 (1, 'Pond Naravit', 773256984, 'ppnaravit@gmail.com', '2023-05-31', '10:00:00', '2023-05-08', 'Not Updated Yet', 'Not Updated Yet'),
 (2, 'Phuwin Tang', 773256256, 'phuwintang@gmail.com', '2023-05-30', '11:00:00', '2023-05-09', 'Not Updated Yet', 'Not Updated Yet');
 
+
 -- --------------------------------------------------------
 
 --
@@ -139,7 +149,7 @@ CREATE TABLE `bloodbank_reports` (
   `report_bid` int(11) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -156,7 +166,7 @@ CREATE TABLE `bloodbank_stock` (
   `arrival_time` time NOT NULL,
   `expiry_date` date NOT NULL,
   `status` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `bloodbank_stock`
@@ -177,7 +187,7 @@ CREATE TABLE `blood_bank` (
   `email` varchar(255) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `blood_bank`
@@ -198,15 +208,19 @@ CREATE TABLE `campaign` (
   `camp_date` date NOT NULL,
   `camp_time` time NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `campaign`
 --
 
 INSERT INTO `campaign` (`camp_id`, `camp_name`, `camp_date`, `camp_time`, `hospital_id`) VALUES
+
+(1, 'introduction about boan marrow ', '2023-02-09', '19:34:00', 1);
+
 (1, 'introduction about boan marrow ', '2023-02-09', '19:34:00', 1),
 (2, 'Transplant', '2023-05-02', '00:00:00', 3);
+
 
 -- --------------------------------------------------------
 
@@ -223,7 +237,7 @@ CREATE TABLE `clinician` (
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `clinician`
@@ -256,7 +270,11 @@ INSERT INTO `clinician` (`clinician_id`, `clinician_name`, `email`, `telephone_n
 (33, 'Gayesha', 'Gaye@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 14),
 (34, 'Ishara', 'ishara@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 14),
 (35, 'K.G.Nehara Wijesiri', 'nehara@gmail.com', '0778866999', 'Main Road, Colombo', '', '', 13),
+
+(36, 'H.Maduri Kumar', 'madu@gmail.com', '0778866111', 'Main Road, Colombo', '', '', 13);
+
 (38, 'K.G.Madara ', 'mada@gmail.com', '0778866667', 'Main Road, Colombo', '', '', 13);
+
 
 -- --------------------------------------------------------
 
@@ -274,7 +292,7 @@ CREATE TABLE `consultant` (
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `consultant`
@@ -339,7 +357,7 @@ CREATE TABLE `donor` (
   `user_name` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `donor`
@@ -363,7 +381,7 @@ CREATE TABLE `donor_clinical_reports` (
   `dosage` int(2) NOT NULL,
   `route` varchar(255) NOT NULL,
   `frequency` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -380,7 +398,7 @@ CREATE TABLE `donor_hla_details` (
   `hla_3rd_type` varchar(255) NOT NULL,
   `hla_4th_type` varchar(255) NOT NULL,
   `hla_5th_type` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -393,7 +411,7 @@ CREATE TABLE `donor_request` (
   `donor_id` int(11) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -411,7 +429,7 @@ CREATE TABLE `hospital` (
   `date_availability` varchar(255) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hospital`
@@ -441,7 +459,7 @@ CREATE TABLE `hospital_reports` (
   `date` date NOT NULL,
   `time` time NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -453,9 +471,14 @@ CREATE TABLE `hospital_stock` (
   `sample_hid` int(11) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL,
+
+  `departure_time` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
   `departure_time` time NOT NULL,
   `hospital_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 -- --------------------------------------------------------
 
@@ -471,7 +494,7 @@ CREATE TABLE `match_details` (
   `patient_id` int(11) NOT NULL,
   `donor_id` int(11) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -484,7 +507,18 @@ CREATE TABLE `match_requests` (
   `patient_id` int(11) NOT NULL,
   `hospital_id` int(11) NOT NULL,
   `patient_status` varchar(255) NOT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `match_requests`
+--
+
+INSERT INTO `match_requests` (`match_request_id`, `patient_id`, `hospital_id`, `patient_status`) VALUES
+(1, 1, 1, 'critical');
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 --
 -- Dumping data for table `match_requests`
@@ -507,6 +541,12 @@ CREATE TABLE `patient` (
   `address` varchar(255) NOT NULL,
   `date_of_birth` date NOT NULL,
   `age` int(11) NOT NULL,
+
+  `gender` varchar(255) NOT NULL,
+  `id_number` text NOT NULL,
+  `marital_state` varchar(255) NOT NULL,
+  `blood_group` varchar(255) NOT NULL,
+
   `gender` enum('Male','Female','Other') NOT NULL,
   `height` float NOT NULL,
   `weight` float NOT NULL,
@@ -515,12 +555,21 @@ CREATE TABLE `patient` (
   `blood_group` enum('A+','A-','B+','B-','AB+','AB-','O+','O-') NOT NULL,
   `diagnosis` varchar(100) NOT NULL,
   `current_status` enum('Critical','Normal') NOT NULL,
+
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `patient`
 --
+
+
+INSERT INTO `patient` (`patient_id`, `patient_name`, `email`, `telephone_no`, `address`, `date_of_birth`, `age`, `gender`, `id_number`, `marital_state`, `blood_group`, `hospital_id`) VALUES
+(1, 'Malki Nethusha', 'malki.12@gmail.com', 753264189, 'No.23, Hetti Vidiya, Colombo 07', '1996-11-14', 0, 'Female', '199612547893', 'Unmarried', 'B+', 1),
+(2, 'Mallika Kumari', '-', 522236589, 'No.29, Malwaththa Road, Kandana', '1951-08-15', 0, 'Female', '51125878923', 'Married', 'AB-', 1),
+(3, 'Kamal Jayathilake', 'kamal@gmail.com', 715236489, 'No.25, Park Road, Walimada', '1973-12-21', 0, 'Male', '197312547693', 'Married', 'O-', 2),
+(4, 'Amali Bhagya', 'ama_b98@gmail.com', 752369852, 'No.63, Chapel Road, Nugegoda', '1998-06-16', 0, 'Female', '199823651492', 'Unmarried', 'A+', 2),
+(5, 'Ramani Biseka', 'rama@gmail.com', 112467448, 'No 55/99, Main Road, Kandy', '2013-04-17', 0, 'Female', '996498230V', 'Married', 'AB+', 14);
 
 INSERT INTO `patient` (`patient_id`, `patient_name`, `email`, `telephone_no`, `address`, `date_of_birth`, `age`, `gender`, `height`, `weight`, `NIC`, `marital_state`, `blood_group`, `diagnosis`, `current_status`, `hospital_id`) VALUES
 (1, 'Malki Nethusha', 'malki.12@gmail.com', '753264189', 'No.23, Hetti Vidiya, Colombo 07', '1996-11-14', 0, 'Female', 0, 0, '1996125478', 'Unmarried', 'B+', '', '', 1),
@@ -542,6 +591,7 @@ INSERT INTO `patient` (`patient_id`, `patient_name`, `email`, `telephone_no`, `a
 (22, 'Waruna Zoysa', 'waru@gmail.com', '0778866667', '55/9,Galle Road, Hikkaduwa', '2008-01-30', 15, 'Male', 136, 66, '996719827V', 'Married', 'A+', 'Anemia', 'Critical', 13),
 (23, 'Geetha ', 'gee@gmail.com', '0778855555', 'Main Road, Colombo', '2014-01-09', 9, 'Female', 139, 58, '996719820V', 'Unmarried', 'B+', 'Thalisemia', 'Normal', 13);
 
+
 -- --------------------------------------------------------
 
 --
@@ -556,7 +606,7 @@ CREATE TABLE `patient_clinical_reports` (
   `dosage` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   `frequency` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `patient_clinical_reports`
@@ -578,6 +628,15 @@ INSERT INTO `patient_clinical_reports` (`patient_cr_id`, `patient_id`, `date`, `
 CREATE TABLE `patient_hla_details` (
   `ph_id` int(11) NOT NULL,
   `patient_id` int(11) NOT NULL,
+
+  `hla_antigen` varchar(255) NOT NULL,
+  `hla_allele_family` varchar(255) NOT NULL,
+  `hla_2nd_type` varchar(255) NOT NULL,
+  `hla_3rd_type` varchar(255) NOT NULL,
+  `hla_4th_type` varchar(255) NOT NULL,
+  `hla_5th_type` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
   `HLA-A_allele_group` varchar(11) NOT NULL,
   `HLA-A_protein` varchar(11) NOT NULL,
   `HLA-A_syn_exons` varchar(11) NOT NULL,
@@ -609,6 +668,7 @@ CREATE TABLE `patient_hla_details` (
   `HLA-DQB1_syn_introns` varchar(11) NOT NULL,
   `HLA-DQB1_ex_level` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 --
 -- Dumping data for table `patient_hla_details`
@@ -660,7 +720,7 @@ CREATE TABLE `pending_donor` (
   `password` varchar(255) NOT NULL,
   `status` varchar(100) NOT NULL,
   `request_date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pending_donor`
@@ -686,7 +746,11 @@ CREATE TABLE `session` (
   `time` time NOT NULL,
   `camp_id` int(11) NOT NULL,
   `hospital_id` int(11) NOT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 -- --------------------------------------------------------
 
@@ -700,7 +764,11 @@ CREATE TABLE `testing` (
   `test_time` int(11) NOT NULL,
   `donor_id` int(11) NOT NULL,
   `hospital_id` int(11) NOT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 -- --------------------------------------------------------
 
@@ -716,7 +784,7 @@ CREATE TABLE `transplant_details` (
   `succeed_rate` varchar(100) NOT NULL,
   `patient_id` int(11) NOT NULL,
   `donor_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -730,7 +798,7 @@ CREATE TABLE `transplant_request` (
   `donor_id` int(11) NOT NULL,
   `patient_id` int(11) NOT NULL,
   `hospital_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -744,7 +812,7 @@ CREATE TABLE `user` (
   `email` varchar(255) NOT NULL,
   `telephone` int(10) NOT NULL,
   `address` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -942,6 +1010,9 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
+
+  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+
   MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
@@ -949,6 +1020,7 @@ ALTER TABLE `account`
 --
 ALTER TABLE `appointments`
   MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 
 --
 -- AUTO_INCREMENT for table `bloodbank_reports`
@@ -978,19 +1050,31 @@ ALTER TABLE `campaign`
 -- AUTO_INCREMENT for table `clinician`
 --
 ALTER TABLE `clinician`
+
+  MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
   MODIFY `clinician_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+
 
 --
 -- AUTO_INCREMENT for table `consultant`
 --
 ALTER TABLE `consultant`
+
+  MODIFY `consultant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+
   MODIFY `consultant_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
 
 --
 -- AUTO_INCREMENT for table `donor`
 --
 ALTER TABLE `donor`
+
+  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
   MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 
 --
 -- AUTO_INCREMENT for table `donor_clinical_reports`

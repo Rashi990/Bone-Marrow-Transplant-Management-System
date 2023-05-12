@@ -177,5 +177,14 @@ td {
    text-align: left;
    padding: 6px;
 }
+span.not{
+   background:red;
+   padding:3px;
+   border-radius:100px;
+   color:white;
+   position:absolute;
+   font-weight:bold;
+   font-size:small;
+}
 
 

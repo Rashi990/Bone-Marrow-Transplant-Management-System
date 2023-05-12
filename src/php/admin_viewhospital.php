@@ -96,7 +96,7 @@ if($_SESSION['userlevel']!=0)
         <td>'.$email. '</td>
         <td>'.$tele. '</td>
         <td>'.$address. '</td> 
-        <td><a href="admin_edithospital.php? editid='.$id.'" class="update-btn"><span class="material-icons">edit_square</span></a></td>
+        <td><a href="admin_edithospital.php? editid=' .$id. '" class="update-btn"><span class="material-icons">edit_square</span></a></td>
         <td><a href="admin_deletehospital.php? deleteid='.$id.'" class="delete-btn" ><span class="material-icons">delete</span></a></td>   
     </tr>';
 

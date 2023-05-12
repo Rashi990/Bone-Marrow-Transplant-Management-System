@@ -14,10 +14,10 @@
             <h2>
                 Select Hospital
             </h2>
-            <!-- <div class="search-wrapper">
-                <span class='bx bx-search'></span>
+            <div class="search-wrapper">
+                <span class="material-icons">search</span>
                 <input type="search" placeholder="search here">
-            </div> -->
+            </div>
     
            
     
@@ -40,68 +40,59 @@
         </header>
     </div>
     <div class="right">
-        
         <div class="list">
             <div class="line">
                 <div class="hospital">
-                    <div class="profile">
-                        <i class='bx bxs-user-circle'></i>
-                    </div>
                     <div class="details">
                         <?php 
                         $id=$_GET['id'];
-                        $sql="SELECT CONCAT_WS (' ',`first_name`,`second_name`) AS fullname,city,district,pending_donor_id from pending_donor WHERE pending_donor_id=$id";
+                        $sql="SELECT patient_name,blood_group,age FROM patient WHERE patient_id=$id";
 
     $result=mysqli_query($connection,$sql);
     if($result){
         while($row=mysqli_fetch_assoc($result)){
-            $id=$row['pending_donor_id'];
-            $name=$row['fullname'];
-            $city=$row['city'];
-            $district=$row['district'];
+            $name=$row['patient_name'];
+            $age=$row['age'];
+            $blood=$row['blood_group'];
         echo '
                         <table>
-                           
+                            <tr>
                                 <td ><h3 class="name"> '.$name. ' </h3></td>
-                            <td><h4 class="name">'.$city. '</h4></td>
-                            <td><h4 class="name"> '.$district. '</h4></td>
-                            <td> <a href="#" class="create-btn"> Select Location </a>
-                            </td>
+                            <td><h4 class="name">'.$blood. '</h4></td>
+                            <td><h4 class="name"> '.$age. '</h4></td>
+                            <td><a href="#" class="create-btn">Select Donors</a></td>
+                            </tr>
+                            
                             </table>
                             ';
 
                         }
                     }
                     ?>
-                    
                     </div>
                 </div>
             </div>
         </div>
 
-        <h3 class="name">Nearest Available Hospital To Maharagama</h3>
-         <?php
+        <h3 class="name">Selected Donors list</h3>
+        <?php
          $id=$_GET['id'];
-                        $sql1="SELECT `hospital_name`
-                        FROM `hospital`
-                        WHERE `city` IN (
-                          SELECT `district`
-                          FROM `pending_donor` WHERE pending_donor_id=$id
+                        $sql1="SELECT `donor_name`
+                        FROM `donor`
+                        WHERE `blood_group` IN (
+                          SELECT `blood_group`
+                          FROM `patient` WHERE patient_id=$id
                         )";
 
     $result=mysqli_query($connection,$sql1);
     if($result){
         while($row=mysqli_fetch_assoc($result)){
-            $hname=$row['hospital_name'];
+            $dname=$row['donor_name'];
            
         echo'
         <table>
             <tr>
-                <td><h4 class="name"> '.$hname. ' </h3></td>
-                    <td><a href="#" class="update-btn"> 22/12/19 2 seats</a></td>
-                    <td><a href="#" class="update-btn"> 22/12/24 13 seats</a></td>
-                    <td> <a href="#" class="update-btn"> 22/12/26 15 seats</a></td>
-                    <td> <a href="#" class="update-btn"> 22/12/30 18 seats</a></td>
+                <td><h4 class="name"> '.$dname. ' </h3></td>
             </tr>
             </table>
             ';
