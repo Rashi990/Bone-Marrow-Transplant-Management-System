@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLBMTS</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/admin_select_hospital.css">
+</head>
+<body>
+   <!-- header  -->
+   <div class="main-content">
+        <header>
+            <h2>
+                Select Hospital
+            </h2>
+            <div class="search-wrapper">
+                <span class="material-icons">search</span>
+                <input type="search" placeholder="search here">
+            </div>
+    
+           
+    
+            
+            <div class="box-icon">
+                <div class="item">
+                    <span class="material-icons">notifications</span>
+                </div>
+                <div class="item">
+                    <span class="material-icons">chat_bubble</span>
+                </div>
+                
+            </div>
+           
+            
+            <div class="user-wrapper">
+                <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
+                <div> <h4>Welcome! </h4><?php echo $_SESSION['username'];?></div>
+            </div>
+        </header>
+    </div>
+    <div class="right">
+        <div class="list">
+            <div class="line">
+                <div class="hospital">
+                    <div class="details">
+                        <?php 
+                        $id=$_GET['id'];
+                        $sql="SELECT patient_name,blood_group,age FROM patient WHERE patient_id=$id";
+
+    $result=mysqli_query($connection,$sql);
+    if($result){
+        while($row=mysqli_fetch_assoc($result)){
+            $name=$row['patient_name'];
+            $age=$row['age'];
+            $blood=$row['blood_group'];
+        echo '
+                        <table>
+                            <tr>
+                                <td ><h3 class="name"> '.$name. ' </h3></td>
+                            <td><h4 class="name">'.$blood. '</h4></td>
+                            <td><h4 class="name"> '.$age. '</h4></td>
+                            <td><a href="#" class="create-btn">Select Donors</a></td>
+                            </tr>
+                            
+                            </table>
+                            ';
+
+                        }
+                    }
+                    ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="name">Selected Donors list</h3>
+        <?php
+         $id=$_GET['id'];
+                        $sql1="SELECT `donor_name`
+                        FROM `donor`
+                        WHERE `blood_group` IN (
+                          SELECT `blood_group`
+                          FROM `patient` WHERE patient_id=$id
+                        )";
+
+    $result=mysqli_query($connection,$sql1);
+    if($result){
+        while($row=mysqli_fetch_assoc($result)){
+            $dname=$row['donor_name'];
+           
+        echo'
+        <table>
+            <tr>
+                <td><h4 class="name"> '.$dname. ' </h3></td>
+            </tr>
+            </table>
+            ';
+        }
+    }
+    ?>
+    </div>
+</body>
+</html>

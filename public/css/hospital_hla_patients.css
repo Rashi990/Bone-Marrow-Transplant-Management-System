@@ -97,7 +97,7 @@ body{
     color: #006296;
 }
 
-.all-patients, .rank-donors, .hla-patients, .match-patients{
+.all-patients, .rank-donors, .hla-patients, .check-hla{
     margin: 0px 20px;
     text-decoration: none;
     background-color: #F7FFFF;
@@ -110,32 +110,21 @@ body{
     font-weight: bold;
 }
 
-.all-patients:hover, .rank-donors:hover, .hla-patients, .match-patients:hover{
+.all-patients:hover, .rank-donors:hover, .hla-patients, .check-hla:hover{
     background-color: #006296;
     color: #F7FFFF;
 }
 
-
-
-
-.patients{
+.hla_patients{
     position: absolute;
     margin-left: 240px;
-    margin-top: 20px;
+    margin-top: 60px;
     background-color: #f4f7fa;
     padding: 10px;
     width: 80%;
+    height: 80vh;
     border: none;
     border-radius: 20px;
-}
-
-.patients h1{
-    color: #006296;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 20px;
-    padding-bottom: 10px;
-    text-align: center;
 }
 
 .filter{
@@ -172,28 +161,31 @@ body{
     cursor: pointer;
  }
 
-
-
-
-
- .hla_patients{
-    position: absolute;
-    margin-left: 240px;
-    margin-top: 60px;
-    background-color: #f4f7fa;
-    padding: 10px;
-    width: 80%;
-    height: 80vh;
-    border: none;
-    border-radius: 20px;
-}
-
 table.hla_patient_list{
     margin: 10px;
     padding: 10px;
     width: 96%;
     border-collapse: collapse;
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+.new{
+    float: right;
+    margin: 10px 40px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 80px;
+    font-size: 14px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.new:hover{
+    background-color: #006296;
+    color: #F7FFFF;
 }
 
 table.hla_patient_list th{
@@ -218,6 +210,8 @@ table.hla_patient_list tr:nth-child(even){
     background-color: #d7f0ed;
 }
 
+
+
 table.hla_patient_list .view{
     color: #006296;
     padding: 8px 10px;
@@ -226,6 +220,16 @@ table.hla_patient_list .view{
 
 table.hla_patient_list .view:hover{
     color: #080909;
+}
+
+table.hla_patient_list .delete{
+    color: #d40000;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.hla_patient_list .delete:hover{
+    color: #940707;
 }
 
 table.hla_patient_list .edit{

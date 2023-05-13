@@ -14,10 +14,10 @@
             <h2>
                 Select Hospital
             </h2>
-            <div class="search-wrapper">
+            <!-- <div class="search-wrapper">
                 <span class='bx bx-search'></span>
                 <input type="search" placeholder="search here">
-            </div>
+            </div> -->
     
            
     
@@ -48,49 +48,66 @@
                         <i class='bx bxs-user-circle'></i>
                     </div>
                     <div class="details">
+                        <?php 
+                        $id=$_GET['id'];
+                        $sql="SELECT CONCAT_WS (' ',`first_name`,`second_name`) AS fullname,city,district,pending_donor_id from pending_donor WHERE pending_donor_id=$id";
+
+    $result=mysqli_query($connection,$sql);
+    if($result){
+        while($row=mysqli_fetch_assoc($result)){
+            $id=$row['pending_donor_id'];
+            $name=$row['fullname'];
+            $city=$row['city'];
+            $district=$row['district'];
+        echo '
                         <table>
-                            <td><h3 class="name"> Aruni Siriwardena</h3></td>
-                            <td><h4 class="name"> colombo</h4></td>
-                            <td><h4 class="name"> 20 yr.</h4></td>
+                           
+                                <td ><h3 class="name"> '.$name. ' </h3></td>
+                            <td><h4 class="name">'.$city. '</h4></td>
+                            <td><h4 class="name"> '.$district. '</h4></td>
                             <td> <a href="#" class="create-btn"> Select Location </a>
                             </td>
                             </table>
+                            ';
+
+                        }
+                    }
+                    ?>
+                    
                     </div>
                 </div>
             </div>
         </div>
 
         <h3 class="name">Nearest Available Hospital To Maharagama</h3>
-        <br>
-        <br>
-                          <h4>  No Hospital Found </h4> 
-                          <h4>  Select Location From Map </h4> 
+         <?php
+         $id=$_GET['id'];
+                        $sql1="SELECT `hospital_name`
+                        FROM `hospital`
+                        WHERE `city` IN (
+                          SELECT `district`
+                          FROM `pending_donor` WHERE pending_donor_id=$id
+                        )";
 
-        <!-- <table>
+    $result=mysqli_query($connection,$sql1);
+    if($result){
+        while($row=mysqli_fetch_assoc($result)){
+            $hname=$row['hospital_name'];
+           
+        echo'
+        <table>
             <tr>
-                <td><h4 class="name"> Apeksha Hospital Maharagama</h3></td>
+                <td><h4 class="name"> '.$hname. ' </h3></td>
                     <td><a href="#" class="update-btn"> 22/12/19 2 seats</a></td>
                     <td><a href="#" class="update-btn"> 22/12/24 13 seats</a></td>
                     <td> <a href="#" class="update-btn"> 22/12/26 15 seats</a></td>
                     <td> <a href="#" class="update-btn"> 22/12/30 18 seats</a></td>
             </tr>
-            <tr>
-                <td><h4 class="name"> Lanka Hospital</h3></td>
-                    <td><a href="#" class="update-btn"> 22/12/20 1 seats</a></td>
-                    <td><a href="#" class="update-btn"> 22/12/24 5 seats</a></td>
-                    <td> <a href="#" class="update-btn"> 22/12/26 20 seats</a></td>
-                    <td> <a href="#" class="update-btn"> 22/12/30 18 seats</a></td>
-            </tr>
-            <tr>
-                <td><h4 class="name">General Hospital</h3></td>
-                    <td><a href="#" class="update-btn"> 22/12/21 5 seats</a></td>
-                    <td><a href="#" class="update-btn"> 22/12/26 8 seats</a></td>
-                    <td> <a href="#" class="update-btn"> 22/12/30 19 seats</a></td>
-                    <td> <a href="#" class="update-btn"> 22/12/31 19 seats</a></td>
-            </tr>
-           
-
-            </table> -->
+            </table>
+            ';
+        }
+    }
+    ?>
     </div>
 </body>
 </html>

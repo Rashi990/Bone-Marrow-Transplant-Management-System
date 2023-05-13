@@ -91,7 +91,7 @@ body{
     background-color: #f4f7fa;
 }
 
-.all-patients, .rank-donors, .hla-patients, .match-patients{
+.all-patients, .rank-donors, .hla-patients, .check-hla{
     margin: 0px 20px;
     text-decoration: none;
     background-color: #F7FFFF;
@@ -104,7 +104,7 @@ body{
     font-weight: bold;
 }
 
-.all-patients:hover, .rank-donors:hover, .hla-patients:hover, .match-patients:hover{
+.all-patients:hover, .rank-donors:hover, .hla-patients:hover, .check-hla:hover{
     background-color: #006296;
     color: #F7FFFF;
 }

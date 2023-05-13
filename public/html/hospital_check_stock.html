@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_check_stock.css?v=2"> 
+
+    <title>Hospital-Check-Stock</title>
+</head>
+<body>
+
+    <!--
+
+    <div class="head">
+        <h1>Samples</h1>
+    </div>
+
+    <div class="search">
+        <div class="search-bar">
+          <span class="material-icons">search</span>
+          <input type="search" placeholder="search here">
+        </div>
+        </div>
+        -->
+
+    <div class="check-stock">
+
+    <h2>Check Sending Sample Details</h2>
+
+        <!--<a class="new" href="../../src/php/hospital_check_stock_table.php"> + Add </a>-->
+        
+    <table class="check-stock-list">
+        <tr>
+            <th>Test ID</th>
+            <th>Donor ID</th>
+            <th>Status</th>
+        </tr>
+
+        <?php include('../../src/php/hospital_check_stock_table.php') ?>
+       
+    </table>
+</div>
+
+    
+</body>
+</html>

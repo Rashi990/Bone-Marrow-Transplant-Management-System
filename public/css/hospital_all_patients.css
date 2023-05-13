@@ -97,7 +97,7 @@ body{
     color: #006296;
 }
 
-.all-patients, .rank-donors, .hla-patients, .match-patients{
+.all-patients, .rank-donors, .hla-patients, .check-hla{
     margin: 0px 10px;
     text-decoration: none;
     background-color: #F7FFFF;
@@ -110,7 +110,7 @@ body{
     font-weight: bold;
 }
 
-.all-patients, .rank-donors:hover, .hla-patients:hover, .match-patients:hover{
+.all-patients, .rank-donors:hover, .hla-patients:hover, .check-hla:hover{
     background-color: #006296;
     color: #F7FFFF;
 }
@@ -118,21 +118,13 @@ body{
 .patients{
     position: absolute;
     margin-left: 240px;
-    margin-top: 20px;
+    margin-top: 60px;
     background-color: #f4f7fa;
     padding: 10px;
     width: 80%;
+    height: 100%;
     border: none;
     border-radius: 20px;
-}
-
-.patients h1{
-    color: #006296;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 20px;
-    padding-bottom: 10px;
-    text-align: center;
 }
 
 .filter{
@@ -168,22 +160,6 @@ body{
     font-size:22px ;
     cursor: pointer;
  }
-
-
-
-
-
- .patients{
-    position: absolute;
-    margin-left: 240px;
-    margin-top: 60px;
-    background-color: #f4f7fa;
-    padding: 10px;
-    width: 80%;
-    height: 80vh;
-    border: none;
-    border-radius: 20px;
-}
 
 table.patient_list{
     margin: 10px;
@@ -240,7 +216,7 @@ table.patient_list .view{
     transition: 0.5s;
 }
 
-table.patient_list .view:hover{
+table.clinician_list .view:hover{
     color: #080909;
 }
 

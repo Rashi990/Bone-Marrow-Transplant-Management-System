@@ -1,0 +1,266 @@
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.top-nav{
+    display:grid;
+    position:sticky;
+    margin-left: 220px;
+    grid-template-columns: 300px 600px auto auto;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
+}
+
+.head h1{
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
+}
+
+.search{
+    display: flex;
+    margin-left: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+
+.search-bar span{
+    display: inline-block;
+    padding: 5px;
+    font-size:14px ;
+ }
+ 
+ .search-bar input{
+    height: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+ }
+
+.search-bar span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.search-bar .Loggedin{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px 20px;
+    width: 80%;
+}
+
+.top{
+    position: relative;
+    display: flex;
+    float: right;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.top span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.top p{
+    font-size: 14px;
+    margin: 5px 0px 20px 10px;
+}
+
+.top .Loggedin{
+    padding-left: 20px;
+}
+
+.choose{
+    margin: 40px 20px 10px 270px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f4f7fa;   
+}
+
+.back-patients{
+    margin-top: 20px;
+    margin-right: 20px;
+    color: #006296;
+}
+
+.all-patients, .rank-donors, .hla-patients, .check-hla{
+    margin: 0px 10px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 60px;
+    font-size: 14px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.all-patients:hover, .rank-donors:hover, .hla-patients:hover, .check-hla{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+.check_hla{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 60px;
+    background-color: #f4f7fa;
+    padding: 10px;
+    width: 80%;
+    height: 80vh;
+    border: none;
+    border-radius: 20px;
+}
+
+
+.filter{
+    display: flex;
+    padding: 5px 20px;
+    margin: auto;
+    justify-content: center;
+    border: 1px solid #006296;
+    border-radius: 30px;
+    width: 35%;
+    height: 20px;
+    font-size: 14px;
+    color: #006296;
+    background-color: #e6e6e6;
+}
+
+.filter label{
+    margin: 0px 40px;
+}
+
+.filter input{
+    height: 100%;
+    width: 95%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 1px;
+    outline: none;
+ }
+
+.filter span{
+    display: inline-block;
+    padding: 0px 20px;
+    font-size:22px ;
+    cursor: pointer;
+ }
+
+table.check_hla_list{
+    margin: 10px auto;
+    padding: 10px;
+    width: 40%;
+    border-collapse: collapse;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+h2{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #006296;
+}
+
+/*
+.new{
+    float: right;
+    margin: 10px 40px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 80px;
+    font-size: 14px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.new:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+*/
+
+table.check_hla_list th{
+    background-color: #308C83;
+    color: #F7FFFF;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    height: 25px;
+}
+
+table.check_hla_list td{
+    padding: 10px;
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+}
+
+table.check_hla_list tr:nth-child(even){
+    background-color: #d7f0ed;
+}
+
+table.check_hla_list .view{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.check_hla_list .view:hover{
+    color: #080909;
+}
+
+table.check_hla_list .delete{
+    color: #d40000;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.check_hla_list .delete:hover{
+    color: #940707;
+}
+
+table.check_hla_list .edit{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+table.check_hla_list .edit:hover{
+    color: #080909;
+}
+
+.add{
+    padding: 7px 15px;
+    border: 1px solid #006296;
+    border-radius: 10px;
+    color: #d7f0ed;
+    background-color: #006296;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add:hover{
+    color: #006296;
+    background-color: #d7f0ed;
+}

@@ -22,7 +22,7 @@
                     <label>Patient Name</label>
                 </div>
                 <div class="col-2">
-                    <input name="clinician_name" id="clinician_name" placeholder="Name" value="<?=(isset($clinician_name) ? $clinician_name : '')?>" type="text" onblur="required_name()" required >
+                    <input name="patient_name" id="patient_name" placeholder="Name" value="<?=(isset($name) ? $name : '')?>" type="text" onblur="required_name()" required >                
                 </div>
             </div>	
             
@@ -31,7 +31,7 @@
                     <label>Address</label>
                 </div>
                 <div class="col-2">
-                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                    <input name="address" id="address" placeholder="Address" type="text" value="<?=(isset($addr) ? $addr : '')?>" required >
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
                     <label>Date of Birth</label>
                 </div>
                 <div class="col-2">
-                    <input name="dob" id="dob" placeholder="Date of Birth" type="date" value="<?=(isset($address) ? $address : '')?>" required >
+                    <input name="date_of_birth" id="date_of_birth" placeholder="Date of Birth" type="date" value="<?=(isset($dob) ? $dob : '')?>" required >
                 </div>
             </div>
 
@@ -49,7 +49,7 @@
                     <label>Age</label>
                 </div>
                 <div class="col-2">
-                    <input name="age" id="age" placeholder="Age" type="number" value="<?=(isset($address) ? $address : '')?>" required >
+                    <input name="age" id="age" placeholder="Age" type="number" value="<?=(isset($age) ? $age : '')?>" required >
                 </div>
             </div>
 
@@ -59,9 +59,9 @@
                 </div>
                 <div class="col-2">
                     <select name="gender" id="gender">
-                        <option value="<?=(isset($address) ? $address : '')?>">Male</option>
-                        <option value="<?=(isset($address) ? $address : '')?>">Female</option>
-                        <option value="<?=(isset($address) ? $address : '')?>">Other</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>
             </div>
@@ -74,42 +74,42 @@
             <table>
             <tr>
                 <td>
-                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="a+" class="lbl">A+</label>
+                    <input name="blood_group" id="+A" type="radio" value="A+" required >
+                    <label for="A+" class="lbl">+A</label>
                 </td>
                 <td>
-                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="a-" class="lbl">A-</label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="b+" class="lbl">B+</label>
-                </td>
-                <td>
-                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="b-" class="lbl">B-</label>
+                    <input name="blood_group" id="A-" type="radio" value="A-" required >
+                    <label for="A-" class="lbl">A-</label>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="ab+" class="lbl">AB+</label>
+                    <input name="blood_group" id="B+" type="radio" value="B+" required >
+                    <label for="B+" class="lbl">B+</label>
                 </td>
                 <td>
-                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="ab-" class="lbl">AB-</label>
+                    <input name="blood_group" id="B-" type="radio" value="B-" required >
+                    <label for="B-" class="lbl">B-</label>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="o+" class="lbl">O+</label>
+                    <input name="blood_group" id="AB+" type="radio" value="AB+" required >
+                    <label for="AB+" class="lbl">AB+</label>
                 </td>
                 <td>
-                    <input name="blood_grp" id="blood_grp" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="o-" class="lbl">O-</label>
+                    <input name="blood_group" id="AB-" type="radio" value="AB-" required >
+                    <label for="AB-" class="lbl">AB-</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="blood_group" id="O+" type="radio" value="O+" required >
+                    <label for="O+" class="lbl">O+</label>
+                </td>
+                <td>
+                    <input name="blood_group" id="O-" type="radio" value="O-" required >
+                    <label for="O-" class="lbl">O-</label>
                 </td>
             </tr>
                 </table>
@@ -118,19 +118,19 @@
 
             <div class="row">
                 <div class="col-1">
-                    <label>Height</label>
+                    <label>Height (cm)</label>
                 </div>
                 <div class="col-2">
-                    <input name="height" id="height" placeholder="Height" type="number" value="<?=(isset($address) ? $address : '')?>" required >
+                    <input name="height" id="height" placeholder="Height" type="number" value="<?=(isset($height) ? $height : '')?>" maxlength="3" required >
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-1">
-                    <label>Weight</label>
+                    <label>Weight (kg)</label>
                 </div>
                 <div class="col-2">
-                    <input name="weight" id="weight" placeholder="Weight" type="number" value="<?=(isset($address) ? $address : '')?>" required >
+                    <input name="weight" id="weight" placeholder="Weight" type="number" value="<?=(isset($weight) ? $weight : '')?>" maxlength="3" required >
                 </div>
             </div>
 
@@ -139,7 +139,7 @@
                     <label>NIC</label>
                 </div>
                 <div class="col-2">
-                    <input name="NIC" id="NIC" placeholder="NIC" type="text" pattern="[0-9]{10}" value="<?=(isset($tele) ? $tele : '')?>" required >
+                    <input name="NIC" id="NIC" placeholder="NIC" type="text" pattern="[0-9]{9}[Vv]" value="<?=(isset($NIC) ? $NIC : '')?>" required >
                 </div>
             </div>
 
@@ -148,10 +148,10 @@
                     <label>Marital Status</label>
                 </div>
                 <div class="col-2">
-                    <input name="marital_sts" id="marital_sts" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="married" class="lbl">Married</label>
-                    <input name="marital_sts" id="marital_sts" type="radio" value="<?=(isset($tele) ? $tele : '')?>" required >
-                    <label for="unmarried" class="lbl">Unmarried</label>
+                    <input name="marital_state" id="Married" type="radio" value="Married" required >
+                    <label for="Married" class="lbl">Married</label>
+                    <input name="marital_state" id="Unmarried" type="radio" value="Unmarried" required >
+                    <label for="Unmarried" class="lbl">Unmarried</label>
                 </div>
             </div>
 
@@ -169,7 +169,7 @@
                     <label>Email</label>
                 </div>
                 <div class="col-2">
-                    <input name="email" id="email" placeholder="Email" type="email" value="<?=(isset($c_email) ? $c_email : '')?>" required >
+                    <input name="email" id="email" placeholder="Email" type="email" value="<?=(isset($email) ? $email : '')?>" required >
                 </div>
             </div>
 
@@ -178,7 +178,7 @@
                     <label>Diagnosis</label>
                 </div>
                 <div class="col-2">
-                    <input name="diagnosis" id="diagnosis" placeholder="Enter Diagnosis" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                    <input name="diagnosis" id="diagnosis" placeholder="Enter Diagnosis" type="text" value="<?=(isset($diagnosis) ? $diagnosis : '')?>" required >
                 </div>
             </div>
 
@@ -187,7 +187,10 @@
                     <label>Disease Status</label>
                 </div>
                 <div class="col-2">
-                    <input name="status" id="status" placeholder="Enter Current Disease Status" type="text" value="<?=(isset($address) ? $address : '')?>" required >
+                    <select name="current_status" id="current_status">
+                        <option value="Critical">Critical</option>
+                        <option value="Normal">Normal</option>
+                    </select>
                 </div>
             </div>
 
@@ -206,11 +209,19 @@
             </p>
             -->
 
+            <!--
             <div class="row">
                 <label>&nbsp;</label>
                 <a class="back_btn" href="../../src/php/hospital_all_patients.php">Back</a>
-                <!--<input type="submit" name="submit" value="submit" class="btn">-->
-                <a class="next_btn" href="../../src/php/hospital_add_patient_hla_details.php">Next</a>
+                <a href="../../src/php/hospital_add_patient_hla_details.php">
+                <input type="submit" name="submit" value="Next" class="btn">
+                </a>
+
+            -->
+
+                <a class="back_btn" href="../../src/php/hospital_all_patients.php">Back</a>
+                <input type="submit" name="submit" value="submit" class="btn">
+               <!--<a class="next_btn" href="../../src/php/hospital_add_patient_hla_details.php">Next</a>-->
             </div>
          
         </form>

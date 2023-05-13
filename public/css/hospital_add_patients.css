@@ -90,7 +90,7 @@ form.add_patient_form .lbl{
     border: 1px solid #006296;
     font-size: 16px;
     font-weight: bold;
-    padding: 3px 30px ;
+    padding: 8px 30px ;
     border-radius: 20px;
     transition: 0.5s;
     margin-left: 30px;
@@ -122,6 +122,7 @@ form.add_patient_form .lbl{
     color: #F7FFFF;
 }
 
+/*
 .next_btn{
     text-decoration: none;
     background-color: #F7FFFF;
@@ -140,7 +141,7 @@ form.add_patient_form .lbl{
     background-color: #006296;
     color: #F7FFFF;
 }
-
+*/
 
 .err{
     background-color: #f61313;

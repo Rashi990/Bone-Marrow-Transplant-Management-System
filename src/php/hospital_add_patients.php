@@ -13,6 +13,52 @@ $hospital_id=$_SESSION['hospital_id'];
 
  ?>
 
+ <?php
+
+  // Get current date
+  $currentDate = date("Y-m-d");
+ 
+  if(isset($_POST['submit'])){
+
+    //$id=$_POST['patient_id'];
+
+    $name=$_POST['patient_name'];
+    $email=$_POST['email'];
+    $tele=$_POST['telephone_no'];
+    $addr=$_POST['address'];
+    $dob=$_POST['date_of_birth'];
+    $age = date_diff(date_create($dob), date_create($currentDate))->y;
+    $gender=$_POST['gender'];
+    $height=$_POST['height'];
+    $weight=$_POST['weight'];
+    $NIC=$_POST['NIC'];
+    $marital_state=$_POST['marital_state'];
+    $blood_group=$_POST['blood_group'];
+    $diagnosis=$_POST['diagnosis'];
+    $status=$_POST['current_status'];
+
+    //Date validation
+    $dob_timestamp = strtotime($dob);
+    $now_timestamp = time();
+    if($dob_timestamp > $now_timestamp){
+        // Date of birth is in the future
+        echo "<script> alert('Please enter a valid date of birth.') </script>";
+    }else{
+    $sql= "INSERT INTO `patient`(`patient_name`, `email`, `telephone_no`, `address`, `date_of_birth`, `age`, `gender`, `height`, `weight`, `NIC`, `marital_state`, `blood_group`, `diagnosis`, `current_status`, `hospital_id`) VALUES ('$name','$email','$tele','$addr','$dob','$age','$gender','$height','$weight','$NIC','$marital_state','$blood_group','$diagnosis','$status','$hospital_id')";
+    $result=mysqli_query($connection,$sql);
+
+    if($result){
+      echo "<script> alert('Patient is successfully added !') </script>";
+			header("Location: hospital_all_patients.php");
+    }else{
+      echo "<script> alert('Patient adding is failed ! ".mysqli_error($connection)."') </script>";
+    }
+
+  }
+}
+
+ ?>
+
 <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -44,9 +90,9 @@ $hospital_id=$_SESSION['hospital_id'];
         <div class="Loggedin"> Welcome! <?php echo $username;?></div>
         <span class="material-icons">account_circle</span>
       </div>
-
-</div>
 -->
+
+
  </body>
  </html>
 
