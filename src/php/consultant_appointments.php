@@ -16,7 +16,7 @@ if($_SESSION['userlevel']!=1)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../public/css/consultant_navbar.css">
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_appointment.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_appointment.css?v=2" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Top</title>
 </head>
@@ -76,8 +76,6 @@ if($_SESSION['userlevel']!=1)
           <a href="consultant_approved_appointments.php">View Details</a>
         </div>
       </div>
-    </div>
-    <div class="row">
       <div class="col">
         <div class="box1">
           <div class="count">
@@ -94,21 +92,48 @@ if($_SESSION['userlevel']!=1)
           <a href="consultant_canceled_appointments.php">View Details</a>
         </div>
       </div>
-      <div class="col">
-        <div class="box1">
-          <div class="count">
-            <?php
-              $sql1 = "SELECT appointment_id FROM appointments ORDER by appointment_date";
-              $result1 = mysqli_query($connection, $sql1);
-              $row = mysqli_num_rows($result1);
-              echo '<h1>' .$row. '</h1>';
-            ?>
-          </div>
-          Total Appointments
-        </div>
-        <div class="box2">
-          <a href="consultant_all_appointments.php">View Details</a>
-        </div>
+    </div>
+    <div class="list">
+      <div class="full-box">
+        <h2>All Appointments</h2>
+        <table align="center">
+          <tr>
+            <th>Appointment ID</th>
+            <th>Patient Name</th>
+            <th>Mobile Number</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          <?php
+            $sql="SELECT * FROM appointments";
+            $result=mysqli_query($connection,$sql);
+            if($result){
+              while($row=mysqli_fetch_assoc($result)){
+                $appointment_id=$row['appointment_id'];
+                $patient_name=$row['patient_name'];
+                $telephone_no=$row['telephone_no'];
+                $email=$row['email'];
+                $status=$row['status'];
+                echo '
+                  <td>'.$appointment_id.'</td>
+                  <td>'.$patient_name.'</td>
+                  <td>'.$telephone_no.'</td>
+                  <td>'.$email.'</td>
+                  <td>'.$status.'</td>
+                  <td>
+                    <button id="btn-view" class="btn">
+                      <a href="consultant_appointments_view.php?appointment-id='.$appointment_id.'" class="text-light">
+                        View
+                      </a>
+                    </button>
+                  </td>
+                </tr>
+                ';
+              }
+            }
+          ?>
+        </table>
       </div>
     </div>
   </div>
