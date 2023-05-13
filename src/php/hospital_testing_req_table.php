@@ -29,9 +29,9 @@
             echo "<td>".$date."</td>";
             echo "<td>".$time."</td>";
 
-            echo "<td><a href='hospital_view_patient.php?viewid=".$id."' class='view'><span class='material-icons'>visibility</span></a></td>";
-            echo "<td><a href='hospital_update_patient.php?acceptid=".$id."' class='accept'><span class='material-icons'>verified</span></a></td>";
-            echo "<td><a href='hospital_delete_patient.php?deleteid=".$id."' class='delete'><span class='material-icons'>delete</span></td>";
+            //echo "<td><a href='hospital_view_patient.php?viewid=".$id."' class='view'><span class='material-icons'>visibility</span></a></td>";
+            echo "<td><a href='hospital_accept_testing_req.php?acceptid=".$id."' class='accept'><span class='material-icons'>person_add</span></td>";
+            echo "<td><a href='hospital_delete_testing_req.php?deleteid=".$id."' class='delete'><span class='material-icons'>delete</span></td>";
 
         echo "</tr>";
 
