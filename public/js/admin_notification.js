@@ -7,7 +7,7 @@ function loadDoc(tableName, elementId) {
                 var element = document.getElementById(elementId);
                 if (element) {
                     element.innerHTML = this.responseText;
-                    alert('You have new record');
+                    
                 }
             }
         };
