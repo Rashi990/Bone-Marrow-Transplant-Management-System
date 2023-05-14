@@ -14,55 +14,139 @@
     <form action="admin_add_testing_report.php" method="post">
     
         <section class="copy">
-            <h2>Add Testing Report</h2>
+            <h2>Add HLA Report</h2>
         </section> 
       <div class="user-details">
-        <div class="input-box">
-            <label for="ID">Sample ID</label>
-            <input type="text" name="ID"  placeholder="Enter Sample ID" >
-        </div>
-        <div class="input-box">
+        <!-- <div class="input-box">
             <label for="DID">Donor ID</label>
                 <input type="text" name="DID" placeholder="Enter Donor ID">
+        </div> -->
+            <div class="input-box">
+            <label for="HLA">HLA-A* Allele Group</label>
+                <input type="text" name="HLA" >
         </div>
         <div class="input-box">
-            <label for="HID">Tested Hospital ID</label>
-                <input type="text" name="HID" placeholder="Enter Hospital ID" >
-        </div>
-        <div class="input-box">
-            <label for="HLA">HLA-Antigen</label>
-                <input type="text" name="HLA" placeholder="Enter HLA-Antigen">
-        </div>
-        <div class="input-box">
-            <label for="HLAF">HLA-allele-Family</label>
-                <input type="text" name="HLAF" placeholder="Enter HLA-allele-Family">
+            <label for="HLAF">HLA-A* Proteins</label>
+                <input type="text" name="HLAF" >
         </div>
        <div class="input-box">
-        <label for="HLA2">HLA-2nd type</label>
-                <input type="text" name="HLA2" placeholder="Enter HLA-2nd type">
+        <label for="HLA2">HLA-A* Exons</label>
+                <input type="text" name="HLA2" >
        </div>
        <div class="input-box">
-        <label for="HLA3">HLA-3rd type</label>
-                <input type="text" name="HLA3" placeholder="Enter HLA-3rd type">
+        <label for="HLA3">HLA-A* Introns</label>
+                <input type="text" name="HLA3" >
        </div>
        <div class="input-box">
-        <label for="HLA4">HLA-4th type</label>
-                <input type="text" name="HLA4" placeholder="Enter HLA-4th type">
+        <label for="HLA4">HLA-A* Level</label>
+                <input type="text" name="HLA4">
        </div>
        <div class="input-box">
-        <label for="HLA5">HLA-5th type</label>
-                <input type="text" name="HLA5" placeholder="Enter HLA-5th type">
+        <label for="HLA5">HLA-B* Allele Group</label>
+                <input type="text" name="HLA5">
        </div>
 
        <div class="input-box">
-        <label for="text">Status</label>
-                <select name="status">
-                    <option value="qulified"> Qulified</option>
-                    <option value="disqulified"> Disqulified</option>
-               </select>
-       </div>        
-      </div>
-          
+        <label for="text">HLA-B* Proteins</label>
+        <input type="text" name="HLAF" >
+       </div> 
+       
+       <div class="input-box">
+        <label for="text">HLA-B* Exons</label>
+        <input type="text" name="HLAF">
+       </div>
+      
+
+      <div class="input-box">
+        <label for="text">HLA-B* Introns</label>
+        <input type="text" name="HLAF">
+       </div>
+
+       <div class="input-box">
+        <label for="text">HLA-B* Level</label>
+        <input type="text" name="HLAF" >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-C* Allele Group</label>
+        <input type="text" name="HLAF" >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-C* Proteins</label>
+        <input type="text" name="HLAF" >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-C* Exons</label>
+        <input type="text" name="HLAF" >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-C* Introns</label>
+        <input type="text" name="HLAF" >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-C* Level</label>
+        <input type="text" name="HLAF" >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DRB1* Allele Group</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DRB1* Proteins</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DRB1* Exons</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DRB1* Introns</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DRB1* Level</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DRB3,4,5* Allele Group</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DRB3,4,5* Proteins</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DRB3,4,5* Exons</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DRB3,4,5* Introns</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DRB3,4,5* Level</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DQB1* Allele Group</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DQB1* Proteins</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DQB1* Exons</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DQB1* Introns</label>
+        <input type="text" name="HLAF"    >
+       </div>
+       <div class="input-box">
+        <label for="text">HLA-DQB1* Level</label>
+        <input type="text" name="HLAF"    >
+       </div>
+    </div>
       <table>
         <tr><td>
             <button class="create-btn" name="submit" type="submit"> Create

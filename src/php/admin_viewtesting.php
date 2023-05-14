@@ -61,21 +61,20 @@ if($_SESSION['userlevel']!=0)
 </div>
 <div class="right">
     <main>
-<!-- <nav>
+<nav>
         <ul>
-        <li><a class="active" href="#">Pending Donor Testing</a> </li>
+        <li><a class="active" href="#">Testing Details</a> </li>
         <li><a href="admin_add_testing_report.php">Add Testing Report Details</a></li>
       </ul>
-    </nav> -->
+    </nav>
     <div class="cards-2">
             <div class="card-single-2"> 
                 <div class="title">
-                    <h3>Pending Donor Testing</h3>
+                    <h3>All Donor HLA Details</h3>
                 </div>
                 <table>
                     <tr>
                         <th>Donor ID</th>
-                        <th> Requested Date</th>
                         <th>Hospital ID</th>
                         <th>More Details</th>
                     </tr>
