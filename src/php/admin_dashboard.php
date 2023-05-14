@@ -1,4 +1,6 @@
-
+<?php
+require_once('admin_sidebar.php');
+?>
 <?php
 require_once('../../config/connection.php');
 session_start();

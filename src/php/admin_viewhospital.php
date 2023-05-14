@@ -25,11 +25,11 @@ if($_SESSION['userlevel']!=0)
         <h2>
                View Hospitals
             </h2>
-            <div class="search-wrapper">
+            <!-- <div class="search-wrapper">
             <span class="material-icons">search</span>
                 <input type="search" placeholder="search here">
             </div>
-    
+     -->
            
     
            
@@ -52,12 +52,18 @@ if($_SESSION['userlevel']!=0)
     </div>
 <div class="right">
     <main>
+
+<div class="search_box">
+    <form method="GET" action="">
+    <input type="text" name="search" placeholder="Search by Name or Email ">
+    <button class="btn" type="submit">Search</button>
+</form>
+</div>
+
 <div class="button">
 <a href="admin_addhospital.php" class="create-btn"> + Add Hospital
        </a>
 </div>
-    
-
   <table  class="list">
         <tr>
         <th class="table-head">
@@ -79,7 +85,12 @@ if($_SESSION['userlevel']!=0)
        
 
         <?php 
-        $sql="select * from `hospital`";
+       if (isset($_GET['search'])) {
+        $search = mysqli_real_escape_string($connection, $_GET['search']);
+        $sql = "SELECT * FROM `hospital` WHERE `hospital_name` LIKE '%$search%' OR `email` LIKE '%$search%'";
+    } else {
+        $sql = "SELECT * FROM `hospital`";
+    }
         $result=mysqli_query($connection,$sql);
         if($result){
             while($row=mysqli_fetch_assoc($result)){
@@ -96,7 +107,7 @@ if($_SESSION['userlevel']!=0)
         <td>'.$email. '</td>
         <td>'.$tele. '</td>
         <td>'.$address. '</td> 
-        <td><a href="admin_edithospital.php? editid=' .$id. '" class="update-btn"><span class="material-icons">edit_square</span></a></td>
+        <td><a href="admin_edithospital.php? edithosid=' .$id. '" class="update-btn"><span class="material-icons">edit_square</span></a></td>
         <td><a href="admin_deletehospital.php? deleteid='.$id.'" class="delete-btn" ><span class="material-icons">delete</span></a></td>   
     </tr>';
 
