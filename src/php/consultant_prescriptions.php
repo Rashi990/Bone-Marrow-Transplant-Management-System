@@ -14,7 +14,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="../../public/css/consultant_prescriptions.css">
+      <link rel="stylesheet" type="text/css" href="../../public/css/consultant_prescriptions.css?v=1">
       <link rel="stylesheet" type="text/css" href="../../public/css/consultant_navbar.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <title>Top</title>
@@ -42,10 +42,22 @@
     </div>
 
     <div class="board">
-      <div class="">
-        <div class="topic">
-          <h2>Patient List</h2>
+      <div class="tabs">
+        <div class="tab-selected">
+          <a>
+            <button type="button" name="button">Patient</button>
+          </a>
         </div>
+        <div class="tab">
+          <a href="consultant_donor_prescription.php">
+            <button type="button" name="button">Donor</button>
+          </a>
+        </div>
+      </div>
+      <div class="topic">
+        <h2>Patient List</h2>
+      </div>
+      <div class="scroll">
         <div class="mid-bottom">
             <table align="center">
               <tr>
