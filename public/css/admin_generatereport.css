@@ -56,9 +56,12 @@
     border: none;
     outline: none;
  }.user-wrapper{
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
+   display: flex;
+   align-items: center;
+   margin-right: 3px;
+   position: absolute;
+ top: 3px;
+ right: 3px;
  }
  .user-wrapper img{
     border-radius: 50%;
