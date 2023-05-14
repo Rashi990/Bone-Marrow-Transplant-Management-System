@@ -93,6 +93,7 @@ body{
     background-color: #F1F5F9;
     border-radius: 20px;
     padding: 20px;
+    overflow: scroll;
 }
 
 .counts1{
@@ -255,4 +256,28 @@ a.butt {
 
 #btn-view:hover{
   background: #308C83;
+}
+
+.tabs{
+  display: flex;
+}
+
+.tab a button{
+  margin: 5px;
+  background: #308C83;
+  color: white;
+  border: none;
+  height: 30px;
+  width: 70px;
+  cursor: pointer;
+}
+
+.tab-selected a button{
+  margin: 5px;
+  color: #308C83;
+  border: none;
+  height: 30px;
+  width: 70px;
+  font-size: 20px;
+  text-decoration: underline;
 }

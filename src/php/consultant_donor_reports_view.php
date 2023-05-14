@@ -5,25 +5,17 @@
  {
  include '../../config/connection.php';
 
- $patient_id=$_GET['update-id'];
+ $donor_id=$_GET['update-id'];
 
- $sql2="SELECT * FROM patient WHERE patient_id=$patient_id";
+ $sql2="SELECT * FROM donor WHERE donor_id=$donor_id";
  $result2=mysqli_query($connection,$sql2);
  if( $result2){
    while($rows = mysqli_fetch_assoc($result2)){
-     $patient_id=$rows['patient_id'];
-     $patient_name=$rows['patient_name'];
+     $donor_id=$rows['donor_id'];
+     $donor_name=$rows['donor_name'];
      $gender=$rows['gender'];
      $blood_group=$rows['blood_group'];
-     $hospital_id=$rows['hospital_id'];
-   }
- }
- $sql3="SELECT * FROM hospital WHERE hospital_id=$hospital_id";
- $result3=mysqli_query($connection,$sql3);
- if( $result3){
-   while($rows = mysqli_fetch_assoc($result3)){
-     $hospital_id=$rows['hospital_id'];
-     $hospital_name=$rows['hospital_name'];
+     $email=$rows['email'];
    }
  }
  else{
@@ -68,14 +60,14 @@
   <div class="board">
     <div class="form">
       <div class="title">
-        Patient No: <?php echo $patient_id ?> Clinical Details
+        Donor No: <?php echo $donor_id ?> Clinical Details
       </div>
       <div class="details">
         <div class="det">
-          Patient Name: <?php echo $patient_name ?>
+          Donor Name: <?php echo $donor_name ?>
         </div>
         <div class="det">
-          Hospital Name: <?php echo $hospital_name ?>
+          Email: <?php echo $email ?>
         </div>
         <div class="det">
           Gender: <?php echo $gender ?>

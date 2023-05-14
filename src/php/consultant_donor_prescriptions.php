@@ -1,6 +1,5 @@
 <?php require_once('consultant_navbar_prescription.php'); ?>
 <?php
-$patient_id=$_GET['update-id'];
 require_once('../../config/connection.php');
 session_start();
 if (!(isset($_SESSION['username'])))
@@ -47,10 +46,7 @@ if (!(isset($_SESSION['username'])))
 
     </div>
     <div class="">
-      <?php
-      echo
-      '<a href="consultant_prescription_form.php?update-id='.$patient_id.'" class="new">+ Add</a>';
-      ?>
+      <a href="consultant_donor_prescription_form.php" class="new">+ Add</a>
       <div class="mid-bottom">
           <table align="center">
             <tr>
@@ -62,12 +58,12 @@ if (!(isset($_SESSION['username'])))
               <th colspan="3">Action</th>
             </tr>
             <?php
-                $sql="SELECT * FROM patient_clinical_reports ORDER BY date, patient_id, drug_name";
+                $sql="SELECT * FROM donor_clinical_reports ORDER BY date, donor_id, drug_name";
                 $result=mysqli_query($connection,$sql);
                 if($result){
                     while($row=mysqli_fetch_assoc($result)){
-                        $patient_cr_id=$row['patient_cr_id'];
-                        $patient_id=$row['patient_id'];
+                        $donor_cr_id=$row['donor_cr_id'];
+                        $donor_id=$row['donor_id'];
                         $date=$row['date'];
                         $drug_name=$row['drug_name'];
                         $dosage=$row['dosage'];
@@ -81,17 +77,17 @@ if (!(isset($_SESSION['username'])))
                           <td>'.$frequency.'</td>
                           <td>
                             <button id="btn-view" class="btn">
-                              <a href="consultant_patient_clinical_reports_view.php?update-id='.$patient_cr_id.'" class="text-light">
+                              <a href="consultant_patient_clinical_reports_view.php?update-id='.$donor_cr_id.'" class="text-light">
                                 View
                                 </a>
                             </button>
                             <button id="btn-update" class="btn">
-                              <a href="consultant_patient_clinical_reports_update.php?update-id='.$patient_cr_id.'" class="text-light">
+                              <a href="consultant_patient_clinical_reports_update.php?update-id='.$donor_cr_id.'" class="text-light">
                                 Edit
                               </a>
                             </button>
                             <button id="btn-delete" class="btn">
-                              <a href="consultant_patient_clinical_reports_delete.php?delete-id='.$patient_cr_id.'" class="text-light">
+                              <a href="consultant_patient_clinical_reports_delete.php?delete-id='.$donor_cr_id.'" class="text-light">
                                 Delete
                               </a>
                             </button>

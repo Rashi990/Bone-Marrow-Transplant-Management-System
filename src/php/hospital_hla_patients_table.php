@@ -13,6 +13,7 @@ $result=mysqli_query($connection,$sql);
 if($result){
     while($row=mysqli_fetch_assoc($result)){
         $hid='HLAID'.str_pad($row['ph_id'],3,'0',STR_PAD_LEFT);
+        $patient_id=$row['patient_id'];
         $pid='PID'.str_pad($row['patient_id'],3,'0',STR_PAD_LEFT);
 
         $hla_A_ag=$row['HLA-A_allele_group'];
@@ -63,10 +64,16 @@ if($result){
             echo "<td>".$hla_DRB3_ag.":".$hla_DRB3_pro.":".$hla_DRB3_exo.":".$hla_DRB3_intro.":".$hla_DRB3_lvl."</td>";
             echo "<td>".$hla_DQB1_ag.":".$hla_DQB1_pro.":".$hla_DQB1_exo.":".$hla_DQB1_intro.":".$hla_DQB1_lvl."</td>";
 
-            echo "<td><a href='hospital_view_hla_patient.php?viewid=".$hid."' class='view'><span class='material-icons'>visibility</span></a></td>";
-            echo "<td><a href='hospital_update_hla_patient.php?updateid=".$hid."' class='edit'><span class='material-icons'>edit_square</span></a></td>";
+            echo "<td><a href='hospital_view_hla_patient.php?viewid=".$hid."' class='view'><abbr title='View'><span class='material-icons'>visibility</span></a></abbr></td>";
+            echo "<td><a href='hospital_update_hla_patient.php?updateid=".$hid."' class='edit'><abbr title='Edit'><span class='material-icons'>edit_square</span></abbr></a></td>";
 
         echo "</tr>";
+
+
+        $sql1="INSERT INTO `match_requests`(`patient_id`, `hospital_id`) VALUES ('$patient_id','$hospital_id')";
+        $result1=mysqli_query($connection,$sql1);
+
+        
 
     }
 }

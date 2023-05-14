@@ -5,7 +5,7 @@ alert( document.getElementById('s1').value);
 switch(document.getElementById('d1').value)
 {
 case "AML-Adult":
-window.location.href="../../src/php/consultant_disease.php#id";
+window.location.href="../../src/php/consultant_disease.php#AMLA";
 break;
 
 case "AML-Pediatric":

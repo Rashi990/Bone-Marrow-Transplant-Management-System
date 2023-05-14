@@ -101,7 +101,7 @@ body{
     border-radius: 20px;
     padding: 10px;
     margin: 20px;
-    width: 50%;
+    width: 40%;
 }
 
 .btn{
@@ -204,7 +204,7 @@ body{
     padding: 30px;
     background-color: #d7f0ed;
     border-radius: 20px;
-    width: 45%;
+    width: 55%;
 }
 
 .match h3{
@@ -268,6 +268,7 @@ table.list tr{
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
+/*
 table.list .view{
     text-decoration: none;
     background-color: #F7FFFF;
@@ -283,38 +284,27 @@ table.list .view:hover{
     background-color: #308C83;
     color: #F7FFFF;
 }
+*/
 
-
-table.list .send{
-    text-decoration: none;
-    background-color: #F7FFFF;
+table.list .accept{
     color: #006296;
-    border: 1px solid #006296;
-    border-radius: 10px;
-    padding: 8px 10px;
-    font-size: 14px;
     transition: 0.5s;
 }
 
-table.list .send:hover{
-    background-color: #006296;
-    color: #F7FFFF;
+
+table.list .accept:hover{
+    color: #080909;
 }
+
 
 table.list .delete{
-    text-decoration: none;
-    background-color: #F7FFFF;
     color: #FF0404;
-    border: 1px solid #FF0404;
-    border-radius: 10px;
-    padding: 8px 10px;
-    font-size: 14px;
     transition: 0.5s;
 }
 
+
 table.list .delete:hover{
-    background-color: #FF0404;
-    color: #F7FFFF;
+    color: #940707;
 }
 
 

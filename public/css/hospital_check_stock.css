@@ -117,7 +117,7 @@ body{
 }
 */
 
-.stock{
+.check-stock{
     position: absolute;
     margin-left: 240px;
     margin-top: 60px;
@@ -165,10 +165,10 @@ body{
  }
 */
 
-table.stock-list{
-    margin: 50px 20px;
+table.check-stock-list{
+    margin: 10px auto;
     padding: 10px;
-    width: 96%;
+    width: 40%;
     border-collapse: collapse;
     box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
@@ -180,7 +180,7 @@ h2{
     color: #006296;
 }
 
-
+/*
 .new{
     float: right;
     margin: 10px 40px;
@@ -199,61 +199,72 @@ h2{
     background-color: #006296;
     color: #F7FFFF;
 }
+*/
 
-table.stock-list tr{
-    padding: 10px;
-}
-
-table.stock-list th{
+table.check-stock-list th{
     background-color: #308C83;
     color: #F7FFFF;
-    padding: 10px;
+    padding: 8px 20px 8px 40px;
     text-align: left;
     font-size: 16px;
     font-weight: bold;
     height: 25px;
 }
 
-table.stock-list td{
-    padding: 10px;
+table.check-stock-list td{
+    padding: 8px 20px 8px 40px;
     height: 25px;
     font-size: 16px;
     font-weight: bold;
     color: #006296;
 }
 
-table.stock-list tr:nth-child(even){
+table.check-stock-list tr:nth-child(even){
     background-color: #d7f0ed;
 }
 
-table.stock-list .view{
+table.check-stock-list .view{
     color: #006296;
     padding: 8px 10px;
     transition: 0.5s;
 }
 
-table.stock-list .view:hover{
+table.check-stock-list .view:hover{
     color: #080909;
 }
 
-table.stock-list .delete{
+table.check-stock-list .delete{
     color: #d40000;
     padding: 8px 10px;
     transition: 0.5s;
 }
 
-table.stock-list .delete:hover{
+table.check-stock-list .delete:hover{
     color: #940707;
 }
 
-table.stock-list .edit{
+table.check-stock-list .edit{
     color: #006296;
     padding: 8px 10px;
     transition: 0.5s;
 }
 
-table.stock-list .edit:hover{
+table.check-stock-list .edit:hover{
     color: #080909;
 }
 
 
+.add{
+    padding: 7px 15px;
+    border: 1px solid #006296;
+    border-radius: 10px;
+    color: #d7f0ed;
+    background-color: #006296;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add:hover{
+    color: #006296;
+    background-color: #d7f0ed;
+}
