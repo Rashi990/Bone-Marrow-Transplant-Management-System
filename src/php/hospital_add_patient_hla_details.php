@@ -480,11 +480,12 @@ $patient_id=$_GET['add-id'];
         `HLA-B_allele_group`, `HLA-B_protein`, `HLA-B_syn_exons`, `HLA-B_syn_introns`, `HLA-B_ex_level`, 
         `HLA-C_allele_group`, `HLA-C_protein`, `HLA-C_syn_exons`, `HLA-C_syn_introns`, `HLA-C_ex_level`, 
         `HLA-DRB1_allele_group`, `HLA-DRB1_protein`, `HLA-DRB1_syn_exons`, `HLA-DRB1_syn_introns`, `HLA-DRB1_ex_level`, 
-        `HLA-DRB3,4,5_allele_group`, `HLA-DRB3,4,5_protein`, `HLA-DRB3,4,5_syn_exons`, `HLA-DRB3,4,5_syn_introns`, `HLA-DRB3,4,5_ex_level`, `HLA-DQB1_allele_group`, `HLA-DQB1_protein`, `HLA-DQB1_syn_exons`, `HLA-DQB1_syn_introns`, `HLA-DQB1_ex_level`
+        `HLA-DRB3,4,5_allele_group`, `HLA-DRB3,4,5_protein`, `HLA-DRB3,4,5_syn_exons`, `HLA-DRB3,4,5_syn_introns`, `HLA-DRB3,4,5_ex_level`, 
+        `HLA-DQB1_allele_group`, `HLA-DQB1_protein`, `HLA-DQB1_syn_exons`, `HLA-DQB1_syn_introns`, `HLA-DQB1_ex_level`
         )
          VALUES 
         (
-         `$patient_id`
+            '$patient_id'
           `$hla_A_ag`, `$hla_A_pro`, `$hla_A_exo`, `$hla_A_intro`, `$hla_A_lvl`,
           `$hla_B_ag`, `$hla_B_pro`, `$hla_B_exo`, $hla_B_intro`, `$hla_B_lvl`,
           `$hla_C_ag`, `$hla_C_pro`, `$hla_C_exo`,`$hla_C_intro`, `$hla_C_lvl`,
@@ -498,7 +499,7 @@ $patient_id=$_GET['add-id'];
 
     if($result){
       echo "<script> alert('Patient HLA details are successfully added !') </script>";
-			header("Location: hospital_hla_patient.php");
+	  header("Location: hospital_hla_patient.php");
     }else{
       echo "<script> alert('Patient HLA details adding failed !') </script>";
     }
