@@ -46,6 +46,7 @@
                     <div class="details">
                         <?php 
                         $id=$_GET['id'];
+                        $hid=$_GET['hid'];
                         $sql="SELECT patient_name,blood_group,age FROM patient WHERE patient_id=$id";
 
     $result=mysqli_query($connection,$sql);
@@ -60,7 +61,7 @@
                                 <td ><h3 class="name"> '.$name. ' </h3></td>
                             <td><h4 class="name">'.$blood. '</h4></td>
                             <td><h4 class="name"> '.$age. '</h4></td>
-                            <td><a href="#" class="create-btn">Select Donors</a></td>
+                            <!-- <td><a href="#" class="create-btn">Select Donors</a></td> -->
                             </tr>
                             
                             </table>
@@ -76,28 +77,29 @@
 
         <h3 class="name">Selected Donors list</h3>
         <?php
-         $id=$_GET['id'];
-                        $sql1="SELECT `donor_name`
-                        FROM `donor`
-                        WHERE `blood_group` IN (
-                          SELECT `blood_group`
-                          FROM `patient` WHERE patient_id=$id
-                        )";
-
-    $result=mysqli_query($connection,$sql1);
-    if($result){
-        while($row=mysqli_fetch_assoc($result)){
-            $dname=$row['donor_name'];
-           
-        echo'
-        <table>
-            <tr>
-                <td><h4 class="name"> '.$dname. ' </h3></td>
-            </tr>
-            </table>
-            ';
+    
+        $sql1 = "SELECT donor_id, donor_name FROM donor WHERE blood_group='$blood'";
+        $result1 = mysqli_query($connection, $sql1);
+        if ($result1) {
+            while ($row1 = mysqli_fetch_assoc($result1)) {
+                $donor_id = $row1['donor_id'];
+                $donor_name = $row1['donor_name'];
+            
+                echo '<table>
+                        <tr>
+                            <td><h4 class="name">'.$donor_name.'</h4></td>
+                        </tr>
+                    </table>';
+                    
+            }
+            
+            // Insert data into the new table
+        
+            $sql2= "insert into bloodbank_rankdonor_list(patient_id, hospital_id, donor_ids) VALUES ($id, $hid, '$donor_id') order by donor_id ";
+            mysqli_query($connection, $sql2);
         }
-    }
+
+
     ?>
     </div>
 </body>
