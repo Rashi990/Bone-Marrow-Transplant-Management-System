@@ -1,7 +1,11 @@
 <?php require_once('consultant_navbar_prescription.php'); ?>
+
 <?php
 require_once('../../config/connection.php');
 session_start();
+
+$patient_id=$_GET['update-id'];
+
 if($_SESSION['userlevel']!=1)
 {
     header("Location:consultant_login.php");

@@ -54,24 +54,25 @@ if($_SESSION['userlevel']!=1)
           <th>Action</th>
         </tr>
         <?php
-          $sql="SELECT * FROM appointments";
+          $sql="SELECT * FROM `appointments_patient` INNER JOIN `patient` ON appointments_patient.patient_id = patient.patient_id";
           $result=mysqli_query($connection,$sql);
           if($result){
             while($row=mysqli_fetch_assoc($result)){
-              $appointment_id=$row['appointment_id'];
+              $patient_appointment_id=$row['patient_appointment_id'];
+              $patient_id=$row['patient_id'];
               $patient_name=$row['patient_name'];
               $telephone_no=$row['telephone_no'];
               $email=$row['email'];
               $status=$row['status'];
               echo '
-                <td>'.$appointment_id.'</td>
+                <td>'.$patient_appointment_id.'</td>
                 <td>'.$patient_name.'</td>
                 <td>'.$telephone_no.'</td>
                 <td>'.$email.'</td>
                 <td>'.$status.'</td>
                 <td>
                   <button id="btn-view" class="btn">
-                    <a href="consultant_appointments_view.php?appointment-id='.$appointment_id.'" class="text-light">
+                    <a href="consultant_approved_appointments_view.php?appointment-id='.$patient_appointment_id.'" class="text-light">
                       View
                     </a>
                   </button>

@@ -93,11 +93,7 @@ body{
     background-color: #F1F5F9;
     border-radius: 20px;
     padding: 20px;
-    overflow: hidden;
-}
-
-.scroll{
-  overflow-y: scroll;
+    overflow: scroll;
 }
 
 .counts1{
