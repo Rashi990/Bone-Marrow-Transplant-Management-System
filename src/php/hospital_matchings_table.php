@@ -2,16 +2,16 @@
 
  $hospital_id=$_SESSION['hospital_id'];
 
- /*
- $sql="SELECT match_requests.*, patient.patient_id, patient.patient_name, patient.current_status
+
+ $sql1="SELECT match_requests.*, patient.patient_id, patient.patient_name, patient.current_status
         FROM match_requests
         JOIN patient ON match_requests.patient_id=patient.patient_id 
         WHERE match_requests.hospital_id=$hospital_id
         ORDER BY match_requests.match_request_id ";
-    */
+  
 
 
-    $sql1="SELECT * FROM match_requests WHERE hospital_id=$hospital_id";
+    //$sql1="SELECT * FROM match_requests WHERE hospital_id=$hospital_id";
         
     $result1=mysqli_query($connection,$sql1);
 
@@ -27,12 +27,12 @@
 
 
 
-         $sql2="SELECT patient_id,patient_name,current_status FROM patient WHERE patient_id=$patient_id";
+         //$sql2="SELECT patient_id,patient_name,current_status FROM patient WHERE patient_id=$patient_id";
 
-         $result2=mysqli_query($connection,$sql2);
+         //$result2=mysqli_query($connection,$sql2);
 
-         if($result2){
-          while($row=mysqli_fetch_assoc($result2)){
+         //if($result2){
+          //while($row=mysqli_fetch_assoc($result2)){
             $patient_name=$row['patient_name'];
             $patient_status=$row['current_status'];
           
@@ -44,15 +44,13 @@
          echo "<td>".$patient_name."</td>";
          echo "<td>".$patient_status."</td>";
 
-         echo "<td><a href='hospital_update_patient.php?acceptid=".$match_request_id."' class='accept'><span class='material-icons'>person_add</span></td>";
-         echo "<td><a href='hospital_delete_patient.php?deleteid=".$match_request_id."' class='delete'><span class='material-icons'>delete</span></td>";
+         echo "<td><a href='hospital_update_patient.php?acceptid=".$match_request_id."' class='accept'><abbr title='Confirm'><span class='material-icons'>person_add</span><abbr/></td>";
+         echo "<td><a href='hospital_delete_patient.php?deleteid=".$match_request_id."' class='delete'><abbr title='Delete'><span class='material-icons'>delete</span><abbr/></td>";
          
      echo "</tr>";
 
 
-        }
-      }
-
+       
     }
   }
    
