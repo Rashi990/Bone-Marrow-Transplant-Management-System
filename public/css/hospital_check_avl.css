@@ -84,6 +84,7 @@ body{
   padding-left: 20px;
 }
 
+
 .dates{
     position: absolute;
     margin-left: 240px;
@@ -92,22 +93,40 @@ body{
     background-color: #f4f7fa;
     border-radius: 20px;
     padding: 30px;
-    display: flex;
-    justify-content: space-between;
+    
 }
 
 .dates .box1{
   background-color: #d7f0ed;
-  flex-direction: column;
   margin: 10px;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 96%;
 }
 
+.calendar{
+  background-color: #f2f2f2;
+  display: flex;
+}
+
+.calendar .days{
+  flex-direction: column;
+}
+
+.calendar .day{
+  background-color: #006296;
+  color: #d7f0ed;
+}
+
+.calendar .times{
+  background-color: #d7f0ed;
+}
+
+
+/*
 .main-content{
     margin: 20px auto;
  }
@@ -166,6 +185,7 @@ body{
 .box-icon .item{
    padding-right: 50px;
 }
+*/
 
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
