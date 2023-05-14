@@ -55,6 +55,7 @@ if($_SESSION['userlevel']!=0)
         <ul>
         <li><a href="#">Pending Donor Test Request</a> </li>
         <li><a  class="active" href="../../src/php/admin_hospital_match_request.php" > Hospital Matching Request </a></li>
+        <li><a  class="active" href="../../src/php/admin_hospital_transplant_request.php" >Transplant Request </a></li>
       </ul>
     </nav>
     <div class="cards-2">

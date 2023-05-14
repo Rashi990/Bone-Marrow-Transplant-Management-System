@@ -26,12 +26,12 @@ if($_SESSION['userlevel']!=0)
             <h2>
                 Donor Manage
             </h2>
-            <div class="search-wrapper">
+           
                 <span class="material-icons">
                     search
                 </span>
                 <input type="search" placeholder="search here">
-            </div>
+            
     
            
     
@@ -61,6 +61,13 @@ if($_SESSION['userlevel']!=0)
         <li><a href="../../src/php/admin_accept_pending_donor.php">Accept Pending Donors</a></li>
       </ul>
     </nav>
+   
+    <div class="search_box">
+    <form method="GET" action="">
+    <input type="text" name="search" placeholder="Search by name or blood group">
+    <button class="btn" type="submit">Search</button>
+</form>
+</div>
 
   <table class="list">
         <tr>
@@ -81,7 +88,12 @@ if($_SESSION['userlevel']!=0)
       </th>
         </tr>
         <?php 
-        $sql="select * from `donor`";
+       if(isset($_GET['search'])){
+        $search = mysqli_real_escape_string($connection, $_GET['search']);
+        $sql="SELECT * FROM `donor` WHERE `donor_name` LIKE '%$search%' OR `blood_group` LIKE '%$search%'";
+    } else {
+        $sql="SELECT * FROM `donor`";
+    }
         $result=mysqli_query($connection,$sql);
         if($result){
             while($row=mysqli_fetch_assoc($result)){
@@ -90,18 +102,20 @@ if($_SESSION['userlevel']!=0)
                 $blood=$row['blood_group'];
                 $tele=$row['telephone_no'];
                 $address=$row['address'];
-             echo'<tr>
-        <td>'.$id. '</td>
-        <td>'.$name. '</td>
-        <td>'.$blood. '</td>
-        <td>'.$tele. '</td>
-        <td>'.$address. '</td>  
-        <td><a href="admin_editdonor.php? editid='.$id.'" class="update-btn"><span class="material-icons">edit_square</span></a></td>
-        <td><a href="admin_deletedonor.php? deleteid='.$id.'"  class="delete-btn" ><span class="material-icons">delete</span></a></td>
-    </tr>';
-
+                echo'<tr>
+                <td>'.$id. '</td>
+                <td>'.$name. '</td>
+                <td>'.$blood. '</td>
+                <td>'.$tele. '</td>
+                <td>'.$address. '</td>  
+                <td><a href="admin_editdonor.php? editid='.$id.'" class="update-btn"><span class="material-icons">edit_square</span></a></td>
+                <td><a href="admin_deletedonor.php? deleteid='.$id.'"  class="delete-btn" ><span class="material-icons">delete</span></a></td>
+            </tr>';
             }
+        } else {
+            echo '<tr><td colspan="7"> No donors found. </td></tr>';
         }
+        
         
         ?>
       

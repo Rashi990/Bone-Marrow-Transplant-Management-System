@@ -19,42 +19,50 @@ body{
     font-weight: 500;
 
 }
-.container{
-    margin-left: 460px;
-    margin-bottom: 50px;
-    max-width: 800px;
-    width: 100%;
+.container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    margin: 50px;
+    /* max-width: 800px; */
+    width: 80%;
     background: #D7F0ED;
     padding: 30px;
     border-radius: 12px;
-}
-.container form .user-details{
+  }
+  
+  .container form .user-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-form .user-details .input-box{
-    margin: 2px 0 2px 0;
-    width: calc(100% / 2 - 10px);
-}
-.user-details .input-box input{
+    width: 100%;
+  }
+  
+  form .user-details .input-box {
+    flex: 1 0 18%;
+    margin: 0 5px;
+  }
+  
+  .user-details .input-box input {
     height: 45px;
-    width: 100%;
-}
-
-.user-details .input-box label{
-        display: block;
-        margin-bottom: 0.5rem;
-        font-size: 0.85rem;
-        font-weight: 500;
-        line-height: 30px;
-        letter-spacing: 0.03em;
-        color: #006296;
-    }
-.user-details .input-box input,select{
-    display: 50%;
-    width: 100%;
-    box-sizing:border-box;
+   width:100px;
+  }
+  
+  .user-details .input-box label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: #006296;
+  }
+  
+  .user-details .input-box input,
+  select {
+   
+    box-sizing: border-box;
     border-radius: 8px;
     border: 1px solid #c4c4c4;
     padding: 1em;
@@ -62,7 +70,8 @@ form .user-details .input-box{
     font-size: 0.875;
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
     border-radius: 12px;
-}
+  }
+  
 h2{
     font-size: 1.5rem;
     font-weight: 700;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <script type="text/javascript" src="../../public/js/admin_form_validation.js"></script>
 	<title>Add Hospital</title>
     <link rel="stylesheet"  href="../../public/css/admin_addhospital.css?v=1">
 </head>
@@ -31,7 +31,9 @@
                 <label for="username">Username</label>
                 <input type="text" name="username" placeholder="Enter Hospital Username" >
                 <label for="passwors">Password</label>
-                <input type="text" name="password" placeholder="Enter Hospital password" minlength="6">
+                <input type="text" name="password" placeholder="Enter Hospital password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required minlength="6">
+                <label for="passwors"> Confirm Password</label>
+                <input type="password" name="conpassword" id="conpassword" placeholder="Confirm Password" value="<?=(isset($conpassword) ? $conpassword : '')?>" onblur="conpassword_validation()" required>
 
     
      
