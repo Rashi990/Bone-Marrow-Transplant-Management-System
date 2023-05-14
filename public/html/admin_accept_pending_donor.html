@@ -59,7 +59,7 @@
                         <th>Donor Name</th>
                         <th>Nearest City</th>
                         <th>Requested Date</th>
-                        <th>Status</th>
+                       
                         <th colspan="2">Accept</th>
                     </tr>
                     <?php 
@@ -72,14 +72,13 @@
                 $lname=$row['second_name'];
                 $city=$row['city'];
                 $requestdate=$row['request_date'];
-                $status=$row['status'];
+               
              echo '<tr>
         <td>'.$id. '</td>
         <td>'.$fname,'&nbsp',$lname. '</td>
         <td>'.$city. '</td>
         <td>'.$requestdate. '</td>
-        <td id="status_cl">Disqualified</td>  
-        <!-- <td id="status_cl">'.$status. '</td>   -->
+        
         <td>
             <!-- <div class="input-container cta">
             <label class="checkbox-container">
