@@ -52,14 +52,14 @@ if($_SESSION['userlevel']=1)
           <div class="details">
             <div class="d">
               <label class="lbl">Patient ID</label>
-              <input type="text" name="patient_id" placeholder="Enter Patient ID">
+              <input type="text" name="patient_id" placeholder="Enter Patient ID" value="<?php echo $patient_id ?>">
             </div>
             <div class="title">
             <p>Clinical Form</p>
           </div>
             <div class="d">
               <label class="lbl">Date</label>
-              <input type="date" name="date" placeholder="Choose Date">
+              <input type="date" name="date" placeholder="Choose Date" value="<?php echo $date ?>">
             </div>
           </div>
           <div class="ad">

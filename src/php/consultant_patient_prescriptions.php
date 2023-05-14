@@ -1,5 +1,6 @@
 <?php require_once('consultant_navbar_prescription.php'); ?>
 <?php
+$patient_id=$_GET['update-id'];
 require_once('../../config/connection.php');
 session_start();
 if (!(isset($_SESSION['username'])))
@@ -46,7 +47,10 @@ if (!(isset($_SESSION['username'])))
 
     </div>
     <div class="">
-      <a href="consultant_prescription_form.php" class="new">+ Add</a>
+      <?php
+      echo
+      '<a href="consultant_prescription_form.php?update-id='.$patient_id.'" class="new">+ Add</a>';
+      ?>
       <div class="mid-bottom">
           <table align="center">
             <tr>

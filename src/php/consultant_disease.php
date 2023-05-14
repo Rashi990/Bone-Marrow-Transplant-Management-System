@@ -94,7 +94,7 @@ if($_SESSION['userlevel']=1)
         </div>
       </div>
       <div class="descript">
-        <div class="main_dec">
+        <section class="main_dec">
           <h1>Disease-Specific HCT Indications and Outcomes Data</h1>
           New outcomes data and research has defined which patients can benefit from hematopoietic cell transplant (HCT) and when this therapy is best applied.  HCT offers a potential cure for blood cancers, such as leukemia and lymphoma, and other life-threatening diseases.
 
@@ -142,8 +142,8 @@ if($_SESSION['userlevel']=1)
 
           <h3>Clinical Trials Search and Support</h3>
           The NMDP/Be The Match offers the Be The Match® Jason Carter Clinical Trials Search and Support (CTSS) program, which can provide clinical trial navigation to your patients. The CTSS Program was created to help people with blood cancers or blood disorders and their families find and join clinical trials.
-        </div>
-        <div class="ALMA" value="#ALMA" name="#ALMA">
+        </section>
+        <section class="ALMA" value="#ALMA" name="#ALMA">
           <h1>Acute Myeloid Leukemia (AML) - Adult</h1>
           Allogeneic stem cell transplantation is an important treatment option in the management of adult acute myeloid leukemia (AML). [1] Worldwide, physicians perform more than 7,000 allogeneic transplants for AML, making it the most common and fastest growing indication for allogeneic HCT. [2]
           <br><br>
@@ -176,7 +176,7 @@ if($_SESSION['userlevel']=1)
             <li>First relapse</li>
             <li>CR2 and beyond, if not previously evaluated</li>
           </ul>
-        </div>
+        </section>
       </div>
     </div>
 

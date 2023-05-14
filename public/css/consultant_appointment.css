@@ -98,20 +98,11 @@ body{
     padding: 20px;
 }
 
-.row{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 200px;
-}
-
 .list{
   width: 90%;
   background: #bde4e0;
   padding: 20px;
+  border-radius: 20px;
 }
 
 th{
@@ -131,11 +122,63 @@ tr{
   text-align: center;
   height: 30px;
   width: 200px;
-  background: #D7F0ED;
 }
 
-td{
-  background: #ffffff;
+tr:nth-child(even){
+    background-color: #d7f0ed;
+}
+
+.view{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+.view:hover{
+    color: #080909;
+}
+
+h1{
+  color: #006296;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.count{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 50px;
+}
+
+.ttl{
+  font-size: 18px;
+  font-weight: bold;
+  color: #006296;
+}
+
+.full-box h2{
+  color: #006296;
+}
+
+.full-box{
+  width: 90%;
+  margin-top: 30px;
+  overflow-y: scroll;
+}
+
+.full-box::-webkit-scrollbar {
+  display: none;
 }
 
 .col{
@@ -149,22 +192,31 @@ td{
   background: #bde4e0;
   text-align: center;
   margin: 10px;
+  border: none;
+  border-radius: 20px;
 }
 
-a.butt {
+.box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 a {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
 
     text-decoration: none;
-    color: #009879;
+    color: #006296;
     background: white;
-    width: 60px;
+    width: 150px;
     height: 25px;
     padding: 2px;
     text-align: center;
     font-weight: bold;
 
-    border: 1px solid #009879;
+    border: 1px solid #006296;
     border-radius: 10px;
 }
