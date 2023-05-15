@@ -117,7 +117,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
         <div class="match">
 
             <!--Patient table-->
-            <table class="patiient_data">
+            <table class="patient_data">
                 <tr class="theads">
                     <th>Patient ID</th>
                     <th>Patient Name</th>
@@ -131,19 +131,21 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 </tr>
     <?php
 
-    echo "<tr>";
+     echo "<tr>";
             
-            echo "<td>".$did."</td>";
-            echo "<td>".$donor_name."</td>";
-            //echo "<td>".$donor_blood_group."</td>";
-            echo "<td>".$d_hla_A_ag.":".$d_hla_A_pro.":".$d_hla_A_exo.":".$d_hla_A_intro.":".$d_hla_A_lvl."</td>";
-            echo "<td>".$d_hla_B_ag.":".$d_hla_B_pro.":".$d_hla_B_exo.":".$d_hla_B_intro.":".$d_hla_B_lvl."</td>";
-            echo "<td>".$d_hla_C_ag.":".$d_hla_C_pro.":".$d_hla_C_exo.":".$d_hla_C_intro.":".$d_hla_C_lvl."</td>";
-            echo "<td>".$d_hla_DRB1_ag.":".$d_hla_DRB1_pro.":".$d_hla_DRB1_exo.":".$d_hla_DRB1_intro.":".$d_hla_DRB1_lvl."</td>";
-            echo "<td>".$d_hla_DRB3_ag.":".$d_hla_DRB3_pro.":".$d_hla_DRB3_exo.":".$d_hla_DRB3_intro.":".$d_hla_DRB3_lvl."</td>";
-            echo "<td>".$d_hla_DQB1_ag.":".$d_hla_DQB1_pro.":".$d_hla_DQB1_exo.":".$d_hla_DQB1_intro.":".$d_hla_DQB1_lvl."</td>";   
+            echo "<td>".$pid."</td>";
+            echo "<td>".$patient_name."</td>";
+            //echo "<td>".$patient_blood_group."</td>";
+            echo "<td>".$p_hla_A_ag.":".$p_hla_A_pro.":".$p_hla_A_exo.":".$p_hla_A_intro.":".$p_hla_A_lvl."</td>";
+            echo "<td>".$p_hla_B_ag.":".$p_hla_B_pro.":".$p_hla_B_exo.":".$p_hla_B_intro.":".$p_hla_B_lvl."</td>";
+            echo "<td>".$p_hla_C_ag.":".$p_hla_C_pro.":".$p_hla_C_exo.":".$p_hla_C_intro.":".$p_hla_C_lvl."</td>";
+            echo "<td>".$p_hla_DRB1_ag.":".$p_hla_DRB1_pro.":".$p_hla_DRB1_exo.":".$p_hla_DRB1_intro.":".$p_hla_DRB1_lvl."</td>";
+            echo "<td>".$p_hla_DRB3_ag.":".$p_hla_DRB3_pro.":".$p_hla_DRB3_exo.":".$p_hla_DRB3_intro.":".$p_hla_DRB3_lvl."</td>";
+            echo "<td>".$p_hla_DQB1_ag.":".$p_hla_DQB1_pro.":".$p_hla_DQB1_exo.":".$p_hla_DQB1_intro.":".$p_hla_DQB1_lvl."</td>";   
             
     echo "<tr>"."<br>";
+
+    
 
     ?>
 
@@ -168,17 +170,17 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
 
     echo "<tr>";
             
-            echo "<td>".$pid."</td>";
-            echo "<td>".$patient_name."</td>";
-            //echo "<td>".$patient_blood_group."</td>";
-            echo "<td>".$p_hla_A_ag.":".$p_hla_A_pro.":".$p_hla_A_exo.":".$p_hla_A_intro.":".$p_hla_A_lvl."</td>";
-            echo "<td>".$p_hla_B_ag.":".$p_hla_B_pro.":".$p_hla_B_exo.":".$p_hla_B_intro.":".$p_hla_B_lvl."</td>";
-            echo "<td>".$p_hla_C_ag.":".$p_hla_C_pro.":".$p_hla_C_exo.":".$p_hla_C_intro.":".$p_hla_C_lvl."</td>";
-            echo "<td>".$p_hla_DRB1_ag.":".$p_hla_DRB1_pro.":".$p_hla_DRB1_exo.":".$p_hla_DRB1_intro.":".$p_hla_DRB1_lvl."</td>";
-            echo "<td>".$p_hla_DRB3_ag.":".$p_hla_DRB3_pro.":".$p_hla_DRB3_exo.":".$p_hla_DRB3_intro.":".$p_hla_DRB3_lvl."</td>";
-            echo "<td>".$p_hla_DQB1_ag.":".$p_hla_DQB1_pro.":".$p_hla_DQB1_exo.":".$p_hla_DQB1_intro.":".$p_hla_DQB1_lvl."</td>";   
+            echo "<td>".$did."</td>";
+            echo "<td>".$donor_name."</td>";
+            //echo "<td>".$donor_blood_group."</td>";
+            echo "<td>".$d_hla_A_ag.":".$d_hla_A_pro.":".$d_hla_A_exo.":".$d_hla_A_intro.":".$d_hla_A_lvl."</td>";
+            echo "<td>".$d_hla_B_ag.":".$d_hla_B_pro.":".$d_hla_B_exo.":".$d_hla_B_intro.":".$d_hla_B_lvl."</td>";
+            echo "<td>".$d_hla_C_ag.":".$d_hla_C_pro.":".$d_hla_C_exo.":".$d_hla_C_intro.":".$d_hla_C_lvl."</td>";
+            echo "<td>".$d_hla_DRB1_ag.":".$d_hla_DRB1_pro.":".$d_hla_DRB1_exo.":".$d_hla_DRB1_intro.":".$d_hla_DRB1_lvl."</td>";
+            echo "<td>".$d_hla_DRB3_ag.":".$d_hla_DRB3_pro.":".$d_hla_DRB3_exo.":".$d_hla_DRB3_intro.":".$d_hla_DRB3_lvl."</td>";
+            echo "<td>".$d_hla_DQB1_ag.":".$d_hla_DQB1_pro.":".$d_hla_DQB1_exo.":".$d_hla_DQB1_intro.":".$d_hla_DQB1_lvl."</td>";   
             
-    echo "<tr>"
+    echo "<tr>";
 
     ?>
     </table>
@@ -199,7 +201,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 1: HLA-A allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 1: HLA-A allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -214,7 +216,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 2: HLA-A allele groups : One mismatch"."</td>";
+                echo "<td style='color:red'>HLA Typing 2: HLA-A allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -231,7 +233,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 3: HLA-A allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 3: HLA-B allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -246,7 +248,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 4: HLA-A allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 4: HLA-B allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -263,7 +265,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 5: HLA-C allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 5: HLA-C allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -274,11 +276,11 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
             //C-Match2
         echo "<tr>";
             if($p_hla_C_exo.":".$p_hla_C_intro==$d_hla_C_exo.":".$d_hla_C_intro){
-                echo "<td>"."HLA Typing 5: HLA-C allele groups : One mismatch"."</td>";
+                echo "<td>"."HLA Typing 6: HLA-C allele groups : One mismatch"."</td>";
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 6: HLA-C allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 5: HLA-C allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -295,7 +297,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 7: HLA-DRB1 allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 7: HLA-DRB1 allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -310,7 +312,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 8: HLA-DRB1 allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 8: HLA-DRB1 allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -327,7 +329,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 9: HLA-DRB3 allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 9: HLA-DRB3 allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -342,7 +344,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 10: HLA-DRB3 allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 10: HLA-DRB3 allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -359,7 +361,7 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 11: HLA-DQB1 allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 11: HLA-DQB1 allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
@@ -370,32 +372,39 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
             //DQB1-Match2
         echo "<tr>";
             if($p_hla_DQB1_exo.":".$p_hla_DQB1_intro==$d_hla_DQB1_exo.":".$d_hla_DQB1_intro){
-                echo "<td>"."HLA Typing 12: HLA-DQB1 allele groups : One matched"."</td>";
+                echo "<td>HLA Typing 12: HLA-DQB1 allele groups : One matched</td>";
                 $match++;
 
             }else{
-                echo "<td>"."HLA Typing 12: HLA-DQB1 allele groups : One mismatch"."</td>";
+                echo "<td style='color: red;'>HLA Typing 12: HLA-DQB1 allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
                 //echo "<br>".$match;
                 //echo "<br>".$mismatch."<br>";
         echo "</tr>";
+        echo "</br>";
 
 
             //Total Matches & Mismatches Count
         echo "<tr>";
-            echo "<br>"."<td>"."Total Matches Count =".$match."</td>";
+            echo "<br>"."<td style='color:white ;background-color:#308C83;'>Total Matches Count =".$match."</td>";
         echo "</tr>";
         echo "<tr>";
-            echo "<br>"."<td>"."Total Mismatches Count =".$mismatch."</td>";
+            echo "<br>"."<td style='color:white ;background-color:#308C83;'>Total Mismatches Count =".$mismatch."</td>";
         echo "</tr>";
-                
 
 
         ?>
 
 </table>
+
+
+<?php
+
+
+
+?>
 
 
           

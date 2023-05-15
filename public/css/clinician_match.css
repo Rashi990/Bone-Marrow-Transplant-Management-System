@@ -84,6 +84,24 @@ body{
     padding-left: 20px;
 }
 
+.new{
+    float: right;
+    margin: 10px 40px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 80px;
+    font-size: 14px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.new:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
 
 
 .match{
@@ -134,7 +152,7 @@ body{
  }
 */
 
-table.patiient_data{
+table.patient_data{
     margin: 50px 20px;
     padding: 10px;
     width: 96%;
@@ -152,11 +170,11 @@ h2{
 
 
 
-table.patiient_data tr{
+table.patient_data tr{
     padding: 10px;
 }
 
-table.patiient_data th{
+table.patient_data th{
     background-color: #308C83;
     color: #F7FFFF;
     padding: 10px;
@@ -166,7 +184,7 @@ table.patiient_data th{
     height: 25px;
 }
 
-table.patiient_data td{
+table.patient_data td{
     padding: 10px;
     height: 25px;
     font-size: 16px;
@@ -174,31 +192,19 @@ table.patiient_data td{
     color: #006296;
 }
 
-table.patiient_data tr:nth-child(even){
+table.patient_data tr:nth-child(even){
     background-color: #d7f0ed;
 }
 
 
 
-table.patiient_data{
+
+
+table.donors_data {
     margin: 50px 20px;
     padding: 10px;
     width: 96%;
-    border-collapse: collapse;
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
-
-h2{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    color: #006296;
-}
-
-
-
-
-
 
 table.donors_data tr{
     padding: 10px;
@@ -239,7 +245,7 @@ table.results{
 
 table.results tr{
     padding: 20px;
-    background-color: #90c6c0;
+    background-color: #bcdad6;
 }
 
 table.results td{
@@ -251,4 +257,69 @@ table.results td{
     border-radius: 10px;
 }
 
+.add{
+    padding: 8px 10px;
+    border: none;
+    border-radius: 10px;
+    color: #F7FFFF;
+    background-color: #308C83;
+    cursor: pointer;
+    font-weight: bold;
+}
 
+.add:hover{
+   background-color: #006296;
+}
+
+.count{
+    background-color: #006296;
+    color: #F7FFFF;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+
+
+
+.info{
+    margin: 100px auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #bcdad6;
+    padding: 20px;
+}
+
+table.list {
+    margin: 50px 20px;
+    padding: 10px;
+    width: 96%;
+}
+
+table.list tr{
+    padding: 10px;
+}
+
+table.list th{
+    background-color: #308C83;
+    color: #F7FFFF;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    height: 25px;
+}
+
+table.list td{
+    padding: 10px;
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+}
+
+table.list tr:nth-child(even){
+    background-color: #d7f0ed;
+}

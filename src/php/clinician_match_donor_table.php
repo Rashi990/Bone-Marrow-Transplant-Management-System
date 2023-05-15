@@ -31,7 +31,7 @@ $donor_count=0;
         <div class="match">
 
             
-            <table class="patiient_data">
+            <table class="patient_data">
                 <tr class="theads">
                     <th>Patient ID</th>
                     <th>Patient Name</th>
@@ -251,7 +251,7 @@ if($result){
            
         <?php
 
-        echo "Number of currently matching donors".$donor_count;
+        echo '<div class="count">Number of currently matching donors = ' . $donor_count . '</div>';
         /*
         
         $match=0;
