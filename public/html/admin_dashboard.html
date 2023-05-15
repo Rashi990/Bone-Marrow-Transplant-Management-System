@@ -205,7 +205,7 @@
                     <tr>
                         <th>Donor ID</th>
                         <th>Donor Name</th>
-                        <th>Status</th>
+                        <th>Requested Date</th>
                         <!-- <th>Test Result</th> -->
                     </tr>
                     <?php 
@@ -216,11 +216,11 @@
                 $id=$row['pending_donor_id'];
                 $fname=$row['first_name'];
                 $lname=$row['second_name'];
-                $status=$row['status'];
+                $date=$row['request_date'];
              echo '<tr>
         <td>'.$id. '</td>
         <td>'.$fname,'&nbsp',$lname. '</td>
-                <td id="status_cl">'.$status. '</td> 
+                <td id="status_cl">'.$date. '</td> 
                 <!-- <td><a href="../../src/php/admin_view_test_result.php" class="btn">View</a></td>  -->
         </tr>';
 
