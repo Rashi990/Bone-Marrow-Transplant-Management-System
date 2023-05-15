@@ -179,7 +179,7 @@ body{
 }
 
 .data{
-    margin: 20px;
+    margin: 20px auto;
     padding: 10px;
     width: 65%;
     background-color: #ffffff;
