@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
     $sql0="UPDATE `appointments_donor` SET `donor_appointment_id`='$donor_appointment_id', `appointment_date`='$appointment_date', `appointment_time`='$appointment_time', `apply_date`='$apply_date', `state`='$state', `remark`='$remark' WHERE `donor_appointment_id`='$donor_appointment_id'";
     $result0=mysqli_query($connection,$sql0);
     if($result0){
-      header('location:consultant_appointments.php');
+      header("location:consultant_appointments.php?appointment-id='.$donor_appointment_id.'");
     }
     else{
         die(mysqli_error($connection));
