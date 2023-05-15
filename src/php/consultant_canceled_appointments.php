@@ -71,7 +71,7 @@ if($_SESSION['userlevel']!=1)
                 <td>'.$email.'</td>
                 <td>'.$state.'</td>
                 <td>
-                  <a class="view" href="consultant_approved_appointments_view.php?appointment-id='.$donor_appointment_id.'" class="text-light">
+                  <a class="view" href="consultant_canceled_appointments_view.php?appointment-id='.$donor_appointment_id.'" class="text-light">
                     <abbr title="View"><span class="material-icons">visibility</span></abbr>
                   </a>
                 </td>
