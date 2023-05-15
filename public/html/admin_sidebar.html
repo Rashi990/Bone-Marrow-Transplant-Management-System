@@ -36,10 +36,10 @@
                     </span>
                 <span class="link_name">Calendar</span>
             </a>
-            <a onclick='updateNotificationStatus("donor","notify")' href="../../src/php/admin_view_donor.php">
+            <a  href="../../src/php/admin_view_donor.php">
                 <span class="material-icons">people</span>
                 <span class="link_name">Donors</span>
-                <span class="not" id="notify"></span>
+                
             </a>
             <a href="../../src/php/admin_viewhospital.php">
                 <span class="material-icons">
@@ -51,10 +51,11 @@
                 <span class="material-icons">water_drop</span>
                 <span class="link_name">Sample</span>
             </a>
-            <a onclick='updateNotificationStatus("match_requests","notify1")' href="../../src/php/admin_viewrequest.php">
+            <a onclick='updateNotificationStatus("pending_donor","notify")'href="../../src/php/admin_viewrequest.php">
                 <span class="material-icons">group_add</span>
                 <span class="link_name">Request</span>
-            <span class="not" id="notify1"></span>
+                <span class="not" id="notify"></span>
+            
             </a>
             <a href="../../src/php/admin_viewtesting.php">
                 <span class="material-icons">

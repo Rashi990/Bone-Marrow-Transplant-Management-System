@@ -8,32 +8,33 @@ if ((isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
   $donor_id=$_SESSION['donor_id'];
 
   if(isset($_POST['submit'])){
-    $donor_name=$_POST['donor_name'];
     $appointment_date=$_POST['appointment_date'];
     $appointment_time=$_POST['appointment_time'];
     $apply_date=$_POST['apply_date'];
 
-    if (empty($donor_name)||empty($appointment_date)||empty($appointment_time))
+    if (empty($appointment_date)||empty($appointment_time))
   {
     header("Location: donor_appointments.php?error=All feilds are required!");
     exit();
   }
-      $sql="INSERT INTO appointments_donor (donor_id,appointment_date,appointment_time,apply_date) VALUES($donor_id, '$appointment_date', '$appointment_time', '$apply_date')";
+      $sql="INSERT INTO appointments_donor (donor_id, appointment_date,appointment_time,apply_date) VALUES($donor_id, '$appointment_date', '$appointment_time', '$apply_date')";
       $result=mysqli_query($connection,$sql);
       if($result){
-          header('location:consultant_appointments.php');
+          header('location:donor_appointments.php?update-id=$donor_id');
       }
       else{
           die(mysqli_error($connection));
       }
   }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <link rel="stylesheet" href="../../public/css/donor_sidebar.css">
     <link rel="stylesheet" href="../../public/css/donor_appointment.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -48,10 +49,6 @@ if ((isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
         </div>
         <div class="row">
           <div class="col">
-            <label>Full Name : </label>
-            <input type="text" name="donor_name" placeholder="Full Name">
-          </div>
-          <div class="col">
             <label>Appointment Date : </label>
             <input class="datetime" type="date" name="appointment_date" value="date">
           </div>
@@ -61,9 +58,11 @@ if ((isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
             <label>Appointment Time : </label>
             <input class="datetime" type="time" name="appointment_time" value="time">
           </div>
+        </div>
+        <div class="row">
           <div class="col">
             <label>Apply Date : </label>
-            <input class="datetime" type="date" name="apply_date" value="date">
+            <input class="datetime" type="date" name="date" value="date">
           </div>
         </div>
         <div class="submit">
@@ -76,5 +75,6 @@ if ((isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
 </html>
 
 <?php
+
 }
 ?>
