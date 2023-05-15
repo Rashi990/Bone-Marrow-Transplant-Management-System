@@ -109,21 +109,50 @@ body{
 
 .calendar{
   background-color: #f2f2f2;
-  display: flex;
 }
 
-.calendar .days{
-  flex-direction: column;
+.calendar h3{
+  margin: 10px auto;
+  padding: 10px;
 }
 
-.calendar .day{
+.calendar ul.days{
+  padding: 10px;
+  
+}
+
+/*
+.calendar li.day{
   background-color: #006296;
   color: #d7f0ed;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+
+}
+*/
+
+.calendar ul.times{
+  display: flex;
+    background-color: #bbc0bf;
+    border-radius: 10px;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: inherit;
 }
 
-.calendar .times{
-  background-color: #d7f0ed;
+.calendar li{
+  flex-direction: column;
+  background-color: #1c9d8e;
+  color: #F7FFFF;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+  cursor: pointer;
 }
+
 
 
 /*
@@ -187,7 +216,7 @@ body{
 }
 */
 
-/* Import Google font - Poppins */
+/* Import Google font - Poppins 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 .main-box{
   margin: 50px 100px;
@@ -296,3 +325,5 @@ header .current-date{
 .dates .box2 p{
   font-weight: 200;
 }
+
+*/
