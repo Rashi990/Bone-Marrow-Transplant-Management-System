@@ -53,8 +53,8 @@ if($_SESSION['userlevel']!=0)
 <div class="right">
 <nav>
         <ul>
-        <li><a href="#">Pending Donor Test Request</a> </li>
-        <li><a  class="active" href="../../src/php/admin_hospital_match_request.php" > Hospital Matching Request </a></li>
+        <li><a href="#">Pending Donor Test Request</a></li></span>
+        <li><a onclick='updateNotificationStatus("match_requests","notify1")'  class="active" href="../../src/php/admin_hospital_match_request.php" > Hospital Matching Request </a> </li><span class="not" id="notify1"></span>
         <li><a  class="active" href="../../src/php/admin_hospital_transplant_request.php" >Transplant Request </a></li>
       </ul>
     </nav>
