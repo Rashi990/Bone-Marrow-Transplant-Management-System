@@ -50,21 +50,21 @@
                     <div class="details">
                         <?php 
                         $id=$_GET['id'];
-                        $sql="SELECT CONCAT_WS (' ',`first_name`,`second_name`) AS fullname,city,district,pending_donor_id from pending_donor WHERE pending_donor_id=$id";
+                        $sql="SELECT donor_name,city,donor_id,blood_group from donor WHERE donor_id=$id";
 
     $result=mysqli_query($connection,$sql);
     if($result){
         while($row=mysqli_fetch_assoc($result)){
-            $id=$row['pending_donor_id'];
-            $name=$row['fullname'];
+            $id=$row['donor_id'];
+            $name=$row['donor_name'];
             $city=$row['city'];
-            $district=$row['district'];
+            $blood=$row['blood_group'];
         echo '
                         <table>
                            
                                 <td ><h3 class="name"> '.$name. ' </h3></td>
                             <td><h4 class="name">'.$city. '</h4></td>
-                            <td><h4 class="name"> '.$district. '</h4></td>
+                            <td><h4 class="name"> '.$blood. '</h4></td>
                             <!-- <td> <a href="#" class="create-btn"> Select Location </a> -->
                             </td>
                             </table>
@@ -79,43 +79,39 @@
             </div>
         </div>
 
-        <h3 class="name">Nearest Available Hospital To Maharagama</h3>
+        <h3 class="name">Nearest Available Hospital</h3>
          <?php
          $id=$_GET['id'];
                         $sql1="SELECT `hospital_name`,`hospital_id`
                         FROM `hospital`
                         WHERE `city` IN (
-                          SELECT `district`
-                          FROM `pending_donor` WHERE pending_donor_id=$id
+                          SELECT `city`
+                          FROM `donor` WHERE donor_id=$id
                         )";
 
     $result=mysqli_query($connection,$sql1);
     if($result){
         while($row=mysqli_fetch_assoc($result)){
             $hname=$row['hospital_name'];
-           $hid=$row['hospital_id'];
+            $hid=$row['hospital_id'];
+           
         echo'
         <table>
-            <tr>
-                <td><h4 class="name"> '.$hname. ' </h3></td>
-                                       <td><form action="../../src/php/admin_select_hospital.php" method="get">
-                                        <input type="text" name="id" value="<?php echo '.$id.'; ?>">
-                                        <input type="text" name="hid" value="<?php echo '.$hid.'; ?>">
-                                        <button class="update-btn" name="submit" type="submit" >send
-                                        </button>
-                                      </form>
-                                   
-                                    </td>
-                    <!-- <td><a href="#" class="update-btn"> 22/12/24 13 seats</a></td>
-                    <td> <a href="#" class="update-btn"> 22/12/26 15 seats</a></td>
-                    <td> <a href="#" class="update-btn"> 22/12/30 18 seats</a></td> -->
+            <tr><form action="admin_addhospital.php" method="get">
+                <td><h4 class="name"> '.$hname.' </h3></td>
+                    <!-- <input type="text" name="id" value="'.$id.'">
+                    <input type="text" name="id" value="'.$hid.'"> -->
+
+                    <td><a href="../../src/php/admin_select_hospital_2.php?id='.$id.'&hid='.$hid.'" class="update-btn"> send</a></td>
+            </form>
+                
             </tr>
             </table>
             ';
         }
     }
+
     ?>
-    
     </div>
 </body>
 </html>
