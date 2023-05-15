@@ -7,9 +7,12 @@ require_once "../../config/connection.php";
 require_once "../../src/php/donor_reg_validations.php";
 
 
+
 //If user clicks create button
-if (isset($_POST["create-btn"])) {
+//if (isset($_POST["next-btn"])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //Get form input data
+   
     $fname = trim($_POST["fname"]);
     $lname =trim($_POST["lname"]);
     $email = trim($_POST["email"]);
@@ -22,9 +25,10 @@ if (isset($_POST["create-btn"])) {
     $marital = trim($_POST["marital"]);
     $gender = trim($_POST["gender"]);
    
-
+    
 
     //Input validation
+    
     if (inputsEmptyRegister($fname,$lname,$email,$tel,$address,$city,$district,$dob,$nic,$marital,$gender)) {
         header("location:donor_reg3_index.php?error=Please fill all the fields");
     } else if (nameInvalid($fname,$lname)) {
@@ -41,16 +45,19 @@ if (isset($_POST["create-btn"])) {
     else if (emailAvailable($connection, $email,)) {
         header("location: donor_reg3_index.php?error=Email is already available");
     }
-    /*
+    
     
     else if (nicInvalid($nic)) {
         header("location: donor_reg3_index.php?error=Invalid NIC Number");
     }
-    */
     
-     else {
+    
+    else {
         //If all inputs are error free
-       registerNewUser($connection, $fname,$lname,$email,$tel,$address,$city,$district,$dob,$gender,$nic,$marital);
+    registerNewUser($connection, $fname,$lname,$email,$tel,$address,$city,$district,$dob,$gender,$nic,$marital);
+      
+
+
         
     }
 }
@@ -59,6 +66,7 @@ else{
     exit();
 
 }
+
 
 //Function for register a new user
 function registerNewUser($connection, $fname,$lname,$email,$tel,$address,$city,$district,$dob,$gender,$nic,$marital){
@@ -84,7 +92,6 @@ function registerNewUser($connection, $fname,$lname,$email,$tel,$address,$city,$
 
 
 }
-
 
 
 

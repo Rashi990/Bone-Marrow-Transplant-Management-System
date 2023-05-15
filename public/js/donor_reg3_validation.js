@@ -43,13 +43,13 @@ $(document).ready(function() {
 
       $.ajax({
         type: "POST",
-        url: "../../src/php/donor_reg3.php", // replace with your PHP file path
+        url: "../../src/php/donor_reg3.php", //  PHP file path
         data: $("#form").serialize(), // serialize form data
         success: function(response) {
-          console.log(response); // replace with your response handling code
+          console.log(response); // response handling code
         },
         error: function() {
-          console.error("An error occurred"); // replace with your error handling code
+          console.error("An error occurred"); //  error handling code
         }
       });
     });
