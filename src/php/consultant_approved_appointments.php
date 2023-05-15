@@ -54,7 +54,7 @@ if($_SESSION['userlevel']!=1)
           <th>Action</th>
         </tr>
         <?php
-          $sql="SELECT * FROM `appointments_donor` INNER JOIN `donor` ON appointments_donor.donor_id = donor.donor_id WHERE `state` = 'Approved'";
+          $sql="SELECT * FROM appointments_donor LEFT JOIN donor ON appointments_donor.donor_id = donor.donor_id WHERE state = 'Approved'";
           $result=mysqli_query($connection,$sql);
           if($result){
             while($row=mysqli_fetch_assoc($result)){

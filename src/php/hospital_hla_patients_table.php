@@ -70,8 +70,8 @@ if($result){
         echo "</tr>";
 
 
-        $sql1="INSERT INTO `match_requests`(`patient_id`, `hospital_id`) VALUES ('$patient_id','$hospital_id')";
-        $result1=mysqli_query($connection,$sql1);
+        //$sql1="INSERT INTO `match_requests`(`patient_id`, `hospital_id`) VALUES ('$patient_id','$hospital_id')";
+        //$result1=mysqli_query($connection,$sql1);
 
         
 
