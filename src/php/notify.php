@@ -7,7 +7,7 @@ $user_id = 1;
 if (isset($_GET['table'])) {
     $table = $_GET['table'];
     switch ($table) {
-        case 'donor':
+        case 'pending_donor':
             $count = getUnseenDonorRows();
             break;
         case 'match_requests':
@@ -22,7 +22,7 @@ if (isset($_GET['table'])) {
 
 function getUnseenDonorRows() {
     require('../../config/connection.php');
-    $sql = "SELECT * FROM donor WHERE status='unseen'";
+    $sql = "SELECT * FROM pending_donor WHERE status='unseen'";
     $result = $connection->query($sql);
     if ($result->num_rows > 0) {
         

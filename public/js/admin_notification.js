@@ -7,7 +7,7 @@ function loadDoc(tableName, elementId) {
                 var element = document.getElementById(elementId);
                 if (element) {
                     element.innerHTML = this.responseText;
-                    alert('You have new record');
+                    
                 }
             }
         };
@@ -17,7 +17,7 @@ function loadDoc(tableName, elementId) {
 }
 
 loadDoc("match_requests","notify1");
-loadDoc("donor","notify");
+loadDoc("pending_donor","notify");
 
 // function loadDoc(donor) {
 //     setInterval(function() {

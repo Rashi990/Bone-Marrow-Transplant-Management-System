@@ -93,20 +93,9 @@ body{
     background-color: #F1F5F9;
     border-radius: 20px;
     padding: 20px;
-    overflow: hidden;
 }
 
 .scroll{
-  overflow-y: scroll;
-}
-
-.counts1{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.counts1 .box{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -117,15 +106,10 @@ body{
     font-weight: bold;
     color: #006296;
     overflow-y: scroll;
-    /*line-height: 10px;*/
 }
 
-.box::-webkit-scrollbar {
+.scroll::-webkit-scrollbar {
   display: none;
-}
-
-.counts1 .box:hover{
-    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
 }
 
 th{
@@ -133,6 +117,14 @@ th{
   height: 50px;
   color: #ffffff;
   background: #308C86;
+}
+
+.th1{
+  width: 120px;
+}
+
+.th2{
+  width: 200px;
 }
 
 table{
@@ -149,121 +141,13 @@ td a{
   text-decoration: none;
 }
 
-a.butt {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
-    color: #009879;
-    background: white;
-    width: 60px;
-    height: 25px;
-    padding: 2px;
-    text-align: center;
-    font-weight: bold;
-
-    border: 1px solid #009879;
-    border-radius: 10px;
-}
-
-.new{
-    float: right;
-    margin: 10px 0;
-    text-decoration: none;
-    background-color: #F7FFFF;
-    color: #006296;
-    border: 1px solid #006296 ;
-    border-radius: 10px;
-    padding: 10px 80px;
-    font-size: 14px;
-    transition: 0.5s;
-    font-weight: bold;
-}
-
-.new:hover{
-    background-color: #006296;
-    color: #F7FFFF;
-}
-
-#btn-update{
-  background: white;
-  text-decoration: none;
-  font-size: 15px;
-  margin: 0 2px;
-  width: 60px;
+tr{
   height: 30px;
-  border: 2px solid #006296;
-  border-radius: 5px;
-}
-
-#btn-update a{
-  height: 30px;
-  width: 60px;
-  color: #006296;
-}
-
-#btn-update a:hover{
-  color: white;
-}
-
-#btn-delete{
-  background: white;
-  text-decoration: none;
-  font-size: 15px;
-  margin: 0 2px;
-  width: 60px;
-  height: 30px;
-  border: none;
-  border-radius: 5px;
-  border: 2px solid #FF0404;
-}
-
-#btn-update:hover{
-  color: white;
-  background: #006296;
-}
-
-#btn-delete a{
-  height: 50px;
-  color: #FF0404;
-}
-
-#btn-delete a:hover{
-  color: white;
-}
-
-#btn-delete:hover{
-  background: #FF0404;
-}
-
-#btn-view{
-  background: white;
-  text-decoration: none;
-  font-size: 15px;
-  margin: 0 2px;
-  width: 60px;
-  height: 30px;
-  border: none;
-  border-radius: 5px;
-  border: 2px solid #308C83;
-}
-
-#btn-view a{
-  height: 50px;
-  color: #308C83;
-}
-
-#btn-view a:hover{
-  color: white;
-}
-
-#btn-view:hover{
-  background: #308C83;
 }
 
 .tabs{
   display: flex;
+  margin-left:30px;
 }
 
 .tab a button{
@@ -272,8 +156,12 @@ a.butt {
   color: white;
   border: none;
   height: 30px;
-  width: 70px;
+  width: 80px;
   cursor: pointer;
+  font-size: 15px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bolder;
 }
 
 .tab-selected a button{
@@ -281,7 +169,28 @@ a.butt {
   color: #308C83;
   border: none;
   height: 30px;
-  width: 70px;
-  font-size: 20px;
-  text-decoration: underline;
+  width: 80px;
+  background: #F1F5F9;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.view{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+.view:hover{
+    color: #080909;
+}
+
+.prescription{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+.prescription:hover{
+    color: #080909;
 }

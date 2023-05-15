@@ -76,7 +76,7 @@
     position:sticky;
     grid-template-columns: 300px 600px auto auto;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
  }
  .header h2{
@@ -114,6 +114,9 @@
     display: flex;
     align-items: center;
     margin-right: 3px;
+    position: absolute;
+  top: 3px;
+  right: 3px;
  }
  .user-wrapper img{
     border-radius: 50%;

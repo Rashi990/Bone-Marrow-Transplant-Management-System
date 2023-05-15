@@ -9,7 +9,6 @@ if (isset($_POST['cancel']))
 if(isset($_POST['submit']) )
 {
 
-  $id=$_GET['editid'];
 
   function validate($data)
   {
@@ -24,6 +23,7 @@ if(isset($_POST['submit']) )
   $email =validate($_POST['email']); 
   $tel = validate($_POST['tel']); 
   $address = validate($_POST['address']); 
+  $id=validate($_POST['id']);
 
   $sql= "update hospital SET hospital_name='$name',email='$email',telephone_no='$tel',address='$address' where hospital_id= $id";
   $result = mysqli_query($connection,$sql);
@@ -53,13 +53,14 @@ if(isset($_POST['submit']) )
 <body>
 <div class="container">
     <div class="form_content">
-    <form action="admin_edithospital.php" method="post">
+
+    <form action="" method="post">
     
     <section class="copy">
         <h2>Edit Hosppital Details</h2>
     </section> 
     <?php
-    $id=$_GET['editid'];
+    $id=$_GET['edithosid'];
   $sql="select * from `hospital`  where hospital_id= $id";
         $result=mysqli_query($connection,$sql);
         while($row=mysqli_fetch_assoc($result)){
@@ -72,6 +73,7 @@ if(isset($_POST['submit']) )
                 <input type="tel" name="tel" value="<?php  echo $row['telephone_no'];?>">
                 <label for="address">Hospital Address</label>
                 <input type="text" name="address" value="<?php  echo $row['address'];?>">
+                <input type="text" name="id" value="<?php  echo $id;?>" hidden>
  
             <?php 
 }?>
@@ -79,6 +81,7 @@ if(isset($_POST['submit']) )
                 <tr><td>
                     <button class="create-btn" name="submit" type="submit"> Update
                     </button>
+                
                 </td>
             <td>
                 <button class="cancle-btn" name="cancel" type="cancel"> Cancel

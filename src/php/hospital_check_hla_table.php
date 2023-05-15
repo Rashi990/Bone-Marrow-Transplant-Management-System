@@ -14,6 +14,7 @@
 
  if($result){
     while($row=mysqli_fetch_assoc($result)){
+        $patient_id=$row['patient_id'];
         $id='PID'.str_pad($row['patient_id'],3,'0',STR_PAD_LEFT);
         $name=$row['patient_name'];
         
@@ -22,7 +23,7 @@
             echo "<td>".$id."</td>";
             echo "<td>".$name."</td>";
 
-            echo "<td><a href='hospital_add_patient_hla_details.php?add-id=".$id."'><button class='add'>Add</button></a></td>";
+            echo "<td><a href='hospital_add_patient_hla_details.php?add-id=".$patient_id."'><abbr title='Add HLA details of the patient'><button class='add'>Add</button></abbr></a></td>";
         
 
         echo "</tr>";

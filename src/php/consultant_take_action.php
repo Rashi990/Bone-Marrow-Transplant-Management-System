@@ -5,19 +5,19 @@ if (isset($_SESSION['username']))
 {
 include '../../config/connection.php';
 
-$appointment_id=$_GET['appointment-id'];
-$sql="SELECT * FROM appointments WHERE appointment_id=$appointment_id";
+$donor_appointment_id=$_GET['appointment-id'];
+$sql="SELECT * FROM appointments_donor INNER JOIN donor ON appointments_donor.donor_id=donor.donor_id WHERE donor_appointment_id=$donor_appointment_id";
 $result=mysqli_query($connection,$sql);
 if( $result){
   while($rows = mysqli_fetch_assoc($result)){
-    $appointment_id=$rows['appointment_id'];
-    $patient_name=$rows['patient_name'];
+    $donor_appointment_id=$rows['donor_appointment_id'];
+    $donor_name=$rows['donor_name'];
     $telephone_no=$rows['telephone_no'];
     $email=$rows['email'];
     $appointment_date=$rows['appointment_date'];
     $appointment_time=$rows['appointment_time'];
     $apply_date=$rows['apply_date'];
-    $status=$rows['status'];
+    $state=$rows['state'];
     $remark=$rows['remark'];
   }
 }
@@ -25,20 +25,18 @@ else{
   die(mysqli_error($connection));
 }
 if(isset($_POST['submit'])){
-  $appointment_id=$_POST['appointment_id'];
-  $patient_name=$_POST['patient_name'];
   $telephone_no=$_POST['telephone_no'];
   $email=$_POST['email'];
   $appointment_date=$_POST['appointment_date'];
   $appointment_time=$_POST['appointment_time'];
   $apply_date=$_POST['apply_date'];
-  $status=$_POST['status'];
+  $state=$_POST['state'];
   $remark=$_POST['remark'];
 
-    $sql0="UPDATE `appointments` SET `appointment_id`='$appointment_id', `patient_name`='$patient_name', `appointment_date`='$appointment_date', `appointment_time`='$appointment_time', `apply_date`='$apply_date', `status`='$status', `remark`='$remark' WHERE `appointment_id`='$appointment_id'";
+    $sql0="UPDATE `appointments_donor` SET `donor_appointment_id`='$donor_appointment_id', `appointment_date`='$appointment_date', `appointment_time`='$appointment_time', `apply_date`='$apply_date', `state`='$state', `remark`='$remark' WHERE `donor_appointment_id`='$donor_appointment_id'";
     $result0=mysqli_query($connection,$sql0);
     if($result0){
-        header('location:consultant_appointments.php');
+      header("location:consultant_appointments.php?appointment-id='.$donor_appointment_id.'");
     }
     else{
         die(mysqli_error($connection));
@@ -88,11 +86,11 @@ if(isset($_POST['submit'])){
         <form class="" action="" method="post">
           <div class="row">
             <label class="lbl">Appointment ID: </label>
-            <input class="data" name="apointment_id" value="<?php echo $appointment_id ?>">
+            <input class="data" name="apointment_id" value="<?php echo $donor_appointment_id ?>">
           </div>
           <div class="row">
             <label class="lbl">Patient Name: </label>
-            <input class="data"name="patient_name" value="<?php echo $patient_name ?>">
+            <input class="data"name="patient_name" value="<?php echo $donor_name ?>">
           </div>
           <div class="row">
             <label class="lbl">Mobile Number: </label>
@@ -115,11 +113,11 @@ if(isset($_POST['submit'])){
             <input class="data" name="apply_date" value="<?php echo $apply_date ?>">
           </div>
           <div class="row">
-            <label class="lbl">Status: </label>
-            <select class="status" name="status">
-              <option name="status" selected="selected" disabled="disabled"><?php echo $status ?>  </option>
-              <option name="status" value="approved">Approved</option>
-              <option name="status" value="canceled">Canceled</option>
+            <label class="lbl">State: </label>
+            <select class="state" name="state">
+              <option name="state" selected="selected" disabled="disabled"><?php echo $state ?>  </option>
+              <option name="state" value="approved">Approved</option>
+              <option name="state" value="canceled">Canceled</option>
             </select>
           </div>
           <div class="row">

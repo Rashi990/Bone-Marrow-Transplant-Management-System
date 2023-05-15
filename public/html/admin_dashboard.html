@@ -11,7 +11,7 @@
 <body>
     
     <!-- sidebar section -->
-    <div class="sidebar">
+    <!-- <div class="sidebar">
         <div class="logo-details">
             <img src="../../public/images/logo.png" class="logo">
         </div>
@@ -66,7 +66,7 @@
                 </a>
             </li>
      </ul>
-    </div>
+    </div> -->
     
     <!-- header -->
 
@@ -75,16 +75,14 @@
             <h2>
                 Dashboard
             </h2>
-            <div class="search-wrapper">
+            <!-- <div class="search-wrapper">
                 <span class="material-icons">
                     search
                 </span>
                 <input type = "search" placeholder="search here">
-            </div>
+            </div> -->
     
-           
-    
-            <div class="box-icon">
+            <!-- <div class="box-icon">
                 <div class="item">
                     <span class="material-icons">notifications</span>
                 </div>
@@ -92,12 +90,11 @@
                     <span class="material-icons">chat_bubble</span>
                 </div>
                 
-            </div>
+            </div> -->
            
             
             <div class="user-wrapper">
-                <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
-              
+                <a href="../../src/php/admin_profile_page.php"> <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" ></a>
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['username'];?></div>
             </div>
         </div>
@@ -208,7 +205,7 @@
                     <tr>
                         <th>Donor ID</th>
                         <th>Donor Name</th>
-                        <th>Status</th>
+                        <th>Requested Date</th>
                         <!-- <th>Test Result</th> -->
                     </tr>
                     <?php 
@@ -219,11 +216,11 @@
                 $id=$row['pending_donor_id'];
                 $fname=$row['first_name'];
                 $lname=$row['second_name'];
-                $status=$row['status'];
+                $date=$row['request_date'];
              echo '<tr>
         <td>'.$id. '</td>
         <td>'.$fname,'&nbsp',$lname. '</td>
-                <td id="status_cl">'.$status. '</td> 
+                <td id="status_cl">'.$date. '</td> 
                 <!-- <td><a href="../../src/php/admin_view_test_result.php" class="btn">View</a></td>  -->
         </tr>';
 
