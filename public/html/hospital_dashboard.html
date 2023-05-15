@@ -55,10 +55,23 @@
 
     <div class="section">
       <div class="charts">
-        <h2>2022 Hospital Data</h2>
+        <h2>2023 Hospital Data</h2>
         <div class="images">
-          <img src="../../public/images/percentage.jpg" class="percentage" <h2>Matching Requests</h2>
-          <img src="../../public/images/percentage2.jpg" class="percentage" <h2>Transplants</h2>
+
+          <div class="con">
+          <div class="box1">
+            Total Testings
+            <h2><?php echo $_SESSION['t']?></h2>
+          </div>
+
+          <div class="box1">
+            Total Matchings
+            <h2><?php echo $_SESSION['m']?></h2>
+          </div>
+        </div>
+  
+          <!--<img src="../../public/images/percentage.jpg" class="percentage" <h2>Matching Requests</h2>-->
+          <!--<img src="../../public/images/percentage2.jpg" class="percentage" <h2>Transplants</h2>-->
           <img src="../../public/images/bar.png" class="bar">
       </div>
     </div>

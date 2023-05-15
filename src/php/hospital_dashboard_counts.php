@@ -53,10 +53,33 @@ if($result5){
 }
 
 
+//Matchings count
+$sql6="SELECT count(match_request_id) FROM match_requests WHERE hospital_id=$hospital_id";
+$result6=mysqli_query($connection,$sql6);
+if($result6){
+  while($row6=mysqli_fetch_assoc($result6)){
+    $match=$row6['count(match_request_id)'];
+    $_SESSION['m']=$match;
+  }
+}
+
+//Testings count
+$sql7="SELECT count(test_id) FROM testing WHERE hospital_id=$hospital_id";
+$result7=mysqli_query($connection,$sql7);
+if($result7){
+  while($row7=mysqli_fetch_assoc($result7)){
+    $test=$row7['count(test_id)'];
+    $_SESSION['t']=$test;
+  }
+}
+
+
 $p=$_SESSION['p'];
 $d=$_SESSION['d'];
 $con=$_SESSION['con'];
 $cli=$_SESSION['cli'];
 $s=$_SESSION['s'];
+$m=$_SESSION['m'];
+$t=$_SESSION['t'];
 
 ?>
