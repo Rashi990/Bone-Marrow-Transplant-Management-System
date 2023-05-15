@@ -1,3 +1,5 @@
+
+
 <?php require_once('donor_sidebar.php');?>
 
 <?php
@@ -27,12 +29,43 @@ if ((isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
           die(mysqli_error($connection));
       }
   }
+
 ?>
+
+
+
+
+
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/css/donor_sidebar.css">
     <link rel="stylesheet" href="../../public/css/donor_appointment.css">
@@ -78,3 +111,4 @@ if ((isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
 <?php
 }
 ?>
+

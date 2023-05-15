@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #F7FFFF;
+}
+
+.top-nav{
+    display:grid;
+    position:sticky;
+    margin-left: 220px;
+    grid-template-columns: 300px 600px auto auto;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
+}
+
+.head h1{
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
+}
+
+.search{
+    display: flex;
+    margin-left: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+
+.search-bar span{
+    display: inline-block;
+    padding: 5px;
+    font-size:14px ;
+ }
+ 
+ .search-bar input{
+    height: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+ }
+
+.search-bar span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.search-bar .Loggedin{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px 20px;
+    width: 80%;
+}
+
+.top{
+    position: relative;
+    display: flex;
+    float: right;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.top span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.top p{
+    font-size: 14px;
+    margin: 5px 0px 20px 10px;
+}
+
+.top .Loggedin{
+    padding-left: 20px;
+}
+
+.session-list{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 60px;
+    background-color: #f4f7fa;
+    padding: 10px;
+    width: 80%;
+    height: 80vh;
+    border: none;
+    border-radius: 20px;
+}
+
+.session-list h1{
+    color: #006296;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.new{
+    float: right;
+    margin: 10px 40px;
+    text-decoration: none;
+    background-color: #F7FFFF;
+    color: #006296;
+    border: 1px solid #006296 ;
+    border-radius: 10px;
+    padding: 10px 80px;
+    font-size: 14px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.new:hover{
+    background-color: #006296;
+    color: #F7FFFF;
+}
+
+
+table.list{
+    margin: 20px;
+    padding: 10px;
+    width: 96%;
+    border-collapse: collapse;
+    box-shadow: 0 0 1.0rem rgba(24, 22, 36, 0.3);
+}
+
+table.list th{
+    background-color: #308C83;
+    color: #F7FFFF;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    height: 25px;
+}
+
+table.list td{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+    height: 25px;
+}
+
+table.list tr:nth-child(even){
+    background-color: #d7f0ed;
+}
+
+table.list .update{
+    color: #006296;
+    padding: 8px 20px;
+    transition: 0.5s;
+}
+
+table.list .update:hover{
+    color: #080909;
+}
+
+table.list .delete{
+    color: #006296;
+    padding: 8px 20px;
+    transition: 0.5s;
+}
+
+table.list .delete:hover{
+    color: #080909;
+}
