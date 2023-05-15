@@ -1,7 +1,7 @@
 body{
     background-color: #F7FFFE;
     margin-top: 0px;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /*
@@ -34,7 +34,7 @@ body{
     margin-top: 5px;
     margin-bottom: 880px;
     width: 1240px;
-    height:870px;
+    height: 640px;
     background-color: #f4f7fa;
     border-radius: 20px;
    
@@ -55,6 +55,9 @@ body{
     background: #D7F0ED;
     border-radius: 30px;
     padding: 3%;
+    height: 245px;
+    margin-left: 1%;
+    width: 350px;
     
 }
 
@@ -62,11 +65,10 @@ body{
 .medi-card1{
 
     margin-top: -15px;
-    width: 380px;
+    width: 335px;
     padding: 10px;
-   
     transition: 0.3s;
-    height: 210px;
+    height: 180px;
     background-color: #ffffff;
     border-radius: 20px;
     font-weight: bold;
@@ -82,19 +84,17 @@ body{
 
 .medi-card2{
 
-    margin-top: -15px;
-    width: 560px;
-    padding: 10px;
-    margin-left: 10px;
-   
-    transition: 0.3s;
-    height: 210px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    font-weight: bold;
-    color: #006296;
+    margin-top: -5px;
+width: 610px;
+padding: 10px;
+margin-left: 25px;
+transition: 0.3s;
+height: 175px;
+background-color: #ffffff;
+border-radius: 20px;
+font-weight: bold;
+color: #006296;
 }
-
 
 
 .medi-card2:hover{
@@ -107,15 +107,16 @@ body{
 
 .medi-card3{
 
-    margin-top:30px;
-    width: 380px;
+    margin-top: 30px;
+    width: 340px;
     padding: 10px;
     transition: 0.3s;
-    height: 255px;
+    height: 105px;
     background-color: #ffffff;
     border-radius: 20px;
     font-weight: bold;
     color: #006296;
+    margin-left: 5%;
 
 }
 
@@ -126,17 +127,16 @@ body{
 
 
 .medi-card4{
-
-    margin-top: 35px;
-    width: 560px;
-    padding: 10px;
-   
-    transition: 0.3s;
-    height: 255px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    font-weight: bold;
-    color: #006296;
+    margin-top: 5px;
+width: 610px;
+padding: 10px;
+margin-left: 25px;
+transition: 0.3s;
+height: 110px;
+background-color: #ffffff;
+border-radius: 20px;
+font-weight: bold;
+color: #006296;
 }
 
 
@@ -213,21 +213,22 @@ body{
 .next-appointment{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
-    height:298px;
-    width:600px;
-    margin-top: 0%;
-   
+    height: 302px;
+    width: 680px;
     background: #D7F0ED;
     border-radius: 30px;
     padding: 2%;
-    
+    margin-top: -64%;
+    margin-left: 120%;
 }
+    
+
 
 h1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1px;
     text-align: center;
     color: #006296;
@@ -256,15 +257,17 @@ h1{
    
 }
 
-.reports{
+.report{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
     width: 400px;
-    height: 320px;
+    min-width: 400px;
+    height: 200px;
     background: #D7F0ED;
     border-radius: 30px;
     padding: 3%;
-    margin-left: 38px;
+    margin-left: -36px;
+    margin-top: 4%;
 }
 
 button {
@@ -290,19 +293,16 @@ table{
 .post-donations{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    /* width: 40%;
-    border-radius: 5px; */
-
     color: #006296;
-    width: 580px;
-    height: 340px;
-    margin-left:0px;
+ min-width: 680px;
+    height: 200px;
     background: #D7F0ED;
     border-radius: 30px;
     padding: 2%;
-    margin-top: 0%;
+    margin-top: 4%;
     margin-bottom: 2px;
-    margin-right: 45px;
+    margin-left: 8%;
+   
 }
 
 h2{
@@ -320,7 +320,7 @@ h3{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 1px;
     text-align: left;
     color: #006296;

@@ -24,24 +24,18 @@ body{
 
 
 
-/*
+h2{
 
-.donor-session-topic{
-    color:#006296;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
-
-    position: absolute;
-    /* width: 246px; */
-  /*
-    height: 36px;
-    left: 384px;
-    top: 59px;
+  margin-left: 2%;
+  margin-top: 5%;
+text-align: center;
+line-height: 150%;
+margin-left: 8%;
+margin-right: 8%;
+margin-top: 4%;
 }
-*/
+
+
 .donor-card-details{
   margin-left: 30px;
   margin-top: 20px;
@@ -56,6 +50,7 @@ body{
 
     width: 1130px;
     height: 150px;
+    margin-left: 2.5%;
     margin-top: 2%;
     margin-bottom: 20px;
     background: #D7F0ED;
@@ -163,3 +158,67 @@ width: 50%;
     border-radius: 5px 5px 0 0;
   } */
   
+
+
+  #confirm-registration-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  .popup-content h3 {
+    margin-top: 0;
+  }
+  
+  .popup-buttons {
+    margin-top: 20px;
+  }
+  
+  .popup-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .popup-buttons button:hover {
+    background-color: #0069d9;
+  }
+  
+  #cancel-button {
+    background-color: #6c757d;
+  }
+  
+  #cancel-button:hover {
+    background-color: #5a6268;
+  }
+
+  
+.session-card.registered {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+.session-card.registered::before {
+  content: "Registered";
+}
