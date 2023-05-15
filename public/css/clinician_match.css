@@ -198,6 +198,8 @@ h2{
 
 
 
+
+
 table.donors_data tr{
     padding: 10px;
 }
@@ -223,3 +225,30 @@ table.donors_data td{
 table.donors_data tr:nth-child(even){
     background-color: #d7f0ed;
 }
+
+
+
+
+table.results{
+    display: grid;
+    background-color: #f4f7fa;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+table.results tr{
+    padding: 20px;
+    background-color: #90c6c0;
+}
+
+table.results td{
+    padding: 10px;
+    height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #006296;
+    border-radius: 10px;
+}
+
+
