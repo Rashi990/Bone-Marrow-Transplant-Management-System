@@ -22,19 +22,7 @@ require_once('../../config/connection.php');
 </head>
 <body>
 
-    <!--
-    <div class="head">
-        <h1>Session Details</h1>
-    </div>
-
-    <div class="search">
-        <div class="search-bar">
-          <span class="material-icons">search</span>
-          <input type="search" placeholder="search here">
-        </div>
-    </div>
-    -->
-
+   
     <div class="session-list">
 
         <a class="new" href="../../src/php/donor_clinical_history.php">Back to Clinical History</a>
