@@ -1,5 +1,3 @@
-
-
 <?php require_once('donor_sidebar.php');?>
 
 <?php
@@ -12,14 +10,14 @@ if ((isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
   if(isset($_POST['submit'])){
     $appointment_date=$_POST['appointment_date'];
     $appointment_time=$_POST['appointment_time'];
-    $date=$_POST['date'];
+    $apply_date=$_POST['apply_date'];
 
     if (empty($appointment_date)||empty($appointment_time))
   {
     header("Location: donor_appointments.php?error=All feilds are required!");
     exit();
   }
-      $sql="INSERT INTO appointments_donor (donor_id, appointment_date,appointment_time,apply_date) VALUES($donor_id, $appointment_date, $appointment_time, $date)";
+      $sql="INSERT INTO appointments_donor (donor_id, appointment_date,appointment_time,apply_date) VALUES($donor_id, '$appointment_date', '$appointment_time', '$apply_date')";
       $result=mysqli_query($connection,$sql);
       if($result){
           header('location:donor_appointments.php?update-id=$donor_id');
@@ -30,41 +28,10 @@ if ((isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
   }
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -111,4 +78,3 @@ if ((isset($_SESSION['user_name']) && isset($_SESSION['donor_id']) ))
 
 }
 ?>
-
