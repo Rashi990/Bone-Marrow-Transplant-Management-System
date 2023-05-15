@@ -73,7 +73,7 @@ if($_SESSION['userlevel']!=1)
                 <td>'.$state.'</td>
                 <td>
                 <a class="view" href="consultant_new_appointments_view.php?appointment-id='.$donor_appointment_id.'" class="text-light">
-                  <abbr title="View"><span class="material-icons">visibility</span></abbr>
+                  <abbr title="View"><span class="material-icons">check_circle</span></abbr>
                 </a>
                 </td>
               </tr>
