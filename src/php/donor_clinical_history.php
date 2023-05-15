@@ -111,7 +111,7 @@ if (mysqli_stmt_fetch($stmt)) {
     echo '</ul>'; 
     echo '</div>';
     echo '<div class="view_appointment">';
-    echo '<a href="../../src/php/donor_appointments.php">View More</a>';
+    echo '<a href="../../src/php/donor_appointments_view.php">View More</a>';
     echo '</div>';
     echo '</div>';
     echo '</div>';
