@@ -1,0 +1,186 @@
+body{
+    margin: 0;
+    background-color: #F7FFFF;
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-nav{
+    display:grid;
+    position:sticky;
+    margin-left: 220px;
+    grid-template-columns: 300px 600px auto auto;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
+}
+
+.head h1{
+    text-align: center;
+    font-size: 30px;
+    color: #006296;
+}
+
+.search{
+    display: flex;
+    margin-left: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: fit-content;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+ }
+
+.search-bar span{
+    display: inline-block;
+    padding: 5px;
+    font-size:14px ;
+ }
+
+ .search-bar input{
+    height: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+ }
+
+.search-bar span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.search-bar .Loggedin{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0px 20px;
+    width: 80%;
+}
+
+.top{
+    position: relative;
+    display: flex;
+    float: right;
+    margin: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.top span{
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.top p{
+    font-size: 14px;
+    margin: 5px 0px 20px 10px;
+}
+
+.top .Loggedin{
+    padding-left: 20px;
+}
+
+.board{
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 20px;
+    width: 80%;
+    height: 550px;
+    background-color: #F1F5F9;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.scroll{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 530px;
+    border-radius: 20px;
+    border: none;
+    align-items: center;
+    font-weight: bold;
+    color: #006296;
+    overflow-y: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+th{
+  text-align: center;
+  height: 50px;
+  color: #ffffff;
+  background: #308C86;
+}
+
+.th1{
+  width: 120px;
+}
+
+.th2{
+  width: 200px;
+}
+
+table{
+  margin:0;
+  width: 100%;
+}
+
+td{
+  text-align: center;
+  background: #D7F0ED;
+}
+
+td a{
+  text-decoration: none;
+}
+
+tr{
+  height: 30px;
+}
+
+.tabs{
+  display: flex;
+  margin-left:30px;
+}
+
+.tab a button{
+  margin: 5px;
+  background: #308C83;
+  color: white;
+  border: none;
+  height: 30px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bolder;
+}
+
+.tab-selected a button{
+  margin: 5px;
+  color: #308C83;
+  border: none;
+  height: 30px;
+  width: 80px;
+  background: #F1F5F9;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.report{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+.report:hover{
+    color: #080909;
+}

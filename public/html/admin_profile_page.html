@@ -10,11 +10,11 @@
 </head>
 <body>
     <div class="main-content">
-        <header>
+        <div class="header">
             <h2>
                 Profile Details
             </h2>
-            <div class="search-wrapper">
+            <!-- <div class="search-wrapper">
                 <span class="material-icons">search</span>
                 <input type="search" placeholder="search here">
             </div>
@@ -29,14 +29,14 @@
                     <span class="material-icons">chat_bubble</span>
                 </div>
                 
-            </div>
+            </div> -->
            
             
-            <div class="user-wrapper">
+            <!-- <div class="user-wrapper">
                 <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="50px" height="50px" >
                 <div> <h4>Welcome! </h4><?php echo $_SESSION['username'];?></div>
-            </div>
-        </header>
+            </div> -->
+        </div>
     
         <main>
 
@@ -49,13 +49,35 @@
                                     <img src="../../public/images/Xiao_Zhan.jpeg" alt="profile_pictire" width="80px" height="80px" >
                                 </div>
                                 <div class="details">
-                                    <table>
-                                        <td><h3 class="name"> Imal Upalakshitha</h3></td>
-                                        <td><h4 class="name"> Maharagama</h4></td>
-                                        <td><h4 class="name"> 23 yr.</h4></td>
-                                        <td> <a href="#" class="create-btn"> Edit Profile </a>
+
+                                    <?php 
+                        $sql="SELECT * from blood_bank ";
+
+    $result=mysqli_query($connection,$sql);
+    if($result){
+        while($row=mysqli_fetch_assoc($result)){
+            $id=$row['admin_id'];
+            $aname=$row['admin_name'];
+            $telephone=$row['telephone'];
+            $email=$row['email'];
+            $address=$row['address'];
+        
+                                 
+                                        echo '
+                                        <table>
+                                            <tr>
+                                        <td><h3 class="name"> '.$aname. '</h3></td>
+                                        <td><h4 class="name">'.$email. ' </h4></td>
+                                        <td> <a href="../../src/php/admin_editprofile.php? edit='.$id.'" class="create-btn"> Edit Profile </a>
                                         </td>
-                                        </table>
+                                        </tr>
+                                    </table>';
+
+                                    }
+                                }
+                                
+                                ?>
+                                        
                                 </div>
                             </div>
                         </div>
@@ -72,73 +94,28 @@
                         </div>
                         <table>
                             <tr>
-                                <td>   First Name : </td>
-                                <td>Malsha
+                                <td>Name : </td>
+                                <td> <?php echo''.$aname.'';?>
                                 </td>
                             </tr>
                             <tr>
-                                <td>   Last Name : </td>
-                                <td>Samadhika
+                                <td>Email: </td>
+                                <td> <?php echo''.$email.'';?>
                                 </td>
                             </tr>
                             <tr>
-                                <td>   Full Name : </td>
-                                <td>Malsha Samadhika
+                                <td>Telephone Number : </td>
+                                <td> <?php echo''.$telephone.'';?>
                                 </td>
                             </tr>
                             <tr>
                                 <td>   Address :</td>
-                                <td>No 57, Pahalamulla ,Karawanella
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>   Gender : </td>
-                                <td> Female
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>   Tele.No : </td>
-                                <td> 077-225547
+                                <td> <?php echo''.$address.'';?>
                                 </td>
                             </tr>
                             </table>
                 </div>
-                <div class="card-single-3">
-                    <div class="title">
-                        <h3>Personal Details</h3>
-                        </div>
-                        <table>
-                            <tr>
-                                <td>   First Name : </td>
-                                <td>Malsha
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>   Last Name : </td>
-                                <td>Samadhika
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>   Full Name : </td>
-                                <td>Malsha Samadhika
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>   Address :</td>
-                                <td>No 57, Pahalamulla ,Karawanella
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>   Gender : </td>
-                                <td> Female
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>   Tele.No : </td>
-                                <td> 077-225547
-                                </td>
-                            </tr></table>
-                </div>
+             
                 </div>
            
         </main>
