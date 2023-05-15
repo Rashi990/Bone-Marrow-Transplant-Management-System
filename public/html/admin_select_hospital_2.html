@@ -82,7 +82,7 @@
         <h3 class="name">Nearest Available Hospital To Maharagama</h3>
          <?php
          $id=$_GET['id'];
-                        $sql1="SELECT `hospital_name`
+                        $sql1="SELECT `hospital_name`,`hospital_id`
                         FROM `hospital`
                         WHERE `city` IN (
                           SELECT `district`
@@ -93,21 +93,29 @@
     if($result){
         while($row=mysqli_fetch_assoc($result)){
             $hname=$row['hospital_name'];
-           
+           $hid=$row['hospital_id'];
         echo'
         <table>
             <tr>
                 <td><h4 class="name"> '.$hname. ' </h3></td>
-                    <td><a href="#" class="update-btn"> 22/12/19 2 seats</a></td>
-                    <td><a href="#" class="update-btn"> 22/12/24 13 seats</a></td>
+                                       <td><form action="../../src/php/admin_select_hospital.php" method="get">
+                                        <input type="text" name="id" value="<?php echo '.$id.'; ?>">
+                                        <input type="text" name="hid" value="<?php echo '.$hid.'; ?>">
+                                        <button class="update-btn" name="submit" type="submit" >send
+                                        </button>
+                                      </form>
+                                   
+                                    </td>
+                    <!-- <td><a href="#" class="update-btn"> 22/12/24 13 seats</a></td>
                     <td> <a href="#" class="update-btn"> 22/12/26 15 seats</a></td>
-                    <td> <a href="#" class="update-btn"> 22/12/30 18 seats</a></td>
+                    <td> <a href="#" class="update-btn"> 22/12/30 18 seats</a></td> -->
             </tr>
             </table>
             ';
         }
     }
     ?>
+    
     </div>
 </body>
 </html>
