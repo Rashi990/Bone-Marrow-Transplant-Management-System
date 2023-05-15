@@ -9,19 +9,19 @@ if($_SESSION['userlevel']!=1)
     header("Location:home.php");
 }
 else{
-    $appointment_id=$_GET['appointment-id'];
-    $sql="SELECT * FROM appointments WHERE appointment_id=$appointment_id";
+    $donor_appointment_id=$_GET['appointment-id'];
+    $sql="SELECT * FROM appointments_donor INNER JOIN donor ON appointments_donor.donor_id=donor.donor_id WHERE donor_appointment_id=$donor_appointment_id";
     $result=mysqli_query($connection,$sql);
     if( $result){
       while($rows = mysqli_fetch_assoc($result)){
-        $appointment_id=$rows['appointment_id'];
-        $patient_name=$rows['patient_name'];
+        $donor_appointment_id=$rows['donor_appointment_id'];
+        $donor_name=$rows['donor_name'];
         $telephone_no=$rows['telephone_no'];
         $email=$rows['email'];
         $appointment_date=$rows['appointment_date'];
         $appointment_time=$rows['appointment_time'];
         $apply_date=$rows['apply_date'];
-        $status=$rows['status'];
+        $state=$rows['state'];
         $remark=$rows['remark'];
       }
     }
@@ -61,20 +61,20 @@ else{
     <div class="board">
       <div class="pd">
         <h3 align="center">Patient Details</h3>
-        <p>Appointment ID: <?php echo $appointment_id; ?></p>
-        <p>Patient Name: <?php echo $patient_name; ?></p>
+        <p>Appointment ID: <?php echo $donor_appointment_id; ?></p>
+        <p>Donor Name: <?php echo $donor_name; ?></p>
         <p>Mobile Number: <?php echo $telephone_no; ?></p>
         <p>Email: <?php echo $email; ?></p>
         <p>Appointment Date: <?php echo $appointment_date; ?></p>
         <p>Appointment Time: <?php echo $appointment_time; ?></p>
         <p>Apply Date: <?php echo $apply_date; ?></p>
-        <p>Status: <?php echo $status; ?></p>
+        <p>State: <?php echo $state; ?></p>
         <p>Remark: <?php echo $remark; ?></p>
       </div>
       <div class="btn">
         <?php
         echo
-        '<a href="consultant_take_action.php?appointment-id='.$appointment_id.'"><button type="button" name="button">Take Action</button></a>';
+        '<a href="consultant_take_action.php?appointment-id='.$donor_appointment_id.'"><button type="button" name="button">Take Action</button></a>';
         ?>
       </div>
     </div>
