@@ -40,7 +40,7 @@ $donor_count=0;
                     <th>HLA-B*</th>
                     <th>HLA-C*</th>
                     <th>HLA-DRB1*</th>
-                    <th>HLA-DRB3,4,5*</th>
+                    <th>HLA-DRB3*</th>
                     <th>HLA-DRQB1*</th>
                 </tr>
     
@@ -60,7 +60,7 @@ $result=mysqli_query($connection,$sql);
 
 if($result){
     while($row=mysqli_fetch_assoc($result)){
-        //$hid='HLAID'.str_pad($row['ph_id'],3,'0',STR_PAD_LEFT);
+        $hid='HLAID'.str_pad($row['ph_id'],3,'0',STR_PAD_LEFT);
         $patient_id=$row['patient_id'];
         $pid='PID'.str_pad($row['patient_id'],3,'0',STR_PAD_LEFT);
         $patient_name=$row['patient_name'];
@@ -91,11 +91,11 @@ if($result){
         $p_hla_DRB1_intro=$row['HLA-DRB1_syn_introns'];
         $p_hla_DRB1_lvl=$row['HLA-DRB1_ex_level'];
 
-        $p_hla_DRB3_ag=$row['HLA-DRB3,4,5_allele_group'];
-        $p_hla_DRB3_pro=$row['HLA-DRB3,4,5_protein'];
-        $p_hla_DRB3_exo=$row['HLA-DRB3,4,5_syn_exons'];
-        $p_hla_DRB3_intro=$row['HLA-DRB3,4,5_syn_introns'];
-        $p_hla_DRB3_lvl=$row['HLA-DRB3,4,5_ex_level'];
+        $p_hla_DRB3_ag=$row['HLA-DRB3_allele_group'];
+        $p_hla_DRB3_pro=$row['HLA-DRB3_protein'];
+        $p_hla_DRB3_exo=$row['HLA-DRB3_syn_exons'];
+        $p_hla_DRB3_intro=$row['HLA-DRB3_syn_introns'];
+        $p_hla_DRB3_lvl=$row['HLA-DRB3_ex_level'];
 
         $p_hla_DQB1_ag=$row['HLA-DQB1_allele_group'];
         $p_hla_DQB1_pro=$row['HLA-DQB1_protein'];
@@ -129,7 +129,6 @@ if($result){
 
 
 
-
             <table class="donors_data">
                 <tr class="theads">
                     <th>Donor ID</th>
@@ -139,7 +138,7 @@ if($result){
                     <th>HLA-B*</th>
                     <th>HLA-C*</th>
                     <th>HLA-DRB1*</th>
-                    <th>HLA-DRB3,4,5*</th>
+                    <th>HLA-DRB3*</th>
                     <th>HLA-DRQB1*</th>
                 </tr>
 
@@ -191,11 +190,11 @@ if($result){
         $d_hla_DRB1_intro=$row['HLA-DRB1_syn_introns'];
         $d_hla_DRB1_lvl=$row['HLA-DRB1_ex_level'];
 
-        $d_hla_DRB3_ag=$row['HLA-DRB3,4,5_allele_group'];
-        $d_hla_DRB3_pro=$row['HLA-DRB3,4,5_protein'];
-        $d_hla_DRB3_exo=$row['HLA-DRB3,4,5_syn_exons'];
-        $d_hla_DRB3_intro=$row['HLA-DRB3,4,5_syn_introns'];
-        $d_hla_DRB3_lvl=$row['HLA-DRB3,4,5_ex_level'];
+        $d_hla_DRB3_ag=$row['HLA-DRB3_allele_group'];
+        $d_hla_DRB3_pro=$row['HLA-DRB3_protein'];
+        $d_hla_DRB3_exo=$row['HLA-DRB3_syn_exons'];
+        $d_hla_DRB3_intro=$row['HLA-DRB3_syn_introns'];
+        $d_hla_DRB3_lvl=$row['HLA-DRB3_ex_level'];
 
         $d_hla_DQB1_ag=$row['HLA-DQB1_allele_group'];
         $d_hla_DQB1_pro=$row['HLA-DQB1_protein'];
@@ -216,15 +215,33 @@ if($result){
             echo "<td>".$d_hla_DQB1_ag.":".$d_hla_DQB1_pro.":".$d_hla_DQB1_exo.":".$d_hla_DQB1_intro.":".$d_hla_DQB1_lvl."</td>";
           
             if($donor_count!=0){
-                echo "<td><a href='clinician_match_donors.php?match_id=".$donor_id."'><button class='add'>Match</button></a></td>";  
-            }
+                echo "<td><a href='clinician_match_donors.php?match_id=".$did.",&patient_match_id=".$pid.",&donor_count=".$donor_count.",
+
+                &donor_name=".$donor_name.",&donor_blood_group=".$donor_blood_group.",
+                &d_hla_B_ag=".$d_hla_B_ag.",&d_hla_B_pro=".$d_hla_B_pro.",&d_hla_B_exo=".$d_hla_B_exo.",&d_hla_B_intro=".$d_hla_B_intro.",&d_hla_B_lvl=".$d_hla_B_lvl.",
+                &d_hla_A_ag=".$d_hla_A_ag.",&d_hla_A_pro=".$d_hla_A_pro.",&d_hla_A_exo=".$d_hla_A_exo.",&d_hla_A_intro=".$d_hla_A_intro.",&d_hla_A_lvl=".$d_hla_A_lvl.",
+                &d_hla_C_ag=".$d_hla_C_ag.",&d_hla_C_pro=".$d_hla_C_pro.",&d_hla_C_exo=".$d_hla_C_exo.",&d_hla_C_intro=".$d_hla_C_intro.",&d_hla_C_lvl=".$d_hla_C_lvl.",
+                &d_hla_DRB1_ag=".$d_hla_DRB1_ag.",&d_hla_DRB1_pro=".$d_hla_DRB1_pro.",&d_hla_DRB1_exo=".$d_hla_DRB1_exo.",&d_hla_DRB1_intro=".$d_hla_DRB1_intro.",&d_hla_DRB1_lvl=".$d_hla_DRB1_lvl.",
+                &d_hla_DRB3_ag=".$d_hla_DRB3_ag.",&d_hla_DRB3_pro=".$d_hla_DRB3_pro.",&d_hla_DRB3_exo=".$d_hla_DRB3_exo.",&d_hla_DRB3_intro=".$d_hla_DRB3_intro.",&d_hla_DRB3_lvl=".$d_hla_DRB3_lvl.",
+                &d_hla_DQB1_ag=".$d_hla_DQB1_ag.",&d_hla_DQB1_pro=".$d_hla_DQB1_pro.",&d_hla_DQB1_exo=".$d_hla_DQB1_exo.",&d_hla_DQB1_intro=".$d_hla_DQB1_intro.",&d_hla_DQB1_lvl=".$d_hla_DQB1_lvl.",
+
+                &patient_name=".$patient_name.",&patient_blood_group=".$patient_blood_group.",
+                &p_hla_B_ag=".$p_hla_B_ag.",&p_hla_B_pro=".$p_hla_B_pro.",&p_hla_B_exo=".$p_hla_B_exo.",&p_hla_B_intro=".$p_hla_B_intro.",&p_hla_B_lvl=".$d_hla_B_lvl.",
+                &p_hla_A_ag=".$p_hla_A_ag.",&p_hla_A_pro=".$p_hla_A_pro.",&p_hla_A_exo=".$p_hla_A_exo.",&p_hla_A_intro=".$p_hla_A_intro.",&p_hla_A_lvl=".$d_hla_A_lvl.",
+                &p_hla_C_ag=".$p_hla_C_ag.",&p_hla_C_pro=".$p_hla_C_pro.",&p_hla_C_exo=".$p_hla_C_exo.",&p_hla_C_intro=".$p_hla_C_intro.",&p_hla_C_lvl=".$d_hla_C_lvl.",
+                &p_hla_DRB1_ag=".$p_hla_DRB1_ag.",&p_hla_DRB1_pro=".$p_hla_DRB1_pro.",&p_hla_DRB1_exo=".$p_hla_DRB1_exo.",&p_hla_DRB1_intro=".$p_hla_DRB1_intro.",&p_hla_DRB1_lvl=".$p_hla_DRB1_lvl.",
+                &p_hla_DRB3_ag=".$p_hla_DRB3_ag.",&p_hla_DRB3_pro=".$p_hla_DRB3_pro.",&p_hla_DRB3_exo=".$p_hla_DRB3_exo.",&p_hla_DRB3_intro=".$p_hla_DRB3_intro.",&p_hla_DRB3_lvl=".$p_hla_DRB3_lvl.",
+                &p_hla_DQB1_ag=".$p_hla_DQB1_ag.",&p_hla_DQB1_pro=".$p_hla_DQB1_pro.",&p_hla_DQB1_exo=".$p_hla_DQB1_exo.",&p_hla_DQB1_intro=".$p_hla_DQB1_intro.",&p_hla_DQB1_lvl=".$p_hla_DQB1_lvl."
+
+                '><button class='add'>Match</button></a></td>";  
 
             echo "<tr>";
+        }
         
             }
         }
         }
-        echo $donor_count;
+       
 
 ?>
             </table>
@@ -233,6 +250,9 @@ if($result){
             
            
         <?php
+
+        echo "Number of currently matching donors".$donor_count;
+        /*
         
         $match=0;
         $mismatch=0;
@@ -351,14 +371,14 @@ if($result){
                 echo "<br>".$mismatch."<br>";
 
 
-        //Matching HLA-DRB3,4,5
+        //Matching HLA-DRB3
             //DRB3,4,5-Match1
             if($p_hla_DRB1_ag.":".$p_hla_DRB1_pro==$d_hla_DRB1_ag.":".$d_hla_DRB1_pro){
-                echo "HLA Typing 9: HLA-DRB3,4,5 allele groups : One matched";
+                echo "HLA Typing 9: HLA-DRB3 allele groups : One matched";
                 $match++;
 
             }else{
-                echo "HLA Typing 9: HLA-DRB3,4,5 allele groups : One mismatch";
+                echo "HLA Typing 9: HLA-DRB3 allele groups : One mismatch";
                 $mismatch++;
             }
 
@@ -367,11 +387,11 @@ if($result){
 
             //DRB3,4,5-Match2
             if($p_hla_DRB3_exo.":".$p_hla_DRB3_intro==$d_hla_DRB3_exo.":".$d_hla_DRB3_intro){
-                echo "HLA Typing 10: HLA-DRB3,4,5 allele groups : One matched";
+                echo "HLA Typing 10: HLA-DRB3 allele groups : One matched";
                 $match++;
 
             }else{
-                echo "HLA Typing 10: HLA-DRB3,4,5 allele groups : One mismatch";
+                echo "HLA Typing 10: HLA-DRB3 allele groups : One mismatch";
                 $mismatch++;
             }
 
@@ -426,4 +446,4 @@ if($result){
     </body>
     </html>
 
-
+*/
