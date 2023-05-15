@@ -63,8 +63,9 @@ if($_SESSION['userlevel']!=0)
     <main>
 <nav>
         <ul>
-        <li><a class="active" href="#">Testing Details</a> </li>
-        <li><a href="admin_add_testing_report.php">Add Testing Report Details</a></li>
+        <li><a class="active" href="#">Tested HLA Details</a> </li>
+        <li><a href="admin_add_test_result.php">Add Testing Report Details</a></li>
+        
       </ul>
     </nav>
     <div class="cards-2">
@@ -74,30 +75,80 @@ if($_SESSION['userlevel']!=0)
                 </div>
                 <table>
                     <tr>
-                        <th>Donor ID</th>
                         <th>Hospital ID</th>
-                        <th>More Details</th>
+                        <th>Donor ID</th>
+                        <th >HLA Details</th>
                     </tr>
                 
                     <?php 
-                       $sql1="SELECT pending_donor.`pending_donor_id`,pending_donor.`request_date`,testing.`hospital_id` FROM `pending_donor` INNER JOIN `testing` ON testing.`donor_id` = pending_donor.`pending_donor_id`";
-
-    $result=mysqli_query($connection,$sql1);
-    if($result){
-        while($row=mysqli_fetch_assoc($result)){
-            $id=$row['pending_donor_id'];
-            $date=$row['request_date'];
-            $hid=$row['hospital_id'];
-            echo '<tr>
-            <td >'.$id. '</td>
-            <td>'.$date. ' </td> 
-            <td>'.$hid. '</td>
-           <td><a href="../../src/php/admin_add_testing_report.php? id='.$id.'" class="btn">Add Test Result</a></td>
-           </tr>';
-   
-       }
-   }
-   
+                     
+                       
+                       $sql="SELECT * FROM donor_hla_details
+                             JOIN donor ON donor_hla_details.donor_id = donor.donor_id
+                             ORDER BY dh_id";
+                       //echo $sql;
+                       
+                       $result=mysqli_query($connection,$sql);
+                       
+                       if($result){
+                           while($row=mysqli_fetch_assoc($result)){
+                               $hid='HLAID'.str_pad($row['dh_id'],3,'0',STR_PAD_LEFT);
+                               $donor_id=$row['donor_id'];
+                               $pid='PID'.str_pad($row['donor_id'],3,'0',STR_PAD_LEFT);
+                       
+                               $hla_A_ag=$row['HLA-A_allele_group'];
+                               $hla_A_pro=$row['HLA-A_protein'];
+                               $hla_A_exo=$row['HLA-A_syn_exons'];
+                               $hla_A_intro=$row['HLA-A_syn_introns'];
+                               $hla_A_lvl=$row['HLA-A_ex_level'];
+                       
+                               $hla_B_ag=$row['HLA-B_allele_group'];
+                               $hla_B_pro=$row['HLA-B_protein'];
+                               $hla_B_exo=$row['HLA-B_syn_exons'];
+                               $hla_B_intro=$row['HLA-B_syn_introns'];
+                               $hla_B_lvl=$row['HLA-B_ex_level'];
+                       
+                               $hla_C_ag=$row['HLA-C_allele_group'];
+                               $hla_C_pro=$row['HLA-C_protein'];
+                               $hla_C_exo=$row['HLA-C_syn_exons'];
+                               $hla_C_intro=$row['HLA-C_syn_introns'];
+                               $hla_C_lvl=$row['HLA-C_ex_level'];
+                       
+                               $hla_DRB1_ag=$row['HLA-DRB1_allele_group'];
+                               $hla_DRB1_pro=$row['HLA-DRB1_protein'];
+                               $hla_DRB1_exo=$row['HLA-DRB1_syn_exons'];
+                               $hla_DRB1_intro=$row['HLA-DRB1_syn_introns'];
+                               $hla_DRB1_lvl=$row['HLA-DRB1_ex_level'];
+                       
+                               $hla_DRB3_ag=$row['HLA-DRB3,4,5_allele_group'];
+                               $hla_DRB3_pro=$row['HLA-DRB3,4,5_protein'];
+                               $hla_DRB3_exo=$row['HLA-DRB3,4,5_syn_exons'];
+                               $hla_DRB3_intro=$row['HLA-DRB3,4,5_syn_introns'];
+                               $hla_DRB3_lvl=$row['HLA-DRB3,4,5_ex_level'];
+                       
+                               $hla_DQB1_ag=$row['HLA-DQB1_allele_group'];
+                               $hla_DQB1_pro=$row['HLA-DQB1_protein'];
+                               $hla_DQB1_exo=$row['HLA-DQB1_syn_exons'];
+                               $hla_DQB1_intro=$row['HLA-DQB1_syn_introns'];
+                               $hla_DQB1_lvl=$row['HLA-DQB1_ex_level'];
+                       
+                       
+                               echo "<tr>";
+                       
+                                   echo "<td>".$hid."</td>";
+                                   echo "<td>".$pid."</td>";
+                                   echo "<td>".$hla_A_ag.":".$hla_A_pro.":".$hla_A_exo.":".$hla_A_intro.":".$hla_A_lvl."</td>";
+                                   echo "<td>".$hla_B_ag.":".$hla_B_pro.":".$hla_B_exo.":".$hla_B_intro.":".$hla_B_lvl."</td>";
+                                   echo "<td>".$hla_C_ag.":".$hla_C_pro.":".$hla_C_exo.":".$hla_C_intro.":".$hla_C_lvl."</td>";
+                                   echo "<td>".$hla_DRB1_ag.":".$hla_DRB1_pro.":".$hla_DRB1_exo.":".$hla_DRB1_intro.":".$hla_DRB1_lvl."</td>";
+                                   echo "<td>".$hla_DRB3_ag.":".$hla_DRB3_pro.":".$hla_DRB3_exo.":".$hla_DRB3_intro.":".$hla_DRB3_lvl."</td>";
+                                   echo "<td>".$hla_DQB1_ag.":".$hla_DQB1_pro.":".$hla_DQB1_exo.":".$hla_DQB1_intro.":".$hla_DQB1_lvl."</td>";
+                       
+                                //    echo "<td><a href='hospital_view_hla_patient.php?viewid=".$hid."' class='view'><abbr title='View'><span class='material-icons'>visibility</span></a></abbr></td>";
+                                //    echo "<td><a href='hospital_update_hla_patient.php?updateid=".$hid."' class='edit'><abbr title='Edit'><span class='material-icons'>edit_square</span></abbr></a></td>";
+                       
+                               echo "</tr>";
+                           }}
    ?>
                 </table>
             </div>

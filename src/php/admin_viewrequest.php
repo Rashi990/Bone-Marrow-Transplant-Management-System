@@ -25,15 +25,15 @@ if($_SESSION['userlevel']!=0)
             <h2>
                 View Requests
             </h2>
-            <div class="search-wrapper">
+            <!-- <div class="search-wrapper">
             <span class="material-icons">search</span>
                 <input type="search" placeholder="search here">
-            </div>
+            </div> -->
     
            
     
            
-            <div class="box-icon">
+            <!-- <div class="box-icon">
                 <div class="item">
                     <span class="material-icons">notifications</span>
                 </div>
@@ -41,7 +41,7 @@ if($_SESSION['userlevel']!=0)
                     <span class="material-icons">chat_bubble</span>
                 </div>
                 
-            </div>
+            </div> -->
            
             
             <div class="user-wrapper">
@@ -67,23 +67,23 @@ if($_SESSION['userlevel']!=0)
                     <tr>
                         <th>Donor Name</th>
                         <th>Nearest City</th>
-                        <th>Requested Date</th>
+                        <th>Blood Group</th>
                         <th>More Details</th>
                     </tr>
                     <?php 
-                        $sql="SELECT CONCAT_WS (' ',`first_name`,`second_name`) AS fullname,city,request_date,pending_donor_id from pending_donor";
+                        $sql="SELECT donor_name,city,blood_group,donor_id FROM donor WHERE approve=0 AND hos_add=0 ";
 
     $result=mysqli_query($connection,$sql);
     if($result){
         while($row=mysqli_fetch_assoc($result)){
-            $id=$row['pending_donor_id'];
-            $name=$row['fullname'];
+            $id=$row['donor_id'];
+            $name=$row['donor_name'];
             $city=$row['city'];
-            $date=$row['request_date'];
+            $blood=$row['blood_group'];
          echo '<tr>
          <td >'.$name. '</td>
          <td>'.$city. ' </td> 
-         <td>'.$date. '</td>
+         <td>'.$blood. '</td>
         <td><a href="../../src/php/admin_select_hospital_2.php? id='.$id.'" class="btn">Select Hospital</a></td>
         </tr>';
 
