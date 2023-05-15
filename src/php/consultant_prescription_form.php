@@ -23,14 +23,13 @@ if(isset($_POST['submit'])){
 
   if (empty($patient_id)||empty($date)||empty($drug_name)||empty($dosage)||empty($route)||empty($frequency))
 {
-  header("Location: consultant_prescription_form.php?error=All feilds are required!");
+  header("Location: consultant_prescription_form.php?error=All feilds are required!&&update-id=$patient_id");
   exit();
 }
 
     $sql="INSERT INTO patient_clinical_reports(patient_id,date,drug_name,dosage,route,frequency) VALUES($patient_id,'$date','$drug_name','$dosage','$route','$frequency')";
     $result=mysqli_query($connection,$sql);
     if($result){
-        //echo "Data inserted successfully";
         header('location:consultant_prescriptions.php');
     }
     else{
@@ -89,15 +88,33 @@ if(isset($_POST['submit'])){
             <input type="text" name="patient_id" placeholder="Enter Patient ID" value="<?php echo $patient_id ?>">
           </div>
           <div class="title">
-          <p>Clinical Form</p>
-        </div>
+            <p>Clinical Form</p>
+          </div>
           <div class="d">
             <label class="lbl">Date</label>
             <input type="date" name="date" placeholder="Choose Date" value="<?php echo $date ?>">
           </div>
         </div>
+        <div class="clinical">
+          <div class="d">
+            <label class="lbl">Blood Pressure</label>
+            <input type="text" name="blood_pressure" placeholder="Enter Blood Pressure">
+          </div>
+          <div class="d">
+            <label class="lbl">Pulse Rate</label>
+            <input type="text" name="pulse_rate" placeholder="Enter Pulse Rate">
+          </div>
+        </div>
         <div class="ad">
           <div class="drugs">
+            <div class="ds">
+              <label class="lbl">Diagnosed With</label>
+              <select class="select" name="frequency" placeholder="Choose Frequency">
+                <option selected="selected" disabled="disabled">Choose frequency</option>
+                <option>Gastric</option>
+                <option>Fever</option>
+              </select>
+            </div>
             <div class="ds">
               <label class="lbl">Drug Name</label>
               <select class="select" name="drug_name" placeholder="Choose Drug Name">
@@ -125,75 +142,18 @@ if(isset($_POST['submit'])){
               </select>
             </div>
             <div class="ds">
+              <label class="lbl">Unit</label>
+              <select class="select" name="unit" placeholder="Choose Unit">
+                <option selected="selected" disabled="disabled">Choose unit</option>
+                <option>Tablet</option>
+                <option>Syrup</option>
+              </select>
+            </div>
+            <div class="ds">
               <label class="lbl">Dosage</label>
               <select class="select" name="dosage">
                 <option selected="selected" disabled="disabled">Choose dosage</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-                <option>05</option>
-                <option>06</option>
-                <option>07</option>
-                <option>08</option>
-                <option>09</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
-                <option>24</option>
-                <option>25</option>
-              </select>
-            </div>
-            <div class="ds">
-              <label class="lbl">Route</label>
-              <select class="select" name="route" placeholder="Choose Route">
-                <option selected="selected" disabled="disabled">Choose route</option>
-                <option>one time a day</option>
-                <option>two times a day</option>
-                <option>three times a day</option>
-                <option>four times a day</option>
-                <option>1mg per hour</option>
-                <option>10mg per hour</option>
-                <option>50mg per day</option>
-                <option>100mg per day</option>
-              </select>
-            </div>
-            <div class="ds">
-              <label class="lbl">Frequency</label>
-              <select class="select" name="frequency" placeholder="Choose Frequency">
-                <option selected="selected" disabled="disabled">Choose frequency</option>
-                <option>1 day</option>
-                <option>2 days</option>
-                <option>3 days</option>
-                <option>4 days</option>
-                <option>5 days</option>
-                <option>6 days</option>
-                <option>1 week</option>
-                <option>8 days</option>
-                <option>9 days</option>
-                <option>10 days</option>
-                <option>11 days</option>
-                <option>12 days</option>
-                <option>2 weeks</option>
-                <option>3 weeks</option>
-                <option>1 month</option>
-                <option>1 month and 2 weeks</option>
-                <option>2 month</option>
-                <option>3 month</option>
-                <option>24 hours</option>
-                <option>48 hours</option>
-                <option>72 hours</option>
+                <option>250 mg PO bid for 5 days</option>
               </select>
             </div>
             <div class="db">
@@ -220,6 +180,14 @@ if(isset($_POST['submit'])){
       $(".add").click(function(e){
         e.preventDefault();
         $(".ad").prepend(`<div class="drugs append_items">
+        <div class="ds">
+          <label class="lbl">Diagnosed With</label>
+          <select class="select" name="frequency" placeholder="Choose Frequency">
+            <option selected="selected" disabled="disabled">Choose frequency</option>
+            <option>Gastric</option>
+            <option>Fever</option>
+          </select>
+        </div>
           <div class="ds">
             <label class="lbl">Drug Name</label>
             <select class="select" name="drug_name" placeholder="Choose Drug Name">
@@ -247,75 +215,18 @@ if(isset($_POST['submit'])){
             </select>
           </div>
           <div class="ds">
+            <label class="lbl">Unit</label>
+            <select class="select" name="unit" placeholder="Choose Unit">
+              <option selected="selected" disabled="disabled">Choose unit</option>
+              <option>Tablet</option>
+              <option>Syrup</option>
+            </select>
+          </div>
+          <div class="ds">
             <label class="lbl">Dosage</label>
             <select class="select" name="dosage">
               <option selected="selected" disabled="disabled">Choose dosage</option>
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-              <option>04</option>
-              <option>05</option>
-              <option>06</option>
-              <option>07</option>
-              <option>08</option>
-              <option>09</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
-              <option>15</option>
-              <option>16</option>
-              <option>17</option>
-              <option>18</option>
-              <option>19</option>
-              <option>20</option>
-              <option>21</option>
-              <option>22</option>
-              <option>23</option>
-              <option>24</option>
-              <option>25</option>
-            </select>
-          </div>
-          <div class="ds">
-            <label class="lbl">Route</label>
-            <select class="select" name="route" placeholder="Choose Route">
-              <option selected="selected" disabled="disabled">Choose route</option>
-              <option>one time a day</option>
-              <option>two times a day</option>
-              <option>three times a day</option>
-              <option>four times a day</option>
-              <option>1mg per hour</option>
-              <option>10mg per hour</option>
-              <option>50mg per day</option>
-              <option>100mg per day</option>
-            </select>
-          </div>
-          <div class="ds">
-            <label class="lbl">Frequency</label>
-            <select class="select" name="frequency" placeholder="Choose Frequency">
-              <option selected="selected" disabled="disabled">Choose frequency</option>
-              <option>1 day</option>
-              <option>2 days</option>
-              <option>3 days</option>
-              <option>4 days</option>
-              <option>5 days</option>
-              <option>6 days</option>
-              <option>1 week</option>
-              <option>8 days</option>
-              <option>9 days</option>
-              <option>10 days</option>
-              <option>11 days</option>
-              <option>12 days</option>
-              <option>2 weeks</option>
-              <option>3 weeks</option>
-              <option>1 month</option>
-              <option>1 month and 2 weeks</option>
-              <option>2 month</option>
-              <option>3 month</option>
-              <option>24 hours</option>
-              <option>48 hours</option>
-              <option>72 hours</option>
+              <option>250 mg PO bid for 5 days</option>
             </select>
           </div>
           <div class="db">
