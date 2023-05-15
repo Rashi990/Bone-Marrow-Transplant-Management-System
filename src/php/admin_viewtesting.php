@@ -64,7 +64,7 @@ if($_SESSION['userlevel']!=0)
 <nav>
         <ul>
         <li><a class="active" href="#">Tested HLA Details</a> </li>
-        <li><a href="admin_add_test_result.php">Add Testing Report Details</a></li>
+        <li><a href="admin_add_test_result.php">Check HLA Non Added Donors</a></li>
         
       </ul>
     </nav>
@@ -120,11 +120,11 @@ if($_SESSION['userlevel']!=0)
                                $hla_DRB1_intro=$row['HLA-DRB1_syn_introns'];
                                $hla_DRB1_lvl=$row['HLA-DRB1_ex_level'];
                        
-                               $hla_DRB3_ag=$row['HLA-DRB3,4,5_allele_group'];
-                               $hla_DRB3_pro=$row['HLA-DRB3,4,5_protein'];
-                               $hla_DRB3_exo=$row['HLA-DRB3,4,5_syn_exons'];
-                               $hla_DRB3_intro=$row['HLA-DRB3,4,5_syn_introns'];
-                               $hla_DRB3_lvl=$row['HLA-DRB3,4,5_ex_level'];
+                               $hla_DRB3_ag=$row['HLA-DRB3_allele_group'];
+                               $hla_DRB3_pro=$row['HLA-DRB3_protein'];
+                               $hla_DRB3_exo=$row['HLA-DRB3_syn_exons'];
+                               $hla_DRB3_intro=$row['HLA-DRB3_syn_introns'];
+                               $hla_DRB3_lvl=$row['HLA-DRB3_ex_level'];
                        
                                $hla_DQB1_ag=$row['HLA-DQB1_allele_group'];
                                $hla_DQB1_pro=$row['HLA-DQB1_protein'];
