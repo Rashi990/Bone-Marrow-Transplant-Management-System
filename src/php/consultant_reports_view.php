@@ -122,14 +122,14 @@ if (isset($_GET['report-id'])) {
             //Get the Element to be Downloaded
             var downloading = document.getElementById("whatToPrint");
             //Create a jason.pdf ('orientation', 'dimention', 'pdf size')
-            var doc = new jsPDF('1', 'pt');
+            var doc = new jsPDF('1', 'pt', 'a4');
             await html2canvas(downloading, {
               //allowTaint: true,
               //useCORS: true,
-              width: 550
+              width: 1000
             }).then((canvas)=>{
               //Get a canvas to convert to PNG
-              doc.addImage(canvas.toDataURL("image/png"), 'PNG', 25, 5, 200, 300);
+              doc.addImage(canvas.toDataURL("image/png"), 'PNG', 25, 5, 500, 1000);
             })
             doc.save("Document.pdf");
             //downloading Code

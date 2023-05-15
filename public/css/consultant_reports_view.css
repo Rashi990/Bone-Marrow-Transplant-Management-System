@@ -101,8 +101,7 @@ body{
 #whatToPrint{
   display: flex;
   flex-direction: column;
-  width: 70%;
-  height: auto;
+  width: 100%;
 }
 
 p.date{
