@@ -2,60 +2,48 @@
 
  $hospital_id=$_SESSION['hospital_id'];
 
- /*
- $sql="SELECT match_requests.*, patient.patient_id, patient.patient_name, patient.current_status
-        FROM match_requests
-        JOIN patient ON match_requests.patient_id=patient.patient_id 
-        WHERE match_requests.hospital_id=$hospital_id
-        ORDER BY match_requests.match_request_id ";
-    */
 
+ $sql="SELECT patient_hla_details.ph_id, patient_hla_details.patient_id, patient.patient_id, patient.patient_name, patient.current_status
+      FROM patient_hla_details
+      JOIN patient ON patient_hla_details.patient_id = patient.patient_id
+      WHERE hospital_id=$hospital_id
+      ORDER BY ph_id";
+//echo $sql;
 
-    $sql1="SELECT * FROM match_requests WHERE hospital_id=$hospital_id";
-        
-    $result1=mysqli_query($connection,$sql1);
+$result=mysqli_query($connection,$sql);
 
-    if($result1){
-      while($row=mysqli_fetch_assoc($result1)){
+if($result){
+    while($row=mysqli_fetch_assoc($result)){
+        $hid='HLAID'.str_pad($row['ph_id'],3,'0',STR_PAD_LEFT);
+        $patient_id=$row['patient_id'];
+        $pid='PID'.str_pad($row['patient_id'],3,'0',STR_PAD_LEFT);
+        $patient_name=$row['patient_name'];
+        $patient_status=$row['current_status'];
 
-         $match_request_id=$row['match_request_id'];
-         $mid='MR'.str_pad($row['match_request_id'],3,'0',STR_PAD_LEFT);
-         $patient_id=$row['patient_id'];
-         $pid='PID'.str_pad($row['patient_id'],3,'0',STR_PAD_LEFT);
-         //$patient_name=$row['patient_name'];
-         //$patient_status=$row['current_status'];
+        echo "<tr>";
 
+            //echo "<td>".$hid."</td>";
+            echo "<td>".$pid."</td>";
+            echo "<td>".$patient_name."</td>";
+            echo "<td>".$patient_status."</td>";
 
+            //echo "<td><a href='hospital_view_hla_patient.php?viewid=".$hid."' class='view'><abbr title='View'><span class='material-icons'>visibility</span></a></abbr></td>";
+            //echo "<td><a href='hospital_update_hla_patient.php?updateid=".$hid."' class='edit'><abbr title='Edit'><span class='material-icons'>edit_square</span></abbr></a></td>";
 
-         $sql2="SELECT patient_id,patient_name,current_status FROM patient WHERE patient_id=$patient_id";
+      
 
-         $result2=mysqli_query($connection,$sql2);
-
-         if($result2){
-          while($row=mysqli_fetch_assoc($result2)){
-            $patient_name=$row['patient_name'];
-            $patient_status=$row['current_status'];
-          
-
-    echo "<tr>";
-
-         echo "<td>".$mid."</td>";
-         echo "<td>".$pid."</td>";
-         echo "<td>".$patient_name."</td>";
-         echo "<td>".$patient_status."</td>";
-
-         echo "<td><a href='hospital_update_patient.php?acceptid=".$match_request_id."' class='accept'><span class='material-icons'>person_add</span></td>";
-         echo "<td><a href='hospital_delete_patient.php?deleteid=".$match_request_id."' class='delete'><span class='material-icons'>delete</span></td>";
+        // echo "<td><a href='hospital_update_patient.php?acceptid=".$match_request_id."' class='accept'><abbr title='Confirm'><span class='material-icons'>person_add</span><abbr/></td>";
+        // echo "<td><a href='hospital_delete_patient.php?deleteid=".$match_request_id."' class='delete'><abbr title='Delete'><span class='material-icons'>delete</span><abbr/></td>";
          
      echo "</tr>";
 
 
-        }
-      }
-
+       
     }
   }
    
+
+
 
  
 

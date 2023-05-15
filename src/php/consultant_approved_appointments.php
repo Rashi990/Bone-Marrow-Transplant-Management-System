@@ -47,34 +47,33 @@ if($_SESSION['userlevel']!=1)
       <table align="center">
         <tr>
           <th>Appointment ID</th>
-          <th>Patient Name</th>
+          <th>Donor Name</th>
           <th>Mobile Number</th>
           <th>Email</th>
-          <th>Status</th>
+          <th>State</th>
           <th>Action</th>
         </tr>
         <?php
-          $sql="SELECT * FROM `appointments` WHERE `status` = 'Approved'";
+          $sql="SELECT * FROM appointments_donor LEFT JOIN donor ON appointments_donor.donor_id = donor.donor_id WHERE state = 'Approved'";
           $result=mysqli_query($connection,$sql);
           if($result){
             while($row=mysqli_fetch_assoc($result)){
-              $appointment_id=$row['appointment_id'];
-              $patient_name=$row['patient_name'];
+              $donor_appointment_id=$row['donor_appointment_id'];
+              $donor_id=$row['donor_id'];
+              $donor_name=$row['donor_name'];
               $telephone_no=$row['telephone_no'];
               $email=$row['email'];
-              $status=$row['status'];
+              $state=$row['state'];
               echo '
-                <td>'.$appointment_id.'</td>
-                <td>'.$patient_name.'</td>
+                <td>'.$donor_appointment_id.'</td>
+                <td>'.$donor_name.'</td>
                 <td>'.$telephone_no.'</td>
                 <td>'.$email.'</td>
-                <td>'.$status.'</td>
+                <td>'.$state.'</td>
                 <td>
-                  <button id="btn-view" class="btn">
-                    <a href="consultant_approved_appointments_view.php?appointment-id='.$appointment_id.'" class="text-light">
-                      View
-                    </a>
-                  </button>
+                  <a class="view" href="consultant_approved_appointments_view.php?appointment-id='.$donor_appointment_id.'" class="text-light">
+                    <abbr title="View"><span class="material-icons">visibility</span></abbr>
+                  </a>
                 </td>
               </tr>
               ';

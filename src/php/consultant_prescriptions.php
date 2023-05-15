@@ -14,7 +14,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="../../public/css/consultant_prescriptions.css?v=1">
+      <link rel="stylesheet" type="text/css" href="../../public/css/consultant_prescriptions.css?v=2">
       <link rel="stylesheet" type="text/css" href="../../public/css/consultant_navbar.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <title>Top</title>
@@ -54,20 +54,20 @@
           </a>
         </div>
       </div>
-      <div class="topic">
-        <h2>Patient List</h2>
-      </div>
       <div class="scroll">
+        <div class="topic">
+          <h2>Patient List</h2>
+        </div>
         <div class="mid-bottom">
             <table align="center">
               <tr>
-                <th>Patient ID</th>
-                <th>Patient Name</th>
-                <th>Age</th>
-                <th>Blood Group</th>
-                <th>Diagnosis</th>
-                <th>email</th>
-                <th colspan="2">Action</th>
+                <th class="th1">Patient ID</th>
+                <th class="th2">Patient Name</th>
+                <th class="th1">Age</th>
+                <th class="th1">Blood Group</th>
+                <th class="th2">Diagnosis</th>
+                <th class="th2">email</th>
+                <th class="th2" colspan="2">Action</th>
               </tr>
               <?php
                   $sql="SELECT * FROM patient";
@@ -88,16 +88,12 @@
                             <td>'.$diagnosis.'</td>
                             <td>'.$email.'</td>
                             <td>
-                              <button id="btn-view" class="btn">
-                                <a href="consultant_patient_reports_view.php?update-id='.$patient_id.'" class="text-light">
-                                  View
-                                  </a>
-                              </button>
-                              <button id="btn-update" class="btn">
-                                <a href="consultant_patient_prescriptions.php?update-id='.$patient_id.'" class="text-light">
-                                  Pres
-                                </a>
-                              </button>
+                              <a class="view" href="consultant_patient_reports_view.php?update-id='.$patient_id.'" class="text-light">
+                                <abbr title="View"><span class="material-icons">visibility</span></abbr>
+                              </a>
+                              <a class="prescription" href="consultant_patient_prescriptions.php?update-id='.$patient_id.'" class="text-light">
+                                <abbr title="Prescription"><span class="material-symbols-outlined">prescriptions</span></abbr>
+                              </a>
                             </td>
                           </tr>
                           ';

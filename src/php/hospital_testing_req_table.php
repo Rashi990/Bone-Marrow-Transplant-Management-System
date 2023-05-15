@@ -2,17 +2,20 @@
 
  $hospital_id=$_SESSION['hospital_id'];
 
- $sql="SELECT testing.*, donor.donor_id, donor.donor_name, donor.blood_group 
-        FROM testing
-        JOIN donor ON testing.donor_id=donor.donor_id
-        WHERE testing.hospital_id=$hospital_id
-        ORDER BY testing.test_id";
+ $sql="SELECT testing.*, donor.donor_id, donor.donor_name, donor.blood_group, hospital_stock.test_id 
+    FROM testing
+    INNER JOIN donor ON testing.donor_id = donor.donor_id
+    LEFT JOIN hospital_stock ON testing.test_id = hospital_stock.test_id
+    WHERE hospital_stock.test_id IS NULL AND testing.hospital_id = $hospital_id
+    ORDER BY testing.test_id;
+ ";
  //echo $sql;
 
  $result=mysqli_query($connection,$sql);
 
  if($result){
     while($row=mysqli_fetch_assoc($result)){
+        $test_id=$row['test_id'];
         $id='TST'.str_pad($row['test_id'],3,'0',STR_PAD_LEFT);
         $did='D'.str_pad($row['donor_id'],3,'0',STR_PAD_LEFT);
         $name=$row['donor_name'];
@@ -30,8 +33,8 @@
             echo "<td>".$time."</td>";
 
             //echo "<td><a href='hospital_view_patient.php?viewid=".$id."' class='view'><span class='material-icons'>visibility</span></a></td>";
-            echo "<td><a href='hospital_accept_testing_req.php?acceptid=".$id."' class='accept'><span class='material-icons'>person_add</span></td>";
-            echo "<td><a href='hospital_delete_testing_req.php?deleteid=".$id."' class='delete'><span class='material-icons'>delete</span></td>";
+            echo "<td><a href='hospital_accept_testing_req.php?acceptid=".$id."' class='accept'><abbr title='Confirm'><span class='material-icons'>person_add</span></abbr></a></td>";
+            echo "<td><a href='hospital_delete_testing_req.php?deleteid=".$id."' class='delete'><abbr title='Delete'><span class='material-icons'>delete</span></abbr></a></td>";
 
         echo "</tr>";
 

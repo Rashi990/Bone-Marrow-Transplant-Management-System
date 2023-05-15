@@ -84,6 +84,7 @@ body{
   padding-left: 20px;
 }
 
+
 .dates{
     position: absolute;
     margin-left: 240px;
@@ -92,22 +93,69 @@ body{
     background-color: #f4f7fa;
     border-radius: 20px;
     padding: 30px;
-    display: flex;
-    justify-content: space-between;
+    
 }
 
 .dates .box1{
   background-color: #d7f0ed;
-  flex-direction: column;
   margin: 10px;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 4px 4px 5px rgba(0,0,0,0.2);
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 96%;
 }
 
+.calendar{
+  background-color: #f2f2f2;
+}
+
+.calendar h3{
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.calendar ul.days{
+  padding: 10px;
+  
+}
+
+/*
+.calendar li.day{
+  background-color: #006296;
+  color: #d7f0ed;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+
+}
+*/
+
+.calendar ul.times{
+  display: flex;
+    background-color: #bbc0bf;
+    border-radius: 10px;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: inherit;
+}
+
+.calendar li{
+  flex-direction: column;
+  background-color: #1c9d8e;
+  color: #F7FFFF;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+
+
+
+/*
 .main-content{
     margin: 20px auto;
  }
@@ -166,8 +214,9 @@ body{
 .box-icon .item{
    padding-right: 50px;
 }
+*/
 
-/* Import Google font - Poppins */
+/* Import Google font - Poppins 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 .main-box{
   margin: 50px 100px;
@@ -276,3 +325,5 @@ header .current-date{
 .dates .box2 p{
   font-weight: 200;
 }
+
+*/
