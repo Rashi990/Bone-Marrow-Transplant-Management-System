@@ -90,10 +90,7 @@ if ($result3) {
         <h2>Patient ID: <?php echo $patient_id ?></h2>
       </div>
       <div class="add">
-        <?php
-          echo
-          '<a href="consultant_prescription_form.php?update-id='.$patient_id.'" class="new">+ Add</a>';
-        ?>
+        <a href="consultant_prescription_form.php?update-id='.$patient_id.'"><button class="new" type="button" name="button">+ Add</button></a>
       </div>
       <div class="mid-bottom">
           <table align="center">
@@ -119,21 +116,15 @@ if ($result3) {
               <td>'.$unit.'</td>
               <td>'.$dosage.'</td>
               <td>
-                <button id="btn-view" class="btn">
-                  <a href="consultant_patient_clinical_reports_view.php?update-id='.$patient_cr_id.'" class="text-light">
-                    View
-                    </a>
-                </button>
-                <button id="btn-update" class="btn">
-                  <a href="consultant_patient_clinical_reports_update.php?update-id='.$patient_cr_id.'" class="text-light">
-                    Edit
-                  </a>
-                </button>
-                <button id="btn-delete" class="btn">
-                  <a href="consultant_patient_clinical_reports_delete.php?delete-id='.$patient_cr_id.'" class="text-light">
-                    Delete
-                  </a>
-                </button>
+                <a class="view" href="consultant_patient_clinical_reports_view.php?update-id='.$patient_cr_id.'" class="text-light">
+                  <abbr title="View"><span class="material-icons">visibility</span></abbr>
+                </a>
+                <a class="edit" href="consultant_patient_clinical_reports_update.php?update-id='.$patient_cr_id.'" class="text-light">
+                  <abbr title="Edit"><span class="material-icons">edit_square</span></abbr>
+                </a>
+                <a class="delete" href="consultant_patient_clinical_reports_delete.php?delete-id='.$patient_cr_id.'" class="text-light">
+                  <abbr title="Delete"><span class="material-icons">delete</span></abbr>
+                </a>
               </td>
             </tr>
             ';

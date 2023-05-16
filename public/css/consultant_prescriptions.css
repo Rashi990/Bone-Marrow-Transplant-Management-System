@@ -124,7 +124,11 @@ th{
 }
 
 .th2{
-  width: 200px;
+  width: 190px;
+}
+
+.th3{
+  width: 260px;
 }
 
 table{
@@ -185,6 +189,26 @@ tr{
     color: #080909;
 }
 
+.edit{
+    color: #006296;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+.edit:hover{
+    color: #080909;
+}
+
+.delete{
+    color: #d40000;
+    padding: 8px 10px;
+    transition: 0.5s;
+}
+
+.delete:hover{
+    color: #080909;
+}
+
 .prescription{
     color: #006296;
     padding: 8px 10px;
@@ -193,4 +217,21 @@ tr{
 
 .prescription:hover{
     color: #080909;
+}
+
+.new{
+  width: 120px;
+  height: 40px;
+  color: white;
+  background: #308C83;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.new:hover{
+  background: white;
+  color: #308C83;
 }

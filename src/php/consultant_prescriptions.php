@@ -88,7 +88,7 @@
                             <td>'.$diagnosis.'</td>
                             <td>'.$email.'</td>
                             <td>
-                              <a class="view" href="consultant_patient_reports_view.php?update-id='.$patient_id.'" class="text-light">
+                              <a class="view" href="consultant_reports_view.php?report-id='.$patient_id.'" class="text-light">
                                 <abbr title="View"><span class="material-icons">visibility</span></abbr>
                               </a>
                               <a class="prescription" href="consultant_patient_prescriptions.php?update-id='.$patient_id.'" class="text-light">
