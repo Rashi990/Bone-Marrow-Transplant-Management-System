@@ -15,13 +15,50 @@ body{
     padding: 20px;
 }
 
-form{
+.form{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  background: #d7f0ed;
+}
+
+.title h2{
+  color: #006296;
+  height: 15px;
 }
 
 .row{
   display: flex;
-  align-items:flex-start;
+  height: 20px;
+}
+
+.row label{
+  width: 250px;
+  height: 30px;
+}
+
+select{
+  width: 200px;
+}
+
+input{
+  width: 200px;
+}
+
+textarea{
+  width: 200px;
+}
+
+button{
+  color: white;
+  background: #308C83;
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  margin: 20px;
+  cursor: pointer;
+  font-size: 20px;
 }

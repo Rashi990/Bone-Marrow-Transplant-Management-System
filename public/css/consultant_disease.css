@@ -102,19 +102,11 @@ body{
     padding: 30px;
 }
 
-.tabs{
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  background: #bde4e0;
-  width: 35%;
-}
-
 .descript{
   display: flex;
   flex-direction: column;
   text-align: justify;
-  width: 65%;
+  width: 100%;
   height: 550px;
   padding: 15px;
   overflow-y: scroll;

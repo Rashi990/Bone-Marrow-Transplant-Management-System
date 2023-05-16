@@ -8,7 +8,10 @@ if($_SESSION['userlevel']!=1)
 {
     header("Location:home.php");
 }
- ?>
+
+$consultant_id=$_SESSION['uid'];
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +56,7 @@ if($_SESSION['userlevel']!=1)
           </div>
           <div class="count">
             <?php
-              $sql1 = "SELECT donor_appointment_id FROM appointments_donor WHERE `state` = 'Not Updated Yet' ORDER by appointment_date";
+              $sql1 = "SELECT `donor_appointment_id` FROM `appointments_donor` WHERE `consultant_id` = '$consultant_id' AND `state` = 'Not Updated Yet' ORDER BY `appointment_date`";
               $result1 = mysqli_query($connection, $sql1);
               $row = mysqli_num_rows($result1);
               echo '<h1>' .$row. '</h1>';
@@ -71,7 +74,7 @@ if($_SESSION['userlevel']!=1)
           </div>
           <div class="count">
             <?php
-              $sql2 = "SELECT donor_appointment_id FROM appointments_donor WHERE `state` = 'Approved' ORDER by appointment_date";
+              $sql2 = "SELECT `donor_appointment_id` FROM `appointments_donor` WHERE `consultant_id` = '$consultant_id' AND `state` = 'approved' ORDER BY `appointment_date`";
               $result2 = mysqli_query($connection, $sql2);
               $row2 = mysqli_num_rows($result2);
               echo '<h1>' .$row2. '</h1>';
@@ -89,7 +92,7 @@ if($_SESSION['userlevel']!=1)
           </div>
           <div class="count">
             <?php
-              $sql3 = "SELECT donor_appointment_id FROM appointments_donor WHERE `state` = 'Canceled' ORDER by appointment_date";
+              $sql3 = "SELECT `donor_appointment_id` FROM `appointments_donor` WHERE `consultant_id` = '$consultant_id' AND `state` = 'canceled' ORDER BY `appointment_date`";
               $result3 = mysqli_query($connection, $sql3);
               $row3 = mysqli_num_rows($result3);
               echo '<h1>' .$row3. '</h1>';
@@ -113,7 +116,7 @@ if($_SESSION['userlevel']!=1)
           <th>Action</th>
         </tr>
         <?php
-          $sql="SELECT * FROM appointments_donor LEFT JOIN donor ON appointments_donor.donor_id = donor.donor_id";
+          $sql="SELECT * FROM appointments_donor LEFT JOIN donor ON appointments_donor.donor_id = donor.donor_id  WHERE consultant_id = '$consultant_id'";
           $result=mysqli_query($connection,$sql);
           if($result){
             while($row=mysqli_fetch_assoc($result)){

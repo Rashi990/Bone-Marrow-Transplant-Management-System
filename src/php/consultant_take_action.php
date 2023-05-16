@@ -79,10 +79,10 @@ if(isset($_POST['submit'])){
     </div>
 
     <div class="board">
-      <div class="title">
-        <h2>Status Update Form</h2>
-      </div>
       <div class="form">
+        <div class="title">
+          <h2>Status Update Form</h2>
+        </div>
         <form class="" action="" method="post">
           <div class="row">
             <label class="lbl">Appointment ID: </label>
@@ -125,7 +125,6 @@ if(isset($_POST['submit'])){
             <textarea class="remark" name="remark" value="remark" placeholder="Give a remark"><?php echo $remark ?></textarea>
           </div>
           <div class="btns">
-            <button type="cancel" name="cancel">Cancel</button>
             <button type="submit" name="submit">Update</button>
           </div>
         </form>
