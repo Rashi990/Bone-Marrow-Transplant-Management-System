@@ -22,7 +22,7 @@
     echo "<td>".$tele."</td>";
     echo "<td>".$address."</td>";
 
-    echo "<td><a href='hospital_view_clinicians.php?viewid=".$id."' class='view'><abbr title='View'><span class='material-icons'>visibility</span></abbr></a></td>";
+    //echo "<td><a href='hospital_view_clinicians.php?viewid=".$id."' class='view'><abbr title='View'><span class='material-icons'>visibility</span></abbr></a></td>";
     echo "<td><a href='hospital_update_clinicians.php?updateid=".$id."' class='edit'><abbr title='Edit'><span class='material-icons'>edit_square</span></abbr></a></td>";
     echo "<td><a href='hospital_delete_clinicians.php?deleteid=".$clinician_id."' class='delete'><abbr title='Delete'><span class='material-icons'>delete</span></abbr></td>";
 

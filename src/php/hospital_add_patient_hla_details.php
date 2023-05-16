@@ -296,55 +296,55 @@ $patient_id=$_GET['add-id'];
 
     </fieldset>
 
-         <!---HLA-DRB3,4,5*-->
-         <h3>HLA-DRB3,4,5*</h3>
+         <!---HLA-DRB3*-->
+         <h3>HLA-DRB3*</h3>
          <fieldset>
         <div class="row">
             <div class="col-1">
-                <label>HLA-DRB3,4,5* Allele Group</label>
+                <label>HLA-DRB3* Allele Group</label>
             </div>
             <div class="col-2">
-                <input name="HLA-DRB3,4,5_allele_group" id="HLA-DRB3,4,5_allele_group" value="<?=(isset($hla_DRB3_ag) ? $hla_DRB3_ag : '')?>" type="text" onblur="required_name()" required >
+                <input name="HLA-DRB3_allele_group" id="HLA-DRB3_allele_group" value="<?=(isset($hla_DRB3_ag) ? $hla_DRB3_ag : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Allele Group" -->
             </div>
         </div>	
 
         <div class="row">
             <div class="col-1">
-                <label>HLA-DRB3,4,5* Proteins</label>
+                <label>HLA-DRB3* Proteins</label>
             </div>
             <div class="col-2">
-                <input name="HLA-DRB3,4,5_protein" id="HLA-DRB3,4,5_protein" value="<?=(isset($hla_DRB3_pro) ? $hla_DRB3_pro : '')?>" type="text" onblur="required_name()" required >
+                <input name="HLA-DRB3_protein" id="HLA-DRB3_protein" value="<?=(isset($hla_DRB3_pro) ? $hla_DRB3_pro : '')?>" type="text" onblur="required_name()" required >
                 <!--placeholder="Enter Number of Different Proteins" -->
             </div>
         </div>	
 
         <div class="row">
             <div class="col-1">
-                <label>HLA-DRB3,4,5* Exons</label>
+                <label>HLA-DRB3* Exons</label>
             </div>
             <div class="col-2">
-                <input name="HLA-DRB3,4,5_syn_exons" id="HLA-DRB3,4,5_syn_exons" value="<?=(isset($hla_DRB3_exo) ? $hla_DRB3_exo : '')?>" type="text" onblur="required_name()" required >
+                <input name="HLA-DRB3_syn_exons" id="HLA-DRB3_syn_exons" value="<?=(isset($hla_DRB3_exo) ? $hla_DRB3_exo : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
             </div>
         </div>	
 
         <div class="row">
             <div class="col-1">
-                <label>HLA-DRB3,4,5* Introns</label>
+                <label>HLA-DRB3* Introns</label>
             </div>
             <div class="col-2">
-                <input name="HLA-DRB3,4,5_syn_introns" id="HLA-DRB3,4,5_syn_introns" value="<?=(isset($hla_DRB3_intro) ? $hla_DRB3_intro : '')?>" type="text" onblur="required_name()" required >
+                <input name="HLA-DRB3_syn_introns" id="HLA-DRB3_syn_introns" value="<?=(isset($hla_DRB3_intro) ? $hla_DRB3_intro : '')?>" type="text" onblur="required_name()" required >
                  <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
             </div>
         </div>	
 
         <div class="row">
             <div class="col-1">
-                <label>HLA-DRB3,4,5* Level</label>
+                <label>HLA-DRB3* Level</label>
             </div>
             <div class="col-2">
-                <select name="HLA-DRB3,4,5_ex_level" id="HLA-DRB3,4,5_ex_level">
+                <select name="HLA-DRB3_ex_level" id="HLA-DRB3_ex_level">
                     <option value="N">N</option>
                     <option value="L">L</option>
                     <option value="S">S</option>
@@ -436,6 +436,7 @@ $patient_id=$_GET['add-id'];
 <?php
 
   if(isset($_POST['submit'])){
+    // exit('<pre>'.json_encode($_POST).'</pre>');
 
     $hla_A_ag=$_POST['HLA-A_allele_group'];
     $hla_A_pro=$_POST['HLA-A_protein'];
@@ -461,11 +462,11 @@ $patient_id=$_GET['add-id'];
     $hla_DRB1_intro=$_POST['HLA-DRB1_syn_introns'];
     $hla_DRB1_lvl=$_POST['HLA-DRB1_ex_level'];
 
-    $hla_DRB3_ag=$_POST['HLA-DRB3,4,5_allele_group'];
-    $hla_DRB3_pro=$_POST['HLA-DRB3,4,5_protein'];
-    $hla_DRB3_exo=$_POST['HLA-DRB3,4,5_syn_exons'];
-    $hla_DRB3_intro=$_POST['HLA-DRB3,4,5_syn_introns'];
-    $hla_DRB3_lvl=$_POST['HLA-DRB3,4,5_ex_level'];
+    $hla_DRB3_ag=$_POST['HLA-DRB3_allele_group'];
+    $hla_DRB3_pro=$_POST['HLA-DRB3_protein'];
+    $hla_DRB3_exo=$_POST['HLA-DRB3_syn_exons'];
+    $hla_DRB3_intro=$_POST['HLA-DRB3_syn_introns'];
+    $hla_DRB3_lvl=$_POST['HLA-DRB3_ex_level'];
 
     $hla_DQB1_ag=$_POST['HLA-DQB1_allele_group'];
     $hla_DQB1_pro=$_POST['HLA-DQB1_protein'];
@@ -473,27 +474,28 @@ $patient_id=$_GET['add-id'];
     $hla_DQB1_intro=$_POST['HLA-DQB1_syn_introns'];
     $hla_DQB1_lvl=$_POST['HLA-DQB1_ex_level'];
 
-    $sql="INSERT INTO `patient_hla_details`
+    $sql = "INSERT INTO `patient_hla_details`
         (
         `patient_id`,
         `HLA-A_allele_group`, `HLA-A_protein`, `HLA-A_syn_exons`, `HLA-A_syn_introns`, `HLA-A_ex_level`, 
         `HLA-B_allele_group`, `HLA-B_protein`, `HLA-B_syn_exons`, `HLA-B_syn_introns`, `HLA-B_ex_level`, 
         `HLA-C_allele_group`, `HLA-C_protein`, `HLA-C_syn_exons`, `HLA-C_syn_introns`, `HLA-C_ex_level`, 
         `HLA-DRB1_allele_group`, `HLA-DRB1_protein`, `HLA-DRB1_syn_exons`, `HLA-DRB1_syn_introns`, `HLA-DRB1_ex_level`, 
-        `HLA-DRB3,4,5_allele_group`, `HLA-DRB3,4,5_protein`, `HLA-DRB3,4,5_syn_exons`, `HLA-DRB3,4,5_syn_introns`, `HLA-DRB3,4,5_ex_level`, 
+        `HLA-DRB3_allele_group`, `HLA-DRB3_protein`, `HLA-DRB3_syn_exons`, `HLA-DRB3_syn_introns`, `HLA-DRB3_ex_level`, 
         `HLA-DQB1_allele_group`, `HLA-DQB1_protein`, `HLA-DQB1_syn_exons`, `HLA-DQB1_syn_introns`, `HLA-DQB1_ex_level`
         )
          VALUES 
         (
-            '$patient_id'
-          `$hla_A_ag`, `$hla_A_pro`, `$hla_A_exo`, `$hla_A_intro`, `$hla_A_lvl`,
-          `$hla_B_ag`, `$hla_B_pro`, `$hla_B_exo`, $hla_B_intro`, `$hla_B_lvl`,
-          `$hla_C_ag`, `$hla_C_pro`, `$hla_C_exo`,`$hla_C_intro`, `$hla_C_lvl`,
-          `$hla_DRB1_ag`, `$hla_DRB1_pro`, `$hla_DRB1_exo`, `$hla_DRB1_intro`, `$hla_DRB1_lvl`,
-          `$hla_DRB3_ag`, `$hla_DRB3_pro`, `$hla_DRB3_exo`, `$hla_DRB3_intro`, `$hla_DRB3_lvl`,
-          `$hla_DQB1_ag`, `$hla_DQB1_pro`, `$hla_DQB1_exo`, `$hla_DQB1_intro`, `$hla_DQB1_lvl`
+            '$patient_id',
+            '$hla_A_ag', '$hla_A_pro', '$hla_A_exo', '$hla_A_intro', '$hla_A_lvl',
+            '$hla_B_ag', '$hla_B_pro', '$hla_B_exo', '$hla_B_intro', '$hla_B_lvl',
+            '$hla_C_ag', '$hla_C_pro', '$hla_C_exo', '$hla_C_intro', '$hla_C_lvl',
+            '$hla_DRB1_ag', '$hla_DRB1_pro', '$hla_DRB1_exo', '$hla_DRB1_intro', '$hla_DRB1_lvl',
+            '$hla_DRB3_ag', '$hla_DRB3_pro', '$hla_DRB3_exo', '$hla_DRB3_intro', '$hla_DRB3_lvl',
+            '$hla_DQB1_ag', '$hla_DQB1_pro', '$hla_DQB1_exo', '$hla_DQB1_intro', '$hla_DQB1_lvl'
         ) 
-          ";
+";
+
 
     $result=mysqli_query($connection,$sql);
 

@@ -2,12 +2,13 @@
 
  $hospital_id=$_SESSION['hospital_id'];
 
- $sql="SELECT testing.*, donor.donor_id, donor.donor_name, donor.blood_group, hospital_stock.test_id 
-    FROM testing
-    INNER JOIN donor ON testing.donor_id = donor.donor_id
-    LEFT JOIN hospital_stock ON testing.test_id = hospital_stock.test_id
-    WHERE hospital_stock.test_id IS NULL AND testing.hospital_id = $hospital_id
-    ORDER BY testing.test_id;
+ $sql="SELECT testing.*, donor.donor_id, donor.donor_name, donor.blood_group 
+ FROM testing
+ INNER JOIN donor ON testing.donor_id = donor.donor_id
+ LEFT JOIN hospital_stock ON testing.test_id = hospital_stock.test_id
+ WHERE hospital_stock.test_id IS NULL AND testing.hospital_id = $hospital_id
+ ORDER BY testing.test_id;
+ 
  ";
  //echo $sql;
 

@@ -90,9 +90,9 @@ if($_SESSION['userlevel']!=0)
         <?php 
        if(isset($_GET['search'])){
         $search = mysqli_real_escape_string($connection, $_GET['search']);
-        $sql="SELECT * FROM `donor` WHERE `donor_name` LIKE '%$search%' OR `blood_group` LIKE '%$search%'";
+        $sql="SELECT * FROM `donor` WHERE `donor_name` LIKE '%$search%' OR `blood_group` LIKE '%$search%' AND approve=1";
     } else {
-        $sql="SELECT * FROM `donor`";
+        $sql="SELECT * FROM `donor` WHERE approve=1";
     }
         $result=mysqli_query($connection,$sql);
         if($result){

@@ -17,7 +17,7 @@ function loadDoc(tableName, elementId) {
 }
 
 loadDoc("match_requests","notify1");
-loadDoc("pending_donor","notify");
+loadDoc("donor","notify");
 
 // function loadDoc(donor) {
 //     setInterval(function() {
