@@ -4,164 +4,405 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-	<title>Add Hospital</title>
-    <link rel="stylesheet"  href="../../public/css/admin_add_testing_report.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/hospital_add_patient_hla_details.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@700;800&family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../../public/js/hospital_form_validation.js"></script>
+    <title>Add donor HLA Details</title>
 </head>
 <body>
-   
-<div class="container">
-    <form action="admin_add_testing_report.php" method="post">
     
-        <section class="copy">
-            <h2>Add HLA Report</h2>
-        </section> 
-      <div class="user-details">
-        <!-- <div class="input-box">
-            <label for="DID">Donor ID</label>
-                <input type="text" name="DID" placeholder="Enter Donor ID">
-        </div> -->
-            <div class="input-box">
-            <label for="HLA">HLA-A* Allele Group</label>
-                <input type="text" name="HLA" >
-        </div>
-        <div class="input-box">
-            <label for="HLAF">HLA-A* Proteins</label>
-                <input type="text" name="HLAF" >
-        </div>
-       <div class="input-box">
-        <label for="HLA2">HLA-A* Exons</label>
-                <input type="text" name="HLA2" >
-       </div>
-       <div class="input-box">
-        <label for="HLA3">HLA-A* Introns</label>
-                <input type="text" name="HLA3" >
-       </div>
-       <div class="input-box">
-        <label for="HLA4">HLA-A* Level</label>
-                <input type="text" name="HLA4">
-       </div>
-       <div class="input-box">
-        <label for="HLA5">HLA-B* Allele Group</label>
-                <input type="text" name="HLA5">
-       </div>
+    <div class="add_patient_hla">
+        <h1>Add donor HLA Details</h1>
+        <form action="../../src/php/admin_add_testing_report.php" method="post" class="add_patient_hla_form">
 
-       <div class="input-box">
-        <label for="text">HLA-B* Proteins</label>
-        <input type="text" name="HLAF" >
-       </div> 
-       
-       <div class="input-box">
-        <label for="text">HLA-B* Exons</label>
-        <input type="text" name="HLAF">
-       </div>
-      
-
-      <div class="input-box">
-        <label for="text">HLA-B* Introns</label>
-        <input type="text" name="HLAF">
-       </div>
-
-       <div class="input-box">
-        <label for="text">HLA-B* Level</label>
-        <input type="text" name="HLAF" >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-C* Allele Group</label>
-        <input type="text" name="HLAF" >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-C* Proteins</label>
-        <input type="text" name="HLAF" >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-C* Exons</label>
-        <input type="text" name="HLAF" >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-C* Introns</label>
-        <input type="text" name="HLAF" >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-C* Level</label>
-        <input type="text" name="HLAF" >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DRB1* Allele Group</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DRB1* Proteins</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DRB1* Exons</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DRB1* Introns</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DRB1* Level</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DRB3,4,5* Allele Group</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DRB3,4,5* Proteins</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DRB3,4,5* Exons</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DRB3,4,5* Introns</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DRB3,4,5* Level</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DQB1* Allele Group</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DQB1* Proteins</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DQB1* Exons</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DQB1* Introns</label>
-        <input type="text" name="HLAF"    >
-       </div>
-       <div class="input-box">
-        <label for="text">HLA-DQB1* Level</label>
-        <input type="text" name="HLAF"    >
-       </div>
-    </div>
-      <table>
-        <tr><td>
-            <button class="create-btn" name="submit" type="submit"> Create
-            </button>
-        </td>
-    <td>
-        <button class="cancle-btn" name="cancel" type="cancel"> Cancel
-        </button>
-    </td></tr>
-      </table>
-           
-     
-    </form> 
-         
+<!--HLA class 1-->
+        <!---HLA-A-->
+        <h3>HLA-A*</h3>
+        <fieldset>
+            <div class="row">
+                <div class="col-1">
+                    <label>HLA-A* Allele Group</label>
                 </div>
-	
+                <div class="col-2">
+
+                    <input name="HLA-A_allele_group" id="HLA-A_allele_group" value="<?=(isset($hla_A_ag) ? $hla_A_ag : '')?>" type="text" onblur="required_name()" required >
+                      <!--placeholder="Enter Allele Group"-->
+
+
+                </div>
+            </div>	
+
+            <div class="row">
+                <div class="col-1">
+                    <label>HLA-A* Proteins</label>
+                </div>
+                <div class="col-2">
+
+                    <input name="HLA-A_protein" id="HLA-A_protein" value="<?=(isset($hla_A_pro) ? $hla_A_pro : '')?>" type="text" onblur="required_name()" required >
+                     <!--placeholder="Enter Number of Different Proteins"-->
+
+                </div>
+            </div>	
+
+            <div class="row">
+                <div class="col-1">
+                    <label>HLA-A* Exons</label>
+                </div>
+                <div class="col-2">
+
+                    <input name="HLA-A_syn_exons" id="HLA-A_syn_exons" value="<?=(isset($hla_A_exo) ? $hla_A_exo : '')?>" type="text" onblur="required_name()" required >
+                    <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
+
+                </div>
+            </div>	
+
+            <div class="row">
+                <div class="col-1">
+                    <label>HLA-A* Exons</label>
+                </div>
+                <div class="col-2">
+
+                    <input name="HLA-A_syn_introns" id="HLA-A_syn_introns" value="<?=(isset($hla_A_intro) ? $hla_A_intro : '')?>" type="text" onblur="required_name()" required >
+                    <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
+
+                </div>
+            </div>	
+
+            <div class="row">
+                <div class="col-1">
+                    <label>HLA-A* Level</label>
+                </div>
+                <div class="col-2">
+                    <select name="HLA-A_ex_level" id="HLA-A_ex_level">
+                        <option value="N">N</option>
+                        <option value="L">L</option>
+                        <option value="S">S</option>
+                        <option value="A">A</option>
+                        <option value="Q">Q</option>
+                    </select>
+                </div>
+            </div>	
+
+        </fieldset>
+
+         <!---HLA-B-->
+        <h3>HLA-B*</h3>
+        <fieldset>
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-B* Allele Group</label>
+            </div>
+            <div class="col-2">
+
+                <input name="HLA-B_allele_group" id="HLA-B_allele_group" value="<?=(isset($hla_B_ag) ? $hla_B_ag : '')?>" type="text" onblur="required_name()" required >
+                 <!-- placeholder="Enter Allele Group" -->
+
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-B* Proteins</label>
+            </div>
+            <div class="col-2">
+
+                <input name="HLA-B_protein" id="HLA-B_protein" value="<?=(isset($hla_B_pro) ? $hla_B_pro : '')?>" type="text" onblur="required_name()" required >
+                   <!-- placeholder="Enter Number of Different Proteins"-->
+
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-B* Exons</label>
+            </div>
+            <div class="col-2">
+
+                <input name="HLA-B_syn_exons" id="HLA-B_syn_exons" value="<?=(isset($hla_B_exo) ? $hla_B_exo : '')?>" type="text" onblur="required_name()" required >
+                 <!-- placeholder="Enter Number of Synonymous mutations in Exons"-->
+
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-B* Introns</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-B_syn_introns" id="HLA-B_syn_introns" value="<?=(isset($hla_B_intro) ? $hla_B_intro : '')?>" type="text" onblur="required_name()" required >
+                 <!-- placeholder="Enter Number of Synonymous mutations in Introns"-->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-B* Level</label>
+            </div>
+            <div class="col-2">
+                <select name="HLA-B_ex_level" id="HLA-B_ex_level">
+                    <option value="N">N</option>
+                    <option value="L">L</option>
+                    <option value="S">S</option>
+                    <option value="A">A</option>
+                    <option value="Q">Q</option>
+                </select>
+            </div>
+        </div>	
+
+    </fieldset>
+
+           <!---HLA-C-->
+           <h3>HLA-C*</h3>
+           <fieldset>  
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-C* Allele Group</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-C_allele_group" id="HLA-C_allele_group" value="<?=(isset($hla_C_ag) ? $hla_C_ag : '')?>" type="text" onblur="required_name()" required >
+                <!-- placeholder="Enter Allele Group" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-C* Proteins</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-C_protein" id="HLA-C_protein" value="<?=(isset($hla_C_pro) ? $hla_C_pro : '')?>" type="text" onblur="required_name()" required >
+                <!--placeholder="Enter Number of Different Proteins" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-C* Exons</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-C_syn_exons" id="HLA-C_syn_exons" value="<?=(isset($hla_C_exo) ? $hla_C_exo : '')?>" type="text" onblur="required_name()" required >
+                <!-- placeholder="Enter Number of Synonymous mutations in Exons"-->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-C* Introns</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-C_syn_introns" id="HLA-C_syn_introns" value="<?=(isset($hla_C_intro) ? $hla_C_intro : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-C* Level</label>
+            </div>
+            <div class="col-2">
+                <select name="HLA-C_ex_level" id="HLA-C_ex_level">
+                    <option value="N">N</option>
+                    <option value="L">L</option>
+                    <option value="S">S</option>
+                    <option value="A">A</option>
+                    <option value="Q">Q</option>
+                </select>
+            </div>
+        </div>	
+
+    </fieldset>
+
+    <!--HLA Class 2-->
+           <!---HLA-DRB1-->
+           <h3>HLA-DRB1*</h3>
+           <fieldset>
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB1* Allele Group</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DRB1_allele_group" id="HLA-DRB1_allele_group" value="<?=(isset($hla_DRB1_ag) ? $hla_DRB1_ag : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Allele Group" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB1* Proteins</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DRB1_protein" id="HLA-DRB1_protein" value="<?=(isset($hla_DRB1_pro) ? $hla_DRB1_pro : '')?>" type="text" onblur="required_name()" required >
+                  <!--placeholder="Enter Number of Different Proteins" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB1* Exons</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DRB1_syn_exons" id="HLA-DRB1_syn_exons" value="<?=(isset($hla_DRB1_exo) ? $hla_DRB1_exo : '')?>" type="text" onblur="required_name()" required >
+                <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB1* Introns</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DRB1_syn_introns" id="HLA-DRB1_syn_introns" value="<?=(isset($hla_DRB1_intro) ? $hla_DRB1_intro : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB1* Level</label>
+            </div>
+            <div class="col-2">
+                <select name="HLA-DRB1_ex_level" id="HLA-DRB1_ex_level">
+                    <option value="N">N</option>
+                    <option value="L">L</option>
+                    <option value="S">S</option>
+                    <option value="A">A</option>
+                    <option value="Q">Q</option>
+                </select>
+            </div>
+        </div>	
+
+    </fieldset>
+
+         
+         <h3>HLA-DRB3*</h3>
+         <fieldset>
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB3* Allele Group</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DRB3_allele_group" id="HLA-DRB3_allele_group" value="<?=(isset($hla_DRB3_ag) ? $hla_DRB3_ag : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Allele Group" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB3* Proteins</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DRB3_protein" id="HLA-DRB3_protein" value="<?=(isset($hla_DRB3_pro) ? $hla_DRB3_pro : '')?>" type="text" onblur="required_name()" required >
+                <!--placeholder="Enter Number of Different Proteins" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB3* Exons</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DRB3_syn_exons" id="HLA-DRB3_syn_exons" value="<?=(isset($hla_DRB3_exo) ? $hla_DRB3_exo : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB3* Introns</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DRB3_syn_introns" id="HLA-DRB3_syn_introns" value="<?=(isset($hla_DRB3_intro) ? $hla_DRB3_intro : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DRB3* Level</label>
+            </div>
+            <div class="col-2">
+                <select name="HLA-DRB3_ex_level" id="HLA-DRB3_ex_level">
+                    <option value="N">N</option>
+                    <option value="L">L</option>
+                    <option value="S">S</option>
+                    <option value="A">A</option>
+                    <option value="Q">Q</option>
+                </select>
+            </div>
+        </div>	
+
+    </fieldset>
+
+         <!---HLA-DQB1*-->
+         <h3>HLA-DQB1*</h3>
+         <fieldset>
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DQB1* Allele Group</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DQB1_allele_group" id="HLA-DQB1_allele_group" value="<?=(isset($hla_DQB1_ag) ? $hla_DQB1_ag : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Allele Group" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DQB1* Proteins</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DQB1_protein" id="HLA-DQB1_protein" value="<?=(isset($hla_DQB1_pro) ? $hla_DQB1_pro : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Different Proteins" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DQB1* Exons</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DQB1_syn_exons" id="HLA-DQB1_syn_exons" value="<?=(isset($hla_DQB1_exo) ? $hla_DQB1_exo : '')?>" type="text" onblur="required_name()" required >
+                  <!--placeholder="Enter Number of Synonymous mutations in Exons" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DQB1* Introns</label>
+            </div>
+            <div class="col-2">
+                <input name="HLA-DQB1_syn_introns" id="HLA-DQB1_syn_introns" value="<?=(isset($hla_DQB1_intro) ? $hla_DQB1_intro : '')?>" type="text" onblur="required_name()" required >
+                 <!--placeholder="Enter Number of Synonymous mutations in Introns" -->
+            </div>
+        </div>	
+
+        <div class="row">
+            <div class="col-1">
+                <label>HLA-DQB1* Level</label>
+            </div>
+            <div class="col-2">
+                <select name="HLA-DQB1_ex_level" id="HLA-DQB1_ex_level">
+                    <option value="N">N</option>
+                    <option value="L">L</option>
+                    <option value="S">S</option>
+                    <option value="A">A</option>
+                    <option value="Q">Q</option>
+                </select>
+            </div>
+        </div>	
+
+    </fieldset>
+
+         
+            <div class="row">
+                <label>&nbsp;</label>
+                <a class="back_btn" href="../../src/php/hospital_add_patients.php">Back</a>
+                <input type="submit" name="submit" value="submit" class="btn">
+            </div>
+         
+        </form>
+
+    </div>
+
 </body>
 </html>

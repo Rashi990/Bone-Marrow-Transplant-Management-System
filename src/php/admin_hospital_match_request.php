@@ -71,10 +71,10 @@ if($_SESSION['userlevel']!=0)
                     </tr>
 
                     <?php 
-                        $sql="SELECT patient.`patient_id`, match_requests.`patient_status`, hospital.`hospital_name`, patient.`patient_name`,match_requests.`hospital_id`
+                        $sql="SELECT patient.`patient_id`, match_requests.`status`, hospital.`hospital_name`, patient.`patient_name`,match_requests.`hospital_id`
                         FROM match_requests
-                        LEFT JOIN hospital ON match_requests.`hospital_id` = hospital.`hospital_id`
-                        LEFT JOIN patient ON match_requests.`patient_id` = patient.`patient_id`";
+                        INNER JOIN hospital ON match_requests.`hospital_id` = hospital.`hospital_id`
+                        INNER JOIN patient ON match_requests.`patient_id` = patient.`patient_id`";
 
     $result=mysqli_query($connection,$sql);
     if($result){
@@ -83,11 +83,10 @@ if($_SESSION['userlevel']!=0)
             $id=$row['patient_id'];
             $hname=$row['hospital_name'];
             $pname=$row['patient_name'];
-            $status=$row['patient_status'];
+            $status=$row['status'];
          echo '<tr>
          <td >'.$hname. '</td>
          <td>'.$pname. ' </td> 
-         <td>'.$status. '</td>
          <td><a href="../../src/php/admin_select_donor.php?id='.$id.'&hid='.$hid.'" class="btn">Select Donor</a></td>
 
         </tr>';

@@ -8,27 +8,28 @@ if($_SESSION['userlevel']!=0)
  ?>
 <?php
 
-if(isset($_GET['submit']) )
+if (isset($_GET['id']) ) 
 {
+  $id = $_GET['id'];
 
-//   $id=$_GET['id'];
-//   echo $id;
-  // function validate($data)
-  // {
-  //   $data = trim($data);
-  //   $data = stripslashes($data);
-  //   $data = htmlspecialchars($data);
-  //   return $data;
-  // }
 
-$sql2="INSERT INTO `donor`(`donor_name`,`telephone_no`,`email`,`address`,`date_of dirth`,`gender`,`id_number`,`marital_state`,`image`,`blood_group`,`user_name`,`password`) SELECT CONCAT_WS (' ',`first_name`,`second_name`) AS fullname,`telephone_no`,`email`,`address`,`date_of_birth`,`gender`,`id_number`,`marital_state`,`image`,`blood_group`,`user_name`,`password` FROM `pending_donor` WHERE `pending_donor_id`=3";
-  $result = mysqli_query($connection,$sql2);
-   if($result) {
-    echo "<script> alert('Registration is Failled') </script>";
-  }
-  else{
-    die(mysqli_error($connection));
-  } 
+  $sql="UPDATE donor SET approve=2 WHERE donor_id=$id";
+  $result = mysqli_query($connection,$sql);
+  header("Location: admin_view_donor.php");
 }
-
 ?>
+
+<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <link rel="stylesheet" type="text/css" href="../../public/css/admin_accept_pending_donor.css">
+                    <title>SLBTMS</title>
+                </head>
+                <body>
+                    
+                </body>
+                </html>
+                <?php include('../../public/html/admin_accept_pending_donor.html'); ?>
