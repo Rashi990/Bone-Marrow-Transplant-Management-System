@@ -6,6 +6,27 @@ session_start();
 
 $patient_id=$_GET['update-id'];
 
+$sql = "SELECT * FROM patient WHERE patient_id=$patient_id";
+$result = mysqli_query($connection, $sql);
+if ($result) {
+  while ($rows = mysqli_fetch_assoc($result)) {
+    $patient_id = $rows['patient_id'];
+    $patient_name = $rows['patient_name'];
+    $date_of_birth=$rows['date_of_birth'];
+    $marital_state=$rows['marital_state'];
+    $telephone_no=$rows['telephone_no'];
+  }
+}
+
+$sql2 = "SELECT * FROM patient_clinical_reports INNER JOIN patient_medical_reports ON patient_clinical_reports.patient_id=patient_medical_reports.patient_id";
+$result2 = mysqli_query($connection, $sql);
+if ($result2) {
+  while ($rows = mysqli_fetch_assoc($result)) {
+    $patient_cr_id = $rows['patient_cr_id'];
+    $patient_cr_id = $rows['patient__id'];
+  }
+}
+
 if($_SESSION['userlevel']!=1)
 {
     header("Location:consultant_login.php");
@@ -14,23 +35,25 @@ if($_SESSION['userlevel']!=1)
 include '../../config/connection.php';
 
 if(isset($_POST['submit'])){
-  $patient_id=$_POST['patient_id'];
-  $date=$_POST['date'];
-  $drug_name=$_POST['drug_name'];
+  $blood_pressure=$_POST['blood_pressure'];
+  $pulse_rate=$_POST['pulse_rate'];
+  $weight=$_POST['weight'];
+  $allergies=$_POST['allergies'];
+  $disabilities=$_POST['disabilities'];
+  $diagnosed_with=$_POST['diagnosed_with'];
+  $drugs=$_POST['drugs'];
+  $unit=$_POST['unit'];
   $dosage=$_POST['dosage'];
-  $route=$_POST['route'];
-  $frequency=$_POST['frequency'];
 
-  if (empty($patient_id)||empty($date)||empty($drug_name)||empty($dosage)||empty($route)||empty($frequency))
+  if (empty($blood_pressure)||empty($pulse_rate)||empty($weight)||empty($allergies)||empty($disabilities)||empty($diagnosed_with)||empty($drugs)||empty($unit)||empty($dosage))
 {
   header("Location: consultant_prescription_form.php?error=All feilds are required!&&update-id=$patient_id");
   exit();
 }
-
-    $sql="INSERT INTO patient_clinical_reports(patient_id,date,drug_name,dosage,route,frequency) VALUES($patient_id,'$date','$drug_name','$dosage','$route','$frequency')";
+    $sql="INSERT INTO patient_prescriptions(patient_idpatient_cr_id,patient_mr_id,blood_pressure,pulse_rate,weight,allergies,disabilities) VALUES($patient_id,$patient_cr_id,$patient_mr_id,'$blood_pressure','$pulse_rate','$weight','$allergies','$disabilities')";
     $result=mysqli_query($connection,$sql);
     if($result){
-        header('location:consultant_prescriptions.php');
+      header('location:consultant_prescriptions.php?report-id>=$patient_id');
     }
     else{
         die(mysqli_error($connection));
@@ -82,18 +105,38 @@ if(isset($_POST['submit'])){
     </div>
     <div class="form">
       <form class="" action="" method="post">
-        <div class="details">
-          <div class="d">
-            <label class="lbl">Patient ID</label>
-            <input type="text" name="patient_id" placeholder="Enter Patient ID" value="<?php echo $patient_id ?>">
-          </div>
+        <div class="title">
           <div class="title">
             <p>Clinical Form</p>
           </div>
+        </div>
+        <div class="topic">
+          <h4>Patint Details</h4>
+        </div>
+        <div class="details">
+          <div class="d">
+            <label class="lbl">Patient Name</label>
+            <input type="text" name="patient_name" value="<?php echo $patient_name ?>">
+          </div>
+          <div class="d">
+            <label class="lbl">Date of Birth ID</label>
+            <input type="text" name="date_of_birth" value="<?php echo $date_of_birth ?>">
+          </div>
+          <div class="d">
+            <label class="lbl">Marital State ID</label>
+            <input type="text" name="marital_state" value="<?php echo $marital_state ?>">
+          </div>
+          <div class="d">
+            <label class="lbl">Telephone Number</label>
+            <input type="text" name="telephone_no" value="<?php echo $telephone_no ?>">
+          </div>
           <div class="d">
             <label class="lbl">Date</label>
-            <input type="date" name="date" placeholder="Choose Date" value="<?php echo $date ?>">
+            <input type="text" name="date" value="<?php echo date('y-m-d') ?>">
           </div>
+        </div>
+        <div class="topic">
+          <h4>Measurements</h4>
         </div>
         <div class="clinical">
           <div class="d">
@@ -104,20 +147,35 @@ if(isset($_POST['submit'])){
             <label class="lbl">Pulse Rate</label>
             <input type="text" name="pulse_rate" placeholder="Enter Pulse Rate">
           </div>
+          <div class="d">
+            <label class="lbl">Weight</label>
+            <input type="text" name="weight" placeholder="Enter Weight">
+          </div>
+          <div class="d">
+            <label class="lbl">Allergies</label>
+            <input type="text" name="allergies" placeholder="Enter Allergies">
+          </div>
+          <div class="d">
+            <label class="lbl">Disabilities</label>
+            <input type="text" name="disabilities" placeholder="Enter Disabilities">
+          </div>
+        </div>
+        <div class="topic">
+          <h4>Medicines</h4>
         </div>
         <div class="ad">
           <div class="drugs">
             <div class="ds">
               <label class="lbl">Diagnosed With</label>
-              <select class="select" name="frequency" placeholder="Choose Frequency">
-                <option selected="selected" disabled="disabled">Choose frequency</option>
+              <select class="select" name="diagnosed_with" placeholder="Choose Diagnosis">
+                <option selected="selected" disabled="disabled">Choose Diagnosis</option>
                 <option>Gastric</option>
                 <option>Fever</option>
               </select>
             </div>
             <div class="ds">
               <label class="lbl">Drug Name</label>
-              <select class="select" name="drug_name" placeholder="Choose Drug Name">
+              <select class="select" name="drugs" placeholder="Choose Drug Name">
                 <option selected="selected" disabled="disabled">Choose drug name</option>
                 <option>Amino Acids</option>
                 <option>Amoxapine</option>
@@ -243,20 +301,6 @@ if(isset($_POST['submit'])){
         let row_item = $(this).parent().parent();
         $(row_item).remove();
       });
-
-      /*$(".form").submit(function(e){
-        e.preventDefault();
-        $("#add_btn").val('Adding...');
-        $.ajax({
-          url: 'action.php',
-          method: 'post',
-          data: $(this).serialize(),
-          success:function(response){
-            console.log(response);
-          }
-        });
-      });*/
-
     });
   </script>
 

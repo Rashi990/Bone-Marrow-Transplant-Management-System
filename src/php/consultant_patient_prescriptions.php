@@ -86,9 +86,6 @@ if ($result3) {
 
   <div class="board">
     <div class="">
-
-    </div>
-    <div class="">
       <div class="topic">
         <h2>Patient ID: <?php echo $patient_id ?></h2>
       </div>

@@ -7,7 +7,10 @@ if($_SESSION['userlevel']!=1)
 {
     header("Location:home.php");
 }
- ?>
+
+$consultant_id=$_SESSION['uid'];
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +58,7 @@ if($_SESSION['userlevel']!=1)
           <th>Action</th>
         </tr>
         <?php
-          $sql="SELECT * FROM appointments_donor LEFT JOIN donor ON appointments_donor.donor_id = donor.donor_id WHERE state = 'Not Updated Yet'";
+          $sql="SELECT * FROM appointments_donor LEFT JOIN donor ON appointments_donor.donor_id = donor.donor_id WHERE consultant_id = '$consultant_id' AND state = 'Not Updated Yet'";
           $result=mysqli_query($connection,$sql);
           if($result){
             while($row=mysqli_fetch_assoc($result)){

@@ -88,7 +88,7 @@ if (isset($_GET['report-id'])) {
           <p class="date"><?php echo $date; ?></p>
         </div>
         <div class="row1">
-          <h1>Patient Medical Records</h1>
+          <h1>Patient <?php echo $patient_id; ?> Medical Records</h1>
         </div>
         <div class="row2">
           <div class="col">
@@ -99,37 +99,67 @@ if (isset($_GET['report-id'])) {
             <h4>Date of Birth</h4>
             <p><?php echo $date_of_birth; ?></p>
           </div>
-        </div>
-        <div class="row2">
           <div class="col">
             <h4>Telephone Number</h4>
             <p><?php echo $telephone_no; ?></p>
           </div>
           <div class="col">
-            <h4>Weight</h4>
-            <p><?php echo $weight; ?></p>
+            <h4>Gender</h4>
+            <p><?php echo $gender; ?></p>
           </div>
         </div>
-        <div class="">
-
+        <div class="row2">
+          <div class="col">
+            <h4>Blood Group</h4>
+            <p><?php echo $blood_group; ?></p>
+          </div>
+          <div class="col">
+            <h4>Blood Pressure</h4>
+            <p><?php echo $blood_pressure; ?></p>
+          </div>
+          <div class="col">
+            <h4>Pulse Rate</h4>
+            <p><?php echo $pulse_rate; ?></p>
+          </div>
+          <div class="col">
+            <h4>Allergies</h4>
+            <p><?php echo $allergies; ?></p>
+          </div>
         </div>
-        <p><?php echo $blood_pressure; ?></p>
-        <p><?php echo $patient_id; ?></p>
+        <div class="row2">
+          <div class="col">
+            <h4>Diagnosed With</h4>
+            <p><?php echo $diagnosed_with; ?></p>
+          </div>
+          <div class="col">
+            <h4>Drugs</h4>
+            <p><?php echo $drugs; ?></p>
+          </div>
+          <div class="col">
+            <h4>Unit</h4>
+            <p><?php echo $unit; ?></p>
+          </div>
+          <div class="col">
+            <h4>Dosage</h4>
+            <p><?php echo $dosage; ?></p>
+          </div>
+        </div>
+
         <a href="javascript:generatePDF()" id="downloadButton">Click to Download</a>
         <script type="text/javascript">
           async function generatePDF() {
-            document.getElementById("downloadButton").innerHTML = "Currently downloading, please wait";
+            document.getElementById("downloadButton").innerHTML = "";
             //Get the Element to be Downloaded
             var downloading = document.getElementById("whatToPrint");
             //Create a jason.pdf ('orientation', 'dimention', 'pdf size')
-            var doc = new jsPDF('1', 'pt', 'a4');
+            var doc = new jsPDF('1', 'pt');
             await html2canvas(downloading, {
               //allowTaint: true,
               //useCORS: true,
               width: 1000
             }).then((canvas)=>{
               //Get a canvas to convert to PNG
-              doc.addImage(canvas.toDataURL("image/png"), 'PNG', 25, 5, 500, 1000);
+              doc.addImage(canvas.toDataURL("image/png"), 'PNG', 25, 5, 500, 300);
             })
             doc.save("Document.pdf");
             //downloading Code

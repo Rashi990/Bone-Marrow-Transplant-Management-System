@@ -37,62 +37,6 @@ if($_SESSION['userlevel']=1)
     </div>
 
     <div class="board">
-      <div class="tabs">
-        <div class="box">
-          <a href="#AMLA">Acute Myeloid Leukemia (AML) - Adult</a>
-        </div>
-        <div class="box">
-          <a href="#AMLP">Acute Myeloid Leukemia (AML) - Pediatric</a>
-        </div>
-        <div class="box">
-          <a href="#ALLA">Acute Lymphoblastic Leukemia (ALL) - Adult</a>
-        </div>
-        <div class="box">
-          <a href="#ALLP">Acute Lymphoblastic Leukemia (ALL) - Pediatric</a>
-        </div>
-        <div class="box">
-          <a href="#MDS">Myelodysplastic Syndromes (MDS)</a>
-        </div>
-        <div class="box">
-          <a href="#CML">Chronic Myeloid Leukemia (CML)</a>
-        </div>
-        <div class="box">
-          <a href="#CLL">Chronic Lymphocytic Leukemia (CLL)</a>
-        </div>
-        <div class="box">
-          <a href="#NHL">Non-Hodgkin Lymphoma (NHL)</a>
-        </div>
-        <div class="box">
-          <a href="#HL">Hodgkin Lymphoma (HL)</a>
-        </div>
-        <div class="box">
-          <a href="#MM">Multiple Myeloma (MM)</a>
-        </div>
-        <div class="box">
-          <a href="#SPAMF">Severe Aplastic Anemia & Marrow Failure</a>
-        </div>
-        <div class="box">
-          <a href="#SCD">Sickle Cell Disease (SCD)</a>
-        </div>
-        <div class="box">
-          <a href="#IDD">Immune Deficiency Diseases (IDD)</a>
-        </div>
-        <div class="box">
-          <a href="#IMD">Inherited Metabolic Disorders (IMD)</a>
-        </div>
-        <div class="box">
-          <a href="#Thalassemia">Thalassemia</a>
-        </div>
-        <div class="box">
-          <a href="#MS">Multiple Sclerosis</a>
-        </div>
-        <div class="box">
-          <a href="#SS">Systemic Sclerosis</a>
-        </div>
-        <div class="box">
-          <a href="#OD">Other Diseases</a>
-        </div>
-      </div>
       <div class="descript">
         <section class="main_dec">
           <h1>Disease-Specific HCT Indications and Outcomes Data</h1>
@@ -113,31 +57,31 @@ if($_SESSION['userlevel']=1)
 
           <h4>Leukemia and Myelodysplasia</h4>
           <ul>
-            <li><a class="ul_dis" href="consultant_disease.php#AMLA">Acute Myeloid Leukemia (AML) - Adult</a></li>
-            <li><a class="ul_dis" href="#AMLP">Acute Myeloid Leukemia (AML) - Pediatric</a></li>
-            <li><a class="ul_dis" href="#ALLA">Acute Lymphoblastic Leukemia (ALL) - Adult</a></li>
-            <li><a class="ul_dis" href="#ALLP">Acute Lymphoblastic Leukemia (ALL) - Pediatric</a></li>
-            <li><a class="ul_dis" href="#MDS">Myelodysplastic Syndromes (MDS)</a></li>
-            <li><a class="ul_dis" href="#CML">Chronic Myeloid Leukemia (CML)</a></li>
-            <li><a class="ul_dis" href="#CLL">Chronic Lymphocytic Leukemia (CLL)</a></li>
+            <li>Acute Myeloid Leukemia (AML) - Adult</li>
+            <li>Acute Myeloid Leukemia (AML) - Pediatric</li>
+            <li>Acute Lymphoblastic Leukemia (ALL) - Adult</li>
+            <li>Acute Lymphoblastic Leukemia (ALL) - Pediatric</li>
+            <li>Myelodysplastic Syndromes (MDS)</li>
+            <li>Chronic Myeloid Leukemia (CML)</li>
+            <li>Chronic Lymphocytic Leukemia (CLL)</li>
           </ul>
 
           <h4>Lymphomas and Multiple Myeloma</h4>
           <ul>
-            <li><a class="ul_dis" href="#NHL">Non-Hodgkin Lymphoma (NHL)</a></li>
-            <li><a class="ul_dis" href="#HL">Hodgkin Lymphoma (HL)</a></li>
-            <li><a class="ul_dis" href="#MM">Multiple Myeloma (MM)</a> and Other Plasma Cell Disorders</li>
+            <li>Non-Hodgkin Lymphoma (NHL)</li>
+            <li>Hodgkin Lymphoma (HL)</li>
+            <li>Multiple Myeloma (MM) and Other Plasma Cell Disorders</li>
           </ul>
 
           <h4>Non-Malignant Disorders and Other Diseases</h4>
           <ul>
-            <li><a class="ul_dis" href="#SPAMF">Severe Aplastic Anemia (SAA) and Other Marrow Failure Syndromes</a></li>
-            <li><a class="ul_dis" href="#SCD">Sickle Cell Disease (SCD)</a></li>
-            <li><a class="ul_dis" href="#Thalassemia">Thalassemia</a></li>
-            <li><a class="ul_dis" href="#IDD">Immune Deficiency Diseases</a></li>
-            <li><a class="ul_dis" href="#IMD">Inherited Metabolic Disorders</a></li>
-            <li><a class="ul_dis" href="#MPN">Myeloproliferative Neoplasms (MPN)</a></li>
-            <li><a class="ul_dis" href="#OD">OtherDiseases</a></li>
+            <li>Severe Aplastic Anemia (SAA) and Other Marrow Failure Syndromes</li>
+            <li>Sickle Cell Disease (SCD)</li>
+            <li>Thalassemia</li>
+            <li>Immune Deficiency Diseases</li>
+            <li>Inherited Metabolic Disorders</li>
+            <li>Myeloproliferative Neoplasms (MPN)</li>
+            <li>OtherDiseases</li>
           </ul>
 
           <h3>Clinical Trials Search and Support</h3>

@@ -85,6 +85,7 @@ body{
 }
 
 .board{
+  display: flex;
     position: absolute;
     margin-left: 240px;
     margin-top: 20px;
@@ -93,6 +94,8 @@ body{
     background-color: #F1F5F9;
     border-radius: 20px;
     padding: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .counts1{
@@ -158,4 +161,58 @@ a.butt {
 
     border: 1px solid #009879;
     border-radius: 10px;
+}
+
+.pd{
+  display: flex;
+  background: #d7f0ed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.pd h3{
+  text-align: center;
+  font-size: 35px;
+  color: #006296;
+}
+
+.row{
+  display: flex;
+}
+
+.col{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  height: 30px;
+  width: 250px;
+  padding: 0 5px;
+}
+
+.col p{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn button{
+  margin: 0 0 25px 0;
+  color: white;
+  background: #308C83;
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn button:hover{
+  color: #308C83;
+  background: white;
+}
+
+.details{
+  margin-bottom: 25px;
 }

@@ -101,9 +101,21 @@ body{
 #whatToPrint{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
 }
 
 p.date{
   text-align: right;
+}
+
+.row2{
+  display: flex;
+  justify-content: space-between;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
 }

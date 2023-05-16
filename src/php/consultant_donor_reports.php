@@ -63,10 +63,11 @@ if (!(isset($_SESSION['username'])))
             <tr>
               <th class="th1">Donor ID</th>
               <th class="th2">Donor Name</th>
-              <th class="th2">Date of Birth</th>
+              <th class="th1">Date of Birth</th>
               <th class="th1">Blood Group</th>
-              <th class="th2">email</th>
-              <th class="th1"">Action</th>
+              <th class="th2">Telephone Number</th>
+              <th class="th2">Email</th>
+              <th class="th1">Action</th>
             </tr>
             <?php
                 $sql="SELECT * FROM donor";
@@ -77,15 +78,17 @@ if (!(isset($_SESSION['username'])))
                         $donor_name=$row['donor_name'];
                         $date_of_birth=$row['date_of_birth'];
                         $blood_group=$row['blood_group'];
+                        $telephone_no=$row['telephone_no'];
                         $email=$row['email'];
                         echo '
                           <td>'.$donor_id.'</td>
                           <td>'.$donor_name.'</td>
                           <td>'.$date_of_birth.'</td>
                           <td>'.$blood_group.'</td>
+                          <td>'.$telephone_no.'</td>
                           <td>'.$email.'</td>
                           <td>
-                            <a class="report" href="consultant_reports_view.php?report-id='.$donor_id.'" class="text-light">
+                            <a class="report" href="consultant_donor_reports_view.php?report-id='.$donor_id.'" class="text-light">
                               <abbr title="Report"><span class="material-icons">description</span></abbr>
                             </a>
                           </td>
