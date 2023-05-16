@@ -14,10 +14,9 @@ if( $result){
     $patient_cr_id=$rows['patient_cr_id'];
     $patient_id=$rows['patient_id'];
     $date=$rows['date'];
-    $drug_name=$rows['drug_name'];
-    $dosage=$rows['dosage'];
-    $route=$rows['route'];
-    $frequency=$rows['frequency'];
+    $blood_pressure=$rows['blood_pressure'];
+    $pulse_rate=$rows['pulse_rate'];
+    $weight=$rows['weight'];
   }
 }
 $sql2="SELECT * FROM patient WHERE patient_id=$patient_id";
@@ -31,10 +30,21 @@ if( $result2){
     $hospital_id=$rows['hospital_id'];
   }
 }
-$sql3="SELECT * FROM hospital WHERE hospital_id=$hospital_id";
+$sql3="SELECT * FROM patient_medical_reports WHERE patient_cr_id=$patient_cr_id";
 $result3=mysqli_query($connection,$sql3);
 if( $result3){
   while($rows = mysqli_fetch_assoc($result3)){
+    $patient_cr_id=$rows['patient_cr_id'];
+    $patient_mr_id=$rows['patient_mr_id'];
+    $diagnosed_with=$rows['diagnosed_with'];
+    $drugs=$rows['drugs'];
+    $dosage=$rows['dosage'];
+  }
+}
+$sql4="SELECT * FROM hospital WHERE hospital_id=$hospital_id";
+$result4=mysqli_query($connection,$sql4);
+if( $result3){
+  while($rows = mysqli_fetch_assoc($result4 )){
     $hospital_id=$rows['hospital_id'];
     $hospital_name=$rows['hospital_name'];
   }
@@ -103,16 +113,13 @@ else{
           </div>
           <div class="det">
             <div class="dd">
-              Drug Name: <?php echo $drug_name ?>
+              Diagnosed With: <?php $diagnosed_with ?>
+            </div>
+            <div class="dd">
+              Drugs: <?php echo $drugs ?>
             </div>
             <div class="dd">
               Dosage: <?php echo $dosage ?>
-            </div>
-            <div class="dd">
-              Route: <?php echo $route ?>
-            </div>
-            <div class="dd">
-              Frequency: <?php echo $frequency ?>
             </div>
           </div>
         </div>
