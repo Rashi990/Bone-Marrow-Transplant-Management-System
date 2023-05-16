@@ -657,11 +657,7 @@ CREATE TABLE `patient_hla_details` (
   `HLA-DRB1_syn_exons` varchar(11) NOT NULL,
   `HLA-DRB1_syn_introns` varchar(11) NOT NULL,
   `HLA-DRB1_ex_level` varchar(11) NOT NULL,
-  `HLA-DRB3,4,5_allele_group` varchar(11) NOT NULL,
-  `HLA-DRB3,4,5_protein` varchar(11) NOT NULL,
-  `HLA-DRB3,4,5_syn_exons` varchar(11) NOT NULL,
-  `HLA-DRB3,4,5_syn_introns` varchar(11) NOT NULL,
-  `HLA-DRB3,4,5_ex_level` varchar(11) NOT NULL,
+  `HLA-DRB3_allele_group` varchar(11) NOT NULL,_protein` varchar(11) NOT NULL,_syn_exons` varchar(11) NOT NULL,_syn_introns` varchar(11) NOT NULL,_ex_level` varchar(11) NOT NULL,
   `HLA-DQB1_allele_group` varchar(11) NOT NULL,
   `HLA-DQB1_protein` varchar(11) NOT NULL,
   `HLA-DQB1_syn_exons` varchar(11) NOT NULL,
@@ -674,7 +670,7 @@ CREATE TABLE `patient_hla_details` (
 -- Dumping data for table `patient_hla_details`
 --
 
-INSERT INTO `patient_hla_details` (`ph_id`, `patient_id`, `HLA-A_allele_group`, `HLA-A_protein`, `HLA-A_syn_exons`, `HLA-A_syn_introns`, `HLA-A_ex_level`, `HLA-B_allele_group`, `HLA-B_protein`, `HLA-B_syn_exons`, `HLA-B_syn_introns`, `HLA-B_ex_level`, `HLA-C_allele_group`, `HLA-C_protein`, `HLA-C_syn_exons`, `HLA-C_syn_introns`, `HLA-C_ex_level`, `HLA-DRB1_allele_group`, `HLA-DRB1_protein`, `HLA-DRB1_syn_exons`, `HLA-DRB1_syn_introns`, `HLA-DRB1_ex_level`, `HLA-DRB3,4,5_allele_group`, `HLA-DRB3,4,5_protein`, `HLA-DRB3,4,5_syn_exons`, `HLA-DRB3,4,5_syn_introns`, `HLA-DRB3,4,5_ex_level`, `HLA-DQB1_allele_group`, `HLA-DQB1_protein`, `HLA-DQB1_syn_exons`, `HLA-DQB1_syn_introns`, `HLA-DQB1_ex_level`) VALUES
+INSERT INTO `patient_hla_details` (`ph_id`, `patient_id`, `HLA-A_allele_group`, `HLA-A_protein`, `HLA-A_syn_exons`, `HLA-A_syn_introns`, `HLA-A_ex_level`, `HLA-B_allele_group`, `HLA-B_protein`, `HLA-B_syn_exons`, `HLA-B_syn_introns`, `HLA-B_ex_level`, `HLA-C_allele_group`, `HLA-C_protein`, `HLA-C_syn_exons`, `HLA-C_syn_introns`, `HLA-C_ex_level`, `HLA-DRB1_allele_group`, `HLA-DRB1_protein`, `HLA-DRB1_syn_exons`, `HLA-DRB1_syn_introns`, `HLA-DRB1_ex_level`_allele_group`_protein`_syn_exons`_syn_introns`_ex_level`, `HLA-DQB1_allele_group`, `HLA-DQB1_protein`, `HLA-DQB1_syn_exons`, `HLA-DQB1_syn_introns`, `HLA-DQB1_ex_level`) VALUES
 (1, 1, '0', '', '', '', '', '', '', '', '', '', '', '0', '', '', '', '0', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (2, 2, '0', '', '', '', '', '', '', '', '', '', '', '0', '', '', '', '0', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
@@ -690,8 +686,7 @@ CREATE TABLE `patient_hla_summary` (
   `HLA-A` varchar(11) NOT NULL,
   `HLA-B` varchar(11) NOT NULL,
   `HLA-C` varchar(11) NOT NULL,
-  `HLA-DRB1` varchar(11) NOT NULL,
-  `HLA-DRB3,4,5` varchar(11) NOT NULL,
+  `HLA-DRB1` varchar(11) NOT NULL,` varchar(11) NOT NULL,
   `HLA-DQB1` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

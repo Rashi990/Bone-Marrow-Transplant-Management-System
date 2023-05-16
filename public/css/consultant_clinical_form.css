@@ -8,7 +8,7 @@
     margin-left: 240px;
     margin-top: 20px;
     width: 80%;
-    height: 630px;
+    height: 580px;
     background-color: #F1F5F9;
     border-radius: 20px;
     padding: 15px;
@@ -17,7 +17,7 @@
 .form{
   background: #D7F0ED;
   width: 1190px;
-  height: 500px;
+  height: 550px;
   padding: 50px;
   padding-bottom: 50px;
   overflow-y: scroll;
@@ -118,6 +118,17 @@ a{
   height: 70px;
 }
 
+.title{
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.topic{
+  height: 20px;
+}
+
+
 .drugs{
   display: flex;
   margin: 0;
@@ -189,4 +200,8 @@ a{
 
 .clinical{
   display: flex;
+  margin: 0;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }

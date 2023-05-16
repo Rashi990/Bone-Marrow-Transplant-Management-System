@@ -15,7 +15,7 @@
             <h2>
                 View Requests
             </h2>
-            <div class="search-wrapper">
+            <!-- <div class="search-wrapper">
                 <span class="material-icons">search</span>
                 <input type="search" placeholder="search here">
             </div>
@@ -31,7 +31,7 @@
                     <span class="material-icons">chat_bubble</span>
                 </div>
                 
-            </div>
+            </div> -->
            
             
             <div class="user-wrapper">
@@ -58,28 +58,26 @@
                         <th>Donor ID</th>
                         <th>Donor Name</th>
                         <th>Nearest City</th>
-                        <th>Requested Date</th>
+                        <th>blood group</th>
                        
                         <th colspan="2">Accept</th>
                     </tr>
                     <?php 
-        $sql="select * from `pending_donor`";
+        $sql="select * from `donor` WHERE approve=0 AND hos_add=1";
         $result=mysqli_query($connection,$sql);
         if($result){
             while($row=mysqli_fetch_assoc($result)){
-                $id=$row['pending_donor_id'];
-                $fname=$row['first_name'];
-                $lname=$row['second_name'];
+                $id=$row['donor_id'];
+                $fname=$row['donor_name'];
                 $city=$row['city'];
-                $requestdate=$row['request_date'];
+                $blood=$row['blood_group'];
                
              echo '<tr>
         <td>'.$id. '</td>
-        <td>'.$fname,'&nbsp',$lname. '</td>
+        <td>'.$fname.'</td>
         <td>'.$city. '</td>
-        <td>'.$requestdate. '</td>
-        
-        <td>
+        <td>'.$blood. '</td>
+    
             <!-- <div class="input-container cta">
             <label class="checkbox-container">
                 <input type="checkbox" id="accept" name="my_checkbox"  value="accept" onclick="isChecked()">
@@ -88,15 +86,9 @@
             </label>
         </div> -->
        
-        <form action="../../src/php/admin_accept_pending_donor.php" method="get">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
-            <button class="create-btn" name="submit" type="submit" >Accept
-            </button>
-          </form>
-            </td>
+            <td><a href="../../src/php/admin_accept_pending_donor.php? id='.$id.'" class="create-btn">accept</a></td>
             <td>
-            <button class="create-btn" name="reject" type="submit">Reject
-            </button>
+                <a href="../../src/php/admin_accept_pending_donor1.php? id='.$id.'" class="create-btn">reject</a>
         
             </td>
     </tr>'; 

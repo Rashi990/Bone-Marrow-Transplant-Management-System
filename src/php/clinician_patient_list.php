@@ -23,14 +23,15 @@ $hospital_id=$_SESSION['hospital_id'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../public/css/clinician_patient_list.css?v=1">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Clinician Patients</title>
  </head>
 <body>
 
     
         <div class="match">
 
-            <table class="patiient_data">
+            <table class="patient_data">
                 <tr class="theads">
                 <th>Patient ID</th>
                 <th>Patient Name</th>
@@ -66,7 +67,7 @@ if($result){
             echo "<td>".$pid."</td>";
             echo "<td>".$patient_name."</td>";
             echo "<td>".$patient_status."</td>";
-            echo "<td><a href='clinician_match_donor_table.php?pa_id=".$hlaid."' class='patient'><abbr title='View'><span class='material-icons'>visibility</span></a></abbr></td>";
+            echo "<td><a href='clinician_match_donor_table.php?pa_id=".$hlaid."' class='patient'><abbr title='Select'><span class='material-icons'>check_circle</span></a></abbr></td>";
 
             //echo "<td><a href='hospital_view_hla_patient.php?viewid=".$hid."' class='view'><abbr title='View'><span class='material-icons'>visibility</span></a></abbr></td>";
             //echo "<td><a href='hospital_update_hla_patient.php?updateid=".$hid."' class='edit'><abbr title='Edit'><span class='material-icons'>edit_square</span></abbr></a></td>";

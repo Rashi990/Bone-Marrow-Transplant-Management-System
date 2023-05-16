@@ -33,7 +33,7 @@ else{
   <head>
     <meta charset="utf-8">
     <title>Consultant Appointments</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_appointments_view.css?v=1">
+    <link rel="stylesheet" type="text/css" href="../../public/css/consultant_appointments_view.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -61,15 +61,80 @@ else{
     <div class="board">
       <div class="pd">
         <h3 align="center">Patient Details</h3>
-        <p>Appointment ID: <?php echo $donor_appointment_id ?></p>
-        <p>Donor Name: <?php echo $donor_name ?></p>
-        <p>Mobile Number: <?php echo $telephone_no ?></p>
-        <p>Email: <?php echo $email ?></p>
-        <p>Appointment Date: <?php echo $appointment_date ?></p>
-        <p>Appointment Time: <?php echo $appointment_time ?></p>
-        <p>Apply Date: <?php echo $apply_date ?></p>
-        <p>State: <?php echo $state ?></p>
-        <p>Remark: <?php echo $remark ?></p>
+        <div class="row">
+          <div class="col">
+            <p>Appointment ID: </p>
+          </div>
+          <div class="col">
+            <?php echo $donor_appointment_id; ?>
+          </div>
+        </div>
+        <div class="details">
+          <div class="row">
+            <div class="col">
+              <p>Donor Name: </p>
+            </div>
+            <div class="col">
+              <?php echo $donor_name; ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>Mobile Number: </p>
+            </div>
+            <div class="col">
+              <?php echo $telephone_no; ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>Email: </p>
+            </div>
+            <div class="col">
+              <?php echo $email; ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>Appointment Date: </p>
+            </div>
+            <div class="col">
+              <?php echo $appointment_date; ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>Appointment Time: </p>
+            </div>
+            <div class="col">
+              <?php echo $appointment_time; ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>Apply Date: </p>
+            </div>
+            <div class="col">
+              <?php echo $apply_date; ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>State: </p>
+            </div>
+            <div class="col">
+              <?php echo $state; ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>Remark: </p>
+            </div>
+            <div class="col">
+              <?php echo $remark; ?>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

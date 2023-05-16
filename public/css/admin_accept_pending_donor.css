@@ -200,7 +200,7 @@ border: 1px solid var(--primary-blue);
     top: 4px;
     transform: rotate(45deg);
 }
-.create-btn{
+a.create-btn{
    background-color: #F7FFFF;
    display: block;
    width: 100%;
