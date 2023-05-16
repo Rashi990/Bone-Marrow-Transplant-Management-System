@@ -38,3 +38,8 @@ function confirmRegistration(donor_id ,session_id) {
     });
   }
   
+
+
+
+
+  

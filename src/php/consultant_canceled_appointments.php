@@ -6,6 +6,9 @@ if($_SESSION['userlevel']!=1)
 {
     header("Location:home.php");
 }
+
+$consultant_id=$_SESSION['uid'];
+
  ?>
 
 <!DOCTYPE html>
@@ -54,7 +57,7 @@ if($_SESSION['userlevel']!=1)
           <th>Action</th>
         </tr>
         <?php
-          $sql="SELECT * FROM `appointments_donor` INNER JOIN `donor` ON appointments_donor.donor_id = donor.donor_id WHERE `state` = 'Canceled'";
+          $sql="SELECT * FROM `appointments_donor` INNER JOIN `donor` ON appointments_donor.donor_id = donor.donor_id WHERE consultant_id = '$consultant_id' AND `state` = 'Canceled'";
           $result=mysqli_query($connection,$sql);
           if($result){
             while($row=mysqli_fetch_assoc($result)){

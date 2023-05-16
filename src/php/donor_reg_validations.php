@@ -30,9 +30,9 @@ function usernameInvalid($user_name){
 
 //Check if register inputs are empty
 
-function inputsEmptyRegister($fname,$lname,$email,$tel,$address,$city,$district,$dob,$nic,$marital,$gender){
+function inputsEmptyRegister($fullname,$email,$tel,$address,$city,$district,$dob,$nic,$marital,$gender,$username,$password,$conf_password, $blood_group){
     
-    if(empty($fname)||empty($lname)||empty($email)||empty($tel)||empty($address)||empty($city)||empty($district)||empty($dob)||empty($nic)||empty($marital)||empty($gender)){
+    if(empty($fullname)||empty($email)||empty($tel)||empty($address)||empty($city)||empty($district)||empty($dob)||empty($nic)||empty($marital)||empty($gender)||empty($username)||empty($password)||empty($conf_password)||empty($blood_group)){
         $value = true;
 
     }
@@ -45,18 +45,17 @@ function inputsEmptyRegister($fname,$lname,$email,$tel,$address,$city,$district,
 
 
 //Check if names are invalid
-function nameInvalid($fname,$lname){
+function nameInvalid($fullname){
 
-    if(!preg_match("/^[a-zA-Z\s]+$/",$fname)){ 
+    if(!preg_match("/^[a-zA-Z\s]+$/",$fullname)){ 
         $value = true;
 
     }
-   elseif(!preg_match("/^[a-zA-Z]+$/",$lname)){
+   
     
-        $value = true;
-    }
-    else{
-        $value = false;
+ 
+     else{
+      $value = false;
     }
     return $value;
 }

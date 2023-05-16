@@ -54,7 +54,7 @@ if($_SESSION['userlevel']!=0)
 <nav>
         <ul>
         <li><a class="active" href="admin_viewtesting.php">Tested HLA Details</a> </li>
-        <li><a href="admin_add_test_result.php">Add Testing Report Details</a></li>
+        <li><a href="admin_add_test_result.php">Check HLA Non Added Donors</a></li>
       </ul>
     </nav>
     <div class="cards-2">
@@ -69,19 +69,17 @@ if($_SESSION['userlevel']!=0)
                         <th>Operation</th>
                     </tr>
                     <?php 
-                        $sql="SELECT ";
+                        $sql="SELECT donor_id,donor_name FROM donor WHERE donor_id NOT IN (SELECT donor_id FROM donor_hla_details)";
 
     $result=mysqli_query($connection,$sql);
     if($result){
         while($row=mysqli_fetch_assoc($result)){
-            $id=$row['pending_donor_id'];
-            $name=$row['fullname'];
-            $city=$row['city'];
-            $date=$row['request_date'];
+            $id=$row['donor_id'];
+            $name=$row['donor_name'];
          echo '<tr>
-         <td >'.$name. '</td>
-         <td>'.$city. ' </td> 
-        <td><a href="../../src/php/admin_select_hospital_2.php? id='.$id.'" class="btn">Select Hospital</a></td>
+         <td >'.$id. '</td>
+         <td>'.$name. ' </td> 
+        <td><a href="../../src/php/admin_add_testing_report.php? id='.$id.'" class="btn">Add HLA details</a></td>
         </tr>';
 
     }

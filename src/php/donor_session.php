@@ -114,6 +114,10 @@ $session_id = $row['session_id'];
 ?>
                   <button onclick="confirmRegistration(<?php echo $_SESSION['donor_id']; ?>, <?php echo $row['session_id']; ?>)">Register now </button>
                 </div>
+               
+
+
+
             </div>
         </div>
     </div>
