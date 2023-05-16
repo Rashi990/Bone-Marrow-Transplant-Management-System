@@ -1,8 +1,6 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,41 +10,44 @@
     <link rel="stylesheet" href="../../public/css/donor_reg_header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script defer src="../../public/js/donor_reg3_validation.js"></script>
+    <script defer src="../../public/js/donor_reg3_validation.js"></script>
 
 </head>
+
 <body>
     <div class="container" id="blur">
         <div class="form-area">
             <div class="heading">
                 <div class="heading-topic">
-                <h1>SLBMTS NEEDS YOUR KIND SUPPORT</h1>
-                <h5>Let's finish the request process.</h5>
+                    <h1>SLBMTS NEEDS YOUR KIND SUPPORT</h1>
+                    <h5>Let's finish the request process.</h5>
                 </div>
-                    <div class="privacy-stmt"><p>We value your right to privacy. Your provided information will be kept private and secure.</P></div>
+                <div class="privacy-stmt">
+                    <p>We value your right to privacy. Your provided information will be kept private and secure.</P>
+                </div>
                 <div class="req">
                     <h6>* required field</h6>
                 </div>
             </div>
 
-<div class="form-content">
-    <form  id="form"   class="logfrm" method="post" name="form" >
-
-   
+            <div class="form-content">
+                <form id="form" class="logfrm" method="post" name="form">
 
 
 
-        <div class="intro_part">
-            <div class="input-control">
-            <label class ="data-input" >
-                First Name*
-            </label>
-                    <input type="text" name="fname" class="input-area" id="fname">
-                    <div class="error"></div>
-            </div>
-            
 
-            <div class="input-control" >
+
+                    <div class="intro_part">
+                        <div class="input-control">
+                            <label class="data-input">
+                                Full Name*
+                            </label>
+                            <input type="text" name="fullname" class="input-area" id="fullname">
+                            <div class="error"></div>
+                        </div>
+
+
+                        <!----   <div class="input-control" >
             <label class ="data-input" >
                         Last Name*
             </label>
@@ -54,175 +55,224 @@
                     <div class="error"></div>
             </div>
 
-
-            <div class="input-control">
-            <label class ="data-input" >
-                        NIC Number*
-            </label>
-                   <input type="text"  name="nic" class="input-area" id="nic">
-                   <div class="error"></div>
-            </div>
-
-
-            <div class="input-control">
-            <label class ="data-input" >
-                        Date of Birth*
-            </label>
-                    <input type="date"  name="dob" class="calendar-area" id="dob" >
-                    <div class="error"></div>
-            </div>
-                               
-        </div>
-
-        <div class="contact-info">
-
-            <div class="contact-topic">
-            <h3>Contact Information</h3>
-            </div>
-
-            <div class="about-contact">
-                <p>We'll need to contact you right away for any upcoming appointments and contacts.Rest auured :we won't share your information with any unauthorized parties.</p>
-            </div>
-            
-            <div class="input-control">
-            <label class ="data-input" >
-                Email*
-            </label>
-            <input type="text"  name="email" class="input-area" id="email" >
-            <div class="error"></div>
-            </div>
+        -->
+                        <div class="input-control">
+                            <label class="data-input">
+                                NIC Number*
+                            </label>
+                            <input type="text" name="nic" class="input-area" id="nic">
+                            <div class="error"></div>
+                        </div>
 
 
-            <div class="input-control">
-            <label class ="data-input" >
-                Mobile Phone Number*
-            </label>  
-            <input type="tel" name="tel" class="input-area" id="tel">    
+                        <div class="input-control">
+                            <label class="data-input">
+                                Date of Birth*
+                            </label>
+                            <input type="date" name="dob" class="calendar-area" id="dob">
+                            <div class="error"></div>
+                        </div>
 
-            <div class="mobile-notice">
-                <p>(You consent to receiving text and audio messages regarding your request and other notices by submitting your mobile phone number.)</p>
-            </div>
-            <div class="error"></div>
-        </div>
+                    </div>
 
+                    <div class="contact-info">
 
+                        <div class="contact-topic">
+                            <h3>Contact Information</h3>
+                        </div>
 
+                        <div class="about-contact">
+                            <p>We'll need to contact you right away for any upcoming appointments and contacts.Rest
+                                auured :we won't share your information with any unauthorized parties.</p>
+                        </div>
 
-            <div class="input-control">
-            <label class ="data-input" >
-                Address*
-            </label>  
-            <input type="text" name="address" class="input-area" id="address">
-            <div class="error"></div>
-        </div>
-
-            
-        <div class="input-control">
-            <label class ="data-input" >
-                Nearest City*
-            </label>
-            <input type="text"  name="city" class="input-area" id="city">
-            <div class="error"></div>
-        </div>
+                        <div class="input-control">
+                            <label class="data-input">
+                                Email*
+                            </label>
+                            <input type="text" name="email" class="input-area" id="email">
+                            <div class="error"></div>
+                        </div>
 
 
-            <label class ="data-input" >
-                District*
-            </label>
-            <div class="select-list">
-             <select name="district" id="district">
-                <option value="ampara">Ampara</option>
-                <option value="anuradhapura">Anuradhapura</option>
-                <option value="badulla">Badulla</option>
-                <option value="batticaloa">Batticaloa</option>
-                <option value="colombo">Colombo</option>
-                <option value="galle">Galle</option>
-                <option value="gampaha">Gampaha</option>
-                <option value="hambantota">Hambantota</option>
-                <option value="jaffna">Jaffna</option>
-                <option value="kalutara">Kalutara</option>
-                <option value="kandy">Kandy</option>
-                <option value="kegalle">Kegalle</option>
-                <option value="kilinochchi">Kilinochchi</option>
-                <option value="kurunegala">Kurunegala</option>
-                <option value="mannar">Mannar</option>
-                <option value="matale">Matale</option>
-                <option value="matara">Matara</option>
-                <option value="monaragala">Monaragala</option>
-                <option value="mullaitivu">Mullaitivu</option>
-                <option value="nuwara_eliya">Nuwara Eliya</option>
-                <option value="polonnaruwa">Polonnaruwa</option>
-                <option value="puttalam">Puttalam</option>
-                <option value="ratnapura">Ratnapura</option>
-                <option value="trincomalee">Trincomalee</option>
-                <option value="vavuniya">Vanuniya</option>
+                        <div class="input-control">
+                            <label class="data-input">
+                                Mobile Phone Number*
+                            </label>
+                            <input type="tel" name="tel" class="input-area" id="tel">
 
-            </select>
-             </div>    
-        </div>
+                            <div class="mobile-notice">
+                                <p>(You consent to receiving text and audio messages regarding your request and other
+                                    notices by submitting your mobile phone number.)</p>
+                            </div>
+                            <div class="error"></div>
+                        </div>
 
-        <div class="more-info">
 
-            <div class="more-info-topic">
-                <h3>Please provide us with below information about yourself.</h3>
-            </div>
 
-            <div class="about-more-info">
-               <p>To choose the best course of action for the donor and patient,doctors use the information provided below.</p>
-            </div>
 
-            <label class ="data-input" >
-                Gender identified at Birth*
-            </label>
-             <div class="gender-select">
-              <label for="male" class="more-info-radio">
-              <input type="radio" id="male" name="gender" value="Male" class="radio-btn" checked> <div class="radio-styled-btn"></div>Male</label>
-              
-              <label for="female" class="more-info-radio">
-              <input type="radio" id="female" name="gender" value="Female"class="radio-btn"> <div class="radio-styled-btn"></div>Female</label>
-             </div>
+                        <div class="input-control">
+                            <label class="data-input">
+                                Address*
+                            </label>
+                            <input type="text" name="address" class="input-area" id="address">
+                            <div class="error"></div>
+                        </div>
 
-             
-            <label class ="data-input" >
-                Marital Status*
-            </label>
-            <div class="status-select">
-                
-                <label for="married" class="more-info-radio">
-                <input type="radio" id="married" name="marital" value="Married" class="radio-btn" ><div class="radio-styled-btn"></div> Married</label>
 
-                <label for="unmarried" class="more-info-radio">
-                <input type="radio" id="unmarried" name="marital" value="Unmarried" class="radio-btn" checked><div class="radio-styled-btn"></div>Unmarried</label>
-            </div>
+                        <div class="input-control">
+                            <label class="data-input">
+                                Nearest City*
+                            </label>
+                            <input type="text" name="city" class="input-area" id="city">
+                            <div class="error"></div>
+                        </div>
 
-        </div>
 
-        <div class="final-info">
-             <div class="final-info-topic">
+                        <label class="data-input">
+                            District*
+                        </label>
+                        <div class="select-list">
+                            <select name="district" id="district">
+                                <option value="ampara">Ampara</option>
+                                <option value="anuradhapura">Anuradhapura</option>
+                                <option value="badulla">Badulla</option>
+                                <option value="batticaloa">Batticaloa</option>
+                                <option value="colombo">Colombo</option>
+                                <option value="galle">Galle</option>
+                                <option value="gampaha">Gampaha</option>
+                                <option value="hambantota">Hambantota</option>
+                                <option value="jaffna">Jaffna</option>
+                                <option value="kalutara">Kalutara</option>
+                                <option value="kandy">Kandy</option>
+                                <option value="kegalle">Kegalle</option>
+                                <option value="kilinochchi">Kilinochchi</option>
+                                <option value="kurunegala">Kurunegala</option>
+                                <option value="mannar">Mannar</option>
+                                <option value="matale">Matale</option>
+                                <option value="matara">Matara</option>
+                                <option value="monaragala">Monaragala</option>
+                                <option value="mullaitivu">Mullaitivu</option>
+                                <option value="nuwara_eliya">Nuwara Eliya</option>
+                                <option value="polonnaruwa">Polonnaruwa</option>
+                                <option value="puttalam">Puttalam</option>
+                                <option value="ratnapura">Ratnapura</option>
+                                <option value="trincomalee">Trincomalee</option>
+                                <option value="vavuniya">Vanuniya</option>
+
+                            </select>
+                        </div>
+
+                        <div class="mobile-notice">
+                            <p>Create Username and Password for your future account</p>
+                        </div>
+
+
+
+                        <div class="input-control">
+                            <label class="data-input">
+                                Username*
+                            </label>
+                            <input type="text" name="username" class="input-area" id="username">
+                            <div class="error"></div>
+                        </div>
+
+                        <div class="input-control">
+                            <label class="data-input">
+                                Password*
+                            </label>
+                            <input type="password" name="password" class="input-area" id="password">
+                            <div class="error"></div>
+                        </div>
+
+
+                        <div class="input-control">
+                            <label class="data-input">
+                                Confirm Password*
+                            </label>
+                            <input type="password" name="conf_password" class="input-area" id="conf_password">
+                            <div class="error"></div>
+                        </div> 
+                    </div>
+
+                    <div class="more-info">
+
+                        <div class="more-info-topic">
+                            <h3>Please provide us with below information about yourself.</h3>
+                        </div>
+
+                        <div class="about-more-info">
+                            <p>To choose the best course of action for the donor and patient,doctors use the information
+                                provided below.</p>
+                        </div>
+
+                        <label class="data-input">
+                            Gender identified at Birth*
+                        </label>
+                        <div class="gender-select">
+                            <label for="male" class="more-info-radio">
+                                <input type="radio" id="male" name="gender" value="Male" class="radio-btn" checked>
+                                <div class="radio-styled-btn"></div>Male
+                            </label>
+
+                            <label for="female" class="more-info-radio">
+                                <input type="radio" id="female" name="gender" value="Female" class="radio-btn">
+                                <div class="radio-styled-btn"></div>Female
+                            </label>
+                        </div>
+
+
+                        <label class="data-input">
+                            Marital Status*
+                        </label>
+                        <div class="status-select">
+
+                            <label for="married" class="more-info-radio">
+                                <input type="radio" id="married" name="marital" value="Married" class="radio-btn">
+                                <div class="radio-styled-btn"></div> Married
+                            </label>
+
+                            <label for="unmarried" class="more-info-radio">
+                                <input type="radio" id="unmarried" name="marital" value="Unmarried" class="radio-btn"
+                                    checked>
+                                <div class="radio-styled-btn"></div>Unmarried
+                            </label>
+                        </div>
+
+                    </div>
+
+
+                    <label class="data-input">
+                        Blood Group*
+                    </label>
+                    <div class="select-list">
+                        <select name="blood_group" id="blood_group">
+                            <option value="a+">A+</option>
+                            <option value="anuradhapura">A-</option>
+                            <option value="badulla">B+</option>
+                            <option value="badulla">B-</option>
+                            <option value="badulla">O+</option>
+                            <option value="badulla">O-</option>
+                            <option value="badulla">AB+</option>
+                            <option value="badulla">AB-</option>
+                        </select>
+                    </div>
+
+                    <div class="final-info">
+                        <!--<div class="final-info-topic">
                 <h3>Click Submit button to proceed forward</h3>
-             </div>
-             <div class="create-btn">
-             <button class="create" name="create-btn" id="create-btn"  type="submit">Submit</button>
-          
-             </div>
-        </div>
+             </div>-->
+                        <div class="create-btn">
+                            <button class="create" name="create-btn" id="create-btn" type="submit">Submit</button>
 
-</form>
-</div>
+                        </div>
+                    </div>
 
-
-
-
-
-
+                </form>
+            </div> 
 
         </div>
-        </div>
-
-        
-        
-
-    
+    </div> 
 </body>
 
 
@@ -232,5 +282,3 @@
 
 
 </html>
-
-
