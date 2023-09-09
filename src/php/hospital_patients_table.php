@@ -26,7 +26,7 @@
             echo "<td>".$diagnosis."</td>";
             echo "<td>".$tele."</td>";
             echo "<td>".$addr."</td>";
-            
+
             echo "<td><a href='hospital_view_patient.php?viewid=".$id."' class='view'><abbr title='View'><span class='material-icons'>visibility</span></abbr></a></td>";
             echo "<td><a href='hospital_update_patient.php?updateid=".$id."' class='edit'><abbr title='Edit'><span class='material-icons'>edit_square</span></abbr></a></td>";
             echo "<td><a href='hospital_delete_patient.php?deleteid=".$id."' class='delete'><abbr title='Delete'><span class='material-icons'>delete</span></abbr></a></td>";
