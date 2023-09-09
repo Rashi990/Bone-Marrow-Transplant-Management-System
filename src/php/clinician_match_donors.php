@@ -276,11 +276,11 @@ $p_hla_DQB1_lvl=$_GET['p_hla_DQB1_lvl'];
             //C-Match2
         echo "<tr>";
             if($p_hla_C_exo.":".$p_hla_C_intro==$d_hla_C_exo.":".$d_hla_C_intro){
-                echo "<td>"."HLA Typing 6: HLA-C allele groups : One mismatch"."</td>";
+                echo "<td>"."HLA Typing 6: HLA-C allele groups : One matched"."</td>";
                 $match++;
 
             }else{
-                echo "<td style='color: red;'>HLA Typing 5: HLA-C allele groups : One mismatch</td>";
+                echo "<td style='color: red;'>HLA Typing 6: HLA-C allele groups : One mismatch</td>";
                 $mismatch++;
             }
 
